@@ -61,12 +61,12 @@ void Error_Handler(void);
 #define emg_adc_GPIO_Port GPIOA
 #define Temp_SCL_Pin GPIO_PIN_10
 #define Temp_SCL_GPIO_Port GPIOB
+#define oxi_sda_Pin GPIO_PIN_9
+#define oxi_sda_GPIO_Port GPIOC
+#define oxi_scl_Pin GPIO_PIN_8
+#define oxi_scl_GPIO_Port GPIOA
 #define Temp_SDA_Pin GPIO_PIN_12
 #define Temp_SDA_GPIO_Port GPIOC
-#define scl_lcd_Pin GPIO_PIN_6
-#define scl_lcd_GPIO_Port GPIOB
-#define sda_lcd_Pin GPIO_PIN_7
-#define sda_lcd_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
