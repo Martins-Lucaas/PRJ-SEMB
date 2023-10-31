@@ -49,6 +49,8 @@ extern "C" {
 
 /* USER CODE END EM */
 
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
@@ -59,14 +61,32 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define emg_adc_Pin GPIO_PIN_1
 #define emg_adc_GPIO_Port GPIOA
-#define Temp_SCL_Pin GPIO_PIN_10
-#define Temp_SCL_GPIO_Port GPIOB
+#define touch_int_Pin GPIO_PIN_4
+#define touch_int_GPIO_Port GPIOA
+#define displ_sck_Pin GPIO_PIN_5
+#define displ_sck_GPIO_Port GPIOA
+#define touch_mosi_Pin GPIO_PIN_6
+#define touch_mosi_GPIO_Port GPIOA
+#define displ_mosi_Pin GPIO_PIN_7
+#define displ_mosi_GPIO_Port GPIOA
+#define temp_scl_Pin GPIO_PIN_10
+#define temp_scl_GPIO_Port GPIOB
+#define displ_cs_Pin GPIO_PIN_12
+#define displ_cs_GPIO_Port GPIOB
+#define touch_cs_Pin GPIO_PIN_13
+#define touch_cs_GPIO_Port GPIOB
+#define displ_dc_Pin GPIO_PIN_14
+#define displ_dc_GPIO_Port GPIOB
+#define displ_rst_Pin GPIO_PIN_15
+#define displ_rst_GPIO_Port GPIOB
+#define displ_led_Pin GPIO_PIN_7
+#define displ_led_GPIO_Port GPIOC
 #define oxi_sda_Pin GPIO_PIN_9
 #define oxi_sda_GPIO_Port GPIOC
 #define oxi_scl_Pin GPIO_PIN_8
 #define oxi_scl_GPIO_Port GPIOA
-#define Temp_SDA_Pin GPIO_PIN_12
-#define Temp_SDA_GPIO_Port GPIOC
+#define temp_sda_Pin GPIO_PIN_12
+#define temp_sda_GPIO_Port GPIOC
 
 /* USER CODE BEGIN Private defines */
 
