@@ -445,7 +445,16 @@
       "version": 3
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "ADC1-1": "ADC1-1",
+      "GND": "GND-emg",
+      "Net-(C15-Pad1)": "Vout-AD",
+      "Net-(C16-Pad1)": "ConR7-R8",
+      "Net-(J3-Pin_1)": "inversora",
+      "Net-(J4-Pin_1)": "não_inversora",
+      "Net-(U7A-+)": "não-inversora2",
+      "VBUS": "Vbus"
+    },
     "netclass_patterns": []
   },
   "pcbnew": {
