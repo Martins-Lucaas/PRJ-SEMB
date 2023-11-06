@@ -35,8 +35,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 1.3,
-          "width": 0.45
+          "height": 0.95,
+          "width": 0.9
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -453,7 +453,9 @@
       "Net-(J3-Pin_1)": "inversora",
       "Net-(J4-Pin_1)": "não_inversora",
       "Net-(U7A-+)": "não-inversora2",
-      "VBUS": "Vbus"
+      "VBUS": "Vbus",
+      "oxi_scl": "oxi_slc_stm",
+      "oxi_sda": "oxi_sda_stm"
     },
     "netclass_patterns": []
   },
