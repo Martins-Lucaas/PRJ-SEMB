@@ -29,11 +29,9 @@ void loop();
  *
  *
  *
- * void halTim
+ * void
  *
- * configurar um timer led desligado aperta botão liga o timer
- * ligar o led e gera interrupções que liga e desliga o led pra kraio
- * fazer funções do calback
+ *
  *
  *
  * */
