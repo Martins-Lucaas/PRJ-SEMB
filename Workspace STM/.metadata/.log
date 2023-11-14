@@ -710,3 +710,22 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\lucas\OneDriv
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-11-13 01:05:11.831
 !MESSAGE Indexed 'Multiparameter_Monitor' (41 sources, 183 headers) in 5.93 sec: 16,990 declarations; 94,289 references; 20 unresolved inclusions; 48 syntax errors; 924 unresolved names (0.82%)
+!SESSION 2023-11-14 10:44:30.122 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  C:\Users\lucas\Desktop\PRJ-SEMB\STM32IDE\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\lucas\Desktop\PRJ-SEMB\STM32IDE\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-14 10:45:06.046
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-14 10:45:06.064
+!MESSAGE Log4j2 initialized with config file C:\Users\lucas\Desktop\PRJ-SEMB\Workspace STM\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-14 10:45:22.627
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-14 10:45:46.109
+!MESSAGE Indexed 'Multiparameter_Monitor' (41 sources, 183 headers) in 22.2 sec: 16,990 declarations; 94,289 references; 20 unresolved inclusions; 48 syntax errors; 924 unresolved names (0.82%)
