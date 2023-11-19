@@ -35,8 +35,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 1.2446,
-          "width": 1.2446
+          "height": 1.0,
+          "width": 1.9
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -60,12 +60,7 @@
           "width": 0.3
         }
       ],
-      "drc_exclusions": [
-        "solder_mask_bridge|170490000|149307896|eea60e21-37c0-49bd-ab3e-2b8e812e48e9|4485de51-9604-4b85-8a35-19a998a46a71",
-        "unconnected_items|174070000|158020000|99fcd7db-e7ac-4d14-9467-e893671ad62e|ee0fd342-6836-40a5-b735-0639cfd0c8ef",
-        "unconnected_items|174220000|161820000|ee0fd342-6836-40a5-b735-0639cfd0c8ef|dbd67f64-445c-4224-831b-ebd0fe3f2abd",
-        "unconnected_items|181670000|161820000|dbd67f64-445c-4224-831b-ebd0fe3f2abd|7a33661c-93c7-4aa2-a621-37fde6982683"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -90,28 +85,28 @@
         "item_on_disabled_layer": "error",
         "items_not_allowed": "error",
         "length_out_of_range": "error",
-        "lib_footprint_issues": "warning",
-        "lib_footprint_mismatch": "warning",
+        "lib_footprint_issues": "ignore",
+        "lib_footprint_mismatch": "ignore",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
         "missing_courtyard": "ignore",
         "missing_footprint": "warning",
         "net_conflict": "warning",
         "npth_inside_courtyard": "ignore",
-        "padstack": "warning",
+        "padstack": "ignore",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
         "silk_edge_clearance": "warning",
-        "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_over_copper": "ignore",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
-        "solder_mask_bridge": "error",
+        "solder_mask_bridge": "ignore",
         "starved_thermal": "error",
-        "text_height": "warning",
-        "text_thickness": "warning",
+        "text_height": "ignore",
+        "text_thickness": "ignore",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
-        "track_dangling": "warning",
+        "track_dangling": "ignore",
         "track_width": "error",
         "tracks_crossing": "error",
         "unconnected_items": "error",
@@ -121,7 +116,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.15,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.0,
         "min_hole_clearance": 0.25,
@@ -133,9 +128,9 @@
         "min_text_height": 0.7999999999999999,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.0,
-        "min_via_annular_width": 0.09999999999999999,
-        "min_via_diameter": 0.5,
+        "min_track_width": 0.19999999999999998,
+        "min_via_annular_width": 0.075,
+        "min_via_diameter": 0.25,
         "solder_mask_clearance": 0.0,
         "solder_mask_min_width": 0.0,
         "solder_mask_to_copper_clearance": 0.0,
@@ -184,12 +179,21 @@
       "track_widths": [
         0.0,
         0.3,
-        0.5
+        0.5,
+        1.0
       ],
       "via_dimensions": [
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 0.5,
+          "drill": 0.25
+        },
+        {
+          "diameter": 0.75,
+          "drill": 0.375
         }
       ],
       "zones_allow_external_fillets": false
