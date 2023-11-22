@@ -393,3 +393,24 @@ C:/ST/STM32CubeIDE_1.13.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.external
 collect2.exe: error: ld returned 1 exit status
 make: *** [makefile:80: Multiparameter_Monitor.elf] Error 1
 "make -j24 all" terminated with exit code 2. Build might be incomplete.
+20:47:22 **** Build of configuration Debug for project Multiparameter_Monitor ****
+make -j24 all 
+arm-none-eabi-gcc "../Monitor_core/monitor_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Monitor_core/monitor_main.d" -MT"Monitor_core/monitor_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Monitor_core/monitor_main.o"
+arm-none-eabi-g++ -o "Multiparameter_Monitor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\lucas\OneDrive\Documentos\Faculdade\6º Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\STM32F446RETX_FLASH.ld" -Wl,-Map="Multiparameter_Monitor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+C:/ST/STM32CubeIDE_1.13.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: cannot open linker script file C:\Users\lucas\OneDrive\Documentos\Faculdade\6?? Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\STM32F446RETX_FLASH.ld: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:80: Multiparameter_Monitor.elf] Error 1
+"make -j24 all" terminated with exit code 2. Build might be incomplete.
+20:51:57 **** Build of configuration Debug for project Multiparameter_Monitor ****
+make -j24 all 
+arm-none-eabi-g++ -o "Multiparameter_Monitor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\STM32F446RETX_FLASH.ld" -Wl,-Map="Multiparameter_Monitor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Multiparameter_Monitor.elf
+ 
+arm-none-eabi-size   Multiparameter_Monitor.elf 
+arm-none-eabi-objdump -h -S  Multiparameter_Monitor.elf  > "Multiparameter_Monitor.list"
+   text	   data	    bss	    dec	    hex	filename
+  21052	     20	   3532	  24604	   601c	Multiparameter_Monitor.elf
+Finished building: default.size.stdout
+ 
+Finished building: Multiparameter_Monitor.list
+ 
