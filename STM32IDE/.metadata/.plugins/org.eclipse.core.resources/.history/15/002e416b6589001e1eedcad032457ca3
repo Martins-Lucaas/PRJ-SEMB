@@ -1,0 +1,56 @@
+/*
+ * sensor_temp.h
+ *
+ *  Created on: Nov 22, 2023
+ *      Author: karol
+ */
+
+#ifndef SENSORTEMP_H_
+#define SENSORTEMP_H_
+
+
+
+#endif /* SENSORTEMP_H_ */
+
+// C Standard Libraries
+
+
+/* Private defines -----------------------------------------------------------*/
+/* DEFAULT SLAVE ADDRESS */
+#define SENSORTEMP_DEFAULT_SA 0x5A
+/* OPCODE DEFINES */
+#define SENSORTEMP_OP_RAM		0x00
+#define SENSORTEMP_OP_EEPROM	0x20
+#define SENSORTEMP_OP_SLEEP	0xFF
+
+/* RAM offsets with 16-bit data, MSB first */
+#define SENSORTEMP_RAW1		(SENSORTEMP_OP_RAM | 0x04) /* raw data IR channel 1 */
+#define SENSORTEMP_RAW2		(SENSORTEMP_OP_RAM | 0x05) /* raw data IR channel 2 */
+#define SENSORTEMP_TAMB 		(SENSORTEMP_OP_RAM | 0x06) /* ambient temperature */
+#define SENSORTEMP_TOBJ1 		(SENSORTEMP_OP_RAM | 0x07) /* object 1 temperature */
+#define SENSORTEMP_TOBJ2 		(SENSORTEMP_OP_RAM | 0x08) /* object 2 temperature */
+/* EEPROM offsets with 16-bit data, MSB first */
+#define SENSORTEMP_TOMAX 		(SENSORTEMP_OP_EEPROM | 0x00) /* object temperature min register */
+#define SENSORTEMP_TOMIN 		(SENSORTEMP_OP_EEPROM | 0x01) /* object temperature max register */
+#define SENSORTEMP_PWMCTRL 	(SENSORTEMP_OP_EEPROM | 0x02) /* pwm configuration register */
+#define SENSORTEMP_TARANGE 	(SENSORTEMP_OP_EEPROM | 0x03) /* ambient temperature register */
+#define SENSORTEMP_EMISSIVITY (SENSORTEMP_OP_EEPROM | 0x04) /* emissivity correction register */
+#define SENSORTEMP_CFG1 		(SENSORTEMP_OP_EEPROM | 0x05) /* configuration register */
+#define SENSORTEMP_SA 		(SENSORTEMP_OP_EEPROM | 0x0E) /* slave address register */
+#define SENSORTEMP_ID1 		(SENSORTEMP_OP_EEPROM | 0x1C) /*[read-only] 1 ID register */
+#define SENSORTEMP_ID2 		(SENSORTEMP_OP_EEPROM | 0x1D) /*[read-only] 2 ID register */
+#define SENSORTEMP_ID3 		(SENSORTEMP_OP_EEPROM | 0x1E) /*[read-only] 3 ID register */
+#define SENSORTEMP_ID4 		(SENSORTEMP_OP_EEPROM | 0x1F) /*[read-only] 4 ID register */
+
+#define SENSORTEMP_DBG_OFF 0
+#define SENSORTEMP_DBG_ON 1
+#define SENSORTEMP_DBG_MSG_W 0
+#define SENSORTEMP_DBG_MSG_R 1
+
+/* Exported functions prototypes ---------------------------------------------*/
+uint8_t CRC8_Calc(uint8_t*, const uint8_t);
+void SENSORTEMP_WriteReg(uint8_t, uint8_t, uint16_t);
+uint16_t SENSORTEMP_ReadReg(uint8_t, uint8_t, uint8_t);
+float SENSORTEMP_ReadTemp(uint8_t, uint8_t);
+void SENSORTEMP_ScanDevices (void);
+void SENSORTEMP_SendDebugMsg(uint8_t, uint8_t, uint8_t, uint16_t, uint8_t, uint8_t);
