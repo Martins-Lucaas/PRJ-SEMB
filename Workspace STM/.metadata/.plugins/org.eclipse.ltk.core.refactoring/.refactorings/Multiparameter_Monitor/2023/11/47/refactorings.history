@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Multiparameter_Monitor/Monitor_core/pmw_io.c&apos; to &apos;pwm_io.c&apos;" description="Rename resource &apos;pmw_io.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Monitor_core/pmw_io.c" name="pwm_io.c" stamp="1700748264018" updateReferences="true"/>
+</session>

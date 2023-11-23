@@ -1,16 +1,26 @@
-20:51:57 **** Build of configuration Debug for project Multiparameter_Monitor ****
-make -j24 all 
-arm-none-eabi-g++ -o "Multiparameter_Monitor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\STM32F446RETX_FLASH.ld" -Wl,-Map="Multiparameter_Monitor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
-Finished building target: Multiparameter_Monitor.elf
- 
-arm-none-eabi-size   Multiparameter_Monitor.elf 
-arm-none-eabi-objdump -h -S  Multiparameter_Monitor.elf  > "Multiparameter_Monitor.list"
-   text	   data	    bss	    dec	    hex	filename
-  21052	     20	   3532	  24604	   601c	Multiparameter_Monitor.elf
-Finished building: default.size.stdout
- 
-Finished building: Multiparameter_Monitor.list
- 
+11:07:47 **** Build of configuration Debug for project Multiparameter_Monitor ****
+make -j5 all 
+arm-none-eabi-gcc "../Monitor_core/adc_emg.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Monitor_core/adc_emg.d" -MT"Monitor_core/adc_emg.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Monitor_core/adc_emg.o"
+arm-none-eabi-gcc "../Monitor_core/mlx90614.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Monitor_core/mlx90614.d" -MT"Monitor_core/mlx90614.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Monitor_core/mlx90614.o"
+arm-none-eabi-gcc "../Monitor_core/monitor_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Monitor_core/monitor_main.d" -MT"Monitor_core/monitor_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Monitor_core/monitor_main.o"
+arm-none-eabi-gcc "../Monitor_core/pwm_io.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Monitor_core/pwm_io.d" -MT"Monitor_core/pwm_io.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Monitor_core/pwm_io.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+../Monitor_core/monitor_main.c:8:10: fatal error: adc_emg.h: No such file or directory
+    8 | #include <adc_emg.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+../Monitor_core/adc_emg.c:9:10: fatal error: adc_emg.h: No such file or directory
+    9 | #include <adc_emg.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+make: *** [Monitor_core/subdir.mk:28: Monitor_core/monitor_main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Monitor_core/subdir.mk:28: Monitor_core/adc_emg.o] Error 1
+../Monitor_core/mlx90614.c: In function 'MLX90614_ScanDevices':
+../Monitor_core/mlx90614.c:131:35: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
+  131 |                                   CDC_Transmit_FS(temp_buff, strlen((const char *)temp_buff));
+      |                                   ^~~~~~~~~~~~~~~
+"make -j5 all" terminated with exit code 2. Build might be incomplete.
 
-20:51:58 Build Finished. 0 errors, 0 warnings. (took 971ms)
+11:07:49 Build Failed. 5 errors, 1 warnings. (took 1s.970ms)
 
