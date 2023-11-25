@@ -5,11 +5,6 @@
  *      Author: lucas
  */
 
-#include <adc_emg.h>
-#include <pwm_io.h>
-#include <mlx90614.h>
-
-
 //void setup();
 
 //void loop();

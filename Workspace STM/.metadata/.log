@@ -2498,3 +2498,22 @@ java.lang.Exception: Resource '/STM32IDE' does not exist.
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-11-23 19:43:00.119
 !MESSAGE Indexed 'Multiparameter_Monitor' (35 sources, 174 headers) in 5.72 sec: 17,082 declarations; 94,056 references; 2 unresolved inclusions; 42 syntax errors; 661 unresolved names (0.59%)
+!SESSION 2023-11-25 17:42:44.471 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-25 17:43:00.005
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-25 17:43:00.012
+!MESSAGE Log4j2 initialized with config file C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\Workspace STM\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-25 17:43:10.542
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-25 17:43:16.257
+!MESSAGE Indexed 'Multiparameter_Monitor' (36 sources, 175 headers) in 5.36 sec: 17,319 declarations; 94,501 references; 2 unresolved inclusions; 42 syntax errors; 661 unresolved names (0.59%)

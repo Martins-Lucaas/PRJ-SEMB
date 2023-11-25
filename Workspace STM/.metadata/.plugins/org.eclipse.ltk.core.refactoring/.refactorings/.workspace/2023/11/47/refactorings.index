@@ -6,3 +6,7 @@
 1700747921356	Delete resource 'STM32IDE'
 1700779358748	Delete resource 'Multiparameter_Monitor'
 1700779374317	Delete resource 'STM32IDE'
+1700945716844	Delete resource 'Multiparameter_Monitor/Monitor_core/adc_emg.c'
+1700945732409	Delete resource 'Multiparameter_Monitor/Monitor_core/adc_emg.h'
+1700945736146	Delete resource 'Multiparameter_Monitor/Monitor_core/pwm_io.c'
+1700945738689	Delete resource 'Multiparameter_Monitor/Monitor_core/pwm_io.h'

@@ -5,25 +5,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Monitor_core/adc_emg.c \
 ../Monitor_core/max30102_for_stm32_hal.c \
 ../Monitor_core/mlx90614.c \
-../Monitor_core/monitor_main.c \
-../Monitor_core/pwm_io.c 
+../Monitor_core/monitor_main.c 
 
 C_DEPS += \
-./Monitor_core/adc_emg.d \
 ./Monitor_core/max30102_for_stm32_hal.d \
 ./Monitor_core/mlx90614.d \
-./Monitor_core/monitor_main.d \
-./Monitor_core/pwm_io.d 
+./Monitor_core/monitor_main.d 
 
 OBJS += \
-./Monitor_core/adc_emg.o \
 ./Monitor_core/max30102_for_stm32_hal.o \
 ./Monitor_core/mlx90614.o \
-./Monitor_core/monitor_main.o \
-./Monitor_core/pwm_io.o 
+./Monitor_core/monitor_main.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -33,7 +27,7 @@ Monitor_core/%.o Monitor_core/%.su Monitor_core/%.cyclo: ../Monitor_core/%.c Mon
 clean: clean-Monitor_core
 
 clean-Monitor_core:
-	-$(RM) ./Monitor_core/adc_emg.cyclo ./Monitor_core/adc_emg.d ./Monitor_core/adc_emg.o ./Monitor_core/adc_emg.su ./Monitor_core/max30102_for_stm32_hal.cyclo ./Monitor_core/max30102_for_stm32_hal.d ./Monitor_core/max30102_for_stm32_hal.o ./Monitor_core/max30102_for_stm32_hal.su ./Monitor_core/mlx90614.cyclo ./Monitor_core/mlx90614.d ./Monitor_core/mlx90614.o ./Monitor_core/mlx90614.su ./Monitor_core/monitor_main.cyclo ./Monitor_core/monitor_main.d ./Monitor_core/monitor_main.o ./Monitor_core/monitor_main.su ./Monitor_core/pwm_io.cyclo ./Monitor_core/pwm_io.d ./Monitor_core/pwm_io.o ./Monitor_core/pwm_io.su
+	-$(RM) ./Monitor_core/max30102_for_stm32_hal.cyclo ./Monitor_core/max30102_for_stm32_hal.d ./Monitor_core/max30102_for_stm32_hal.o ./Monitor_core/max30102_for_stm32_hal.su ./Monitor_core/mlx90614.cyclo ./Monitor_core/mlx90614.d ./Monitor_core/mlx90614.o ./Monitor_core/mlx90614.su ./Monitor_core/monitor_main.cyclo ./Monitor_core/monitor_main.d ./Monitor_core/monitor_main.o ./Monitor_core/monitor_main.su
 
 .PHONY: clean-Monitor_core
 

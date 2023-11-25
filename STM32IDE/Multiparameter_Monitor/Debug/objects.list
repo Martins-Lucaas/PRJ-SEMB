@@ -31,8 +31,6 @@
 "./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
 "./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o"
 "./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o"
-"./Monitor_core/adc_emg.o"
 "./Monitor_core/max30102_for_stm32_hal.o"
 "./Monitor_core/mlx90614.o"
 "./Monitor_core/monitor_main.o"
-"./Monitor_core/pwm_io.o"
