@@ -8,7 +8,10 @@
 //void setup();
 
 //void loop();
+void init(void)
+{
 
+}
 
 
 /*código aula 7/11*/

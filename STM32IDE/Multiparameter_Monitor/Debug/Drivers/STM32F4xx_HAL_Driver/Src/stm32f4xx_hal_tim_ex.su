@@ -1,7 +1,7 @@
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:138:19:HAL_TIMEx_HallSensor_Init	48	static
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:239:19:HAL_TIMEx_HallSensor_DeInit	16	static
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:284:13:HAL_TIMEx_HallSensor_MspInit	16	static
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:299:13:HAL_TIMEx_HallSensor_MspDeInit	16	static
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:284:28:HAL_TIMEx_HallSensor_MspInit	16	static
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:299:28:HAL_TIMEx_HallSensor_MspDeInit	16	static
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:314:19:HAL_TIMEx_HallSensor_Start	24	static
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:368:19:HAL_TIMEx_HallSensor_Stop	16	static
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:396:19:HAL_TIMEx_HallSensor_Start_IT	24	static
@@ -30,9 +30,9 @@
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:1962:19:HAL_TIMEx_MasterConfigSynchronization	24	static
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:2023:19:HAL_TIMEx_ConfigBreakDeadTime	24	static
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:2099:19:HAL_TIMEx_RemapConfig	16	static
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:2156:13:HAL_TIMEx_CommutCallback	16	static
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:2170:13:HAL_TIMEx_CommutHalfCpltCallback	16	static
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:2185:13:HAL_TIMEx_BreakCallback	16	static
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:2156:28:HAL_TIMEx_CommutCallback	16	static
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:2170:28:HAL_TIMEx_CommutHalfCpltCallback	16	static
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:2185:28:HAL_TIMEx_BreakCallback	16	static
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:2218:22:HAL_TIMEx_HallSensor_GetState	16	static
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:2233:29:HAL_TIMEx_GetChannelNState	24	static
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c:2262:6:TIMEx_DMACommutationCplt	24	static

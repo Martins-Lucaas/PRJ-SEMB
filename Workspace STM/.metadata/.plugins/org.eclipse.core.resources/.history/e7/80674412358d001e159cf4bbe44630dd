@@ -1,0 +1,37 @@
+/*
+ * eletromio_adc.c
+ *
+ *  Created on: Nov 27, 2023
+ *      Author: lucas
+ */
+
+#include <stdio.h>
+#include <string.h>
+#include <stdint.h>
+#include "main.h"
+
+extern TIM_HandleTypeDef hadc1;
+extern UART_HandleTypeDef huart3;
+
+void emg_system(void)
+{
+	uint16_t emg_storage = 0;
+	char buffer[20];
+
+	//GPIO pin high
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, GPIO_PIN_SET);
+
+	//Pega o valor do ADC
+	HAL_ADC_Start(&hadc1);
+	HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+	emg_storage = HAL_ADC_GetValue(&hadc1);
+
+	//GPIO pin high
+	//HAL_GPIO_WritePin(GPIOA, GPIO_PIN10, GPIO_PIN_RESET);
+
+	//Converte o valor para string e printa
+	sprintf(buffer,"%hu\r\n",emg_storage);
+	HAL_UART_Transmit(&huart3, (uint8_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
+
+}
+
