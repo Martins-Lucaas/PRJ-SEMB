@@ -31,7 +31,8 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "z_displ_ILI9XXX.h"
+#include "z_touch_XPT2046.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

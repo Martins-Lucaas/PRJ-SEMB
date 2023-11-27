@@ -1,0 +1,216 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Main",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 320,
+            "Height": 500,
+            "Color": {
+              "Blue": 64
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "counterBackgroundImage",
+            "X": 84,
+            "Y": 20,
+            "Width": 152,
+            "Height": 154,
+            "RelativeFilename": "counter_box.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "countTxt",
+            "X": 84,
+            "Y": 71,
+            "Width": 152,
+            "Height": 89,
+            "TextId": "TextId1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_5MI9",
+              "UseBuffer": true,
+              "BufferSize": 3
+            }
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "bt_sair",
+            "X": 26,
+            "Y": 420,
+            "Width": 240,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
+            "TextId": "__SingleUse_LT88",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "bt_emg",
+            "X": 26,
+            "Y": 225,
+            "Width": 240,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
+            "TextId": "__SingleUse_1GUE",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "bt_temp_1",
+            "X": 26,
+            "Y": 294,
+            "Width": 240,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
+            "TextId": "__SingleUse_ZP0J",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "bt_oxy",
+            "X": 26,
+            "Y": 356,
+            "Width": 240,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
+            "TextId": "__SingleUse_P1XO",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "IncreaseValue",
+            "Trigger": {
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "increaseValue"
+            }
+          },
+          {
+            "InteractionName": "DecreaseValue",
+            "Trigger": {
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "decreaseValue"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "MyApplication",
+    "Resolution": {
+      "Width": 320,
+      "Height": 480
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Main",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 320,
+        "Height": 480
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Portrait",
+    "Family": "STM32F4",
+    "SubFamily": "STM32F446",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m4",
+    "ProjectFile": "../Multiparameter_Monitor.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": []
+  },
+  "Version": "4.22.1"
+}
