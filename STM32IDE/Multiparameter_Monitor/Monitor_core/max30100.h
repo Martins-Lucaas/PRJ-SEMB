@@ -2,7 +2,7 @@
  * max30100.h
  *
  *  Created on: Nov 26, 2023
- *      Author: gabri
+ *      Author: gabriel
  */
 
 #ifndef MAX30100_H_
@@ -14,21 +14,32 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+// Definição de constantes para o endereço I2C do sensor MAX30100 e o valor de tempo limite I2C
 #define MAX30100_I2C_ADDR 0x57
 #define MAX30100_I2C_TIMEOUT 1000
 
+
+// Especifica constantes para o número de bytes por amostra e o comprimento máximo da amostra
 #define MAX30100_BYTES_PER_SAMPLE 6
 #define MAX30100_SAMPLE_LEN_MAX 32
 
+
+// Define endereços para vários registros do MAX30100
 #define MAX30100_INTERRUPT_STATUS_1 0x00
 #define MAX30100_INTERRUPT_STATUS_2 0x01
 #define MAX30100_INTERRUPT_ENABLE_1 0x02
 #define MAX30100_INTERRUPT_ENABLE_2 0x03
+
+
+// Define posições de bits para diferentes flags de interrupção nos registros de interrupção
 #define MAX30100_INTERRUPT_A_FULL 7
 #define MAX30100_INTERRUPT_PPG_RDY 6
 #define MAX30100_INTERRUPT_ALC_OVF 5
 #define MAX30100_INTERRUPT_DIE_TEMP_RDY 1
 
+
+// Define endereços e configurações para registros relacionados ao FIFO
 #define MAX30100_FIFO_WR_PTR 0x04
 #define MAX30100_OVF_COUNTER 0x05
 #define MAX30100_FIFO_RD_PTR 0x06
@@ -40,6 +51,8 @@
 #define MAX30100_FIFO_CONFIG_ROLL_OVER_EN 4
 #define MAX30100_FIFO_CONFIG_FIFO_A_FULL 0
 
+
+// Definições para registros de modo e configuração
 #define MAX30100_MODE_CONFIG 0x09
 #define MAX30100_MODE_SHDN 7
 #define MAX30100_MODE_RESET 6
