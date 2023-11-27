@@ -13,8 +13,11 @@
 #include "mlx90614.h"
 
 extern I2C_HandleTypeDef hi2c2;
+// Buffer temporário para armazenar mensagens de depuração
 char temp_buff[128] = {};
 
+/* Tabela de CRC8 pré-calculada, usada no cálculo do CRC8 para verificar a integridade dos dados
+ * durante operações de leitura e escrita */
 static const uint8_t crc_table[] = {
     0x00, 0x07, 0x0e, 0x09, 0x1c, 0x1b, 0x12, 0x15, 0x38, 0x3f, 0x36, 0x31,
     0x24, 0x23, 0x2a, 0x2d, 0x70, 0x77, 0x7e, 0x79, 0x6c, 0x6b, 0x62, 0x65,
@@ -40,6 +43,7 @@ static const uint8_t crc_table[] = {
     0xfa, 0xfd, 0xf4, 0xf3
 };
 
+/* Calcula o valor de CRC8 para um conjunto de dados fornecido */
 uint8_t CRC8_Calc (uint8_t *p, uint8_t len) {
         uint16_t i;
         uint16_t crc = 0x0;
@@ -52,47 +56,57 @@ uint8_t CRC8_Calc (uint8_t *p, uint8_t len) {
         return crc & 0xFF;
 }
 
+/* Escreve um valor de 16 bits em um registro específico do sensor, calcula e
+ * inclui um valor CRC8 nos dados transmitidos durante a operação de escrita */
 void MLX90614_WriteReg(uint8_t devAddr, uint8_t regAddr, uint16_t data) {
 
 	uint8_t i2cdata[4], temp[4];
 
+	// Preparando os dados para a operação de exclusão e calculando o CRC8
 	temp[0] = (devAddr << 1);
 	temp[1] = regAddr;
 
 	temp[2] = 0x00;
 	temp[3] = 0x00;
 
-	// For a write word command, in the crc8 calculus, you have to include [SA_W, Command, LSB, MSB]
-
-	i2cdata[0] = temp[1]; //EEPROM-address
+	i2cdata[0] = temp[1]; //EEPROM endereço
 	i2cdata[1] = temp[2]; //Delete-Byte, low
 	i2cdata[2] = temp[3]; //Delete-Byte, high
-	i2cdata[3] = CRC8_Calc(temp, 4); //CRC8-checksum calculation: http://www.sunshine2k.de/coding/javascript/crc/crc_js.html
+	i2cdata[3] = CRC8_Calc(temp, 4); //cálculo checksum do CRC8
 
+	// Transmitindo os dados via I2C
 	HAL_I2C_Master_Transmit(&hi2c2, (devAddr << 1), i2cdata, 4, 0xFFFF);
 	HAL_Delay(10);
 
+	// Enviando mensagem de depuração
 	MLX90614_SendDebugMsg(MLX90614_DBG_MSG_W, devAddr, i2cdata[0], (i2cdata[1] <<8 | i2cdata[2]), i2cdata[3], 0x00);
 
-	temp[2] = data & 0xFF; //Getting LSB first
-	temp[3] = data >> 8;   //Getting MSB after
+	// Preparando os dados reais e calculando o CRC8
+	temp[2] = data & 0xFF; //Obtendo o byte menos significativo primeiro
+	temp[3] = data >> 8;   //Obtendo o byte mais significativo depois
 
-	i2cdata[0] = temp[1]; //EEPROM-address
+	i2cdata[0] = temp[1]; //EEPROM endereço
 	i2cdata[1] = temp[2]; //Delete-Byte, low
 	i2cdata[2] = temp[3]; //Delete-Byte, high
-	i2cdata[3] = CRC8_Calc(temp, 4); //CRC8-checksum calculation: http://www.sunshine2k.de/coding/javascript/crc/crc_js.html
+	i2cdata[3] = CRC8_Calc(temp, 4);
 
+	// Transmitindo os dados reais via I2C
 	HAL_I2C_Master_Transmit(&hi2c2, (devAddr << 1), i2cdata, 4, 0xFFFF);
 	HAL_Delay(10);
+	// Enviando mensagem de depuração
 	MLX90614_SendDebugMsg(MLX90614_DBG_MSG_W, devAddr, i2cdata[0], data, i2cdata[3], 0x00);
 }
+
+/* Lê um valor de 16 bits de um registro específico do sensor, calcula e verifica o
+ * valor CRC8 dos dados lidos durante a operação de leitura */
 uint16_t MLX90614_ReadReg(uint8_t devAddr, uint8_t regAddr, uint8_t dbg_lvl) {
 	uint16_t data;
 	uint8_t in_buff[3], crc_buff[5], crc;
 
+	// Lendo os dados via I2C
 	HAL_I2C_Mem_Read(&hi2c2, (devAddr<<1), regAddr, 1, in_buff, 3, 100);
 
-	// For a read word command, in the crc8 calculus, you have to include [SA_W, Command, SA_R, LSB, MSB]
+	// Calculando CRC8 para verificar a integridade dos dados lidos
 	crc_buff[0] = (devAddr<<1);
 	crc_buff[1] = regAddr;
 	crc_buff[2] = (devAddr<<1) + 1;
@@ -100,36 +114,50 @@ uint16_t MLX90614_ReadReg(uint8_t devAddr, uint8_t regAddr, uint8_t dbg_lvl) {
 	crc_buff[4] = in_buff[1];
 	crc = CRC8_Calc(crc_buff, 5);
 
+	// Montando o valor de 16 bits a partir dos dados lidos
 	data = (in_buff[1] <<8 | in_buff[0]);
 
-	//TODO: implement CRC8 check on data received
+	//TODO: Implementar a verificação CRC8 nos dados recebidos
 	if (crc != in_buff[2]) {
 		data = 0x0000;
 	}
+	// Enviando mensagem de depuração
 	if(dbg_lvl == MLX90614_DBG_ON)	MLX90614_SendDebugMsg(MLX90614_DBG_MSG_R, devAddr, regAddr, data, in_buff[2], crc);
 
+	// Retornando o valor de 16 bits
 	//HAL_Delay(1);
 	return data;
 }
+
+/* Lê a temperatura de um canal específico do sensor e a converte para Celsius */
 float MLX90614_ReadTemp(uint8_t devAddr, uint8_t regAddr) {
 	float temp;
 	uint16_t data;
-
+	// Lendo o valor de registro relacionado à temperatura
 	data = MLX90614_ReadReg(devAddr, regAddr, MLX90614_DBG_OFF);
+
+	// Convertendo o valor para Celsius
 	temp = data*0.02 - 273.15;
 
+    // Retornando a temperatura em Celsius
 	return temp;
 }
+
+/* Realiza uma varredura para encontrar dispositivos MLX90614 na rede I2C e a presença de dispositivos é impressa na saída. */
 void MLX90614_ScanDevices (void) {
 	HAL_StatusTypeDef result;
+
+	// Varrendo endereços I2C em busca de dispositivos MLX90614
 	for (int i = 0; i<128; i++)
 		  {
 			  result = HAL_I2C_IsDeviceReady(&hi2c2, (uint16_t) (i<<1), 2, 2);
+			  // Se o dispositivo não estiver pronto, imprimir um ponto
 			  if (result != HAL_OK)
 			  {
 				  sprintf(temp_buff, ".");
 				  CDC_Transmit_FS(temp_buff, strlen((const char *)temp_buff));
 			  }
+			  // Se o dispositivo estiver pronto, imprimir o endereço
 			  if (result == HAL_OK)
 			  {
 				  sprintf(temp_buff, "0x%X", i);
@@ -138,11 +166,15 @@ void MLX90614_ScanDevices (void) {
 			  }
 		  }
 }
+
+/* Envia mensagens de depuração para uma interface de comunicação para monitoramento e depuração do código */
 void MLX90614_SendDebugMsg(uint8_t op_type, uint8_t devAddr, uint8_t regAddr, uint16_t data, uint8_t crc_in, uint8_t crc_calc) {
+	// Mensagem de escrita
 	if(op_type == MLX90614_DBG_MSG_W) {
 		snprintf(temp_buff, sizeof(temp_buff), "W Dev: 0x%02X, Reg: 0x%02X, Data: 0x%04X, CRC8_calc:0x%02X\r\n", devAddr, regAddr, data, crc_calc);
 		CDC_Transmit_FS(temp_buff, strlen((const char *)temp_buff));
 	}
+	// Mensagem de leitura
 	else if (op_type == MLX90614_DBG_MSG_R) {
 		snprintf(temp_buff, sizeof(temp_buff), "R Dev: 0x%02X, Reg: 0x%02X, Data: 0x%04X, CRC8_in:0x%02X, CRC8_calc:0x%02X\r\n", devAddr, regAddr, data, crc_in, crc_calc);
 		CDC_Transmit_FS(temp_buff, strlen((const char *)temp_buff));
