@@ -53,7 +53,7 @@ crc_table:
 CRC8_Calc:
 .LFB238:
 	.file 1 "../Monitor_core/mlx90614.c"
-	.loc 1 43 45
+	.loc 1 47 45
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -68,55 +68,55 @@ CRC8_Calc:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 45 18
+	.loc 1 49 18
 	movs	r3, #0
 	strh	r3, [r7, #14]	@ movhi
-	.loc 1 47 15
+	.loc 1 51 15
 	b	.L2
 .L3:
-	.loc 1 48 30
+	.loc 1 52 30
 	ldr	r3, [r7, #4]
 	adds	r2, r3, #1
 	str	r2, [r7, #4]
-	.loc 1 48 28
+	.loc 1 52 28
 	ldrb	r3, [r3]	@ zero_extendqisi2
 	uxth	r2, r3
-	.loc 1 48 26
+	.loc 1 52 26
 	ldrh	r3, [r7, #14]	@ movhi
 	eors	r3, r3, r2
 	uxth	r3, r3
-	.loc 1 48 19
+	.loc 1 52 19
 	uxtb	r3, r3
 	strh	r3, [r7, #12]	@ movhi
-	.loc 1 49 33
+	.loc 1 53 33
 	ldrh	r3, [r7, #12]
 	ldr	r2, .L5
 	ldrb	r3, [r2, r3]	@ zero_extendqisi2
 	sxth	r2, r3
-	.loc 1 49 44
+	.loc 1 53 44
 	ldrh	r3, [r7, #14]
 	lsls	r3, r3, #8
-	.loc 1 49 37
+	.loc 1 53 37
 	sxth	r3, r3
 	eors	r3, r3, r2
 	sxth	r3, r3
-	.loc 1 49 51
+	.loc 1 53 51
 	uxth	r3, r3
-	.loc 1 49 21
+	.loc 1 53 21
 	uxtb	r3, r3
 	strh	r3, [r7, #14]	@ movhi
 .L2:
-	.loc 1 47 19
+	.loc 1 51 19
 	ldrb	r3, [r7, #3]	@ zero_extendqisi2
 	subs	r2, r3, #1
 	strb	r2, [r7, #3]
-	.loc 1 47 16
+	.loc 1 51 16
 	cmp	r3, #0
 	bne	.L3
-	.loc 1 52 20
+	.loc 1 56 20
 	ldrh	r3, [r7, #14]	@ movhi
 	uxtb	r3, r3
-	.loc 1 53 1
+	.loc 1 57 1
 	mov	r0, r3
 	adds	r7, r7, #20
 	.cfi_def_cfa_offset 4
@@ -143,7 +143,7 @@ CRC8_Calc:
 	.type	MLX90614_WriteReg, %function
 MLX90614_WriteReg:
 .LFB239:
-	.loc 1 55 73
+	.loc 1 61 73
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -162,42 +162,42 @@ MLX90614_WriteReg:
 	strb	r3, [r7, #6]
 	mov	r3, r2	@ movhi
 	strh	r3, [r7, #4]	@ movhi
-	.loc 1 59 21
+	.loc 1 66 21
 	ldrb	r3, [r7, #7]
 	lsls	r3, r3, #1
 	uxtb	r3, r3
-	.loc 1 59 10
+	.loc 1 66 10
 	strb	r3, [r7, #8]
-	.loc 1 60 10
+	.loc 1 67 10
 	ldrb	r3, [r7, #6]
 	strb	r3, [r7, #9]
-	.loc 1 62 10
+	.loc 1 69 10
 	movs	r3, #0
 	strb	r3, [r7, #10]
-	.loc 1 63 10
+	.loc 1 70 10
 	movs	r3, #0
 	strb	r3, [r7, #11]
-	.loc 1 67 19
+	.loc 1 72 19
 	ldrb	r3, [r7, #9]	@ zero_extendqisi2
-	.loc 1 67 13
+	.loc 1 72 13
 	strb	r3, [r7, #12]
-	.loc 1 68 19
+	.loc 1 73 19
 	ldrb	r3, [r7, #10]	@ zero_extendqisi2
-	.loc 1 68 13
+	.loc 1 73 13
 	strb	r3, [r7, #13]
-	.loc 1 69 19
+	.loc 1 74 19
 	ldrb	r3, [r7, #11]	@ zero_extendqisi2
-	.loc 1 69 13
+	.loc 1 74 13
 	strb	r3, [r7, #14]
-	.loc 1 70 15
+	.loc 1 75 15
 	add	r3, r7, #8
 	movs	r1, #4
 	mov	r0, r3
 	bl	CRC8_Calc
 	mov	r3, r0
-	.loc 1 70 13
+	.loc 1 75 13
 	strb	r3, [r7, #15]
-	.loc 1 72 2
+	.loc 1 78 2
 	ldrb	r3, [r7, #7]	@ zero_extendqisi2
 	uxth	r3, r3
 	lsls	r3, r3, #1
@@ -208,24 +208,24 @@ MLX90614_WriteReg:
 	movs	r3, #4
 	ldr	r0, .L8
 	bl	HAL_I2C_Master_Transmit
-	.loc 1 73 2
+	.loc 1 79 2
 	movs	r0, #10
 	bl	HAL_Delay
-	.loc 1 75 2
+	.loc 1 82 2
 	ldrb	r0, [r7, #12]	@ zero_extendqisi2
-	.loc 1 75 56
+	.loc 1 82 56
 	ldrb	r3, [r7, #13]	@ zero_extendqisi2
-	.loc 1 75 60
+	.loc 1 82 60
 	lsls	r3, r3, #8
-	.loc 1 75 64
+	.loc 1 82 64
 	sxth	r2, r3
-	.loc 1 75 73
+	.loc 1 82 73
 	ldrb	r3, [r7, #14]	@ zero_extendqisi2
 	sxth	r3, r3
-	.loc 1 75 64
+	.loc 1 82 64
 	orrs	r3, r3, r2
 	sxth	r3, r3
-	.loc 1 75 2
+	.loc 1 82 2
 	uxth	r2, r3
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	ldrb	r1, [r7, #7]	@ zero_extendqisi2
@@ -236,37 +236,37 @@ MLX90614_WriteReg:
 	mov	r2, r0
 	movs	r0, #0
 	bl	MLX90614_SendDebugMsg
-	.loc 1 77 10
+	.loc 1 85 10
 	ldrh	r3, [r7, #4]	@ movhi
 	uxtb	r3, r3
 	strb	r3, [r7, #10]
-	.loc 1 78 10
+	.loc 1 86 10
 	ldrh	r3, [r7, #4]
 	lsrs	r3, r3, #8
 	uxth	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #11]
-	.loc 1 80 19
+	.loc 1 88 19
 	ldrb	r3, [r7, #9]	@ zero_extendqisi2
-	.loc 1 80 13
+	.loc 1 88 13
 	strb	r3, [r7, #12]
-	.loc 1 81 19
+	.loc 1 89 19
 	ldrb	r3, [r7, #10]	@ zero_extendqisi2
-	.loc 1 81 13
+	.loc 1 89 13
 	strb	r3, [r7, #13]
-	.loc 1 82 19
+	.loc 1 90 19
 	ldrb	r3, [r7, #11]	@ zero_extendqisi2
-	.loc 1 82 13
+	.loc 1 90 13
 	strb	r3, [r7, #14]
-	.loc 1 83 15
+	.loc 1 91 15
 	add	r3, r7, #8
 	movs	r1, #4
 	mov	r0, r3
 	bl	CRC8_Calc
 	mov	r3, r0
-	.loc 1 83 13
+	.loc 1 91 13
 	strb	r3, [r7, #15]
-	.loc 1 85 2
+	.loc 1 94 2
 	ldrb	r3, [r7, #7]	@ zero_extendqisi2
 	uxth	r3, r3
 	lsls	r3, r3, #1
@@ -277,10 +277,10 @@ MLX90614_WriteReg:
 	movs	r3, #4
 	ldr	r0, .L8
 	bl	HAL_I2C_Master_Transmit
-	.loc 1 86 2
+	.loc 1 95 2
 	movs	r0, #10
 	bl	HAL_Delay
-	.loc 1 87 2
+	.loc 1 97 2
 	ldrb	r2, [r7, #12]	@ zero_extendqisi2
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	ldrh	r0, [r7, #4]
@@ -291,7 +291,7 @@ MLX90614_WriteReg:
 	mov	r3, r0
 	movs	r0, #0
 	bl	MLX90614_SendDebugMsg
-	.loc 1 88 1
+	.loc 1 98 1
 	nop
 	adds	r7, r7, #20
 	.cfi_def_cfa_offset 12
@@ -315,7 +315,7 @@ MLX90614_WriteReg:
 	.type	MLX90614_ReadReg, %function
 MLX90614_ReadReg:
 .LFB240:
-	.loc 1 89 78
+	.loc 1 102 78
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 24
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -334,7 +334,7 @@ MLX90614_ReadReg:
 	strb	r3, [r7, #6]
 	mov	r3, r2
 	strb	r3, [r7, #5]
-	.loc 1 93 2
+	.loc 1 107 2
 	ldrb	r3, [r7, #7]	@ zero_extendqisi2
 	uxth	r3, r3
 	lsls	r3, r3, #1
@@ -350,68 +350,68 @@ MLX90614_ReadReg:
 	movs	r3, #1
 	ldr	r0, .L14
 	bl	HAL_I2C_Mem_Read
-	.loc 1 96 24
+	.loc 1 110 24
 	ldrb	r3, [r7, #7]
 	lsls	r3, r3, #1
 	uxtb	r3, r3
-	.loc 1 96 14
+	.loc 1 110 14
 	strb	r3, [r7, #8]
-	.loc 1 97 14
+	.loc 1 111 14
 	ldrb	r3, [r7, #6]
 	strb	r3, [r7, #9]
-	.loc 1 98 24
+	.loc 1 112 24
 	ldrb	r3, [r7, #7]
 	lsls	r3, r3, #1
 	uxtb	r3, r3
-	.loc 1 98 29
+	.loc 1 112 29
 	adds	r3, r3, #1
 	uxtb	r3, r3
-	.loc 1 98 14
+	.loc 1 112 14
 	strb	r3, [r7, #10]
-	.loc 1 99 23
+	.loc 1 113 23
 	ldrb	r3, [r7, #16]	@ zero_extendqisi2
-	.loc 1 99 14
+	.loc 1 113 14
 	strb	r3, [r7, #11]
-	.loc 1 100 23
+	.loc 1 114 23
 	ldrb	r3, [r7, #17]	@ zero_extendqisi2
-	.loc 1 100 14
+	.loc 1 114 14
 	strb	r3, [r7, #12]
-	.loc 1 101 8
+	.loc 1 115 8
 	add	r3, r7, #8
 	movs	r1, #5
 	mov	r0, r3
 	bl	CRC8_Calc
 	mov	r3, r0
 	strb	r3, [r7, #21]
-	.loc 1 103 17
+	.loc 1 118 17
 	ldrb	r3, [r7, #17]	@ zero_extendqisi2
-	.loc 1 103 21
+	.loc 1 118 21
 	lsls	r3, r3, #8
-	.loc 1 103 25
+	.loc 1 118 25
 	sxth	r2, r3
-	.loc 1 103 34
+	.loc 1 118 34
 	ldrb	r3, [r7, #16]	@ zero_extendqisi2
 	sxth	r3, r3
-	.loc 1 103 25
+	.loc 1 118 25
 	orrs	r3, r3, r2
 	sxth	r3, r3
-	.loc 1 103 7
+	.loc 1 118 7
 	strh	r3, [r7, #22]	@ movhi
-	.loc 1 106 20
+	.loc 1 121 20
 	ldrb	r3, [r7, #18]	@ zero_extendqisi2
-	.loc 1 106 5
+	.loc 1 121 5
 	ldrb	r2, [r7, #21]	@ zero_extendqisi2
 	cmp	r2, r3
 	beq	.L11
-	.loc 1 107 8
+	.loc 1 122 8
 	movs	r3, #0
 	strh	r3, [r7, #22]	@ movhi
 .L11:
-	.loc 1 109 4
+	.loc 1 125 4
 	ldrb	r3, [r7, #5]	@ zero_extendqisi2
 	cmp	r3, #1
 	bne	.L12
-	.loc 1 109 19 discriminator 1
+	.loc 1 125 19 discriminator 1
 	ldrb	r3, [r7, #18]	@ zero_extendqisi2
 	ldrh	r4, [r7, #22]
 	ldrb	r0, [r7, #6]	@ zero_extendqisi2
@@ -424,9 +424,9 @@ MLX90614_ReadReg:
 	movs	r0, #1
 	bl	MLX90614_SendDebugMsg
 .L12:
-	.loc 1 112 9
+	.loc 1 129 9
 	ldrh	r3, [r7, #22]
-	.loc 1 113 1
+	.loc 1 130 1
 	mov	r0, r3
 	adds	r7, r7, #28
 	.cfi_def_cfa_offset 12
@@ -454,7 +454,7 @@ MLX90614_ReadReg:
 	.type	MLX90614_ReadTemp, %function
 MLX90614_ReadTemp:
 .LFB241:
-	.loc 1 114 59
+	.loc 1 133 59
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -471,7 +471,7 @@ MLX90614_ReadTemp:
 	strb	r3, [r7, #7]
 	mov	r3, r2
 	strb	r3, [r7, #6]
-	.loc 1 118 9
+	.loc 1 137 9
 	ldrb	r1, [r7, #6]	@ zero_extendqisi2
 	ldrb	r3, [r7, #7]	@ zero_extendqisi2
 	movs	r2, #0
@@ -479,7 +479,7 @@ MLX90614_ReadTemp:
 	bl	MLX90614_ReadReg
 	mov	r3, r0
 	strh	r3, [r7, #14]	@ movhi
-	.loc 1 119 13
+	.loc 1 140 13
 	ldrh	r3, [r7, #14]
 	mov	r0, r3
 	bl	__aeabi_i2d
@@ -490,22 +490,22 @@ MLX90614_ReadTemp:
 	mov	r3, r1
 	mov	r0, r2
 	mov	r1, r3
-	.loc 1 119 19
+	.loc 1 140 19
 	adr	r3, .L18+8
 	ldrd	r2, [r3]
 	bl	__aeabi_dsub
 	mov	r2, r0
 	mov	r3, r1
-	.loc 1 119 7
+	.loc 1 140 7
 	mov	r0, r2
 	mov	r1, r3
 	bl	__aeabi_d2f
 	mov	r3, r0	@ float
 	str	r3, [r7, #8]	@ float
-	.loc 1 121 9
+	.loc 1 143 9
 	ldr	r3, [r7, #8]	@ float
 	vmov	s15, r3
-	.loc 1 122 1
+	.loc 1 144 1
 	vmov.f32	s0, s15
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -539,7 +539,7 @@ MLX90614_ReadTemp:
 	.type	MLX90614_ScanDevices, %function
 MLX90614_ScanDevices:
 .LFB242:
-	.loc 1 123 34
+	.loc 1 147 34
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -552,13 +552,13 @@ MLX90614_ScanDevices:
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
 .LBB2:
-	.loc 1 125 11
+	.loc 1 151 11
 	movs	r3, #0
 	str	r3, [r7, #4]
-	.loc 1 125 2
+	.loc 1 151 2
 	b	.L21
 .L24:
-	.loc 1 127 15
+	.loc 1 153 15
 	ldr	r3, [r7, #4]
 	uxth	r3, r3
 	lsls	r3, r3, #1
@@ -569,16 +569,16 @@ MLX90614_ScanDevices:
 	bl	HAL_I2C_IsDeviceReady
 	mov	r3, r0
 	strb	r3, [r7, #3]
-	.loc 1 128 9
+	.loc 1 155 9
 	ldrb	r3, [r7, #3]	@ zero_extendqisi2
 	cmp	r3, #0
 	beq	.L22
 .LBB3:
-	.loc 1 130 7
+	.loc 1 157 7
 	ldr	r1, .L25+4
 	ldr	r0, .L25+8
 	bl	sprintf
-	.loc 1 131 7
+	.loc 1 158 7
 	ldr	r0, .L25+8
 	bl	strlen
 	mov	r3, r0
@@ -587,17 +587,17 @@ MLX90614_ScanDevices:
 	bl	CDC_Transmit_FS
 .L22:
 .LBE3:
-	.loc 1 133 9
+	.loc 1 161 9
 	ldrb	r3, [r7, #3]	@ zero_extendqisi2
 	cmp	r3, #0
 	bne	.L23
 .LBB4:
-	.loc 1 135 7
+	.loc 1 163 7
 	ldr	r2, [r7, #4]
 	ldr	r1, .L25+12
 	ldr	r0, .L25+8
 	bl	sprintf
-	.loc 1 136 7
+	.loc 1 164 7
 	ldr	r0, .L25+8
 	bl	strlen
 	mov	r3, r0
@@ -606,17 +606,17 @@ MLX90614_ScanDevices:
 	bl	CDC_Transmit_FS
 .L23:
 .LBE4:
-	.loc 1 125 26 discriminator 2
+	.loc 1 151 26 discriminator 2
 	ldr	r3, [r7, #4]
 	adds	r3, r3, #1
 	str	r3, [r7, #4]
 .L21:
-	.loc 1 125 19 discriminator 1
+	.loc 1 151 19 discriminator 1
 	ldr	r3, [r7, #4]
 	cmp	r3, #127
 	ble	.L24
 .LBE2:
-	.loc 1 140 1
+	.loc 1 168 1
 	nop
 	nop
 	adds	r7, r7, #8
@@ -653,7 +653,7 @@ MLX90614_ScanDevices:
 	.type	MLX90614_SendDebugMsg, %function
 MLX90614_SendDebugMsg:
 .LFB243:
-	.loc 1 141 128
+	.loc 1 171 128
 	.cfi_startproc
 	@ args = 8, pretend = 0, frame = 8
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -678,12 +678,12 @@ MLX90614_SendDebugMsg:
 	strb	r3, [r7, #5]
 	mov	r3, r2	@ movhi
 	strh	r3, [r7, #2]	@ movhi
-	.loc 1 142 4
+	.loc 1 173 4
 	ldrb	r3, [r7, #7]	@ zero_extendqisi2
 	cmp	r3, #0
 	bne	.L28
 .LBB5:
-	.loc 1 143 3
+	.loc 1 174 3
 	ldrb	r0, [r7, #6]	@ zero_extendqisi2
 	ldrb	r3, [r7, #5]	@ zero_extendqisi2
 	ldrh	r2, [r7, #2]
@@ -696,7 +696,7 @@ MLX90614_SendDebugMsg:
 	movs	r1, #128
 	ldr	r0, .L31+4
 	bl	snprintf
-	.loc 1 144 3
+	.loc 1 175 3
 	ldr	r0, .L31+4
 	bl	strlen
 	mov	r3, r0
@@ -704,15 +704,15 @@ MLX90614_SendDebugMsg:
 	ldr	r0, .L31+4
 	bl	CDC_Transmit_FS
 .LBE5:
-	.loc 1 151 1
+	.loc 1 183 1
 	b	.L30
 .L28:
-	.loc 1 146 10
+	.loc 1 178 10
 	ldrb	r3, [r7, #7]	@ zero_extendqisi2
 	cmp	r3, #1
 	bne	.L30
 .LBB6:
-	.loc 1 147 3
+	.loc 1 179 3
 	ldrb	r4, [r7, #6]	@ zero_extendqisi2
 	ldrb	r3, [r7, #5]	@ zero_extendqisi2
 	ldrh	r2, [r7, #2]
@@ -727,7 +727,7 @@ MLX90614_SendDebugMsg:
 	movs	r1, #128
 	ldr	r0, .L31+4
 	bl	snprintf
-	.loc 1 148 3
+	.loc 1 180 3
 	ldr	r0, .L31+4
 	bl	strlen
 	mov	r3, r0
@@ -736,7 +736,7 @@ MLX90614_SendDebugMsg:
 	bl	CDC_Transmit_FS
 .L30:
 .LBE6:
-	.loc 1 151 1
+	.loc 1 183 1
 	nop
 	adds	r7, r7, #12
 	.cfi_def_cfa_offset 12
@@ -1570,7 +1570,7 @@ MLX90614_SendDebugMsg:
 	.uleb128 0x23
 	.4byte	.LASF19954
 	.byte	0x1
-	.byte	0x10
+	.byte	0x11
 	.byte	0x6
 	.4byte	0x626
 	.uleb128 0x5
@@ -1587,7 +1587,7 @@ MLX90614_SendDebugMsg:
 	.4byte	0x648
 	.uleb128 0x9
 	.4byte	.LASF19971
-	.byte	0x12
+	.byte	0x15
 	.byte	0x16
 	.4byte	0x658
 	.uleb128 0x5
@@ -1611,7 +1611,7 @@ MLX90614_SendDebugMsg:
 	.uleb128 0x24
 	.4byte	.LASF19960
 	.byte	0x1
-	.byte	0x83
+	.byte	0x9e
 	.byte	0x7
 	.4byte	0x86
 	.4byte	0x6a2
@@ -1709,7 +1709,7 @@ MLX90614_SendDebugMsg:
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF19969
-	.byte	0x8d
+	.byte	0xab
 	.4byte	.LFB243
 	.4byte	.LFE243-.LFB243
 	.uleb128 0x1
@@ -1717,7 +1717,7 @@ MLX90614_SendDebugMsg:
 	.4byte	0x808
 	.uleb128 0x5
 	.4byte	.LASF19963
-	.byte	0x8d
+	.byte	0xab
 	.byte	0x24
 	.4byte	0xbf
 	.uleb128 0x2
@@ -1725,7 +1725,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -17
 	.uleb128 0x5
 	.4byte	.LASF19964
-	.byte	0x8d
+	.byte	0xab
 	.byte	0x35
 	.4byte	0xbf
 	.uleb128 0x2
@@ -1733,7 +1733,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -18
 	.uleb128 0x5
 	.4byte	.LASF19965
-	.byte	0x8d
+	.byte	0xab
 	.byte	0x46
 	.4byte	0xbf
 	.uleb128 0x2
@@ -1741,7 +1741,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -19
 	.uleb128 0x5
 	.4byte	.LASF19966
-	.byte	0x8d
+	.byte	0xab
 	.byte	0x58
 	.4byte	0xd0
 	.uleb128 0x2
@@ -1749,7 +1749,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -22
 	.uleb128 0x5
 	.4byte	.LASF19967
-	.byte	0x8d
+	.byte	0xab
 	.byte	0x66
 	.4byte	0xbf
 	.uleb128 0x2
@@ -1757,7 +1757,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 0
 	.uleb128 0x5
 	.4byte	.LASF19968
-	.byte	0x8d
+	.byte	0xab
 	.byte	0x76
 	.4byte	0xbf
 	.uleb128 0x2
@@ -1785,7 +1785,7 @@ MLX90614_SendDebugMsg:
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF19970
-	.byte	0x7b
+	.byte	0x93
 	.4byte	.LFB242
 	.4byte	.LFE242-.LFB242
 	.uleb128 0x1
@@ -1793,7 +1793,7 @@ MLX90614_SendDebugMsg:
 	.4byte	0x86f
 	.uleb128 0x9
 	.4byte	.LASF19972
-	.byte	0x7c
+	.byte	0x94
 	.byte	0x14
 	.4byte	0x1fc
 	.uleb128 0x2
@@ -1804,7 +1804,7 @@ MLX90614_SendDebugMsg:
 	.4byte	.LBE2-.LBB2
 	.uleb128 0x12
 	.ascii	"i\000"
-	.byte	0x7d
+	.byte	0x97
 	.byte	0xb
 	.4byte	0x86
 	.uleb128 0x2
@@ -1833,7 +1833,7 @@ MLX90614_SendDebugMsg:
 	.byte	0
 	.uleb128 0x1b
 	.4byte	.LASF19975
-	.byte	0x72
+	.byte	0x85
 	.byte	0x7
 	.4byte	0x8c1
 	.4byte	.LFB241
@@ -1843,7 +1843,7 @@ MLX90614_SendDebugMsg:
 	.4byte	0x8c1
 	.uleb128 0x5
 	.4byte	.LASF19964
-	.byte	0x72
+	.byte	0x85
 	.byte	0x21
 	.4byte	0xbf
 	.uleb128 0x2
@@ -1851,7 +1851,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -17
 	.uleb128 0x5
 	.4byte	.LASF19965
-	.byte	0x72
+	.byte	0x85
 	.byte	0x32
 	.4byte	0xbf
 	.uleb128 0x2
@@ -1859,7 +1859,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -18
 	.uleb128 0x9
 	.4byte	.LASF19973
-	.byte	0x73
+	.byte	0x86
 	.byte	0x8
 	.4byte	0x8c1
 	.uleb128 0x2
@@ -1867,7 +1867,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -16
 	.uleb128 0x9
 	.4byte	.LASF19966
-	.byte	0x74
+	.byte	0x87
 	.byte	0xb
 	.4byte	0xd0
 	.uleb128 0x2
@@ -1880,7 +1880,7 @@ MLX90614_SendDebugMsg:
 	.4byte	.LASF19974
 	.uleb128 0x1b
 	.4byte	.LASF19976
-	.byte	0x59
+	.byte	0x66
 	.byte	0xa
 	.4byte	0xd0
 	.4byte	.LFB240
@@ -1890,7 +1890,7 @@ MLX90614_SendDebugMsg:
 	.4byte	0x944
 	.uleb128 0x5
 	.4byte	.LASF19964
-	.byte	0x59
+	.byte	0x66
 	.byte	0x23
 	.4byte	0xbf
 	.uleb128 0x2
@@ -1898,7 +1898,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -33
 	.uleb128 0x5
 	.4byte	.LASF19965
-	.byte	0x59
+	.byte	0x66
 	.byte	0x34
 	.4byte	0xbf
 	.uleb128 0x2
@@ -1906,7 +1906,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -34
 	.uleb128 0x5
 	.4byte	.LASF19977
-	.byte	0x59
+	.byte	0x66
 	.byte	0x45
 	.4byte	0xbf
 	.uleb128 0x2
@@ -1914,7 +1914,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -35
 	.uleb128 0x9
 	.4byte	.LASF19966
-	.byte	0x5a
+	.byte	0x67
 	.byte	0xb
 	.4byte	0xd0
 	.uleb128 0x2
@@ -1922,7 +1922,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -18
 	.uleb128 0x9
 	.4byte	.LASF19978
-	.byte	0x5b
+	.byte	0x68
 	.byte	0xa
 	.4byte	0x944
 	.uleb128 0x2
@@ -1930,7 +1930,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -24
 	.uleb128 0x9
 	.4byte	.LASF19979
-	.byte	0x5b
+	.byte	0x68
 	.byte	0x16
 	.4byte	0x954
 	.uleb128 0x2
@@ -1938,7 +1938,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -32
 	.uleb128 0x12
 	.ascii	"crc\000"
-	.byte	0x5b
+	.byte	0x68
 	.byte	0x23
 	.4byte	0xbf
 	.uleb128 0x2
@@ -1961,7 +1961,7 @@ MLX90614_SendDebugMsg:
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF19980
-	.byte	0x37
+	.byte	0x3d
 	.4byte	.LFB239
 	.4byte	.LFE239-.LFB239
 	.uleb128 0x1
@@ -1969,7 +1969,7 @@ MLX90614_SendDebugMsg:
 	.4byte	0x9bf
 	.uleb128 0x5
 	.4byte	.LASF19964
-	.byte	0x37
+	.byte	0x3d
 	.byte	0x20
 	.4byte	0xbf
 	.uleb128 0x2
@@ -1977,7 +1977,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -25
 	.uleb128 0x5
 	.4byte	.LASF19965
-	.byte	0x37
+	.byte	0x3d
 	.byte	0x31
 	.4byte	0xbf
 	.uleb128 0x2
@@ -1985,7 +1985,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -26
 	.uleb128 0x5
 	.4byte	.LASF19966
-	.byte	0x37
+	.byte	0x3d
 	.byte	0x43
 	.4byte	0xd0
 	.uleb128 0x2
@@ -1993,7 +1993,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -28
 	.uleb128 0x9
 	.4byte	.LASF19981
-	.byte	0x39
+	.byte	0x3f
 	.byte	0xa
 	.4byte	0x9bf
 	.uleb128 0x2
@@ -2001,7 +2001,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -20
 	.uleb128 0x9
 	.4byte	.LASF19973
-	.byte	0x39
+	.byte	0x3f
 	.byte	0x16
 	.4byte	0x9bf
 	.uleb128 0x2
@@ -2018,7 +2018,7 @@ MLX90614_SendDebugMsg:
 	.uleb128 0x26
 	.4byte	.LASF19982
 	.byte	0x1
-	.byte	0x2b
+	.byte	0x2f
 	.byte	0x9
 	.4byte	0xbf
 	.4byte	.LFB238
@@ -2041,7 +2041,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -21
 	.uleb128 0x12
 	.ascii	"i\000"
-	.byte	0x2c
+	.byte	0x30
 	.byte	0x12
 	.4byte	0xd0
 	.uleb128 0x2
@@ -2049,7 +2049,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 -12
 	.uleb128 0x12
 	.ascii	"crc\000"
-	.byte	0x2d
+	.byte	0x31
 	.byte	0x12
 	.4byte	0xd0
 	.uleb128 0x2
@@ -2289,7 +2289,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 1
 	.uleb128 0x3b
 	.uleb128 0x21
-	.sleb128 131
+	.sleb128 158
 	.uleb128 0x39
 	.uleb128 0x21
 	.sleb128 7
@@ -2486,7 +2486,7 @@ MLX90614_SendDebugMsg:
 	.sleb128 1
 	.uleb128 0x3b
 	.uleb128 0x21
-	.sleb128 43
+	.sleb128 47
 	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x49
@@ -63148,7 +63148,7 @@ MLX90614_SendDebugMsg:
 	.uleb128 0xc0
 	.4byte	.LASF19820
 	.byte	0
-	.section	.debug_macro,"G",%progbits,wm4.mlx90614.h.9.fd0db529ca11cfe8a64b33b2b51514b1,comdat
+	.section	.debug_macro,"G",%progbits,wm4.mlx90614.h.9.a8b26caf997d0fdf9cd419b13e1f14eb,comdat
 .Ldebug_macro74:
 	.2byte	0x5
 	.byte	0
@@ -63156,76 +63156,76 @@ MLX90614_SendDebugMsg:
 	.uleb128 0x9
 	.4byte	.LASF19821
 	.byte	0x5
-	.uleb128 0x13
+	.uleb128 0xe
 	.4byte	.LASF19822
 	.byte	0x5
-	.uleb128 0x15
+	.uleb128 0x11
 	.4byte	.LASF19823
 	.byte	0x5
-	.uleb128 0x16
+	.uleb128 0x12
 	.4byte	.LASF19824
 	.byte	0x5
-	.uleb128 0x17
+	.uleb128 0x13
 	.4byte	.LASF19825
 	.byte	0x5
-	.uleb128 0x1a
+	.uleb128 0x17
 	.4byte	.LASF19826
 	.byte	0x5
-	.uleb128 0x1b
+	.uleb128 0x18
 	.4byte	.LASF19827
 	.byte	0x5
-	.uleb128 0x1c
+	.uleb128 0x19
 	.4byte	.LASF19828
 	.byte	0x5
-	.uleb128 0x1d
+	.uleb128 0x1a
 	.4byte	.LASF19829
 	.byte	0x5
-	.uleb128 0x1e
+	.uleb128 0x1b
 	.4byte	.LASF19830
 	.byte	0x5
-	.uleb128 0x20
+	.uleb128 0x1e
 	.4byte	.LASF19831
 	.byte	0x5
-	.uleb128 0x21
+	.uleb128 0x1f
 	.4byte	.LASF19832
 	.byte	0x5
-	.uleb128 0x22
+	.uleb128 0x20
 	.4byte	.LASF19833
 	.byte	0x5
-	.uleb128 0x23
+	.uleb128 0x21
 	.4byte	.LASF19834
 	.byte	0x5
-	.uleb128 0x24
+	.uleb128 0x22
 	.4byte	.LASF19835
 	.byte	0x5
-	.uleb128 0x25
+	.uleb128 0x23
 	.4byte	.LASF19836
 	.byte	0x5
-	.uleb128 0x26
+	.uleb128 0x24
 	.4byte	.LASF19837
 	.byte	0x5
-	.uleb128 0x27
+	.uleb128 0x25
 	.4byte	.LASF19838
 	.byte	0x5
-	.uleb128 0x28
+	.uleb128 0x26
 	.4byte	.LASF19839
 	.byte	0x5
-	.uleb128 0x29
+	.uleb128 0x27
 	.4byte	.LASF19840
 	.byte	0x5
-	.uleb128 0x2a
+	.uleb128 0x28
 	.4byte	.LASF19841
 	.byte	0x5
-	.uleb128 0x2c
+	.uleb128 0x2b
 	.4byte	.LASF19842
 	.byte	0x5
-	.uleb128 0x2d
+	.uleb128 0x2c
 	.4byte	.LASF19843
 	.byte	0x5
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.4byte	.LASF19844
 	.byte	0x5
-	.uleb128 0x2f
+	.uleb128 0x2e
 	.4byte	.LASF19845
 	.byte	0
 	.section	.debug_line,"",%progbits

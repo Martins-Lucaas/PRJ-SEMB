@@ -1,6 +1,6 @@
-../Monitor_core/mlx90614.c:43:9:CRC8_Calc	2
-../Monitor_core/mlx90614.c:123:6:MLX90614_ScanDevices	3
-../Monitor_core/mlx90614.c:141:6:MLX90614_SendDebugMsg	3
-../Monitor_core/mlx90614.c:55:6:MLX90614_WriteReg	1
-../Monitor_core/mlx90614.c:89:10:MLX90614_ReadReg	3
-../Monitor_core/mlx90614.c:114:7:MLX90614_ReadTemp	1
+../Monitor_core/mlx90614.c:47:9:CRC8_Calc	2
+../Monitor_core/mlx90614.c:147:6:MLX90614_ScanDevices	3
+../Monitor_core/mlx90614.c:171:6:MLX90614_SendDebugMsg	3
+../Monitor_core/mlx90614.c:61:6:MLX90614_WriteReg	1
+../Monitor_core/mlx90614.c:102:10:MLX90614_ReadReg	3
+../Monitor_core/mlx90614.c:133:7:MLX90614_ReadTemp	1

@@ -33883,8 +33883,8 @@ void Error_Handler(void);
 
 
 
-#define emg_adc_Pin GPIO_PIN_1
-#define emg_adc_GPIO_Port GPIOA
+#define pwm_tim2_ch1_Pin GPIO_PIN_0
+#define pwm_tim2_ch1_GPIO_Port GPIOA
 #define touch_int_Pin GPIO_PIN_4
 #define touch_int_GPIO_Port GPIOA
 #define displ_sck_Pin GPIO_PIN_5
@@ -33905,12 +33905,12 @@ void Error_Handler(void);
 #define displ_dc_GPIO_Port GPIOB
 #define displ_rst_Pin GPIO_PIN_15
 #define displ_rst_GPIO_Port GPIOB
-#define displ_led_Pin GPIO_PIN_7
-#define displ_led_GPIO_Port GPIOC
 #define oxi_sda_Pin GPIO_PIN_9
 #define oxi_sda_GPIO_Port GPIOC
 #define oxi_scl_Pin GPIO_PIN_8
 #define oxi_scl_GPIO_Port GPIOA
+#define led_adc_Pin GPIO_PIN_9
+#define led_adc_GPIO_Port GPIOA
 #define usart_emg_tx_Pin GPIO_PIN_10
 #define usart_emg_tx_GPIO_Port GPIOC
 #define temp_sda_Pin GPIO_PIN_12
@@ -33919,25 +33919,25 @@ void Error_Handler(void);
 
 extern TIM_HandleTypeDef hadc1;
 extern UART_HandleTypeDef huart3;
+extern TIM_HandleTypeDef htim2;
+#define ADC_Buffer 4096
+
+HAL_TIM_PWM_Start(&htim2, 0x00000000U);
+
 
 void emg_system(void)
 {
- uint16_t emg_storage = 0;
- char buffer[20];
+ uint16_t adc_buf[4096];
+ HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_buf, 4096);
+
+}
 
 
- HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0000UL)), ((uint16_t)0x0400), GPIO_PIN_SET);
+void HAL_ADC_MetadeCompletoCallBack(ADC_HandleTypeDef* hadc){
+ HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0000UL)), ((uint16_t)0x0200)|((uint16_t)0x0200), GPIO_PIN_SET);
 
-
- HAL_ADC_Start(&hadc1);
- HAL_ADC_PollForConversion(&hadc1, 0xFFFFFFFFU);
- emg_storage = HAL_ADC_GetValue(&hadc1);
-
-
-
-
-
- sprintf(buffer,"%hu\r\n",emg_storage);
- HAL_UART_Transmit(&huart3, (uint8_t*)buffer, strlen(buffer), 0xFFFFFFFFU);
+}
+void HAL_ADC_CompletoCallBack(ADC_HandleTypeDef* hadc){
+ HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0000UL)), ((uint16_t)0x0200)|((uint16_t)0x0200), GPIO_PIN_RESET);
 
 }
