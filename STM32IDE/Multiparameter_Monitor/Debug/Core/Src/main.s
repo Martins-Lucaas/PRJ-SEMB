@@ -145,7 +145,7 @@ main:
 	.type	SystemClock_Config, %function
 SystemClock_Config:
 .LFB239:
-	.loc 1 143 1
+	.loc 1 142 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 80
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -157,13 +157,13 @@ SystemClock_Config:
 	.cfi_def_cfa_offset 88
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
-	.loc 1 144 22
+	.loc 1 143 22
 	add	r3, r7, #28
 	movs	r2, #52
 	movs	r1, #0
 	mov	r0, r3
 	bl	memset
-	.loc 1 145 22
+	.loc 1 144 22
 	add	r3, r7, #8
 	movs	r2, #0
 	str	r2, [r3]
@@ -172,116 +172,116 @@ SystemClock_Config:
 	str	r2, [r3, #12]
 	str	r2, [r3, #16]
 .LBB4:
-	.loc 1 149 26
+	.loc 1 148 26
 	movs	r3, #0
 	str	r3, [r7, #4]
-	.loc 1 149 115
+	.loc 1 148 115
 	ldr	r3, .L7
 	ldr	r3, [r3, #64]
 	ldr	r2, .L7
 	orr	r3, r3, #268435456
 	str	r3, [r2, #64]
-	.loc 1 149 210
+	.loc 1 148 210
 	ldr	r3, .L7
 	ldr	r3, [r3, #64]
-	.loc 1 149 221
+	.loc 1 148 221
 	and	r3, r3, #268435456
-	.loc 1 149 146
+	.loc 1 148 146
 	str	r3, [r7, #4]
-	.loc 1 149 244
+	.loc 1 148 244
 	ldr	r3, [r7, #4]
 .LBE4:
 .LBB5:
-	.loc 1 150 26
+	.loc 1 149 26
 	movs	r3, #0
 	str	r3, [r7]
-	.loc 1 150 146
+	.loc 1 149 146
 	ldr	r3, .L7+4
 	ldr	r3, [r3]
-	.loc 1 150 154
+	.loc 1 149 154
 	bic	r3, r3, #49152
-	.loc 1 150 88
+	.loc 1 149 88
 	ldr	r2, .L7+4
-	.loc 1 150 179
+	.loc 1 149 179
 	orr	r3, r3, #16384
-	.loc 1 150 95
+	.loc 1 149 95
 	str	r3, [r2]
-	.loc 1 150 255
+	.loc 1 149 255
 	ldr	r3, .L7+4
 	ldr	r3, [r3]
-	.loc 1 150 261
+	.loc 1 149 261
 	and	r3, r3, #49152
-	.loc 1 150 208
+	.loc 1 149 208
 	str	r3, [r7]
-	.loc 1 150 284
+	.loc 1 149 284
 	ldr	r3, [r7]
 .LBE5:
-	.loc 1 155 36
+	.loc 1 154 36
 	movs	r3, #1
 	str	r3, [r7, #28]
-	.loc 1 156 30
+	.loc 1 155 30
 	mov	r3, #65536
 	str	r3, [r7, #32]
-	.loc 1 157 34
+	.loc 1 156 34
 	movs	r3, #2
 	str	r3, [r7, #52]
-	.loc 1 158 35
+	.loc 1 157 35
 	mov	r3, #4194304
 	str	r3, [r7, #56]
-	.loc 1 159 30
+	.loc 1 158 30
 	movs	r3, #15
 	str	r3, [r7, #60]
-	.loc 1 160 30
+	.loc 1 159 30
 	movs	r3, #144
 	str	r3, [r7, #64]
-	.loc 1 161 30
+	.loc 1 160 30
 	movs	r3, #2
 	str	r3, [r7, #68]
-	.loc 1 162 30
+	.loc 1 161 30
 	movs	r3, #5
 	str	r3, [r7, #72]
-	.loc 1 163 30
+	.loc 1 162 30
 	movs	r3, #2
 	str	r3, [r7, #76]
-	.loc 1 164 7
+	.loc 1 163 7
 	add	r3, r7, #28
 	mov	r0, r3
 	bl	HAL_RCC_OscConfig
 	mov	r3, r0
-	.loc 1 164 6
+	.loc 1 163 6
 	cmp	r3, #0
 	beq	.L4
-	.loc 1 166 5
+	.loc 1 165 5
 	bl	Error_Handler
 .L4:
-	.loc 1 171 31
+	.loc 1 170 31
 	movs	r3, #15
 	str	r3, [r7, #8]
-	.loc 1 173 34
+	.loc 1 172 34
 	movs	r3, #3
 	str	r3, [r7, #12]
-	.loc 1 174 35
+	.loc 1 173 35
 	movs	r3, #0
 	str	r3, [r7, #16]
-	.loc 1 175 36
+	.loc 1 174 36
 	mov	r3, #5120
 	str	r3, [r7, #20]
-	.loc 1 176 36
+	.loc 1 175 36
 	mov	r3, #4096
 	str	r3, [r7, #24]
-	.loc 1 178 7
+	.loc 1 177 7
 	add	r3, r7, #8
 	movs	r1, #3
 	mov	r0, r3
 	bl	HAL_RCC_ClockConfig
 	mov	r3, r0
-	.loc 1 178 6
+	.loc 1 177 6
 	cmp	r3, #0
 	beq	.L6
-	.loc 1 180 5
+	.loc 1 179 5
 	bl	Error_Handler
 .L6:
-	.loc 1 182 1
+	.loc 1 181 1
 	nop
 	adds	r7, r7, #80
 	.cfi_def_cfa_offset 8
@@ -305,7 +305,7 @@ SystemClock_Config:
 	.type	MX_ADC1_Init, %function
 MX_ADC1_Init:
 .LFB240:
-	.loc 1 190 1
+	.loc 1 189 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -317,93 +317,93 @@ MX_ADC1_Init:
 	.cfi_def_cfa_offset 24
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
-	.loc 1 196 26
+	.loc 1 195 26
 	mov	r3, r7
 	movs	r2, #0
 	str	r2, [r3]
 	str	r2, [r3, #4]
 	str	r2, [r3, #8]
 	str	r2, [r3, #12]
-	.loc 1 204 18
+	.loc 1 203 18
 	ldr	r3, .L13
 	ldr	r2, .L13+4
 	str	r2, [r3]
-	.loc 1 205 29
+	.loc 1 204 29
 	ldr	r3, .L13
 	movs	r2, #0
 	str	r2, [r3, #4]
-	.loc 1 206 25
+	.loc 1 205 25
 	ldr	r3, .L13
 	movs	r2, #0
 	str	r2, [r3, #8]
-	.loc 1 207 27
+	.loc 1 206 27
 	ldr	r3, .L13
 	movs	r2, #0
 	str	r2, [r3, #16]
-	.loc 1 208 33
+	.loc 1 207 33
 	ldr	r3, .L13
 	movs	r2, #1
 	strb	r2, [r3, #24]
-	.loc 1 209 36
+	.loc 1 208 36
 	ldr	r3, .L13
 	movs	r2, #0
 	strb	r2, [r3, #32]
-	.loc 1 210 35
+	.loc 1 209 35
 	ldr	r3, .L13
 	movs	r2, #0
 	str	r2, [r3, #44]
-	.loc 1 211 31
+	.loc 1 210 31
 	ldr	r3, .L13
 	ldr	r2, .L13+8
 	str	r2, [r3, #40]
-	.loc 1 212 24
+	.loc 1 211 24
 	ldr	r3, .L13
 	movs	r2, #0
 	str	r2, [r3, #12]
-	.loc 1 213 30
+	.loc 1 212 30
 	ldr	r3, .L13
 	movs	r2, #1
 	str	r2, [r3, #28]
-	.loc 1 214 36
+	.loc 1 213 36
 	ldr	r3, .L13
 	movs	r2, #1
 	strb	r2, [r3, #48]
-	.loc 1 215 27
+	.loc 1 214 27
 	ldr	r3, .L13
 	movs	r2, #1
 	str	r2, [r3, #20]
-	.loc 1 216 7
+	.loc 1 215 7
 	ldr	r0, .L13
 	bl	HAL_ADC_Init
 	mov	r3, r0
-	.loc 1 216 6
+	.loc 1 215 6
 	cmp	r3, #0
 	beq	.L10
-	.loc 1 218 5
+	.loc 1 217 5
 	bl	Error_Handler
 .L10:
-	.loc 1 223 19
+	.loc 1 222 19
 	movs	r3, #1
 	str	r3, [r7]
-	.loc 1 224 16
+	.loc 1 223 16
 	movs	r3, #1
 	str	r3, [r7, #4]
-	.loc 1 225 24
+	.loc 1 224 24
 	movs	r3, #0
 	str	r3, [r7, #8]
-	.loc 1 226 7
+	.loc 1 225 7
 	mov	r3, r7
 	mov	r1, r3
 	ldr	r0, .L13
 	bl	HAL_ADC_ConfigChannel
 	mov	r3, r0
-	.loc 1 226 6
+	.loc 1 225 6
 	cmp	r3, #0
 	beq	.L12
-	.loc 1 228 5
+	.loc 1 227 5
 	bl	Error_Handler
 .L12:
-	.loc 1 234 1
+	.loc 1 233 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -428,7 +428,7 @@ MX_ADC1_Init:
 	.type	MX_CRC_Init, %function
 MX_CRC_Init:
 .LFB241:
-	.loc 1 242 1
+	.loc 1 241 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -438,21 +438,21 @@ MX_CRC_Init:
 	.cfi_offset 14, -4
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
-	.loc 1 251 17
+	.loc 1 250 17
 	ldr	r3, .L18
 	ldr	r2, .L18+4
 	str	r2, [r3]
-	.loc 1 252 7
+	.loc 1 251 7
 	ldr	r0, .L18
 	bl	HAL_CRC_Init
 	mov	r3, r0
-	.loc 1 252 6
+	.loc 1 251 6
 	cmp	r3, #0
 	beq	.L17
-	.loc 1 254 5
+	.loc 1 253 5
 	bl	Error_Handler
 .L17:
-	.loc 1 260 1
+	.loc 1 259 1
 	nop
 	pop	{r7, pc}
 .L19:
@@ -471,7 +471,7 @@ MX_CRC_Init:
 	.type	MX_I2C2_Init, %function
 MX_I2C2_Init:
 .LFB242:
-	.loc 1 268 1
+	.loc 1 267 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -481,53 +481,53 @@ MX_I2C2_Init:
 	.cfi_offset 14, -4
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
-	.loc 1 277 18
+	.loc 1 276 18
 	ldr	r3, .L23
 	ldr	r2, .L23+4
 	str	r2, [r3]
-	.loc 1 278 25
+	.loc 1 277 25
 	ldr	r3, .L23
 	ldr	r2, .L23+8
 	str	r2, [r3, #4]
-	.loc 1 279 24
+	.loc 1 278 24
 	ldr	r3, .L23
 	movs	r2, #0
 	str	r2, [r3, #8]
-	.loc 1 280 26
+	.loc 1 279 26
 	ldr	r3, .L23
 	movs	r2, #0
 	str	r2, [r3, #12]
-	.loc 1 281 29
+	.loc 1 280 29
 	ldr	r3, .L23
 	mov	r2, #16384
 	str	r2, [r3, #16]
-	.loc 1 282 30
+	.loc 1 281 30
 	ldr	r3, .L23
 	movs	r2, #0
 	str	r2, [r3, #20]
-	.loc 1 283 26
+	.loc 1 282 26
 	ldr	r3, .L23
 	movs	r2, #0
 	str	r2, [r3, #24]
-	.loc 1 284 30
+	.loc 1 283 30
 	ldr	r3, .L23
 	movs	r2, #0
 	str	r2, [r3, #28]
-	.loc 1 285 28
+	.loc 1 284 28
 	ldr	r3, .L23
 	movs	r2, #0
 	str	r2, [r3, #32]
-	.loc 1 286 7
+	.loc 1 285 7
 	ldr	r0, .L23
 	bl	HAL_I2C_Init
 	mov	r3, r0
-	.loc 1 286 6
+	.loc 1 285 6
 	cmp	r3, #0
 	beq	.L22
-	.loc 1 288 5
+	.loc 1 287 5
 	bl	Error_Handler
 .L22:
-	.loc 1 294 1
+	.loc 1 293 1
 	nop
 	pop	{r7, pc}
 .L24:
@@ -547,7 +547,7 @@ MX_I2C2_Init:
 	.type	MX_I2C3_Init, %function
 MX_I2C3_Init:
 .LFB243:
-	.loc 1 302 1
+	.loc 1 301 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -557,53 +557,53 @@ MX_I2C3_Init:
 	.cfi_offset 14, -4
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
-	.loc 1 311 18
+	.loc 1 310 18
 	ldr	r3, .L28
 	ldr	r2, .L28+4
 	str	r2, [r3]
-	.loc 1 312 25
+	.loc 1 311 25
 	ldr	r3, .L28
 	ldr	r2, .L28+8
 	str	r2, [r3, #4]
-	.loc 1 313 24
+	.loc 1 312 24
 	ldr	r3, .L28
 	movs	r2, #0
 	str	r2, [r3, #8]
-	.loc 1 314 26
+	.loc 1 313 26
 	ldr	r3, .L28
 	movs	r2, #0
 	str	r2, [r3, #12]
-	.loc 1 315 29
+	.loc 1 314 29
 	ldr	r3, .L28
 	mov	r2, #16384
 	str	r2, [r3, #16]
-	.loc 1 316 30
+	.loc 1 315 30
 	ldr	r3, .L28
 	movs	r2, #0
 	str	r2, [r3, #20]
-	.loc 1 317 26
+	.loc 1 316 26
 	ldr	r3, .L28
 	movs	r2, #0
 	str	r2, [r3, #24]
-	.loc 1 318 30
+	.loc 1 317 30
 	ldr	r3, .L28
 	movs	r2, #0
 	str	r2, [r3, #28]
-	.loc 1 319 28
+	.loc 1 318 28
 	ldr	r3, .L28
 	movs	r2, #0
 	str	r2, [r3, #32]
-	.loc 1 320 7
+	.loc 1 319 7
 	ldr	r0, .L28
 	bl	HAL_I2C_Init
 	mov	r3, r0
-	.loc 1 320 6
+	.loc 1 319 6
 	cmp	r3, #0
 	beq	.L27
-	.loc 1 322 5
+	.loc 1 321 5
 	bl	Error_Handler
 .L27:
-	.loc 1 328 1
+	.loc 1 327 1
 	nop
 	pop	{r7, pc}
 .L29:
@@ -623,7 +623,7 @@ MX_I2C3_Init:
 	.type	MX_SPI1_Init, %function
 MX_SPI1_Init:
 .LFB244:
-	.loc 1 336 1
+	.loc 1 335 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -633,65 +633,65 @@ MX_SPI1_Init:
 	.cfi_offset 14, -4
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
-	.loc 1 346 18
+	.loc 1 345 18
 	ldr	r3, .L33
 	ldr	r2, .L33+4
 	str	r2, [r3]
-	.loc 1 347 19
+	.loc 1 346 19
 	ldr	r3, .L33
 	mov	r2, #260
 	str	r2, [r3, #4]
-	.loc 1 348 24
+	.loc 1 347 24
 	ldr	r3, .L33
 	movs	r2, #0
 	str	r2, [r3, #8]
-	.loc 1 349 23
+	.loc 1 348 23
 	ldr	r3, .L33
 	movs	r2, #0
 	str	r2, [r3, #12]
-	.loc 1 350 26
+	.loc 1 349 26
 	ldr	r3, .L33
 	movs	r2, #0
 	str	r2, [r3, #16]
-	.loc 1 351 23
+	.loc 1 350 23
 	ldr	r3, .L33
 	movs	r2, #0
 	str	r2, [r3, #20]
-	.loc 1 352 18
+	.loc 1 351 18
 	ldr	r3, .L33
 	mov	r2, #512
 	str	r2, [r3, #24]
-	.loc 1 353 32
+	.loc 1 352 32
 	ldr	r3, .L33
 	movs	r2, #0
 	str	r2, [r3, #28]
-	.loc 1 354 23
+	.loc 1 353 23
 	ldr	r3, .L33
 	movs	r2, #0
 	str	r2, [r3, #32]
-	.loc 1 355 21
+	.loc 1 354 21
 	ldr	r3, .L33
 	movs	r2, #0
 	str	r2, [r3, #36]
-	.loc 1 356 29
+	.loc 1 355 29
 	ldr	r3, .L33
 	movs	r2, #0
 	str	r2, [r3, #40]
-	.loc 1 357 28
+	.loc 1 356 28
 	ldr	r3, .L33
 	movs	r2, #10
 	str	r2, [r3, #44]
-	.loc 1 358 7
+	.loc 1 357 7
 	ldr	r0, .L33
 	bl	HAL_SPI_Init
 	mov	r3, r0
-	.loc 1 358 6
+	.loc 1 357 6
 	cmp	r3, #0
 	beq	.L32
-	.loc 1 360 5
+	.loc 1 359 5
 	bl	Error_Handler
 .L32:
-	.loc 1 366 1
+	.loc 1 365 1
 	nop
 	pop	{r7, pc}
 .L34:
@@ -710,7 +710,7 @@ MX_SPI1_Init:
 	.type	MX_TIM3_Init, %function
 MX_TIM3_Init:
 .LFB245:
-	.loc 1 374 1
+	.loc 1 373 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 40
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -722,12 +722,12 @@ MX_TIM3_Init:
 	.cfi_def_cfa_offset 48
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
-	.loc 1 380 27
+	.loc 1 379 27
 	add	r3, r7, #32
 	movs	r2, #0
 	str	r2, [r3]
 	str	r2, [r3, #4]
-	.loc 1 381 22
+	.loc 1 380 22
 	adds	r3, r7, #4
 	movs	r2, #0
 	str	r2, [r3]
@@ -737,87 +737,87 @@ MX_TIM3_Init:
 	str	r2, [r3, #16]
 	str	r2, [r3, #20]
 	str	r2, [r3, #24]
-	.loc 1 386 18
+	.loc 1 385 18
 	ldr	r3, .L39
 	ldr	r2, .L39+4
 	str	r2, [r3]
-	.loc 1 387 24
+	.loc 1 386 24
 	ldr	r3, .L39
 	movs	r2, #0
 	str	r2, [r3, #4]
-	.loc 1 388 26
+	.loc 1 387 26
 	ldr	r3, .L39
 	movs	r2, #0
 	str	r2, [r3, #8]
-	.loc 1 389 21
+	.loc 1 388 21
 	ldr	r3, .L39
 	movw	r2, #4999
 	str	r2, [r3, #12]
-	.loc 1 390 28
+	.loc 1 389 28
 	ldr	r3, .L39
 	movs	r2, #0
 	str	r2, [r3, #16]
-	.loc 1 391 32
+	.loc 1 390 32
 	ldr	r3, .L39
 	movs	r2, #0
 	str	r2, [r3, #24]
-	.loc 1 392 7
+	.loc 1 391 7
 	ldr	r0, .L39
 	bl	HAL_TIM_PWM_Init
 	mov	r3, r0
-	.loc 1 392 6
+	.loc 1 391 6
 	cmp	r3, #0
 	beq	.L36
-	.loc 1 394 5
+	.loc 1 393 5
 	bl	Error_Handler
 .L36:
-	.loc 1 396 37
+	.loc 1 395 37
 	movs	r3, #0
 	str	r3, [r7, #32]
-	.loc 1 397 33
+	.loc 1 396 33
 	movs	r3, #0
 	str	r3, [r7, #36]
-	.loc 1 398 7
+	.loc 1 397 7
 	add	r3, r7, #32
 	mov	r1, r3
 	ldr	r0, .L39
 	bl	HAL_TIMEx_MasterConfigSynchronization
 	mov	r3, r0
-	.loc 1 398 6
+	.loc 1 397 6
 	cmp	r3, #0
 	beq	.L37
-	.loc 1 400 5
+	.loc 1 399 5
 	bl	Error_Handler
 .L37:
-	.loc 1 402 20
+	.loc 1 401 20
 	movs	r3, #96
 	str	r3, [r7, #4]
-	.loc 1 403 19
+	.loc 1 402 19
 	movw	r3, #2499
 	str	r3, [r7, #8]
-	.loc 1 404 24
+	.loc 1 403 24
 	movs	r3, #0
 	str	r3, [r7, #12]
-	.loc 1 405 24
+	.loc 1 404 24
 	movs	r3, #0
 	str	r3, [r7, #20]
-	.loc 1 406 7
+	.loc 1 405 7
 	adds	r3, r7, #4
 	movs	r2, #4
 	mov	r1, r3
 	ldr	r0, .L39
 	bl	HAL_TIM_PWM_ConfigChannel
 	mov	r3, r0
-	.loc 1 406 6
+	.loc 1 405 6
 	cmp	r3, #0
 	beq	.L38
-	.loc 1 408 5
+	.loc 1 407 5
 	bl	Error_Handler
 .L38:
-	.loc 1 413 3
+	.loc 1 412 3
 	ldr	r0, .L39
 	bl	HAL_TIM_MspPostInit
-	.loc 1 415 1
+	.loc 1 414 1
 	nop
 	adds	r7, r7, #40
 	.cfi_def_cfa_offset 8
@@ -841,7 +841,7 @@ MX_TIM3_Init:
 	.type	MX_USART3_UART_Init, %function
 MX_USART3_UART_Init:
 .LFB246:
-	.loc 1 423 1
+	.loc 1 422 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -851,49 +851,49 @@ MX_USART3_UART_Init:
 	.cfi_offset 14, -4
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
-	.loc 1 432 19
+	.loc 1 431 19
 	ldr	r3, .L44
 	ldr	r2, .L44+4
 	str	r2, [r3]
-	.loc 1 433 24
+	.loc 1 432 24
 	ldr	r3, .L44
 	mov	r2, #115200
 	str	r2, [r3, #4]
-	.loc 1 434 26
+	.loc 1 433 26
 	ldr	r3, .L44
 	movs	r2, #0
 	str	r2, [r3, #8]
-	.loc 1 435 24
+	.loc 1 434 24
 	ldr	r3, .L44
 	movs	r2, #0
 	str	r2, [r3, #12]
-	.loc 1 436 22
+	.loc 1 435 22
 	ldr	r3, .L44
 	movs	r2, #0
 	str	r2, [r3, #16]
-	.loc 1 437 20
+	.loc 1 436 20
 	ldr	r3, .L44
 	movs	r2, #12
 	str	r2, [r3, #20]
-	.loc 1 438 25
+	.loc 1 437 25
 	ldr	r3, .L44
 	movs	r2, #0
 	str	r2, [r3, #24]
-	.loc 1 439 28
+	.loc 1 438 28
 	ldr	r3, .L44
 	movs	r2, #0
 	str	r2, [r3, #28]
-	.loc 1 440 7
+	.loc 1 439 7
 	ldr	r0, .L44
 	bl	HAL_UART_Init
 	mov	r3, r0
-	.loc 1 440 6
+	.loc 1 439 6
 	cmp	r3, #0
 	beq	.L43
-	.loc 1 442 5
+	.loc 1 441 5
 	bl	Error_Handler
 .L43:
-	.loc 1 448 1
+	.loc 1 447 1
 	nop
 	pop	{r7, pc}
 .L45:
@@ -912,7 +912,7 @@ MX_USART3_UART_Init:
 	.type	MX_USB_OTG_FS_PCD_Init, %function
 MX_USB_OTG_FS_PCD_Init:
 .LFB247:
-	.loc 1 456 1
+	.loc 1 455 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -922,57 +922,57 @@ MX_USB_OTG_FS_PCD_Init:
 	.cfi_offset 14, -4
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
-	.loc 1 465 28
+	.loc 1 464 28
 	ldr	r3, .L49
 	mov	r2, #1342177280
 	str	r2, [r3]
-	.loc 1 466 38
+	.loc 1 465 38
 	ldr	r3, .L49
 	movs	r2, #6
 	str	r2, [r3, #4]
-	.loc 1 467 30
+	.loc 1 466 30
 	ldr	r3, .L49
 	movs	r2, #2
 	str	r2, [r3, #12]
-	.loc 1 468 35
+	.loc 1 467 35
 	ldr	r3, .L49
 	movs	r2, #0
 	str	r2, [r3, #16]
-	.loc 1 469 35
+	.loc 1 468 35
 	ldr	r3, .L49
 	movs	r2, #2
 	str	r2, [r3, #24]
-	.loc 1 470 35
+	.loc 1 469 35
 	ldr	r3, .L49
 	movs	r2, #0
 	str	r2, [r3, #28]
-	.loc 1 471 41
+	.loc 1 470 41
 	ldr	r3, .L49
 	movs	r2, #0
 	str	r2, [r3, #32]
-	.loc 1 472 35
+	.loc 1 471 35
 	ldr	r3, .L49
 	movs	r2, #0
 	str	r2, [r3, #36]
-	.loc 1 473 44
+	.loc 1 472 44
 	ldr	r3, .L49
 	movs	r2, #0
 	str	r2, [r3, #44]
-	.loc 1 474 42
+	.loc 1 473 42
 	ldr	r3, .L49
 	movs	r2, #0
 	str	r2, [r3, #48]
-	.loc 1 475 7
+	.loc 1 474 7
 	ldr	r0, .L49
 	bl	HAL_PCD_Init
 	mov	r3, r0
-	.loc 1 475 6
+	.loc 1 474 6
 	cmp	r3, #0
 	beq	.L48
-	.loc 1 477 5
+	.loc 1 476 5
 	bl	Error_Handler
 .L48:
-	.loc 1 483 1
+	.loc 1 482 1
 	nop
 	pop	{r7, pc}
 .L50:
@@ -990,7 +990,7 @@ MX_USB_OTG_FS_PCD_Init:
 	.type	MX_DMA_Init, %function
 MX_DMA_Init:
 .LFB248:
-	.loc 1 489 1
+	.loc 1 488 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1003,42 +1003,42 @@ MX_DMA_Init:
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
 .LBB6:
-	.loc 1 492 26
+	.loc 1 491 26
 	movs	r3, #0
 	str	r3, [r7, #4]
-	.loc 1 492 115
+	.loc 1 491 115
 	ldr	r3, .L52
 	ldr	r3, [r3, #48]
 	ldr	r2, .L52
 	orr	r3, r3, #4194304
 	str	r3, [r2, #48]
-	.loc 1 492 210
+	.loc 1 491 210
 	ldr	r3, .L52
 	ldr	r3, [r3, #48]
-	.loc 1 492 221
+	.loc 1 491 221
 	and	r3, r3, #4194304
-	.loc 1 492 146
+	.loc 1 491 146
 	str	r3, [r7, #4]
-	.loc 1 492 244
+	.loc 1 491 244
 	ldr	r3, [r7, #4]
 .LBE6:
+	.loc 1 495 3
+	movs	r2, #0
+	movs	r1, #0
+	movs	r0, #56
+	bl	HAL_NVIC_SetPriority
 	.loc 1 496 3
-	movs	r2, #0
-	movs	r1, #0
-	movs	r0, #56
-	bl	HAL_NVIC_SetPriority
-	.loc 1 497 3
 	movs	r0, #56
 	bl	HAL_NVIC_EnableIRQ
+	.loc 1 498 3
+	movs	r2, #0
+	movs	r1, #0
+	movs	r0, #59
+	bl	HAL_NVIC_SetPriority
 	.loc 1 499 3
-	movs	r2, #0
-	movs	r1, #0
-	movs	r0, #59
-	bl	HAL_NVIC_SetPriority
-	.loc 1 500 3
 	movs	r0, #59
 	bl	HAL_NVIC_EnableIRQ
-	.loc 1 502 1
+	.loc 1 501 1
 	nop
 	adds	r7, r7, #8
 	.cfi_def_cfa_offset 8
@@ -1061,7 +1061,7 @@ MX_DMA_Init:
 	.type	MX_GPIO_Init, %function
 MX_GPIO_Init:
 .LFB249:
-	.loc 1 510 1
+	.loc 1 509 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 40
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1073,7 +1073,7 @@ MX_GPIO_Init:
 	.cfi_def_cfa_offset 48
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
-	.loc 1 511 20
+	.loc 1 510 20
 	add	r3, r7, #20
 	movs	r2, #0
 	str	r2, [r3]
@@ -1082,166 +1082,166 @@ MX_GPIO_Init:
 	str	r2, [r3, #12]
 	str	r2, [r3, #16]
 .LBB7:
-	.loc 1 516 26
+	.loc 1 515 26
 	movs	r3, #0
 	str	r3, [r7, #16]
-	.loc 1 516 115
+	.loc 1 515 115
 	ldr	r3, .L55
 	ldr	r3, [r3, #48]
 	ldr	r2, .L55
 	orr	r3, r3, #128
 	str	r3, [r2, #48]
-	.loc 1 516 209
+	.loc 1 515 209
 	ldr	r3, .L55
 	ldr	r3, [r3, #48]
-	.loc 1 516 220
+	.loc 1 515 220
 	and	r3, r3, #128
-	.loc 1 516 145
+	.loc 1 515 145
 	str	r3, [r7, #16]
-	.loc 1 516 242
+	.loc 1 515 242
 	ldr	r3, [r7, #16]
 .LBE7:
 .LBB8:
-	.loc 1 517 26
+	.loc 1 516 26
 	movs	r3, #0
 	str	r3, [r7, #12]
-	.loc 1 517 115
+	.loc 1 516 115
 	ldr	r3, .L55
 	ldr	r3, [r3, #48]
 	ldr	r2, .L55
 	orr	r3, r3, #1
 	str	r3, [r2, #48]
-	.loc 1 517 209
+	.loc 1 516 209
 	ldr	r3, .L55
 	ldr	r3, [r3, #48]
-	.loc 1 517 220
+	.loc 1 516 220
 	and	r3, r3, #1
-	.loc 1 517 145
+	.loc 1 516 145
 	str	r3, [r7, #12]
-	.loc 1 517 242
+	.loc 1 516 242
 	ldr	r3, [r7, #12]
 .LBE8:
 .LBB9:
-	.loc 1 518 26
+	.loc 1 517 26
 	movs	r3, #0
 	str	r3, [r7, #8]
-	.loc 1 518 115
+	.loc 1 517 115
 	ldr	r3, .L55
 	ldr	r3, [r3, #48]
 	ldr	r2, .L55
 	orr	r3, r3, #4
 	str	r3, [r2, #48]
-	.loc 1 518 209
+	.loc 1 517 209
 	ldr	r3, .L55
 	ldr	r3, [r3, #48]
-	.loc 1 518 220
+	.loc 1 517 220
 	and	r3, r3, #4
-	.loc 1 518 145
+	.loc 1 517 145
 	str	r3, [r7, #8]
-	.loc 1 518 242
+	.loc 1 517 242
 	ldr	r3, [r7, #8]
 .LBE9:
 .LBB10:
-	.loc 1 519 26
+	.loc 1 518 26
 	movs	r3, #0
 	str	r3, [r7, #4]
-	.loc 1 519 115
+	.loc 1 518 115
 	ldr	r3, .L55
 	ldr	r3, [r3, #48]
 	ldr	r2, .L55
 	orr	r3, r3, #2
 	str	r3, [r2, #48]
-	.loc 1 519 209
+	.loc 1 518 209
 	ldr	r3, .L55
 	ldr	r3, [r3, #48]
-	.loc 1 519 220
+	.loc 1 518 220
 	and	r3, r3, #2
-	.loc 1 519 145
+	.loc 1 518 145
 	str	r3, [r7, #4]
-	.loc 1 519 242
+	.loc 1 518 242
 	ldr	r3, [r7, #4]
 .LBE10:
-	.loc 1 522 3
+	.loc 1 521 3
 	movs	r2, #1
 	mov	r1, #28672
 	ldr	r0, .L55+4
 	bl	HAL_GPIO_WritePin
-	.loc 1 525 3
+	.loc 1 524 3
 	movs	r2, #0
 	mov	r1, #32768
 	ldr	r0, .L55+4
 	bl	HAL_GPIO_WritePin
-	.loc 1 528 3
+	.loc 1 527 3
 	movs	r2, #0
 	mov	r1, #1536
 	ldr	r0, .L55+8
 	bl	HAL_GPIO_WritePin
-	.loc 1 531 23
+	.loc 1 530 23
 	movs	r3, #16
 	str	r3, [r7, #20]
-	.loc 1 532 24
+	.loc 1 531 24
 	mov	r3, #2162688
 	str	r3, [r7, #24]
-	.loc 1 533 24
+	.loc 1 532 24
 	movs	r3, #1
 	str	r3, [r7, #28]
-	.loc 1 534 3
+	.loc 1 533 3
 	add	r3, r7, #20
 	mov	r1, r3
 	ldr	r0, .L55+8
 	bl	HAL_GPIO_Init
-	.loc 1 537 23
+	.loc 1 536 23
 	mov	r3, #28672
 	str	r3, [r7, #20]
-	.loc 1 538 24
+	.loc 1 537 24
 	movs	r3, #1
 	str	r3, [r7, #24]
-	.loc 1 539 24
+	.loc 1 538 24
 	movs	r3, #0
 	str	r3, [r7, #28]
-	.loc 1 540 25
+	.loc 1 539 25
 	movs	r3, #2
 	str	r3, [r7, #32]
-	.loc 1 541 3
+	.loc 1 540 3
 	add	r3, r7, #20
 	mov	r1, r3
 	ldr	r0, .L55+4
 	bl	HAL_GPIO_Init
-	.loc 1 544 23
+	.loc 1 543 23
 	mov	r3, #32768
 	str	r3, [r7, #20]
-	.loc 1 545 24
+	.loc 1 544 24
 	movs	r3, #1
 	str	r3, [r7, #24]
-	.loc 1 546 24
+	.loc 1 545 24
 	movs	r3, #0
 	str	r3, [r7, #28]
-	.loc 1 547 25
+	.loc 1 546 25
 	movs	r3, #0
 	str	r3, [r7, #32]
-	.loc 1 548 3
+	.loc 1 547 3
 	add	r3, r7, #20
 	mov	r1, r3
 	ldr	r0, .L55+4
 	bl	HAL_GPIO_Init
-	.loc 1 551 23
+	.loc 1 550 23
 	mov	r3, #1536
 	str	r3, [r7, #20]
-	.loc 1 552 24
+	.loc 1 551 24
 	movs	r3, #1
 	str	r3, [r7, #24]
-	.loc 1 553 24
+	.loc 1 552 24
 	movs	r3, #0
 	str	r3, [r7, #28]
-	.loc 1 554 25
+	.loc 1 553 25
 	movs	r3, #0
 	str	r3, [r7, #32]
-	.loc 1 555 3
+	.loc 1 554 3
 	add	r3, r7, #20
 	mov	r1, r3
 	ldr	r0, .L55+8
 	bl	HAL_GPIO_Init
-	.loc 1 559 1
+	.loc 1 558 1
 	nop
 	adds	r7, r7, #40
 	.cfi_def_cfa_offset 8
@@ -1267,7 +1267,7 @@ MX_GPIO_Init:
 	.type	HAL_TIM_PeriodElapsedCallback, %function
 HAL_TIM_PeriodElapsedCallback:
 .LFB250:
-	.loc 1 574 1
+	.loc 1 573 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1280,17 +1280,17 @@ HAL_TIM_PeriodElapsedCallback:
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
-	.loc 1 578 11
+	.loc 1 577 11
 	ldr	r3, [r7, #4]
 	ldr	r3, [r3]
-	.loc 1 578 6
+	.loc 1 577 6
 	ldr	r2, .L60
 	cmp	r3, r2
 	bne	.L59
-	.loc 1 579 5
+	.loc 1 578 5
 	bl	HAL_IncTick
 .L59:
-	.loc 1 584 1
+	.loc 1 583 1
 	nop
 	adds	r7, r7, #8
 	.cfi_def_cfa_offset 8
@@ -1314,7 +1314,7 @@ HAL_TIM_PeriodElapsedCallback:
 	.type	Error_Handler, %function
 Error_Handler:
 .LFB251:
-	.loc 1 591 1
+	.loc 1 590 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1339,7 +1339,7 @@ Error_Handler:
 .L63:
 .LBE12:
 .LBE11:
-	.loc 1 595 9 discriminator 1
+	.loc 1 594 9 discriminator 1
 	b	.L63
 	.cfi_endproc
 .LFE251:
@@ -5522,7 +5522,7 @@ Error_Handler:
 	.uleb128 0x2a
 	.4byte	.LASF20388
 	.byte	0x1
-	.2byte	0x24e
+	.2byte	0x24d
 	.byte	0x6
 	.4byte	.LFB251
 	.4byte	.LFE251-.LFB251
@@ -5534,13 +5534,13 @@ Error_Handler:
 	.4byte	.LBB11
 	.4byte	.LBE11-.LBB11
 	.byte	0x1
-	.2byte	0x252
+	.2byte	0x251
 	.byte	0x3
 	.byte	0
 	.uleb128 0x2c
 	.4byte	.LASF20389
 	.byte	0x1
-	.2byte	0x23d
+	.2byte	0x23c
 	.byte	0x6
 	.4byte	.LFB250
 	.4byte	.LFE250-.LFB250
@@ -5550,7 +5550,7 @@ Error_Handler:
 	.uleb128 0x2d
 	.4byte	.LASF20413
 	.byte	0x1
-	.2byte	0x23d
+	.2byte	0x23c
 	.byte	0x37
 	.4byte	0x1edf
 	.uleb128 0x2
@@ -5559,7 +5559,7 @@ Error_Handler:
 	.byte	0
 	.uleb128 0x1c
 	.4byte	.LASF20392
-	.2byte	0x1fd
+	.2byte	0x1fc
 	.4byte	.LFB249
 	.4byte	.LFE249-.LFB249
 	.uleb128 0x1
@@ -5567,7 +5567,7 @@ Error_Handler:
 	.4byte	0x20f7
 	.uleb128 0x15
 	.4byte	.LASF20390
-	.2byte	0x1ff
+	.2byte	0x1fe
 	.byte	0x14
 	.4byte	0xe35
 	.uleb128 0x2
@@ -5579,7 +5579,7 @@ Error_Handler:
 	.4byte	0x20a3
 	.uleb128 0x15
 	.4byte	.LASF20391
-	.2byte	0x204
+	.2byte	0x203
 	.byte	0x1a
 	.4byte	0x314
 	.uleb128 0x2
@@ -5592,7 +5592,7 @@ Error_Handler:
 	.4byte	0x20c0
 	.uleb128 0x15
 	.4byte	.LASF20391
-	.2byte	0x205
+	.2byte	0x204
 	.byte	0x1a
 	.4byte	0x314
 	.uleb128 0x2
@@ -5605,7 +5605,7 @@ Error_Handler:
 	.4byte	0x20dd
 	.uleb128 0x15
 	.4byte	.LASF20391
-	.2byte	0x206
+	.2byte	0x205
 	.byte	0x1a
 	.4byte	0x314
 	.uleb128 0x2
@@ -5617,7 +5617,7 @@ Error_Handler:
 	.4byte	.LBE10-.LBB10
 	.uleb128 0x15
 	.4byte	.LASF20391
-	.2byte	0x207
+	.2byte	0x206
 	.byte	0x1a
 	.4byte	0x314
 	.uleb128 0x2
@@ -5627,7 +5627,7 @@ Error_Handler:
 	.byte	0
 	.uleb128 0x1c
 	.4byte	.LASF20393
-	.2byte	0x1e8
+	.2byte	0x1e7
 	.4byte	.LFB248
 	.4byte	.LFE248-.LFB248
 	.uleb128 0x1
@@ -5638,7 +5638,7 @@ Error_Handler:
 	.4byte	.LBE6-.LBB6
 	.uleb128 0x15
 	.4byte	.LASF20391
-	.2byte	0x1ec
+	.2byte	0x1eb
 	.byte	0x1a
 	.4byte	0x314
 	.uleb128 0x2
@@ -5648,21 +5648,21 @@ Error_Handler:
 	.byte	0
 	.uleb128 0x16
 	.4byte	.LASF20394
-	.2byte	0x1c7
+	.2byte	0x1c6
 	.4byte	.LFB247
 	.4byte	.LFE247-.LFB247
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x16
 	.4byte	.LASF20395
-	.2byte	0x1a6
+	.2byte	0x1a5
 	.4byte	.LFB246
 	.4byte	.LFE246-.LFB246
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x1c
 	.4byte	.LASF20396
-	.2byte	0x175
+	.2byte	0x174
 	.4byte	.LFB245
 	.4byte	.LFE245-.LFB245
 	.uleb128 0x1
@@ -5670,7 +5670,7 @@ Error_Handler:
 	.4byte	0x217c
 	.uleb128 0x15
 	.4byte	.LASF20397
-	.2byte	0x17c
+	.2byte	0x17b
 	.byte	0x1b
 	.4byte	0x1722
 	.uleb128 0x2
@@ -5678,7 +5678,7 @@ Error_Handler:
 	.sleb128 -16
 	.uleb128 0x15
 	.4byte	.LASF20398
-	.2byte	0x17d
+	.2byte	0x17c
 	.byte	0x16
 	.4byte	0x16f3
 	.uleb128 0x2
@@ -5687,21 +5687,21 @@ Error_Handler:
 	.byte	0
 	.uleb128 0x16
 	.4byte	.LASF20399
-	.2byte	0x14f
+	.2byte	0x14e
 	.4byte	.LFB244
 	.4byte	.LFE244-.LFB244
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x16
 	.4byte	.LASF20400
-	.2byte	0x12d
+	.2byte	0x12c
 	.4byte	.LFB243
 	.4byte	.LFE243-.LFB243
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x16
 	.4byte	.LASF20401
-	.2byte	0x10b
+	.2byte	0x10a
 	.4byte	.LFB242
 	.4byte	.LFE242-.LFB242
 	.uleb128 0x1
@@ -5709,7 +5709,7 @@ Error_Handler:
 	.uleb128 0x2e
 	.4byte	.LASF20402
 	.byte	0x1
-	.byte	0xf1
+	.byte	0xf0
 	.byte	0xd
 	.4byte	.LFB241
 	.4byte	.LFE241-.LFB241
@@ -5718,7 +5718,7 @@ Error_Handler:
 	.uleb128 0x2f
 	.4byte	.LASF20403
 	.byte	0x1
-	.byte	0xbd
+	.byte	0xbc
 	.byte	0xd
 	.4byte	.LFB240
 	.4byte	.LFE240-.LFB240
@@ -5727,7 +5727,7 @@ Error_Handler:
 	.4byte	0x21e6
 	.uleb128 0x17
 	.4byte	.LASF20404
-	.byte	0xc4
+	.byte	0xc3
 	.byte	0x1a
 	.4byte	0x1132
 	.uleb128 0x2
@@ -5737,7 +5737,7 @@ Error_Handler:
 	.uleb128 0x30
 	.4byte	.LASF20405
 	.byte	0x1
-	.byte	0x8e
+	.byte	0x8d
 	.byte	0x6
 	.4byte	.LFB239
 	.4byte	.LFE239-.LFB239
@@ -5746,7 +5746,7 @@ Error_Handler:
 	.4byte	0x2250
 	.uleb128 0x17
 	.4byte	.LASF20406
-	.byte	0x90
+	.byte	0x8f
 	.byte	0x16
 	.4byte	0xd89
 	.uleb128 0x2
@@ -5754,7 +5754,7 @@ Error_Handler:
 	.sleb128 -60
 	.uleb128 0x17
 	.4byte	.LASF20407
-	.byte	0x91
+	.byte	0x90
 	.byte	0x16
 	.4byte	0xddf
 	.uleb128 0x3
@@ -5766,7 +5766,7 @@ Error_Handler:
 	.4byte	0x2236
 	.uleb128 0x17
 	.4byte	.LASF20391
-	.byte	0x95
+	.byte	0x94
 	.byte	0x1a
 	.4byte	0x314
 	.uleb128 0x3
@@ -5778,7 +5778,7 @@ Error_Handler:
 	.4byte	.LBE5-.LBB5
 	.uleb128 0x17
 	.4byte	.LASF20391
-	.byte	0x96
+	.byte	0x95
 	.byte	0x1a
 	.4byte	0x314
 	.uleb128 0x3
