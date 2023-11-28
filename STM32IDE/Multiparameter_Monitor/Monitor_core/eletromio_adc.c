@@ -23,7 +23,7 @@ void emg_system(void)
 	uint16_t adc_buf[ADC_Buffer];
 	HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_buf, ADC_Buffer);
 	TIM2->CCR1=dutycicle;
-
+	return adc_buf;
 }
 
 //Próximas duas funções mostram em que estado a conversão AD está por meio do LED na porta PA9

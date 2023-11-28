@@ -31,7 +31,7 @@ protected:
     touchgfx::Box box1;
     touchgfx::Image counterBackgroundImage;
     touchgfx::TextAreaWithOneWildcard countTxt;
-    touchgfx::ButtonWithLabel bt_sair;
+    touchgfx::ButtonWithLabel bt_reiniciar;
     touchgfx::ButtonWithLabel bt_emg;
     touchgfx::ButtonWithLabel bt_temp_1;
     touchgfx::ButtonWithLabel bt_oxy;

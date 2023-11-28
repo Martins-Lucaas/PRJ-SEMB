@@ -29,7 +29,7 @@
             "Y": 71,
             "Width": 152,
             "Height": 89,
-            "TextId": "TextId1",
+            "TextId": "__SingleUse_RJRX",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
@@ -44,7 +44,7 @@
           },
           {
             "Type": "ButtonWithLabel",
-            "Name": "bt_sair",
+            "Name": "bt_reiniciar",
             "X": 26,
             "Y": 420,
             "Width": 240,

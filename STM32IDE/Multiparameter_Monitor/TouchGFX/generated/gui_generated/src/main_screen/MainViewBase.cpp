@@ -25,15 +25,15 @@ MainViewBase::MainViewBase()
     countTxt.setLinespacing(0);
     Unicode::snprintf(countTxtBuffer, COUNTTXT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_5MI9).getText());
     countTxt.setWildcard(countTxtBuffer);
-    countTxt.setTypedText(touchgfx::TypedText(T_TEXTID1));
+    countTxt.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RJRX));
     add(countTxt);
 
-    bt_sair.setXY(26, 420);
-    bt_sair.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_PRESSED_ID));
-    bt_sair.setLabelText(touchgfx::TypedText(T___SINGLEUSE_LT88));
-    bt_sair.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    bt_sair.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    add(bt_sair);
+    bt_reiniciar.setXY(26, 420);
+    bt_reiniciar.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_PRESSED_ID));
+    bt_reiniciar.setLabelText(touchgfx::TypedText(T___SINGLEUSE_LT88));
+    bt_reiniciar.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    bt_reiniciar.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    add(bt_reiniciar);
 
     bt_emg.setXY(26, 225);
     bt_emg.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_PRESSED_ID));

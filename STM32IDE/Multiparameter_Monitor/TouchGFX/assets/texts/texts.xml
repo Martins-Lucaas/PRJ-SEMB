@@ -5,14 +5,17 @@
   </Languages>
   <Texts>
     <TextGroup Id="Group1">
-      <Text Id="TextId1" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">&lt;number&gt;</Translation>
+      <Text Id="aaa" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_5MI9" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">0</Translation>
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_RJRX" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
       <Text Id="__SingleUse_ZP0J" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">temp</Translation>
       </Text>
@@ -23,7 +26,7 @@
         <Translation Language="GB">oxy</Translation>
       </Text>
       <Text Id="__SingleUse_LT88" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">sair</Translation>
+        <Translation Language="GB">reiniciar</Translation>
       </Text>
     </TextGroup>
   </Texts>
