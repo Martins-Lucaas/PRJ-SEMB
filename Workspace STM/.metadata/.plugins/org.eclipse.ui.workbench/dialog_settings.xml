@@ -10,6 +10,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\Entregas dos trabalhos\PRJ5 - Lucas, Karoline, Otávio, Gabriel.zip"/>
 			<item value="C:\Users\lucas\OneDrive\Documentos\Faculdade\6° Semestre\SEMB1\PRJ-SEMB\Entregas dos trabalhos\PRJ3 - Projeto de Firmware - Lucas, Karol, Gabriel, Otávio.rar"/>
 		</list>
 	</section>
