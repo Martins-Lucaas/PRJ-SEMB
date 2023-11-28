@@ -31,6 +31,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "z_displ_ILI9XXX.h"
 
 /* USER CODE END Includes */
 
@@ -59,28 +60,28 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define touch_int_Pin GPIO_PIN_4
-#define touch_int_GPIO_Port GPIOA
-#define displ_sck_Pin GPIO_PIN_5
-#define displ_sck_GPIO_Port GPIOA
-#define touch_mosi_Pin GPIO_PIN_6
-#define touch_mosi_GPIO_Port GPIOA
-#define displ_mosi_Pin GPIO_PIN_7
-#define displ_mosi_GPIO_Port GPIOA
+#define TOUCH_INT_Pin GPIO_PIN_4
+#define TOUCH_INT_GPIO_Port GPIOA
+#define DISPL_SCK_Pin GPIO_PIN_5
+#define DISPL_SCK_GPIO_Port GPIOA
+#define TOUCH_MISO_Pin GPIO_PIN_6
+#define TOUCH_MISO_GPIO_Port GPIOA
+#define DISPL_MOSI_Pin GPIO_PIN_7
+#define DISPL_MOSI_GPIO_Port GPIOA
 #define usart_emg_rx_Pin GPIO_PIN_5
 #define usart_emg_rx_GPIO_Port GPIOC
 #define temp_scl_Pin GPIO_PIN_10
 #define temp_scl_GPIO_Port GPIOB
-#define displ_cs_Pin GPIO_PIN_12
-#define displ_cs_GPIO_Port GPIOB
-#define touch_cs_Pin GPIO_PIN_13
-#define touch_cs_GPIO_Port GPIOB
-#define displ_dc_Pin GPIO_PIN_14
-#define displ_dc_GPIO_Port GPIOB
-#define displ_rst_Pin GPIO_PIN_15
-#define displ_rst_GPIO_Port GPIOB
-#define displ_led_Pin GPIO_PIN_7
-#define displ_led_GPIO_Port GPIOC
+#define DISPL_CS_Pin GPIO_PIN_12
+#define DISPL_CS_GPIO_Port GPIOB
+#define TOUCH_CS_Pin GPIO_PIN_13
+#define TOUCH_CS_GPIO_Port GPIOB
+#define DISPL_DC_Pin GPIO_PIN_14
+#define DISPL_DC_GPIO_Port GPIOB
+#define DISPL_RST_Pin GPIO_PIN_15
+#define DISPL_RST_GPIO_Port GPIOB
+#define DISPL_LED_Pin GPIO_PIN_7
+#define DISPL_LED_GPIO_Port GPIOC
 #define oxi_sda_Pin GPIO_PIN_9
 #define oxi_sda_GPIO_Port GPIOC
 #define oxi_scl_Pin GPIO_PIN_8

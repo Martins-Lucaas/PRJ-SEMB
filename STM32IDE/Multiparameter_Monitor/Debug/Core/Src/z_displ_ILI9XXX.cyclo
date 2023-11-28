@@ -1,0 +1,13 @@
+../Core/Src/z_displ_ILI9XXX.c:33:6:Displ_Transmit	6
+../Core/Src/z_displ_ILI9XXX.c:96:6:Displ_WriteCommand	1
+../Core/Src/z_displ_ILI9XXX.c:109:6:Displ_WriteData	2
+../Core/Src/z_displ_ILI9XXX.c:121:6:ILI9XXX_Init	1
+../Core/Src/z_displ_ILI9XXX.c:212:6:Displ_SetAddressWindow	1
+../Core/Src/z_displ_ILI9XXX.c:232:6:Displ_Init	1
+../Core/Src/z_displ_ILI9XXX.c:255:6:Displ_Orientation	5
+../Core/Src/z_displ_ILI9XXX.c:287:6:HAL_SPI_ErrorCallback	2
+../Core/Src/z_displ_ILI9XXX.c:298:6:HAL_SPI_TxCpltCallback	2
+../Core/Src/z_displ_ILI9XXX.c:318:6:Displ_FillArea	11
+../Core/Src/z_displ_ILI9XXX.c:1046:10:Displ_BackLight	12
+../Core/Src/z_displ_ILI9XXX.c:1115:5:touchgfxDisplayDriverTransmitActive	1
+../Core/Src/z_displ_ILI9XXX.c:1129:6:touchgfxDisplayDriverTransmitBlock	1

@@ -21,7 +21,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
 #include "myheaders.h"
 /* USER CODE END Includes */
 
@@ -385,7 +384,7 @@ static void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 0;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 4999;
+  htim3.Init.Period = 100;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_PWM_Init(&htim3) != HAL_OK)
@@ -518,33 +517,33 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, displ_cs_Pin|touch_cs_Pin|displ_dc_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOB, DISPL_CS_Pin|TOUCH_CS_Pin|DISPL_DC_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(displ_rst_GPIO_Port, displ_rst_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(DISPL_RST_GPIO_Port, DISPL_RST_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, led_adc_Pin|GPIO_PIN_10, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : touch_int_Pin */
-  GPIO_InitStruct.Pin = touch_int_Pin;
+  /*Configure GPIO pin : TOUCH_INT_Pin */
+  GPIO_InitStruct.Pin = TOUCH_INT_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(touch_int_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(TOUCH_INT_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : displ_cs_Pin touch_cs_Pin displ_dc_Pin */
-  GPIO_InitStruct.Pin = displ_cs_Pin|touch_cs_Pin|displ_dc_Pin;
+  /*Configure GPIO pins : DISPL_CS_Pin TOUCH_CS_Pin DISPL_DC_Pin */
+  GPIO_InitStruct.Pin = DISPL_CS_Pin|TOUCH_CS_Pin|DISPL_DC_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : displ_rst_Pin */
-  GPIO_InitStruct.Pin = displ_rst_Pin;
+  /*Configure GPIO pin : DISPL_RST_Pin */
+  GPIO_InitStruct.Pin = DISPL_RST_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(displ_rst_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(DISPL_RST_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : led_adc_Pin PA10 */
   GPIO_InitStruct.Pin = led_adc_Pin|GPIO_PIN_10;

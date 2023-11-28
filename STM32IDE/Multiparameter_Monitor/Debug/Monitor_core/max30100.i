@@ -32000,50 +32000,55 @@ uint32_t HAL_GetUIDw0(void);
 uint32_t HAL_GetUIDw1(void);
 uint32_t HAL_GetUIDw2(void);
 # 31 "../Core/Inc/main.h" 2
-# 52 "../Core/Inc/main.h"
-void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
-
-
-void Error_Handler(void);
 
 
 
+# 1 "../Core/Inc/z_displ_ILI9XXX.h" 1
+
+
+#define __Z_DISPL_ILI9XXX_H 
+
+#define DISPLAY_USING_TOUCHGFX 
+
+#define ILI9341 
+
+#define DISPL_SPI_PORT hspi2
+#define DISPL_SPI SPI2
+
+#define DISPL_PRESCALER SPI_BAUDRATEPRESCALER_4
+#define TOUCH_PRESCALER SPI_BAUDRATEPRESCALER_256
+
+
+#define DISPLAY_SPI_DMA_MODE 
+
+#define DISPLAY_DIMMING_MODE 
+#define BKLIT_TIMER TIM2
+#define BKLIT_T htim2
+#define BKLIT_CHANNEL TIM_CHANNEL_1
+#define BKLIT_CCR CCR1
+#define BKLIT_STBY_LEVEL 50
+#define BKLIT_INIT_LEVEL 100
+
+#define TGFX_TIMER TIM3
+#define TGFX_T htim3
+
+#define BUFLEVEL 13
+# 39 "../Core/Inc/z_displ_ILI9XXX.h"
+#define Z_RGB565 
+# 52 "../Core/Inc/z_displ_ILI9XXX.h"
+#define DISPL_WIDTH 240
+#define DISPL_HEIGHT 320
 
 
 
-#define touch_int_Pin GPIO_PIN_4
-#define touch_int_GPIO_Port GPIOA
-#define displ_sck_Pin GPIO_PIN_5
-#define displ_sck_GPIO_Port GPIOA
-#define touch_mosi_Pin GPIO_PIN_6
-#define touch_mosi_GPIO_Port GPIOA
-#define displ_mosi_Pin GPIO_PIN_7
-#define displ_mosi_GPIO_Port GPIOA
-#define usart_emg_rx_Pin GPIO_PIN_5
-#define usart_emg_rx_GPIO_Port GPIOC
-#define temp_scl_Pin GPIO_PIN_10
-#define temp_scl_GPIO_Port GPIOB
-#define displ_cs_Pin GPIO_PIN_12
-#define displ_cs_GPIO_Port GPIOB
-#define touch_cs_Pin GPIO_PIN_13
-#define touch_cs_GPIO_Port GPIOB
-#define displ_dc_Pin GPIO_PIN_14
-#define displ_dc_GPIO_Port GPIOB
-#define displ_rst_Pin GPIO_PIN_15
-#define displ_rst_GPIO_Port GPIOB
-#define displ_led_Pin GPIO_PIN_7
-#define displ_led_GPIO_Port GPIOC
-#define oxi_sda_Pin GPIO_PIN_9
-#define oxi_sda_GPIO_Port GPIOC
-#define oxi_scl_Pin GPIO_PIN_8
-#define oxi_scl_GPIO_Port GPIOA
-#define led_adc_Pin GPIO_PIN_9
-#define led_adc_GPIO_Port GPIOA
-#define usart_emg_tx_Pin GPIO_PIN_10
-#define usart_emg_tx_GPIO_Port GPIOC
-#define temp_sda_Pin GPIO_PIN_12
-#define temp_sda_GPIO_Port GPIOC
-# 12 "../Monitor_core/max30100.h" 2
+
+
+
+
+#define DISPL_DMA_CUTOFF 20
+
+
+
 
 # 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 1 3
 
@@ -33347,7 +33352,159 @@ char *strsignal (int __signo);
 # 190 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
 
 
-# 14 "../Monitor_core/max30100.h" 2
+# 67 "../Core/Inc/z_displ_ILI9XXX.h" 2
+
+
+# 68 "../Core/Inc/z_displ_ILI9XXX.h"
+typedef enum {
+ Displ_Orientat_0,
+ Displ_Orientat_90,
+ Displ_Orientat_180,
+ Displ_Orientat_270
+} Displ_Orientat_e;
+
+
+#define SPI_COMMAND GPIO_PIN_RESET
+#define SPI_DATA GPIO_PIN_SET
+
+
+
+#define SIZEBUF (1<<BUFLEVEL)
+
+
+
+
+
+#define RED 0xF800
+#define GREEN 0x07E0
+#define BLUE 0x001F
+#define YELLOW 0xFFE0
+#define MAGENTA 0xF81F
+#define ORANGE 0xFD00
+#define CYAN 0x07FF
+#define D_RED 0xC000
+#define D_GREEN 0x0600
+#define D_BLUE 0x0018
+#define D_YELLOW 0xC600
+#define D_MAGENTA 0xC018
+#define D_ORANGE 0xC300
+#define D_CYAN 0x0618
+#define DD_RED 0x8000
+#define DD_GREEN 0x0400
+#define DD_BLUE 0x0010
+#define DD_YELLOW 0x8400
+#define DD_MAGENTA 0x8020
+#define DD_ORANGE 0x8200
+#define DD_CYAN 0x0410
+#define WHITE 0xFFFF
+#define D_WHITE 0xC618
+#define DD_WHITE 0x8410
+#define DDD_WHITE 0x4208
+#define DDDD_WHITE 0x2104
+#define BLACK 0x0000
+#define color565(r,g,b) ((((r) & 0xF8) << 8) | (((g) & 0xFC) << 3) | (((b) & 0xF8) >> 3))
+
+
+
+
+
+#define ILI9XXX_SLEEP_OUT 0x11
+#define ILI9XXX_DISPLAY_ON 0x29
+#define ILI9XXX_PIXEL_FORMAT 0x3A
+#define ILI9XXX_RGB_INTERFACE 0xB0
+#define ILI9XXX_MEMWR 0x2C
+#define ILI9XXX_COLUMN_ADDR 0x2A
+#define ILI9XXX_PAGE_ADDR 0x2B
+#define ILI9XXX_MADCTL 0x36
+#define ILI9XXX_MADCTL_0DEG 0X88
+#define ILI9XXX_MADCTL_90DEG 0xE8
+#define ILI9XXX_MADCTL_180DEG 0x48
+#define ILI9XXX_MADCTL_270DEG 0x28
+
+#define ILI9XXX_INIT_SHORT_DELAY 5
+#define ILI9XXX_INIT_LONG_DELAY 150
+
+#define ILI9XXX_POWER0 0xC0
+#define ILI9XXX_POWER1 0xC1
+#define ILI9488_POWER2 0xC2
+#define ILI9341_POWERA 0xCB
+#define ILI9341_POWERB 0xCF
+
+
+
+
+#define SET_DISPL_SPI_BAUDRATE DISPL_SPI->CR1 &= (uint16_t) ~SPI_CR1_BR_Msk; DISPL_SPI->CR1 |= DISPL_PRESCALER
+
+
+#define SET_TOUCH_SPI_BAUDRATE TOUCH_SPI->CR1 &= (uint16_t) ~SPI_CR1_BR_Msk; TOUCH_SPI->CR1 |= TOUCH_PRESCALER
+
+
+
+
+#define _swap_int16_t(a,b) { int16_t t = a; a = b; b = t; }
+# 176 "../Core/Inc/z_displ_ILI9XXX.h"
+void Displ_FillArea(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color);
+void Displ_Orientation(Displ_Orientat_e orientation);
+void Displ_Init(Displ_Orientat_e orientation);
+
+void HAL_SPI_ErrorCallback(SPI_HandleTypeDef *hspi);
+void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi);
+
+uint32_t Displ_BackLight(uint8_t cmd);
+
+
+
+int touchgfxDisplayDriverTransmitActive();
+void touchgfxDisplayDriverTransmitBlock(const uint8_t* pixels, uint16_t x, uint16_t y, uint16_t w, uint16_t h);
+extern void DisplayDriver_TransferCompleteCallback();
+extern void touchgfxSignalVSync(void);
+# 35 "../Core/Inc/main.h" 2
+# 53 "../Core/Inc/main.h"
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
+
+void Error_Handler(void);
+
+
+
+
+
+
+#define TOUCH_INT_Pin GPIO_PIN_4
+#define TOUCH_INT_GPIO_Port GPIOA
+#define DISPL_SCK_Pin GPIO_PIN_5
+#define DISPL_SCK_GPIO_Port GPIOA
+#define TOUCH_MISO_Pin GPIO_PIN_6
+#define TOUCH_MISO_GPIO_Port GPIOA
+#define DISPL_MOSI_Pin GPIO_PIN_7
+#define DISPL_MOSI_GPIO_Port GPIOA
+#define usart_emg_rx_Pin GPIO_PIN_5
+#define usart_emg_rx_GPIO_Port GPIOC
+#define temp_scl_Pin GPIO_PIN_10
+#define temp_scl_GPIO_Port GPIOB
+#define DISPL_CS_Pin GPIO_PIN_12
+#define DISPL_CS_GPIO_Port GPIOB
+#define TOUCH_CS_Pin GPIO_PIN_13
+#define TOUCH_CS_GPIO_Port GPIOB
+#define DISPL_DC_Pin GPIO_PIN_14
+#define DISPL_DC_GPIO_Port GPIOB
+#define DISPL_RST_Pin GPIO_PIN_15
+#define DISPL_RST_GPIO_Port GPIOB
+#define DISPL_LED_Pin GPIO_PIN_7
+#define DISPL_LED_GPIO_Port GPIOC
+#define oxi_sda_Pin GPIO_PIN_9
+#define oxi_sda_GPIO_Port GPIOC
+#define oxi_scl_Pin GPIO_PIN_8
+#define oxi_scl_GPIO_Port GPIOA
+#define led_adc_Pin GPIO_PIN_9
+#define led_adc_GPIO_Port GPIOA
+#define usart_emg_tx_Pin GPIO_PIN_10
+#define usart_emg_tx_GPIO_Port GPIOC
+#define temp_sda_Pin GPIO_PIN_12
+#define temp_sda_GPIO_Port GPIOC
+# 12 "../Monitor_core/max30100.h" 2
+
+
 # 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdlib.h" 1 3
 
 
@@ -33420,6 +33577,8 @@ char *strsignal (int __signo);
 # 33 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdlib.h" 3
 
 
+
+# 35 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdlib.h" 3
 typedef struct
 {
   int quot;

@@ -405,86 +405,86 @@ DMA2_Stream3_IRQHandler:
 	.file 8 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
 	.section	.debug_info,"",%progbits
 .Ldebug_info0:
-	.4byte	0x9f3
+	.4byte	0x9fa
 	.2byte	0x5
 	.byte	0x1
 	.byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.uleb128 0x17
-	.4byte	.LASF19672
+	.4byte	.LASF20028
 	.byte	0x1d
-	.4byte	.LASF19673
-	.4byte	.LASF19674
+	.4byte	.LASF20029
+	.4byte	.LASF20030
 	.4byte	.LLRL0
 	.4byte	0
 	.4byte	.Ldebug_line0
 	.4byte	.Ldebug_macro0
-	.uleb128 0x7
+	.uleb128 0x6
 	.byte	0x1
 	.byte	0x6
-	.4byte	.LASF19513
+	.4byte	.LASF19869
 	.uleb128 0x5
-	.4byte	.LASF19516
+	.4byte	.LASF19872
 	.byte	0x2
 	.byte	0x2b
 	.byte	0x17
 	.4byte	0x3d
-	.uleb128 0x7
+	.uleb128 0x6
 	.byte	0x1
 	.byte	0x8
-	.4byte	.LASF19514
-	.uleb128 0x7
+	.4byte	.LASF19870
+	.uleb128 0x6
 	.byte	0x2
 	.byte	0x5
-	.4byte	.LASF19515
+	.4byte	.LASF19871
 	.uleb128 0x5
-	.4byte	.LASF19517
+	.4byte	.LASF19873
 	.byte	0x2
 	.byte	0x39
 	.byte	0x1c
 	.4byte	0x57
-	.uleb128 0x7
+	.uleb128 0x6
 	.byte	0x2
 	.byte	0x7
-	.4byte	.LASF19518
-	.uleb128 0x7
+	.4byte	.LASF19874
+	.uleb128 0x6
 	.byte	0x4
 	.byte	0x5
-	.4byte	.LASF19519
+	.4byte	.LASF19875
 	.uleb128 0x5
-	.4byte	.LASF19520
+	.4byte	.LASF19876
 	.byte	0x2
 	.byte	0x4f
 	.byte	0x1b
 	.4byte	0x71
-	.uleb128 0x7
+	.uleb128 0x6
 	.byte	0x4
 	.byte	0x7
-	.4byte	.LASF19521
-	.uleb128 0x7
+	.4byte	.LASF19877
+	.uleb128 0x6
 	.byte	0x8
 	.byte	0x5
-	.4byte	.LASF19522
-	.uleb128 0x7
+	.4byte	.LASF19878
+	.uleb128 0x6
 	.byte	0x8
 	.byte	0x7
-	.4byte	.LASF19523
+	.4byte	.LASF19879
 	.uleb128 0x18
 	.byte	0x4
 	.byte	0x5
 	.ascii	"int\000"
-	.uleb128 0x7
+	.uleb128 0x6
 	.byte	0x4
 	.byte	0x7
-	.4byte	.LASF19524
+	.4byte	.LASF19880
 	.uleb128 0x5
-	.4byte	.LASF19525
+	.4byte	.LASF19881
 	.byte	0x3
 	.byte	0x18
 	.byte	0x13
 	.4byte	0x31
 	.uleb128 0x5
-	.4byte	.LASF19526
+	.4byte	.LASF19882
 	.byte	0x3
 	.byte	0x24
 	.byte	0x14
@@ -492,7 +492,7 @@ DMA2_Stream3_IRQHandler:
 	.uleb128 0x9
 	.4byte	0xa0
 	.uleb128 0x5
-	.4byte	.LASF19527
+	.4byte	.LASF19883
 	.byte	0x3
 	.byte	0x30
 	.byte	0x14
@@ -510,7 +510,7 @@ DMA2_Stream3_IRQHandler:
 	.4byte	0xbd
 	.byte	0
 	.uleb128 0x3
-	.4byte	.LASF19528
+	.4byte	.LASF19884
 	.byte	0x4
 	.2byte	0x16d
 	.byte	0x15
@@ -522,14 +522,14 @@ DMA2_Stream3_IRQHandler:
 	.4byte	0xbd
 	.byte	0x8
 	.uleb128 0x3
-	.4byte	.LASF19529
+	.4byte	.LASF19885
 	.byte	0x4
 	.2byte	0x16f
 	.byte	0x15
 	.4byte	0xbd
 	.byte	0xc
 	.uleb128 0x3
-	.4byte	.LASF19530
+	.4byte	.LASF19886
 	.byte	0x4
 	.2byte	0x170
 	.byte	0x15
@@ -542,7 +542,7 @@ DMA2_Stream3_IRQHandler:
 	.byte	0x14
 	.byte	0
 	.uleb128 0xa
-	.4byte	.LASF19531
+	.4byte	.LASF19887
 	.byte	0x4
 	.2byte	0x172
 	.4byte	0xc2
@@ -572,35 +572,35 @@ DMA2_Stream3_IRQHandler:
 	.4byte	0xbd
 	.byte	0xc
 	.uleb128 0x3
-	.4byte	.LASF19532
+	.4byte	.LASF19888
 	.byte	0x4
 	.2byte	0x2b7
 	.byte	0x15
 	.4byte	0xbd
 	.byte	0x10
 	.uleb128 0x3
-	.4byte	.LASF19533
+	.4byte	.LASF19889
 	.byte	0x4
 	.2byte	0x2b8
 	.byte	0x15
 	.4byte	0xbd
 	.byte	0x14
 	.uleb128 0x3
-	.4byte	.LASF19534
+	.4byte	.LASF19890
 	.byte	0x4
 	.2byte	0x2b9
 	.byte	0x15
 	.4byte	0xbd
 	.byte	0x18
 	.uleb128 0x3
-	.4byte	.LASF19535
+	.4byte	.LASF19891
 	.byte	0x4
 	.2byte	0x2ba
 	.byte	0x15
 	.4byte	0xbd
 	.byte	0x1c
 	.uleb128 0x3
-	.4byte	.LASF19536
+	.4byte	.LASF19892
 	.byte	0x4
 	.2byte	0x2bb
 	.byte	0x15
@@ -608,7 +608,7 @@ DMA2_Stream3_IRQHandler:
 	.byte	0x20
 	.byte	0
 	.uleb128 0xa
-	.4byte	.LASF19537
+	.4byte	.LASF19893
 	.byte	0x4
 	.2byte	0x2bc
 	.4byte	0x125
@@ -628,14 +628,14 @@ DMA2_Stream3_IRQHandler:
 	.4byte	0xbd
 	.byte	0x4
 	.uleb128 0x3
-	.4byte	.LASF19538
+	.4byte	.LASF19894
 	.byte	0x4
 	.2byte	0x2ed
 	.byte	0x15
 	.4byte	0xbd
 	.byte	0x8
 	.uleb128 0x3
-	.4byte	.LASF19539
+	.4byte	.LASF19895
 	.byte	0x4
 	.2byte	0x2ee
 	.byte	0x15
@@ -652,21 +652,21 @@ DMA2_Stream3_IRQHandler:
 	.4byte	0xbd
 	.byte	0x14
 	.uleb128 0x3
-	.4byte	.LASF19540
+	.4byte	.LASF19896
 	.byte	0x4
 	.2byte	0x2f1
 	.byte	0x15
 	.4byte	0xbd
 	.byte	0x18
 	.uleb128 0x3
-	.4byte	.LASF19541
+	.4byte	.LASF19897
 	.byte	0x4
 	.2byte	0x2f2
 	.byte	0x15
 	.4byte	0xbd
 	.byte	0x1c
 	.uleb128 0x3
-	.4byte	.LASF19542
+	.4byte	.LASF19898
 	.byte	0x4
 	.2byte	0x2f3
 	.byte	0x15
@@ -693,35 +693,35 @@ DMA2_Stream3_IRQHandler:
 	.4byte	0xbd
 	.byte	0x30
 	.uleb128 0x3
-	.4byte	.LASF19543
+	.4byte	.LASF19899
 	.byte	0x4
 	.2byte	0x2f8
 	.byte	0x15
 	.4byte	0xbd
 	.byte	0x34
 	.uleb128 0x3
-	.4byte	.LASF19544
+	.4byte	.LASF19900
 	.byte	0x4
 	.2byte	0x2f9
 	.byte	0x15
 	.4byte	0xbd
 	.byte	0x38
 	.uleb128 0x3
-	.4byte	.LASF19545
+	.4byte	.LASF19901
 	.byte	0x4
 	.2byte	0x2fa
 	.byte	0x15
 	.4byte	0xbd
 	.byte	0x3c
 	.uleb128 0x3
-	.4byte	.LASF19546
+	.4byte	.LASF19902
 	.byte	0x4
 	.2byte	0x2fb
 	.byte	0x15
 	.4byte	0xbd
 	.byte	0x40
 	.uleb128 0x3
-	.4byte	.LASF19547
+	.4byte	.LASF19903
 	.byte	0x4
 	.2byte	0x2fc
 	.byte	0x15
@@ -733,7 +733,7 @@ DMA2_Stream3_IRQHandler:
 	.4byte	0xbd
 	.byte	0x48
 	.uleb128 0x3
-	.4byte	.LASF19548
+	.4byte	.LASF19904
 	.byte	0x4
 	.2byte	0x2fe
 	.byte	0x15
@@ -746,28 +746,28 @@ DMA2_Stream3_IRQHandler:
 	.byte	0x50
 	.byte	0
 	.uleb128 0xa
-	.4byte	.LASF19549
+	.4byte	.LASF19905
 	.byte	0x4
 	.2byte	0x300
 	.4byte	0x1af
-	.uleb128 0x7
+	.uleb128 0x6
 	.byte	0x8
 	.byte	0x4
-	.4byte	.LASF19550
+	.4byte	.LASF19906
 	.uleb128 0x10
 	.4byte	0x3d
 	.byte	0x5
 	.byte	0x32
 	.4byte	0x2f4
 	.uleb128 0x2
-	.4byte	.LASF19551
+	.4byte	.LASF19907
 	.byte	0
 	.uleb128 0x2
-	.4byte	.LASF19552
+	.4byte	.LASF19908
 	.byte	0x1
 	.byte	0
 	.uleb128 0x5
-	.4byte	.LASF19553
+	.4byte	.LASF19909
 	.byte	0x5
 	.byte	0x35
 	.byte	0x3
@@ -778,84 +778,84 @@ DMA2_Stream3_IRQHandler:
 	.byte	0x30
 	.4byte	0x3a5
 	.uleb128 0x1
-	.4byte	.LASF19554
+	.4byte	.LASF19910
 	.byte	0x6
 	.byte	0x32
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0
 	.uleb128 0x1
-	.4byte	.LASF19555
+	.4byte	.LASF19911
 	.byte	0x6
 	.byte	0x35
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF19556
+	.4byte	.LASF19912
 	.byte	0x6
 	.byte	0x39
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x8
 	.uleb128 0x1
-	.4byte	.LASF19557
+	.4byte	.LASF19913
 	.byte	0x6
 	.byte	0x3c
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0xc
 	.uleb128 0x1
-	.4byte	.LASF19558
+	.4byte	.LASF19914
 	.byte	0x6
 	.byte	0x3f
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x10
 	.uleb128 0x1
-	.4byte	.LASF19559
+	.4byte	.LASF19915
 	.byte	0x6
 	.byte	0x42
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x14
 	.uleb128 0x1
-	.4byte	.LASF19560
+	.4byte	.LASF19916
 	.byte	0x6
 	.byte	0x45
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x18
 	.uleb128 0x1
-	.4byte	.LASF19561
+	.4byte	.LASF19917
 	.byte	0x6
 	.byte	0x4a
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x1c
 	.uleb128 0x1
-	.4byte	.LASF19562
+	.4byte	.LASF19918
 	.byte	0x6
 	.byte	0x4d
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x20
 	.uleb128 0x1
-	.4byte	.LASF19563
+	.4byte	.LASF19919
 	.byte	0x6
 	.byte	0x52
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x24
 	.uleb128 0x1
-	.4byte	.LASF19564
+	.4byte	.LASF19920
 	.byte	0x6
 	.byte	0x55
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x28
 	.uleb128 0x1
-	.4byte	.LASF19565
+	.4byte	.LASF19921
 	.byte	0x6
 	.byte	0x5b
 	.byte	0xc
@@ -863,7 +863,7 @@ DMA2_Stream3_IRQHandler:
 	.byte	0x2c
 	.byte	0
 	.uleb128 0x5
-	.4byte	.LASF19566
+	.4byte	.LASF19922
 	.byte	0x6
 	.byte	0x60
 	.byte	0x2
@@ -874,26 +874,26 @@ DMA2_Stream3_IRQHandler:
 	.byte	0x67
 	.4byte	0x3e1
 	.uleb128 0x2
-	.4byte	.LASF19567
+	.4byte	.LASF19923
 	.byte	0
 	.uleb128 0x2
-	.4byte	.LASF19568
+	.4byte	.LASF19924
 	.byte	0x1
 	.uleb128 0x2
-	.4byte	.LASF19569
+	.4byte	.LASF19925
 	.byte	0x2
 	.uleb128 0x2
-	.4byte	.LASF19570
+	.4byte	.LASF19926
 	.byte	0x3
 	.uleb128 0x2
-	.4byte	.LASF19571
+	.4byte	.LASF19927
 	.byte	0x4
 	.uleb128 0x2
-	.4byte	.LASF19572
+	.4byte	.LASF19928
 	.byte	0x5
 	.byte	0
 	.uleb128 0x5
-	.4byte	.LASF19573
+	.4byte	.LASF19929
 	.byte	0x6
 	.byte	0x6e
 	.byte	0x2
@@ -901,111 +901,111 @@ DMA2_Stream3_IRQHandler:
 	.uleb128 0x9
 	.4byte	0x3e1
 	.uleb128 0x13
-	.4byte	.LASF19607
+	.4byte	.LASF19963
 	.byte	0x60
 	.byte	0x6
 	.byte	0x8a
 	.4byte	0x4b5
 	.uleb128 0x1
-	.4byte	.LASF19574
+	.4byte	.LASF19930
 	.byte	0x6
 	.byte	0x8c
 	.byte	0x17
 	.4byte	0x4b5
 	.byte	0
 	.uleb128 0x1
-	.4byte	.LASF19575
+	.4byte	.LASF19931
 	.byte	0x6
 	.byte	0x8e
 	.byte	0x13
 	.4byte	0x3a5
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF19576
+	.4byte	.LASF19932
 	.byte	0x6
 	.byte	0x90
 	.byte	0x13
 	.4byte	0x2f4
 	.byte	0x34
 	.uleb128 0x1
-	.4byte	.LASF19577
+	.4byte	.LASF19933
 	.byte	0x6
 	.byte	0x92
 	.byte	0x21
 	.4byte	0x3ed
 	.byte	0x35
 	.uleb128 0x1
-	.4byte	.LASF19578
+	.4byte	.LASF19934
 	.byte	0x6
 	.byte	0x94
 	.byte	0x9
 	.4byte	0x4ba
 	.byte	0x38
 	.uleb128 0x1
-	.4byte	.LASF19579
+	.4byte	.LASF19935
 	.byte	0x6
 	.byte	0x96
 	.byte	0xb
 	.4byte	0x4cc
 	.byte	0x3c
 	.uleb128 0x1
-	.4byte	.LASF19580
+	.4byte	.LASF19936
 	.byte	0x6
 	.byte	0x98
 	.byte	0xb
 	.4byte	0x4cc
 	.byte	0x40
 	.uleb128 0x1
-	.4byte	.LASF19581
+	.4byte	.LASF19937
 	.byte	0x6
 	.byte	0x9a
 	.byte	0xb
 	.4byte	0x4cc
 	.byte	0x44
 	.uleb128 0x1
-	.4byte	.LASF19582
+	.4byte	.LASF19938
 	.byte	0x6
 	.byte	0x9c
 	.byte	0xb
 	.4byte	0x4cc
 	.byte	0x48
 	.uleb128 0x1
-	.4byte	.LASF19583
+	.4byte	.LASF19939
 	.byte	0x6
 	.byte	0x9e
 	.byte	0xb
 	.4byte	0x4cc
 	.byte	0x4c
 	.uleb128 0x1
-	.4byte	.LASF19584
+	.4byte	.LASF19940
 	.byte	0x6
 	.byte	0xa0
 	.byte	0xb
 	.4byte	0x4cc
 	.byte	0x50
 	.uleb128 0x1
-	.4byte	.LASF19585
+	.4byte	.LASF19941
 	.byte	0x6
 	.byte	0xa2
 	.byte	0x15
 	.4byte	0xbd
 	.byte	0x54
 	.uleb128 0x1
-	.4byte	.LASF19586
+	.4byte	.LASF19942
 	.byte	0x6
 	.byte	0xa4
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x58
 	.uleb128 0x1
-	.4byte	.LASF19587
+	.4byte	.LASF19943
 	.byte	0x6
 	.byte	0xa6
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x5c
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x7
 	.4byte	0x119
 	.uleb128 0x19
 	.byte	0x4
@@ -1014,19 +1014,19 @@ DMA2_Stream3_IRQHandler:
 	.uleb128 0xb
 	.4byte	0x4c7
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x7
 	.4byte	0x3f2
-	.uleb128 0x6
+	.uleb128 0x7
 	.4byte	0x4bc
 	.uleb128 0x5
-	.4byte	.LASF19588
+	.4byte	.LASF19944
 	.byte	0x6
 	.byte	0xa8
 	.byte	0x2
 	.4byte	0x3f2
-	.uleb128 0x6
+	.uleb128 0x7
 	.4byte	0x4d1
-	.uleb128 0x6
+	.uleb128 0x7
 	.4byte	0x94
 	.uleb128 0x11
 	.byte	0x2c
@@ -1034,35 +1034,35 @@ DMA2_Stream3_IRQHandler:
 	.byte	0x2e
 	.4byte	0x57f
 	.uleb128 0x1
-	.4byte	.LASF19560
+	.4byte	.LASF19916
 	.byte	0x7
 	.byte	0x30
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0
 	.uleb128 0x1
-	.4byte	.LASF19555
+	.4byte	.LASF19911
 	.byte	0x7
 	.byte	0x33
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF19589
+	.4byte	.LASF19945
 	.byte	0x7
 	.byte	0x36
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x8
 	.uleb128 0x1
-	.4byte	.LASF19590
+	.4byte	.LASF19946
 	.byte	0x7
 	.byte	0x39
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0xc
 	.uleb128 0x1
-	.4byte	.LASF19591
+	.4byte	.LASF19947
 	.byte	0x7
 	.byte	0x3c
 	.byte	0xc
@@ -1076,35 +1076,35 @@ DMA2_Stream3_IRQHandler:
 	.4byte	0xb1
 	.byte	0x14
 	.uleb128 0x1
-	.4byte	.LASF19592
+	.4byte	.LASF19948
 	.byte	0x7
 	.byte	0x43
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x18
 	.uleb128 0x1
-	.4byte	.LASF19593
+	.4byte	.LASF19949
 	.byte	0x7
 	.byte	0x49
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x1c
 	.uleb128 0x1
-	.4byte	.LASF19594
+	.4byte	.LASF19950
 	.byte	0x7
 	.byte	0x4c
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x20
 	.uleb128 0x1
-	.4byte	.LASF19595
+	.4byte	.LASF19951
 	.byte	0x7
 	.byte	0x4f
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x24
 	.uleb128 0x1
-	.4byte	.LASF19596
+	.4byte	.LASF19952
 	.byte	0x7
 	.byte	0x52
 	.byte	0xc
@@ -1112,7 +1112,7 @@ DMA2_Stream3_IRQHandler:
 	.byte	0x28
 	.byte	0
 	.uleb128 0x5
-	.4byte	.LASF19597
+	.4byte	.LASF19953
 	.byte	0x7
 	.byte	0x54
 	.byte	0x3
@@ -1123,32 +1123,32 @@ DMA2_Stream3_IRQHandler:
 	.byte	0x5a
 	.4byte	0x5c7
 	.uleb128 0x2
-	.4byte	.LASF19598
+	.4byte	.LASF19954
 	.byte	0
 	.uleb128 0x2
-	.4byte	.LASF19599
+	.4byte	.LASF19955
 	.byte	0x1
 	.uleb128 0x2
-	.4byte	.LASF19600
+	.4byte	.LASF19956
 	.byte	0x2
 	.uleb128 0x2
-	.4byte	.LASF19601
+	.4byte	.LASF19957
 	.byte	0x3
 	.uleb128 0x2
-	.4byte	.LASF19602
+	.4byte	.LASF19958
 	.byte	0x4
 	.uleb128 0x2
-	.4byte	.LASF19603
+	.4byte	.LASF19959
 	.byte	0x5
 	.uleb128 0x2
-	.4byte	.LASF19604
+	.4byte	.LASF19960
 	.byte	0x6
 	.uleb128 0x2
-	.4byte	.LASF19605
+	.4byte	.LASF19961
 	.byte	0x7
 	.byte	0
 	.uleb128 0x5
-	.4byte	.LASF19606
+	.4byte	.LASF19962
 	.byte	0x7
 	.byte	0x63
 	.byte	0x3
@@ -1156,130 +1156,130 @@ DMA2_Stream3_IRQHandler:
 	.uleb128 0x9
 	.4byte	0x5c7
 	.uleb128 0x13
-	.4byte	.LASF19608
+	.4byte	.LASF19964
 	.byte	0x58
 	.byte	0x7
 	.byte	0x68
 	.4byte	0x6a8
 	.uleb128 0x1
-	.4byte	.LASF19574
+	.4byte	.LASF19930
 	.byte	0x7
 	.byte	0x6a
 	.byte	0x10
 	.4byte	0x6a8
 	.byte	0
 	.uleb128 0x1
-	.4byte	.LASF19575
+	.4byte	.LASF19931
 	.byte	0x7
 	.byte	0x6c
 	.byte	0x13
 	.4byte	0x57f
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF19609
+	.4byte	.LASF19965
 	.byte	0x7
 	.byte	0x6e
 	.byte	0xc
 	.4byte	0x4e2
 	.byte	0x30
 	.uleb128 0x1
-	.4byte	.LASF19610
+	.4byte	.LASF19966
 	.byte	0x7
 	.byte	0x70
 	.byte	0xc
 	.4byte	0xa0
 	.byte	0x34
 	.uleb128 0x1
-	.4byte	.LASF19611
+	.4byte	.LASF19967
 	.byte	0x7
 	.byte	0x72
 	.byte	0x15
 	.4byte	0xac
 	.byte	0x36
 	.uleb128 0x1
-	.4byte	.LASF19612
+	.4byte	.LASF19968
 	.byte	0x7
 	.byte	0x74
 	.byte	0xc
 	.4byte	0x4e2
 	.byte	0x38
 	.uleb128 0x1
-	.4byte	.LASF19613
+	.4byte	.LASF19969
 	.byte	0x7
 	.byte	0x76
 	.byte	0xc
 	.4byte	0xa0
 	.byte	0x3c
 	.uleb128 0x1
-	.4byte	.LASF19614
+	.4byte	.LASF19970
 	.byte	0x7
 	.byte	0x78
 	.byte	0x15
 	.4byte	0xac
 	.byte	0x3e
 	.uleb128 0x1
-	.4byte	.LASF19615
+	.4byte	.LASF19971
 	.byte	0x7
 	.byte	0x7a
 	.byte	0xa
 	.4byte	0x6bd
 	.byte	0x40
 	.uleb128 0x1
-	.4byte	.LASF19616
+	.4byte	.LASF19972
 	.byte	0x7
 	.byte	0x7c
 	.byte	0xa
 	.4byte	0x6bd
 	.byte	0x44
 	.uleb128 0x1
-	.4byte	.LASF19617
+	.4byte	.LASF19973
 	.byte	0x7
 	.byte	0x7e
 	.byte	0x16
 	.4byte	0x4dd
 	.byte	0x48
 	.uleb128 0x1
-	.4byte	.LASF19618
+	.4byte	.LASF19974
 	.byte	0x7
 	.byte	0x80
 	.byte	0x16
 	.4byte	0x4dd
 	.byte	0x4c
 	.uleb128 0x1
-	.4byte	.LASF19576
+	.4byte	.LASF19932
 	.byte	0x7
 	.byte	0x82
 	.byte	0x13
 	.4byte	0x2f4
 	.byte	0x50
 	.uleb128 0x1
-	.4byte	.LASF19577
+	.4byte	.LASF19933
 	.byte	0x7
 	.byte	0x84
 	.byte	0x21
 	.4byte	0x5d3
 	.byte	0x51
 	.uleb128 0x1
-	.4byte	.LASF19585
+	.4byte	.LASF19941
 	.byte	0x7
 	.byte	0x86
 	.byte	0x15
 	.4byte	0xbd
 	.byte	0x54
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x7
 	.4byte	0x1a3
 	.uleb128 0x14
 	.4byte	0x6b8
 	.uleb128 0xb
 	.4byte	0x6b8
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x7
 	.4byte	0x5d8
-	.uleb128 0x6
+	.uleb128 0x7
 	.4byte	0x6ad
 	.uleb128 0x5
-	.4byte	.LASF19619
+	.4byte	.LASF19975
 	.byte	0x7
 	.byte	0x95
 	.byte	0x3
@@ -1290,42 +1290,42 @@ DMA2_Stream3_IRQHandler:
 	.byte	0x2e
 	.4byte	0x725
 	.uleb128 0x1
-	.4byte	.LASF19620
+	.4byte	.LASF19976
 	.byte	0x8
 	.byte	0x30
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0
 	.uleb128 0x1
-	.4byte	.LASF19621
+	.4byte	.LASF19977
 	.byte	0x8
 	.byte	0x33
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF19622
+	.4byte	.LASF19978
 	.byte	0x8
 	.byte	0x36
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x8
 	.uleb128 0x1
-	.4byte	.LASF19623
+	.4byte	.LASF19979
 	.byte	0x8
 	.byte	0x3a
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0xc
 	.uleb128 0x1
-	.4byte	.LASF19624
+	.4byte	.LASF19980
 	.byte	0x8
 	.byte	0x3d
 	.byte	0xc
 	.4byte	0xb1
 	.byte	0x10
 	.uleb128 0x1
-	.4byte	.LASF19625
+	.4byte	.LASF19981
 	.byte	0x8
 	.byte	0x48
 	.byte	0xc
@@ -1333,7 +1333,7 @@ DMA2_Stream3_IRQHandler:
 	.byte	0x14
 	.byte	0
 	.uleb128 0x5
-	.4byte	.LASF19626
+	.4byte	.LASF19982
 	.byte	0x8
 	.byte	0x4a
 	.byte	0x3
@@ -1343,23 +1343,23 @@ DMA2_Stream3_IRQHandler:
 	.2byte	0x123
 	.4byte	0x75b
 	.uleb128 0x2
-	.4byte	.LASF19627
+	.4byte	.LASF19983
 	.byte	0
 	.uleb128 0x2
-	.4byte	.LASF19628
+	.4byte	.LASF19984
 	.byte	0x1
 	.uleb128 0x2
-	.4byte	.LASF19629
+	.4byte	.LASF19985
 	.byte	0x2
 	.uleb128 0x2
-	.4byte	.LASF19630
+	.4byte	.LASF19986
 	.byte	0x3
 	.uleb128 0x2
-	.4byte	.LASF19631
+	.4byte	.LASF19987
 	.byte	0x4
 	.byte	0
 	.uleb128 0xa
-	.4byte	.LASF19632
+	.4byte	.LASF19988
 	.byte	0x8
 	.2byte	0x129
 	.4byte	0x731
@@ -1370,17 +1370,17 @@ DMA2_Stream3_IRQHandler:
 	.2byte	0x12f
 	.4byte	0x78a
 	.uleb128 0x2
-	.4byte	.LASF19633
+	.4byte	.LASF19989
 	.byte	0
 	.uleb128 0x2
-	.4byte	.LASF19634
+	.4byte	.LASF19990
 	.byte	0x1
 	.uleb128 0x2
-	.4byte	.LASF19635
+	.4byte	.LASF19991
 	.byte	0x2
 	.byte	0
 	.uleb128 0xa
-	.4byte	.LASF19636
+	.4byte	.LASF19992
 	.byte	0x8
 	.2byte	0x133
 	.4byte	0x76c
@@ -1391,17 +1391,17 @@ DMA2_Stream3_IRQHandler:
 	.2byte	0x139
 	.4byte	0x7b9
 	.uleb128 0x2
-	.4byte	.LASF19637
+	.4byte	.LASF19993
 	.byte	0
 	.uleb128 0x2
-	.4byte	.LASF19638
+	.4byte	.LASF19994
 	.byte	0x1
 	.uleb128 0x2
-	.4byte	.LASF19639
+	.4byte	.LASF19995
 	.byte	0x2
 	.byte	0
 	.uleb128 0xa
-	.4byte	.LASF19640
+	.4byte	.LASF19996
 	.byte	0x8
 	.2byte	0x13d
 	.4byte	0x79b
@@ -1412,23 +1412,23 @@ DMA2_Stream3_IRQHandler:
 	.2byte	0x143
 	.4byte	0x7f4
 	.uleb128 0x2
-	.4byte	.LASF19641
+	.4byte	.LASF19997
 	.byte	0x1
 	.uleb128 0x2
-	.4byte	.LASF19642
+	.4byte	.LASF19998
 	.byte	0x2
 	.uleb128 0x2
-	.4byte	.LASF19643
+	.4byte	.LASF19999
 	.byte	0x4
 	.uleb128 0x2
-	.4byte	.LASF19644
+	.4byte	.LASF20000
 	.byte	0x8
 	.uleb128 0x2
-	.4byte	.LASF19645
+	.4byte	.LASF20001
 	.byte	0
 	.byte	0
 	.uleb128 0xa
-	.4byte	.LASF19646
+	.4byte	.LASF20002
 	.byte	0x8
 	.2byte	0x149
 	.4byte	0x7ca
@@ -1438,70 +1438,70 @@ DMA2_Stream3_IRQHandler:
 	.2byte	0x151
 	.4byte	0x888
 	.uleb128 0x3
-	.4byte	.LASF19574
+	.4byte	.LASF19930
 	.byte	0x8
 	.2byte	0x154
 	.byte	0x10
 	.4byte	0x888
 	.byte	0
 	.uleb128 0x3
-	.4byte	.LASF19575
+	.4byte	.LASF19931
 	.byte	0x8
 	.2byte	0x155
 	.byte	0x18
 	.4byte	0x725
 	.byte	0x4
 	.uleb128 0x3
-	.4byte	.LASF19554
+	.4byte	.LASF19910
 	.byte	0x8
 	.2byte	0x156
 	.byte	0x19
 	.4byte	0x7f4
 	.byte	0x1c
 	.uleb128 0x3
-	.4byte	.LASF19647
+	.4byte	.LASF20003
 	.byte	0x8
 	.2byte	0x157
 	.byte	0x16
 	.4byte	0x88d
 	.byte	0x20
 	.uleb128 0x3
-	.4byte	.LASF19576
+	.4byte	.LASF19932
 	.byte	0x8
 	.2byte	0x159
 	.byte	0x13
 	.4byte	0x2f4
 	.byte	0x3c
 	.uleb128 0x3
-	.4byte	.LASF19577
+	.4byte	.LASF19933
 	.byte	0x8
 	.2byte	0x15a
 	.byte	0x21
 	.4byte	0x767
 	.byte	0x3d
 	.uleb128 0x3
-	.4byte	.LASF19648
+	.4byte	.LASF20004
 	.byte	0x8
 	.2byte	0x15b
 	.byte	0x28
 	.4byte	0x8ad
 	.byte	0x3e
 	.uleb128 0x3
-	.4byte	.LASF19649
+	.4byte	.LASF20005
 	.byte	0x8
 	.2byte	0x15c
 	.byte	0x28
 	.4byte	0x8ad
 	.byte	0x42
 	.uleb128 0x3
-	.4byte	.LASF19650
+	.4byte	.LASF20006
 	.byte	0x8
 	.2byte	0x15d
 	.byte	0x29
 	.4byte	0x7c5
 	.byte	0x46
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x7
 	.4byte	0x2c9
 	.uleb128 0x15
 	.4byte	0x4dd
@@ -1520,140 +1520,144 @@ DMA2_Stream3_IRQHandler:
 	.uleb128 0x9
 	.4byte	0x89d
 	.uleb128 0xa
-	.4byte	.LASF19651
+	.4byte	.LASF20007
 	.byte	0x8
 	.2byte	0x17c
 	.4byte	0x800
+	.uleb128 0x6
+	.byte	0x1
+	.byte	0x8
+	.4byte	.LASF618
 	.uleb128 0xe
-	.4byte	.LASF19652
+	.4byte	.LASF20008
 	.byte	0x3a
 	.4byte	0x4d1
 	.uleb128 0xe
-	.4byte	.LASF19653
+	.4byte	.LASF20009
 	.byte	0x3b
 	.4byte	0x4d1
 	.uleb128 0xe
-	.4byte	.LASF19654
+	.4byte	.LASF20010
 	.byte	0x3c
 	.4byte	0x6c2
 	.uleb128 0xe
-	.4byte	.LASF19655
+	.4byte	.LASF20011
 	.byte	0x3d
 	.4byte	0x8b2
 	.uleb128 0x12
-	.4byte	.LASF19656
+	.4byte	.LASF20012
 	.byte	0x6
 	.2byte	0x29b
-	.4byte	0x8f8
+	.4byte	0x8ff
 	.uleb128 0xb
 	.4byte	0x4dd
 	.byte	0
 	.uleb128 0x12
-	.4byte	.LASF19657
+	.4byte	.LASF20013
 	.byte	0x7
 	.2byte	0x2b1
-	.4byte	0x90a
+	.4byte	0x911
 	.uleb128 0xb
-	.4byte	0x90a
+	.4byte	0x911
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x7
 	.4byte	0x6c2
 	.uleb128 0x12
-	.4byte	.LASF19658
+	.4byte	.LASF20014
 	.byte	0x8
 	.2byte	0x7e2
-	.4byte	0x921
+	.4byte	0x928
 	.uleb128 0xb
-	.4byte	0x921
+	.4byte	0x928
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x7
 	.4byte	0x8b2
 	.uleb128 0xf
-	.4byte	.LASF19659
+	.4byte	.LASF20015
 	.byte	0xfa
 	.4byte	.LFB247
 	.4byte	.LFE247-.LFB247
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0xf
-	.4byte	.LASF19660
+	.4byte	.LASF20016
 	.byte	0xec
 	.4byte	.LFB246
 	.4byte	.LFE246-.LFB246
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0xf
-	.4byte	.LASF19661
+	.4byte	.LASF20017
 	.byte	0xde
 	.4byte	.LFB245
 	.4byte	.LFE245-.LFB245
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0xf
-	.4byte	.LASF19662
+	.4byte	.LASF20018
 	.byte	0xd0
 	.4byte	.LFB244
 	.4byte	.LFE244-.LFB244
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x8
-	.4byte	.LASF19663
+	.4byte	.LASF20019
 	.byte	0xbb
 	.4byte	.LFB243
 	.4byte	.LFE243-.LFB243
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x8
-	.4byte	.LASF19664
+	.4byte	.LASF20020
 	.byte	0xae
 	.4byte	.LFB242
 	.4byte	.LFE242-.LFB242
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x8
-	.4byte	.LASF19665
+	.4byte	.LASF20021
 	.byte	0xa1
 	.4byte	.LFB241
 	.4byte	.LFE241-.LFB241
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x8
-	.4byte	.LASF19666
+	.4byte	.LASF20022
 	.byte	0x94
 	.4byte	.LFB240
 	.4byte	.LFE240-.LFB240
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x8
-	.4byte	.LASF19667
+	.4byte	.LASF20023
 	.byte	0x85
 	.4byte	.LFB239
 	.4byte	.LFE239-.LFB239
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x8
-	.4byte	.LASF19668
+	.4byte	.LASF20024
 	.byte	0x76
 	.4byte	.LFB238
 	.4byte	.LFE238-.LFB238
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x8
-	.4byte	.LASF19669
+	.4byte	.LASF20025
 	.byte	0x67
 	.4byte	.LFB237
 	.4byte	.LFE237-.LFB237
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x8
-	.4byte	.LASF19670
+	.4byte	.LASF20026
 	.byte	0x58
 	.4byte	.LFB236
 	.4byte	.LFE236-.LFB236
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x8
-	.4byte	.LASF19671
+	.4byte	.LASF20027
 	.byte	0x49
 	.4byte	.LFB235
 	.4byte	.LFE235-.LFB235
@@ -1740,16 +1744,6 @@ DMA2_Stream3_IRQHandler:
 	.byte	0
 	.byte	0
 	.uleb128 0x6
-	.uleb128 0xf
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0x21
-	.sleb128 4
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x7
 	.uleb128 0x24
 	.byte	0
 	.uleb128 0xb
@@ -1758,6 +1752,16 @@ DMA2_Stream3_IRQHandler:
 	.uleb128 0xb
 	.uleb128 0x3
 	.uleb128 0xe
+	.byte	0
+	.byte	0
+	.uleb128 0x7
+	.uleb128 0xf
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0x21
+	.sleb128 4
+	.uleb128 0x49
+	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x8
@@ -3905,16 +3909,171 @@ DMA2_Stream3_IRQHandler:
 	.byte	0x7
 	.4byte	.Ldebug_macro50
 	.byte	0x4
+	.file 49 "../Core/Inc/z_displ_ILI9XXX.h"
+	.byte	0x3
+	.uleb128 0x22
+	.uleb128 0x31
 	.byte	0x7
 	.4byte	.Ldebug_macro51
+	.file 50 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h"
+	.byte	0x3
+	.uleb128 0x42
+	.uleb128 0x32
+	.byte	0x5
+	.uleb128 0x8
+	.4byte	.LASF19502
+	.file 51 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/_ansi.h"
+	.byte	0x3
+	.uleb128 0xa
+	.uleb128 0x33
+	.byte	0x5
+	.uleb128 0x8
+	.4byte	.LASF19503
+	.file 52 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../arm-none-eabi/include/newlib-nano/newlib.h"
+	.byte	0x3
+	.uleb128 0xa
+	.uleb128 0x34
+	.byte	0x7
+	.4byte	.Ldebug_macro52
 	.byte	0x4
-	.file 49 "../Core/Inc/stm32f4xx_it.h"
+	.file 53 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/config.h"
+	.byte	0x3
+	.uleb128 0xb
+	.uleb128 0x35
+	.byte	0x5
+	.uleb128 0x2
+	.4byte	.LASF19518
+	.file 54 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/machine/ieeefp.h"
+	.byte	0x3
+	.uleb128 0x4
+	.uleb128 0x36
+	.byte	0x7
+	.4byte	.Ldebug_macro53
+	.byte	0x4
+	.byte	0x7
+	.4byte	.Ldebug_macro54
+	.byte	0x4
+	.byte	0x7
+	.4byte	.Ldebug_macro55
+	.byte	0x4
+	.file 55 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h"
+	.byte	0x3
+	.uleb128 0xb
+	.uleb128 0x37
+	.byte	0x5
+	.uleb128 0xb
+	.4byte	.LASF19542
+	.byte	0x3
+	.uleb128 0xd
+	.uleb128 0x33
+	.byte	0x4
+	.byte	0x3
+	.uleb128 0xe
+	.uleb128 0x1a
+	.byte	0x4
+	.file 56 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_types.h"
+	.byte	0x3
+	.uleb128 0xf
+	.uleb128 0x38
+	.byte	0x7
+	.4byte	.Ldebug_macro56
+	.byte	0x3
+	.uleb128 0x18
+	.uleb128 0x1a
+	.byte	0x7
+	.4byte	.Ldebug_macro57
+	.byte	0x4
+	.file 57 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/machine/_types.h"
+	.byte	0x3
+	.uleb128 0x1b
+	.uleb128 0x39
+	.byte	0x5
+	.uleb128 0x6
+	.4byte	.LASF19548
+	.byte	0x4
+	.byte	0x7
+	.4byte	.Ldebug_macro58
+	.byte	0x4
+	.byte	0x7
+	.4byte	.Ldebug_macro59
+	.file 58 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/lock.h"
+	.byte	0x3
+	.uleb128 0x22
+	.uleb128 0x3a
+	.byte	0x7
+	.4byte	.Ldebug_macro60
+	.byte	0x4
+	.byte	0x7
+	.4byte	.Ldebug_macro61
+	.file 59 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/assert.h"
+	.byte	0x3
+	.uleb128 0x1ba
+	.uleb128 0x3b
+	.byte	0x7
+	.4byte	.Ldebug_macro62
+	.byte	0x4
+	.byte	0x7
+	.4byte	.Ldebug_macro63
+	.byte	0x4
+	.file 60 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h"
+	.byte	0x3
+	.uleb128 0xc
+	.uleb128 0x3c
+	.byte	0x5
+	.uleb128 0x2b
+	.4byte	.LASF19648
+	.byte	0x3
+	.uleb128 0x2f
+	.uleb128 0x1a
+	.byte	0x4
+	.byte	0x7
+	.4byte	.Ldebug_macro64
+	.byte	0x4
+	.byte	0x7
+	.4byte	.Ldebug_macro65
+	.byte	0x3
+	.uleb128 0x11
+	.uleb128 0x1a
+	.byte	0x7
+	.4byte	.Ldebug_macro66
+	.byte	0x4
+	.file 61 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_locale.h"
+	.byte	0x3
+	.uleb128 0x14
+	.uleb128 0x3d
+	.byte	0x5
+	.uleb128 0x4
+	.4byte	.LASF19777
+	.byte	0x4
+	.file 62 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/strings.h"
+	.byte	0x3
+	.uleb128 0x18
+	.uleb128 0x3e
+	.byte	0x5
+	.uleb128 0x1e
+	.4byte	.LASF19778
+	.byte	0x4
+	.byte	0x7
+	.4byte	.Ldebug_macro67
+	.file 63 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/string.h"
+	.byte	0x3
+	.uleb128 0xbd
+	.uleb128 0x3f
+	.byte	0x4
+	.byte	0x4
+	.byte	0x7
+	.4byte	.Ldebug_macro68
+	.byte	0x4
+	.byte	0x7
+	.4byte	.Ldebug_macro69
+	.byte	0x4
+	.file 64 "../Core/Inc/stm32f4xx_it.h"
 	.byte	0x3
 	.uleb128 0x16
-	.uleb128 0x31
+	.uleb128 0x40
 	.byte	0x5
 	.uleb128 0x16
-	.4byte	.LASF19512
+	.4byte	.LASF19868
 	.byte	0x4
 	.byte	0x4
 	.byte	0
@@ -61220,106 +61379,1291 @@ DMA2_Stream3_IRQHandler:
 	.uleb128 0xc0
 	.4byte	.LASF19479
 	.byte	0
-	.section	.debug_macro,"G",%progbits,wm4.main.h.62.3e67cde229696b9fa79d68a4eb54743b,comdat
+	.section	.debug_macro,"G",%progbits,wm4.z_displ_ILI9XXX.h.3.ec0f189ae5fa34b2478cd08be1dd535e,comdat
 .Ldebug_macro51:
 	.2byte	0x5
 	.byte	0
 	.byte	0x5
-	.uleb128 0x3e
+	.uleb128 0x3
 	.4byte	.LASF19480
 	.byte	0x5
-	.uleb128 0x3f
+	.uleb128 0x5
 	.4byte	.LASF19481
 	.byte	0x5
-	.uleb128 0x40
+	.uleb128 0x7
 	.4byte	.LASF19482
 	.byte	0x5
-	.uleb128 0x41
+	.uleb128 0x9
 	.4byte	.LASF19483
 	.byte	0x5
-	.uleb128 0x42
+	.uleb128 0xa
 	.4byte	.LASF19484
 	.byte	0x5
-	.uleb128 0x43
+	.uleb128 0xc
 	.4byte	.LASF19485
 	.byte	0x5
-	.uleb128 0x44
+	.uleb128 0xd
 	.4byte	.LASF19486
 	.byte	0x5
-	.uleb128 0x45
+	.uleb128 0x10
 	.4byte	.LASF19487
 	.byte	0x5
-	.uleb128 0x46
+	.uleb128 0x12
 	.4byte	.LASF19488
 	.byte	0x5
-	.uleb128 0x47
+	.uleb128 0x13
 	.4byte	.LASF19489
 	.byte	0x5
-	.uleb128 0x48
+	.uleb128 0x14
 	.4byte	.LASF19490
 	.byte	0x5
-	.uleb128 0x49
+	.uleb128 0x15
 	.4byte	.LASF19491
 	.byte	0x5
-	.uleb128 0x4a
+	.uleb128 0x16
 	.4byte	.LASF19492
 	.byte	0x5
-	.uleb128 0x4b
+	.uleb128 0x17
 	.4byte	.LASF19493
 	.byte	0x5
-	.uleb128 0x4c
+	.uleb128 0x18
 	.4byte	.LASF19494
 	.byte	0x5
-	.uleb128 0x4d
+	.uleb128 0x1a
 	.4byte	.LASF19495
 	.byte	0x5
-	.uleb128 0x4e
+	.uleb128 0x1b
 	.4byte	.LASF19496
 	.byte	0x5
-	.uleb128 0x4f
+	.uleb128 0x1d
 	.4byte	.LASF19497
 	.byte	0x5
-	.uleb128 0x50
+	.uleb128 0x27
 	.4byte	.LASF19498
 	.byte	0x5
-	.uleb128 0x51
+	.uleb128 0x34
 	.4byte	.LASF19499
 	.byte	0x5
-	.uleb128 0x52
+	.uleb128 0x35
 	.4byte	.LASF19500
 	.byte	0x5
-	.uleb128 0x53
+	.uleb128 0x3d
 	.4byte	.LASF19501
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4.newlib.h.7.74420a2563819a23b01928a4134a16df,comdat
+.Ldebug_macro52:
+	.2byte	0x5
+	.byte	0
 	.byte	0x5
-	.uleb128 0x54
-	.4byte	.LASF19502
-	.byte	0x5
-	.uleb128 0x55
-	.4byte	.LASF19503
-	.byte	0x5
-	.uleb128 0x56
+	.uleb128 0x7
 	.4byte	.LASF19504
 	.byte	0x5
-	.uleb128 0x57
+	.uleb128 0x1b
 	.4byte	.LASF19505
 	.byte	0x5
-	.uleb128 0x58
+	.uleb128 0x27
 	.4byte	.LASF19506
 	.byte	0x5
-	.uleb128 0x59
+	.uleb128 0x2b
 	.4byte	.LASF19507
 	.byte	0x5
-	.uleb128 0x5a
+	.uleb128 0x2e
 	.4byte	.LASF19508
 	.byte	0x5
-	.uleb128 0x5b
+	.uleb128 0x163
 	.4byte	.LASF19509
 	.byte	0x5
-	.uleb128 0x5c
+	.uleb128 0x166
 	.4byte	.LASF19510
 	.byte	0x5
-	.uleb128 0x5d
+	.uleb128 0x16c
 	.4byte	.LASF19511
+	.byte	0x5
+	.uleb128 0x16f
+	.4byte	.LASF19512
+	.byte	0x5
+	.uleb128 0x172
+	.4byte	.LASF19513
+	.byte	0x5
+	.uleb128 0x175
+	.4byte	.LASF19514
+	.byte	0x5
+	.uleb128 0x178
+	.4byte	.LASF19515
+	.byte	0x5
+	.uleb128 0x191
+	.4byte	.LASF19516
+	.byte	0x5
+	.uleb128 0x19b
+	.4byte	.LASF19517
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4.ieeefp.h.77.a4bd6f226817af8b3c6a684285826373,comdat
+.Ldebug_macro53:
+	.2byte	0x5
+	.byte	0
+	.byte	0x5
+	.uleb128 0x4d
+	.4byte	.LASF19519
+	.byte	0x5
+	.uleb128 0x5b
+	.4byte	.LASF19520
+	.byte	0x5
+	.uleb128 0x62
+	.4byte	.LASF19521
+	.byte	0x5
+	.uleb128 0x63
+	.4byte	.LASF19522
+	.byte	0x5
+	.uleb128 0x1fe
+	.4byte	.LASF19523
+	.byte	0x5
+	.uleb128 0x201
+	.4byte	.LASF19524
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4.config.h.224.88344135d9de3e7ea139102cd6493448,comdat
+.Ldebug_macro54:
+	.2byte	0x5
+	.byte	0
+	.byte	0x5
+	.uleb128 0xe0
+	.4byte	.LASF19525
+	.byte	0x6
+	.uleb128 0xe6
+	.4byte	.LASF19526
+	.byte	0x5
+	.uleb128 0xea
+	.4byte	.LASF19527
+	.byte	0x5
+	.uleb128 0xf8
+	.4byte	.LASF19528
+	.byte	0x5
+	.uleb128 0xfc
+	.4byte	.LASF19529
+	.byte	0x5
+	.uleb128 0x103
+	.4byte	.LASF19530
+	.byte	0x5
+	.uleb128 0x109
+	.4byte	.LASF19531
+	.byte	0x5
+	.uleb128 0x116
+	.4byte	.LASF19532
+	.byte	0x5
+	.uleb128 0x122
+	.4byte	.LASF19533
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8,comdat
+.Ldebug_macro55:
+	.2byte	0x5
+	.byte	0
+	.byte	0x5
+	.uleb128 0x1f
+	.4byte	.LASF19534
+	.byte	0x5
+	.uleb128 0x20
+	.4byte	.LASF19535
+	.byte	0x5
+	.uleb128 0x21
+	.4byte	.LASF19536
+	.byte	0x5
+	.uleb128 0x25
+	.4byte	.LASF19537
+	.byte	0x5
+	.uleb128 0x2b
+	.4byte	.LASF19538
+	.byte	0x5
+	.uleb128 0x45
+	.4byte	.LASF19539
+	.byte	0x5
+	.uleb128 0x49
+	.4byte	.LASF19540
+	.byte	0x5
+	.uleb128 0x4a
+	.4byte	.LASF19541
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4._types.h.20.dd0d04dca3800a0d2a6129b87f3adbb2,comdat
+.Ldebug_macro56:
+	.2byte	0x5
+	.byte	0
+	.byte	0x5
+	.uleb128 0x14
+	.4byte	.LASF19543
+	.byte	0x5
+	.uleb128 0x16
+	.4byte	.LASF19544
+	.byte	0x5
+	.uleb128 0x17
+	.4byte	.LASF19545
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4.stddef.h.155.3588ebfdd1e8c7ede80509bb9c3b8009,comdat
+.Ldebug_macro57:
+	.2byte	0x5
+	.byte	0
+	.byte	0x6
+	.uleb128 0x9b
+	.4byte	.LASF16579
+	.byte	0x6
+	.uleb128 0xe7
+	.4byte	.LASF16597
+	.byte	0x6
+	.uleb128 0x154
+	.4byte	.LASF16614
+	.byte	0x5
+	.uleb128 0x159
+	.4byte	.LASF19546
+	.byte	0x6
+	.uleb128 0x160
+	.4byte	.LASF19547
+	.byte	0x6
+	.uleb128 0x186
+	.4byte	.LASF16615
+	.byte	0x5
+	.uleb128 0x18b
+	.4byte	.LASF16616
+	.byte	0x6
+	.uleb128 0x191
+	.4byte	.LASF16617
+	.byte	0x5
+	.uleb128 0x196
+	.4byte	.LASF16618
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4._types.h.127.3bdfe3ff8ea2d0985b03d9cbe93480e3,comdat
+.Ldebug_macro58:
+	.2byte	0x5
+	.byte	0
+	.byte	0x6
+	.uleb128 0x7f
+	.4byte	.LASF19549
+	.byte	0x5
+	.uleb128 0x92
+	.4byte	.LASF19550
+	.byte	0x6
+	.uleb128 0x94
+	.4byte	.LASF617
+	.byte	0x5
+	.uleb128 0xb3
+	.4byte	.LASF19551
+	.byte	0x5
+	.uleb128 0xbb
+	.4byte	.LASF19552
+	.byte	0x5
+	.uleb128 0xc0
+	.4byte	.LASF19553
+	.byte	0x5
+	.uleb128 0xc9
+	.4byte	.LASF19554
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4.reent.h.17.e292bf8b0bec6c96e131a54347145a30,comdat
+.Ldebug_macro59:
+	.2byte	0x5
+	.byte	0
+	.byte	0x5
+	.uleb128 0x11
+	.4byte	.LASF19555
+	.byte	0x5
+	.uleb128 0x15
+	.4byte	.LASF19556
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f,comdat
+.Ldebug_macro60:
+	.2byte	0x5
+	.byte	0
+	.byte	0x5
+	.uleb128 0x2
+	.4byte	.LASF19557
+	.byte	0x5
+	.uleb128 0x23
+	.4byte	.LASF19558
+	.byte	0x5
+	.uleb128 0x25
+	.4byte	.LASF19559
+	.byte	0x5
+	.uleb128 0x27
+	.4byte	.LASF19560
+	.byte	0x5
+	.uleb128 0x2a
+	.4byte	.LASF19561
+	.byte	0x5
+	.uleb128 0x2c
+	.4byte	.LASF19562
+	.byte	0x5
+	.uleb128 0x2e
+	.4byte	.LASF19563
+	.byte	0x5
+	.uleb128 0x30
+	.4byte	.LASF19564
+	.byte	0x5
+	.uleb128 0x32
+	.4byte	.LASF19565
+	.byte	0x5
+	.uleb128 0x34
+	.4byte	.LASF19566
+	.byte	0x5
+	.uleb128 0x36
+	.4byte	.LASF19567
+	.byte	0x5
+	.uleb128 0x38
+	.4byte	.LASF19568
+	.byte	0x5
+	.uleb128 0x3b
+	.4byte	.LASF19569
+	.byte	0x5
+	.uleb128 0x3d
+	.4byte	.LASF19570
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4.reent.h.77.9a0b3041eec9dd3dacc4a8e5d82a3da6,comdat
+.Ldebug_macro61:
+	.2byte	0x5
+	.byte	0
+	.byte	0x5
+	.uleb128 0x4d
+	.4byte	.LASF19571
+	.byte	0x5
+	.uleb128 0x60
+	.4byte	.LASF19572
+	.byte	0x5
+	.uleb128 0x91
+	.4byte	.LASF19573
+	.byte	0x5
+	.uleb128 0x11a
+	.4byte	.LASF19574
+	.byte	0x5
+	.uleb128 0x11b
+	.4byte	.LASF19575
+	.byte	0x5
+	.uleb128 0x11c
+	.4byte	.LASF19576
+	.byte	0x5
+	.uleb128 0x11d
+	.4byte	.LASF19577
+	.byte	0x5
+	.uleb128 0x11e
+	.4byte	.LASF19578
+	.byte	0x5
+	.uleb128 0x11f
+	.4byte	.LASF19579
+	.byte	0x5
+	.uleb128 0x120
+	.4byte	.LASF19580
+	.byte	0x5
+	.uleb128 0x12c
+	.4byte	.LASF19581
+	.byte	0x5
+	.uleb128 0x12d
+	.4byte	.LASF19582
+	.byte	0x5
+	.uleb128 0x12e
+	.4byte	.LASF19583
+	.byte	0x5
+	.uleb128 0x139
+	.4byte	.LASF19584
+	.byte	0x5
+	.uleb128 0x13a
+	.4byte	.LASF19585
+	.byte	0x5
+	.uleb128 0x13b
+	.4byte	.LASF19586
+	.byte	0x5
+	.uleb128 0x13c
+	.4byte	.LASF19587
+	.byte	0x5
+	.uleb128 0x13d
+	.4byte	.LASF19588
+	.byte	0x5
+	.uleb128 0x198
+	.4byte	.LASF19589
+	.byte	0x5
+	.uleb128 0x1b2
+	.4byte	.LASF19590
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4.assert.h.11.db24e541f16414db224bf986d21017e2,comdat
+.Ldebug_macro62:
+	.2byte	0x5
+	.byte	0
+	.byte	0x6
+	.uleb128 0xb
+	.4byte	.LASF19591
+	.byte	0x5
+	.uleb128 0x10
+	.4byte	.LASF19592
+	.byte	0x5
+	.uleb128 0x1a
+	.4byte	.LASF19593
+	.byte	0x5
+	.uleb128 0x2d
+	.4byte	.LASF19594
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4.reent.h.443.c4b3bd75b9403f255c25bbe52191b680,comdat
+.Ldebug_macro63:
+	.2byte	0x5
+	.byte	0
+	.byte	0x5
+	.uleb128 0x1bb
+	.4byte	.LASF19595
+	.byte	0x5
+	.uleb128 0x1c5
+	.4byte	.LASF19596
+	.byte	0x5
+	.uleb128 0x1ce
+	.4byte	.LASF19597
+	.byte	0x5
+	.uleb128 0x1d2
+	.4byte	.LASF19598
+	.byte	0x5
+	.uleb128 0x1d7
+	.4byte	.LASF19599
+	.byte	0x5
+	.uleb128 0x1e2
+	.4byte	.LASF19600
+	.byte	0x5
+	.uleb128 0x1e5
+	.4byte	.LASF19601
+	.byte	0x5
+	.uleb128 0x1eb
+	.4byte	.LASF19602
+	.byte	0x5
+	.uleb128 0x1ee
+	.4byte	.LASF19603
+	.byte	0x5
+	.uleb128 0x1f1
+	.4byte	.LASF19604
+	.byte	0x5
+	.uleb128 0x207
+	.4byte	.LASF19605
+	.byte	0x5
+	.uleb128 0x20a
+	.4byte	.LASF19606
+	.byte	0x5
+	.uleb128 0x20d
+	.4byte	.LASF19607
+	.byte	0x5
+	.uleb128 0x20e
+	.4byte	.LASF19608
+	.byte	0x5
+	.uleb128 0x20f
+	.4byte	.LASF19609
+	.byte	0x5
+	.uleb128 0x210
+	.4byte	.LASF19610
+	.byte	0x5
+	.uleb128 0x211
+	.4byte	.LASF19611
+	.byte	0x5
+	.uleb128 0x212
+	.4byte	.LASF19612
+	.byte	0x5
+	.uleb128 0x213
+	.4byte	.LASF19613
+	.byte	0x5
+	.uleb128 0x214
+	.4byte	.LASF19614
+	.byte	0x5
+	.uleb128 0x215
+	.4byte	.LASF19615
+	.byte	0x5
+	.uleb128 0x216
+	.4byte	.LASF19616
+	.byte	0x5
+	.uleb128 0x217
+	.4byte	.LASF19617
+	.byte	0x5
+	.uleb128 0x218
+	.4byte	.LASF19618
+	.byte	0x5
+	.uleb128 0x219
+	.4byte	.LASF19619
+	.byte	0x5
+	.uleb128 0x21a
+	.4byte	.LASF19620
+	.byte	0x5
+	.uleb128 0x21b
+	.4byte	.LASF19621
+	.byte	0x5
+	.uleb128 0x21c
+	.4byte	.LASF19622
+	.byte	0x5
+	.uleb128 0x21d
+	.4byte	.LASF19623
+	.byte	0x5
+	.uleb128 0x21e
+	.4byte	.LASF19624
+	.byte	0x5
+	.uleb128 0x21f
+	.4byte	.LASF19625
+	.byte	0x5
+	.uleb128 0x220
+	.4byte	.LASF19626
+	.byte	0x5
+	.uleb128 0x221
+	.4byte	.LASF19627
+	.byte	0x5
+	.uleb128 0x222
+	.4byte	.LASF19628
+	.byte	0x5
+	.uleb128 0x223
+	.4byte	.LASF19629
+	.byte	0x5
+	.uleb128 0x2d3
+	.4byte	.LASF19630
+	.byte	0x5
+	.uleb128 0x2d4
+	.4byte	.LASF19631
+	.byte	0x5
+	.uleb128 0x2d5
+	.4byte	.LASF19632
+	.byte	0x5
+	.uleb128 0x2d6
+	.4byte	.LASF19633
+	.byte	0x5
+	.uleb128 0x2d7
+	.4byte	.LASF19634
+	.byte	0x5
+	.uleb128 0x2d8
+	.4byte	.LASF19635
+	.byte	0x5
+	.uleb128 0x2d9
+	.4byte	.LASF19636
+	.byte	0x5
+	.uleb128 0x2da
+	.4byte	.LASF19637
+	.byte	0x5
+	.uleb128 0x2db
+	.4byte	.LASF19638
+	.byte	0x5
+	.uleb128 0x2dc
+	.4byte	.LASF19639
+	.byte	0x5
+	.uleb128 0x2dd
+	.4byte	.LASF19640
+	.byte	0x5
+	.uleb128 0x2df
+	.4byte	.LASF19641
+	.byte	0x5
+	.uleb128 0x2ea
+	.4byte	.LASF19642
+	.byte	0x5
+	.uleb128 0x2f0
+	.4byte	.LASF19643
+	.byte	0x5
+	.uleb128 0x2fd
+	.4byte	.LASF19644
+	.byte	0x5
+	.uleb128 0x300
+	.4byte	.LASF19645
+	.byte	0x5
+	.uleb128 0x302
+	.4byte	.LASF19646
+	.byte	0x5
+	.uleb128 0x361
+	.4byte	.LASF19647
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4.cdefs.h.49.f93868eb904b9ca05b5c0257d31128ca,comdat
+.Ldebug_macro64:
+	.2byte	0x5
+	.byte	0
+	.byte	0x5
+	.uleb128 0x31
+	.4byte	.LASF19649
+	.byte	0x5
+	.uleb128 0x32
+	.4byte	.LASF19650
+	.byte	0x5
+	.uleb128 0x33
+	.4byte	.LASF19651
+	.byte	0x5
+	.uleb128 0x36
+	.4byte	.LASF19652
+	.byte	0x5
+	.uleb128 0x39
+	.4byte	.LASF19653
+	.byte	0x5
+	.uleb128 0x3a
+	.4byte	.LASF19654
+	.byte	0x5
+	.uleb128 0x3c
+	.4byte	.LASF19655
+	.byte	0x5
+	.uleb128 0x3d
+	.4byte	.LASF19656
+	.byte	0x5
+	.uleb128 0x3e
+	.4byte	.LASF19657
+	.byte	0x5
+	.uleb128 0x3f
+	.4byte	.LASF19658
+	.byte	0x5
+	.uleb128 0x42
+	.4byte	.LASF19659
+	.byte	0x5
+	.uleb128 0x43
+	.4byte	.LASF19660
+	.byte	0x5
+	.uleb128 0x44
+	.4byte	.LASF19661
+	.byte	0x5
+	.uleb128 0x4e
+	.4byte	.LASF19662
+	.byte	0x5
+	.uleb128 0x51
+	.4byte	.LASF19663
+	.byte	0x5
+	.uleb128 0x5e
+	.4byte	.LASF19664
+	.byte	0x5
+	.uleb128 0x5f
+	.4byte	.LASF19665
+	.byte	0x5
+	.uleb128 0x6b
+	.4byte	.LASF19666
+	.byte	0x5
+	.uleb128 0x6c
+	.4byte	.LASF19667
+	.byte	0x5
+	.uleb128 0x70
+	.4byte	.LASF19668
+	.byte	0x5
+	.uleb128 0x71
+	.4byte	.LASF19669
+	.byte	0x5
+	.uleb128 0x73
+	.4byte	.LASF19670
+	.byte	0x5
+	.uleb128 0x75
+	.4byte	.LASF19671
+	.byte	0x5
+	.uleb128 0x78
+	.4byte	.LASF19672
+	.byte	0x5
+	.uleb128 0x79
+	.4byte	.LASF19673
+	.byte	0x5
+	.uleb128 0x7a
+	.4byte	.LASF19674
+	.byte	0x5
+	.uleb128 0x7d
+	.4byte	.LASF19675
+	.byte	0x5
+	.uleb128 0x82
+	.4byte	.LASF19676
+	.byte	0x5
+	.uleb128 0x84
+	.4byte	.LASF19677
+	.byte	0x5
+	.uleb128 0x85
+	.4byte	.LASF19678
+	.byte	0x5
+	.uleb128 0x87
+	.4byte	.LASF19679
+	.byte	0x5
+	.uleb128 0x8a
+	.4byte	.LASF19680
+	.byte	0x5
+	.uleb128 0x8b
+	.4byte	.LASF19681
+	.byte	0x5
+	.uleb128 0x8c
+	.4byte	.LASF19682
+	.byte	0x5
+	.uleb128 0x8e
+	.4byte	.LASF19683
+	.byte	0x5
+	.uleb128 0x8f
+	.4byte	.LASF19684
+	.byte	0x5
+	.uleb128 0x91
+	.4byte	.LASF19685
+	.byte	0x5
+	.uleb128 0x93
+	.4byte	.LASF19686
+	.byte	0x5
+	.uleb128 0xa4
+	.4byte	.LASF19687
+	.byte	0x5
+	.uleb128 0xa5
+	.4byte	.LASF19688
+	.byte	0x5
+	.uleb128 0xa6
+	.4byte	.LASF19689
+	.byte	0x5
+	.uleb128 0xa7
+	.4byte	.LASF19690
+	.byte	0x5
+	.uleb128 0xa8
+	.4byte	.LASF19691
+	.byte	0x5
+	.uleb128 0xaa
+	.4byte	.LASF19692
+	.byte	0x5
+	.uleb128 0xab
+	.4byte	.LASF19693
+	.byte	0x5
+	.uleb128 0xac
+	.4byte	.LASF19694
+	.byte	0x5
+	.uleb128 0xd9
+	.4byte	.LASF19695
+	.byte	0x5
+	.uleb128 0xe6
+	.4byte	.LASF19696
+	.byte	0x5
+	.uleb128 0xe7
+	.4byte	.LASF19697
+	.byte	0x5
+	.uleb128 0xe8
+	.4byte	.LASF19698
+	.byte	0x5
+	.uleb128 0xe9
+	.4byte	.LASF19699
+	.byte	0x5
+	.uleb128 0xea
+	.4byte	.LASF16629
+	.byte	0x5
+	.uleb128 0xeb
+	.4byte	.LASF19700
+	.byte	0x5
+	.uleb128 0xec
+	.4byte	.LASF19701
+	.byte	0x5
+	.uleb128 0xef
+	.4byte	.LASF19702
+	.byte	0x5
+	.uleb128 0xf0
+	.4byte	.LASF19703
+	.byte	0x5
+	.uleb128 0xf6
+	.4byte	.LASF19704
+	.byte	0x5
+	.uleb128 0x14f
+	.4byte	.LASF19705
+	.byte	0x5
+	.uleb128 0x161
+	.4byte	.LASF19706
+	.byte	0x5
+	.uleb128 0x167
+	.4byte	.LASF19707
+	.byte	0x5
+	.uleb128 0x168
+	.4byte	.LASF19708
+	.byte	0x5
+	.uleb128 0x16f
+	.4byte	.LASF19709
+	.byte	0x5
+	.uleb128 0x175
+	.4byte	.LASF19710
+	.byte	0x5
+	.uleb128 0x17b
+	.4byte	.LASF19711
+	.byte	0x5
+	.uleb128 0x17c
+	.4byte	.LASF19712
+	.byte	0x5
+	.uleb128 0x183
+	.4byte	.LASF19713
+	.byte	0x5
+	.uleb128 0x184
+	.4byte	.LASF19714
+	.byte	0x5
+	.uleb128 0x18b
+	.4byte	.LASF19715
+	.byte	0x5
+	.uleb128 0x191
+	.4byte	.LASF19716
+	.byte	0x5
+	.uleb128 0x1a5
+	.4byte	.LASF19717
+	.byte	0x5
+	.uleb128 0x1c6
+	.4byte	.LASF19718
+	.byte	0x5
+	.uleb128 0x1c7
+	.4byte	.LASF19719
+	.byte	0x5
+	.uleb128 0x1ce
+	.4byte	.LASF19720
+	.byte	0x5
+	.uleb128 0x1cf
+	.4byte	.LASF19721
+	.byte	0x5
+	.uleb128 0x1d2
+	.4byte	.LASF19722
+	.byte	0x5
+	.uleb128 0x1dc
+	.4byte	.LASF19723
+	.byte	0x5
+	.uleb128 0x1dd
+	.4byte	.LASF19724
+	.byte	0x5
+	.uleb128 0x1e7
+	.4byte	.LASF19725
+	.byte	0x5
+	.uleb128 0x1fd
+	.4byte	.LASF19726
+	.byte	0x5
+	.uleb128 0x1ff
+	.4byte	.LASF19727
+	.byte	0x5
+	.uleb128 0x201
+	.4byte	.LASF19728
+	.byte	0x5
+	.uleb128 0x202
+	.4byte	.LASF19729
+	.byte	0x5
+	.uleb128 0x204
+	.4byte	.LASF19730
+	.byte	0x5
+	.uleb128 0x20e
+	.4byte	.LASF19731
+	.byte	0x5
+	.uleb128 0x212
+	.4byte	.LASF19732
+	.byte	0x5
+	.uleb128 0x216
+	.4byte	.LASF19733
+	.byte	0x5
+	.uleb128 0x219
+	.4byte	.LASF19734
+	.byte	0x5
+	.uleb128 0x21d
+	.4byte	.LASF19735
+	.byte	0x5
+	.uleb128 0x21f
+	.4byte	.LASF19736
+	.byte	0x5
+	.uleb128 0x242
+	.4byte	.LASF19737
+	.byte	0x5
+	.uleb128 0x246
+	.4byte	.LASF19738
+	.byte	0x5
+	.uleb128 0x24a
+	.4byte	.LASF19739
+	.byte	0x5
+	.uleb128 0x24e
+	.4byte	.LASF19740
+	.byte	0x5
+	.uleb128 0x252
+	.4byte	.LASF19741
+	.byte	0x5
+	.uleb128 0x256
+	.4byte	.LASF19742
+	.byte	0x5
+	.uleb128 0x25a
+	.4byte	.LASF19743
+	.byte	0x5
+	.uleb128 0x25e
+	.4byte	.LASF19744
+	.byte	0x5
+	.uleb128 0x265
+	.4byte	.LASF19745
+	.byte	0x5
+	.uleb128 0x266
+	.4byte	.LASF19746
+	.byte	0x5
+	.uleb128 0x267
+	.4byte	.LASF19747
+	.byte	0x5
+	.uleb128 0x268
+	.4byte	.LASF19748
+	.byte	0x5
+	.uleb128 0x269
+	.4byte	.LASF19749
+	.byte	0x5
+	.uleb128 0x27e
+	.4byte	.LASF19750
+	.byte	0x5
+	.uleb128 0x27f
+	.4byte	.LASF19751
+	.byte	0x5
+	.uleb128 0x291
+	.4byte	.LASF19752
+	.byte	0x5
+	.uleb128 0x297
+	.4byte	.LASF19753
+	.byte	0x5
+	.uleb128 0x29a
+	.4byte	.LASF19754
+	.byte	0x5
+	.uleb128 0x29c
+	.4byte	.LASF19755
+	.byte	0x5
+	.uleb128 0x2a0
+	.4byte	.LASF19756
+	.byte	0x5
+	.uleb128 0x2a2
+	.4byte	.LASF19757
+	.byte	0x5
+	.uleb128 0x2a6
+	.4byte	.LASF19758
+	.byte	0x5
+	.uleb128 0x2a9
+	.4byte	.LASF19759
+	.byte	0x5
+	.uleb128 0x2ab
+	.4byte	.LASF19760
+	.byte	0x5
+	.uleb128 0x2af
+	.4byte	.LASF19761
+	.byte	0x5
+	.uleb128 0x2b1
+	.4byte	.LASF19762
+	.byte	0x5
+	.uleb128 0x2b3
+	.4byte	.LASF19763
+	.byte	0x5
+	.uleb128 0x2b7
+	.4byte	.LASF19764
+	.byte	0x5
+	.uleb128 0x2c8
+	.4byte	.LASF19765
+	.byte	0x5
+	.uleb128 0x2c9
+	.4byte	.LASF19766
+	.byte	0x5
+	.uleb128 0x2ca
+	.4byte	.LASF19767
+	.byte	0x5
+	.uleb128 0x2ce
+	.4byte	.LASF19768
+	.byte	0x5
+	.uleb128 0x2cf
+	.4byte	.LASF19769
+	.byte	0x5
+	.uleb128 0x2d4
+	.4byte	.LASF19770
+	.byte	0x5
+	.uleb128 0x2d8
+	.4byte	.LASF19771
+	.byte	0x5
+	.uleb128 0x2dc
+	.4byte	.LASF19772
+	.byte	0x5
+	.uleb128 0x2e0
+	.4byte	.LASF19773
+	.byte	0x5
+	.uleb128 0x2e1
+	.4byte	.LASF19774
+	.byte	0x5
+	.uleb128 0x2e2
+	.4byte	.LASF19775
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4.string.h.15.dab3980bf35408a4c507182805e2de3a,comdat
+.Ldebug_macro65:
+	.2byte	0x5
+	.byte	0
+	.byte	0x5
+	.uleb128 0xf
+	.4byte	.LASF19544
+	.byte	0x5
+	.uleb128 0x10
+	.4byte	.LASF19776
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4.stddef.h.155.ba788add86a0e365f264484f110c3c29,comdat
+.Ldebug_macro66:
+	.2byte	0x5
+	.byte	0
+	.byte	0x6
+	.uleb128 0x9b
+	.4byte	.LASF16579
+	.byte	0x6
+	.uleb128 0xe7
+	.4byte	.LASF16597
+	.byte	0x6
+	.uleb128 0x154
+	.4byte	.LASF16614
+	.byte	0x6
+	.uleb128 0x186
+	.4byte	.LASF16615
+	.byte	0x5
+	.uleb128 0x18b
+	.4byte	.LASF16616
+	.byte	0x6
+	.uleb128 0x191
+	.4byte	.LASF16617
+	.byte	0x5
+	.uleb128 0x196
+	.4byte	.LASF16618
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4.string.h.177.59a005921fa78485abc80a0267de5752,comdat
+.Ldebug_macro67:
+	.2byte	0x5
+	.byte	0
+	.byte	0x5
+	.uleb128 0xb1
+	.4byte	.LASF19779
+	.byte	0x5
+	.uleb128 0xb4
+	.4byte	.LASF19780
+	.byte	0x5
+	.uleb128 0xb7
+	.4byte	.LASF19781
+	.byte	0x5
+	.uleb128 0xba
+	.4byte	.LASF19782
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4.z_displ_ILI9XXX.h.76.a40c0457f85151fd7a32db8dd1086c83,comdat
+.Ldebug_macro68:
+	.2byte	0x5
+	.byte	0
+	.byte	0x5
+	.uleb128 0x4c
+	.4byte	.LASF19783
+	.byte	0x5
+	.uleb128 0x4d
+	.4byte	.LASF19784
+	.byte	0x5
+	.uleb128 0x51
+	.4byte	.LASF19785
+	.byte	0x5
+	.uleb128 0x57
+	.4byte	.LASF19786
+	.byte	0x5
+	.uleb128 0x58
+	.4byte	.LASF19787
+	.byte	0x5
+	.uleb128 0x59
+	.4byte	.LASF19788
+	.byte	0x5
+	.uleb128 0x5a
+	.4byte	.LASF19789
+	.byte	0x5
+	.uleb128 0x5b
+	.4byte	.LASF19790
+	.byte	0x5
+	.uleb128 0x5c
+	.4byte	.LASF19791
+	.byte	0x5
+	.uleb128 0x5d
+	.4byte	.LASF19792
+	.byte	0x5
+	.uleb128 0x5e
+	.4byte	.LASF19793
+	.byte	0x5
+	.uleb128 0x5f
+	.4byte	.LASF19794
+	.byte	0x5
+	.uleb128 0x60
+	.4byte	.LASF19795
+	.byte	0x5
+	.uleb128 0x61
+	.4byte	.LASF19796
+	.byte	0x5
+	.uleb128 0x62
+	.4byte	.LASF19797
+	.byte	0x5
+	.uleb128 0x63
+	.4byte	.LASF19798
+	.byte	0x5
+	.uleb128 0x64
+	.4byte	.LASF19799
+	.byte	0x5
+	.uleb128 0x65
+	.4byte	.LASF19800
+	.byte	0x5
+	.uleb128 0x66
+	.4byte	.LASF19801
+	.byte	0x5
+	.uleb128 0x67
+	.4byte	.LASF19802
+	.byte	0x5
+	.uleb128 0x68
+	.4byte	.LASF19803
+	.byte	0x5
+	.uleb128 0x69
+	.4byte	.LASF19804
+	.byte	0x5
+	.uleb128 0x6a
+	.4byte	.LASF19805
+	.byte	0x5
+	.uleb128 0x6b
+	.4byte	.LASF19806
+	.byte	0x5
+	.uleb128 0x6c
+	.4byte	.LASF19807
+	.byte	0x5
+	.uleb128 0x6d
+	.4byte	.LASF19808
+	.byte	0x5
+	.uleb128 0x6e
+	.4byte	.LASF19809
+	.byte	0x5
+	.uleb128 0x6f
+	.4byte	.LASF19810
+	.byte	0x5
+	.uleb128 0x70
+	.4byte	.LASF19811
+	.byte	0x5
+	.uleb128 0x71
+	.4byte	.LASF19812
+	.byte	0x5
+	.uleb128 0x72
+	.4byte	.LASF19813
+	.byte	0x5
+	.uleb128 0x78
+	.4byte	.LASF19814
+	.byte	0x5
+	.uleb128 0x79
+	.4byte	.LASF19815
+	.byte	0x5
+	.uleb128 0x7a
+	.4byte	.LASF19816
+	.byte	0x5
+	.uleb128 0x7b
+	.4byte	.LASF19817
+	.byte	0x5
+	.uleb128 0x7c
+	.4byte	.LASF19818
+	.byte	0x5
+	.uleb128 0x7d
+	.4byte	.LASF19819
+	.byte	0x5
+	.uleb128 0x7e
+	.4byte	.LASF19820
+	.byte	0x5
+	.uleb128 0x7f
+	.4byte	.LASF19821
+	.byte	0x5
+	.uleb128 0x80
+	.4byte	.LASF19822
+	.byte	0x5
+	.uleb128 0x81
+	.4byte	.LASF19823
+	.byte	0x5
+	.uleb128 0x82
+	.4byte	.LASF19824
+	.byte	0x5
+	.uleb128 0x83
+	.4byte	.LASF19825
+	.byte	0x5
+	.uleb128 0x85
+	.4byte	.LASF19826
+	.byte	0x5
+	.uleb128 0x86
+	.4byte	.LASF19827
+	.byte	0x5
+	.uleb128 0x88
+	.4byte	.LASF19828
+	.byte	0x5
+	.uleb128 0x89
+	.4byte	.LASF19829
+	.byte	0x5
+	.uleb128 0x8a
+	.4byte	.LASF19830
+	.byte	0x5
+	.uleb128 0x8b
+	.4byte	.LASF19831
+	.byte	0x5
+	.uleb128 0x8c
+	.4byte	.LASF19832
+	.byte	0x5
+	.uleb128 0x91
+	.4byte	.LASF19833
+	.byte	0x5
+	.uleb128 0x94
+	.4byte	.LASF19834
+	.byte	0x5
+	.uleb128 0x99
+	.4byte	.LASF19835
+	.byte	0
+	.section	.debug_macro,"G",%progbits,wm4.main.h.63.97ee84456edb31d90fe095f3dce8170e,comdat
+.Ldebug_macro69:
+	.2byte	0x5
+	.byte	0
+	.byte	0x5
+	.uleb128 0x3f
+	.4byte	.LASF19836
+	.byte	0x5
+	.uleb128 0x40
+	.4byte	.LASF19837
+	.byte	0x5
+	.uleb128 0x41
+	.4byte	.LASF19838
+	.byte	0x5
+	.uleb128 0x42
+	.4byte	.LASF19839
+	.byte	0x5
+	.uleb128 0x43
+	.4byte	.LASF19840
+	.byte	0x5
+	.uleb128 0x44
+	.4byte	.LASF19841
+	.byte	0x5
+	.uleb128 0x45
+	.4byte	.LASF19842
+	.byte	0x5
+	.uleb128 0x46
+	.4byte	.LASF19843
+	.byte	0x5
+	.uleb128 0x47
+	.4byte	.LASF19844
+	.byte	0x5
+	.uleb128 0x48
+	.4byte	.LASF19845
+	.byte	0x5
+	.uleb128 0x49
+	.4byte	.LASF19846
+	.byte	0x5
+	.uleb128 0x4a
+	.4byte	.LASF19847
+	.byte	0x5
+	.uleb128 0x4b
+	.4byte	.LASF19848
+	.byte	0x5
+	.uleb128 0x4c
+	.4byte	.LASF19849
+	.byte	0x5
+	.uleb128 0x4d
+	.4byte	.LASF19850
+	.byte	0x5
+	.uleb128 0x4e
+	.4byte	.LASF19851
+	.byte	0x5
+	.uleb128 0x4f
+	.4byte	.LASF19852
+	.byte	0x5
+	.uleb128 0x50
+	.4byte	.LASF19853
+	.byte	0x5
+	.uleb128 0x51
+	.4byte	.LASF19854
+	.byte	0x5
+	.uleb128 0x52
+	.4byte	.LASF19855
+	.byte	0x5
+	.uleb128 0x53
+	.4byte	.LASF19856
+	.byte	0x5
+	.uleb128 0x54
+	.4byte	.LASF19857
+	.byte	0x5
+	.uleb128 0x55
+	.4byte	.LASF19858
+	.byte	0x5
+	.uleb128 0x56
+	.4byte	.LASF19859
+	.byte	0x5
+	.uleb128 0x57
+	.4byte	.LASF19860
+	.byte	0x5
+	.uleb128 0x58
+	.4byte	.LASF19861
+	.byte	0x5
+	.uleb128 0x59
+	.4byte	.LASF19862
+	.byte	0x5
+	.uleb128 0x5a
+	.4byte	.LASF19863
+	.byte	0x5
+	.uleb128 0x5b
+	.4byte	.LASF19864
+	.byte	0x5
+	.uleb128 0x5c
+	.4byte	.LASF19865
+	.byte	0x5
+	.uleb128 0x5d
+	.4byte	.LASF19866
+	.byte	0x5
+	.uleb128 0x5e
+	.4byte	.LASF19867
 	.byte	0
 	.section	.debug_line,"",%progbits
 .Ldebug_line0:
@@ -61336,6 +62680,8 @@ DMA2_Stream3_IRQHandler:
 .LASF10137:
 	.ascii	"RCC_APB1RSTR_UART4RST_Msk (0x1UL << RCC_APB1RSTR_UA"
 	.ascii	"RT4RST_Pos)\000"
+.LASF19637:
+	.ascii	"_REENT_SIG_FUNC(_ptr) ((_ptr)->_sig_func)\000"
 .LASF5296:
 	.ascii	"CAN_F9R2_FB29 CAN_F9R2_FB29_Msk\000"
 .LASF10636:
@@ -61387,6 +62733,10 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"os)\000"
 .LASF2972:
 	.ascii	"CAN_FA1R_FACT19_Pos (19U)\000"
+.LASF19605:
+	.ascii	"_REENT_CHECK_MISC(var) _REENT_CHECK(var, _misc, str"
+	.ascii	"uct _misc_reent *, sizeof *((var)->_misc), _REENT_I"
+	.ascii	"NIT_MISC(var))\000"
 .LASF2505:
 	.ascii	"CAN_TDH1R_DATA7_Msk (0xFFUL << CAN_TDH1R_DATA7_Pos)"
 	.ascii	"\000"
@@ -61497,6 +62847,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F11R1_FB24 CAN_F11R1_FB24_Msk\000"
 .LASF9433:
 	.ascii	"FMPI2C_ICR_ARLOCF_Pos (9U)\000"
+.LASF19536:
+	.ascii	"_NOTHROW \000"
 .LASF18294:
 	.ascii	"ADC_EXTERNALTRIGCONVEDGE_FALLING ((uint32_t)ADC_CR2"
 	.ascii	"_EXTEN_1)\000"
@@ -61652,6 +63004,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F13R1_FB5 CAN_F13R1_FB5_Msk\000"
 .LASF11210:
 	.ascii	"RTC_TSDR_WDU_2 (0x4UL << RTC_TSDR_WDU_Pos)\000"
+.LASF19649:
+	.ascii	"__PMT(args) args\000"
 .LASF10624:
 	.ascii	"RCC_CSR_SFTRSTF_Pos (28U)\000"
 .LASF13712:
@@ -61703,8 +63057,6 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FMC_BCR1_CPSIZE_0 (0x1UL << FMC_BCR1_CPSIZE_Pos)\000"
 .LASF14247:
 	.ascii	"USB_OTG_DIEPINT_BERR_Pos (12U)\000"
-.LASF19498:
-	.ascii	"displ_rst_Pin GPIO_PIN_15\000"
 .LASF11406:
 	.ascii	"SAI_xCR1_DS_Msk (0x7UL << SAI_xCR1_DS_Pos)\000"
 .LASF11337:
@@ -61851,7 +63203,7 @@ DMA2_Stream3_IRQHandler:
 .LASF746:
 	.ascii	"__STATIC_FORCEINLINE __attribute__((always_inline))"
 	.ascii	" static inline\000"
-.LASF19505:
+.LASF19861:
 	.ascii	"oxi_scl_GPIO_Port GPIOA\000"
 .LASF4402:
 	.ascii	"CAN_F0R2_FB19 CAN_F0R2_FB19_Msk\000"
@@ -61974,6 +63326,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__HAL_FMC_BANK __HAL_SYSCFG_FMC_BANK\000"
 .LASF13115:
 	.ascii	"WWDG_CFR_W6 WWDG_CFR_W_6\000"
+.LASF19822:
+	.ascii	"ILI9XXX_MADCTL_0DEG 0X88\000"
 .LASF16823:
 	.ascii	"__HAL_RCC_CAN2_IS_CLK_DISABLED() ((RCC->APB1ENR & ("
 	.ascii	"RCC_APB1ENR_CAN2EN)) == RESET)\000"
@@ -62036,6 +63390,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FMC_SDCR1_NB FMC_SDCR1_NB_Msk\000"
 .LASF9004:
 	.ascii	"GPIO_AFRH_AFRH1_3 GPIO_AFRH_AFSEL9_3\000"
+.LASF19721:
+	.ascii	"__exported __attribute__((__visibility__(\"default\""
+	.ascii	")))\000"
 .LASF13457:
 	.ascii	"USB_OTG_GUSBCFG_ULPICSM USB_OTG_GUSBCFG_ULPICSM_Msk"
 	.ascii	"\000"
@@ -62069,6 +63426,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_BSRR_BR3_Msk (0x1UL << GPIO_BSRR_BR3_Pos)\000"
 .LASF18267:
 	.ascii	"HAL_ADC_ERROR_DMA 0x04U\000"
+.LASF19528:
+	.ascii	"__EXPORT \000"
 .LASF13334:
 	.ascii	"USB_OTG_GOTGINT_HNSSCHG_Msk (0x1UL << USB_OTG_GOTGI"
 	.ascii	"NT_HNSSCHG_Pos)\000"
@@ -62175,6 +63534,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"\000"
 .LASF11814:
 	.ascii	"SDIO_CMD_SDIOSUSPEND SDIO_CMD_SDIOSUSPEND_Msk\000"
+.LASF19705:
+	.ascii	"__generic(expr,t,yes,no) _Generic(expr, t: yes, def"
+	.ascii	"ault: no)\000"
 .LASF18664:
 	.ascii	"I2C_FLAG_SB 0x00010001U\000"
 .LASF7263:
@@ -62250,7 +63612,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SDIO_MASK_RXFIFOEIE_Pos (19U)\000"
 .LASF17689:
 	.ascii	"DMA_PBURST_INC16 ((uint32_t)DMA_SxCR_PBURST)\000"
-.LASF19637:
+.LASF19993:
 	.ascii	"HAL_DMA_BURST_STATE_RESET\000"
 .LASF10236:
 	.ascii	"RCC_AHB1ENR_CRCEN_Pos (12U)\000"
@@ -62293,6 +63655,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__CLZ (uint8_t)__builtin_clz\000"
 .LASF3005:
 	.ascii	"CAN_F0R1_FB2_Pos (2U)\000"
+.LASF19719:
+	.ascii	"__predict_false(exp) __builtin_expect((exp), 0)\000"
 .LASF19007:
 	.ascii	"TIM_CLOCKSOURCE_ETRMODE1 TIM_TS_ETRF\000"
 .LASF5056:
@@ -62364,6 +63728,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FPU_FPCCR_THREAD_Msk (1UL << FPU_FPCCR_THREAD_Pos)\000"
 .LASF16606:
 	.ascii	"_WCHAR_T_DEFINED_ \000"
+.LASF19579:
+	.ascii	"_RAND48_MULT_2 (0x0005)\000"
 .LASF2355:
 	.ascii	"CAN_IER_ERRIE_Msk (0x1UL << CAN_IER_ERRIE_Pos)\000"
 .LASF17977:
@@ -62403,6 +63769,9 @@ DMA2_Stream3_IRQHandler:
 .LASF16852:
 	.ascii	"__HAL_RCC_TIM10_IS_CLK_DISABLED() ((RCC->APB2ENR & "
 	.ascii	"(RCC_APB2ENR_TIM10EN)) == RESET)\000"
+.LASF19560:
+	.ascii	"__LOCK_INIT_RECURSIVE(class,lock) __LOCK_INIT(class"
+	.ascii	",lock)\000"
 .LASF11313:
 	.ascii	"RTC_ALRMASSR_SS RTC_ALRMASSR_SS_Msk\000"
 .LASF17311:
@@ -62438,6 +63807,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"_Pos)\000"
 .LASF10857:
 	.ascii	"RTC_DR_WDU_Msk (0x7UL << RTC_DR_WDU_Pos)\000"
+.LASF19577:
+	.ascii	"_RAND48_MULT_0 (0xe66d)\000"
 .LASF11951:
 	.ascii	"SDIO_ICR_TXUNDERRC_Pos (4U)\000"
 .LASF19022:
@@ -62811,6 +64182,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FPU_FPCCR_LSPEN_Msk (1UL << FPU_FPCCR_LSPEN_Pos)\000"
 .LASF10756:
 	.ascii	"RCC_DCKCFGR_I2S2SRC_Pos (27U)\000"
+.LASF19802:
+	.ascii	"DD_BLUE 0x0010\000"
 .LASF7888:
 	.ascii	"FMC_SDTR1_TRAS_0 (0x1UL << FMC_SDTR1_TRAS_Pos)\000"
 .LASF1666:
@@ -62938,7 +64311,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SysTick_VAL_CURRENT_Pos 0U\000"
 .LASF13001:
 	.ascii	"USART_CR2_ADD_Msk (0xFUL << USART_CR2_ADD_Pos)\000"
-.LASF19628:
+.LASF19984:
 	.ascii	"HAL_TIM_STATE_READY\000"
 .LASF5077:
 	.ascii	"CAN_F7R2_FB20 CAN_F7R2_FB20_Msk\000"
@@ -63101,6 +64474,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F2R2_FB25_Pos (25U)\000"
 .LASF12766:
 	.ascii	"TIM_CCMR2_IC3F_3 (0x8UL << TIM_CCMR2_IC3F_Pos)\000"
+.LASF19669:
+	.ascii	"__GNUCLIKE___SECTION 1\000"
 .LASF11607:
 	.ascii	"SPDIFRX_CR_SPDIFEN SPDIFRX_CR_SPDIFEN_Msk\000"
 .LASF14738:
@@ -63179,6 +64554,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F2R2_FB19_Pos (19U)\000"
 .LASF12032:
 	.ascii	"SDIO_MASK_RXDAVLIE_Pos (21U)\000"
+.LASF19782:
+	.ascii	"strnicmp strncasecmp\000"
 .LASF1700:
 	.ascii	"ADC_CR2_ADON_Msk (0x1UL << ADC_CR2_ADON_Pos)\000"
 .LASF1351:
@@ -63239,6 +64616,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"KR_KEY_RELOAD IWDG_KEY_RELOAD\000"
 .LASF17597:
 	.ascii	"EXTI_LINE_12 (EXTI_GPIO | 0x0Cu)\000"
+.LASF19551:
+	.ascii	"_CLOCK_T_ unsigned long\000"
 .LASF2592:
 	.ascii	"CAN_RDH0R_DATA5_Msk (0xFFUL << CAN_RDH0R_DATA5_Pos)"
 	.ascii	"\000"
@@ -63462,6 +64841,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USART_CR1_UE USART_CR1_UE_Msk\000"
 .LASF5972:
 	.ascii	"DCMI_CR_BSM_0 0x00010000U\000"
+.LASF19720:
+	.ascii	"__null_sentinel __attribute__((__sentinel__))\000"
 .LASF2253:
 	.ascii	"CAN_TSR_ABRQ1_Msk (0x1UL << CAN_TSR_ABRQ1_Pos)\000"
 .LASF17391:
@@ -63481,6 +64862,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"I2C_FLTR_DNF_Pos (0U)\000"
 .LASF8881:
 	.ascii	"GPIO_AFRL_AFSEL5_0 (0x1UL << GPIO_AFRL_AFSEL5_Pos)\000"
+.LASF19573:
+	.ascii	"_REENT_SMALL_CHECK_INIT(ptr) \000"
 .LASF17760:
 	.ascii	"MPU_INSTRUCTION_ACCESS_DISABLE ((uint8_t)0x01)\000"
 .LASF15849:
@@ -63492,6 +64875,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SCB_CCR_STKALIGN_Pos 9U\000"
 .LASF2302:
 	.ascii	"CAN_RF0R_FULL0 CAN_RF0R_FULL0_Msk\000"
+.LASF19490:
+	.ascii	"BKLIT_T htim2\000"
 .LASF5017:
 	.ascii	"CAN_F7R2_FB0 CAN_F7R2_FB0_Msk\000"
 .LASF19185:
@@ -63578,13 +64963,11 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"C_AHB2ENR_RNGEN)) != RESET)\000"
 .LASF6512:
 	.ascii	"EXTI_IMR_MR13_Pos (13U)\000"
-.LASF19652:
+.LASF20008:
 	.ascii	"hdma_adc1\000"
 .LASF16551:
 	.ascii	"__HAL_LTDC_RELOAD_CONFIG __HAL_LTDC_RELOAD_IMMEDIAT"
 	.ascii	"E_CONFIG\000"
-.LASF19499:
-	.ascii	"displ_rst_GPIO_Port GPIOB\000"
 .LASF13432:
 	.ascii	"USB_OTG_GUSBCFG_PHYSEL USB_OTG_GUSBCFG_PHYSEL_Msk\000"
 .LASF10446:
@@ -63594,6 +64977,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F6R2_FB2 CAN_F6R2_FB2_Msk\000"
 .LASF2187:
 	.ascii	"CAN_MCR_ABOM_Msk (0x1UL << CAN_MCR_ABOM_Pos)\000"
+.LASF19715:
+	.ascii	"__returns_twice __attribute__((__returns_twice__))\000"
 .LASF1400:
 	.ascii	"ARM_MPU_AP_RO 6U\000"
 .LASF2392:
@@ -63839,6 +65224,8 @@ DMA2_Stream3_IRQHandler:
 .LASF1061:
 	.ascii	"DWT_CTRL_EXCTRCENA_Msk (0x1UL << DWT_CTRL_EXCTRCENA"
 	.ascii	"_Pos)\000"
+.LASF19498:
+	.ascii	"Z_RGB565 \000"
 .LASF7400:
 	.ascii	"FMC_BTR3_ADDSET_3 (0x8UL << FMC_BTR3_ADDSET_Pos)\000"
 .LASF835:
@@ -63861,7 +65248,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"PENR |= (RCC_AHB1LPENR_OTGHSLPEN))\000"
 .LASF2714:
 	.ascii	"CAN_FM1R_FBM20_Pos (20U)\000"
-.LASF19633:
+.LASF19989:
 	.ascii	"HAL_TIM_CHANNEL_STATE_RESET\000"
 .LASF1798:
 	.ascii	"ADC_SMPR1_SMP18_0 (0x1UL << ADC_SMPR1_SMP18_Pos)\000"
@@ -63963,6 +65350,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"os)\000"
 .LASF12848:
 	.ascii	"TIM_BDTR_DTG_Pos (0U)\000"
+.LASF19710:
+	.ascii	"__noinline __attribute__ ((__noinline__))\000"
 .LASF14568:
 	.ascii	"AES_FLAG_RDERR CRYP_FLAG_RDERR\000"
 .LASF172:
@@ -64058,6 +65447,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	" == 0x00U))\000"
 .LASF15684:
 	.ascii	"__PWR_CLK_ENABLE __HAL_RCC_PWR_CLK_ENABLE\000"
+.LASF19741:
+	.ascii	"__COPYRIGHT(s) struct __hack\000"
 .LASF12561:
 	.ascii	"TIM_DIER_COMIE_Pos (5U)\000"
 .LASF14105:
@@ -64100,6 +65491,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_CKGATENR_RCC_CKEN RCC_CKGATENR_RCC_CKEN_Msk\000"
 .LASF18527:
 	.ascii	"OPTIONBYTE_USER 0x00000004U\000"
+.LASF19821:
+	.ascii	"ILI9XXX_MADCTL 0x36\000"
 .LASF19060:
 	.ascii	"TIM_OCMODE_TIMING 0x00000000U\000"
 .LASF10659:
@@ -64158,6 +65551,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CEC_ISR_BRE_Pos (3U)\000"
 .LASF1375:
 	.ascii	"ARM_MPU_REGION_SIZE_8KB ((uint8_t)0x0CU)\000"
+.LASF19673:
+	.ascii	"__GNUCLIKE_BUILTIN_STDARG 1\000"
 .LASF4716:
 	.ascii	"CAN_F3R2_FB28_Msk (0x1UL << CAN_F3R2_FB28_Pos)\000"
 .LASF16448:
@@ -64175,6 +65570,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CEC_ISR_RXBR_Pos (0U)\000"
 .LASF5790:
 	.ascii	"CEC_IER_ARBLSTIE_Pos (7U)\000"
+.LASF19744:
+	.ascii	"__DEQUALIFY(type,var) ((type)(__uintptr_t)(const vo"
+	.ascii	"latile void *)(var))\000"
 .LASF14930:
 	.ascii	"TIM_DMABase_CCR4 TIM_DMABASE_CCR4\000"
 .LASF771:
@@ -64228,6 +65626,10 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F3R1_FB15_Msk (0x1UL << CAN_F3R1_FB15_Pos)\000"
 .LASF2475:
 	.ascii	"CAN_TDT1R_DLC_Msk (0xFUL << CAN_TDT1R_DLC_Pos)\000"
+.LASF19834:
+	.ascii	"SET_TOUCH_SPI_BAUDRATE TOUCH_SPI->CR1 &= (uint16_t)"
+	.ascii	" ~SPI_CR1_BR_Msk; TOUCH_SPI->CR1 |= TOUCH_PRESCALER"
+	.ascii	"\000"
 .LASF16473:
 	.ascii	"__HAL_UART_GETCLOCKSOURCE UART_GETCLOCKSOURCE\000"
 .LASF13079:
@@ -64307,6 +65709,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F7R1_FB22 CAN_F7R1_FB22_Msk\000"
 .LASF16294:
 	.ascii	"RCC_MCOSOURCE_HSI RCC_MCO1SOURCE_HSI\000"
+.LASF19525:
+	.ascii	"_POINTER_INT long\000"
 .LASF7067:
 	.ascii	"FLASH_OPTCR_RDP_3 (0x08UL << FLASH_OPTCR_RDP_Pos)\000"
 .LASF95:
@@ -64336,7 +65740,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CEC_CFGR_BREGEN_Pos (5U)\000"
 .LASF9426:
 	.ascii	"FMPI2C_ICR_NACKCF FMPI2C_ICR_NACKCF_Msk\000"
-.LASF19556:
+.LASF19912:
 	.ascii	"PeriphInc\000"
 .LASF5898:
 	.ascii	"DAC_DHR8R1_DACC1DHR DAC_DHR8R1_DACC1DHR_Msk\000"
@@ -64600,6 +66004,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"DMA_HISR_HTIF7_Msk (0x1UL << DMA_HISR_HTIF7_Pos)\000"
 .LASF4338:
 	.ascii	"CAN_F13R1_FB30_Msk (0x1UL << CAN_F13R1_FB30_Pos)\000"
+.LASF19774:
+	.ascii	"__align_down(x,y) __builtin_align_down(x, y)\000"
 .LASF12676:
 	.ascii	"TIM_CCMR1_OC2FE_Pos (10U)\000"
 .LASF17795:
@@ -64750,6 +66156,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USB_OTG_MODE_HOST 1U\000"
 .LASF1514:
 	.ascii	"DCMI_BASE (AHB2PERIPH_BASE + 0x50000UL)\000"
+.LASF19520:
+	.ascii	"_SUPPORTS_ERREXCEPT \000"
 .LASF17143:
 	.ascii	"RCC_HCLK_DIV16 RCC_CFGR_PPRE1_DIV16\000"
 .LASF3371:
@@ -64946,7 +66354,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SPI_CR1_RXONLY SPI_CR1_RXONLY_Msk\000"
 .LASF6601:
 	.ascii	"EXTI_EMR_MR11_Pos (11U)\000"
-.LASF19540:
+.LASF19896:
 	.ascii	"CCMR1\000"
 .LASF8586:
 	.ascii	"GPIO_ODR_OD11_Msk (0x1UL << GPIO_ODR_OD11_Pos)\000"
@@ -65133,6 +66541,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RTC_TR_ST_0 (0x1UL << RTC_TR_ST_Pos)\000"
 .LASF4956:
 	.ascii	"CAN_F6R2_FB12_Msk (0x1UL << CAN_F6R2_FB12_Pos)\000"
+.LASF19731:
+	.ascii	"__printf0like(fmtarg,firstvararg) \000"
 .LASF5433:
 	.ascii	"CAN_F11R2_FB11_Msk (0x1UL << CAN_F11R2_FB11_Pos)\000"
 .LASF9854:
@@ -65195,7 +66605,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"PWR_MODE_IT_RISING PWR_PVD_MODE_IT_RISING\000"
 .LASF15485:
 	.ascii	"__BKP_CLK_DISABLE __HAL_RCC_BKP_CLK_DISABLE\000"
-.LASF19660:
+.LASF20016:
 	.ascii	"DMA2_Stream0_IRQHandler\000"
 .LASF3659:
 	.ascii	"CAN_F6R1_FB28_Pos (28U)\000"
@@ -65341,6 +66751,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RTC_BASE (APB1PERIPH_BASE + 0x2800UL)\000"
 .LASF18900:
 	.ascii	"TIM_DMABASE_CCER 0x00000008U\000"
+.LASF19762:
+	.ascii	"__requires_shared(...) __lock_annotate(shared_locks"
+	.ascii	"_required(__VA_ARGS__))\000"
 .LASF13137:
 	.ascii	"DBGMCU_CR_DBG_SLEEP DBGMCU_CR_DBG_SLEEP_Msk\000"
 .LASF6732:
@@ -65431,6 +66844,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USB_OTG_DIEPMSK_BIM USB_OTG_DIEPMSK_BIM_Msk\000"
 .LASF3658:
 	.ascii	"CAN_F6R1_FB27 CAN_F6R1_FB27_Msk\000"
+.LASF19727:
+	.ascii	"__scanflike(fmtarg,firstvararg) __attribute__((__fo"
+	.ascii	"rmat__ (__scanf__, fmtarg, firstvararg)))\000"
 .LASF4452:
 	.ascii	"CAN_F1R2_FB4_Msk (0x1UL << CAN_F1R2_FB4_Pos)\000"
 .LASF7967:
@@ -65565,6 +66981,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ARITY_BOTHEDGE))\000"
 .LASF12387:
 	.ascii	"SYSCFG_EXTICR4_EXTI13 SYSCFG_EXTICR4_EXTI13_Msk\000"
+.LASF19612:
+	.ascii	"_REENT_MP_RESULT(ptr) ((ptr)->_mp->_result)\000"
 .LASF5456:
 	.ascii	"CAN_F11R2_FB19_Pos (19U)\000"
 .LASF13601:
@@ -65653,8 +67071,10 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SB_OTG_HS_WAKEUP_EXTI_ENABLE_RISING_FALLING_EDGE\000"
 .LASF4324:
 	.ascii	"CAN_F13R1_FB25 CAN_F13R1_FB25_Msk\000"
-.LASF19526:
+.LASF19882:
 	.ascii	"uint16_t\000"
+.LASF19574:
+	.ascii	"_RAND48_SEED_0 (0x330e)\000"
 .LASF19272:
 	.ascii	"UART_IT_ERR ((uint32_t)(UART_CR3_REG_INDEX << 28U |"
 	.ascii	" USART_CR3_EIE))\000"
@@ -65898,6 +67318,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"DAC1_CHANNEL_1 DAC_CHANNEL_1\000"
 .LASF8699:
 	.ascii	"GPIO_BSRR_BR11 GPIO_BSRR_BR11_Msk\000"
+.LASF19706:
+	.ascii	"__min_size(x) static (x)\000"
 .LASF17497:
 	.ascii	"__HAL_GPIO_EXTI_GET_FLAG(__EXTI_LINE__) (EXTI->PR &"
 	.ascii	" (__EXTI_LINE__))\000"
@@ -65908,6 +67330,10 @@ DMA2_Stream3_IRQHandler:
 .LASF9747:
 	.ascii	"QUADSPI_CCR_DMODE_1 (0x2UL << QUADSPI_CCR_DMODE_Pos"
 	.ascii	")\000"
+.LASF19602:
+	.ascii	"_REENT_CHECK_MP(var) _REENT_CHECK(var, _mp, struct "
+	.ascii	"_mprec *, sizeof *((var)->_mp), _REENT_INIT_MP(var)"
+	.ascii	")\000"
 .LASF13677:
 	.ascii	"USB_OTG_GINTSTS_DISCINT_Pos (29U)\000"
 .LASF17382:
@@ -65917,6 +67343,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SAI_xCR2_MUTECNT SAI_xCR2_MUTECNT_Msk\000"
 .LASF3345:
 	.ascii	"CAN_F3R1_FB19_Msk (0x1UL << CAN_F3R1_FB19_Pos)\000"
+.LASF19608:
+	.ascii	"_REENT_RAND_NEXT(ptr) ((ptr)->_r48->_rand_next)\000"
 .LASF3173:
 	.ascii	"CAN_F1R1_FB26_Pos (26U)\000"
 .LASF16954:
@@ -65984,12 +67412,16 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"EXTI_MODE_INTERRUPT 0x00000001u\000"
 .LASF14300:
 	.ascii	"USB_OTG_HCTSIZ_PKTCNT USB_OTG_HCTSIZ_PKTCNT_Msk\000"
+.LASF19487:
+	.ascii	"DISPLAY_SPI_DMA_MODE \000"
 .LASF11393:
 	.ascii	"SAI_GCR_SYNCOUT_0 (0x1UL << SAI_GCR_SYNCOUT_Pos)\000"
 .LASF1841:
 	.ascii	"ADC_SMPR2_SMP6_1 (0x2UL << ADC_SMPR2_SMP6_Pos)\000"
 .LASF6108:
 	.ascii	"DCMI_DR_BYTE2_Msk (0xFFUL << DCMI_DR_BYTE2_Pos)\000"
+.LASF19662:
+	.ascii	"__has_extension __has_feature\000"
 .LASF9462:
 	.ascii	"IWDG_PR_PR IWDG_PR_PR_Msk\000"
 .LASF12661:
@@ -66077,6 +67509,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"EXTI_SWIER_SWIER7 EXTI_SWIER_SWIER7_Msk\000"
 .LASF3848:
 	.ascii	"CAN_F8R1_FB27_Pos (27U)\000"
+.LASF19849:
+	.ascii	"DISPL_CS_GPIO_Port GPIOB\000"
 .LASF5046:
 	.ascii	"CAN_F7R2_FB10_Msk (0x1UL << CAN_F7R2_FB10_Pos)\000"
 .LASF8388:
@@ -66127,6 +67561,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"LL_ADC_AWD_CHANNEL_13_INJ ((LL_ADC_CHANNEL_13 & ADC"
 	.ascii	"_CHANNEL_ID_MASK) | ADC_CR1_JAWDEN | ADC_CR1_AWDSGL"
 	.ascii	")\000"
+.LASF19545:
+	.ascii	"__need_wint_t \000"
 .LASF17788:
 	.ascii	"MPU_REGION_SIZE_8MB ((uint8_t)0x16)\000"
 .LASF2174:
@@ -66180,7 +67616,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"DC_CR2_JEXTSEL_1 | ADC_INJ_TRIG_EXT_EDGE_DEFAULT)\000"
 .LASF15773:
 	.ascii	"__TIM12_FORCE_RESET __HAL_RCC_TIM12_FORCE_RESET\000"
-.LASF19614:
+.LASF19970:
 	.ascii	"RxXferCount\000"
 .LASF13842:
 	.ascii	"USB_OTG_DTHRCTL_NONISOTHREN_Pos (0U)\000"
@@ -66313,7 +67749,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"OPTIONBYTE_RDP 0x00000002U\000"
 .LASF4453:
 	.ascii	"CAN_F1R2_FB4 CAN_F1R2_FB4_Msk\000"
-.LASF19550:
+.LASF19906:
 	.ascii	"long double\000"
 .LASF443:
 	.ascii	"__ARM_FEATURE_CDE_COPROC\000"
@@ -66323,6 +67759,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_FFA1R_FFA0 CAN_FFA1R_FFA0_Msk\000"
 .LASF14939:
 	.ascii	"TIM_DMABase_OR3 TIM_DMABASE_OR3\000"
+.LASF19686:
+	.ascii	"__CC_SUPPORTS_DYNAMIC_ARRAY_INIT 1\000"
 .LASF2547:
 	.ascii	"CAN_TDH2R_DATA5_Msk (0xFFUL << CAN_TDH2R_DATA5_Pos)"
 	.ascii	"\000"
@@ -66348,6 +67786,8 @@ DMA2_Stream3_IRQHandler:
 .LASF1868:
 	.ascii	"ADC_JOFR3_JOFFSET3_Msk (0xFFFUL << ADC_JOFR3_JOFFSE"
 	.ascii	"T3_Pos)\000"
+.LASF19814:
+	.ascii	"ILI9XXX_SLEEP_OUT 0x11\000"
 .LASF11231:
 	.ascii	"RTC_TSDR_DU_2 (0x4UL << RTC_TSDR_DU_Pos)\000"
 .LASF9655:
@@ -66539,6 +67979,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"U) && ((MODE) != 0x00U))\000"
 .LASF16309:
 	.ascii	"RCC_USBPLLCLK_DIV3 RCC_USBCLKSOURCE_PLL_DIV3\000"
+.LASF19779:
+	.ascii	"strcmpi strcasecmp\000"
 .LASF13813:
 	.ascii	"USB_OTG_TX0FD_Msk (0xFFFFUL << USB_OTG_TX0FD_Pos)\000"
 .LASF4925:
@@ -66557,6 +67999,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CEC_IER_TXUDRIE_Pos (10U)\000"
 .LASF11012:
 	.ascii	"RTC_CALIBR_DCS RTC_CALIBR_DCS_Msk\000"
+.LASF19616:
+	.ascii	"_REENT_ASCTIME_BUF(ptr) ((ptr)->_asctime_buf)\000"
 .LASF358:
 	.ascii	"__UDA_FBIT__ 32\000"
 .LASF8862:
@@ -66711,6 +68155,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ADC_EXTERNALTRIGINJECCONV_T4_CC2 ((uint32_t)(ADC_CR"
 	.ascii	"2_JEXTSEL_2 | ADC_CR2_JEXTSEL_1 | ADC_CR2_JEXTSEL_0"
 	.ascii	"))\000"
+.LASF19603:
+	.ascii	"_REENT_CHECK_EMERGENCY(var) _REENT_CHECK(var, _emer"
+	.ascii	"gency, char *, _REENT_EMERGENCY_SIZE, )\000"
 .LASF7641:
 	.ascii	"FMC_BWTR4_ACCMOD FMC_BWTR4_ACCMOD_Msk\000"
 .LASF1995:
@@ -66735,7 +68182,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SDIO_STA_RXFIFOE_Pos (19U)\000"
 .LASF11243:
 	.ascii	"RTC_CALR_CALW16_Msk (0x1UL << RTC_CALR_CALW16_Pos)\000"
-.LASF19528:
+.LASF19884:
 	.ascii	"NDTR\000"
 .LASF610:
 	.ascii	"___int_least16_t_defined 1\000"
@@ -66896,7 +68343,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	">AHB1LPENR &= ~(RCC_AHB1LPENR_OTGHSULPILPEN))\000"
 .LASF17570:
 	.ascii	"OUTPUT_OD (0x1UL << OUTPUT_TYPE_Pos)\000"
-.LASF19531:
+.LASF19887:
 	.ascii	"DMA_Stream_TypeDef\000"
 .LASF14674:
 	.ascii	"HAL_FLASH_TIMEOUT_VALUE FLASH_TIMEOUT_VALUE\000"
@@ -66997,6 +68444,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CR1_AWDSGL | ADC_CR1_AWDEN | ADC_CR1_JAWDEN))\000"
 .LASF7434:
 	.ascii	"FMC_BTR3_DATLAT_Msk (0xFUL << FMC_BTR3_DATLAT_Pos)\000"
+.LASF19667:
+	.ascii	"__GNUCLIKE_MATH_BUILTIN_CONSTANTS \000"
 .LASF10163:
 	.ascii	"RCC_APB1RSTR_PWRRST_Pos (28U)\000"
 .LASF13959:
@@ -67314,6 +68763,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RTC_TSTR_ST_Msk (0x7UL << RTC_TSTR_ST_Pos)\000"
 .LASF1159:
 	.ascii	"TPI_ITCTRL_Mode_Msk (0x3UL )\000"
+.LASF19791:
+	.ascii	"ORANGE 0xFD00\000"
 .LASF10367:
 	.ascii	"RCC_APB2ENR_SDIOEN_Pos (11U)\000"
 .LASF5441:
@@ -67329,7 +68780,7 @@ DMA2_Stream3_IRQHandler:
 .LASF15596:
 	.ascii	"__GPIOC_CLK_SLEEP_ENABLE __HAL_RCC_GPIOC_CLK_SLEEP_"
 	.ascii	"ENABLE\000"
-.LASF19648:
+.LASF20004:
 	.ascii	"ChannelState\000"
 .LASF2959:
 	.ascii	"CAN_FA1R_FACT14 CAN_FA1R_FACT14_Msk\000"
@@ -67368,6 +68819,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__GCC_ATOMIC_INT_LOCK_FREE 2\000"
 .LASF107:
 	.ascii	"__INT8_C(c) c\000"
+.LASF19687:
+	.ascii	"__P(protos) protos\000"
 .LASF1990:
 	.ascii	"ADC_SQR3_SQ4_Pos (15U)\000"
 .LASF821:
@@ -67416,7 +68869,7 @@ DMA2_Stream3_IRQHandler:
 .LASF18120:
 	.ascii	"LL_ADC_AWD_CHANNEL_0_INJ ((LL_ADC_CHANNEL_0 & ADC_C"
 	.ascii	"HANNEL_ID_MASK) | ADC_CR1_JAWDEN | ADC_CR1_AWDSGL)\000"
-.LASF19592:
+.LASF19948:
 	.ascii	"BaudRatePrescaler\000"
 .LASF5663:
 	.ascii	"CAN_F13R2_FB24_Pos (24U)\000"
@@ -67451,6 +68904,8 @@ DMA2_Stream3_IRQHandler:
 .LASF13456:
 	.ascii	"USB_OTG_GUSBCFG_ULPICSM_Msk (0x1UL << USB_OTG_GUSBC"
 	.ascii	"FG_ULPICSM_Pos)\000"
+.LASF19614:
+	.ascii	"_REENT_MP_P5S(ptr) ((ptr)->_mp->_p5s)\000"
 .LASF487:
 	.ascii	"USE_HAL_CEC_REGISTER_CALLBACKS 0U\000"
 .LASF10198:
@@ -67504,7 +68959,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USE_HAL_TIM_REGISTER_CALLBACKS 0U\000"
 .LASF329:
 	.ascii	"__HQ_IBIT__ 0\000"
-.LASF19653:
+.LASF20009:
 	.ascii	"hdma_spi1_tx\000"
 .LASF5313:
 	.ascii	"CAN_F10R2_FB3_Msk (0x1UL << CAN_F10R2_FB3_Pos)\000"
@@ -67615,6 +69070,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ADC_JSQR_JSQ1_4 (0x10UL << ADC_JSQR_JSQ1_Pos)\000"
 .LASF18992:
 	.ascii	"TIM_FLAG_CC3 TIM_SR_CC3IF\000"
+.LASF19799:
+	.ascii	"D_CYAN 0x0618\000"
 .LASF14371:
 	.ascii	"USB_OTG_DOEPINT_STUP_Pos (3U)\000"
 .LASF6164:
@@ -67653,6 +69110,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"xPSR_Q_Pos 27U\000"
 .LASF12559:
 	.ascii	"TIM_DIER_CC4IE_Msk (0x1UL << TIM_DIER_CC4IE_Pos)\000"
+.LASF19696:
+	.ascii	"__dead2 __attribute__((__noreturn__))\000"
 .LASF16121:
 	.ascii	"__SDADC2_FORCE_RESET __HAL_RCC_SDADC2_FORCE_RESET\000"
 .LASF18868:
@@ -67684,6 +69143,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__I2C1_CLK_ENABLE __HAL_RCC_I2C1_CLK_ENABLE\000"
 .LASF3765:
 	.ascii	"CAN_F7R1_FB31_Msk (0x1UL << CAN_F7R1_FB31_Pos)\000"
+.LASF19752:
+	.ascii	"__lock_annotate(x) \000"
 .LASF18970:
 	.ascii	"TIM_IT_UPDATE TIM_DIER_UIE\000"
 .LASF3611:
@@ -67803,6 +69264,11 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"PEED12_Pos)\000"
 .LASF2444:
 	.ascii	"CAN_TDL0R_DATA3_Pos (24U)\000"
+.LASF19811:
+	.ascii	"DDDD_WHITE 0x2104\000"
+.LASF19703:
+	.ascii	"__alloc_size2(n,x) __attribute__((__alloc_size__(n,"
+	.ascii	" x)))\000"
 .LASF3833:
 	.ascii	"CAN_F8R1_FB22_Pos (22U)\000"
 .LASF18972:
@@ -67829,7 +69295,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	")\000"
 .LASF15476:
 	.ascii	"__AHB1_RELEASE_RESET __HAL_RCC_AHB1_RELEASE_RESET\000"
-.LASF19583:
+.LASF19939:
 	.ascii	"XferErrorCallback\000"
 .LASF16098:
 	.ascii	"__HRTIM1_CLK_ENABLE __HAL_RCC_HRTIM1_CLK_ENABLE\000"
@@ -67893,7 +69359,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_PUPDR_PUPDR9_0 GPIO_PUPDR_PUPD9_0\000"
 .LASF3064:
 	.ascii	"CAN_F0R1_FB21 CAN_F0R1_FB21_Msk\000"
-.LASF19605:
+.LASF19961:
 	.ascii	"HAL_SPI_STATE_ABORT\000"
 .LASF6834:
 	.ascii	"EXTI_SWIER_SWIER12_Pos (12U)\000"
@@ -67938,6 +69404,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F3R2_FB8 CAN_F3R2_FB8_Msk\000"
 .LASF17771:
 	.ascii	"MPU_REGION_SIZE_64B ((uint8_t)0x05)\000"
+.LASF19514:
+	.ascii	"_REENT_CHECK_VERIFY 1\000"
 .LASF7077:
 	.ascii	"FLASH_OPTCR_nWRP_2 0x00040000U\000"
 .LASF17649:
@@ -67973,6 +69441,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TPI_FIFO1_ITM_bytecount_Pos 27U\000"
 .LASF1843:
 	.ascii	"ADC_SMPR2_SMP7_Pos (21U)\000"
+.LASF19555:
+	.ascii	"_NULL 0\000"
 .LASF1816:
 	.ascii	"ADC_SMPR2_SMP2_0 (0x1UL << ADC_SMPR2_SMP2_Pos)\000"
 .LASF7685:
@@ -68012,8 +69482,13 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SYSCFG_EXTICR4_EXTI14_PI 0x0800U\000"
 .LASF9732:
 	.ascii	"QUADSPI_CCR_ABSIZE QUADSPI_CCR_ABSIZE_Msk\000"
+.LASF19521:
+	.ascii	"__DOUBLE_TYPE double\000"
 .LASF394:
 	.ascii	"__ARM_FEATURE_DOTPROD\000"
+.LASF19641:
+	.ascii	"_REENT_INIT_PTR(var) { memset((var), 0, sizeof(*(va"
+	.ascii	"r))); _REENT_INIT_PTR_ZEROED(var); }\000"
 .LASF17070:
 	.ascii	"IS_RCC_PLLI2SQ_VALUE(VALUE) ((2U <= (VALUE)) && ((V"
 	.ascii	"ALUE) <= 15U))\000"
@@ -68100,6 +69575,8 @@ DMA2_Stream3_IRQHandler:
 .LASF14598:
 	.ascii	"ADC_CLOCKPRESCALER_PCLK_DIV4 ADC_CLOCK_SYNC_PCLK_DI"
 	.ascii	"V4\000"
+.LASF19780:
+	.ascii	"stricmp strcasecmp\000"
 .LASF10639:
 	.ascii	"RCC_SSCGR_MODPER_Msk (0x1FFFUL << RCC_SSCGR_MODPER_"
 	.ascii	"Pos)\000"
@@ -68205,6 +69682,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RTC_ALRMAR_SU_Msk (0xFUL << RTC_ALRMAR_SU_Pos)\000"
 .LASF14875:
 	.ascii	"RTC_TIMESTAMPPIN_PC13 RTC_TIMESTAMPPIN_DEFAULT\000"
+.LASF19830:
+	.ascii	"ILI9488_POWER2 0xC2\000"
 .LASF14948:
 	.ascii	"TIM_EventSource_Break TIM_EVENTSOURCE_BREAK\000"
 .LASF872:
@@ -68221,6 +69700,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_BSRR_BR0 GPIO_BSRR_BR0_Msk\000"
 .LASF8228:
 	.ascii	"GPIO_OTYPER_OT_12 GPIO_OTYPER_OT12\000"
+.LASF19783:
+	.ascii	"SPI_COMMAND GPIO_PIN_RESET\000"
 .LASF9250:
 	.ascii	"FMPI2C_CR1_ERRIE_Pos (7U)\000"
 .LASF12773:
@@ -68260,6 +69741,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_FFA1R_FFA0_Pos (0U)\000"
 .LASF6845:
 	.ascii	"EXTI_SWIER_SWIER15 EXTI_SWIER_SWIER15_Msk\000"
+.LASF19765:
+	.ascii	"__nosanitizeaddress \000"
 .LASF13215:
 	.ascii	"DBGMCU_APB2_FZ_DBG_TIM9_STOP DBGMCU_APB2_FZ_DBG_TIM"
 	.ascii	"9_STOP_Msk\000"
@@ -68297,7 +69780,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TIM_OR_TI4_RMP_Msk (0x3UL << TIM_OR_TI4_RMP_Pos)\000"
 .LASF10801:
 	.ascii	"RTC_TR_PM_Pos (22U)\000"
-.LASF19603:
+.LASF19959:
 	.ascii	"HAL_SPI_STATE_BUSY_TX_RX\000"
 .LASF3844:
 	.ascii	"CAN_F8R1_FB25 CAN_F8R1_FB25_Msk\000"
@@ -68424,7 +69907,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"os)\000"
 .LASF13255:
 	.ascii	"USB_OTG_GOTGCTL_DHNPEN_Pos (11U)\000"
-.LASF19557:
+.LASF19913:
 	.ascii	"MemInc\000"
 .LASF4547:
 	.ascii	"CAN_F2R2_FB4_Pos (4U)\000"
@@ -68502,7 +69985,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USB_OTG_DIEPCTL_EPDIS_Pos (30U)\000"
 .LASF1259:
 	.ascii	"FPU_MVFR0_A_SIMD_registers_Pos 0U\000"
-.LASF19527:
+.LASF19883:
 	.ascii	"uint32_t\000"
 .LASF15963:
 	.ascii	"__SPI5_FORCE_RESET __HAL_RCC_SPI5_FORCE_RESET\000"
@@ -68537,7 +70020,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"IFRXEN_Pos)\000"
 .LASF13326:
 	.ascii	"USB_OTG_PCGCR_PHYSUSP USB_OTG_PCGCR_PHYSUSP_Msk\000"
-.LASF19658:
+.LASF20014:
 	.ascii	"HAL_TIM_IRQHandler\000"
 .LASF15099:
 	.ascii	"FLASH_HalfPageProgram HAL_FLASHEx_HalfPageProgram\000"
@@ -68564,7 +70047,7 @@ DMA2_Stream3_IRQHandler:
 .LASF17919:
 	.ascii	"ADC_CHANNEL_15_SMP (ADC_SMPR1_REGOFFSET | ((15UL) <"
 	.ascii	"< ADC_CHANNEL_SMPx_BITOFFSET_POS))\000"
-.LASF19620:
+.LASF19976:
 	.ascii	"Prescaler\000"
 .LASF19292:
 	.ascii	"__HAL_UART_ONE_BIT_SAMPLE_DISABLE(__HANDLE__) ((__H"
@@ -68627,8 +70110,6 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F8R1_FB19_Msk (0x1UL << CAN_F8R1_FB19_Pos)\000"
 .LASF15218:
 	.ascii	"__HAL_ADC_CLEAR_ERRORCODE ADC_CLEAR_ERRORCODE\000"
-.LASF19492:
-	.ascii	"displ_cs_Pin GPIO_PIN_12\000"
 .LASF5530:
 	.ascii	"CAN_F12R2_FB11 CAN_F12R2_FB11_Msk\000"
 .LASF15934:
@@ -68982,6 +70463,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__BIGGEST_ALIGNMENT__ 8\000"
 .LASF156:
 	.ascii	"__FLT_MIN__ 1.1754943508222875e-38F\000"
+.LASF19640:
+	.ascii	"_REENT_STDERR(_ptr) ((_ptr)->_stderr)\000"
 .LASF958:
 	.ascii	"SCB_CFSR_UNDEFINSTR_Pos (SCB_CFSR_USGFAULTSR_Pos + "
 	.ascii	"0U)\000"
@@ -69011,6 +70494,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__TQ_FBIT__ 127\000"
 .LASF11717:
 	.ascii	"SPDIFRX_DR0_U_Msk (0x1UL << SPDIFRX_DR0_U_Pos)\000"
+.LASF19668:
+	.ascii	"__GNUCLIKE___TYPEOF 1\000"
 .LASF11525:
 	.ascii	"SAI_xSLOTR_NBSLOT SAI_xSLOTR_NBSLOT_Msk\000"
 .LASF13592:
@@ -69055,6 +70540,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"| ADC_CCR_MULTI_1))\000"
 .LASF17838:
 	.ascii	"ADC_REG_RANK_4_SQRX_BITOFFSET_POS (15UL)\000"
+.LASF19564:
+	.ascii	"__lock_close_recursive(lock) __retarget_lock_close_"
+	.ascii	"recursive(lock)\000"
 .LASF18889:
 	.ascii	"STM32F4xx_HAL_TIM_H \000"
 .LASF6197:
@@ -69313,6 +70801,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ET_BB * 32U) + (FPDS_BIT_NUMBER * 4U))\000"
 .LASF6223:
 	.ascii	"DMA_SxFCR_FTH_1 (0x2UL << DMA_SxFCR_FTH_Pos)\000"
+.LASF19631:
+	.ascii	"_REENT_CVTBUF(_ptr) ((_ptr)->_cvtbuf)\000"
 .LASF2735:
 	.ascii	"CAN_FM1R_FBM27_Pos (27U)\000"
 .LASF18048:
@@ -69364,9 +70854,11 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_MSR_ERRI CAN_MSR_ERRI_Msk\000"
 .LASF13040:
 	.ascii	"USART_CR3_HDSEL USART_CR3_HDSEL_Msk\000"
+.LASF19748:
+	.ascii	"__NULLABILITY_PRAGMA_PUSH \000"
 .LASF1931:
 	.ascii	"ADC_SQR2_SQ8_2 (0x04UL << ADC_SQR2_SQ8_Pos)\000"
-.LASF19671:
+.LASF20027:
 	.ascii	"NMI_Handler\000"
 .LASF8979:
 	.ascii	"GPIO_AFRH_AFSEL13_2 (0x4UL << GPIO_AFRH_AFSEL13_Pos"
@@ -69413,6 +70905,8 @@ DMA2_Stream3_IRQHandler:
 .LASF11988:
 	.ascii	"SDIO_MASK_RXOVERRIE_Msk (0x1UL << SDIO_MASK_RXOVERR"
 	.ascii	"IE_Pos)\000"
+.LASF19553:
+	.ascii	"_CLOCKID_T_ unsigned long\000"
 .LASF11373:
 	.ascii	"RTC_BKP16R_Msk (0xFFFFFFFFUL << RTC_BKP16R_Pos)\000"
 .LASF2354:
@@ -69452,7 +70946,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"HAL_ADC_STATE_INJ_BUSY 0x00001000U\000"
 .LASF17602:
 	.ascii	"EXTI_LINE_17 (EXTI_CONFIG | 0x11u)\000"
-.LASF19521:
+.LASF19877:
 	.ascii	"long unsigned int\000"
 .LASF4700:
 	.ascii	"CAN_F3R2_FB23_Pos (23U)\000"
@@ -69484,6 +70978,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ADC_CCR_ADCPRE_1 (0x2UL << ADC_CCR_ADCPRE_Pos)\000"
 .LASF18536:
 	.ascii	"OB_STDBY_NO_RST ((uint8_t)0x80)\000"
+.LASF19697:
+	.ascii	"__pure2 __attribute__((__const__))\000"
 .LASF17315:
 	.ascii	"__HAL_RCC_APB1_RELEASE_RESET() (RCC->APB1RSTR = 0x0"
 	.ascii	"0U)\000"
@@ -69601,6 +71097,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SDIO_STA_DBCKEND SDIO_STA_DBCKEND_Msk\000"
 .LASF16324:
 	.ascii	"BDRST_BITNUMBER RCC_BDRST_BIT_NUMBER\000"
+.LASF19552:
+	.ascii	"_TIME_T_ __int_least64_t\000"
 .LASF7178:
 	.ascii	"FMC_BCR2_MWID_1 (0x2UL << FMC_BCR2_MWID_Pos)\000"
 .LASF18753:
@@ -69623,10 +71121,21 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ND_Pos)\000"
 .LASF12785:
 	.ascii	"TIM_CCER_CC1NE_Pos (2U)\000"
+.LASF19516:
+	.ascii	"_WANT_REENT_SMALL 1\000"
 .LASF5948:
 	.ascii	"DCMI_CR_JPEG_Msk (0x1UL << DCMI_CR_JPEG_Pos)\000"
+.LASF19619:
+	.ascii	"_REENT_MBLEN_STATE(ptr) ((ptr)->_misc->_mblen_state"
+	.ascii	")\000"
+.LASF19634:
+	.ascii	"_REENT_ERRNO(_ptr) ((_ptr)->_errno)\000"
+.LASF19678:
+	.ascii	"__GNUCLIKE_MATH_BUILTIN_RELOPS \000"
 .LASF19322:
 	.ascii	"USB_OTG_CORE_ID_300A 0x4F54300AU\000"
+.LASF19679:
+	.ascii	"__GNUCLIKE_BUILTIN_MEMCPY 1\000"
 .LASF6144:
 	.ascii	"DMA_SxCR_MSIZE_Msk (0x3UL << DMA_SxCR_MSIZE_Pos)\000"
 .LASF6355:
@@ -69711,7 +71220,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F4R2_FB11 CAN_F4R2_FB11_Msk\000"
 .LASF11947:
 	.ascii	"SDIO_ICR_CTIMEOUTC SDIO_ICR_CTIMEOUTC_Msk\000"
-.LASF19597:
+.LASF19953:
 	.ascii	"SPI_InitTypeDef\000"
 .LASF11827:
 	.ascii	"SDIO_RESP3_CARDSTATUS3_Pos (0U)\000"
@@ -69747,6 +71256,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FMC_BCR1_MWID_Pos (4U)\000"
 .LASF2203:
 	.ascii	"CAN_MSR_SLAK CAN_MSR_SLAK_Msk\000"
+.LASF19805:
+	.ascii	"DD_ORANGE 0x8200\000"
 .LASF1595:
 	.ascii	"GPIOG ((GPIO_TypeDef *) GPIOG_BASE)\000"
 .LASF10316:
@@ -69863,6 +71374,8 @@ DMA2_Stream3_IRQHandler:
 .LASF14512:
 	.ascii	"IS_FMPI2C_ALL_INSTANCE(__INSTANCE__) ((__INSTANCE__"
 	.ascii	") == FMPI2C1)\000"
+.LASF19653:
+	.ascii	"__ptr_t void *\000"
 .LASF230:
 	.ascii	"__FLT32X_MANT_DIG__ 53\000"
 .LASF869:
@@ -69980,7 +71493,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__CHAR_UNSIGNED__ 1\000"
 .LASF7913:
 	.ascii	"FMC_SDTR1_TRCD_0 (0x1UL << FMC_SDTR1_TRCD_Pos)\000"
-.LASF19599:
+.LASF19955:
 	.ascii	"HAL_SPI_STATE_READY\000"
 .LASF11964:
 	.ascii	"SDIO_ICR_DATAENDC_Msk (0x1UL << SDIO_ICR_DATAENDC_P"
@@ -70035,6 +71548,8 @@ DMA2_Stream3_IRQHandler:
 .LASF14322:
 	.ascii	"USB_OTG_DIEPTXF_INEPTXFD_Msk (0xFFFFUL << USB_OTG_D"
 	.ascii	"IEPTXF_INEPTXFD_Pos)\000"
+.LASF19484:
+	.ascii	"DISPL_SPI SPI2\000"
 .LASF18038:
 	.ascii	"LL_ADC_REG_SEQ_SCAN_ENABLE_6RANKS ( ADC_SQR1_L_2 | "
 	.ascii	"ADC_SQR1_L_0)\000"
@@ -70079,6 +71594,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"DISABLE) || ((__MODE__) == SPI_TIMODE_ENABLE))\000"
 .LASF9342:
 	.ascii	"FMPI2C_TIMINGR_SCLL FMPI2C_TIMINGR_SCLL_Msk\000"
+.LASF19495:
+	.ascii	"TGFX_TIMER TIM3\000"
 .LASF10614:
 	.ascii	"RCC_CSR_RMVF RCC_CSR_RMVF_Msk\000"
 .LASF8437:
@@ -70142,7 +71659,7 @@ DMA2_Stream3_IRQHandler:
 .LASF16707:
 	.ascii	"__HAL_RCC_USB_OTG_HS_CLK_DISABLE() (RCC->AHB1ENR &="
 	.ascii	" ~(RCC_AHB1ENR_OTGHSEN))\000"
-.LASF19539:
+.LASF19895:
 	.ascii	"DIER\000"
 .LASF10181:
 	.ascii	"RCC_APB2RSTR_ADCRST_Pos (8U)\000"
@@ -70253,6 +71770,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"_USART1EN); UNUSED(tmpreg); } while(0U)\000"
 .LASF12266:
 	.ascii	"SYSCFG_EXTICR1_EXTI3_PD 0x3000U\000"
+.LASF19494:
+	.ascii	"BKLIT_INIT_LEVEL 100\000"
 .LASF13829:
 	.ascii	"USB_OTG_GNPTXSTS_NPTQXSAV_5 (0x20UL << USB_OTG_GNPT"
 	.ascii	"XSTS_NPTQXSAV_Pos)\000"
@@ -70261,6 +71780,8 @@ DMA2_Stream3_IRQHandler:
 .LASF17735:
 	.ascii	"IS_DMA_PERIPHERAL_INC_STATE(STATE) (((STATE) == DMA"
 	.ascii	"_PINC_ENABLE) || ((STATE) == DMA_PINC_DISABLE))\000"
+.LASF19839:
+	.ascii	"DISPL_SCK_GPIO_Port GPIOA\000"
 .LASF7373:
 	.ascii	"FMC_BTR2_BUSTURN_2 (0x4UL << FMC_BTR2_BUSTURN_Pos)\000"
 .LASF11845:
@@ -70351,6 +71872,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FLASH_ERROR_NOTZERO HAL_FLASH_ERROR_NOTZERO\000"
 .LASF13400:
 	.ascii	"USB_OTG_DSTS_EERR USB_OTG_DSTS_EERR_Msk\000"
+.LASF19502:
+	.ascii	"_STRING_H_ \000"
 .LASF8534:
 	.ascii	"GPIO_IDR_ID15_Msk (0x1UL << GPIO_IDR_ID15_Pos)\000"
 .LASF17192:
@@ -70453,6 +71976,8 @@ DMA2_Stream3_IRQHandler:
 .LASF13973:
 	.ascii	"USB_OTG_DIEPEACHMSK1_NAKM USB_OTG_DIEPEACHMSK1_NAKM"
 	.ascii	"_Msk\000"
+.LASF19854:
+	.ascii	"DISPL_RST_Pin GPIO_PIN_15\000"
 .LASF8208:
 	.ascii	"GPIO_OTYPER_OT13_Msk (0x1UL << GPIO_OTYPER_OT13_Pos"
 	.ascii	")\000"
@@ -70462,8 +71987,6 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_BSRR_BR_15 GPIO_BSRR_BR15\000"
 .LASF8344:
 	.ascii	"GPIO_OSPEEDER_OSPEEDR10_1 GPIO_OSPEEDR_OSPEED10_1\000"
-.LASF19482:
-	.ascii	"displ_sck_Pin GPIO_PIN_5\000"
 .LASF8419:
 	.ascii	"GPIO_PUPDR_PUPD11_1 (0x2UL << GPIO_PUPDR_PUPD11_Pos"
 	.ascii	")\000"
@@ -70495,6 +72018,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"EXTI_IMR_MR11 EXTI_IMR_MR11_Msk\000"
 .LASF3749:
 	.ascii	"CAN_F7R1_FB26_Pos (26U)\000"
+.LASF19758:
+	.ascii	"__unlocks(...) __lock_annotate(unlock_function(__VA"
+	.ascii	"_ARGS__))\000"
 .LASF7327:
 	.ascii	"FMC_BTR1_CLKDIV_0 (0x1UL << FMC_BTR1_CLKDIV_Pos)\000"
 .LASF650:
@@ -70605,6 +72131,10 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"EXTI_IMR_MR14_Msk (0x1UL << EXTI_IMR_MR14_Pos)\000"
 .LASF16075:
 	.ascii	"__SDIO_RELEASE_RESET __HAL_RCC_SDIO_RELEASE_RESET\000"
+.LASF19734:
+	.ascii	"__warn_references(sym,msg) __asm__(\".section .gnu."
+	.ascii	"warning.\" #sym); __asm__(\".asciz \\\"\" msg \"\\\""
+	.ascii	"\"); __asm__(\".previous\")\000"
 .LASF11488:
 	.ascii	"SAI_xFRCR_FRL_6 (0x40UL << SAI_xFRCR_FRL_Pos)\000"
 .LASF6592:
@@ -70631,6 +72161,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ADC_CSR_OVR1 ADC_CSR_OVR1_Msk\000"
 .LASF14420:
 	.ascii	"USB_OTG_CHNUM_2 (0x4UL << USB_OTG_CHNUM_Pos)\000"
+.LASF19711:
+	.ascii	"__nonnull(x) __attribute__((__nonnull__ x))\000"
 .LASF674:
 	.ascii	"INT8_MAX (__INT8_MAX__)\000"
 .LASF7397:
@@ -70682,7 +72214,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"NG_8))\000"
 .LASF11368:
 	.ascii	"RTC_BKP14R RTC_BKP14R_Msk\000"
-.LASF19590:
+.LASF19946:
 	.ascii	"CLKPolarity\000"
 .LASF16347:
 	.ascii	"CSR_LSION_BB RCC_CSR_LSION_BB\000"
@@ -70729,7 +72261,7 @@ DMA2_Stream3_IRQHandler:
 .LASF15208:
 	.ascii	"__HAL_ADC_ENABLING_CONDITIONS ADC_ENABLING_CONDITIO"
 	.ascii	"NS\000"
-.LASF19636:
+.LASF19992:
 	.ascii	"HAL_TIM_ChannelStateTypeDef\000"
 .LASF2305:
 	.ascii	"CAN_RF0R_FOVR0 CAN_RF0R_FOVR0_Msk\000"
@@ -70814,8 +72346,6 @@ DMA2_Stream3_IRQHandler:
 .LASF18954:
 	.ascii	"TIM_ICPOLARITY_FALLING TIM_INPUTCHANNELPOLARITY_FAL"
 	.ascii	"LING\000"
-.LASF19486:
-	.ascii	"displ_mosi_Pin GPIO_PIN_7\000"
 .LASF11653:
 	.ascii	"SPDIFRX_IMR_OVRIE_Pos (3U)\000"
 .LASF3130:
@@ -70865,6 +72395,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"HAL_SYSCFG_FASTMODEPLUS_I2C3 I2C_FASTMODEPLUS_I2C3\000"
 .LASF17555:
 	.ascii	"GPIO_AF12_OTG_HS_FS ((uint8_t)0x0C)\000"
+.LASF19583:
+	.ascii	"_REENT_SIGNAL_SIZE 24\000"
 .LASF1227:
 	.ascii	"FPU_FPCCR_HFRDY_Pos 4U\000"
 .LASF2513:
@@ -70922,6 +72454,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ABLE\000"
 .LASF3239:
 	.ascii	"CAN_F2R1_FB16_Pos (16U)\000"
+.LASF19568:
+	.ascii	"__lock_try_acquire_recursive(lock) __retarget_lock_"
+	.ascii	"try_acquire_recursive(lock)\000"
 .LASF2720:
 	.ascii	"CAN_FM1R_FBM22_Pos (22U)\000"
 .LASF8183:
@@ -70956,13 +72491,13 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FMC_PCR_PWID FMC_PCR_PWID_Msk\000"
 .LASF9408:
 	.ascii	"FMPI2C_ISR_TIMEOUT FMPI2C_ISR_TIMEOUT_Msk\000"
-.LASF19543:
+.LASF19899:
 	.ascii	"CCR1\000"
-.LASF19544:
+.LASF19900:
 	.ascii	"CCR2\000"
-.LASF19545:
+.LASF19901:
 	.ascii	"CCR3\000"
-.LASF19546:
+.LASF19902:
 	.ascii	"CCR4\000"
 .LASF105:
 	.ascii	"__UINT64_MAX__ 0xffffffffffffffffULL\000"
@@ -71064,6 +72599,9 @@ DMA2_Stream3_IRQHandler:
 .LASF11511:
 	.ascii	"SAI_xSLOTR_FBOFF_Msk (0x1FUL << SAI_xSLOTR_FBOFF_Po"
 	.ascii	"s)\000"
+.LASF19620:
+	.ascii	"_REENT_MBTOWC_STATE(ptr) ((ptr)->_misc->_mbtowc_sta"
+	.ascii	"te)\000"
 .LASF15376:
 	.ascii	"__HAL_IWDG_DISABLE_WRITE_ACCESS IWDG_DISABLE_WRITE_"
 	.ascii	"ACCESS\000"
@@ -71082,6 +72620,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FMC_BTR2_ADDHLD_0 (0x1UL << FMC_BTR2_ADDHLD_Pos)\000"
 .LASF4168:
 	.ascii	"CAN_F12R1_FB5 CAN_F12R1_FB5_Msk\000"
+.LASF19572:
+	.ascii	"_ATEXIT_INIT {_NULL, 0, {_NULL}, _NULL}\000"
 .LASF9225:
 	.ascii	"I2C_FLTR_DNF I2C_FLTR_DNF_Msk\000"
 .LASF9234:
@@ -71192,6 +72732,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	")\000"
 .LASF2953:
 	.ascii	"CAN_FA1R_FACT12 CAN_FA1R_FACT12_Msk\000"
+.LASF19709:
+	.ascii	"__always_inline __inline__ __attribute__((__always_"
+	.ascii	"inline__))\000"
 .LASF2785:
 	.ascii	"CAN_FS1R_FSC14 CAN_FS1R_FSC14_Msk\000"
 .LASF19407:
@@ -71496,7 +73039,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F10R1_FB12 CAN_F10R1_FB12_Msk\000"
 .LASF6104:
 	.ascii	"DCMI_DR_BYTE1_Pos (8U)\000"
-.LASF19572:
+.LASF19928:
 	.ascii	"HAL_DMA_STATE_ABORT\000"
 .LASF308:
 	.ascii	"__LACCUM_MIN__ (-0X1P31LK-0X1P31LK)\000"
@@ -71548,6 +73091,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"EXTI_SWIER_SWIER3 EXTI_SWIER_SWIER3_Msk\000"
 .LASF18572:
 	.ascii	"OB_WRP_SECTOR_1 0x00000002U\000"
+.LASF19683:
+	.ascii	"__CC_SUPPORTS___FUNC__ 1\000"
 .LASF17547:
 	.ascii	"GPIO_AF9_TIM14 ((uint8_t)0x09)\000"
 .LASF11723:
@@ -71563,6 +73108,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RC_1)\000"
 .LASF136:
 	.ascii	"__UINT_FAST32_MAX__ 0xffffffffU\000"
+.LASF19542:
+	.ascii	"_SYS_REENT_H_ \000"
 .LASF10453:
 	.ascii	"RCC_AHB3LPENR_FMCLPEN RCC_AHB3LPENR_FMCLPEN_Msk\000"
 .LASF12698:
@@ -71599,10 +73146,16 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"EXTI_IMR_MR4_Msk (0x1UL << EXTI_IMR_MR4_Pos)\000"
 .LASF7078:
 	.ascii	"FLASH_OPTCR_nWRP_3 0x00080000U\000"
+.LASF19660:
+	.ascii	"__unbounded \000"
 .LASF1331:
 	.ascii	"NVIC_BASE (SCS_BASE + 0x0100UL)\000"
 .LASF18984:
 	.ascii	"TIM_DMA_CC4 TIM_DIER_CC4DE\000"
+.LASF19590:
+	.ascii	"_REENT_INIT_PTR_ZEROED(var) { (var)->_stdin = &__sf"
+	.ascii	"[0]; (var)->_stdout = &__sf[1]; (var)->_stderr = &_"
+	.ascii	"_sf[2]; }\000"
 .LASF5342:
 	.ascii	"CAN_F10R2_FB13_Pos (13U)\000"
 .LASF10526:
@@ -71646,6 +73199,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FLASH_FLAG_WRPERR FLASH_SR_WRPERR\000"
 .LASF17690:
 	.ascii	"DMA_IT_TC ((uint32_t)DMA_SxCR_TCIE)\000"
+.LASF19810:
+	.ascii	"DDD_WHITE 0x4208\000"
 .LASF7969:
 	.ascii	"FMC_SDCMR_CTB2 FMC_SDCMR_CTB2_Msk\000"
 .LASF5212:
@@ -71675,6 +73230,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"XTI4_Pos)\000"
 .LASF9283:
 	.ascii	"FMPI2C_CR1_PECEN_Pos (23U)\000"
+.LASF19843:
+	.ascii	"DISPL_MOSI_GPIO_Port GPIOA\000"
 .LASF12945:
 	.ascii	"USART_SR_CTS USART_SR_CTS_Msk\000"
 .LASF18800:
@@ -71724,8 +73281,11 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"DWT_EXCCNT_EXCCNT_Pos 0U\000"
 .LASF1858:
 	.ascii	"ADC_SMPR2_SMP9_0 (0x1UL << ADC_SMPR2_SMP9_Pos)\000"
-.LASF19537:
+.LASF19893:
 	.ascii	"SPI_TypeDef\000"
+.LASF19559:
+	.ascii	"__LOCK_INIT(class,lock) extern struct __lock __lock"
+	.ascii	"_ ## lock; class _LOCK_T lock = &__lock_ ## lock\000"
 .LASF7411:
 	.ascii	"FMC_BTR3_DATAST_0 (0x01UL << FMC_BTR3_DATAST_Pos)\000"
 .LASF7972:
@@ -71912,7 +73472,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USART_CR1_UE_Msk (0x1UL << USART_CR1_UE_Pos)\000"
 .LASF15229:
 	.ascii	"__HAL_ADC_CFGR_CONTINUOUS ADC_CFGR_CONTINUOUS\000"
-.LASF19560:
+.LASF19916:
 	.ascii	"Mode\000"
 .LASF3587:
 	.ascii	"CAN_F6R1_FB4_Pos (4U)\000"
@@ -72019,6 +73579,8 @@ DMA2_Stream3_IRQHandler:
 .LASF17988:
 	.ascii	"LL_ADC_CHANNEL_4 (ADC_CHANNEL_4_NUMBER | ADC_CHANNE"
 	.ascii	"L_4_SMP)\000"
+.LASF19738:
+	.ascii	"__RCSID(s) struct __hack\000"
 .LASF16941:
 	.ascii	"__HAL_RCC_CRC_CLK_SLEEP_ENABLE() (RCC->AHB1LPENR |="
 	.ascii	" (RCC_AHB1LPENR_CRCLPEN))\000"
@@ -72121,8 +73683,10 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F2R2_FB27_Pos (27U)\000"
 .LASF7770:
 	.ascii	"FMC_PATT_ATTHOLD2 FMC_PATT_ATTHOLD2_Msk\000"
-.LASF19532:
+.LASF19888:
 	.ascii	"CRCPR\000"
+.LASF19718:
+	.ascii	"__predict_true(exp) __builtin_expect((exp), 1)\000"
 .LASF421:
 	.ascii	"__ARM_FP 4\000"
 .LASF14539:
@@ -72329,6 +73893,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"S_WKUINT_Pos)\000"
 .LASF14238:
 	.ascii	"USB_OTG_DIEPINT_TXFIFOUDRN_Pos (8U)\000"
+.LASF19841:
+	.ascii	"TOUCH_MISO_GPIO_Port GPIOA\000"
 .LASF17278:
 	.ascii	"__HAL_RCC_USART1_IS_CLK_ENABLED() ((RCC->APB2ENR & "
 	.ascii	"(RCC_APB2ENR_USART1EN)) != RESET)\000"
@@ -72452,6 +74018,8 @@ DMA2_Stream3_IRQHandler:
 .LASF13444:
 	.ascii	"USB_OTG_GUSBCFG_TRDT_2 (0x4UL << USB_OTG_GUSBCFG_TR"
 	.ascii	"DT_Pos)\000"
+.LASF19775:
+	.ascii	"__is_aligned(x,y) __builtin_is_aligned(x, y)\000"
 .LASF14445:
 	.ascii	"USB_OTG_FRMNUM_Msk (0xFUL << USB_OTG_FRMNUM_Pos)\000"
 .LASF15406:
@@ -72540,6 +74108,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	")\000"
 .LASF6782:
 	.ascii	"EXTI_FTSR_TR17 EXTI_FTSR_TR17_Msk\000"
+.LASF19856:
+	.ascii	"DISPL_LED_Pin GPIO_PIN_7\000"
 .LASF9040:
 	.ascii	"I2C_CR1_SMBUS I2C_CR1_SMBUS_Msk\000"
 .LASF8106:
@@ -72589,7 +74159,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_AF5_SPI3 ((uint8_t)0x05)\000"
 .LASF1357:
 	.ascii	"NVIC_SetVector __NVIC_SetVector\000"
-.LASF19629:
+.LASF19985:
 	.ascii	"HAL_TIM_STATE_BUSY\000"
 .LASF2546:
 	.ascii	"CAN_TDH2R_DATA5_Pos (8U)\000"
@@ -72602,6 +74172,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SysTick_CALIB_TENMS_Pos 0U\000"
 .LASF2787:
 	.ascii	"CAN_FS1R_FSC15_Msk (0x1UL << CAN_FS1R_FSC15_Pos)\000"
+.LASF19658:
+	.ascii	"__flexarr [0]\000"
 .LASF17346:
 	.ascii	"__HAL_RCC_DMA2_CLK_SLEEP_ENABLE() (RCC->AHB1LPENR |"
 	.ascii	"= (RCC_AHB1LPENR_DMA2LPEN))\000"
@@ -72613,6 +74185,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"I2C_SR1_ADD10_Msk (0x1UL << I2C_SR1_ADD10_Pos)\000"
 .LASF11735:
 	.ascii	"SPDIFRX_DR1_U_Msk (0x1UL << SPDIFRX_DR1_U_Pos)\000"
+.LASF19638:
+	.ascii	"_REENT_STDIN(_ptr) ((_ptr)->_stdin)\000"
 .LASF18879:
 	.ascii	"IS_SPI_DATASIZE(__DATASIZE__) (((__DATASIZE__) == S"
 	.ascii	"PI_DATASIZE_16BIT) || ((__DATASIZE__) == SPI_DATASI"
@@ -72646,6 +74220,10 @@ DMA2_Stream3_IRQHandler:
 .LASF13211:
 	.ascii	"DBGMCU_APB2_FZ_DBG_TIM8_STOP_Msk (0x1UL << DBGMCU_A"
 	.ascii	"PB2_FZ_DBG_TIM8_STOP_Pos)\000"
+.LASF19598:
+	.ascii	"_REENT_CHECK_ASCTIME_BUF(var) _REENT_CHECK(var, _as"
+	.ascii	"ctime_buf, char *, _REENT_ASCTIME_SIZE, memset((var"
+	.ascii	")->_asctime_buf, 0, _REENT_ASCTIME_SIZE))\000"
 .LASF16426:
 	.ascii	"SD_CMD_SD_APP_STAUS SD_CMD_SD_APP_STATUS\000"
 .LASF12684:
@@ -72674,7 +74252,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"_Pos)\000"
 .LASF2687:
 	.ascii	"CAN_FM1R_FBM11_Pos (11U)\000"
-.LASF19489:
+.LASF19845:
 	.ascii	"usart_emg_rx_GPIO_Port GPIOC\000"
 .LASF12328:
 	.ascii	"SYSCFG_EXTICR2_EXTI7_PJ 0x9000U\000"
@@ -72739,6 +74317,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FLASH_ACR_LATENCY_13WS 0x0000000DU\000"
 .LASF3113:
 	.ascii	"CAN_F1R1_FB6_Pos (6U)\000"
+.LASF19681:
+	.ascii	"__CC_SUPPORTS___INLINE 1\000"
 .LASF3309:
 	.ascii	"CAN_F3R1_FB7_Msk (0x1UL << CAN_F3R1_FB7_Pos)\000"
 .LASF19313:
@@ -72867,7 +74447,7 @@ DMA2_Stream3_IRQHandler:
 .LASF12193:
 	.ascii	"SYSCFG_MEMRMP_MEM_MODE_Msk (0x7UL << SYSCFG_MEMRMP_"
 	.ascii	"MEM_MODE_Pos)\000"
-.LASF19511:
+.LASF19867:
 	.ascii	"temp_sda_GPIO_Port GPIOC\000"
 .LASF6379:
 	.ascii	"DMA_LIFCR_CHTIF1 DMA_LIFCR_CHTIF1_Msk\000"
@@ -72884,6 +74464,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	" * 2UL)) | ((ADC_CR2_JEXTSEL) >> (4UL * 3UL)))\000"
 .LASF16008:
 	.ascii	"__GPIOI_CLK_ENABLE __HAL_RCC_GPIOI_CLK_ENABLE\000"
+.LASF19547:
+	.ascii	"__need_wint_t\000"
 .LASF10368:
 	.ascii	"RCC_APB2ENR_SDIOEN_Msk (0x1UL << RCC_APB2ENR_SDIOEN"
 	.ascii	"_Pos)\000"
@@ -72895,6 +74477,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"G_SNDLPM_Pos)\000"
 .LASF3982:
 	.ascii	"CAN_F10R1_FB7 CAN_F10R1_FB7_Msk\000"
+.LASF19569:
+	.ascii	"__lock_release(lock) __retarget_lock_release(lock)\000"
 .LASF11303:
 	.ascii	"RTC_TAFCR_TAMPINSEL RTC_TAFCR_TAMP1INSEL\000"
 .LASF7076:
@@ -72983,6 +74567,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_RI1R_RTR_Pos (1U)\000"
 .LASF341:
 	.ascii	"__USQ_IBIT__ 0\000"
+.LASF19690:
+	.ascii	"__STRING(x) #x\000"
 .LASF13165:
 	.ascii	"DBGMCU_APB1_FZ_DBG_TIM6_STOP_Msk (0x1UL << DBGMCU_A"
 	.ascii	"PB1_FZ_DBG_TIM6_STOP_Pos)\000"
@@ -73048,7 +74634,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"IZ_RXFD_Pos)\000"
 .LASF7930:
 	.ascii	"FMC_SDTR2_TRAS_Pos (8U)\000"
-.LASF19575:
+.LASF19931:
 	.ascii	"Init\000"
 .LASF9190:
 	.ascii	"I2C_SR2_BUSY_Pos (1U)\000"
@@ -73085,6 +74671,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"QUADSPI_SR_SMF QUADSPI_SR_SMF_Msk\000"
 .LASF5097:
 	.ascii	"CAN_F7R2_FB27_Msk (0x1UL << CAN_F7R2_FB27_Pos)\000"
+.LASF19485:
+	.ascii	"DISPL_PRESCALER SPI_BAUDRATEPRESCALER_4\000"
 .LASF14216:
 	.ascii	"USB_OTG_DIEPINT_XFRC USB_OTG_DIEPINT_XFRC_Msk\000"
 .LASF13509:
@@ -73126,6 +74714,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_BSRR_BR4_Msk (0x1UL << GPIO_BSRR_BR4_Pos)\000"
 .LASF7898:
 	.ascii	"FMC_SDTR1_TWR_Pos (16U)\000"
+.LASF19511:
+	.ascii	"_MB_LEN_MAX 1\000"
 .LASF922:
 	.ascii	"SCB_CFSR_MMARVALID_Pos (SCB_SHCSR_MEMFAULTACT_Pos +"
 	.ascii	" 7U)\000"
@@ -73336,6 +74926,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TIM_BDTR_OSSR_Pos (11U)\000"
 .LASF8088:
 	.ascii	"GPIO_MODER_MODE0_Pos GPIO_MODER_MODER0_Pos\000"
+.LASF19526:
+	.ascii	"__RAND_MAX\000"
 .LASF429:
 	.ascii	"__ARM_NEON__\000"
 .LASF4962:
@@ -73344,6 +74936,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"IS_SPI_ALL_INSTANCE(INSTANCE) (((INSTANCE) == SPI1)"
 	.ascii	" || ((INSTANCE) == SPI2) || ((INSTANCE) == SPI3) ||"
 	.ascii	" ((INSTANCE) == SPI4))\000"
+.LASF19804:
+	.ascii	"DD_MAGENTA 0x8020\000"
 .LASF12419:
 	.ascii	"SYSCFG_EXTICR4_EXTI14_PF 0x0500U\000"
 .LASF5745:
@@ -73379,7 +74973,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"HAL_ADC_STATE_ERROR_CONFIG 0x00000020U\000"
 .LASF2932:
 	.ascii	"CAN_FA1R_FACT5 CAN_FA1R_FACT5_Msk\000"
-.LASF19566:
+.LASF19922:
 	.ascii	"DMA_InitTypeDef\000"
 .LASF15588:
 	.ascii	"__GPIOB_CLK_ENABLE __HAL_RCC_GPIOB_CLK_ENABLE\000"
@@ -73407,6 +75001,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ID_Pos)\000"
 .LASF17871:
 	.ascii	"ADC_INJ_TRIG_EXTEN_BITOFFSET_POS (20UL)\000"
+.LASF19675:
+	.ascii	"__GNUC_VA_LIST_COMPATIBILITY 1\000"
 .LASF15678:
 	.ascii	"__OTGFS_CLK_ENABLE __HAL_RCC_OTGFS_CLK_ENABLE\000"
 .LASF13702:
@@ -73586,7 +75182,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SAI_xCR2_TRIS SAI_xCR2_TRIS_Msk\000"
 .LASF10641:
 	.ascii	"RCC_SSCGR_INCSTEP_Pos (13U)\000"
-.LASF19490:
+.LASF19846:
 	.ascii	"temp_scl_Pin GPIO_PIN_10\000"
 .LASF3393:
 	.ascii	"CAN_F4R1_FB3_Msk (0x1UL << CAN_F4R1_FB3_Pos)\000"
@@ -73629,6 +75225,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ADC_CR2_CONT ADC_CR2_CONT_Msk\000"
 .LASF7916:
 	.ascii	"FMC_SDTR2_TMRD_Pos (0U)\000"
+.LASF19817:
+	.ascii	"ILI9XXX_RGB_INTERFACE 0xB0\000"
 .LASF8256:
 	.ascii	"GPIO_OSPEEDR_OSPEED4_1 (0x2UL << GPIO_OSPEEDR_OSPEE"
 	.ascii	"D4_Pos)\000"
@@ -73649,7 +75247,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ION_ENABLE\000"
 .LASF3123:
 	.ascii	"CAN_F1R1_FB9_Msk (0x1UL << CAN_F1R1_FB9_Pos)\000"
-.LASF19568:
+.LASF19924:
 	.ascii	"HAL_DMA_STATE_READY\000"
 .LASF10618:
 	.ascii	"RCC_CSR_PINRSTF_Pos (26U)\000"
@@ -73663,6 +75261,9 @@ DMA2_Stream3_IRQHandler:
 .LASF6823:
 	.ascii	"EXTI_SWIER_SWIER8_Msk (0x1UL << EXTI_SWIER_SWIER8_P"
 	.ascii	"os)\000"
+.LASF19714:
+	.ascii	"__result_use_check __attribute__((__warn_unused_res"
+	.ascii	"ult__))\000"
 .LASF7066:
 	.ascii	"FLASH_OPTCR_RDP_2 (0x04UL << FLASH_OPTCR_RDP_Pos)\000"
 .LASF13634:
@@ -73788,6 +75389,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"2RST_Pos)\000"
 .LASF3209:
 	.ascii	"CAN_F2R1_FB6_Pos (6U)\000"
+.LASF19672:
+	.ascii	"__GNUCLIKE_BUILTIN_VARARGS 1\000"
 .LASF15791:
 	.ascii	"__TIM16_CLK_SLEEP_DISABLE __HAL_RCC_TIM16_CLK_SLEEP"
 	.ascii	"_DISABLE\000"
@@ -73928,6 +75531,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"DCMI_CWSIZE_CAPCNT_Pos (0U)\000"
 .LASF11876:
 	.ascii	"SDIO_STA_DCRCFAIL_Pos (1U)\000"
+.LASF19584:
+	.ascii	"_REENT_INIT_RESERVED_0 \000"
 .LASF3655:
 	.ascii	"CAN_F6R1_FB26 CAN_F6R1_FB26_Msk\000"
 .LASF3701:
@@ -73974,6 +75579,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_PLLVCO_OUTPUT_MIN 100000000U\000"
 .LASF17108:
 	.ascii	"RCC_LSI_ON ((uint8_t)0x01)\000"
+.LASF19736:
+	.ascii	"__sym_default(sym,impl,verid) __asm__(\".symver \" "
+	.ascii	"#impl \", \" #sym \"@@\" #verid)\000"
 .LASF19177:
 	.ascii	"IS_TIM_CLOCKFILTER(__ICFILTER__) ((__ICFILTER__) <="
 	.ascii	" 0xFU)\000"
@@ -74004,6 +75612,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__INT_FAST32_TYPE__ int\000"
 .LASF800:
 	.ascii	"xPSR_C_Pos 29U\000"
+.LASF19562:
+	.ascii	"__lock_init_recursive(lock) __retarget_lock_init_re"
+	.ascii	"cursive(&lock)\000"
 .LASF176:
 	.ascii	"__DBL_HAS_DENORM__ 1\000"
 .LASF9406:
@@ -74124,6 +75735,8 @@ DMA2_Stream3_IRQHandler:
 .LASF8057:
 	.ascii	"GPIO_MODER_MODER9_1 (0x2UL << GPIO_MODER_MODER9_Pos"
 	.ascii	")\000"
+.LASF19646:
+	.ascii	"_GLOBAL_REENT (&_impure_data)\000"
 .LASF6170:
 	.ascii	"DMA_SxCR_TCIE_Pos (4U)\000"
 .LASF15297:
@@ -74176,6 +75789,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RTC_CALR_CALM_0 (0x001UL << RTC_CALR_CALM_Pos)\000"
 .LASF2655:
 	.ascii	"CAN_FM1R_FBM0_Msk (0x1UL << CAN_FM1R_FBM0_Pos)\000"
+.LASF19729:
+	.ascii	"__strfmonlike(fmtarg,firstvararg) __attribute__((__"
+	.ascii	"format__ (__strfmon__, fmtarg, firstvararg)))\000"
 .LASF2479:
 	.ascii	"CAN_TDT1R_TGT CAN_TDT1R_TGT_Msk\000"
 .LASF17976:
@@ -74265,7 +75881,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"DCMI_CR_ENABLE DCMI_CR_ENABLE_Msk\000"
 .LASF8894:
 	.ascii	"GPIO_AFRL_AFSEL7 GPIO_AFRL_AFSEL7_Msk\000"
-.LASF19515:
+.LASF19871:
 	.ascii	"short int\000"
 .LASF13660:
 	.ascii	"USB_OTG_GINTSTS_RSTDET_Msk (0x1UL << USB_OTG_GINTST"
@@ -74286,7 +75902,7 @@ DMA2_Stream3_IRQHandler:
 .LASF8276:
 	.ascii	"GPIO_OSPEEDR_OSPEED8_1 (0x2UL << GPIO_OSPEEDR_OSPEE"
 	.ascii	"D8_Pos)\000"
-.LASF19509:
+.LASF19865:
 	.ascii	"usart_emg_tx_GPIO_Port GPIOC\000"
 .LASF4110:
 	.ascii	"CAN_F11R1_FB18_Msk (0x1UL << CAN_F11R1_FB18_Pos)\000"
@@ -74324,7 +75940,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"_GPIOFLPEN_Pos)\000"
 .LASF19114:
 	.ascii	"TIM_CCx_DISABLE 0x00000000U\000"
-.LASF19667:
+.LASF20023:
 	.ascii	"UsageFault_Handler\000"
 .LASF16417:
 	.ascii	"IS_TAMPER_PULLUP_STATE IS_RTC_TAMPER_PULLUP_STATE\000"
@@ -74335,7 +75951,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"|= (RCC_APB1LPENR_TIM12LPEN))\000"
 .LASF8526:
 	.ascii	"GPIO_IDR_ID12 GPIO_IDR_ID12_Msk\000"
-.LASF19508:
+.LASF19864:
 	.ascii	"usart_emg_tx_Pin GPIO_PIN_10\000"
 .LASF16504:
 	.ascii	"__HAL_USB_FS_EXTI_GET_FLAG __HAL_USB_OTG_FS_WAKEUP_"
@@ -74362,7 +75978,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__I2C3_FORCE_RESET __HAL_RCC_I2C3_FORCE_RESET\000"
 .LASF11182:
 	.ascii	"RTC_TSTR_MNT_0 (0x1UL << RTC_TSTR_MNT_Pos)\000"
-.LASF19516:
+.LASF19872:
 	.ascii	"__uint8_t\000"
 .LASF7419:
 	.ascii	"FMC_BTR3_BUSTURN_Pos (16U)\000"
@@ -74435,8 +76051,6 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"_Pos)\000"
 .LASF14774:
 	.ascii	"__HAL_HRTIM_GetCounter __HAL_HRTIM_GETCOUNTER\000"
-.LASF19483:
-	.ascii	"displ_sck_GPIO_Port GPIOA\000"
 .LASF1867:
 	.ascii	"ADC_JOFR3_JOFFSET3_Pos (0U)\000"
 .LASF16966:
@@ -74524,6 +76138,10 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USB_OTG_DOEPINT_EPDISD_Pos (1U)\000"
 .LASF12271:
 	.ascii	"SYSCFG_EXTICR1_EXTI3_PI 0x8000U\000"
+.LASF19725:
+	.ascii	"__containerof(x,s,m) ({ const volatile __typeof(((s"
+	.ascii	" *)0)->m) *__x = (x); __DEQUALIFY(s *, (const volat"
+	.ascii	"ile char *)__x - __offsetof(s, m));})\000"
 .LASF15631:
 	.ascii	"__I2C1_CLK_SLEEP_DISABLE __HAL_RCC_I2C1_CLK_SLEEP_D"
 	.ascii	"ISABLE\000"
@@ -74960,6 +76578,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ED\000"
 .LASF16303:
 	.ascii	"RCC_USBCLK_PLL RCC_USBCLKSOURCE_PLL\000"
+.LASF19491:
+	.ascii	"BKLIT_CHANNEL TIM_CHANNEL_1\000"
 .LASF18559:
 	.ascii	"FLASH_LATENCY_14 FLASH_ACR_LATENCY_14WS\000"
 .LASF3477:
@@ -75045,7 +76665,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TIM_FLAG_CC2OF TIM_SR_CC2OF\000"
 .LASF4856:
 	.ascii	"CAN_F5R2_FB11_Pos (11U)\000"
-.LASF19488:
+.LASF19844:
 	.ascii	"usart_emg_rx_Pin GPIO_PIN_5\000"
 .LASF10895:
 	.ascii	"RTC_CR_COSEL_Pos (19U)\000"
@@ -75323,9 +76943,14 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_APB1ENR_DACEN_Pos (29U)\000"
 .LASF9839:
 	.ascii	"RCC_CR_PLLSAIRDY RCC_CR_PLLSAIRDY_Msk\000"
+.LASF19570:
+	.ascii	"__lock_release_recursive(lock) __retarget_lock_rele"
+	.ascii	"ase_recursive(lock)\000"
 .LASF738:
 	.ascii	"__CM4_CMSIS_VERSION ((__CM4_CMSIS_VERSION_MAIN << 1"
 	.ascii	"6U) | __CM4_CMSIS_VERSION_SUB )\000"
+.LASF19803:
+	.ascii	"DD_YELLOW 0x8400\000"
 .LASF5161:
 	.ascii	"CAN_F8R2_FB16 CAN_F8R2_FB16_Msk\000"
 .LASF13371:
@@ -75377,6 +77002,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RESC_Pos)\000"
 .LASF5282:
 	.ascii	"CAN_F9R2_FB25_Pos (25U)\000"
+.LASF19506:
+	.ascii	"_HAVE_CC_INHIBIT_LOOP_TO_LIBCALL 1\000"
 .LASF19444:
 	.ascii	"__HAL_DBGMCU_FREEZE_I2C1_TIMEOUT() (DBGMCU->APB1FZ "
 	.ascii	"|= (DBGMCU_APB1_FZ_DBG_I2C1_SMBUS_TIMEOUT))\000"
@@ -75566,8 +77193,6 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RTC_DR_MU_2 (0x4UL << RTC_DR_MU_Pos)\000"
 .LASF11454:
 	.ascii	"SAI_xCR2_TRIS_Msk (0x1UL << SAI_xCR2_TRIS_Pos)\000"
-.LASF19480:
-	.ascii	"touch_int_Pin GPIO_PIN_4\000"
 .LASF14393:
 	.ascii	"USB_OTG_DOEPINT_STPKTRX_Msk (0x1UL << USB_OTG_DOEPI"
 	.ascii	"NT_STPKTRX_Pos)\000"
@@ -75590,6 +77215,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_AFRL_AFRL2_1 GPIO_AFRL_AFSEL2_1\000"
 .LASF3451:
 	.ascii	"CAN_F4R1_FB22 CAN_F4R1_FB22_Msk\000"
+.LASF19670:
+	.ascii	"__GNUCLIKE_CTOR_SECTION_HANDLING 1\000"
 .LASF17017:
 	.ascii	"__HAL_RCC_ADC3_CLK_SLEEP_DISABLE() (RCC->APB2LPENR "
 	.ascii	"&= ~(RCC_APB2LPENR_ADC3LPEN))\000"
@@ -76087,7 +77714,7 @@ DMA2_Stream3_IRQHandler:
 .LASF10341:
 	.ascii	"RCC_APB1ENR_PWREN_Msk (0x1UL << RCC_APB1ENR_PWREN_P"
 	.ascii	"os)\000"
-.LASF19547:
+.LASF19903:
 	.ascii	"BDTR\000"
 .LASF3865:
 	.ascii	"CAN_F9R1_FB0 CAN_F9R1_FB0_Msk\000"
@@ -76217,7 +77844,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USB_OTG_GINTSTS_HCINT USB_OTG_GINTSTS_HCINT_Msk\000"
 .LASF12657:
 	.ascii	"TIM_CCMR1_OC1FE_Msk (0x1UL << TIM_CCMR1_OC1FE_Pos)\000"
-.LASF19650:
+.LASF20006:
 	.ascii	"DMABurstState\000"
 .LASF6497:
 	.ascii	"EXTI_IMR_MR8_Pos (8U)\000"
@@ -76410,7 +78037,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F1R1_FB17_Msk (0x1UL << CAN_F1R1_FB17_Pos)\000"
 .LASF13018:
 	.ascii	"USART_CR2_CLKEN_Pos (11U)\000"
-.LASF19639:
+.LASF19995:
 	.ascii	"HAL_DMA_BURST_STATE_BUSY\000"
 .LASF15865:
 	.ascii	"__USART1_CLK_DISABLE __HAL_RCC_USART1_CLK_DISABLE\000"
@@ -76501,7 +78128,7 @@ DMA2_Stream3_IRQHandler:
 .LASF10234:
 	.ascii	"RCC_AHB1ENR_GPIOHEN_Msk (0x1UL << RCC_AHB1ENR_GPIOH"
 	.ascii	"EN_Pos)\000"
-.LASF19659:
+.LASF20015:
 	.ascii	"DMA2_Stream3_IRQHandler\000"
 .LASF3413:
 	.ascii	"CAN_F4R1_FB10_Pos (10U)\000"
@@ -76670,7 +78297,7 @@ DMA2_Stream3_IRQHandler:
 .LASF8019:
 	.ascii	"GPIO_MODER_MODER2_Msk (0x3UL << GPIO_MODER_MODER2_P"
 	.ascii	"os)\000"
-.LASF19565:
+.LASF19921:
 	.ascii	"PeriphBurst\000"
 .LASF18650:
 	.ascii	"I2C_OTHER_AND_LAST_FRAME (0xAA000000U)\000"
@@ -76690,6 +78317,8 @@ DMA2_Stream3_IRQHandler:
 .LASF16001:
 	.ascii	"__USART6_CLK_SLEEP_DISABLE __HAL_RCC_USART6_CLK_SLE"
 	.ascii	"EP_DISABLE\000"
+.LASF19781:
+	.ascii	"strncmpi strncasecmp\000"
 .LASF3617:
 	.ascii	"CAN_F6R1_FB14_Pos (14U)\000"
 .LASF9029:
@@ -76715,7 +78344,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"NEL_DISABLE\000"
 .LASF1241:
 	.ascii	"FPU_FPDSCR_FZ_Pos 24U\000"
-.LASF19651:
+.LASF20007:
 	.ascii	"TIM_HandleTypeDef\000"
 .LASF17418:
 	.ascii	"RCC_CSSON_BIT_NUMBER 0x13U\000"
@@ -76752,7 +78381,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_OSPEEDER_OSPEEDR1_0 GPIO_OSPEEDR_OSPEED1_0\000"
 .LASF16266:
 	.ascii	"RCC_IT_CSSHSE RCC_IT_CSS\000"
-.LASF19506:
+.LASF19862:
 	.ascii	"led_adc_Pin GPIO_PIN_9\000"
 .LASF11317:
 	.ascii	"RTC_ALRMBSSR_MASKSS_0 (0x1UL << RTC_ALRMBSSR_MASKSS"
@@ -76800,7 +78429,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FLASH_CR_LOCK FLASH_CR_LOCK_Msk\000"
 .LASF18296:
 	.ascii	"ADC_EXTERNALTRIGCONV_T1_CC1 0x00000000U\000"
-.LASF19626:
+.LASF19982:
 	.ascii	"TIM_Base_InitTypeDef\000"
 .LASF3839:
 	.ascii	"CAN_F8R1_FB24_Pos (24U)\000"
@@ -76870,6 +78499,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_AF9_CAN2 ((uint8_t)0x09)\000"
 .LASF2515:
 	.ascii	"CAN_TI2R_IDE CAN_TI2R_IDE_Msk\000"
+.LASF19708:
+	.ascii	"__pure __attribute__((__pure__))\000"
 .LASF18634:
 	.ascii	"I2C_DUALADDRESS_ENABLE I2C_OAR2_ENDUAL\000"
 .LASF17223:
@@ -77010,6 +78641,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"I2C_SR2_SMBHOST_Msk (0x1UL << I2C_SR2_SMBHOST_Pos)\000"
 .LASF8374:
 	.ascii	"GPIO_PUPDR_PUPD2_1 (0x2UL << GPIO_PUPDR_PUPD2_Pos)\000"
+.LASF19771:
+	.ascii	"__builtin_align_up(x,align) ((__typeof__(x))(((__ui"
+	.ascii	"ntptr_t)(x)+((align)-1))&(~((align)-1))))\000"
 .LASF729:
 	.ascii	"INTMAX_C(x) __INTMAX_C(x)\000"
 .LASF9468:
@@ -77181,6 +78815,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F1R2_FB6_Pos (6U)\000"
 .LASF12909:
 	.ascii	"TIM_OR_TI4_RMP_0 (0x1UL << TIM_OR_TI4_RMP_Pos)\000"
+.LASF19510:
+	.ascii	"_LITE_EXIT 1\000"
 .LASF11536:
 	.ascii	"SAI_xIMR_MUTEDETIE_Pos (1U)\000"
 .LASF3373:
@@ -77272,6 +78908,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ADC_SMPR2_SMP1_2 (0x4UL << ADC_SMPR2_SMP1_Pos)\000"
 .LASF19380:
 	.ascii	"HC_PID_SETUP 3U\000"
+.LASF19773:
+	.ascii	"__align_up(x,y) __builtin_align_up(x, y)\000"
 .LASF12255:
 	.ascii	"SYSCFG_EXTICR1_EXTI2_PD 0x0300U\000"
 .LASF19253:
@@ -77369,6 +79007,8 @@ DMA2_Stream3_IRQHandler:
 .LASF19414:
 	.ascii	"__HAL_PCD_CLEAR_FLAG(__HANDLE__,__INTERRUPT__) (((_"
 	.ascii	"_HANDLE__)->Instance->GINTSTS) &= (__INTERRUPT__))\000"
+.LASF19629:
+	.ascii	"_REENT_SIGNAL_BUF(ptr) ((ptr)->_signal_buf)\000"
 .LASF12480:
 	.ascii	"TIM_CR2_CCDS_Pos (3U)\000"
 .LASF1592:
@@ -77419,6 +79059,12 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"DBGMCU_APB1_FZ_DBG_RTC_STOP_Pos (10U)\000"
 .LASF14793:
 	.ascii	"KR_KEY_EWA IWDG_KEY_WRITE_ACCESS_ENABLE\000"
+.LASF19589:
+	.ascii	"_REENT_INIT(var) { 0, &__sf[0], &__sf[1], &__sf[2],"
+	.ascii	" 0, _NULL, _REENT_INIT_RESERVED_0 _REENT_INIT_RESER"
+	.ascii	"VED_1 _NULL, _NULL, _NULL, 0, 0, _NULL, _NULL, _NUL"
+	.ascii	"L, _NULL, _NULL, _REENT_INIT_RESERVED_6_7 _REENT_IN"
+	.ascii	"IT_RESERVED_8 _NULL, _NULL, _NULL }\000"
 .LASF9430:
 	.ascii	"FMPI2C_ICR_BERRCF_Pos (8U)\000"
 .LASF19218:
@@ -77473,6 +79119,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"DMA_LIFCR_CHTIF3_Pos (26U)\000"
 .LASF13246:
 	.ascii	"USB_OTG_GOTGCTL_HNGSCS_Pos (8U)\000"
+.LASF19851:
+	.ascii	"TOUCH_CS_GPIO_Port GPIOB\000"
 .LASF5703:
 	.ascii	"CEC_CFGR_BRESTP_Msk (0x1UL << CEC_CFGR_BRESTP_Pos)\000"
 .LASF2725:
@@ -77486,6 +79134,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TIM5_BASE (APB1PERIPH_BASE + 0x0C00UL)\000"
 .LASF8324:
 	.ascii	"GPIO_OSPEEDER_OSPEEDR4 GPIO_OSPEEDR_OSPEED4\000"
+.LASF19480:
+	.ascii	"__Z_DISPL_ILI9XXX_H \000"
 .LASF17584:
 	.ascii	"STM32f4xx_HAL_EXTI_H \000"
 .LASF14518:
@@ -77532,6 +79182,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"DMA_SxCR_HTIE DMA_SxCR_HTIE_Msk\000"
 .LASF18715:
 	.ascii	"__STM32F4xx_HAL_PWR_H \000"
+.LASF19837:
+	.ascii	"TOUCH_INT_GPIO_Port GPIOA\000"
 .LASF11360:
 	.ascii	"RTC_BKP12R_Pos (0U)\000"
 .LASF2002:
@@ -77615,6 +79267,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	")\000"
 .LASF2681:
 	.ascii	"CAN_FM1R_FBM9_Pos (9U)\000"
+.LASF19537:
+	.ascii	"_LONG_DOUBLE long double\000"
 .LASF16087:
 	.ascii	"__ADC12_CLK_DISABLE __HAL_RCC_ADC12_CLK_DISABLE\000"
 .LASF10944:
@@ -77793,10 +79447,15 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TIM_CCMR2_OC3CE_Msk (0x1UL << TIM_CCMR2_OC3CE_Pos)\000"
 .LASF1861:
 	.ascii	"ADC_JOFR1_JOFFSET1_Pos (0U)\000"
+.LASF19735:
+	.ascii	"__sym_compat(sym,impl,verid) __asm__(\".symver \" #"
+	.ascii	"impl \", \" #sym \"@\" #verid)\000"
 .LASF8935:
 	.ascii	"GPIO_AFRL_AFRL7_0 GPIO_AFRL_AFSEL7_0\000"
 .LASF13568:
 	.ascii	"USB_OTG_DOEPMSK_XFRCM USB_OTG_DOEPMSK_XFRCM_Msk\000"
+.LASF19644:
+	.ascii	"_REENT _impure_ptr\000"
 .LASF4090:
 	.ascii	"CAN_F11R1_FB11 CAN_F11R1_FB11_Msk\000"
 .LASF7700:
@@ -77906,7 +79565,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__SIZEOF_LONG_LONG__ 8\000"
 .LASF5876:
 	.ascii	"DAC_CR_MAMP2_2 (0x4UL << DAC_CR_MAMP2_Pos)\000"
-.LASF19555:
+.LASF19911:
 	.ascii	"Direction\000"
 .LASF14909:
 	.ascii	"SPI_CRCCALCULATION_ENABLED SPI_CRCCALCULATION_ENABL"
@@ -78028,6 +79687,8 @@ DMA2_Stream3_IRQHandler:
 .LASF8973:
 	.ascii	"GPIO_AFRH_AFSEL12_3 (0x8UL << GPIO_AFRH_AFSEL12_Pos"
 	.ascii	")\000"
+.LASF19571:
+	.ascii	"_ATEXIT_SIZE 32\000"
 .LASF15817:
 	.ascii	"__TIM4_FORCE_RESET __HAL_RCC_TIM4_FORCE_RESET\000"
 .LASF707:
@@ -78083,7 +79744,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TIM_CCMR2_OC3FE TIM_CCMR2_OC3FE_Msk\000"
 .LASF3105:
 	.ascii	"CAN_F1R1_FB3_Msk (0x1UL << CAN_F1R1_FB3_Pos)\000"
-.LASF19654:
+.LASF20010:
 	.ascii	"hspi1\000"
 .LASF16993:
 	.ascii	"__HAL_RCC_TIM13_CLK_SLEEP_DISABLE() (RCC->APB1LPENR"
@@ -78134,6 +79795,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__UQQ_IBIT__ 0\000"
 .LASF6232:
 	.ascii	"DMA_LISR_TEIF3 DMA_LISR_TEIF3_Msk\000"
+.LASF19503:
+	.ascii	"_ANSIDECL_H_ \000"
 .LASF1890:
 	.ascii	"ADC_SQR1_SQ14_0 (0x01UL << ADC_SQR1_SQ14_Pos)\000"
 .LASF18445:
@@ -78154,6 +79817,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_AHB1RSTR_OTGHRST_Pos (29U)\000"
 .LASF18525:
 	.ascii	"OPTIONBYTE_WRP 0x00000001U\000"
+.LASF19483:
+	.ascii	"DISPL_SPI_PORT hspi2\000"
 .LASF19010:
 	.ascii	"TIM_CLOCKSOURCE_TI1 TIM_TS_TI1FP1\000"
 .LASF925:
@@ -78227,6 +79892,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F6R1_FB28 CAN_F6R1_FB28_Msk\000"
 .LASF494:
 	.ascii	"USE_HAL_ETH_REGISTER_CALLBACKS 0U\000"
+.LASF19702:
+	.ascii	"__alloc_size(x) __attribute__((__alloc_size__(x)))\000"
 .LASF3685:
 	.ascii	"CAN_F7R1_FB4 CAN_F7R1_FB4_Msk\000"
 .LASF17195:
@@ -78235,6 +79902,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F1R2_FB21_Pos (21U)\000"
 .LASF5187:
 	.ascii	"CAN_F8R2_FB25_Msk (0x1UL << CAN_F8R2_FB25_Pos)\000"
+.LASF19624:
+	.ascii	"_REENT_MBSRTOWCS_STATE(ptr) ((ptr)->_misc->_mbsrtow"
+	.ascii	"cs_state)\000"
 .LASF10126:
 	.ascii	"RCC_APB1RSTR_SPI3RST RCC_APB1RSTR_SPI3RST_Msk\000"
 .LASF8082:
@@ -78244,6 +79914,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TIM_DIER_CC1IE_Msk (0x1UL << TIM_DIER_CC1IE_Pos)\000"
 .LASF2335:
 	.ascii	"CAN_IER_FMPIE1 CAN_IER_FMPIE1_Msk\000"
+.LASF19647:
+	.ascii	"_Kmax (sizeof (size_t) << 3)\000"
 .LASF1065:
 	.ascii	"DWT_CTRL_SYNCTAP_Msk (0x3UL << DWT_CTRL_SYNCTAP_Pos"
 	.ascii	")\000"
@@ -78295,7 +79967,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FLASH_OPTCR_RDP_7 (0x80UL << FLASH_OPTCR_RDP_Pos)\000"
 .LASF14500:
 	.ascii	"IS_UART_INSTANCE IS_UART_HALFDUPLEX_INSTANCE\000"
-.LASF19661:
+.LASF20017:
 	.ascii	"SPI1_IRQHandler\000"
 .LASF16421:
 	.ascii	"IS_WAKEUP_CLOCK IS_RTC_WAKEUP_CLOCK\000"
@@ -78464,6 +80136,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	" &= ~(RCC_AHB1LPENR_GPIOBLPEN))\000"
 .LASF20:
 	.ascii	"__SIZEOF_FLOAT__ 4\000"
+.LASF19591:
+	.ascii	"assert\000"
 .LASF12002:
 	.ascii	"SDIO_MASK_CMDACTIE_Pos (11U)\000"
 .LASF3162:
@@ -78516,6 +80190,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F9R1_FB16 CAN_F9R1_FB16_Msk\000"
 .LASF8638:
 	.ascii	"GPIO_BSRR_BS7_Msk (0x1UL << GPIO_BSRR_BS7_Pos)\000"
+.LASF19666:
+	.ascii	"__GNUCLIKE_ASM 3\000"
 .LASF6083:
 	.ascii	"DCMI_ESUR_LEU_Pos (16U)\000"
 .LASF11704:
@@ -78703,12 +80379,17 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CF_Pos)\000"
 .LASF17935:
 	.ascii	"TEMPSENSOR_CAL2_ADDR ((uint16_t*) (0x1FFF7A2EU))\000"
+.LASF19813:
+	.ascii	"color565(r,g,b) ((((r) & 0xF8) << 8) | (((g) & 0xFC"
+	.ascii	") << 3) | (((b) & 0xF8) >> 3))\000"
 .LASF3999:
 	.ascii	"CAN_F10R1_FB13_Msk (0x1UL << CAN_F10R1_FB13_Pos)\000"
 .LASF18127:
 	.ascii	"LL_ADC_AWD_CHANNEL_2_REG_INJ ((LL_ADC_CHANNEL_2 & A"
 	.ascii	"DC_CHANNEL_ID_MASK) | ADC_CR1_JAWDEN | ADC_CR1_AWDE"
 	.ascii	"N | ADC_CR1_AWDSGL)\000"
+.LASF19636:
+	.ascii	"_REENT_LOCALE(_ptr) ((_ptr)->_locale)\000"
 .LASF6582:
 	.ascii	"EXTI_EMR_MR4 EXTI_EMR_MR4_Msk\000"
 .LASF15783:
@@ -78793,6 +80474,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"QUADSPI_DCR_CSHT_1 (0x2UL << QUADSPI_DCR_CSHT_Pos)\000"
 .LASF8976:
 	.ascii	"GPIO_AFRH_AFSEL13 GPIO_AFRH_AFSEL13_Msk\000"
+.LASF19829:
+	.ascii	"ILI9XXX_POWER1 0xC1\000"
 .LASF7132:
 	.ascii	"FMC_BCR1_WAITPOL FMC_BCR1_WAITPOL_Msk\000"
 .LASF6571:
@@ -78881,6 +80564,8 @@ DMA2_Stream3_IRQHandler:
 .LASF13618:
 	.ascii	"USB_OTG_GINTSTS_NPTXFE_Msk (0x1UL << USB_OTG_GINTST"
 	.ascii	"S_NPTXFE_Pos)\000"
+.LASF19745:
+	.ascii	"_Nonnull \000"
 .LASF5668:
 	.ascii	"CAN_F13R2_FB25 CAN_F13R2_FB25_Msk\000"
 .LASF8947:
@@ -78910,6 +80595,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"_IT11\000"
 .LASF15206:
 	.ascii	"__ADC_ENABLE __HAL_ADC_ENABLE\000"
+.LASF19611:
+	.ascii	"_REENT_RAND48_ADD(ptr) ((ptr)->_r48->_add)\000"
 .LASF8659:
 	.ascii	"GPIO_BSRR_BS14_Msk (0x1UL << GPIO_BSRR_BS14_Pos)\000"
 .LASF18101:
@@ -78977,6 +80664,9 @@ DMA2_Stream3_IRQHandler:
 .LASF12222:
 	.ascii	"SYSCFG_EXTICR1_EXTI1_Msk (0xFUL << SYSCFG_EXTICR1_E"
 	.ascii	"XTI1_Pos)\000"
+.LASF19724:
+	.ascii	"__rangeof(type,start,end) (__offsetof(type, end) - "
+	.ascii	"__offsetof(type, start))\000"
 .LASF3125:
 	.ascii	"CAN_F1R1_FB10_Pos (10U)\000"
 .LASF6764:
@@ -79017,6 +80707,8 @@ DMA2_Stream3_IRQHandler:
 .LASF14400:
 	.ascii	"USB_OTG_DOEPTSIZ_PKTCNT USB_OTG_DOEPTSIZ_PKTCNT_Msk"
 	.ascii	"\000"
+.LASF19793:
+	.ascii	"D_RED 0xC000\000"
 .LASF17032:
 	.ascii	"__HAL_RCC_GET_SAI2_SOURCE() (READ_BIT(RCC->DCKCFGR,"
 	.ascii	" RCC_DCKCFGR_SAI2SRC))\000"
@@ -79025,7 +80717,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"OMIC_CLEAR_BIT((__HANDLE__)->Instance->CR3, USART_C"
 	.ascii	"R3_RTSE); (__HANDLE__)->Init.HwFlowCtl &= ~(USART_C"
 	.ascii	"R3_RTSE); } while(0U)\000"
-.LASF19665:
+.LASF20021:
 	.ascii	"DebugMon_Handler\000"
 .LASF13091:
 	.ascii	"WWDG_CR_T2 WWDG_CR_T_2\000"
@@ -79280,6 +80972,8 @@ DMA2_Stream3_IRQHandler:
 .LASF8308:
 	.ascii	"GPIO_OSPEEDR_OSPEED15_Msk (0x3UL << GPIO_OSPEEDR_OS"
 	.ascii	"PEED15_Pos)\000"
+.LASF19794:
+	.ascii	"D_GREEN 0x0600\000"
 .LASF12396:
 	.ascii	"SYSCFG_EXTICR4_EXTI12_PC 0x0002U\000"
 .LASF13631:
@@ -79296,6 +80990,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SYSCFG_EXTICR2_EXTI6_PD 0x0300U\000"
 .LASF9339:
 	.ascii	"FMPI2C_OAR2_OA2EN FMPI2C_OAR2_OA2EN_Msk\000"
+.LASF19524:
+	.ascii	"__OBSOLETE_MATH __OBSOLETE_MATH_DEFAULT\000"
 .LASF365:
 	.ascii	"__NO_INLINE__ 1\000"
 .LASF2170:
@@ -79441,6 +81137,8 @@ DMA2_Stream3_IRQHandler:
 .LASF10125:
 	.ascii	"RCC_APB1RSTR_SPI3RST_Msk (0x1UL << RCC_APB1RSTR_SPI"
 	.ascii	"3RST_Pos)\000"
+.LASF19746:
+	.ascii	"_Nullable \000"
 .LASF7277:
 	.ascii	"FMC_BCR4_WREN_Pos (12U)\000"
 .LASF15196:
@@ -79483,7 +81181,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RTC_ALRMBSSR_MASKSS_Pos (24U)\000"
 .LASF12318:
 	.ascii	"SYSCFG_EXTICR2_EXTI6_PK 0x0A00U\000"
-.LASF19623:
+.LASF19979:
 	.ascii	"ClockDivision\000"
 .LASF5789:
 	.ascii	"CEC_IER_RXACKEIE CEC_IER_RXACKEIE_Msk\000"
@@ -79524,6 +81222,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CC_AHB1ENR_DMA2EN)) == RESET)\000"
 .LASF13725:
 	.ascii	"USB_OTG_GINTMSK_EPMISM_Pos (17U)\000"
+.LASF19632:
+	.ascii	"_REENT_CVTLEN(_ptr) ((_ptr)->_cvtlen)\000"
 .LASF16923:
 	.ascii	"__HAL_RCC_SAI1_FORCE_RESET() (RCC->APB2RSTR |= (RCC"
 	.ascii	"_APB2RSTR_SAI1RST))\000"
@@ -79683,6 +81383,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CEC_CFGR_BREGEN_Msk (0x1UL << CEC_CFGR_BREGEN_Pos)\000"
 .LASF6524:
 	.ascii	"EXTI_IMR_MR17_Pos (17U)\000"
+.LASF19609:
+	.ascii	"_REENT_RAND48_SEED(ptr) ((ptr)->_r48->_seed)\000"
 .LASF3616:
 	.ascii	"CAN_F6R1_FB13 CAN_F6R1_FB13_Msk\000"
 .LASF4251:
@@ -79731,7 +81433,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"QUADSPI_CR_PRESCALER QUADSPI_CR_PRESCALER_Msk\000"
 .LASF15514:
 	.ascii	"__CRC_CLK_ENABLE __HAL_RCC_CRC_CLK_ENABLE\000"
-.LASF19645:
+.LASF20001:
 	.ascii	"HAL_TIM_ACTIVE_CHANNEL_CLEARED\000"
 .LASF1737:
 	.ascii	"ADC_CR2_EXTSEL_2 (0x4UL << ADC_CR2_EXTSEL_Pos)\000"
@@ -79753,8 +81455,6 @@ DMA2_Stream3_IRQHandler:
 .LASF10491:
 	.ascii	"RCC_APB1LPENR_SPI3LPEN_Msk (0x1UL << RCC_APB1LPENR_"
 	.ascii	"SPI3LPEN_Pos)\000"
-.LASF19487:
-	.ascii	"displ_mosi_GPIO_Port GPIOA\000"
 .LASF3003:
 	.ascii	"CAN_F0R1_FB1_Msk (0x1UL << CAN_F0R1_FB1_Pos)\000"
 .LASF3281:
@@ -79880,7 +81580,7 @@ DMA2_Stream3_IRQHandler:
 .LASF18772:
 	.ascii	"__HAL_PWR_OVERDRIVESWITCHING_DISABLE() (*(__IO uint"
 	.ascii	"32_t *) CR_ODSWEN_BB = DISABLE)\000"
-.LASF19529:
+.LASF19885:
 	.ascii	"M0AR\000"
 .LASF18279:
 	.ascii	"ADC_TWOSAMPLINGDELAY_12CYCLES ((uint32_t)(ADC_CCR_D"
@@ -79892,6 +81592,8 @@ DMA2_Stream3_IRQHandler:
 .LASF14413:
 	.ascii	"USB_OTG_PCGCCTL_PHYSUSP_Msk (0x1UL << USB_OTG_PCGCC"
 	.ascii	"TL_PHYSUSP_Pos)\000"
+.LASF19650:
+	.ascii	"__DOTS , ...\000"
 .LASF677:
 	.ascii	"INT_LEAST8_MAX (__INT_LEAST8_MAX__)\000"
 .LASF3396:
@@ -80137,7 +81839,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RTC_ISR_WUTF RTC_ISR_WUTF_Msk\000"
 .LASF5714:
 	.ascii	"CEC_CFGR_BRDNOGEN_Pos (7U)\000"
-.LASF19610:
+.LASF19966:
 	.ascii	"TxXferSize\000"
 .LASF17416:
 	.ascii	"RCC_HSION_BIT_NUMBER 0x00U\000"
@@ -80198,6 +81900,11 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RTCEN_BITNUMBER RCC_RTCEN_BIT_NUMBER\000"
 .LASF12182:
 	.ascii	"SPI_I2SCFGR_ASTRTEN SPI_I2SCFGR_ASTRTEN_Msk\000"
+.LASF19596:
+	.ascii	"_REENT_CHECK(var,what,type,size,init) do { struct _"
+	.ascii	"reent *_r = (var); if (_r->what == NULL) { _r->what"
+	.ascii	" = (type)malloc(size); __reent_assert(_r->what); in"
+	.ascii	"it; } } while (0)\000"
 .LASF7664:
 	.ascii	"FMC_PCR_TCLR_0 (0x1UL << FMC_PCR_TCLR_Pos)\000"
 .LASF16071:
@@ -80414,6 +82121,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FMC_BTR3_CLKDIV_0 (0x1UL << FMC_BTR3_CLKDIV_Pos)\000"
 .LASF7248:
 	.ascii	"FMC_BCR3_CBURSTRW FMC_BCR3_CBURSTRW_Msk\000"
+.LASF19575:
+	.ascii	"_RAND48_SEED_1 (0xabcd)\000"
 .LASF16811:
 	.ascii	"__HAL_RCC_I2C3_IS_CLK_DISABLED() ((RCC->APB1ENR & ("
 	.ascii	"RCC_APB1ENR_I2C3EN)) == RESET)\000"
@@ -80472,6 +82181,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"S_PTXQSAV_Pos)\000"
 .LASF8769:
 	.ascii	"GPIO_BRR_BR8_Pos GPIO_BSRR_BR8_Pos\000"
+.LASF19701:
+	.ascii	"__section(x) __attribute__((__section__(x)))\000"
 .LASF16479:
 	.ascii	"IS_UART_ONEBIT_SAMPLING IS_UART_ONE_BIT_SAMPLE\000"
 .LASF11466:
@@ -80564,6 +82275,10 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"DCMI_ESCR_FEC DCMI_ESCR_FEC_Msk\000"
 .LASF5596:
 	.ascii	"CAN_F13R2_FB1 CAN_F13R2_FB1_Msk\000"
+.LASF19595:
+	.ascii	"__reent_assert(x) ((x) ? (void)0 : __assert_func(__"
+	.ascii	"FILE__, __LINE__, (char *)0, \"REENT malloc succeed"
+	.ascii	"ed\"))\000"
 .LASF14020:
 	.ascii	"USB_OTG_HPRT_PSPD_1 (0x2UL << USB_OTG_HPRT_PSPD_Pos"
 	.ascii	")\000"
@@ -80575,6 +82290,8 @@ DMA2_Stream3_IRQHandler:
 .LASF15774:
 	.ascii	"__TIM12_RELEASE_RESET __HAL_RCC_TIM12_RELEASE_RESET"
 	.ascii	"\000"
+.LASF19693:
+	.ascii	"__signed signed\000"
 .LASF10929:
 	.ascii	"RTC_CR_ALRAE_Msk (0x1UL << RTC_CR_ALRAE_Pos)\000"
 .LASF7509:
@@ -80605,7 +82322,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	")\000"
 .LASF8941:
 	.ascii	"GPIO_AFRH_AFSEL8 GPIO_AFRH_AFSEL8_Msk\000"
-.LASF19562:
+.LASF19918:
 	.ascii	"FIFOMode\000"
 .LASF17861:
 	.ascii	"ADC_INJ_RANK_ID_JSQR_MASK (ADC_CHANNEL_ID_NUMBER_MA"
@@ -80747,6 +82464,8 @@ DMA2_Stream3_IRQHandler:
 .LASF10663:
 	.ascii	"RCC_PLLI2SCFGR_PLLI2SN_1 (0x002UL << RCC_PLLI2SCFGR"
 	.ascii	"_PLLI2SN_Pos)\000"
+.LASF19518:
+	.ascii	"__SYS_CONFIG_H__ \000"
 .LASF15273:
 	.ascii	"__HAL_ADC_CFGR1_CONTINUOUS ADC_CFGR1_CONTINUOUS\000"
 .LASF15448:
@@ -80965,6 +82684,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_OSPEEDER_OSPEEDR14_0 GPIO_OSPEEDR_OSPEED14_0\000"
 .LASF4963:
 	.ascii	"CAN_F6R2_FB14 CAN_F6R2_FB14_Msk\000"
+.LASF19567:
+	.ascii	"__lock_try_acquire(lock) __retarget_lock_try_acquir"
+	.ascii	"e(lock)\000"
 .LASF18693:
 	.ascii	"I2C_SPEED_FAST(__PCLK__,__SPEED__,__DUTYCYCLE__) (("
 	.ascii	"(__DUTYCYCLE__) == I2C_DUTYCYCLE_2)? I2C_CCR_CALCUL"
@@ -81023,12 +82745,16 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"((INSTANCE) == TIM14))\000"
 .LASF3112:
 	.ascii	"CAN_F1R1_FB5 CAN_F1R1_FB5_Msk\000"
+.LASF19627:
+	.ascii	"_REENT_L64A_BUF(ptr) ((ptr)->_misc->_l64a_buf)\000"
 .LASF12699:
 	.ascii	"TIM_CCMR1_IC1F_0 (0x1UL << TIM_CCMR1_IC1F_Pos)\000"
 .LASF4360:
 	.ascii	"CAN_F0R2_FB5 CAN_F0R2_FB5_Msk\000"
 .LASF225:
 	.ascii	"__FLT64_DENORM_MIN__ 4.9406564584124654e-324F64\000"
+.LASF19848:
+	.ascii	"DISPL_CS_Pin GPIO_PIN_12\000"
 .LASF18537:
 	.ascii	"OB_STDBY_RST ((uint8_t)0x00)\000"
 .LASF15723:
@@ -81138,6 +82864,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ALLING\000"
 .LASF12566:
 	.ascii	"TIM_DIER_TIE TIM_DIER_TIE_Msk\000"
+.LASF19497:
+	.ascii	"BUFLEVEL 13\000"
 .LASF15837:
 	.ascii	"__TIM8_CLK_DISABLE __HAL_RCC_TIM8_CLK_DISABLE\000"
 .LASF14580:
@@ -81350,7 +83078,7 @@ DMA2_Stream3_IRQHandler:
 .LASF8199:
 	.ascii	"GPIO_OTYPER_OT10_Msk (0x1UL << GPIO_OTYPER_OT10_Pos"
 	.ascii	")\000"
-.LASF19586:
+.LASF19942:
 	.ascii	"StreamBaseAddress\000"
 .LASF455:
 	.ascii	"__STM32F4xx_HAL_H \000"
@@ -81425,6 +83153,10 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"BLED\000"
 .LASF10030:
 	.ascii	"RCC_CIR_HSERDYC RCC_CIR_HSERDYC_Msk\000"
+.LASF19523:
+	.ascii	"__OBSOLETE_MATH_DEFAULT 1\000"
+.LASF19717:
+	.ascii	"__restrict restrict\000"
 .LASF8636:
 	.ascii	"GPIO_BSRR_BS6 GPIO_BSRR_BS6_Msk\000"
 .LASF11942:
@@ -81465,6 +83197,11 @@ DMA2_Stream3_IRQHandler:
 .LASF13615:
 	.ascii	"USB_OTG_GINTSTS_RXFLVL_Msk (0x1UL << USB_OTG_GINTST"
 	.ascii	"S_RXFLVL_Pos)\000"
+.LASF19601:
+	.ascii	"_REENT_INIT_MP(var) do { struct _reent *_r = (var);"
+	.ascii	" _r->_mp->_result_k = 0; _r->_mp->_result = _r->_mp"
+	.ascii	"->_p5s = _NULL; _r->_mp->_freelist = _NULL; } while"
+	.ascii	" (0)\000"
 .LASF14528:
 	.ascii	"RCC_MAX_FREQUENCY_SCALE2 168000000U\000"
 .LASF16589:
@@ -81473,6 +83210,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CONTROL_SPSEL_Msk (1UL << CONTROL_SPSEL_Pos)\000"
 .LASF4620:
 	.ascii	"CAN_F2R2_FB28_Msk (0x1UL << CAN_F2R2_FB28_Pos)\000"
+.LASF19806:
+	.ascii	"DD_CYAN 0x0410\000"
 .LASF1127:
 	.ascii	"TPI_FIFO0_ETM_ATVALID_Msk (0x3UL << TPI_FIFO0_ETM_A"
 	.ascii	"TVALID_Pos)\000"
@@ -81917,6 +83656,8 @@ DMA2_Stream3_IRQHandler:
 .LASF14269:
 	.ascii	"USB_OTG_HCINTMSK_ACKM_Msk (0x1UL << USB_OTG_HCINTMS"
 	.ascii	"K_ACKM_Pos)\000"
+.LASF19534:
+	.ascii	"_BEGIN_STD_C \000"
 .LASF16977:
 	.ascii	"__HAL_RCC_CAN2_CLK_SLEEP_ENABLE() (RCC->APB1LPENR |"
 	.ascii	"= (RCC_APB1LPENR_CAN2LPEN))\000"
@@ -81983,11 +83724,17 @@ DMA2_Stream3_IRQHandler:
 .LASF15928:
 	.ascii	"__TIM22_CLK_SLEEP_DISABLE __HAL_RCC_TIM22_CLK_SLEEP"
 	.ascii	"_DISABLE\000"
+.LASF19586:
+	.ascii	"_REENT_INIT_RESERVED_2 \000"
+.LASF19801:
+	.ascii	"DD_GREEN 0x0400\000"
 .LASF12556:
 	.ascii	"TIM_DIER_CC3IE_Msk (0x1UL << TIM_DIER_CC3IE_Pos)\000"
 .LASF11515:
 	.ascii	"SAI_xSLOTR_FBOFF_2 (0x04UL << SAI_xSLOTR_FBOFF_Pos)"
 	.ascii	"\000"
+.LASF19657:
+	.ascii	"__attribute_format_strfmon__(a,b) \000"
 .LASF2416:
 	.ascii	"CAN_TI0R_RTR CAN_TI0R_RTR_Msk\000"
 .LASF6016:
@@ -82043,6 +83790,8 @@ DMA2_Stream3_IRQHandler:
 .LASF6414:
 	.ascii	"DMA_HIFCR_CDMEIF7_Msk (0x1UL << DMA_HIFCR_CDMEIF7_P"
 	.ascii	"os)\000"
+.LASF19786:
+	.ascii	"RED 0xF800\000"
 .LASF5855:
 	.ascii	"DAC_CR_BOFF2_Msk (0x1UL << DAC_CR_BOFF2_Pos)\000"
 .LASF17564:
@@ -82357,6 +84106,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SAI_GCR_SYNCOUT_Pos (4U)\000"
 .LASF13901:
 	.ascii	"USB_OTG_CID_PRODUCT_ID USB_OTG_CID_PRODUCT_ID_Msk\000"
+.LASF19700:
+	.ascii	"__aligned(x) __attribute__((__aligned__(x)))\000"
 .LASF12414:
 	.ascii	"SYSCFG_EXTICR4_EXTI14_PA 0x0000U\000"
 .LASF12640:
@@ -82406,13 +84157,15 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ADC2_BASE (APB2PERIPH_BASE + 0x2100UL)\000"
 .LASF7768:
 	.ascii	"FMC_PATT_ATTHOLD2_Pos (16U)\000"
+.LASF19826:
+	.ascii	"ILI9XXX_INIT_SHORT_DELAY 5\000"
 .LASF5288:
 	.ascii	"CAN_F9R2_FB27_Pos (27U)\000"
 .LASF5032:
 	.ascii	"CAN_F7R2_FB5 CAN_F7R2_FB5_Msk\000"
 .LASF11076:
 	.ascii	"RTC_ALRMAR_ST_2 (0x4UL << RTC_ALRMAR_ST_Pos)\000"
-.LASF19536:
+.LASF19892:
 	.ascii	"I2SPR\000"
 .LASF1652:
 	.ascii	"ADC_CR1_AWDCH_2 (0x04UL << ADC_CR1_AWDCH_Pos)\000"
@@ -82716,7 +84469,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ADC_CR2_DMA_Pos (8U)\000"
 .LASF347:
 	.ascii	"__HA_IBIT__ 8\000"
-.LASF19609:
+.LASF19965:
 	.ascii	"pTxBuffPtr\000"
 .LASF1612:
 	.ascii	"DMA2_Stream2 ((DMA_Stream_TypeDef *) DMA2_Stream2_B"
@@ -82858,7 +84611,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"HC_PID_DATA0 0U\000"
 .LASF8138:
 	.ascii	"GPIO_MODER_MODE10_Pos GPIO_MODER_MODER10_Pos\000"
-.LASF19582:
+.LASF19938:
 	.ascii	"XferM1HalfCpltCallback\000"
 .LASF15775:
 	.ascii	"__TIM13_CLK_DISABLE __HAL_RCC_TIM13_CLK_DISABLE\000"
@@ -82878,7 +84631,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"I2C_MEM_ADD_MSB(__ADDRESS__) ((uint8_t)((uint16_t)("
 	.ascii	"((uint16_t)((__ADDRESS__) & (uint16_t)0xFF00)) >> 8"
 	.ascii	")))\000"
-.LASF19635:
+.LASF19991:
 	.ascii	"HAL_TIM_CHANNEL_STATE_BUSY\000"
 .LASF586:
 	.ascii	"_POSIX_SOURCE\000"
@@ -83019,7 +84772,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TIMER_A_B_C_DELAYEDPROTECTION_DELAYEDBOTH_EEV6\000"
 .LASF5000:
 	.ascii	"CAN_F6R2_FB27_Pos (27U)\000"
-.LASF19611:
+.LASF19967:
 	.ascii	"TxXferCount\000"
 .LASF17894:
 	.ascii	"ADC_CHANNEL_9_NUMBER ( ADC_CR1_AWDCH_3 | ADC_CR1_AW"
@@ -83136,6 +84889,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	" RTC_EXTI_LINE_WAKEUPTIMER_EVENT) ? __HAL_RTC_WAKEU"
 	.ascii	"PTIMER_EXTI_GENERATE_SWIT() : __HAL_RTC_TAMPER_TIME"
 	.ascii	"STAMP_EXTI_GENERATE_SWIT()))\000"
+.LASF19588:
+	.ascii	"_REENT_INIT_RESERVED_8 \000"
 .LASF10055:
 	.ascii	"RCC_AHB1RSTR_GPIOERST_Pos (4U)\000"
 .LASF11610:
@@ -83268,7 +85023,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FMC_SDTR1_TMRD_3 (0x8UL << FMC_SDTR1_TMRD_Pos)\000"
 .LASF12536:
 	.ascii	"TIM_SMCR_ETPS_Msk (0x3UL << TIM_SMCR_ETPS_Pos)\000"
-.LASF19588:
+.LASF19944:
 	.ascii	"DMA_HandleTypeDef\000"
 .LASF19405:
 	.ascii	"PCD_SPEED_HIGH USBD_HS_SPEED\000"
@@ -83288,6 +85043,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"os)\000"
 .LASF1486:
 	.ascii	"GPIOB_BASE (AHB1PERIPH_BASE + 0x0400UL)\000"
+.LASF19732:
+	.ascii	"__strong_reference(sym,aliassym) extern __typeof (s"
+	.ascii	"ym) aliassym __attribute__ ((__alias__ (#sym)))\000"
 .LASF10911:
 	.ascii	"RTC_CR_WUTIE_Msk (0x1UL << RTC_CR_WUTIE_Pos)\000"
 .LASF17507:
@@ -83612,7 +85370,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"INJECTED_CHANNELS ADC_INJECTED_CHANNELS\000"
 .LASF3500:
 	.ascii	"CAN_F5R1_FB7_Pos (7U)\000"
-.LASF19558:
+.LASF19914:
 	.ascii	"PeriphDataAlignment\000"
 .LASF3419:
 	.ascii	"CAN_F4R1_FB12_Pos (12U)\000"
@@ -83623,7 +85381,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"|= (RCC_AHB1LPENR_GPIOCLPEN))\000"
 .LASF15508:
 	.ascii	"__COMP_RELEASE_RESET __HAL_RCC_COMP_RELEASE_RESET\000"
-.LASF19613:
+.LASF19969:
 	.ascii	"RxXferSize\000"
 .LASF11046:
 	.ascii	"RTC_ALRMAR_HU_Msk (0xFUL << RTC_ALRMAR_HU_Pos)\000"
@@ -83704,7 +85462,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USART_DR_DR USART_DR_DR_Msk\000"
 .LASF3215:
 	.ascii	"CAN_F2R1_FB8_Pos (8U)\000"
-.LASF19538:
+.LASF19894:
 	.ascii	"SMCR\000"
 .LASF10454:
 	.ascii	"RCC_AHB3LPENR_QSPILPEN_Pos (1U)\000"
@@ -83714,7 +85472,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_APB2RSTR_USART6RST RCC_APB2RSTR_USART6RST_Msk\000"
 .LASF13808:
 	.ascii	"USB_OTG_NPTXFD USB_OTG_NPTXFD_Msk\000"
-.LASF19534:
+.LASF19890:
 	.ascii	"TXCRCR\000"
 .LASF7993:
 	.ascii	"FMC_SDSR_RE_Msk (0x1UL << FMC_SDSR_RE_Pos)\000"
@@ -83816,7 +85574,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_APB2LPENR_TIM9LPEN RCC_APB2LPENR_TIM9LPEN_Msk\000"
 .LASF9160:
 	.ascii	"I2C_SR1_RXNE_Pos (6U)\000"
-.LASF19616:
+.LASF19972:
 	.ascii	"TxISR\000"
 .LASF43:
 	.ascii	"__INT8_TYPE__ signed char\000"
@@ -83966,6 +85724,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"HAL_ADC_MODULE_ENABLED \000"
 .LASF10873:
 	.ascii	"RTC_DR_DT_Msk (0x3UL << RTC_DR_DT_Pos)\000"
+.LASF19792:
+	.ascii	"CYAN 0x07FF\000"
 .LASF2703:
 	.ascii	"CAN_FM1R_FBM16_Msk (0x1UL << CAN_FM1R_FBM16_Pos)\000"
 .LASF5394:
@@ -84007,6 +85767,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"QUADSPI_CR_TEIE_Pos (16U)\000"
 .LASF13276:
 	.ascii	"USB_OTG_HCFG_FSLSPCS_Pos (0U)\000"
+.LASF19832:
+	.ascii	"ILI9341_POWERB 0xCF\000"
 .LASF14412:
 	.ascii	"USB_OTG_PCGCCTL_PHYSUSP_Pos (4U)\000"
 .LASF12037:
@@ -84175,6 +85937,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"OEPTSIZ_XFRSIZ_Pos)\000"
 .LASF11724:
 	.ascii	"SPDIFRX_DR0_PT SPDIFRX_DR0_PT_Msk\000"
+.LASF19766:
+	.ascii	"__nosanitizememory \000"
 .LASF8609:
 	.ascii	"GPIO_ODR_ODR_9 GPIO_ODR_OD9\000"
 .LASF546:
@@ -84304,6 +86068,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SAI_xIMR_OVRUDRIE SAI_xIMR_OVRUDRIE_Msk\000"
 .LASF6024:
 	.ascii	"DCMI_IER_VSYNC_IE DCMI_IER_VSYNC_IE_Msk\000"
+.LASF19824:
+	.ascii	"ILI9XXX_MADCTL_180DEG 0x48\000"
 .LASF9580:
 	.ascii	"QUADSPI_CR_EN_Msk (0x1UL << QUADSPI_CR_EN_Pos)\000"
 .LASF9667:
@@ -84401,6 +86167,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"os)\000"
 .LASF294:
 	.ascii	"__USACCUM_MAX__ 0XFFFFP-8UHK\000"
+.LASF19648:
+	.ascii	"_SYS_CDEFS_H_ \000"
 .LASF3164:
 	.ascii	"CAN_F1R1_FB23_Pos (23U)\000"
 .LASF17404:
@@ -84511,6 +86279,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_APB1ENR_TIM2EN RCC_APB1ENR_TIM2EN_Msk\000"
 .LASF2772:
 	.ascii	"CAN_FS1R_FSC10_Msk (0x1UL << CAN_FS1R_FSC10_Pos)\000"
+.LASF19749:
+	.ascii	"__NULLABILITY_PRAGMA_POP \000"
 .LASF13780:
 	.ascii	"USB_OTG_GRXSTSP_EPNUM_Msk (0xFUL << USB_OTG_GRXSTSP"
 	.ascii	"_EPNUM_Pos)\000"
@@ -84518,6 +86288,10 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_LCKR_LCK14_Msk (0x1UL << GPIO_LCKR_LCK14_Pos)\000"
 .LASF2624:
 	.ascii	"CAN_RDL1R_DATA1_Pos (8U)\000"
+.LASF19600:
+	.ascii	"_REENT_CHECK_RAND48(var) _REENT_CHECK(var, _r48, st"
+	.ascii	"ruct _rand48 *, sizeof *((var)->_r48), _REENT_INIT_"
+	.ascii	"RAND48((var)))\000"
 .LASF16258:
 	.ascii	"__RCC_PLLSRC RCC_GET_PLL_OSCSOURCE\000"
 .LASF17567:
@@ -84611,6 +86385,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SPI_CR2_ERRIE SPI_CR2_ERRIE_Msk\000"
 .LASF7072:
 	.ascii	"FLASH_OPTCR_nWRP_Pos (16U)\000"
+.LASF19768:
+	.ascii	"__guarded_by(x) __lock_annotate(guarded_by(x))\000"
 .LASF12165:
 	.ascii	"SPI_I2SCFGR_I2SSTD_1 (0x2UL << SPI_I2SCFGR_I2SSTD_P"
 	.ascii	"os)\000"
@@ -84663,7 +86439,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"HPRT0_PRTSPD_HIGH_SPEED 0U\000"
 .LASF15350:
 	.ascii	"IS_OB_WDG_SOURCE IS_OB_IWDG_SOURCE\000"
-.LASF19646:
+.LASF20002:
 	.ascii	"HAL_TIM_ActiveChannel\000"
 .LASF19351:
 	.ascii	"EP_MPS_32 1U\000"
@@ -84904,7 +86680,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F9R1_FB18_Msk (0x1UL << CAN_F9R1_FB18_Pos)\000"
 .LASF13342:
 	.ascii	"USB_OTG_GOTGINT_DBCDNE_Pos (19U)\000"
-.LASF19619:
+.LASF19975:
 	.ascii	"SPI_HandleTypeDef\000"
 .LASF1668:
 	.ascii	"ADC_CR1_AWDSGL_Msk (0x1UL << ADC_CR1_AWDSGL_Pos)\000"
@@ -84965,6 +86741,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F9R2_FB21 CAN_F9R2_FB21_Msk\000"
 .LASF253:
 	.ascii	"__USFRACT_MIN__ 0.0UHR\000"
+.LASF19756:
+	.ascii	"__trylocks_exclusive(...) __lock_annotate(exclusive"
+	.ascii	"_trylock_function(__VA_ARGS__))\000"
 .LASF11720:
 	.ascii	"SPDIFRX_DR0_C_Msk (0x1UL << SPDIFRX_DR0_C_Pos)\000"
 .LASF4711:
@@ -85092,6 +86871,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"WREx_EnablePVM4(); } while(0)\000"
 .LASF4698:
 	.ascii	"CAN_F3R2_FB22_Msk (0x1UL << CAN_F3R2_FB22_Pos)\000"
+.LASF19757:
+	.ascii	"__trylocks_shared(...) __lock_annotate(shared_trylo"
+	.ascii	"ck_function(__VA_ARGS__))\000"
 .LASF2788:
 	.ascii	"CAN_FS1R_FSC15 CAN_FS1R_FSC15_Msk\000"
 .LASF4861:
@@ -85229,6 +87011,9 @@ DMA2_Stream3_IRQHandler:
 .LASF13550:
 	.ascii	"USB_OTG_HPTXSTS_PTXQSAV_6 (0x40UL << USB_OTG_HPTXST"
 	.ascii	"S_PTXQSAV_Pos)\000"
+.LASF19760:
+	.ascii	"__asserts_shared(...) __lock_annotate(assert_shared"
+	.ascii	"_lock(__VA_ARGS__))\000"
 .LASF5489:
 	.ascii	"CAN_F11R2_FB30_Pos (30U)\000"
 .LASF12921:
@@ -85250,6 +87035,8 @@ DMA2_Stream3_IRQHandler:
 .LASF7524:
 	.ascii	"FMC_BWTR1_BUSTURN_0 (0x1UL << FMC_BWTR1_BUSTURN_Pos"
 	.ascii	")\000"
+.LASF19689:
+	.ascii	"__CONCAT(x,y) __CONCAT1(x,y)\000"
 .LASF9960:
 	.ascii	"RCC_CFGR_MCO1PRE_0 (0x1UL << RCC_CFGR_MCO1PRE_Pos)\000"
 .LASF11201:
@@ -85366,7 +87153,7 @@ DMA2_Stream3_IRQHandler:
 .LASF8056:
 	.ascii	"GPIO_MODER_MODER9_0 (0x1UL << GPIO_MODER_MODER9_Pos"
 	.ascii	")\000"
-.LASF19542:
+.LASF19898:
 	.ascii	"CCER\000"
 .LASF18564:
 	.ascii	"FLASH_SECTOR_1 1U\000"
@@ -85552,6 +87339,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_TDH1R_DATA7 CAN_TDH1R_DATA7_Msk\000"
 .LASF3619:
 	.ascii	"CAN_F6R1_FB14 CAN_F6R1_FB14_Msk\000"
+.LASF19496:
+	.ascii	"TGFX_T htim3\000"
 .LASF7570:
 	.ascii	"FMC_BWTR3_ADDSET_Pos (0U)\000"
 .LASF5365:
@@ -85593,7 +87382,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_OSPEEDER_OSPEEDR9_1 GPIO_OSPEEDR_OSPEED9_1\000"
 .LASF9666:
 	.ascii	"QUADSPI_SR_SMF_Pos (3U)\000"
-.LASF19602:
+.LASF19958:
 	.ascii	"HAL_SPI_STATE_BUSY_RX\000"
 .LASF9699:
 	.ascii	"QUADSPI_CCR_INSTRUCTION_Pos (0U)\000"
@@ -85629,6 +87418,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"_Pos)\000"
 .LASF13595:
 	.ascii	"USB_OTG_DOEPMSK_BERRM USB_OTG_DOEPMSK_BERRM_Msk\000"
+.LASF19825:
+	.ascii	"ILI9XXX_MADCTL_270DEG 0x28\000"
 .LASF181:
 	.ascii	"__LDBL_DIG__ 15\000"
 .LASF17737:
@@ -85650,7 +87441,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F3R2_FB27_Pos (27U)\000"
 .LASF11040:
 	.ascii	"RTC_ALRMAR_HT_Pos (20U)\000"
-.LASF19596:
+.LASF19952:
 	.ascii	"CRCPolynomial\000"
 .LASF17080:
 	.ascii	"IS_RCC_PLLI2SP_VALUE(VALUE) (((VALUE) == RCC_PLLI2S"
@@ -85778,8 +87569,12 @@ DMA2_Stream3_IRQHandler:
 .LASF14972:
 	.ascii	"UART_ONE_BIT_SAMPLE_DISABLED UART_ONE_BIT_SAMPLE_DI"
 	.ascii	"SABLE\000"
-.LASF19601:
+.LASF19957:
 	.ascii	"HAL_SPI_STATE_BUSY_TX\000"
+.LASF19597:
+	.ascii	"_REENT_CHECK_TM(var) _REENT_CHECK(var, _localtime_b"
+	.ascii	"uf, struct __tm *, sizeof *((var)->_localtime_buf),"
+	.ascii	" )\000"
 .LASF6543:
 	.ascii	"EXTI_IMR_IM1 EXTI_IMR_MR1\000"
 .LASF14386:
@@ -85917,6 +87712,8 @@ DMA2_Stream3_IRQHandler:
 .LASF14868:
 	.ascii	"RTC_TAMPERMASK_FLAG_DISABLED RTC_TAMPERMASK_FLAG_DI"
 	.ascii	"SABLE\000"
+.LASF19737:
+	.ascii	"__FBSDID(s) struct __hack\000"
 .LASF7325:
 	.ascii	"FMC_BTR1_CLKDIV_Msk (0xFUL << FMC_BTR1_CLKDIV_Pos)\000"
 .LASF9226:
@@ -85982,6 +87779,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	" ADC_CHANNEL_SMPx_BITOFFSET_POS))\000"
 .LASF793:
 	.ascii	"APSR_GE_Msk (0xFUL << APSR_GE_Pos)\000"
+.LASF19628:
+	.ascii	"_REENT_GETDATE_ERR_P(ptr) (&((ptr)->_misc->_getdate"
+	.ascii	"_err))\000"
 .LASF7124:
 	.ascii	"FMC_BCR1_FACCEN_Pos (6U)\000"
 .LASF5969:
@@ -86033,6 +87833,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F13R1_FB12_Pos (12U)\000"
 .LASF6106:
 	.ascii	"DCMI_DR_BYTE1 DCMI_DR_BYTE1_Msk\000"
+.LASF19770:
+	.ascii	"__builtin_is_aligned(x,align) (((__uintptr_t)x & (("
+	.ascii	"align) - 1)) == 0)\000"
 .LASF3961:
 	.ascii	"CAN_F10R1_FB0 CAN_F10R1_FB0_Msk\000"
 .LASF14631:
@@ -86103,7 +87906,7 @@ DMA2_Stream3_IRQHandler:
 .LASF16386:
 	.ascii	"RCC_DFSDMCLKSOURCE_SYSCLK RCC_DFSDM1CLKSOURCE_SYSCL"
 	.ascii	"K\000"
-.LASF19638:
+.LASF19994:
 	.ascii	"HAL_DMA_BURST_STATE_READY\000"
 .LASF12805:
 	.ascii	"TIM_CCER_CC3E TIM_CCER_CC3E_Msk\000"
@@ -86126,6 +87929,8 @@ DMA2_Stream3_IRQHandler:
 .LASF11289:
 	.ascii	"RTC_TAFCR_TAMP2TRG_Msk (0x1UL << RTC_TAFCR_TAMP2TRG"
 	.ascii	"_Pos)\000"
+.LASF19671:
+	.ascii	"__GNUCLIKE_BUILTIN_CONSTANT_P 1\000"
 .LASF13956:
 	.ascii	"USB_OTG_DIEPEACHMSK1_ITTXFEMSK_Pos (4U)\000"
 .LASF4197:
@@ -86180,7 +87985,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"DOEPEACHMSK1_INEPNMM_Pos)\000"
 .LASF7579:
 	.ascii	"FMC_BWTR3_ADDHLD FMC_BWTR3_ADDHLD_Msk\000"
-.LASF19530:
+.LASF19886:
 	.ascii	"M1AR\000"
 .LASF19417:
 	.ascii	"__HAL_PCD_GATE_PHYCLOCK(__HANDLE__) *(__IO uint32_t"
@@ -86197,6 +88002,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"IS_OB_SDADC12_VDD_MONITOR IS_OB_SDACD_VDD_MONITOR\000"
 .LASF5496:
 	.ascii	"CAN_F12R2_FB0_Msk (0x1UL << CAN_F12R2_FB0_Pos)\000"
+.LASF19558:
+	.ascii	"_LOCK_RECURSIVE_T _LOCK_T\000"
 .LASF18416:
 	.ascii	"ADC_INJECTED_RANK_1 0x00000001U\000"
 .LASF12852:
@@ -86208,6 +88015,8 @@ DMA2_Stream3_IRQHandler:
 .LASF16180:
 	.ascii	"__SPI3_IS_CLK_ENABLED __HAL_RCC_SPI3_IS_CLK_ENABLED"
 	.ascii	"\000"
+.LASF19694:
+	.ascii	"__volatile volatile\000"
 .LASF17251:
 	.ascii	"__HAL_RCC_I2C1_IS_CLK_ENABLED() ((RCC->APB1ENR & (R"
 	.ascii	"CC_APB1ENR_I2C1EN)) != RESET)\000"
@@ -86262,6 +88071,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"8EN); UNUSED(tmpreg); } while(0U)\000"
 .LASF13015:
 	.ascii	"USART_CR2_CPOL_Pos (10U)\000"
+.LASF19777:
+	.ascii	"_SYS__LOCALE_H \000"
 .LASF6090:
 	.ascii	"DCMI_CWSTRT_HOFFCNT_Msk (0x3FFFUL << DCMI_CWSTRT_HO"
 	.ascii	"FFCNT_Pos)\000"
@@ -86370,7 +88181,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	" || ((INSTANCE) == TIM2) || ((INSTANCE) == TIM3) ||"
 	.ascii	" ((INSTANCE) == TIM4) || ((INSTANCE) == TIM5) || (("
 	.ascii	"INSTANCE) == TIM8))\000"
-.LASF19507:
+.LASF19863:
 	.ascii	"led_adc_GPIO_Port GPIOA\000"
 .LASF6656:
 	.ascii	"EXTI_EMR_EM19 EXTI_EMR_MR19\000"
@@ -86430,7 +88241,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ADC_CR1_AWDSGL_Pos (9U)\000"
 .LASF2560:
 	.ascii	"CAN_RI0R_IDE CAN_RI0R_IDE_Msk\000"
-.LASF19666:
+.LASF20022:
 	.ascii	"SVC_Handler\000"
 .LASF17809:
 	.ascii	"MPU_REGION_NUMBER5 ((uint8_t)0x05)\000"
@@ -86573,6 +88384,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"\000"
 .LASF8365:
 	.ascii	"GPIO_PUPDR_PUPD1_Pos (2U)\000"
+.LASF19651:
+	.ascii	"__THROW \000"
 .LASF12888:
 	.ascii	"TIM_DCR_DBA_3 (0x08UL << TIM_DCR_DBA_Pos)\000"
 .LASF6044:
@@ -86587,13 +88400,13 @@ DMA2_Stream3_IRQHandler:
 .LASF17443:
 	.ascii	"IS_RCC_HSI(HSI) (((HSI) == RCC_HSI_OFF) || ((HSI) ="
 	.ascii	"= RCC_HSI_ON))\000"
-.LASF19641:
+.LASF19997:
 	.ascii	"HAL_TIM_ACTIVE_CHANNEL_1\000"
-.LASF19642:
+.LASF19998:
 	.ascii	"HAL_TIM_ACTIVE_CHANNEL_2\000"
-.LASF19643:
+.LASF19999:
 	.ascii	"HAL_TIM_ACTIVE_CHANNEL_3\000"
-.LASF19644:
+.LASF20000:
 	.ascii	"HAL_TIM_ACTIVE_CHANNEL_4\000"
 .LASF3541:
 	.ascii	"CAN_F5R1_FB20 CAN_F5R1_FB20_Msk\000"
@@ -86650,6 +88463,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"D6_Pos)\000"
 .LASF5257:
 	.ascii	"CAN_F9R2_FB16 CAN_F9R2_FB16_Msk\000"
+.LASF19785:
+	.ascii	"SIZEBUF (1<<BUFLEVEL)\000"
 .LASF8825:
 	.ascii	"GPIO_LCKR_LCK11_Pos (11U)\000"
 .LASF16816:
@@ -86861,6 +88676,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"INT_LEAST64_MIN (-__INT_LEAST64_MAX__ - 1)\000"
 .LASF11151:
 	.ascii	"RTC_ALRMBR_SU_3 (0x8UL << RTC_ALRMBR_SU_Pos)\000"
+.LASF19797:
+	.ascii	"D_MAGENTA 0xC018\000"
 .LASF14093:
 	.ascii	"USB_OTG_DIEPCTL_SD0PID_SEVNFRM_Pos (28U)\000"
 .LASF2168:
@@ -86910,6 +88727,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"(RCC_APB1RSTR_UART4RST))\000"
 .LASF6094:
 	.ascii	"DCMI_CWSTRT_VST DCMI_CWSTRT_VST_Msk\000"
+.LASF19633:
+	.ascii	"_REENT_EMERGENCY(_ptr) ((_ptr)->_emergency)\000"
 .LASF5119:
 	.ascii	"CAN_F8R2_FB2 CAN_F8R2_FB2_Msk\000"
 .LASF3583:
@@ -86972,6 +88791,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ARITY__) == TIM_TRIGGERPOLARITY_RISING ) || ((__POL"
 	.ascii	"ARITY__) == TIM_TRIGGERPOLARITY_FALLING ) || ((__PO"
 	.ascii	"LARITY__) == TIM_TRIGGERPOLARITY_BOTHEDGE ))\000"
+.LASF19750:
+	.ascii	"__arg_type_tag(arg_kind,arg_idx,type_tag_idx) \000"
 .LASF14786:
 	.ascii	"I2C_NOSTRETCH_ENABLED I2C_NOSTRETCH_ENABLE\000"
 .LASF3047:
@@ -87003,6 +88824,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"os)\000"
 .LASF12513:
 	.ascii	"TIM_SMCR_SMS_Pos (0U)\000"
+.LASF19654:
+	.ascii	"__long_double_t long double\000"
 .LASF2803:
 	.ascii	"CAN_FS1R_FSC20 CAN_FS1R_FSC20_Msk\000"
 .LASF14794:
@@ -87064,6 +88887,8 @@ DMA2_Stream3_IRQHandler:
 .LASF11816:
 	.ascii	"SDIO_RESPCMD_RESPCMD_Msk (0x3FUL << SDIO_RESPCMD_RE"
 	.ascii	"SPCMD_Pos)\000"
+.LASF19587:
+	.ascii	"_REENT_INIT_RESERVED_6_7 \000"
 .LASF3276:
 	.ascii	"CAN_F2R1_FB28_Msk (0x1UL << CAN_F2R1_FB28_Pos)\000"
 .LASF5287:
@@ -87294,7 +89119,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"8\000"
 .LASF4645:
 	.ascii	"CAN_F3R2_FB4 CAN_F3R2_FB4_Msk\000"
-.LASF19594:
+.LASF19950:
 	.ascii	"TIMode\000"
 .LASF12574:
 	.ascii	"TIM_DIER_CC1DE_Msk (0x1UL << TIM_DIER_CC1DE_Pos)\000"
@@ -87337,6 +89162,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__HAL_FLASH_INSTRUCTION_CACHE_RESET() do {FLASH->AC"
 	.ascii	"R |= FLASH_ACR_ICRST; FLASH->ACR &= ~FLASH_ACR_ICRS"
 	.ascii	"T; }while(0U)\000"
+.LASF19796:
+	.ascii	"D_YELLOW 0xC600\000"
 .LASF2396:
 	.ascii	"CAN_BTR_TS2 CAN_BTR_TS2_Msk\000"
 .LASF14861:
@@ -87362,7 +89189,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"IS_UART_WAKEUPMETHOD(WAKEUP) (((WAKEUP) == UART_WAK"
 	.ascii	"EUPMETHOD_IDLELINE) || ((WAKEUP) == UART_WAKEUPMETH"
 	.ascii	"OD_ADDRESSMARK))\000"
-.LASF19649:
+.LASF20005:
 	.ascii	"ChannelNState\000"
 .LASF6454:
 	.ascii	"DMA_HIFCR_CHTIF4 DMA_HIFCR_CHTIF4_Msk\000"
@@ -87408,6 +89235,9 @@ DMA2_Stream3_IRQHandler:
 .LASF9691:
 	.ascii	"QUADSPI_FCR_CSMF_Msk (0x1UL << QUADSPI_FCR_CSMF_Pos"
 	.ascii	")\000"
+.LASF19626:
+	.ascii	"_REENT_WCSRTOMBS_STATE(ptr) ((ptr)->_misc->_wcsrtom"
+	.ascii	"bs_state)\000"
 .LASF10963:
 	.ascii	"RTC_ISR_TSOVF_Msk (0x1UL << RTC_ISR_TSOVF_Pos)\000"
 .LASF3876:
@@ -87526,6 +89356,10 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FG_TXFELVL_Pos)\000"
 .LASF12352:
 	.ascii	"SYSCFG_EXTICR3_EXTI9_PA 0x0000U\000"
+.LASF19607:
+	.ascii	"_REENT_SIGNGAM(ptr) ((ptr)->_gamma_signgam)\000"
+.LASF19819:
+	.ascii	"ILI9XXX_COLUMN_ADDR 0x2A\000"
 .LASF15712:
 	.ascii	"__SAI2_RELEASE_RESET __HAL_RCC_SAI2_RELEASE_RESET\000"
 .LASF573:
@@ -87602,6 +89436,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TIM_EventSource_CC1 TIM_EVENTSOURCE_CC1\000"
 .LASF8571:
 	.ascii	"GPIO_ODR_OD6_Msk (0x1UL << GPIO_ODR_OD6_Pos)\000"
+.LASF19489:
+	.ascii	"BKLIT_TIMER TIM2\000"
 .LASF2364:
 	.ascii	"CAN_ESR_EWGF_Msk (0x1UL << CAN_ESR_EWGF_Pos)\000"
 .LASF16187:
@@ -87640,6 +89476,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_AFRL_AFSEL2_Pos (8U)\000"
 .LASF11957:
 	.ascii	"SDIO_ICR_CMDRENDC_Pos (6U)\000"
+.LASF19661:
+	.ascii	"__ptrvalue \000"
 .LASF10680:
 	.ascii	"RCC_PLLI2SCFGR_PLLI2SQ_1 (0x2UL << RCC_PLLI2SCFGR_P"
 	.ascii	"LLI2SQ_Pos)\000"
@@ -87731,7 +89569,7 @@ DMA2_Stream3_IRQHandler:
 .LASF9365:
 	.ascii	"FMPI2C_TIMEOUTR_TIMEOUTB_Msk (0xFFFUL << FMPI2C_TIM"
 	.ascii	"EOUTR_TIMEOUTB_Pos)\000"
-.LASF19634:
+.LASF19990:
 	.ascii	"HAL_TIM_CHANNEL_STATE_READY\000"
 .LASF15435:
 	.ascii	"HAL_RCC_CCSCallback HAL_RCC_CSSCallback\000"
@@ -87840,7 +89678,7 @@ DMA2_Stream3_IRQHandler:
 .LASF17500:
 	.ascii	"__HAL_GPIO_EXTI_CLEAR_IT(__EXTI_LINE__) (EXTI->PR ="
 	.ascii	" (__EXTI_LINE__))\000"
-.LASF19553:
+.LASF19909:
 	.ascii	"HAL_LockTypeDef\000"
 .LASF6911:
 	.ascii	"EXTI_PR_PR14 EXTI_PR_PR14_Msk\000"
@@ -87862,6 +89700,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USB_OTG_FS_HOST_MAX_CHANNEL_NBR 12U\000"
 .LASF12114:
 	.ascii	"SPI_SR_TXE_Pos (1U)\000"
+.LASF19623:
+	.ascii	"_REENT_MBRTOWC_STATE(ptr) ((ptr)->_misc->_mbrtowc_s"
+	.ascii	"tate)\000"
 .LASF381:
 	.ascii	"__HAVE_SPECULATION_SAFE_VALUE 1\000"
 .LASF14349:
@@ -88007,6 +89848,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"L_1_SMP)\000"
 .LASF13194:
 	.ascii	"DBGMCU_APB1_FZ_DBG_I2C3_SMBUS_TIMEOUT_Pos (23U)\000"
+.LASF19723:
+	.ascii	"__offsetof(type,field) offsetof(type, field)\000"
 .LASF2721:
 	.ascii	"CAN_FM1R_FBM22_Msk (0x1UL << CAN_FM1R_FBM22_Pos)\000"
 .LASF15025:
@@ -88023,7 +89866,7 @@ DMA2_Stream3_IRQHandler:
 .LASF9702:
 	.ascii	"QUADSPI_CCR_INSTRUCTION_0 (0x01UL << QUADSPI_CCR_IN"
 	.ascii	"STRUCTION_Pos)\000"
-.LASF19533:
+.LASF19889:
 	.ascii	"RXCRCR\000"
 .LASF5240:
 	.ascii	"CAN_F9R2_FB11_Pos (11U)\000"
@@ -88070,6 +89913,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SYSCFG_FLAG_VREF_READY SYSCFG_FLAG_VREFINT_READY\000"
 .LASF11034:
 	.ascii	"RTC_ALRMAR_MSK3_Pos (23U)\000"
+.LASF19656:
+	.ascii	"__attribute_pure__ \000"
 .LASF12220:
 	.ascii	"SYSCFG_EXTICR1_EXTI0 SYSCFG_EXTICR1_EXTI0_Msk\000"
 .LASF14471:
@@ -88277,7 +90122,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F13R2_FB16_Msk (0x1UL << CAN_F13R2_FB16_Pos)\000"
 .LASF11265:
 	.ascii	"RTC_TAFCR_TAMP1INSEL RTC_TAFCR_TAMP1INSEL_Msk\000"
-.LASF19647:
+.LASF20003:
 	.ascii	"hdma\000"
 .LASF7921:
 	.ascii	"FMC_SDTR2_TMRD_2 (0x4UL << FMC_SDTR2_TMRD_Pos)\000"
@@ -88320,7 +90165,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TSC_SYNC_POL_RISE_HIGH TSC_SYNC_POLARITY_RISING\000"
 .LASF4429:
 	.ascii	"CAN_F0R2_FB28 CAN_F0R2_FB28_Msk\000"
-.LASF19656:
+.LASF20012:
 	.ascii	"HAL_DMA_IRQHandler\000"
 .LASF19104:
 	.ascii	"TIM_DMABURSTLENGTH_17TRANSFERS 0x00001000U\000"
@@ -88394,6 +90239,8 @@ DMA2_Stream3_IRQHandler:
 .LASF1620:
 	.ascii	"FMC_Bank1E ((FMC_Bank1E_TypeDef *) FMC_Bank1E_R_BAS"
 	.ascii	"E)\000"
+.LASF19630:
+	.ascii	"_REENT_CLEANUP(_ptr) ((_ptr)->__cleanup)\000"
 .LASF5594:
 	.ascii	"CAN_F13R2_FB1_Pos (1U)\000"
 .LASF7092:
@@ -88424,8 +90271,6 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_TDL2R_DATA1_Pos (8U)\000"
 .LASF13695:
 	.ascii	"USB_OTG_GINTMSK_RXFLVLM_Pos (4U)\000"
-.LASF19497:
-	.ascii	"displ_dc_GPIO_Port GPIOB\000"
 .LASF5794:
 	.ascii	"CEC_IER_TXBRIE_Msk (0x1UL << CEC_IER_TXBRIE_Pos)\000"
 .LASF17429:
@@ -88665,6 +90510,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SDIO ((SDIO_TypeDef *) SDIO_BASE)\000"
 .LASF5547:
 	.ascii	"CAN_F12R2_FB17_Msk (0x1UL << CAN_F12R2_FB17_Pos)\000"
+.LASF19784:
+	.ascii	"SPI_DATA GPIO_PIN_SET\000"
 .LASF13825:
 	.ascii	"USB_OTG_GNPTXSTS_NPTQXSAV_1 (0x02UL << USB_OTG_GNPT"
 	.ascii	"XSTS_NPTQXSAV_Pos)\000"
@@ -88682,7 +90529,7 @@ DMA2_Stream3_IRQHandler:
 .LASF14831:
 	.ascii	"OPAMP_SEC_NONINVERTINGINPUT_VP0 OPAMP_SEC_NONINVERT"
 	.ascii	"INGINPUT_IO0\000"
-.LASF19670:
+.LASF20026:
 	.ascii	"HardFault_Handler\000"
 .LASF4056:
 	.ascii	"CAN_F11R1_FB0_Msk (0x1UL << CAN_F11R1_FB0_Pos)\000"
@@ -88996,6 +90843,8 @@ DMA2_Stream3_IRQHandler:
 .LASF16903:
 	.ascii	"__HAL_RCC_TIM2_RELEASE_RESET() (RCC->APB1RSTR &= ~("
 	.ascii	"RCC_APB1RSTR_TIM2RST))\000"
+.LASF19674:
+	.ascii	"__GNUCLIKE_BUILTIN_VAALIST 1\000"
 .LASF18514:
 	.ascii	"__HAL_FLASH_GET_FLAG(__FLAG__) ((FLASH->SR & (__FLA"
 	.ascii	"G__)))\000"
@@ -89077,7 +90926,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TIM_CR2_OIS3_Pos (12U)\000"
 .LASF12489:
 	.ascii	"TIM_CR2_TI1S_Pos (7U)\000"
-.LASF19631:
+.LASF19987:
 	.ascii	"HAL_TIM_STATE_ERROR\000"
 .LASF10216:
 	.ascii	"RCC_AHB1ENR_GPIOBEN_Msk (0x1UL << RCC_AHB1ENR_GPIOB"
@@ -89145,6 +90994,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_FFA1R_FFA17_Pos (17U)\000"
 .LASF18492:
 	.ascii	"FLASH_PSIZE_BYTE 0x00000000U\000"
+.LASF19682:
+	.ascii	"__CC_SUPPORTS___INLINE__ 1\000"
 .LASF18270:
 	.ascii	"ADC_CLOCK_SYNC_PCLK_DIV6 ((uint32_t)ADC_CCR_ADCPRE_"
 	.ascii	"1)\000"
@@ -89159,6 +91010,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"NEL_3) ? ((__HANDLE__)->Instance->CCMR2 &= ~TIM_CCM"
 	.ascii	"R2_OC3FE) : ((__HANDLE__)->Instance->CCMR2 &= ~TIM_"
 	.ascii	"CCMR2_OC4FE))\000"
+.LASF19507:
+	.ascii	"_HAVE_INITFINI_ARRAY 1\000"
 .LASF2608:
 	.ascii	"CAN_RI1R_EXID CAN_RI1R_EXID_Msk\000"
 .LASF1108:
@@ -89184,6 +91037,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"_STDDEF_H_ \000"
 .LASF2372:
 	.ascii	"CAN_ESR_LEC_Pos (4U)\000"
+.LASF19592:
+	.ascii	"assert(__e) ((__e) ? (void)0 : __assert_func (__FIL"
+	.ascii	"E__, __LINE__, __ASSERT_FUNC, #__e))\000"
 .LASF11494:
 	.ascii	"SAI_xFRCR_FSALL_1 (0x02UL << SAI_xFRCR_FSALL_Pos)\000"
 .LASF3190:
@@ -89197,6 +91053,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	")\000"
 .LASF14719:
 	.ascii	"FLASH_ERROR_MIS HAL_FLASH_ERROR_MIS\000"
+.LASF19621:
+	.ascii	"_REENT_WCTOMB_STATE(ptr) ((ptr)->_misc->_wctomb_sta"
+	.ascii	"te)\000"
 .LASF18200:
 	.ascii	"LL_ADC_MULTI_TRIPLE_INJ_ALTERN (ADC_CCR_MULTI_4 | A"
 	.ascii	"DC_CCR_MULTI_0)\000"
@@ -89286,6 +91145,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ADC_HTR_HT ADC_HTR_HT_Msk\000"
 .LASF3555:
 	.ascii	"CAN_F5R1_FB25_Msk (0x1UL << CAN_F5R1_FB25_Pos)\000"
+.LASF19533:
+	.ascii	"_USE_GDTOA \000"
 .LASF12451:
 	.ascii	"TIM_CR1_UDIS TIM_CR1_UDIS_Msk\000"
 .LASF13555:
@@ -89293,7 +91154,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"S_PTXQTOP_Pos)\000"
 .LASF8455:
 	.ascii	"GPIO_PUPDR_PUPDR5 GPIO_PUPDR_PUPD5\000"
-.LASF19535:
+.LASF19891:
 	.ascii	"I2SCFGR\000"
 .LASF1690:
 	.ascii	"ADC_CR1_AWDEN ADC_CR1_AWDEN_Msk\000"
@@ -89328,6 +91189,8 @@ DMA2_Stream3_IRQHandler:
 .LASF16399:
 	.ascii	"RCC_FMPI2C1CLKSOURCE_APB RCC_FMPI2C1CLKSOURCE_PCLK1"
 	.ascii	"\000"
+.LASF19610:
+	.ascii	"_REENT_RAND48_MULT(ptr) ((ptr)->_r48->_mult)\000"
 .LASF15005:
 	.ascii	"JUMBO_FRAME_PAYLOAD ETH_JUMBO_FRAME_PAYLOAD\000"
 .LASF5241:
@@ -89456,6 +91319,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F13R2_FB19_Pos (19U)\000"
 .LASF5323:
 	.ascii	"CAN_F10R2_FB6 CAN_F10R2_FB6_Msk\000"
+.LASF19831:
+	.ascii	"ILI9341_POWERA 0xCB\000"
 .LASF15623:
 	.ascii	"__GPIOH_CLK_DISABLE __HAL_RCC_GPIOH_CLK_DISABLE\000"
 .LASF9252:
@@ -89487,6 +91352,8 @@ DMA2_Stream3_IRQHandler:
 .LASF10518:
 	.ascii	"RCC_APB1LPENR_FMPI2C1LPEN_Msk (0x1UL << RCC_APB1LPE"
 	.ascii	"NR_FMPI2C1LPEN_Pos)\000"
+.LASF19504:
+	.ascii	"__NEWLIB_H__ 1\000"
 .LASF19132:
 	.ascii	"__HAL_TIM_SET_PRESCALER(__HANDLE__,__PRESC__) ((__H"
 	.ascii	"ANDLE__)->Instance->PSC = (__PRESC__))\000"
@@ -89528,7 +91395,7 @@ DMA2_Stream3_IRQHandler:
 .LASF19294:
 	.ascii	"__HAL_UART_DISABLE(__HANDLE__) ((__HANDLE__)->Insta"
 	.ascii	"nce->CR1 &= ~USART_CR1_UE)\000"
-.LASF19627:
+.LASF19983:
 	.ascii	"HAL_TIM_STATE_RESET\000"
 .LASF4133:
 	.ascii	"CAN_F11R1_FB26_Pos (26U)\000"
@@ -89664,8 +91531,6 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USB_OTG_DOEPINT_AHBERR USB_OTG_DOEPINT_AHBERR_Msk\000"
 .LASF7807:
 	.ascii	"FMC_SDCR1_MWID_1 (0x2UL << FMC_SDCR1_MWID_Pos)\000"
-.LASF19501:
-	.ascii	"displ_led_GPIO_Port GPIOC\000"
 .LASF16443:
 	.ascii	"__HAL_SD_SDMMC_CLEAR_IT __HAL_SD_SDIO_CLEAR_IT\000"
 .LASF3150:
@@ -89814,6 +91679,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	" RCC_DCKCFGR_SAI1SRC))\000"
 .LASF16392:
 	.ascii	"RCC_LPTIM2CLKSOURCE_PCLK RCC_LPTIM2CLKSOURCE_PCLK1\000"
+.LASF19692:
+	.ascii	"__const const\000"
 .LASF9069:
 	.ascii	"I2C_CR1_PEC_Msk (0x1UL << I2C_CR1_PEC_Pos)\000"
 .LASF16913:
@@ -89868,6 +91735,8 @@ DMA2_Stream3_IRQHandler:
 .LASF16785:
 	.ascii	"__HAL_RCC_CAN2_CLK_DISABLE() (RCC->APB1ENR &= ~(RCC"
 	.ascii	"_APB1ENR_CAN2EN))\000"
+.LASF19548:
+	.ascii	"_MACHINE__TYPES_H \000"
 .LASF6957:
 	.ascii	"FLASH_ACR_PRFTEN FLASH_ACR_PRFTEN_Msk\000"
 .LASF1457:
@@ -89909,6 +91778,14 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RTC_TAFCR_TAMP2E RTC_TAFCR_TAMP2E_Msk\000"
 .LASF12668:
 	.ascii	"TIM_CCMR1_OC1CE_Pos (7U)\000"
+.LASF19599:
+	.ascii	"_REENT_INIT_RAND48(var) do { struct _reent *_r = (v"
+	.ascii	"ar); _r->_r48->_seed[0] = _RAND48_SEED_0; _r->_r48-"
+	.ascii	">_seed[1] = _RAND48_SEED_1; _r->_r48->_seed[2] = _R"
+	.ascii	"AND48_SEED_2; _r->_r48->_mult[0] = _RAND48_MULT_0; "
+	.ascii	"_r->_r48->_mult[1] = _RAND48_MULT_1; _r->_r48->_mul"
+	.ascii	"t[2] = _RAND48_MULT_2; _r->_r48->_add = _RAND48_ADD"
+	.ascii	"; _r->_r48->_rand_next = 1; } while (0)\000"
 .LASF5793:
 	.ascii	"CEC_IER_TXBRIE_Pos (8U)\000"
 .LASF2400:
@@ -89932,6 +91809,8 @@ DMA2_Stream3_IRQHandler:
 .LASF883:
 	.ascii	"SCB_CCR_UNALIGN_TRP_Msk (1UL << SCB_CCR_UNALIGN_TRP"
 	.ascii	"_Pos)\000"
+.LASF19713:
+	.ascii	"__fastcall __attribute__((__fastcall__))\000"
 .LASF13383:
 	.ascii	"USB_OTG_HFIR_FRIVL USB_OTG_HFIR_FRIVL_Msk\000"
 .LASF217:
@@ -89962,6 +91841,8 @@ DMA2_Stream3_IRQHandler:
 .LASF18461:
 	.ascii	"ADC_CR1_SCANCONV(_SCANCONV_MODE_) ((_SCANCONV_MODE_"
 	.ascii	") << 8U)\000"
+.LASF19563:
+	.ascii	"__lock_close(lock) __retarget_lock_close(lock)\000"
 .LASF7363:
 	.ascii	"FMC_BTR2_DATAST_3 (0x08UL << FMC_BTR2_DATAST_Pos)\000"
 .LASF12674:
@@ -89972,7 +91853,7 @@ DMA2_Stream3_IRQHandler:
 .LASF7039:
 	.ascii	"FLASH_OPTCR_OPTLOCK_Msk (0x1UL << FLASH_OPTCR_OPTLO"
 	.ascii	"CK_Pos)\000"
-.LASF19520:
+.LASF19876:
 	.ascii	"__uint32_t\000"
 .LASF16480:
 	.ascii	"__USART_ENABLE_IT __HAL_USART_ENABLE_IT\000"
@@ -90026,8 +91907,6 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SPDIFRX_DIR_THI SPDIFRX_DIR_THI_Msk\000"
 .LASF527:
 	.ascii	"MAC_ADDR3 0U\000"
-.LASF19496:
-	.ascii	"displ_dc_Pin GPIO_PIN_14\000"
 .LASF9035:
 	.ascii	"I2C_CR1_PE_Pos (0U)\000"
 .LASF778:
@@ -90229,6 +92108,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ISABLE\000"
 .LASF18845:
 	.ascii	"SPI_TIMODE_ENABLE SPI_CR2_FRF\000"
+.LASF19645:
+	.ascii	"_REENT_IS_NULL(_ptr) ((_ptr) == NULL)\000"
 .LASF9603:
 	.ascii	"QUADSPI_CR_FTHRES_0 (0x01UL << QUADSPI_CR_FTHRES_Po"
 	.ascii	"s)\000"
@@ -90299,6 +92180,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"\000"
 .LASF7041:
 	.ascii	"FLASH_OPTCR_OPTSTRT_Pos (1U)\000"
+.LASF19652:
+	.ascii	"__ASMNAME(cname) __XSTRING (__USER_LABEL_PREFIX__) "
+	.ascii	"cname\000"
 .LASF13552:
 	.ascii	"USB_OTG_HPTXSTS_PTXQTOP_Pos (24U)\000"
 .LASF8091:
@@ -90381,6 +92265,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_APB1LPENR_SPI3LPEN_Pos (15U)\000"
 .LASF5043:
 	.ascii	"CAN_F7R2_FB9_Msk (0x1UL << CAN_F7R2_FB9_Pos)\000"
+.LASF19635:
+	.ascii	"_REENT_INC(_ptr) ((_ptr)->_inc)\000"
 .LASF16080:
 	.ascii	"__DMA2D_FORCE_RESET __HAL_RCC_DMA2D_FORCE_RESET\000"
 .LASF3935:
@@ -90474,12 +92360,17 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RTC_ALRMBR_MSK3 RTC_ALRMBR_MSK3_Msk\000"
 .LASF15789:
 	.ascii	"__TIM16_CLK_DISABLE __HAL_RCC_TIM16_CLK_DISABLE\000"
+.LASF19809:
+	.ascii	"DD_WHITE 0x8410\000"
 .LASF6503:
 	.ascii	"EXTI_IMR_MR10_Pos (10U)\000"
 .LASF10255:
 	.ascii	"RCC_AHB2ENR_DCMIEN_Pos (0U)\000"
 .LASF9090:
 	.ascii	"I2C_CR2_ITEVTEN_Msk (0x1UL << I2C_CR2_ITEVTEN_Pos)\000"
+.LASF19835:
+	.ascii	"_swap_int16_t(a,b) { int16_t t = a; a = b; b = t; }"
+	.ascii	"\000"
 .LASF10926:
 	.ascii	"RTC_CR_ALRBE_Msk (0x1UL << RTC_CR_ALRBE_Pos)\000"
 .LASF12094:
@@ -90498,7 +92389,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FPU_MVFR0_FP_excep_trapping_Pos 12U\000"
 .LASF5141:
 	.ascii	"CAN_F8R2_FB10_Pos (10U)\000"
-.LASF19593:
+.LASF19949:
 	.ascii	"FirstBit\000"
 .LASF16369:
 	.ascii	"RCC_CK48CLKSOURCE_PLLSAIP RCC_CLK48CLKSOURCE_PLLSAI"
@@ -90580,11 +92471,14 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"L_PWR_VDDIO2_EXTI_ENABLE_FALLING_EDGE\000"
 .LASF6533:
 	.ascii	"EXTI_IMR_MR20_Pos (20U)\000"
+.LASF19704:
+	.ascii	"__alloc_align(x) __attribute__((__alloc_align__(x))"
+	.ascii	")\000"
 .LASF11102:
 	.ascii	"RTC_ALRMBR_MSK3_Pos (23U)\000"
 .LASF6143:
 	.ascii	"DMA_SxCR_MSIZE_Pos (13U)\000"
-.LASF19510:
+.LASF19866:
 	.ascii	"temp_sda_Pin GPIO_PIN_12\000"
 .LASF553:
 	.ascii	"PHY_JABBER_DETECTION ((uint16_t)0x0002U)\000"
@@ -90688,6 +92582,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"\000"
 .LASF1948:
 	.ascii	"ADC_SQR2_SQ10_3 (0x08UL << ADC_SQR2_SQ10_Pos)\000"
+.LASF19550:
+	.ascii	"unsigned signed\000"
 .LASF267:
 	.ascii	"__LFRACT_IBIT__ 0\000"
 .LASF17532:
@@ -90719,6 +92615,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"HAL_NAND_Read_Page HAL_NAND_Read_Page_8b\000"
 .LASF6726:
 	.ascii	"EXTI_RTSR_TR22_Pos (22U)\000"
+.LASF19726:
+	.ascii	"__printflike(fmtarg,firstvararg) __attribute__((__f"
+	.ascii	"ormat__ (__printf__, fmtarg, firstvararg)))\000"
 .LASF14280:
 	.ascii	"USB_OTG_HCINTMSK_FRMORM_Pos (9U)\000"
 .LASF15560:
@@ -90733,6 +92632,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USE_HAL_SMARTCARD_REGISTER_CALLBACKS 0U\000"
 .LASF2508:
 	.ascii	"CAN_TI2R_TXRQ_Msk (0x1UL << CAN_TI2R_TXRQ_Pos)\000"
+.LASF19795:
+	.ascii	"D_BLUE 0x0018\000"
 .LASF15504:
 	.ascii	"__CEC_CLK_ENABLE __HAL_RCC_CEC_CLK_ENABLE\000"
 .LASF8142:
@@ -90825,6 +92726,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F2R1_FB12_Msk (0x1UL << CAN_F2R1_FB12_Pos)\000"
 .LASF13761:
 	.ascii	"USB_OTG_GINTMSK_DISCINT_Pos (29U)\000"
+.LASF19535:
+	.ascii	"_END_STD_C \000"
 .LASF14348:
 	.ascii	"USB_OTG_DOEPCTL_STALL_Msk (0x1UL << USB_OTG_DOEPCTL"
 	.ascii	"_STALL_Pos)\000"
@@ -90876,7 +92779,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TIM_BDTR_BKP_Msk (0x1UL << TIM_BDTR_BKP_Pos)\000"
 .LASF19042:
 	.ascii	"TIM_BREAKPOLARITY_HIGH TIM_BDTR_BKP\000"
-.LASF19632:
+.LASF19988:
 	.ascii	"HAL_TIM_StateTypeDef\000"
 .LASF9181:
 	.ascii	"I2C_SR1_TIMEOUT_Pos (14U)\000"
@@ -90914,6 +92817,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F5R1_FB29_Msk (0x1UL << CAN_F5R1_FB29_Pos)\000"
 .LASF15150:
 	.ascii	"CR_OFFSET_BB PWR_CR_OFFSET_BB\000"
+.LASF19594:
+	.ascii	"static_assert _Static_assert\000"
 .LASF18765:
 	.ascii	"PWR_REGULATOR_VOLTAGE_SCALE2 PWR_CR_VOS_1\000"
 .LASF7593:
@@ -91013,7 +92918,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	")\000"
 .LASF3458:
 	.ascii	"CAN_F4R1_FB25_Pos (25U)\000"
-.LASF19523:
+.LASF19879:
 	.ascii	"long long unsigned int\000"
 .LASF14010:
 	.ascii	"USB_OTG_HPRT_PTCTL_Msk (0xFUL << USB_OTG_HPRT_PTCTL"
@@ -91027,7 +92932,9 @@ DMA2_Stream3_IRQHandler:
 .LASF14777:
 	.ascii	"__HAL_HRTIM_SetClockPrescaler __HAL_HRTIM_SETCLOCKP"
 	.ascii	"RESCALER\000"
-.LASF19668:
+.LASF19508:
+	.ascii	"_HAVE_LONG_DOUBLE 1\000"
+.LASF20024:
 	.ascii	"BusFault_Handler\000"
 .LASF3098:
 	.ascii	"CAN_F1R1_FB1_Pos (1U)\000"
@@ -91067,7 +92974,7 @@ DMA2_Stream3_IRQHandler:
 .LASF7578:
 	.ascii	"FMC_BWTR3_ADDHLD_Msk (0xFUL << FMC_BWTR3_ADDHLD_Pos"
 	.ascii	")\000"
-.LASF19598:
+.LASF19954:
 	.ascii	"HAL_SPI_STATE_RESET\000"
 .LASF10677:
 	.ascii	"RCC_PLLI2SCFGR_PLLI2SQ_Msk (0xFUL << RCC_PLLI2SCFGR"
@@ -91116,6 +93023,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F5R2_FB18 CAN_F5R2_FB18_Msk\000"
 .LASF2227:
 	.ascii	"CAN_TSR_RQCP0 CAN_TSR_RQCP0_Msk\000"
+.LASF19659:
+	.ascii	"__bounded \000"
 .LASF5934:
 	.ascii	"DAC_SR_DMAUDR1 DAC_SR_DMAUDR1_Msk\000"
 .LASF4370:
@@ -91150,11 +93059,11 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ADC_RESOLUTION_6B ((uint32_t)ADC_CR1_RES)\000"
 .LASF18738:
 	.ascii	"PWR_FLAG_WU PWR_CSR_WUF\000"
-.LASF19512:
+.LASF19868:
 	.ascii	"__STM32F4xx_IT_H \000"
 .LASF10930:
 	.ascii	"RTC_CR_ALRAE RTC_CR_ALRAE_Msk\000"
-.LASF19503:
+.LASF19859:
 	.ascii	"oxi_sda_GPIO_Port GPIOC\000"
 .LASF8168:
 	.ascii	"GPIO_OTYPER_OT0_Pos (0U)\000"
@@ -91226,6 +93135,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TPI_DEVID_MinBufSz_Pos 6U\000"
 .LASF17136:
 	.ascii	"RCC_SYSCLK_DIV128 RCC_CFGR_HPRE_DIV128\000"
+.LASF19540:
+	.ascii	"_NOINLINE __attribute__ ((__noinline__))\000"
 .LASF8364:
 	.ascii	"GPIO_PUPDR_PUPD0_1 (0x2UL << GPIO_PUPDR_PUPD0_Pos)\000"
 .LASF7095:
@@ -91567,6 +93478,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FMC_BCR1_MBKEN FMC_BCR1_MBKEN_Msk\000"
 .LASF544:
 	.ascii	"PHY_HALFDUPLEX_100M ((uint16_t)0x2000U)\000"
+.LASF19691:
+	.ascii	"__XSTRING(x) __STRING(x)\000"
 .LASF10121:
 	.ascii	"RCC_APB1RSTR_SPI2RST_Pos (14U)\000"
 .LASF17268:
@@ -91619,7 +93532,7 @@ DMA2_Stream3_IRQHandler:
 .LASF15788:
 	.ascii	"__TIM15_RELEASE_RESET __HAL_RCC_TIM15_RELEASE_RESET"
 	.ascii	"\000"
-.LASF19591:
+.LASF19947:
 	.ascii	"CLKPhase\000"
 .LASF8648:
 	.ascii	"GPIO_BSRR_BS10 GPIO_BSRR_BS10_Msk\000"
@@ -91638,6 +93551,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F8R2_FB31_Msk (0x1UL << CAN_F8R2_FB31_Pos)\000"
 .LASF2808:
 	.ascii	"CAN_FS1R_FSC22_Msk (0x1UL << CAN_FS1R_FSC22_Pos)\000"
+.LASF19655:
+	.ascii	"__attribute_malloc__ \000"
 .LASF2758:
 	.ascii	"CAN_FS1R_FSC5 CAN_FS1R_FSC5_Msk\000"
 .LASF8592:
@@ -91670,6 +93585,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RTC_ALRMBR_MSK4_Msk (0x1UL << RTC_ALRMBR_MSK4_Pos)\000"
 .LASF2411:
 	.ascii	"CAN_TI0R_TXRQ_Pos (0U)\000"
+.LASF19807:
+	.ascii	"WHITE 0xFFFF\000"
 .LASF12724:
 	.ascii	"TIM_CCMR2_OC3PE_Msk (0x1UL << TIM_CCMR2_OC3PE_Pos)\000"
 .LASF9218:
@@ -91682,6 +93599,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_FFA1R_FFA9_Msk (0x1UL << CAN_FFA1R_FFA9_Pos)\000"
 .LASF9417:
 	.ascii	"FMPI2C_ISR_DIR FMPI2C_ISR_DIR_Msk\000"
+.LASF19486:
+	.ascii	"TOUCH_PRESCALER SPI_BAUDRATEPRESCALER_256\000"
 .LASF6381:
 	.ascii	"DMA_LIFCR_CTEIF1_Msk (0x1UL << DMA_LIFCR_CTEIF1_Pos"
 	.ascii	")\000"
@@ -91743,7 +93662,7 @@ DMA2_Stream3_IRQHandler:
 .LASF7307:
 	.ascii	"FMC_BTR1_DATAST_Msk (0xFFUL << FMC_BTR1_DATAST_Pos)"
 	.ascii	"\000"
-.LASF19524:
+.LASF19880:
 	.ascii	"unsigned int\000"
 .LASF14821:
 	.ascii	"NOR_SUCCESS HAL_NOR_STATUS_SUCCESS\000"
@@ -91828,6 +93747,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CC_APB1RSTR_CECRST))\000"
 .LASF4456:
 	.ascii	"CAN_F1R2_FB5 CAN_F1R2_FB5_Msk\000"
+.LASF19812:
+	.ascii	"BLACK 0x0000\000"
 .LASF13584:
 	.ascii	"USB_OTG_DOEPMSK_B2BSTUP_Pos (6U)\000"
 .LASF13131:
@@ -92031,6 +93952,9 @@ DMA2_Stream3_IRQHandler:
 .LASF1614:
 	.ascii	"DMA2_Stream4 ((DMA_Stream_TypeDef *) DMA2_Stream4_B"
 	.ascii	"ASE)\000"
+.LASF19676:
+	.ascii	"__compiler_membar() __asm __volatile(\" \" : : : \""
+	.ascii	"memory\")\000"
 .LASF5090:
 	.ascii	"CAN_F7R2_FB25_Pos (25U)\000"
 .LASF2182:
@@ -92073,6 +93997,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USB_OTG_DIEPCTL_SNAK USB_OTG_DIEPCTL_SNAK_Msk\000"
 .LASF10157:
 	.ascii	"RCC_APB1RSTR_CAN2RST_Pos (26U)\000"
+.LASF19788:
+	.ascii	"BLUE 0x001F\000"
 .LASF12796:
 	.ascii	"TIM_CCER_CC2P TIM_CCER_CC2P_Msk\000"
 .LASF15221:
@@ -92185,6 +94111,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"C_CR1_JAWDEN | ADC_CR1_AWDSGL) : (((__CHANNEL__) & "
 	.ascii	"ADC_CHANNEL_ID_MASK) | ADC_CR1_JAWDEN | ADC_CR1_AWD"
 	.ascii	"EN | ADC_CR1_AWDSGL) )\000"
+.LASF19857:
+	.ascii	"DISPL_LED_GPIO_Port GPIOC\000"
 .LASF9776:
 	.ascii	"QUADSPI_PSMAR_MATCH QUADSPI_PSMAR_MATCH_Msk\000"
 .LASF11820:
@@ -92228,6 +94156,8 @@ DMA2_Stream3_IRQHandler:
 .LASF18132:
 	.ascii	"LL_ADC_AWD_CHANNEL_4_INJ ((LL_ADC_CHANNEL_4 & ADC_C"
 	.ascii	"HANNEL_ID_MASK) | ADC_CR1_JAWDEN | ADC_CR1_AWDSGL)\000"
+.LASF19642:
+	.ascii	"__ATTRIBUTE_IMPURE_PTR__ \000"
 .LASF16381:
 	.ascii	"__HAL_RCC_DFSDM_IS_CLK_SLEEP_ENABLED __HAL_RCC_DFSD"
 	.ascii	"M1_IS_CLK_SLEEP_ENABLED\000"
@@ -92258,6 +94188,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TIM_CR1_URS TIM_CR1_URS_Msk\000"
 .LASF2309:
 	.ascii	"CAN_RF1R_FMP1_Pos (0U)\000"
+.LASF19593:
+	.ascii	"__ASSERT_FUNC __func__\000"
 .LASF18682:
 	.ascii	"I2C_ANALOGFILTER_DISABLE I2C_FLTR_ANOFF\000"
 .LASF8077:
@@ -92270,6 +94202,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_APB2LPENR_SAI2LPEN RCC_APB2LPENR_SAI2LPEN_Msk\000"
 .LASF291:
 	.ascii	"__USACCUM_FBIT__ 8\000"
+.LASF19512:
+	.ascii	"_NANO_FORMATTED_IO 1\000"
 .LASF17159:
 	.ascii	"RCC_RTCCLKSOURCE_HSE_DIV13 0x000D0300U\000"
 .LASF15136:
@@ -92277,6 +94211,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"nitor_IRQHandler\000"
 .LASF17607:
 	.ascii	"EXTI_LINE_22 (EXTI_CONFIG | 0x16u)\000"
+.LASF19539:
+	.ascii	"_ELIDABLE_INLINE static __inline__\000"
 .LASF3073:
 	.ascii	"CAN_F0R1_FB24 CAN_F0R1_FB24_Msk\000"
 .LASF7329:
@@ -92317,8 +94253,6 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"_DMA_1 | ADC_CCR_DMA_0)\000"
 .LASF6691:
 	.ascii	"EXTI_RTSR_TR10_Msk (0x1UL << EXTI_RTSR_TR10_Pos)\000"
-.LASF19493:
-	.ascii	"displ_cs_GPIO_Port GPIOB\000"
 .LASF191:
 	.ascii	"__LDBL_EPSILON__ 2.2204460492503131e-16L\000"
 .LASF11025:
@@ -92399,6 +94333,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"DMA_SxCR_TCIE_Msk (0x1UL << DMA_SxCR_TCIE_Pos)\000"
 .LASF1293:
 	.ascii	"CoreDebug_DCRSR_REGWnR_Pos 16U\000"
+.LASF19787:
+	.ascii	"GREEN 0x07E0\000"
 .LASF11773:
 	.ascii	"SDIO_CLKCR_CLKEN_Msk (0x1UL << SDIO_CLKCR_CLKEN_Pos"
 	.ascii	")\000"
@@ -92494,7 +94430,7 @@ DMA2_Stream3_IRQHandler:
 .LASF10669:
 	.ascii	"RCC_PLLI2SCFGR_PLLI2SN_7 (0x080UL << RCC_PLLI2SCFGR"
 	.ascii	"_PLLI2SN_Pos)\000"
-.LASF19569:
+.LASF19925:
 	.ascii	"HAL_DMA_STATE_BUSY\000"
 .LASF9212:
 	.ascii	"I2C_CCR_CCR_Msk (0xFFFUL << I2C_CCR_CCR_Pos)\000"
@@ -92604,6 +94540,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USB_OTG_GOTGINT_SRSSCHG_Pos (8U)\000"
 .LASF984:
 	.ascii	"SCnSCB_ACTLR_DISDEFWBUF_Pos 1U\000"
+.LASF19712:
+	.ascii	"__nonnull_all __attribute__((__nonnull__))\000"
 .LASF9396:
 	.ascii	"FMPI2C_ISR_BERR FMPI2C_ISR_BERR_Msk\000"
 .LASF17309:
@@ -92714,6 +94652,10 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SPI_MODE_SLAVE (0x00000000U)\000"
 .LASF13207:
 	.ascii	"DBGMCU_APB2_FZ_DBG_TIM1_STOP_Pos (0U)\000"
+.LASF19833:
+	.ascii	"SET_DISPL_SPI_BAUDRATE DISPL_SPI->CR1 &= (uint16_t)"
+	.ascii	" ~SPI_CR1_BR_Msk; DISPL_SPI->CR1 |= DISPL_PRESCALER"
+	.ascii	"\000"
 .LASF635:
 	.ascii	"__INT32 \"l\"\000"
 .LASF5280:
@@ -92835,7 +94777,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F0R2_FB10 CAN_F0R2_FB10_Msk\000"
 .LASF11218:
 	.ascii	"RTC_TSDR_MU_1 (0x2UL << RTC_TSDR_MU_Pos)\000"
-.LASF19624:
+.LASF19980:
 	.ascii	"RepetitionCounter\000"
 .LASF10523:
 	.ascii	"RCC_APB1LPENR_CAN2LPEN_Pos (26U)\000"
@@ -93111,7 +95053,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_BDCR_LSEON_Msk (0x1UL << RCC_BDCR_LSEON_Pos)\000"
 .LASF6950:
 	.ascii	"FLASH_ACR_LATENCY_11WS 0x0000000BU\000"
-.LASF19491:
+.LASF19847:
 	.ascii	"temp_scl_GPIO_Port GPIOB\000"
 .LASF18125:
 	.ascii	"LL_ADC_AWD_CHANNEL_2_REG ((LL_ADC_CHANNEL_2 & ADC_C"
@@ -93248,7 +95190,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USB_OTG_HCCHAR_EPNUM USB_OTG_HCCHAR_EPNUM_Msk\000"
 .LASF6218:
 	.ascii	"DMA_SxFCR_DMDIS DMA_SxFCR_DMDIS_Msk\000"
-.LASF19571:
+.LASF19927:
 	.ascii	"HAL_DMA_STATE_ERROR\000"
 .LASF10562:
 	.ascii	"RCC_APB2LPENR_SPI4LPEN_Pos (13U)\000"
@@ -93349,6 +95291,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FLASH_OPTCR_DB1M_Pos (30U)\000"
 .LASF4340:
 	.ascii	"CAN_F13R1_FB31_Pos (31U)\000"
+.LASF19581:
+	.ascii	"_REENT_EMERGENCY_SIZE 25\000"
 .LASF1001:
 	.ascii	"SysTick_CALIB_NOREF_Msk (1UL << SysTick_CALIB_NOREF"
 	.ascii	"_Pos)\000"
@@ -93499,7 +95443,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SAI_xCR2_MUTEVAL_Pos (6U)\000"
 .LASF5415:
 	.ascii	"CAN_F11R2_FB5_Msk (0x1UL << CAN_F11R2_FB5_Pos)\000"
-.LASF19595:
+.LASF19951:
 	.ascii	"CRCCalculation\000"
 .LASF18337:
 	.ascii	"ADC_SAMPLETIME_15CYCLES ((uint32_t)ADC_SMPR1_SMP10_"
@@ -93548,6 +95492,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F7R1_FB3 CAN_F7R1_FB3_Msk\000"
 .LASF9082:
 	.ascii	"I2C_CR2_FREQ_2 (0x04UL << I2C_CR2_FREQ_Pos)\000"
+.LASF19622:
+	.ascii	"_REENT_MBRLEN_STATE(ptr) ((ptr)->_misc->_mbrlen_sta"
+	.ascii	"te)\000"
 .LASF9311:
 	.ascii	"FMPI2C_CR2_NBYTES_Msk (0xFFUL << FMPI2C_CR2_NBYTES_"
 	.ascii	"Pos)\000"
@@ -93574,6 +95521,8 @@ DMA2_Stream3_IRQHandler:
 .LASF15989:
 	.ascii	"__TIM14_CLK_SLEEP_DISABLE __HAL_RCC_TIM14_CLK_SLEEP"
 	.ascii	"_DISABLE\000"
+.LASF19836:
+	.ascii	"TOUCH_INT_Pin GPIO_PIN_4\000"
 .LASF17345:
 	.ascii	"__HAL_RCC_DMA1_CLK_SLEEP_ENABLE() (RCC->AHB1LPENR |"
 	.ascii	"= (RCC_AHB1LPENR_DMA1LPEN))\000"
@@ -93808,6 +95757,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"LSEON_BitNumber RCC_LSEON_BIT_NUMBER\000"
 .LASF512:
 	.ascii	"USE_HAL_SAI_REGISTER_CALLBACKS 0U\000"
+.LASF19838:
+	.ascii	"DISPL_SCK_Pin GPIO_PIN_5\000"
 .LASF14090:
 	.ascii	"USB_OTG_DIEPCTL_SNAK_Pos (27U)\000"
 .LASF1330:
@@ -94187,7 +96138,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F4R2_FB24 CAN_F4R2_FB24_Msk\000"
 .LASF14358:
 	.ascii	"USB_OTG_DOEPCTL_EPDIS USB_OTG_DOEPCTL_EPDIS_Msk\000"
-.LASF19674:
+.LASF20030:
 	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
 	.ascii	"stre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor"
 	.ascii	"/Debug\000"
@@ -94230,6 +96181,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"PLLI2SM_Pos)\000"
 .LASF2102:
 	.ascii	"ADC_CSR_OVR2_Pos (13U)\000"
+.LASF19753:
+	.ascii	"__lockable __lock_annotate(lockable)\000"
 .LASF4783:
 	.ascii	"CAN_F4R2_FB18 CAN_F4R2_FB18_Msk\000"
 .LASF15836:
@@ -94316,6 +96269,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_IDR_ID6_Pos (6U)\000"
 .LASF4422:
 	.ascii	"CAN_F0R2_FB26_Msk (0x1UL << CAN_F0R2_FB26_Pos)\000"
+.LASF19582:
+	.ascii	"_REENT_ASCTIME_SIZE 26\000"
 .LASF5724:
 	.ascii	"CEC_TXDR_TXD_Msk (0xFFUL << CEC_TXDR_TXD_Pos)\000"
 .LASF15246:
@@ -94386,7 +96341,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SPDIFRX_SR_SERR_Pos (7U)\000"
 .LASF12391:
 	.ascii	"SYSCFG_EXTICR4_EXTI15_Pos (12U)\000"
-.LASF19518:
+.LASF19874:
 	.ascii	"short unsigned int\000"
 .LASF2623:
 	.ascii	"CAN_RDL1R_DATA0 CAN_RDL1R_DATA0_Msk\000"
@@ -94394,6 +96349,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_TSR_TME_Msk (0x7UL << CAN_TSR_TME_Pos)\000"
 .LASF14709:
 	.ascii	"FLASH_ERROR_PGP HAL_FLASH_ERROR_PGS\000"
+.LASF19853:
+	.ascii	"DISPL_DC_GPIO_Port GPIOB\000"
 .LASF4751:
 	.ascii	"CAN_F4R2_FB8_Pos (8U)\000"
 .LASF2469:
@@ -94438,6 +96395,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"_T_WCHAR \000"
 .LASF5444:
 	.ascii	"CAN_F11R2_FB15_Pos (15U)\000"
+.LASF19818:
+	.ascii	"ILI9XXX_MEMWR 0x2C\000"
 .LASF13387:
 	.ascii	"USB_OTG_HFNUM_FTREM_Pos (16U)\000"
 .LASF9478:
@@ -94457,9 +96416,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F11R2_FB3_Pos (3U)\000"
 .LASF1070:
 	.ascii	"DWT_CTRL_POSTPRESET_Pos 1U\000"
-.LASF19522:
+.LASF19878:
 	.ascii	"long long int\000"
-.LASF19502:
+.LASF19858:
 	.ascii	"oxi_sda_Pin GPIO_PIN_9\000"
 .LASF5684:
 	.ascii	"CAN_F13R2_FB31_Pos (31U)\000"
@@ -94558,8 +96517,6 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_TXSTATUS_PENDING ((uint8_t)0x02U)\000"
 .LASF1205:
 	.ascii	"MPU_RASR_S_Pos 18U\000"
-.LASF19495:
-	.ascii	"touch_cs_GPIO_Port GPIOB\000"
 .LASF13434:
 	.ascii	"USB_OTG_GUSBCFG_SRPCAP_Msk (0x1UL << USB_OTG_GUSBCF"
 	.ascii	"G_SRPCAP_Pos)\000"
@@ -94590,7 +96547,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RTC_ALRMBR_MSK1 RTC_ALRMBR_MSK1_Msk\000"
 .LASF3928:
 	.ascii	"CAN_F9R1_FB21 CAN_F9R1_FB21_Msk\000"
-.LASF19548:
+.LASF19904:
 	.ascii	"DMAR\000"
 .LASF2332:
 	.ascii	"CAN_IER_FOVIE0 CAN_IER_FOVIE0_Msk\000"
@@ -94639,6 +96596,8 @@ DMA2_Stream3_IRQHandler:
 .LASF8061:
 	.ascii	"GPIO_MODER_MODER10_0 (0x1UL << GPIO_MODER_MODER10_P"
 	.ascii	"os)\000"
+.LASF19538:
+	.ascii	"_ATTRIBUTE(attrs) __attribute__ (attrs)\000"
 .LASF14149:
 	.ascii	"USB_OTG_HCCHAR_CHENA USB_OTG_HCCHAR_CHENA_Msk\000"
 .LASF11565:
@@ -94698,7 +96657,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"sk\000"
 .LASF19032:
 	.ascii	"TIM_OSSR_DISABLE 0x00000000U\000"
-.LASF19551:
+.LASF19907:
 	.ascii	"HAL_UNLOCKED\000"
 .LASF3430:
 	.ascii	"CAN_F4R1_FB15 CAN_F4R1_FB15_Msk\000"
@@ -94862,7 +96821,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USB_OTG_DCTL_GONSTS_Pos (3U)\000"
 .LASF4632:
 	.ascii	"CAN_F3R2_FB0_Msk (0x1UL << CAN_F3R2_FB0_Pos)\000"
-.LASF19554:
+.LASF19910:
 	.ascii	"Channel\000"
 .LASF13630:
 	.ascii	"USB_OTG_GINTSTS_USBSUSP_Msk (0x1UL << USB_OTG_GINTS"
@@ -94967,7 +96926,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F7R1_FB8_Pos (8U)\000"
 .LASF7853:
 	.ascii	"FMC_SDCR2_CAS_0 (0x1UL << FMC_SDCR2_CAS_Pos)\000"
-.LASF19567:
+.LASF19923:
 	.ascii	"HAL_DMA_STATE_RESET\000"
 .LASF5686:
 	.ascii	"CAN_F13R2_FB31 CAN_F13R2_FB31_Msk\000"
@@ -95099,6 +97058,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"DMA_HIFCR_CTCIF7 DMA_HIFCR_CTCIF7_Msk\000"
 .LASF2740:
 	.ascii	"CAN_FS1R_FSC CAN_FS1R_FSC_Msk\000"
+.LASF19688:
+	.ascii	"__CONCAT1(x,y) x ## y\000"
 .LASF1095:
 	.ascii	"DWT_FUNCTION_LNK1ENA_Msk (0x1UL << DWT_FUNCTION_LNK"
 	.ascii	"1ENA_Pos)\000"
@@ -95151,6 +97112,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_APB1RSTR_TIM5RST_Pos (3U)\000"
 .LASF8932:
 	.ascii	"GPIO_AFRL_AFRL6_2 GPIO_AFRL_AFSEL6_2\000"
+.LASF19505:
+	.ascii	"_ATEXIT_DYNAMIC_ALLOC 1\000"
 .LASF750:
 	.ascii	"__PACKED __attribute__((packed, aligned(1)))\000"
 .LASF10026:
@@ -95170,6 +97133,8 @@ DMA2_Stream3_IRQHandler:
 .LASF7782:
 	.ascii	"FMC_PATT_ATTHIZ2_0 (0x01UL << FMC_PATT_ATTHIZ2_Pos)"
 	.ascii	"\000"
+.LASF19613:
+	.ascii	"_REENT_MP_RESULT_K(ptr) ((ptr)->_mp->_result_k)\000"
 .LASF18459:
 	.ascii	"ADC_CR2_CONTINUOUS(_CONTINUOUS_MODE_) ((_CONTINUOUS"
 	.ascii	"_MODE_) << 1U)\000"
@@ -95216,7 +97181,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_RDH1R_DATA5 CAN_RDH1R_DATA5_Msk\000"
 .LASF4182:
 	.ascii	"CAN_F12R1_FB10_Msk (0x1UL << CAN_F12R1_FB10_Pos)\000"
-.LASF19564:
+.LASF19920:
 	.ascii	"MemBurst\000"
 .LASF16804:
 	.ascii	"__HAL_RCC_CAN2_IS_CLK_ENABLED() ((RCC->APB1ENR & (R"
@@ -95272,16 +97237,20 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USB_OTG_GUSBCFG_TOCAL USB_OTG_GUSBCFG_TOCAL_Msk\000"
 .LASF13152:
 	.ascii	"DBGMCU_APB1_FZ_DBG_TIM2_STOP_Pos (0U)\000"
-.LASF19657:
+.LASF20013:
 	.ascii	"HAL_SPI_IRQHandler\000"
 .LASF239:
 	.ascii	"__FLT32X_MIN__ 2.2250738585072014e-308F32x\000"
+.LASF19541:
+	.ascii	"_NOINLINE_STATIC _NOINLINE static\000"
 .LASF1305:
 	.ascii	"CoreDebug_DEMCR_MON_EN_Pos 16U\000"
 .LASF15093:
 	.ascii	"HAL_DBG_LowPowerConfig(Periph,cmd) (((cmd )==ENABLE"
 	.ascii	")? HAL_DBGMCU_DBG_EnableLowPowerConfig(Periph) : HA"
 	.ascii	"L_DBGMCU_DBG_DisableLowPowerConfig(Periph))\000"
+.LASF19639:
+	.ascii	"_REENT_STDOUT(_ptr) ((_ptr)->_stdout)\000"
 .LASF7464:
 	.ascii	"FMC_BTR4_DATAST_2 (0x04UL << FMC_BTR4_DATAST_Pos)\000"
 .LASF15287:
@@ -95386,6 +97355,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SPI_I2SCFGR_CHLEN SPI_I2SCFGR_CHLEN_Msk\000"
 .LASF17774:
 	.ascii	"MPU_REGION_SIZE_512B ((uint8_t)0x08)\000"
+.LASF19663:
+	.ascii	"__has_feature(x) 0\000"
 .LASF18579:
 	.ascii	"OB_WRP_SECTOR_All 0x00000FFFU\000"
 .LASF15757:
@@ -95446,7 +97417,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F1R2_FB19_Msk (0x1UL << CAN_F1R2_FB19_Pos)\000"
 .LASF542:
 	.ascii	"PHY_LOOPBACK ((uint16_t)0x4000U)\000"
-.LASF19673:
+.LASF20029:
 	.ascii	"../Core/Src/stm32f4xx_it.c\000"
 .LASF9115:
 	.ascii	"I2C_OAR1_ADD4_Pos (4U)\000"
@@ -95464,7 +97435,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_SYSCLK_DIV256 RCC_CFGR_HPRE_DIV256\000"
 .LASF11115:
 	.ascii	"RTC_ALRMBR_HU RTC_ALRMBR_HU_Msk\000"
-.LASF19519:
+.LASF19852:
+	.ascii	"DISPL_DC_Pin GPIO_PIN_14\000"
+.LASF19875:
 	.ascii	"long int\000"
 .LASF1870:
 	.ascii	"ADC_JOFR4_JOFFSET4_Pos (0U)\000"
@@ -95664,8 +97637,10 @@ DMA2_Stream3_IRQHandler:
 .LASF7709:
 	.ascii	"FMC_PMEM_MEMSET2_4 (0x10UL << FMC_PMEM_MEMSET2_Pos)"
 	.ascii	"\000"
-.LASF19563:
+.LASF19919:
 	.ascii	"FIFOThreshold\000"
+.LASF19578:
+	.ascii	"_RAND48_MULT_1 (0xdeec)\000"
 .LASF10786:
 	.ascii	"RCC_DCKCFGR2_FMPI2C1SEL_1 (0x2UL << RCC_DCKCFGR2_FM"
 	.ascii	"PI2C1SEL_Pos)\000"
@@ -95807,6 +97782,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_APB1RSTR_DACRST_Pos (29U)\000"
 .LASF1229:
 	.ascii	"FPU_FPCCR_THREAD_Pos 3U\000"
+.LASF19840:
+	.ascii	"TOUCH_MISO_Pin GPIO_PIN_6\000"
 .LASF11507:
 	.ascii	"SAI_xFRCR_FSOFF_Msk (0x1UL << SAI_xFRCR_FSOFF_Pos)\000"
 .LASF8032:
@@ -95837,6 +97814,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"LE_IT\000"
 .LASF17651:
 	.ascii	"DMA_CHANNEL_3 0x06000000U\000"
+.LASF19761:
+	.ascii	"__requires_exclusive(...) __lock_annotate(exclusive"
+	.ascii	"_locks_required(__VA_ARGS__))\000"
 .LASF2229:
 	.ascii	"CAN_TSR_TXOK0_Msk (0x1UL << CAN_TSR_TXOK0_Pos)\000"
 .LASF2976:
@@ -95900,7 +97880,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__GPIOE_FORCE_RESET __HAL_RCC_GPIOE_FORCE_RESET\000"
 .LASF10244:
 	.ascii	"RCC_AHB1ENR_DMA1EN RCC_AHB1ENR_DMA1EN_Msk\000"
-.LASF19589:
+.LASF19945:
 	.ascii	"DataSize\000"
 .LASF777:
 	.ascii	"__O volatile\000"
@@ -95910,7 +97890,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ADC_SQR3_SQ2 ADC_SQR3_SQ2_Msk\000"
 .LASF1168:
 	.ascii	"TPI_DEVID_AsynClkIn_Pos 5U\000"
-.LASF19514:
+.LASF19870:
 	.ascii	"unsigned char\000"
 .LASF818:
 	.ascii	"CONTROL_SPSEL_Pos 1U\000"
@@ -96200,9 +98180,14 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"OB_PCROP_SECTOR_1 0x00000002U\000"
 .LASF3289:
 	.ascii	"CAN_F3R1_FB0 CAN_F3R1_FB0_Msk\000"
+.LASF19529:
+	.ascii	"__IMPORT \000"
 .LASF1892:
 	.ascii	"ADC_SQR1_SQ14_2 (0x04UL << ADC_SQR1_SQ14_Pos)\000"
-.LASF19604:
+.LASF19606:
+	.ascii	"_REENT_CHECK_SIGNAL_BUF(var) _REENT_CHECK(var, _sig"
+	.ascii	"nal_buf, char *, _REENT_SIGNAL_SIZE, )\000"
+.LASF19960:
 	.ascii	"HAL_SPI_STATE_ERROR\000"
 .LASF6080:
 	.ascii	"DCMI_ESUR_LSU_Pos (8U)\000"
@@ -96323,6 +98308,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_FM1R_FBM6_Pos (6U)\000"
 .LASF9514:
 	.ascii	"PWR_CR_MRLVDS_Msk (0x1UL << PWR_CR_MRLVDS_Pos)\000"
+.LASF19850:
+	.ascii	"TOUCH_CS_Pin GPIO_PIN_13\000"
 .LASF2304:
 	.ascii	"CAN_RF0R_FOVR0_Msk (0x1UL << CAN_RF0R_FOVR0_Pos)\000"
 .LASF8856:
@@ -96368,7 +98355,7 @@ DMA2_Stream3_IRQHandler:
 .LASF12692:
 	.ascii	"TIM_CCMR1_IC1PSC_Msk (0x3UL << TIM_CCMR1_IC1PSC_Pos"
 	.ascii	")\000"
-.LASF19580:
+.LASF19936:
 	.ascii	"XferHalfCpltCallback\000"
 .LASF5377:
 	.ascii	"CAN_F10R2_FB24 CAN_F10R2_FB24_Msk\000"
@@ -96453,6 +98440,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_PLLCFGR_PLLQ RCC_PLLCFGR_PLLQ_Msk\000"
 .LASF17185:
 	.ascii	"RCC_MCODIV_2 RCC_CFGR_MCO1PRE_2\000"
+.LASF19566:
+	.ascii	"__lock_acquire_recursive(lock) __retarget_lock_acqu"
+	.ascii	"ire_recursive(lock)\000"
 .LASF12732:
 	.ascii	"TIM_CCMR2_OC3CE_Pos (7U)\000"
 .LASF7286:
@@ -96493,7 +98483,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_ESR_REC CAN_ESR_REC_Msk\000"
 .LASF5166:
 	.ascii	"CAN_F8R2_FB18_Msk (0x1UL << CAN_F8R2_FB18_Pos)\000"
-.LASF19622:
+.LASF19978:
 	.ascii	"Period\000"
 .LASF1072:
 	.ascii	"DWT_CTRL_CYCCNTENA_Pos 0U\000"
@@ -96534,8 +98524,6 @@ DMA2_Stream3_IRQHandler:
 	.ascii	" == ADC_ALL_CHANNELS) || ((CHANNEL_TYPE) == ADC_REG"
 	.ascii	"ULAR_CHANNELS) || ((CHANNEL_TYPE) == ADC_INJECTED_C"
 	.ascii	"HANNELS))\000"
-.LASF19481:
-	.ascii	"touch_int_GPIO_Port GPIOA\000"
 .LASF13358:
 	.ascii	"USB_OTG_DCTL_GONSTS_Msk (0x1UL << USB_OTG_DCTL_GONS"
 	.ascii	"TS_Pos)\000"
@@ -96740,6 +98728,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_MCOSOURCE_SYSCLK RCC_MCO1SOURCE_SYSCLK\000"
 .LASF15738:
 	.ascii	"__SPI3_RELEASE_RESET __HAL_RCC_SPI3_RELEASE_RESET\000"
+.LASF19733:
+	.ascii	"__weak_reference(sym,alias) __asm__(\".weak \" #ali"
+	.ascii	"as); __asm__(\".equ \" #alias \", \" #sym)\000"
 .LASF15796:
 	.ascii	"__TIM17_CLK_ENABLE __HAL_RCC_TIM17_CLK_ENABLE\000"
 .LASF8885:
@@ -96829,7 +98820,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_TDL2R_DATA3_Pos (24U)\000"
 .LASF17198:
 	.ascii	"RCC_FLAG_PLLRDY ((uint8_t)0x39)\000"
-.LASF19664:
+.LASF20020:
 	.ascii	"PendSV_Handler\000"
 .LASF590:
 	.ascii	"_ATFILE_SOURCE\000"
@@ -97213,6 +99204,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F1R1_FB17 CAN_F1R1_FB17_Msk\000"
 .LASF12833:
 	.ascii	"TIM_RCR_REP_Pos (0U)\000"
+.LASF19643:
+	.ascii	"__ATTRIBUTE_IMPURE_DATA__ \000"
 .LASF18877:
 	.ascii	"IS_SPI_DIRECTION_2LINES(__MODE__) ((__MODE__) == SP"
 	.ascii	"I_DIRECTION_2LINES)\000"
@@ -97257,7 +99250,7 @@ DMA2_Stream3_IRQHandler:
 .LASF12441:
 	.ascii	"SYSCFG_CFGR_FMPI2C1_SCL_Msk (0x1UL << SYSCFG_CFGR_F"
 	.ascii	"MPI2C1_SCL_Pos)\000"
-.LASF19663:
+.LASF20019:
 	.ascii	"SysTick_Handler\000"
 .LASF12058:
 	.ascii	"SPI_CR1_BR_1 (0x2UL << SPI_CR1_BR_Pos)\000"
@@ -97363,6 +99356,8 @@ DMA2_Stream3_IRQHandler:
 .LASF13696:
 	.ascii	"USB_OTG_GINTMSK_RXFLVLM_Msk (0x1UL << USB_OTG_GINTM"
 	.ascii	"SK_RXFLVLM_Pos)\000"
+.LASF19565:
+	.ascii	"__lock_acquire(lock) __retarget_lock_acquire(lock)\000"
 .LASF2966:
 	.ascii	"CAN_FA1R_FACT17_Pos (17U)\000"
 .LASF9469:
@@ -97393,8 +99388,6 @@ DMA2_Stream3_IRQHandler:
 .LASF14055:
 	.ascii	"USB_OTG_HPTXFSIZ_PTXSA_Msk (0xFFFFUL << USB_OTG_HPT"
 	.ascii	"XFSIZ_PTXSA_Pos)\000"
-.LASF19494:
-	.ascii	"touch_cs_Pin GPIO_PIN_13\000"
 .LASF5504:
 	.ascii	"CAN_F12R2_FB3_Pos (3U)\000"
 .LASF16619:
@@ -97424,6 +99417,8 @@ DMA2_Stream3_IRQHandler:
 .LASF15898:
 	.ascii	"__USART7_RELEASE_RESET __HAL_RCC_UART7_RELEASE_RESE"
 	.ascii	"T\000"
+.LASF19544:
+	.ascii	"__need_size_t \000"
 .LASF5614:
 	.ascii	"CAN_F13R2_FB7 CAN_F13R2_FB7_Msk\000"
 .LASF17438:
@@ -97567,7 +99562,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F1R1_FB6_Msk (0x1UL << CAN_F1R1_FB6_Pos)\000"
 .LASF1449:
 	.ascii	"USART2_BASE (APB1PERIPH_BASE + 0x4400UL)\000"
-.LASF19577:
+.LASF19933:
 	.ascii	"State\000"
 .LASF4029:
 	.ascii	"CAN_F10R1_FB23_Msk (0x1UL << CAN_F10R1_FB23_Pos)\000"
@@ -97634,6 +99629,8 @@ DMA2_Stream3_IRQHandler:
 .LASF928:
 	.ascii	"SCB_CFSR_MUNSTKERR_Pos (SCB_SHCSR_MEMFAULTACT_Pos +"
 	.ascii	" 3U)\000"
+.LASF19815:
+	.ascii	"ILI9XXX_DISPLAY_ON 0x29\000"
 .LASF1534:
 	.ascii	"UID_BASE 0x1FFF7A10UL\000"
 .LASF5638:
@@ -97760,6 +99757,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ADC_JSQR_JL_Pos (20U)\000"
 .LASF18830:
 	.ascii	"SPI_PHASE_2EDGE SPI_CR1_CPHA\000"
+.LASF19561:
+	.ascii	"__lock_init(lock) __retarget_lock_init(&lock)\000"
 .LASF10775:
 	.ascii	"RCC_CKGATENR_SRAM_CKEN RCC_CKGATENR_SRAM_CKEN_Msk\000"
 .LASF12696:
@@ -98092,6 +100091,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RTC_ALRMBR_HT_Pos (20U)\000"
 .LASF2319:
 	.ascii	"CAN_RF1R_RFOM1_Msk (0x1UL << CAN_RF1R_RFOM1_Pos)\000"
+.LASF19685:
+	.ascii	"__CC_SUPPORTS_VARADIC_XXX 1\000"
 .LASF17181:
 	.ascii	"RCC_MCO1SOURCE_LSE RCC_CFGR_MCO1_0\000"
 .LASF15705:
@@ -98177,7 +100178,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F2R1_FB17_Pos (17U)\000"
 .LASF1773:
 	.ascii	"ADC_SMPR1_SMP14 ADC_SMPR1_SMP14_Msk\000"
-.LASF19517:
+.LASF19873:
 	.ascii	"__uint16_t\000"
 .LASF8693:
 	.ascii	"GPIO_BSRR_BR9 GPIO_BSRR_BR9_Msk\000"
@@ -98191,6 +100192,9 @@ DMA2_Stream3_IRQHandler:
 .LASF19451:
 	.ascii	"__HAL_DBGMCU_FREEZE_TIM9() (DBGMCU->APB2FZ |= (DBGM"
 	.ascii	"CU_APB2_FZ_DBG_TIM9_STOP))\000"
+.LASF19755:
+	.ascii	"__locks_shared(...) __lock_annotate(shared_lock_fun"
+	.ascii	"ction(__VA_ARGS__))\000"
 .LASF11866:
 	.ascii	"SDIO_DCTRL_RWMOD SDIO_DCTRL_RWMOD_Msk\000"
 .LASF3330:
@@ -98269,6 +100273,10 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_APB1ENR_PWREN_Pos (28U)\000"
 .LASF11829:
 	.ascii	"SDIO_RESP3_CARDSTATUS3 SDIO_RESP3_CARDSTATUS3_Msk\000"
+.LASF19500:
+	.ascii	"DISPL_HEIGHT 320\000"
+.LASF19513:
+	.ascii	"_NANO_MALLOC 1\000"
 .LASF16511:
 	.ascii	"__HAL_USB_HS_EXTI_DISABLE_IT __HAL_USB_OTG_HS_WAKEU"
 	.ascii	"P_EXTI_DISABLE_IT\000"
@@ -98594,6 +100602,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USB_OTG_GRSTCTL_TXFNUM USB_OTG_GRSTCTL_TXFNUM_Msk\000"
 .LASF9163:
 	.ascii	"I2C_SR1_TXE_Pos (7U)\000"
+.LASF19615:
+	.ascii	"_REENT_MP_FREELIST(ptr) ((ptr)->_mp->_freelist)\000"
 .LASF14825:
 	.ascii	"__NOR_WRITE NOR_WRITE\000"
 .LASF4980:
@@ -98625,7 +100635,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__UART8_CLK_ENABLE __HAL_RCC_UART8_CLK_ENABLE\000"
 .LASF6183:
 	.ascii	"DMA_SxCR_EN_Msk (0x1UL << DMA_SxCR_EN_Pos)\000"
-.LASF19504:
+.LASF19860:
 	.ascii	"oxi_scl_Pin GPIO_PIN_8\000"
 .LASF15921:
 	.ascii	"__TIM21_CLK_SLEEP_ENABLE __HAL_RCC_TIM21_CLK_SLEEP_"
@@ -98685,6 +100695,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__SHRT_MAX__ 0x7fff\000"
 .LASF19320:
 	.ascii	"STM32F4xx_HAL_PCD_H \000"
+.LASF19747:
+	.ascii	"_Null_unspecified \000"
 .LASF4909:
 	.ascii	"CAN_F5R2_FB28 CAN_F5R2_FB28_Msk\000"
 .LASF16847:
@@ -98785,6 +100797,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"s)\000"
 .LASF406:
 	.ascii	"__ARM_ARCH_PROFILE\000"
+.LASF19665:
+	.ascii	"__END_DECLS \000"
 .LASF15644:
 	.ascii	"__I2C3_CLK_SLEEP_ENABLE __HAL_RCC_I2C3_CLK_SLEEP_EN"
 	.ascii	"ABLE\000"
@@ -99067,7 +101081,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FMPI2C_CR2_SADD_Pos (0U)\000"
 .LASF118:
 	.ascii	"__UINT_LEAST8_MAX__ 0xff\000"
-.LASF19630:
+.LASF19986:
 	.ascii	"HAL_TIM_STATE_TIMEOUT\000"
 .LASF17399:
 	.ascii	"__HAL_RCC_PLL_DISABLE() (*(__IO uint32_t *) RCC_CR_"
@@ -99305,7 +101319,7 @@ DMA2_Stream3_IRQHandler:
 .LASF17226:
 	.ascii	"__HAL_RCC_DMA2_IS_CLK_ENABLED() ((RCC->AHB1ENR &(RC"
 	.ascii	"C_AHB1ENR_DMA2EN)) != RESET)\000"
-.LASF19587:
+.LASF19943:
 	.ascii	"StreamIndex\000"
 .LASF16723:
 	.ascii	"__HAL_RCC_GPIOF_IS_CLK_DISABLED() ((RCC->AHB1ENR & "
@@ -99322,6 +101336,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CEC_ISR_TXUDR CEC_ISR_TXUDR_Msk\000"
 .LASF3515:
 	.ascii	"CAN_F5R1_FB12_Pos (12U)\000"
+.LASF19499:
+	.ascii	"DISPL_WIDTH 240\000"
 .LASF17926:
 	.ascii	"ADC_AWD_CR_ALL_CHANNEL_MASK (ADC_AWD_CR1_CHANNEL_MA"
 	.ascii	"SK)\000"
@@ -99339,6 +101355,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__CRC_RELEASE_RESET __HAL_RCC_CRC_RELEASE_RESET\000"
 .LASF2296:
 	.ascii	"CAN_TSR_LOW2 CAN_TSR_LOW2_Msk\000"
+.LASF19617:
+	.ascii	"_REENT_TM(ptr) ((ptr)->_localtime_buf)\000"
 .LASF6584:
 	.ascii	"EXTI_EMR_MR5_Msk (0x1UL << EXTI_EMR_MR5_Pos)\000"
 .LASF10254:
@@ -99356,6 +101374,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"PWR_CR_CWUF_Pos (2U)\000"
 .LASF2312:
 	.ascii	"CAN_RF1R_FULL1_Pos (3U)\000"
+.LASF19546:
+	.ascii	"_WINT_T \000"
 .LASF2984:
 	.ascii	"CAN_FA1R_FACT23_Pos (23U)\000"
 .LASF17543:
@@ -99451,7 +101471,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"os)\000"
 .LASF5494:
 	.ascii	"CAN_F11R2_FB31 CAN_F11R2_FB31_Msk\000"
-.LASF19600:
+.LASF19956:
 	.ascii	"HAL_SPI_STATE_BUSY\000"
 .LASF940:
 	.ascii	"SCB_CFSR_UNSTKERR_Pos (SCB_CFSR_BUSFAULTSR_Pos + 3U"
@@ -99693,6 +101713,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TIM_CCMR2_OC3M_1 (0x2UL << TIM_CCMR2_OC3M_Pos)\000"
 .LASF9249:
 	.ascii	"FMPI2C_CR1_TCIE FMPI2C_CR1_TCIE_Msk\000"
+.LASF19707:
+	.ascii	"__malloc_like __attribute__((__malloc__))\000"
 .LASF14725:
 	.ascii	"OB_WDG_SW OB_IWDG_SW\000"
 .LASF3718:
@@ -99722,6 +101744,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"_Pos)\000"
 .LASF10364:
 	.ascii	"RCC_APB2ENR_ADC3EN_Pos (10U)\000"
+.LASF19754:
+	.ascii	"__locks_exclusive(...) __lock_annotate(exclusive_lo"
+	.ascii	"ck_function(__VA_ARGS__))\000"
 .LASF10543:
 	.ascii	"RCC_APB2LPENR_USART1LPEN RCC_APB2LPENR_USART1LPEN_M"
 	.ascii	"sk\000"
@@ -99754,6 +101779,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TL_AVALOEN_Pos)\000"
 .LASF5147:
 	.ascii	"CAN_F8R2_FB12_Pos (12U)\000"
+.LASF19680:
+	.ascii	"__CC_SUPPORTS_INLINE 1\000"
 .LASF76:
 	.ascii	"__WCHAR_MIN__ 0U\000"
 .LASF11185:
@@ -99769,7 +101796,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"SPDIFRX_DR1_PT SPDIFRX_DR1_PT_Msk\000"
 .LASF1682:
 	.ascii	"ADC_CR1_DISCNUM_0 (0x1UL << ADC_CR1_DISCNUM_Pos)\000"
-.LASF19607:
+.LASF19963:
 	.ascii	"__DMA_HandleTypeDef\000"
 .LASF470:
 	.ascii	"HAL_PWR_MODULE_ENABLED \000"
@@ -99866,8 +101893,6 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TIM_CCMR2_OC4CE_Msk (0x1UL << TIM_CCMR2_OC4CE_Pos)\000"
 .LASF7850:
 	.ascii	"FMC_SDCR2_CAS_Pos (7U)\000"
-.LASF19500:
-	.ascii	"displ_led_Pin GPIO_PIN_7\000"
 .LASF15559:
 	.ascii	"__FIREWALL_CLK_DISABLE __HAL_RCC_FIREWALL_CLK_DISAB"
 	.ascii	"LE\000"
@@ -99904,6 +101929,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_AF12_SDMMC1 GPIO_AF12_SDIO\000"
 .LASF1490:
 	.ascii	"GPIOF_BASE (AHB1PERIPH_BASE + 0x1400UL)\000"
+.LASF19554:
+	.ascii	"_TIMER_T_ unsigned long\000"
 .LASF8478:
 	.ascii	"GPIO_PUPDR_PUPDR12_1 GPIO_PUPDR_PUPD12_1\000"
 .LASF1373:
@@ -100079,7 +102106,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"EXTI_EMR_MR5 EXTI_EMR_MR5_Msk\000"
 .LASF1757:
 	.ascii	"ADC_SMPR1_SMP11_1 (0x2UL << ADC_SMPR1_SMP11_Pos)\000"
-.LASF19541:
+.LASF19897:
 	.ascii	"CCMR2\000"
 .LASF17025:
 	.ascii	"__HAL_RCC_PLLSAI_DISABLE() (*(__IO uint32_t *) RCC_"
@@ -100099,6 +102126,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_IDR_ID6 GPIO_IDR_ID6_Msk\000"
 .LASF9730:
 	.ascii	"QUADSPI_CCR_ABSIZE_Pos (16U)\000"
+.LASF19557:
+	.ascii	"__SYS_LOCK_H__ \000"
 .LASF4386:
 	.ascii	"CAN_F0R2_FB14_Msk (0x1UL << CAN_F0R2_FB14_Pos)\000"
 .LASF14684:
@@ -100117,8 +102146,12 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"R2_JEXTSEL_3 | ADC_CR2_JEXTSEL_0))\000"
 .LASF11495:
 	.ascii	"SAI_xFRCR_FSALL_2 (0x04UL << SAI_xFRCR_FSALL_Pos)\000"
+.LASF19698:
+	.ascii	"__unused __attribute__((__unused__))\000"
 .LASF12735:
 	.ascii	"TIM_CCMR2_CC4S_Pos (8U)\000"
+.LASF19522:
+	.ascii	"__FLOAT_TYPE float\000"
 .LASF4312:
 	.ascii	"CAN_F13R1_FB21 CAN_F13R1_FB21_Msk\000"
 .LASF12277:
@@ -100246,7 +102279,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TIM_CCMR1_OC2FE TIM_CCMR1_OC2FE_Msk\000"
 .LASF4797:
 	.ascii	"CAN_F4R2_FB23_Msk (0x1UL << CAN_F4R2_FB23_Pos)\000"
-.LASF19615:
+.LASF19971:
 	.ascii	"RxISR\000"
 .LASF13325:
 	.ascii	"USB_OTG_PCGCR_PHYSUSP_Msk (0x1UL << USB_OTG_PCGCR_P"
@@ -100254,7 +102287,7 @@ DMA2_Stream3_IRQHandler:
 .LASF15981:
 	.ascii	"__ETHMACTX_CLK_SLEEP_DISABLE __HAL_RCC_ETHMACTX_CLK"
 	.ascii	"_SLEEP_DISABLE\000"
-.LASF19669:
+.LASF20025:
 	.ascii	"MemManage_Handler\000"
 .LASF17759:
 	.ascii	"MPU_INSTRUCTION_ACCESS_ENABLE ((uint8_t)0x00)\000"
@@ -100394,6 +102427,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_APB1ENR_TIM5EN_Pos (3U)\000"
 .LASF3609:
 	.ascii	"CAN_F6R1_FB11_Msk (0x1UL << CAN_F6R1_FB11_Pos)\000"
+.LASF19767:
+	.ascii	"__nosanitizethread \000"
 .LASF7201:
 	.ascii	"FMC_BCR2_ASYNCWAIT_Msk (0x1UL << FMC_BCR2_ASYNCWAIT"
 	.ascii	"_Pos)\000"
@@ -100553,6 +102588,8 @@ DMA2_Stream3_IRQHandler:
 .LASF10791:
 	.ascii	"RCC_DCKCFGR2_CK48MSEL_Msk (0x1UL << RCC_DCKCFGR2_CK"
 	.ascii	"48MSEL_Pos)\000"
+.LASF19790:
+	.ascii	"MAGENTA 0xF81F\000"
 .LASF1299:
 	.ascii	"CoreDebug_DEMCR_MON_REQ_Pos 19U\000"
 .LASF6250:
@@ -100748,6 +102785,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USB_OTG_HCINTMSK_NYET_Pos (6U)\000"
 .LASF15362:
 	.ascii	"__HAL_I2C_10BIT_HEADER_READ I2C_10BIT_HEADER_READ\000"
+.LASF19519:
+	.ascii	"__IEEE_LITTLE_ENDIAN \000"
 .LASF4161:
 	.ascii	"CAN_F12R1_FB3_Msk (0x1UL << CAN_F12R1_FB3_Pos)\000"
 .LASF15260:
@@ -100834,6 +102873,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F8R1_FB21 CAN_F8R1_FB21_Msk\000"
 .LASF15220:
 	.ascii	"__HAL_ADC_JSQR_RK ADC_JSQR_RK\000"
+.LASF19759:
+	.ascii	"__asserts_exclusive(...) __lock_annotate(assert_exc"
+	.ascii	"lusive_lock(__VA_ARGS__))\000"
 .LASF356:
 	.ascii	"__USA_FBIT__ 16\000"
 .LASF17005:
@@ -100873,6 +102915,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USB_OTG_HPTXSTS_PTXQSAV_Pos (16U)\000"
 .LASF8563:
 	.ascii	"GPIO_ODR_OD3 GPIO_ODR_OD3_Msk\000"
+.LASF19808:
+	.ascii	"D_WHITE 0xC618\000"
 .LASF16124:
 	.ascii	"__SDADC2_RELEASE_RESET __HAL_RCC_SDADC2_RELEASE_RES"
 	.ascii	"ET\000"
@@ -100889,8 +102933,10 @@ DMA2_Stream3_IRQHandler:
 .LASF14272:
 	.ascii	"USB_OTG_HCINTMSK_NYET_Msk (0x1UL << USB_OTG_HCINTMS"
 	.ascii	"K_NYET_Pos)\000"
-.LASF19662:
+.LASF20018:
 	.ascii	"TIM1_UP_TIM10_IRQHandler\000"
+.LASF19695:
+	.ascii	"__weak_symbol __attribute__((__weak__))\000"
 .LASF13025:
 	.ascii	"USART_CR2_STOP_1 (0x2UL << USART_CR2_STOP_Pos)\000"
 .LASF17709:
@@ -101137,6 +103183,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F11R2_FB13_Msk (0x1UL << CAN_F11R2_FB13_Pos)\000"
 .LASF11348:
 	.ascii	"RTC_BKP8R_Pos (0U)\000"
+.LASF19716:
+	.ascii	"__unreachable() __builtin_unreachable()\000"
 .LASF11176:
 	.ascii	"RTC_TSTR_HU_1 (0x2UL << RTC_TSTR_HU_Pos)\000"
 .LASF16208:
@@ -101162,6 +103210,8 @@ DMA2_Stream3_IRQHandler:
 .LASF16207:
 	.ascii	"__TIM8_IS_CLK_DISABLED __HAL_RCC_TIM8_IS_CLK_DISABL"
 	.ascii	"ED\000"
+.LASF19556:
+	.ascii	"__Long long\000"
 .LASF13161:
 	.ascii	"DBGMCU_APB1_FZ_DBG_TIM5_STOP_Pos (3U)\000"
 .LASF10423:
@@ -101336,6 +103386,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ADC_CR1_AWDCH_Pos (0U)\000"
 .LASF5152:
 	.ascii	"CAN_F8R2_FB13 CAN_F8R2_FB13_Msk\000"
+.LASF19763:
+	.ascii	"__requires_unlocked(...) __lock_annotate(locks_excl"
+	.ascii	"uded(__VA_ARGS__))\000"
 .LASF8300:
 	.ascii	"GPIO_OSPEEDR_OSPEED13_0 (0x1UL << GPIO_OSPEEDR_OSPE"
 	.ascii	"ED13_Pos)\000"
@@ -101452,10 +103505,12 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"NTSTS_BOUTNAKEFF_Pos)\000"
 .LASF6639:
 	.ascii	"EXTI_EMR_EM2 EXTI_EMR_MR2\000"
-.LASF19608:
+.LASF19964:
 	.ascii	"__SPI_HandleTypeDef\000"
 .LASF18690:
 	.ascii	"I2C_FREQRANGE(__PCLK__) ((__PCLK__)/1000000U)\000"
+.LASF19740:
+	.ascii	"__SCCSID(s) struct __hack\000"
 .LASF427:
 	.ascii	"__ARM_FEATURE_FP16_FML\000"
 .LASF12014:
@@ -101532,7 +103587,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_MCO2SOURCE_HSE RCC_CFGR_MCO2_1\000"
 .LASF14935:
 	.ascii	"TIM_DMABase_CCMR3 TIM_DMABASE_CCMR3\000"
-.LASF19655:
+.LASF20011:
 	.ascii	"htim1\000"
 .LASF1419:
 	.ascii	"FMC_R_BASE 0xA0000000UL\000"
@@ -101561,6 +103616,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_IER_BOFIE_Msk (0x1UL << CAN_IER_BOFIE_Pos)\000"
 .LASF7117:
 	.ascii	"FMC_BCR1_MTYP_0 (0x1UL << FMC_BCR1_MTYP_Pos)\000"
+.LASF19543:
+	.ascii	"_SYS__TYPES_H \000"
 .LASF16879:
 	.ascii	"__HAL_RCC_AHB3_RELEASE_RESET() (RCC->AHB3RSTR = 0x0"
 	.ascii	"0U)\000"
@@ -101601,6 +103658,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ADC_JSQR_JSQ2 ADC_JSQR_JSQ2_Msk\000"
 .LASF8557:
 	.ascii	"GPIO_ODR_OD1 GPIO_ODR_OD1_Msk\000"
+.LASF19772:
+	.ascii	"__builtin_align_down(x,align) ((__typeof__(x))((x)&"
+	.ascii	"(~((align)-1))))\000"
 .LASF12321:
 	.ascii	"SYSCFG_EXTICR2_EXTI7_PC 0x2000U\000"
 .LASF8914:
@@ -101672,6 +103732,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"OMIC_CLEAR_BIT((__HANDLE__)->Instance->CR3, USART_C"
 	.ascii	"R3_CTSE); (__HANDLE__)->Init.HwFlowCtl &= ~(USART_C"
 	.ascii	"R3_CTSE); } while(0U)\000"
+.LASF19527:
+	.ascii	"__RAND_MAX 0x7fffffff\000"
 .LASF2254:
 	.ascii	"CAN_TSR_ABRQ1 CAN_TSR_ABRQ1_Msk\000"
 .LASF18952:
@@ -101743,6 +103805,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_CFGR_MCO1_0 (0x1UL << RCC_CFGR_MCO1_Pos)\000"
 .LASF5055:
 	.ascii	"CAN_F7R2_FB13_Msk (0x1UL << CAN_F7R2_FB13_Pos)\000"
+.LASF19827:
+	.ascii	"ILI9XXX_INIT_LONG_DELAY 150\000"
 .LASF5245:
 	.ascii	"CAN_F9R2_FB12 CAN_F9R2_FB12_Msk\000"
 .LASF11915:
@@ -101846,6 +103910,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FLASH_OPTCR_RDP_Pos (8U)\000"
 .LASF8649:
 	.ascii	"GPIO_BSRR_BS11_Pos (11U)\000"
+.LASF19742:
+	.ascii	"__DECONST(type,var) ((type)(__uintptr_t)(const void"
+	.ascii	" *)(var))\000"
 .LASF2550:
 	.ascii	"CAN_TDH2R_DATA6_Msk (0xFFUL << CAN_TDH2R_DATA6_Pos)"
 	.ascii	"\000"
@@ -101893,7 +103960,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F9R1_FB4 CAN_F9R1_FB4_Msk\000"
 .LASF6264:
 	.ascii	"DMA_LISR_DMEIF1_Msk (0x1UL << DMA_LISR_DMEIF1_Pos)\000"
-.LASF19573:
+.LASF19929:
 	.ascii	"HAL_DMA_StateTypeDef\000"
 .LASF15386:
 	.ascii	"__OPAMP_CSR_OPAXCAL_H OPAMP_CSR_OPAXCAL_H\000"
@@ -102023,7 +104090,7 @@ DMA2_Stream3_IRQHandler:
 .LASF14155:
 	.ascii	"USB_OTG_HCSPLT_PRTADDR_2 (0x04UL << USB_OTG_HCSPLT_"
 	.ascii	"PRTADDR_Pos)\000"
-.LASF19606:
+.LASF19962:
 	.ascii	"HAL_SPI_StateTypeDef\000"
 .LASF3621:
 	.ascii	"CAN_F6R1_FB15_Msk (0x1UL << CAN_F6R1_FB15_Pos)\000"
@@ -102046,7 +104113,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"\000"
 .LASF6485:
 	.ascii	"EXTI_IMR_MR4_Pos (4U)\000"
-.LASF19559:
+.LASF19915:
 	.ascii	"MemDataAlignment\000"
 .LASF17087:
 	.ascii	"IS_RCC_FMPI2C1CLKSOURCE(SOURCE) (((SOURCE) == RCC_F"
@@ -102098,6 +104165,24 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"S_PTXQTOP_Pos)\000"
 .LASF15594:
 	.ascii	"__GPIOC_CLK_ENABLE __HAL_RCC_GPIOC_CLK_ENABLE\000"
+.LASF19604:
+	.ascii	"_REENT_INIT_MISC(var) do { struct _reent *_r = (var"
+	.ascii	"); _r->_misc->_strtok_last = _NULL; _r->_misc->_mbl"
+	.ascii	"en_state.__count = 0; _r->_misc->_mblen_state.__val"
+	.ascii	"ue.__wch = 0; _r->_misc->_wctomb_state.__count = 0;"
+	.ascii	" _r->_misc->_wctomb_state.__value.__wch = 0; _r->_m"
+	.ascii	"isc->_mbtowc_state.__count = 0; _r->_misc->_mbtowc_"
+	.ascii	"state.__value.__wch = 0; _r->_misc->_mbrlen_state._"
+	.ascii	"_count = 0; _r->_misc->_mbrlen_state.__value.__wch "
+	.ascii	"= 0; _r->_misc->_mbrtowc_state.__count = 0; _r->_mi"
+	.ascii	"sc->_mbrtowc_state.__value.__wch = 0; _r->_misc->_m"
+	.ascii	"bsrtowcs_state.__count = 0; _r->_misc->_mbsrtowcs_s"
+	.ascii	"tate.__value.__wch = 0; _r->_misc->_wcrtomb_state._"
+	.ascii	"_count = 0; _r->_misc->_wcrtomb_state.__value.__wch"
+	.ascii	" = 0; _r->_misc->_wcsrtombs_state.__count = 0; _r->"
+	.ascii	"_misc->_wcsrtombs_state.__value.__wch = 0; _r->_mis"
+	.ascii	"c->_l64a_buf[0] = '\\0'; _r->_misc->_getdate_err = "
+	.ascii	"0; } while (0)\000"
 .LASF4945:
 	.ascii	"CAN_F6R2_FB8 CAN_F6R2_FB8_Msk\000"
 .LASF1624:
@@ -102172,8 +104257,6 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ock\000"
 .LASF5728:
 	.ascii	"CEC_RXDR_RXD CEC_RXDR_RXD_Msk\000"
-.LASF19485:
-	.ascii	"touch_mosi_GPIO_Port GPIOA\000"
 .LASF14978:
 	.ascii	"__DIVFRAQ_SAMPLING16 UART_DIVFRAQ_SAMPLING16\000"
 .LASF18460:
@@ -102257,7 +104340,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"PWR_CR_PLS_LEV7 0x000000E0U\000"
 .LASF5112:
 	.ascii	"CAN_F8R2_FB0_Msk (0x1UL << CAN_F8R2_FB0_Pos)\000"
-.LASF19621:
+.LASF19977:
 	.ascii	"CounterMode\000"
 .LASF4796:
 	.ascii	"CAN_F4R2_FB23_Pos (23U)\000"
@@ -102266,6 +104349,8 @@ DMA2_Stream3_IRQHandler:
 .LASF19282:
 	.ascii	"__HAL_UART_CLEAR_OREFLAG(__HANDLE__) __HAL_UART_CLE"
 	.ascii	"AR_PEFLAG(__HANDLE__)\000"
+.LASF19482:
+	.ascii	"ILI9341 \000"
 .LASF8917:
 	.ascii	"GPIO_AFRL_AFRL3_2 GPIO_AFRL_AFSEL3_2\000"
 .LASF7559:
@@ -102382,6 +104467,8 @@ DMA2_Stream3_IRQHandler:
 .LASF14772:
 	.ascii	"HRTIM_TIMDELAYEDPROTECTION_BALANCED_EEV79 HRTIM_TIM"
 	.ascii	"ER_A_B_C_DELAYEDPROTECTION_BALANCED_EEV7\000"
+.LASF19789:
+	.ascii	"YELLOW 0xFFE0\000"
 .LASF14747:
 	.ascii	"FMC_NAND_WAIT_FEATURE_ENABLE FMC_NAND_PCC_WAIT_FEAT"
 	.ascii	"URE_ENABLE\000"
@@ -102494,6 +104581,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_FS1R_FSC13 CAN_FS1R_FSC13_Msk\000"
 .LASF2770:
 	.ascii	"CAN_FS1R_FSC9 CAN_FS1R_FSC9_Msk\000"
+.LASF19743:
+	.ascii	"__DEVOLATILE(type,var) ((type)(__uintptr_t)(volatil"
+	.ascii	"e void *)(var))\000"
 .LASF18444:
 	.ascii	"IS_ADC_EOCSelection(EOCSelection) (((EOCSelection) "
 	.ascii	"== ADC_EOC_SINGLE_CONV) || ((EOCSelection) == ADC_E"
@@ -102578,7 +104668,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_LCKR_LCK9_Msk (0x1UL << GPIO_LCKR_LCK9_Pos)\000"
 .LASF3822:
 	.ascii	"CAN_F8R1_FB18_Msk (0x1UL << CAN_F8R1_FB18_Pos)\000"
-.LASF19581:
+.LASF19937:
 	.ascii	"XferM1CpltCallback\000"
 .LASF6529:
 	.ascii	"EXTI_IMR_MR18 EXTI_IMR_MR18_Msk\000"
@@ -102616,7 +104706,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F1R2_FB2_Pos (2U)\000"
 .LASF4642:
 	.ascii	"CAN_F3R2_FB3 CAN_F3R2_FB3_Msk\000"
-.LASF19640:
+.LASF19996:
 	.ascii	"HAL_TIM_DMABurstStateTypeDef\000"
 .LASF3737:
 	.ascii	"CAN_F7R1_FB22_Pos (22U)\000"
@@ -102830,6 +104920,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CRC_IDR_IDR_Pos (0U)\000"
 .LASF11296:
 	.ascii	"RTC_TAFCR_TAMPIE RTC_TAFCR_TAMPIE_Msk\000"
+.LASF19751:
+	.ascii	"__datatype_type_tag(kind,type) \000"
 .LASF3489:
 	.ascii	"CAN_F5R1_FB3_Msk (0x1UL << CAN_F5R1_FB3_Pos)\000"
 .LASF8250:
@@ -102914,10 +105006,14 @@ DMA2_Stream3_IRQHandler:
 .LASF14737:
 	.ascii	"HAL_SYSCFG_FASTMODEPLUS_I2C_PA9 I2C_FASTMODEPLUS_PA"
 	.ascii	"9\000"
+.LASF19778:
+	.ascii	"_STRINGS_H_ \000"
 .LASF4571:
 	.ascii	"CAN_F2R2_FB12_Pos (12U)\000"
 .LASF6316:
 	.ascii	"DMA_HISR_TCIF5 DMA_HISR_TCIF5_Msk\000"
+.LASF19800:
+	.ascii	"DD_RED 0x8000\000"
 .LASF13722:
 	.ascii	"USB_OTG_GINTMSK_EOPFM_Pos (15U)\000"
 .LASF6397:
@@ -102938,7 +105034,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__FAST64 \"ll\"\000"
 .LASF7007:
 	.ascii	"FLASH_CR_MER_Msk (0x1UL << FLASH_CR_MER_Pos)\000"
-.LASF19625:
+.LASF19981:
 	.ascii	"AutoReloadPreload\000"
 .LASF4166:
 	.ascii	"CAN_F12R1_FB5_Pos (5U)\000"
@@ -102961,6 +105057,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__I2C1_CLK_DISABLE __HAL_RCC_I2C1_CLK_DISABLE\000"
 .LASF6:
 	.ascii	"__GNUC_MINOR__ 3\000"
+.LASF19823:
+	.ascii	"ILI9XXX_MADCTL_90DEG 0xE8\000"
 .LASF4387:
 	.ascii	"CAN_F0R2_FB14 CAN_F0R2_FB14_Msk\000"
 .LASF3794:
@@ -103057,7 +105155,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"__FLT32_MAX_10_EXP__ 38\000"
 .LASF2599:
 	.ascii	"CAN_RDH0R_DATA7 CAN_RDH0R_DATA7_Msk\000"
-.LASF19672:
+.LASF20028:
 	.ascii	"GNU C11 11.3.1 20220712 -mcpu=cortex-m4 -mfpu=fpv4-"
 	.ascii	"sp-d16 -mfloat-abi=hard -mthumb -march=armv7e-m+fp "
 	.ascii	"-g3 -O0 -std=gnu11 -ffunction-sections -fdata-secti"
@@ -103129,6 +105227,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"DMA_LISR_HTIF2_Msk (0x1UL << DMA_LISR_HTIF2_Pos)\000"
 .LASF2163:
 	.ascii	"ADC_CDR_DATA2_Pos (16U)\000"
+.LASF19501:
+	.ascii	"DISPL_DMA_CUTOFF 20\000"
 .LASF4775:
 	.ascii	"CAN_F4R2_FB16_Pos (16U)\000"
 .LASF4107:
@@ -103154,6 +105254,11 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RCC_RTCCLKSOURCE_HSE_DIV22 0x00160300U\000"
 .LASF1475:
 	.ascii	"EXTI_BASE (APB2PERIPH_BASE + 0x3C00UL)\000"
+.LASF19618:
+	.ascii	"_REENT_STRTOK_LAST(ptr) ((ptr)->_misc->_strtok_last"
+	.ascii	")\000"
+.LASF19481:
+	.ascii	"DISPLAY_USING_TOUCHGFX \000"
 .LASF361:
 	.ascii	"__UTA_IBIT__ 64\000"
 .LASF5893:
@@ -103175,6 +105280,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F6R2_FB2_Msk (0x1UL << CAN_F6R2_FB2_Pos)\000"
 .LASF2208:
 	.ascii	"CAN_MSR_WKUI_Msk (0x1UL << CAN_MSR_WKUI_Pos)\000"
+.LASF19517:
+	.ascii	"_WANT_USE_GDTOA 1\000"
 .LASF19100:
 	.ascii	"TIM_DMABURSTLENGTH_13TRANSFERS 0x00000C00U\000"
 .LASF14377:
@@ -103205,7 +105312,7 @@ DMA2_Stream3_IRQHandler:
 .LASF11898:
 	.ascii	"SDIO_STA_DATAEND_Msk (0x1UL << SDIO_STA_DATAEND_Pos"
 	.ascii	")\000"
-.LASF19612:
+.LASF19968:
 	.ascii	"pRxBuffPtr\000"
 .LASF4005:
 	.ascii	"CAN_F10R1_FB15_Msk (0x1UL << CAN_F10R1_FB15_Pos)\000"
@@ -103264,6 +105371,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FMPI2C_ISR_BUSY_Msk (0x1UL << FMPI2C_ISR_BUSY_Pos)\000"
 .LASF693:
 	.ascii	"UINT64_MAX (__UINT64_MAX__)\000"
+.LASF19625:
+	.ascii	"_REENT_WCRTOMB_STATE(ptr) ((ptr)->_misc->_wcrtomb_s"
+	.ascii	"tate)\000"
 .LASF9583:
 	.ascii	"QUADSPI_CR_ABORT_Msk (0x1UL << QUADSPI_CR_ABORT_Pos"
 	.ascii	")\000"
@@ -103309,6 +105419,8 @@ DMA2_Stream3_IRQHandler:
 .LASF13177:
 	.ascii	"DBGMCU_APB1_FZ_DBG_TIM14_STOP_Msk (0x1UL << DBGMCU_"
 	.ascii	"APB1_FZ_DBG_TIM14_STOP_Pos)\000"
+.LASF19549:
+	.ascii	"__size_t\000"
 .LASF7776:
 	.ascii	"FMC_PATT_ATTHOLD2_5 (0x20UL << FMC_PATT_ATTHOLD2_Po"
 	.ascii	"s)\000"
@@ -103401,7 +105513,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_RI1R_IDE CAN_RI1R_IDE_Msk\000"
 .LASF15923:
 	.ascii	"__TIM22_CLK_ENABLE __HAL_RCC_TIM22_CLK_ENABLE\000"
-.LASF19584:
+.LASF19940:
 	.ascii	"XferAbortCallback\000"
 .LASF17314:
 	.ascii	"__HAL_RCC_PWR_FORCE_RESET() (RCC->APB1RSTR |= (RCC_"
@@ -103443,7 +105555,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F2R1_FB2 CAN_F2R1_FB2_Msk\000"
 .LASF12999:
 	.ascii	"USART_CR1_OVER8 USART_CR1_OVER8_Msk\000"
-.LASF19525:
+.LASF19881:
 	.ascii	"uint8_t\000"
 .LASF16667:
 	.ascii	"RCC_I2SAPB1CLKSOURCE_PLLI2S 0x00000000U\000"
@@ -103725,7 +105837,7 @@ DMA2_Stream3_IRQHandler:
 .LASF18775:
 	.ascii	"__HAL_PWR_GET_ODRUDR_FLAG(__FLAG__) ((PWR->CSR & (_"
 	.ascii	"_FLAG__)) == (__FLAG__))\000"
-.LASF19513:
+.LASF19869:
 	.ascii	"signed char\000"
 .LASF372:
 	.ascii	"__GCC_ATOMIC_CHAR16_T_LOCK_FREE 2\000"
@@ -103738,7 +105850,7 @@ DMA2_Stream3_IRQHandler:
 .LASF15116:
 	.ascii	"HAL_I2C_Master_Sequential_Receive_DMA HAL_I2C_Maste"
 	.ascii	"r_Seq_Receive_DMA\000"
-.LASF19576:
+.LASF19932:
 	.ascii	"Lock\000"
 .LASF17512:
 	.ascii	"GPIO_AF2_TIM5 ((uint8_t)0x02)\000"
@@ -103753,6 +105865,8 @@ DMA2_Stream3_IRQHandler:
 .LASF6453:
 	.ascii	"DMA_HIFCR_CHTIF4_Msk (0x1UL << DMA_HIFCR_CHTIF4_Pos"
 	.ascii	")\000"
+.LASF19828:
+	.ascii	"ILI9XXX_POWER0 0xC0\000"
 .LASF11499:
 	.ascii	"SAI_xFRCR_FSALL_6 (0x40UL << SAI_xFRCR_FSALL_Pos)\000"
 .LASF7474:
@@ -103934,6 +106048,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"EXTI_EMR_MR6_Pos (6U)\000"
 .LASF11625:
 	.ascii	"SPDIFRX_CR_CUMSK SPDIFRX_CR_CUMSK_Msk\000"
+.LASF19580:
+	.ascii	"_RAND48_ADD (0x000b)\000"
 .LASF5572:
 	.ascii	"CAN_F12R2_FB25 CAN_F12R2_FB25_Msk\000"
 .LASF12142:
@@ -103997,8 +106113,10 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"\000"
 .LASF1635:
 	.ascii	"ADC_SR_JEOC_Pos (2U)\000"
-.LASF19549:
+.LASF19905:
 	.ascii	"TIM_TypeDef\000"
+.LASF19515:
+	.ascii	"_RETARGETABLE_LOCKING 1\000"
 .LASF10029:
 	.ascii	"RCC_CIR_HSERDYC_Msk (0x1UL << RCC_CIR_HSERDYC_Pos)\000"
 .LASF8173:
@@ -104014,6 +106132,8 @@ DMA2_Stream3_IRQHandler:
 .LASF951:
 	.ascii	"SCB_CFSR_UNALIGNED_Msk (1UL << SCB_CFSR_UNALIGNED_P"
 	.ascii	"os)\000"
+.LASF19684:
+	.ascii	"__CC_SUPPORTS_WARNING 1\000"
 .LASF8875:
 	.ascii	"GPIO_AFRL_AFSEL4_1 (0x2UL << GPIO_AFRL_AFSEL4_Pos)\000"
 .LASF3387:
@@ -104215,7 +106335,7 @@ DMA2_Stream3_IRQHandler:
 .LASF9251:
 	.ascii	"FMPI2C_CR1_ERRIE_Msk (0x1UL << FMPI2C_CR1_ERRIE_Pos"
 	.ascii	")\000"
-.LASF19578:
+.LASF19934:
 	.ascii	"Parent\000"
 .LASF11657:
 	.ascii	"SPDIFRX_IMR_SBLKIE_Msk (0x1UL << SPDIFRX_IMR_SBLKIE"
@@ -104270,6 +106390,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"os)\000"
 .LASF7933:
 	.ascii	"FMC_SDTR2_TRAS_0 (0x1UL << FMC_SDTR2_TRAS_Pos)\000"
+.LASF19493:
+	.ascii	"BKLIT_STBY_LEVEL 50\000"
 .LASF3984:
 	.ascii	"CAN_F10R1_FB8_Msk (0x1UL << CAN_F10R1_FB8_Pos)\000"
 .LASF9064:
@@ -104323,6 +106445,8 @@ DMA2_Stream3_IRQHandler:
 .LASF11799:
 	.ascii	"SDIO_CMD_WAITRESP_Msk (0x3UL << SDIO_CMD_WAITRESP_P"
 	.ascii	"os)\000"
+.LASF19816:
+	.ascii	"ILI9XXX_PIXEL_FORMAT 0x3A\000"
 .LASF13257:
 	.ascii	"USB_OTG_GOTGCTL_DHNPEN USB_OTG_GOTGCTL_DHNPEN_Msk\000"
 .LASF2388:
@@ -104394,6 +106518,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ERVALUE\000"
 .LASF7172:
 	.ascii	"FMC_BCR2_MTYP_0 (0x1UL << FMC_BCR2_MTYP_Pos)\000"
+.LASF19728:
+	.ascii	"__format_arg(fmtarg) __attribute__((__format_arg__ "
+	.ascii	"(fmtarg)))\000"
 .LASF14923:
 	.ascii	"TIM_DMABase_CNT TIM_DMABASE_CNT\000"
 .LASF14424:
@@ -104529,6 +106656,8 @@ DMA2_Stream3_IRQHandler:
 .LASF13762:
 	.ascii	"USB_OTG_GINTMSK_DISCINT_Msk (0x1UL << USB_OTG_GINTM"
 	.ascii	"SK_DISCINT_Pos)\000"
+.LASF19492:
+	.ascii	"BKLIT_CCR CCR1\000"
 .LASF19015:
 	.ascii	"TIM_CLOCKSOURCE_ITR3 TIM_TS_ITR3\000"
 .LASF14906:
@@ -104562,9 +106691,13 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RESET\000"
 .LASF9789:
 	.ascii	"RCC_CR_HSITRIM_Pos (3U)\000"
+.LASF19855:
+	.ascii	"DISPL_RST_GPIO_Port GPIOB\000"
 .LASF16821:
 	.ascii	"__HAL_RCC_FMPI2C1_IS_CLK_DISABLED() ((RCC->APB1ENR "
 	.ascii	"& (RCC_APB1ENR_FMPI2C1EN)) == RESET)\000"
+.LASF19739:
+	.ascii	"__RCSID_SOURCE(s) struct __hack\000"
 .LASF11811:
 	.ascii	"SDIO_CMD_CPSMEN SDIO_CMD_CPSMEN_Msk\000"
 .LASF15532:
@@ -104585,6 +106718,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"os)\000"
 .LASF13222:
 	.ascii	"USB_OTG_GOTGCTL_SRQSCS_Pos (0U)\000"
+.LASF19764:
+	.ascii	"__no_lock_analysis __lock_annotate(no_thread_safety"
+	.ascii	"_analysis)\000"
 .LASF11295:
 	.ascii	"RTC_TAFCR_TAMPIE_Msk (0x1UL << RTC_TAFCR_TAMPIE_Pos"
 	.ascii	")\000"
@@ -104894,6 +107030,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"RTC_ALRMBR_DT_1 (0x2UL << RTC_ALRMBR_DT_Pos)\000"
 .LASF8842:
 	.ascii	"GPIO_LCKR_LCKK GPIO_LCKR_LCKK_Msk\000"
+.LASF19730:
+	.ascii	"__strftimelike(fmtarg,firstvararg) __attribute__((_"
+	.ascii	"_format__ (__strftime__, fmtarg, firstvararg)))\000"
 .LASF13926:
 	.ascii	"USB_OTG_GLPMCFG_SLPSTS_Pos (15U)\000"
 .LASF3847:
@@ -104938,7 +107077,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F4R2_FB28 CAN_F4R2_FB28_Msk\000"
 .LASF6421:
 	.ascii	"DMA_HIFCR_CTCIF6 DMA_HIFCR_CTCIF6_Msk\000"
-.LASF19574:
+.LASF19930:
 	.ascii	"Instance\000"
 .LASF8458:
 	.ascii	"GPIO_PUPDR_PUPDR6 GPIO_PUPDR_PUPD6\000"
@@ -105065,6 +107204,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"K_USBRST_Pos)\000"
 .LASF4209:
 	.ascii	"CAN_F12R1_FB19_Msk (0x1UL << CAN_F12R1_FB19_Pos)\000"
+.LASF19776:
+	.ascii	"__need_NULL \000"
 .LASF18025:
 	.ascii	"LL_ADC_REG_TRIG_EXT_RISINGFALLING (ADC_CR2_EXTEN_1 "
 	.ascii	"| ADC_CR2_EXTEN_0)\000"
@@ -105090,7 +107231,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"USB_OTG_HAINT_HAINT USB_OTG_HAINT_HAINT_Msk\000"
 .LASF491:
 	.ascii	"USE_HAL_DFSDM_REGISTER_CALLBACKS 0U\000"
-.LASF19618:
+.LASF19974:
 	.ascii	"hdmarx\000"
 .LASF16770:
 	.ascii	"__HAL_RCC_TIM3_CLK_DISABLE() (RCC->APB1ENR &= ~(RCC"
@@ -105189,6 +107330,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_MCR_RESET CAN_MCR_RESET_Msk\000"
 .LASF4229:
 	.ascii	"CAN_F12R1_FB26_Pos (26U)\000"
+.LASF19677:
+	.ascii	"__GNUCLIKE_BUILTIN_NEXT_ARG 1\000"
 .LASF18958:
 	.ascii	"TIM_ICSELECTION_DIRECTTI TIM_CCMR1_CC1S_0\000"
 .LASF8559:
@@ -105272,7 +107415,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"DMA_SxCR_HTIE_Msk (0x1UL << DMA_SxCR_HTIE_Pos)\000"
 .LASF10978:
 	.ascii	"RTC_ISR_INIT_Msk (0x1UL << RTC_ISR_INIT_Pos)\000"
-.LASF19617:
+.LASF19973:
 	.ascii	"hdmatx\000"
 .LASF3001:
 	.ascii	"CAN_F0R1_FB0 CAN_F0R1_FB0_Msk\000"
@@ -105394,6 +107537,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_FM1R_FBM25_Pos (25U)\000"
 .LASF7467:
 	.ascii	"FMC_BTR4_DATAST_5 (0x20UL << FMC_BTR4_DATAST_Pos)\000"
+.LASF19488:
+	.ascii	"DISPLAY_DIMMING_MODE \000"
 .LASF14783:
 	.ascii	"I2C_GENERALCALL_DISABLED I2C_GENERALCALL_DISABLE\000"
 .LASF3774:
@@ -105423,7 +107568,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F5R1_FB23_Pos (23U)\000"
 .LASF6335:
 	.ascii	"DMA_HISR_TEIF4_Pos (3U)\000"
-.LASF19585:
+.LASF19941:
 	.ascii	"ErrorCode\000"
 .LASF2467:
 	.ascii	"CAN_TI1R_IDE CAN_TI1R_IDE_Msk\000"
@@ -105559,6 +107704,8 @@ DMA2_Stream3_IRQHandler:
 .LASF17284:
 	.ascii	"__HAL_RCC_TIM11_IS_CLK_ENABLED() ((RCC->APB2ENR & ("
 	.ascii	"RCC_APB2ENR_TIM11EN)) != RESET)\000"
+.LASF19530:
+	.ascii	"_READ_WRITE_RETURN_TYPE int\000"
 .LASF5082:
 	.ascii	"CAN_F7R2_FB22_Msk (0x1UL << CAN_F7R2_FB22_Pos)\000"
 .LASF6651:
@@ -105608,6 +107755,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"TIM_DMABURSTLENGTH_7TRANSFERS 0x00000600U\000"
 .LASF8647:
 	.ascii	"GPIO_BSRR_BS10_Msk (0x1UL << GPIO_BSRR_BS10_Pos)\000"
+.LASF19509:
+	.ascii	"_LDBL_EQ_DBL 1\000"
 .LASF10823:
 	.ascii	"RTC_TR_MNU_Msk (0xFUL << RTC_TR_MNU_Pos)\000"
 .LASF10985:
@@ -105674,6 +107823,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CoreDebug_DEMCR_VC_CORERESET_Msk (1UL )\000"
 .LASF10995:
 	.ascii	"RTC_ISR_ALRBWF_Pos (1U)\000"
+.LASF19842:
+	.ascii	"DISPL_MOSI_Pin GPIO_PIN_7\000"
 .LASF14123:
 	.ascii	"USB_OTG_HCCHAR_EPTYP USB_OTG_HCCHAR_EPTYP_Msk\000"
 .LASF10214:
@@ -105711,6 +107862,8 @@ DMA2_Stream3_IRQHandler:
 .LASF7155:
 	.ascii	"FMC_BCR1_CBURSTRW_Msk (0x1UL << FMC_BCR1_CBURSTRW_P"
 	.ascii	"os)\000"
+.LASF19585:
+	.ascii	"_REENT_INIT_RESERVED_1 \000"
 .LASF16607:
 	.ascii	"_WCHAR_T_DEFINED \000"
 .LASF18187:
@@ -105720,6 +107873,8 @@ DMA2_Stream3_IRQHandler:
 .LASF10573:
 	.ascii	"RCC_APB2LPENR_TIM10LPEN RCC_APB2LPENR_TIM10LPEN_Msk"
 	.ascii	"\000"
+.LASF19798:
+	.ascii	"D_ORANGE 0xC300\000"
 .LASF7843:
 	.ascii	"FMC_SDCR2_MWID_Msk (0x3UL << FMC_SDCR2_MWID_Pos)\000"
 .LASF4984:
@@ -105733,7 +107888,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_F0R2_FB26 CAN_F0R2_FB26_Msk\000"
 .LASF3605:
 	.ascii	"CAN_F6R1_FB10_Pos (10U)\000"
-.LASF19570:
+.LASF19926:
 	.ascii	"HAL_DMA_STATE_TIMEOUT\000"
 .LASF5355:
 	.ascii	"CAN_F10R2_FB17_Msk (0x1UL << CAN_F10R2_FB17_Pos)\000"
@@ -105793,6 +107948,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_BSRR_BS11 GPIO_BSRR_BS11_Msk\000"
 .LASF5437:
 	.ascii	"CAN_F11R2_FB12 CAN_F11R2_FB12_Msk\000"
+.LASF19531:
+	.ascii	"_READ_WRITE_BUFSIZE_TYPE int\000"
 .LASF18971:
 	.ascii	"TIM_IT_CC1 TIM_DIER_CC1IE\000"
 .LASF7751:
@@ -106006,6 +108163,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"CAN_FilterFIFO1 CAN_FILTER_FIFO1\000"
 .LASF7968:
 	.ascii	"FMC_SDCMR_CTB2_Msk (0x1UL << FMC_SDCMR_CTB2_Pos)\000"
+.LASF19722:
+	.ascii	"__hidden __attribute__((__visibility__(\"hidden\"))"
+	.ascii	")\000"
 .LASF14509:
 	.ascii	"IS_WWDG_ALL_INSTANCE(INSTANCE) ((INSTANCE) == WWDG)"
 	.ascii	"\000"
@@ -106029,6 +108189,9 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"os)\000"
 .LASF9534:
 	.ascii	"PWR_CR_UDEN_1 (0x2UL << PWR_CR_UDEN_Pos)\000"
+.LASF19769:
+	.ascii	"__pt_guarded_by(x) __lock_annotate(pt_guarded_by(x)"
+	.ascii	")\000"
 .LASF14417:
 	.ascii	"USB_OTG_CHNUM USB_OTG_CHNUM_Msk\000"
 .LASF5874:
@@ -106054,7 +108217,7 @@ DMA2_Stream3_IRQHandler:
 .LASF14970:
 	.ascii	"UART_ONEBIT_SAMPLING_DISABLED UART_ONE_BIT_SAMPLE_D"
 	.ascii	"ISABLE\000"
-.LASF19561:
+.LASF19917:
 	.ascii	"Priority\000"
 .LASF4269:
 	.ascii	"CAN_F13R1_FB7_Msk (0x1UL << CAN_F13R1_FB7_Pos)\000"
@@ -106074,8 +108237,6 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FMC_SDTR1_TRAS_Pos (8U)\000"
 .LASF7531:
 	.ascii	"FMC_BWTR1_ACCMOD_0 (0x1UL << FMC_BWTR1_ACCMOD_Pos)\000"
-.LASF19484:
-	.ascii	"touch_mosi_Pin GPIO_PIN_6\000"
 .LASF17243:
 	.ascii	"__HAL_RCC_USART2_CLK_DISABLE() (RCC->APB1ENR &= ~(R"
 	.ascii	"CC_APB1ENR_USART2EN))\000"
@@ -106142,6 +108303,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"GPIO_AFRL_AFSEL4_Pos (16U)\000"
 .LASF15487:
 	.ascii	"__BKP_FORCE_RESET __HAL_RCC_BKP_FORCE_RESET\000"
+.LASF19576:
+	.ascii	"_RAND48_SEED_2 (0x1234)\000"
 .LASF14243:
 	.ascii	"USB_OTG_DIEPINT_BNA USB_OTG_DIEPINT_BNA_Msk\000"
 .LASF14309:
@@ -106223,6 +108386,8 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"ADC_JSQR_JSQ1_3 (0x08UL << ADC_JSQR_JSQ1_Pos)\000"
 .LASF19404:
 	.ascii	"STM32F4xx_HAL_PCD_EX_H \000"
+.LASF19820:
+	.ascii	"ILI9XXX_PAGE_ADDR 0x2B\000"
 .LASF5573:
 	.ascii	"CAN_F12R2_FB26_Pos (26U)\000"
 .LASF14126:
@@ -106264,7 +108429,7 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FLASH_OPTCR_BFB2_Pos (4U)\000"
 .LASF8679:
 	.ascii	"GPIO_BSRR_BR5_Pos (21U)\000"
-.LASF19579:
+.LASF19935:
 	.ascii	"XferCpltCallback\000"
 .LASF7341:
 	.ascii	"FMC_BTR1_ACCMOD_0 (0x1UL << FMC_BTR1_ACCMOD_Pos)\000"
@@ -106417,9 +108582,11 @@ DMA2_Stream3_IRQHandler:
 .LASF16051:
 	.ascii	"__HAL_RCC_OTGHS_CLK_SLEEP_ENABLE __HAL_RCC_USB_OTG_"
 	.ascii	"HS_CLK_SLEEP_ENABLE\000"
+.LASF19532:
+	.ascii	"_REENT_SMALL \000"
 .LASF10258:
 	.ascii	"RCC_AHB2ENR_OTGFSEN_Pos (7U)\000"
-.LASF19552:
+.LASF19908:
 	.ascii	"HAL_LOCKED\000"
 .LASF7200:
 	.ascii	"FMC_BCR2_ASYNCWAIT_Pos (15U)\000"
@@ -106514,6 +108681,10 @@ DMA2_Stream3_IRQHandler:
 	.ascii	"FMC_BCR3_MWID_0 (0x1UL << FMC_BCR3_MWID_Pos)\000"
 .LASF4936:
 	.ascii	"CAN_F6R2_FB5 CAN_F6R2_FB5_Msk\000"
+.LASF19699:
+	.ascii	"__used __attribute__((__used__))\000"
+.LASF19664:
+	.ascii	"__BEGIN_DECLS \000"
 .LASF18481:
 	.ascii	"FLASH_TYPEPROGRAM_DOUBLEWORD 0x00000003U\000"
 .LASF15954:

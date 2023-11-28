@@ -1,14 +1,7 @@
-09:37:25 **** Incremental Build of configuration Debug for project Multiparameter_Monitor ****
+10:40:29 **** Incremental Build of configuration Debug for project Multiparameter_Monitor ****
 make -j24 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Monitor_core" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX" -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -O0 -ffunction-sections -fdata-sections -Wall -save-temps -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-g++ -o "Multiparameter_Monitor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\STM32F446RETX_FLASH.ld" -Wl,-Map="Multiparameter_Monitor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
-Finished building target: Multiparameter_Monitor.elf
- 
 arm-none-eabi-size   Multiparameter_Monitor.elf 
-arm-none-eabi-objdump -h -S  Multiparameter_Monitor.elf  > "Multiparameter_Monitor.list"
    text	   data	    bss	    dec	    hex	filename
-  22032	     20	   3604	  25656	   6438	Multiparameter_Monitor.elf
+  37402	    136	   4412	  41950	   a3de	Multiparameter_Monitor.elf
 Finished building: default.size.stdout
- 
-Finished building: Multiparameter_Monitor.list
  

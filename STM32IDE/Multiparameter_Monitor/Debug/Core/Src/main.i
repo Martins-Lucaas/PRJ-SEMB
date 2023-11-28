@@ -31990,61 +31990,65 @@ uint32_t HAL_GetUIDw0(void);
 uint32_t HAL_GetUIDw1(void);
 uint32_t HAL_GetUIDw2(void);
 # 31 "../Core/Inc/main.h" 2
-# 52 "../Core/Inc/main.h"
-void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
-
-
-void Error_Handler(void);
 
 
 
+# 1 "../Core/Inc/z_displ_ILI9XXX.h" 1
 
 
+#define __Z_DISPL_ILI9XXX_H 
 
-#define touch_int_Pin GPIO_PIN_4
-#define touch_int_GPIO_Port GPIOA
-#define displ_sck_Pin GPIO_PIN_5
-#define displ_sck_GPIO_Port GPIOA
-#define touch_mosi_Pin GPIO_PIN_6
-#define touch_mosi_GPIO_Port GPIOA
-#define displ_mosi_Pin GPIO_PIN_7
-#define displ_mosi_GPIO_Port GPIOA
-#define usart_emg_rx_Pin GPIO_PIN_5
-#define usart_emg_rx_GPIO_Port GPIOC
-#define temp_scl_Pin GPIO_PIN_10
-#define temp_scl_GPIO_Port GPIOB
-#define displ_cs_Pin GPIO_PIN_12
-#define displ_cs_GPIO_Port GPIOB
-#define touch_cs_Pin GPIO_PIN_13
-#define touch_cs_GPIO_Port GPIOB
-#define displ_dc_Pin GPIO_PIN_14
-#define displ_dc_GPIO_Port GPIOB
-#define displ_rst_Pin GPIO_PIN_15
-#define displ_rst_GPIO_Port GPIOB
-#define displ_led_Pin GPIO_PIN_7
-#define displ_led_GPIO_Port GPIOC
-#define oxi_sda_Pin GPIO_PIN_9
-#define oxi_sda_GPIO_Port GPIOC
-#define oxi_scl_Pin GPIO_PIN_8
-#define oxi_scl_GPIO_Port GPIOA
-#define led_adc_Pin GPIO_PIN_9
-#define led_adc_GPIO_Port GPIOA
-#define usart_emg_tx_Pin GPIO_PIN_10
-#define usart_emg_tx_GPIO_Port GPIOC
-#define temp_sda_Pin GPIO_PIN_12
-#define temp_sda_GPIO_Port GPIOC
-# 21 "../Core/Src/main.c" 2
+#define DISPLAY_USING_TOUCHGFX 
+
+#define ILI9341 
+
+#define DISPL_SPI_PORT hspi2
+#define DISPL_SPI SPI2
+
+#define DISPL_PRESCALER SPI_BAUDRATEPRESCALER_4
+#define TOUCH_PRESCALER SPI_BAUDRATEPRESCALER_256
+
+
+#define DISPLAY_SPI_DMA_MODE 
+
+#define DISPLAY_DIMMING_MODE 
+#define BKLIT_TIMER TIM2
+#define BKLIT_T htim2
+#define BKLIT_CHANNEL TIM_CHANNEL_1
+#define BKLIT_CCR CCR1
+#define BKLIT_STBY_LEVEL 50
+#define BKLIT_INIT_LEVEL 100
+
+#define TGFX_TIMER TIM3
+#define TGFX_T htim3
+
+#define BUFLEVEL 13
+# 39 "../Core/Inc/z_displ_ILI9XXX.h"
+#define Z_RGB565 
+# 52 "../Core/Inc/z_displ_ILI9XXX.h"
+#define DISPL_WIDTH 240
+#define DISPL_HEIGHT 320
 
 
 
 
-# 1 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Monitor_core/myheaders.h" 1
-# 9 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Monitor_core/myheaders.h"
-#define MYHEADERS_H_ 
 
-# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h" 1 3
-# 27 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h" 3
-#define _STDIO_H_ 
+
+
+#define DISPL_DMA_CUTOFF 20
+
+
+
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 1 3
+
+
+
+
+
+
+
+#define _STRING_H_ 
 
 # 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/_ansi.h" 1 3
 
@@ -32183,384 +32187,7 @@ void Error_Handler(void);
 
 #define _NOINLINE __attribute__ ((__noinline__))
 #define _NOINLINE_STATIC _NOINLINE static
-# 30 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h" 2 3
-
-#define _FSTDIO 
-
-#define __need_size_t 
-#define __need_NULL 
-# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 1 3
-# 43 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define _SYS_CDEFS_H_ 
-
-
-
-# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 1 3 4
-# 155 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
-#undef __need_ptrdiff_t
-# 231 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
-#undef __need_size_t
-# 340 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
-#undef __need_wchar_t
-# 390 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
-#undef NULL
-
-
-
-
-#define NULL ((void *)0)
-
-
-
-
-
-#undef __need_NULL
-
-
-
-
-#define offsetof(TYPE,MEMBER) __builtin_offsetof (TYPE, MEMBER)
-# 48 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 2 3
-
-#define __PMT(args) args
-#define __DOTS , ...
-#define __THROW 
-
-
-#define __ASMNAME(cname) __XSTRING (__USER_LABEL_PREFIX__) cname
-
-
-#define __ptr_t void *
-#define __long_double_t long double
-
-#define __attribute_malloc__ 
-#define __attribute_pure__ 
-#define __attribute_format_strfmon__(a,b) 
-#define __flexarr [0]
-
-
-#define __bounded 
-#define __unbounded 
-#define __ptrvalue 
-# 78 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __has_extension __has_feature
-
-
-#define __has_feature(x) 0
-# 94 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __BEGIN_DECLS 
-#define __END_DECLS 
-# 107 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __GNUCLIKE_ASM 3
-#define __GNUCLIKE_MATH_BUILTIN_CONSTANTS 
-
-
-
-#define __GNUCLIKE___TYPEOF 1
-#define __GNUCLIKE___SECTION 1
-
-#define __GNUCLIKE_CTOR_SECTION_HANDLING 1
-
-#define __GNUCLIKE_BUILTIN_CONSTANT_P 1
-
-
-#define __GNUCLIKE_BUILTIN_VARARGS 1
-#define __GNUCLIKE_BUILTIN_STDARG 1
-#define __GNUCLIKE_BUILTIN_VAALIST 1
-
-
-#define __GNUC_VA_LIST_COMPATIBILITY 1
-
-
-
-
-#define __compiler_membar() __asm __volatile(" " : : : "memory")
-
-#define __GNUCLIKE_BUILTIN_NEXT_ARG 1
-#define __GNUCLIKE_MATH_BUILTIN_RELOPS 
-
-#define __GNUCLIKE_BUILTIN_MEMCPY 1
-
-
-#define __CC_SUPPORTS_INLINE 1
-#define __CC_SUPPORTS___INLINE 1
-#define __CC_SUPPORTS___INLINE__ 1
-
-#define __CC_SUPPORTS___FUNC__ 1
-#define __CC_SUPPORTS_WARNING 1
-
-#define __CC_SUPPORTS_VARADIC_XXX 1
-
-#define __CC_SUPPORTS_DYNAMIC_ARRAY_INIT 1
-# 164 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __P(protos) protos
-#define __CONCAT1(x,y) x ## y
-#define __CONCAT(x,y) __CONCAT1(x,y)
-#define __STRING(x) #x
-#define __XSTRING(x) __STRING(x)
-
-#define __const const
-#define __signed signed
-#define __volatile volatile
-# 217 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __weak_symbol __attribute__((__weak__))
-# 230 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __dead2 __attribute__((__noreturn__))
-#define __pure2 __attribute__((__const__))
-#define __unused __attribute__((__unused__))
-#define __used __attribute__((__used__))
-#define __packed __attribute__((__packed__))
-#define __aligned(x) __attribute__((__aligned__(x)))
-#define __section(x) __attribute__((__section__(x)))
-
-
-#define __alloc_size(x) __attribute__((__alloc_size__(x)))
-#define __alloc_size2(n,x) __attribute__((__alloc_size__(n, x)))
-
-
-
-
-
-#define __alloc_align(x) __attribute__((__alloc_align__(x)))
-# 335 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __generic(expr,t,yes,no) _Generic(expr, t: yes, default: no)
-# 353 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __min_size(x) static (x)
-
-
-
-
-
-#define __malloc_like __attribute__((__malloc__))
-#define __pure __attribute__((__pure__))
-
-
-
-
-
-
-#define __always_inline __inline__ __attribute__((__always_inline__))
-
-
-
-
-
-#define __noinline __attribute__ ((__noinline__))
-
-
-
-
-
-#define __nonnull(x) __attribute__((__nonnull__ x))
-#define __nonnull_all __attribute__((__nonnull__))
-
-
-
-
-
-
-#define __fastcall __attribute__((__fastcall__))
-#define __result_use_check __attribute__((__warn_unused_result__))
-
-
-
-
-
-
-#define __returns_twice __attribute__((__returns_twice__))
-
-
-
-
-
-#define __unreachable() __builtin_unreachable()
-# 421 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __restrict restrict
-# 454 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __predict_true(exp) __builtin_expect((exp), 1)
-#define __predict_false(exp) __builtin_expect((exp), 0)
-
-
-
-
-
-
-#define __null_sentinel __attribute__((__sentinel__))
-#define __exported __attribute__((__visibility__("default")))
-
-
-#define __hidden __attribute__((__visibility__("hidden")))
-# 476 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __offsetof(type,field) offsetof(type, field)
-#define __rangeof(type,start,end) (__offsetof(type, end) - __offsetof(type, start))
-# 487 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __containerof(x,s,m) ({ const volatile __typeof(((s *)0)->m) *__x = (x); __DEQUALIFY(s *, (const volatile char *)__x - __offsetof(s, m));})
-# 509 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __printflike(fmtarg,firstvararg) __attribute__((__format__ (__printf__, fmtarg, firstvararg)))
-
-#define __scanflike(fmtarg,firstvararg) __attribute__((__format__ (__scanf__, fmtarg, firstvararg)))
-
-#define __format_arg(fmtarg) __attribute__((__format_arg__ (fmtarg)))
-#define __strfmonlike(fmtarg,firstvararg) __attribute__((__format__ (__strfmon__, fmtarg, firstvararg)))
-
-#define __strftimelike(fmtarg,firstvararg) __attribute__((__format__ (__strftime__, fmtarg, firstvararg)))
-# 526 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __printf0like(fmtarg,firstvararg) 
-
-
-
-#define __strong_reference(sym,aliassym) extern __typeof (sym) aliassym __attribute__ ((__alias__ (#sym)))
-
-
-
-#define __weak_reference(sym,alias) __asm__(".weak " #alias); __asm__(".equ " #alias ", " #sym)
-
-
-#define __warn_references(sym,msg) __asm__(".section .gnu.warning." #sym); __asm__(".asciz \"" msg "\""); __asm__(".previous")
-
-
-
-#define __sym_compat(sym,impl,verid) __asm__(".symver " #impl ", " #sym "@" #verid)
-
-#define __sym_default(sym,impl,verid) __asm__(".symver " #impl ", " #sym "@@" #verid)
-# 578 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __FBSDID(s) struct __hack
-
-
-
-#define __RCSID(s) struct __hack
-
-
-
-#define __RCSID_SOURCE(s) struct __hack
-
-
-
-#define __SCCSID(s) struct __hack
-
-
-
-#define __COPYRIGHT(s) struct __hack
-
-
-
-#define __DECONST(type,var) ((type)(__uintptr_t)(const void *)(var))
-
-
-
-#define __DEVOLATILE(type,var) ((type)(__uintptr_t)(volatile void *)(var))
-
-
-
-#define __DEQUALIFY(type,var) ((type)(__uintptr_t)(const volatile void *)(var))
-
-
-
-
-
-
-#define _Nonnull 
-#define _Nullable 
-#define _Null_unspecified 
-#define __NULLABILITY_PRAGMA_PUSH 
-#define __NULLABILITY_PRAGMA_POP 
-# 638 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __arg_type_tag(arg_kind,arg_idx,type_tag_idx) 
-#define __datatype_type_tag(kind,type) 
-# 657 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __lock_annotate(x) 
-
-
-
-
-
-#define __lockable __lock_annotate(lockable)
-
-
-#define __locks_exclusive(...) __lock_annotate(exclusive_lock_function(__VA_ARGS__))
-
-#define __locks_shared(...) __lock_annotate(shared_lock_function(__VA_ARGS__))
-
-
-
-#define __trylocks_exclusive(...) __lock_annotate(exclusive_trylock_function(__VA_ARGS__))
-
-#define __trylocks_shared(...) __lock_annotate(shared_trylock_function(__VA_ARGS__))
-
-
-
-#define __unlocks(...) __lock_annotate(unlock_function(__VA_ARGS__))
-
-
-#define __asserts_exclusive(...) __lock_annotate(assert_exclusive_lock(__VA_ARGS__))
-
-#define __asserts_shared(...) __lock_annotate(assert_shared_lock(__VA_ARGS__))
-
-
-
-#define __requires_exclusive(...) __lock_annotate(exclusive_locks_required(__VA_ARGS__))
-
-#define __requires_shared(...) __lock_annotate(shared_locks_required(__VA_ARGS__))
-
-#define __requires_unlocked(...) __lock_annotate(locks_excluded(__VA_ARGS__))
-
-
-
-#define __no_lock_analysis __lock_annotate(no_thread_safety_analysis)
-# 712 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
-#define __nosanitizeaddress 
-#define __nosanitizememory 
-#define __nosanitizethread 
-
-
-
-#define __guarded_by(x) __lock_annotate(guarded_by(x))
-#define __pt_guarded_by(x) __lock_annotate(pt_guarded_by(x))
-
-
-
-
-#define __builtin_is_aligned(x,align) (((__uintptr_t)x & ((align) - 1)) == 0)
-
-
-
-#define __builtin_align_up(x,align) ((__typeof__(x))(((__uintptr_t)(x)+((align)-1))&(~((align)-1))))
-
-
-
-#define __builtin_align_down(x,align) ((__typeof__(x))((x)&(~((align)-1))))
-
-
-
-#define __align_up(x,y) __builtin_align_up(x, y)
-#define __align_down(x,y) __builtin_align_down(x, y)
-#define __is_aligned(x,y) __builtin_is_aligned(x, y)
-# 36 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h" 2 3
-# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 1 3 4
-# 37 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h" 2 3
-
-
-#define __need___va_list 
-# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stdarg.h" 1 3 4
-# 34 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stdarg.h" 3 4
-#undef __need___va_list
-
-
-
-
-#define __GNUC_VA_LIST 
-
-# 40 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stdarg.h" 3 4
-typedef __builtin_va_list __gnuc_va_list;
-# 41 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h" 2 3
-
-
-
-
-
-typedef __gnuc_va_list va_list;
-#define _VA_LIST_DEFINED 
-# 60 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h" 3
+# 11 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
 # 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 1 3
 # 11 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
 #define _SYS_REENT_H_ 
@@ -32591,6 +32218,8 @@ typedef __gnuc_va_list va_list;
 
 
 
+
+# 350 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
 typedef unsigned int wint_t;
 
 #undef __need_wint_t
@@ -33194,9 +32823,743 @@ void _reclaim_reent (struct _reent *);
 
 extern int _fwalk_sglue (struct _reent *, int (*)(struct _reent *, __FILE *),
     struct _glue *);
-# 61 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h" 2 3
+# 12 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 1 3
+# 43 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define _SYS_CDEFS_H_ 
 
 
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 1 3 4
+# 48 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 2 3
+
+#define __PMT(args) args
+#define __DOTS , ...
+#define __THROW 
+
+
+#define __ASMNAME(cname) __XSTRING (__USER_LABEL_PREFIX__) cname
+
+
+#define __ptr_t void *
+#define __long_double_t long double
+
+#define __attribute_malloc__ 
+#define __attribute_pure__ 
+#define __attribute_format_strfmon__(a,b) 
+#define __flexarr [0]
+
+
+#define __bounded 
+#define __unbounded 
+#define __ptrvalue 
+# 78 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __has_extension __has_feature
+
+
+#define __has_feature(x) 0
+# 94 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __BEGIN_DECLS 
+#define __END_DECLS 
+# 107 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __GNUCLIKE_ASM 3
+#define __GNUCLIKE_MATH_BUILTIN_CONSTANTS 
+
+
+
+#define __GNUCLIKE___TYPEOF 1
+#define __GNUCLIKE___SECTION 1
+
+#define __GNUCLIKE_CTOR_SECTION_HANDLING 1
+
+#define __GNUCLIKE_BUILTIN_CONSTANT_P 1
+
+
+#define __GNUCLIKE_BUILTIN_VARARGS 1
+#define __GNUCLIKE_BUILTIN_STDARG 1
+#define __GNUCLIKE_BUILTIN_VAALIST 1
+
+
+#define __GNUC_VA_LIST_COMPATIBILITY 1
+
+
+
+
+#define __compiler_membar() __asm __volatile(" " : : : "memory")
+
+#define __GNUCLIKE_BUILTIN_NEXT_ARG 1
+#define __GNUCLIKE_MATH_BUILTIN_RELOPS 
+
+#define __GNUCLIKE_BUILTIN_MEMCPY 1
+
+
+#define __CC_SUPPORTS_INLINE 1
+#define __CC_SUPPORTS___INLINE 1
+#define __CC_SUPPORTS___INLINE__ 1
+
+#define __CC_SUPPORTS___FUNC__ 1
+#define __CC_SUPPORTS_WARNING 1
+
+#define __CC_SUPPORTS_VARADIC_XXX 1
+
+#define __CC_SUPPORTS_DYNAMIC_ARRAY_INIT 1
+# 164 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __P(protos) protos
+#define __CONCAT1(x,y) x ## y
+#define __CONCAT(x,y) __CONCAT1(x,y)
+#define __STRING(x) #x
+#define __XSTRING(x) __STRING(x)
+
+#define __const const
+#define __signed signed
+#define __volatile volatile
+# 217 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __weak_symbol __attribute__((__weak__))
+# 230 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __dead2 __attribute__((__noreturn__))
+#define __pure2 __attribute__((__const__))
+#define __unused __attribute__((__unused__))
+#define __used __attribute__((__used__))
+#define __packed __attribute__((__packed__))
+#define __aligned(x) __attribute__((__aligned__(x)))
+#define __section(x) __attribute__((__section__(x)))
+
+
+#define __alloc_size(x) __attribute__((__alloc_size__(x)))
+#define __alloc_size2(n,x) __attribute__((__alloc_size__(n, x)))
+
+
+
+
+
+#define __alloc_align(x) __attribute__((__alloc_align__(x)))
+# 335 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __generic(expr,t,yes,no) _Generic(expr, t: yes, default: no)
+# 353 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __min_size(x) static (x)
+
+
+
+
+
+#define __malloc_like __attribute__((__malloc__))
+#define __pure __attribute__((__pure__))
+
+
+
+
+
+
+#define __always_inline __inline__ __attribute__((__always_inline__))
+
+
+
+
+
+#define __noinline __attribute__ ((__noinline__))
+
+
+
+
+
+#define __nonnull(x) __attribute__((__nonnull__ x))
+#define __nonnull_all __attribute__((__nonnull__))
+
+
+
+
+
+
+#define __fastcall __attribute__((__fastcall__))
+#define __result_use_check __attribute__((__warn_unused_result__))
+
+
+
+
+
+
+#define __returns_twice __attribute__((__returns_twice__))
+
+
+
+
+
+#define __unreachable() __builtin_unreachable()
+# 421 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __restrict restrict
+# 454 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __predict_true(exp) __builtin_expect((exp), 1)
+#define __predict_false(exp) __builtin_expect((exp), 0)
+
+
+
+
+
+
+#define __null_sentinel __attribute__((__sentinel__))
+#define __exported __attribute__((__visibility__("default")))
+
+
+#define __hidden __attribute__((__visibility__("hidden")))
+# 476 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __offsetof(type,field) offsetof(type, field)
+#define __rangeof(type,start,end) (__offsetof(type, end) - __offsetof(type, start))
+# 487 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __containerof(x,s,m) ({ const volatile __typeof(((s *)0)->m) *__x = (x); __DEQUALIFY(s *, (const volatile char *)__x - __offsetof(s, m));})
+# 509 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __printflike(fmtarg,firstvararg) __attribute__((__format__ (__printf__, fmtarg, firstvararg)))
+
+#define __scanflike(fmtarg,firstvararg) __attribute__((__format__ (__scanf__, fmtarg, firstvararg)))
+
+#define __format_arg(fmtarg) __attribute__((__format_arg__ (fmtarg)))
+#define __strfmonlike(fmtarg,firstvararg) __attribute__((__format__ (__strfmon__, fmtarg, firstvararg)))
+
+#define __strftimelike(fmtarg,firstvararg) __attribute__((__format__ (__strftime__, fmtarg, firstvararg)))
+# 526 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __printf0like(fmtarg,firstvararg) 
+
+
+
+#define __strong_reference(sym,aliassym) extern __typeof (sym) aliassym __attribute__ ((__alias__ (#sym)))
+
+
+
+#define __weak_reference(sym,alias) __asm__(".weak " #alias); __asm__(".equ " #alias ", " #sym)
+
+
+#define __warn_references(sym,msg) __asm__(".section .gnu.warning." #sym); __asm__(".asciz \"" msg "\""); __asm__(".previous")
+
+
+
+#define __sym_compat(sym,impl,verid) __asm__(".symver " #impl ", " #sym "@" #verid)
+
+#define __sym_default(sym,impl,verid) __asm__(".symver " #impl ", " #sym "@@" #verid)
+# 578 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __FBSDID(s) struct __hack
+
+
+
+#define __RCSID(s) struct __hack
+
+
+
+#define __RCSID_SOURCE(s) struct __hack
+
+
+
+#define __SCCSID(s) struct __hack
+
+
+
+#define __COPYRIGHT(s) struct __hack
+
+
+
+#define __DECONST(type,var) ((type)(__uintptr_t)(const void *)(var))
+
+
+
+#define __DEVOLATILE(type,var) ((type)(__uintptr_t)(volatile void *)(var))
+
+
+
+#define __DEQUALIFY(type,var) ((type)(__uintptr_t)(const volatile void *)(var))
+
+
+
+
+
+
+#define _Nonnull 
+#define _Nullable 
+#define _Null_unspecified 
+#define __NULLABILITY_PRAGMA_PUSH 
+#define __NULLABILITY_PRAGMA_POP 
+# 638 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __arg_type_tag(arg_kind,arg_idx,type_tag_idx) 
+#define __datatype_type_tag(kind,type) 
+# 657 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __lock_annotate(x) 
+
+
+
+
+
+#define __lockable __lock_annotate(lockable)
+
+
+#define __locks_exclusive(...) __lock_annotate(exclusive_lock_function(__VA_ARGS__))
+
+#define __locks_shared(...) __lock_annotate(shared_lock_function(__VA_ARGS__))
+
+
+
+#define __trylocks_exclusive(...) __lock_annotate(exclusive_trylock_function(__VA_ARGS__))
+
+#define __trylocks_shared(...) __lock_annotate(shared_trylock_function(__VA_ARGS__))
+
+
+
+#define __unlocks(...) __lock_annotate(unlock_function(__VA_ARGS__))
+
+
+#define __asserts_exclusive(...) __lock_annotate(assert_exclusive_lock(__VA_ARGS__))
+
+#define __asserts_shared(...) __lock_annotate(assert_shared_lock(__VA_ARGS__))
+
+
+
+#define __requires_exclusive(...) __lock_annotate(exclusive_locks_required(__VA_ARGS__))
+
+#define __requires_shared(...) __lock_annotate(shared_locks_required(__VA_ARGS__))
+
+#define __requires_unlocked(...) __lock_annotate(locks_excluded(__VA_ARGS__))
+
+
+
+#define __no_lock_analysis __lock_annotate(no_thread_safety_analysis)
+# 712 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __nosanitizeaddress 
+#define __nosanitizememory 
+#define __nosanitizethread 
+
+
+
+#define __guarded_by(x) __lock_annotate(guarded_by(x))
+#define __pt_guarded_by(x) __lock_annotate(pt_guarded_by(x))
+
+
+
+
+#define __builtin_is_aligned(x,align) (((__uintptr_t)x & ((align) - 1)) == 0)
+
+
+
+#define __builtin_align_up(x,align) ((__typeof__(x))(((__uintptr_t)(x)+((align)-1))&(~((align)-1))))
+
+
+
+#define __builtin_align_down(x,align) ((__typeof__(x))((x)&(~((align)-1))))
+
+
+
+#define __align_up(x,y) __builtin_align_up(x, y)
+#define __align_down(x,y) __builtin_align_down(x, y)
+#define __is_aligned(x,y) __builtin_is_aligned(x, y)
+# 13 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
+
+
+#define __need_size_t 
+#define __need_NULL 
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 1 3 4
+# 155 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+#undef __need_ptrdiff_t
+# 231 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+#undef __need_size_t
+# 340 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+#undef __need_wchar_t
+# 390 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+#undef NULL
+
+
+
+
+#define NULL ((void *)0)
+
+
+
+
+
+#undef __need_NULL
+
+
+
+
+#define offsetof(TYPE,MEMBER) __builtin_offsetof (TYPE, MEMBER)
+# 18 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
+
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_locale.h" 1 3
+
+
+
+#define _SYS__LOCALE_H 
+
+
+
+
+struct __locale_t;
+typedef struct __locale_t *locale_t;
+# 21 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
+
+
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/strings.h" 1 3
+# 30 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/strings.h" 3
+#define _STRINGS_H_ 
+# 44 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/strings.h" 3
+
+
+int bcmp(const void *, const void *, size_t) __attribute__((__pure__));
+void bcopy(const void *, void *, size_t);
+void bzero(void *, size_t);
+
+
+void explicit_bzero(void *, size_t);
+
+
+int ffs(int) __attribute__((__const__));
+
+
+int ffsl(long) __attribute__((__const__));
+int ffsll(long long) __attribute__((__const__));
+int fls(int) __attribute__((__const__));
+int flsl(long) __attribute__((__const__));
+int flsll(long long) __attribute__((__const__));
+
+
+char *index(const char *, int) __attribute__((__pure__));
+char *rindex(const char *, int) __attribute__((__pure__));
+
+int strcasecmp(const char *, const char *) __attribute__((__pure__));
+int strncasecmp(const char *, const char *, size_t) __attribute__((__pure__));
+
+
+int strcasecmp_l (const char *, const char *, locale_t);
+int strncasecmp_l (const char *, const char *, size_t, locale_t);
+
+
+# 25 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
+
+
+
+
+void * memchr (const void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void * memcpy (void *restrict, const void *restrict, size_t);
+void * memmove (void *, const void *, size_t);
+void * memset (void *, int, size_t);
+char *strcat (char *restrict, const char *restrict);
+char *strchr (const char *, int);
+int strcmp (const char *, const char *);
+int strcoll (const char *, const char *);
+char *strcpy (char *restrict, const char *restrict);
+size_t strcspn (const char *, const char *);
+char *strerror (int);
+size_t strlen (const char *);
+char *strncat (char *restrict, const char *restrict, size_t);
+int strncmp (const char *, const char *, size_t);
+char *strncpy (char *restrict, const char *restrict, size_t);
+char *strpbrk (const char *, const char *);
+char *strrchr (const char *, int);
+size_t strspn (const char *, const char *);
+char *strstr (const char *, const char *);
+
+char *strtok (char *restrict, const char *restrict);
+
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+
+int strcoll_l (const char *, const char *, locale_t);
+char *strerror_l (int, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+
+
+int timingsafe_bcmp (const void *, const void *, size_t);
+int timingsafe_memcmp (const void *, const void *, size_t);
+
+
+void * memccpy (void *restrict, const void *restrict, int, size_t);
+# 76 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 3
+char *stpcpy (char *restrict, const char *restrict);
+char *stpncpy (char *restrict, const char *restrict, size_t);
+
+
+
+
+
+
+char *strdup (const char *) __attribute__((__malloc__)) __attribute__((__warn_unused_result__));
+
+char *_strdup_r (struct _reent *, const char *);
+
+char *strndup (const char *, size_t) __attribute__((__malloc__)) __attribute__((__warn_unused_result__));
+
+char *_strndup_r (struct _reent *, const char *, size_t);
+# 100 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 3
+int strerror_r (int, char *, size_t)
+
+             __asm__ ("" "__xpg_strerror_r")
+
+  ;
+
+
+
+
+
+
+
+char * _strerror_r (struct _reent *, int, int, int *);
+
+
+size_t strlcat (char *, const char *, size_t);
+size_t strlcpy (char *, const char *, size_t);
+
+
+size_t strnlen (const char *, size_t);
+
+
+char *strsep (char **, const char *);
+
+
+char *strnstr(const char *, const char *, size_t) __attribute__((__pure__));
+
+
+
+char *strlwr (char *);
+char *strupr (char *);
+
+
+
+char *strsignal (int __signo);
+# 177 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 3
+#define strcmpi strcasecmp
+
+
+#define stricmp strcasecmp
+
+
+#define strncmpi strncasecmp
+
+
+#define strnicmp strncasecmp
+
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/string.h" 1 3
+# 190 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
+
+
+# 67 "../Core/Inc/z_displ_ILI9XXX.h" 2
+
+
+# 68 "../Core/Inc/z_displ_ILI9XXX.h"
+typedef enum {
+ Displ_Orientat_0,
+ Displ_Orientat_90,
+ Displ_Orientat_180,
+ Displ_Orientat_270
+} Displ_Orientat_e;
+
+
+#define SPI_COMMAND GPIO_PIN_RESET
+#define SPI_DATA GPIO_PIN_SET
+
+
+
+#define SIZEBUF (1<<BUFLEVEL)
+
+
+
+
+
+#define RED 0xF800
+#define GREEN 0x07E0
+#define BLUE 0x001F
+#define YELLOW 0xFFE0
+#define MAGENTA 0xF81F
+#define ORANGE 0xFD00
+#define CYAN 0x07FF
+#define D_RED 0xC000
+#define D_GREEN 0x0600
+#define D_BLUE 0x0018
+#define D_YELLOW 0xC600
+#define D_MAGENTA 0xC018
+#define D_ORANGE 0xC300
+#define D_CYAN 0x0618
+#define DD_RED 0x8000
+#define DD_GREEN 0x0400
+#define DD_BLUE 0x0010
+#define DD_YELLOW 0x8400
+#define DD_MAGENTA 0x8020
+#define DD_ORANGE 0x8200
+#define DD_CYAN 0x0410
+#define WHITE 0xFFFF
+#define D_WHITE 0xC618
+#define DD_WHITE 0x8410
+#define DDD_WHITE 0x4208
+#define DDDD_WHITE 0x2104
+#define BLACK 0x0000
+#define color565(r,g,b) ((((r) & 0xF8) << 8) | (((g) & 0xFC) << 3) | (((b) & 0xF8) >> 3))
+
+
+
+
+
+#define ILI9XXX_SLEEP_OUT 0x11
+#define ILI9XXX_DISPLAY_ON 0x29
+#define ILI9XXX_PIXEL_FORMAT 0x3A
+#define ILI9XXX_RGB_INTERFACE 0xB0
+#define ILI9XXX_MEMWR 0x2C
+#define ILI9XXX_COLUMN_ADDR 0x2A
+#define ILI9XXX_PAGE_ADDR 0x2B
+#define ILI9XXX_MADCTL 0x36
+#define ILI9XXX_MADCTL_0DEG 0X88
+#define ILI9XXX_MADCTL_90DEG 0xE8
+#define ILI9XXX_MADCTL_180DEG 0x48
+#define ILI9XXX_MADCTL_270DEG 0x28
+
+#define ILI9XXX_INIT_SHORT_DELAY 5
+#define ILI9XXX_INIT_LONG_DELAY 150
+
+#define ILI9XXX_POWER0 0xC0
+#define ILI9XXX_POWER1 0xC1
+#define ILI9488_POWER2 0xC2
+#define ILI9341_POWERA 0xCB
+#define ILI9341_POWERB 0xCF
+
+
+
+
+#define SET_DISPL_SPI_BAUDRATE DISPL_SPI->CR1 &= (uint16_t) ~SPI_CR1_BR_Msk; DISPL_SPI->CR1 |= DISPL_PRESCALER
+
+
+#define SET_TOUCH_SPI_BAUDRATE TOUCH_SPI->CR1 &= (uint16_t) ~SPI_CR1_BR_Msk; TOUCH_SPI->CR1 |= TOUCH_PRESCALER
+
+
+
+
+#define _swap_int16_t(a,b) { int16_t t = a; a = b; b = t; }
+# 176 "../Core/Inc/z_displ_ILI9XXX.h"
+void Displ_FillArea(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color);
+void Displ_Orientation(Displ_Orientat_e orientation);
+void Displ_Init(Displ_Orientat_e orientation);
+
+void HAL_SPI_ErrorCallback(SPI_HandleTypeDef *hspi);
+void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi);
+
+uint32_t Displ_BackLight(uint8_t cmd);
+
+
+
+int touchgfxDisplayDriverTransmitActive();
+void touchgfxDisplayDriverTransmitBlock(const uint8_t* pixels, uint16_t x, uint16_t y, uint16_t w, uint16_t h);
+extern void DisplayDriver_TransferCompleteCallback();
+extern void touchgfxSignalVSync(void);
+# 35 "../Core/Inc/main.h" 2
+# 53 "../Core/Inc/main.h"
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
+
+void Error_Handler(void);
+
+
+
+
+
+
+#define TOUCH_INT_Pin GPIO_PIN_4
+#define TOUCH_INT_GPIO_Port GPIOA
+#define DISPL_SCK_Pin GPIO_PIN_5
+#define DISPL_SCK_GPIO_Port GPIOA
+#define TOUCH_MISO_Pin GPIO_PIN_6
+#define TOUCH_MISO_GPIO_Port GPIOA
+#define DISPL_MOSI_Pin GPIO_PIN_7
+#define DISPL_MOSI_GPIO_Port GPIOA
+#define usart_emg_rx_Pin GPIO_PIN_5
+#define usart_emg_rx_GPIO_Port GPIOC
+#define temp_scl_Pin GPIO_PIN_10
+#define temp_scl_GPIO_Port GPIOB
+#define DISPL_CS_Pin GPIO_PIN_12
+#define DISPL_CS_GPIO_Port GPIOB
+#define TOUCH_CS_Pin GPIO_PIN_13
+#define TOUCH_CS_GPIO_Port GPIOB
+#define DISPL_DC_Pin GPIO_PIN_14
+#define DISPL_DC_GPIO_Port GPIOB
+#define DISPL_RST_Pin GPIO_PIN_15
+#define DISPL_RST_GPIO_Port GPIOB
+#define DISPL_LED_Pin GPIO_PIN_7
+#define DISPL_LED_GPIO_Port GPIOC
+#define oxi_sda_Pin GPIO_PIN_9
+#define oxi_sda_GPIO_Port GPIOC
+#define oxi_scl_Pin GPIO_PIN_8
+#define oxi_scl_GPIO_Port GPIOA
+#define led_adc_Pin GPIO_PIN_9
+#define led_adc_GPIO_Port GPIOA
+#define usart_emg_tx_Pin GPIO_PIN_10
+#define usart_emg_tx_GPIO_Port GPIOC
+#define temp_sda_Pin GPIO_PIN_12
+#define temp_sda_GPIO_Port GPIOC
+# 21 "../Core/Src/main.c" 2
+
+
+
+# 1 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Monitor_core/myheaders.h" 1
+# 9 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Monitor_core/myheaders.h"
+#define MYHEADERS_H_ 
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h" 1 3
+# 27 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h" 3
+#define _STDIO_H_ 
+
+
+
+#define _FSTDIO 
+
+#define __need_size_t 
+#define __need_NULL 
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 1 3 4
+# 155 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+#undef __need_ptrdiff_t
+# 231 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+#undef __need_size_t
+# 340 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+#undef __need_wchar_t
+# 390 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+#undef NULL
+
+
+
+
+#define NULL ((void *)0)
+
+
+
+
+
+#undef __need_NULL
+
+
+
+
+#define offsetof(TYPE,MEMBER) __builtin_offsetof (TYPE, MEMBER)
+# 37 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h" 2 3
+
+
+#define __need___va_list 
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stdarg.h" 1 3 4
+# 34 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stdarg.h" 3 4
+#undef __need___va_list
+
+
+
+
+#define __GNUC_VA_LIST 
+
+# 40 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stdarg.h" 3 4
+typedef __builtin_va_list __gnuc_va_list;
+# 41 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h" 2 3
+
+
+
+
+
+typedef __gnuc_va_list va_list;
+#define _VA_LIST_DEFINED 
+# 63 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h" 3
 
 
 
@@ -33736,215 +34099,7 @@ _putchar_unlocked(int _c)
 # 807 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h" 3
 
 # 12 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Monitor_core/myheaders.h" 2
-# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 1 3
 
-
-
-
-
-
-
-#define _STRING_H_ 
-
-
-
-
-
-
-#define __need_size_t 
-#define __need_NULL 
-# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 1 3 4
-# 155 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
-#undef __need_ptrdiff_t
-# 231 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
-#undef __need_size_t
-# 340 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
-#undef __need_wchar_t
-# 390 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
-#undef NULL
-
-
-
-
-#define NULL ((void *)0)
-
-
-
-
-
-#undef __need_NULL
-
-
-
-
-#define offsetof(TYPE,MEMBER) __builtin_offsetof (TYPE, MEMBER)
-# 18 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
-
-
-# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_locale.h" 1 3
-
-
-
-#define _SYS__LOCALE_H 
-
-
-
-
-struct __locale_t;
-typedef struct __locale_t *locale_t;
-# 21 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
-
-
-
-# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/strings.h" 1 3
-# 30 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/strings.h" 3
-#define _STRINGS_H_ 
-# 44 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/strings.h" 3
-
-
-int bcmp(const void *, const void *, size_t) __attribute__((__pure__));
-void bcopy(const void *, void *, size_t);
-void bzero(void *, size_t);
-
-
-void explicit_bzero(void *, size_t);
-
-
-int ffs(int) __attribute__((__const__));
-
-
-int ffsl(long) __attribute__((__const__));
-int ffsll(long long) __attribute__((__const__));
-int fls(int) __attribute__((__const__));
-int flsl(long) __attribute__((__const__));
-int flsll(long long) __attribute__((__const__));
-
-
-char *index(const char *, int) __attribute__((__pure__));
-char *rindex(const char *, int) __attribute__((__pure__));
-
-int strcasecmp(const char *, const char *) __attribute__((__pure__));
-int strncasecmp(const char *, const char *, size_t) __attribute__((__pure__));
-
-
-int strcasecmp_l (const char *, const char *, locale_t);
-int strncasecmp_l (const char *, const char *, size_t, locale_t);
-
-
-# 25 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
-
-
-
-
-void * memchr (const void *, int, size_t);
-int memcmp (const void *, const void *, size_t);
-void * memcpy (void *restrict, const void *restrict, size_t);
-void * memmove (void *, const void *, size_t);
-void * memset (void *, int, size_t);
-char *strcat (char *restrict, const char *restrict);
-char *strchr (const char *, int);
-int strcmp (const char *, const char *);
-int strcoll (const char *, const char *);
-char *strcpy (char *restrict, const char *restrict);
-size_t strcspn (const char *, const char *);
-char *strerror (int);
-size_t strlen (const char *);
-char *strncat (char *restrict, const char *restrict, size_t);
-int strncmp (const char *, const char *, size_t);
-char *strncpy (char *restrict, const char *restrict, size_t);
-char *strpbrk (const char *, const char *);
-char *strrchr (const char *, int);
-size_t strspn (const char *, const char *);
-char *strstr (const char *, const char *);
-
-char *strtok (char *restrict, const char *restrict);
-
-size_t strxfrm (char *restrict, const char *restrict, size_t);
-
-
-int strcoll_l (const char *, const char *, locale_t);
-char *strerror_l (int, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
-char *strtok_r (char *restrict, const char *restrict, char **restrict);
-
-
-int timingsafe_bcmp (const void *, const void *, size_t);
-int timingsafe_memcmp (const void *, const void *, size_t);
-
-
-void * memccpy (void *restrict, const void *restrict, int, size_t);
-# 76 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 3
-char *stpcpy (char *restrict, const char *restrict);
-char *stpncpy (char *restrict, const char *restrict, size_t);
-
-
-
-
-
-
-char *strdup (const char *) __attribute__((__malloc__)) __attribute__((__warn_unused_result__));
-
-char *_strdup_r (struct _reent *, const char *);
-
-char *strndup (const char *, size_t) __attribute__((__malloc__)) __attribute__((__warn_unused_result__));
-
-char *_strndup_r (struct _reent *, const char *, size_t);
-# 100 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 3
-int strerror_r (int, char *, size_t)
-
-             __asm__ ("" "__xpg_strerror_r")
-
-  ;
-
-
-
-
-
-
-
-char * _strerror_r (struct _reent *, int, int, int *);
-
-
-size_t strlcat (char *, const char *, size_t);
-size_t strlcpy (char *, const char *, size_t);
-
-
-size_t strnlen (const char *, size_t);
-
-
-char *strsep (char **, const char *);
-
-
-char *strnstr(const char *, const char *, size_t) __attribute__((__pure__));
-
-
-
-char *strlwr (char *);
-char *strupr (char *);
-
-
-
-char *strsignal (int __signo);
-# 177 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 3
-#define strcmpi strcasecmp
-
-
-#define stricmp strcasecmp
-
-
-#define strncmpi strncasecmp
-
-
-#define strnicmp strncasecmp
-
-
-# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/string.h" 1 3
-# 190 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
-
-
-# 13 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Monitor_core/myheaders.h" 2
 
 
 
@@ -33952,8 +34107,8 @@ char *strsignal (int __signo);
 void emg_init(void);
 void init(void);
 void max30100_init(void);
-# 26 "../Core/Src/main.c" 2
-# 44 "../Core/Src/main.c"
+# 25 "../Core/Src/main.c" 2
+# 43 "../Core/Src/main.c"
 ADC_HandleTypeDef hadc1;
 DMA_HandleTypeDef hdma_adc1;
 
@@ -33987,7 +34142,7 @@ static void MX_SPI1_Init(void);
 static void MX_CRC_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_USART3_UART_Init(void);
-# 90 "../Core/Src/main.c"
+# 89 "../Core/Src/main.c"
 int main(void)
 {
 
@@ -34140,7 +34295,7 @@ static void MX_ADC1_Init(void)
 
 static void MX_CRC_Init(void)
 {
-# 250 "../Core/Src/main.c"
+# 249 "../Core/Src/main.c"
   hcrc.Instance = ((CRC_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x3000UL));
   if (HAL_CRC_Init(&hcrc) != HAL_OK)
   {
@@ -34159,7 +34314,7 @@ static void MX_CRC_Init(void)
 
 static void MX_I2C2_Init(void)
 {
-# 276 "../Core/Src/main.c"
+# 275 "../Core/Src/main.c"
   hi2c2.Instance = ((I2C_TypeDef *) (0x40000000UL + 0x5800UL));
   hi2c2.Init.ClockSpeed = 100000;
   hi2c2.Init.DutyCycle = 0x00000000U;
@@ -34186,7 +34341,7 @@ static void MX_I2C2_Init(void)
 
 static void MX_I2C3_Init(void)
 {
-# 310 "../Core/Src/main.c"
+# 309 "../Core/Src/main.c"
   hi2c3.Instance = ((I2C_TypeDef *) (0x40000000UL + 0x5C00UL));
   hi2c3.Init.ClockSpeed = 100000;
   hi2c3.Init.DutyCycle = 0x00000000U;
@@ -34213,7 +34368,7 @@ static void MX_I2C3_Init(void)
 
 static void MX_SPI1_Init(void)
 {
-# 345 "../Core/Src/main.c"
+# 344 "../Core/Src/main.c"
   hspi1.Instance = ((SPI_TypeDef *) ((0x40000000UL + 0x00010000UL) + 0x3000UL));
   hspi1.Init.Mode = ((0x1UL << (2U)) | (0x1UL << (8U)));
   hspi1.Init.Direction = (0x00000000U);
@@ -34257,7 +34412,7 @@ static void MX_TIM3_Init(void)
   htim3.Instance = ((TIM_TypeDef *) (0x40000000UL + 0x0400UL));
   htim3.Init.Prescaler = 0;
   htim3.Init.CounterMode = 0x00000000U;
-  htim3.Init.Period = 4999;
+  htim3.Init.Period = 100;
   htim3.Init.ClockDivision = 0x00000000U;
   htim3.Init.AutoReloadPreload = 0x00000000U;
   if (HAL_TIM_PWM_Init(&htim3) != HAL_OK)
@@ -34292,7 +34447,7 @@ static void MX_TIM3_Init(void)
 
 static void MX_USART3_UART_Init(void)
 {
-# 431 "../Core/Src/main.c"
+# 430 "../Core/Src/main.c"
   huart3.Instance = ((USART_TypeDef *) (0x40000000UL + 0x4800UL));
   huart3.Init.BaudRate = 115200;
   huart3.Init.WordLength = 0x00000000U;
@@ -34318,7 +34473,7 @@ static void MX_USART3_UART_Init(void)
 
 static void MX_USB_OTG_FS_PCD_Init(void)
 {
-# 464 "../Core/Src/main.c"
+# 463 "../Core/Src/main.c"
   hpcd_USB_OTG_FS.Instance = ((USB_OTG_GlobalTypeDef *) 0x50000000UL);
   hpcd_USB_OTG_FS.Init.dev_endpoints = 6;
   hpcd_USB_OTG_FS.Init.speed = 2U;
@@ -34414,7 +34569,7 @@ static void MX_GPIO_Init(void)
 
 
 }
-# 572 "../Core/Src/main.c"
+# 571 "../Core/Src/main.c"
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 

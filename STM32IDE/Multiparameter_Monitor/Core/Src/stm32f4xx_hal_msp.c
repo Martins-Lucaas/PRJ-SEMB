@@ -358,7 +358,7 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* hspi)
     PA6     ------> SPI1_MISO
     PA7     ------> SPI1_MOSI
     */
-    GPIO_InitStruct.Pin = displ_sck_Pin|touch_mosi_Pin|displ_mosi_Pin;
+    GPIO_InitStruct.Pin = DISPL_SCK_Pin|TOUCH_MISO_Pin|DISPL_MOSI_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
@@ -415,7 +415,7 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* hspi)
     PA6     ------> SPI1_MISO
     PA7     ------> SPI1_MOSI
     */
-    HAL_GPIO_DeInit(GPIOA, displ_sck_Pin|touch_mosi_Pin|displ_mosi_Pin);
+    HAL_GPIO_DeInit(GPIOA, DISPL_SCK_Pin|TOUCH_MISO_Pin|DISPL_MOSI_Pin);
 
     /* SPI1 DMA DeInit */
     HAL_DMA_DeInit(hspi->hdmatx);
@@ -464,12 +464,12 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim)
     /**TIM3 GPIO Configuration
     PC7     ------> TIM3_CH2
     */
-    GPIO_InitStruct.Pin = displ_led_Pin;
+    GPIO_InitStruct.Pin = DISPL_LED_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
     GPIO_InitStruct.Alternate = GPIO_AF2_TIM3;
-    HAL_GPIO_Init(displ_led_GPIO_Port, &GPIO_InitStruct);
+    HAL_GPIO_Init(DISPL_LED_GPIO_Port, &GPIO_InitStruct);
 
   /* USER CODE BEGIN TIM3_MspPostInit 1 */
 

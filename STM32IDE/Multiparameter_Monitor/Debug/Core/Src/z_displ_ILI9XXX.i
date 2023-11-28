@@ -909,7 +909,6 @@
 # 0 "<command-line>"
 #define STM32F446xx 1
 # 1 "../Core/Src/z_displ_ILI9XXX.c"
-# 15 "../Core/Src/z_displ_ILI9XXX.c"
 # 1 "../Core/Inc/main.h" 1
 # 23 "../Core/Inc/main.h"
 #define __MAIN_H 
@@ -31990,7 +31989,1466 @@ uint32_t HAL_GetUIDw0(void);
 uint32_t HAL_GetUIDw1(void);
 uint32_t HAL_GetUIDw2(void);
 # 31 "../Core/Inc/main.h" 2
-# 52 "../Core/Inc/main.h"
+
+
+
+# 1 "../Core/Inc/z_displ_ILI9XXX.h" 1
+
+
+#define __Z_DISPL_ILI9XXX_H 
+
+#define DISPLAY_USING_TOUCHGFX 
+
+#define ILI9341 
+
+#define DISPL_SPI_PORT hspi2
+#define DISPL_SPI SPI2
+
+#define DISPL_PRESCALER SPI_BAUDRATEPRESCALER_4
+#define TOUCH_PRESCALER SPI_BAUDRATEPRESCALER_256
+
+
+#define DISPLAY_SPI_DMA_MODE 
+
+#define DISPLAY_DIMMING_MODE 
+#define BKLIT_TIMER TIM2
+#define BKLIT_T htim2
+#define BKLIT_CHANNEL TIM_CHANNEL_1
+#define BKLIT_CCR CCR1
+#define BKLIT_STBY_LEVEL 50
+#define BKLIT_INIT_LEVEL 100
+
+#define TGFX_TIMER TIM3
+#define TGFX_T htim3
+
+#define BUFLEVEL 13
+# 39 "../Core/Inc/z_displ_ILI9XXX.h"
+#define Z_RGB565 
+# 52 "../Core/Inc/z_displ_ILI9XXX.h"
+#define DISPL_WIDTH 240
+#define DISPL_HEIGHT 320
+
+
+
+
+
+
+
+#define DISPL_DMA_CUTOFF 20
+
+
+
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 1 3
+
+
+
+
+
+
+
+#define _STRING_H_ 
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/_ansi.h" 1 3
+
+
+
+
+
+
+
+#define _ANSIDECL_H_ 
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../arm-none-eabi/include/newlib-nano/newlib.h" 1 3 4
+
+
+
+
+
+
+#define __NEWLIB_H__ 1
+# 27 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../arm-none-eabi/include/newlib-nano/newlib.h" 3 4
+#define _ATEXIT_DYNAMIC_ALLOC 1
+# 39 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../arm-none-eabi/include/newlib-nano/newlib.h" 3 4
+#define _HAVE_CC_INHIBIT_LOOP_TO_LIBCALL 1
+
+
+
+#define _HAVE_INITFINI_ARRAY 1
+
+
+#define _HAVE_LONG_DOUBLE 1
+# 355 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../arm-none-eabi/include/newlib-nano/newlib.h" 3 4
+#define _LDBL_EQ_DBL 1
+
+
+#define _LITE_EXIT 1
+
+
+
+
+
+#define _MB_LEN_MAX 1
+
+
+#define _NANO_FORMATTED_IO 1
+
+
+#define _NANO_MALLOC 1
+
+
+#define _REENT_CHECK_VERIFY 1
+
+
+#define _RETARGETABLE_LOCKING 1
+# 401 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../arm-none-eabi/include/newlib-nano/newlib.h" 3 4
+#define _WANT_REENT_SMALL 1
+# 411 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../arm-none-eabi/include/newlib-nano/newlib.h" 3 4
+#define _WANT_USE_GDTOA 1
+# 11 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/_ansi.h" 2 3
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/config.h" 1 3
+
+#define __SYS_CONFIG_H__ 
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/machine/ieeefp.h" 1 3
+# 77 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/machine/ieeefp.h" 3
+#define __IEEE_LITTLE_ENDIAN 
+# 91 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/machine/ieeefp.h" 3
+#define _SUPPORTS_ERREXCEPT 
+
+
+
+
+
+
+#define __DOUBLE_TYPE double
+#define __FLOAT_TYPE float
+# 510 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/machine/ieeefp.h" 3
+#define __OBSOLETE_MATH_DEFAULT 1
+
+
+#define __OBSOLETE_MATH __OBSOLETE_MATH_DEFAULT
+# 5 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/config.h" 2 3
+# 224 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/config.h" 3
+#define _POINTER_INT long
+
+
+
+
+
+#undef __RAND_MAX
+
+
+
+#define __RAND_MAX 0x7fffffff
+# 248 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/config.h" 3
+#define __EXPORT 
+
+
+
+#define __IMPORT 
+
+
+
+
+
+
+#define _READ_WRITE_RETURN_TYPE int
+
+
+
+
+
+#define _READ_WRITE_BUFSIZE_TYPE int
+# 278 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/config.h" 3
+#define _REENT_SMALL 
+# 290 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/config.h" 3
+#define _USE_GDTOA 
+# 12 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/_ansi.h" 2 3
+# 31 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/_ansi.h" 3
+#define _BEGIN_STD_C 
+#define _END_STD_C 
+#define _NOTHROW 
+
+
+
+#define _LONG_DOUBLE long double
+
+
+
+
+
+#define _ATTRIBUTE(attrs) __attribute__ (attrs)
+# 69 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/_ansi.h" 3
+#define _ELIDABLE_INLINE static __inline__
+
+
+
+#define _NOINLINE __attribute__ ((__noinline__))
+#define _NOINLINE_STATIC _NOINLINE static
+# 11 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 1 3
+# 11 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+#define _SYS_REENT_H_ 
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/_ansi.h" 1 3
+# 14 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 2 3
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 1 3 4
+# 15 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 2 3
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_types.h" 1 3
+# 20 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_types.h" 3
+#define _SYS__TYPES_H 
+
+#define __need_size_t 
+#define __need_wint_t 
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 1 3 4
+# 155 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+#undef __need_ptrdiff_t
+# 231 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+#undef __need_size_t
+# 340 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+#undef __need_wchar_t
+
+
+
+
+#define _WINT_T 
+
+
+
+
+
+# 350 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+typedef unsigned int wint_t;
+
+#undef __need_wint_t
+# 390 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+#undef NULL
+
+
+
+
+#define NULL ((void *)0)
+
+
+
+
+
+#undef __need_NULL
+
+
+
+
+#define offsetof(TYPE,MEMBER) __builtin_offsetof (TYPE, MEMBER)
+# 25 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_types.h" 2 3
+
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/machine/_types.h" 1 3
+
+
+
+
+
+#define _MACHINE__TYPES_H 
+# 28 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_types.h" 2 3
+
+
+typedef long __blkcnt_t;
+
+
+
+typedef long __blksize_t;
+
+
+
+typedef __uint64_t __fsblkcnt_t;
+
+
+
+typedef __uint32_t __fsfilcnt_t;
+
+
+
+typedef long _off_t;
+
+
+
+
+
+typedef int __pid_t;
+
+
+
+typedef short __dev_t;
+
+
+
+typedef unsigned short __uid_t;
+
+
+typedef unsigned short __gid_t;
+
+
+
+typedef __uint32_t __id_t;
+
+
+
+
+
+
+
+typedef unsigned short __ino_t;
+# 90 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_types.h" 3
+typedef __uint32_t __mode_t;
+
+
+
+
+
+__extension__ typedef long long _off64_t;
+
+
+
+
+
+typedef _off_t __off_t;
+
+
+typedef _off64_t __loff_t;
+
+
+typedef long __key_t;
+
+
+
+
+
+
+
+typedef long _fpos_t;
+# 127 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_types.h" 3
+#undef __size_t
+
+
+
+typedef unsigned int __size_t;
+# 146 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_types.h" 3
+#define unsigned signed
+typedef signed int _ssize_t;
+#undef unsigned
+# 158 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_types.h" 3
+typedef _ssize_t __ssize_t;
+
+
+
+typedef struct
+{
+  int __count;
+  union
+  {
+    wint_t __wch;
+    unsigned char __wchb[4];
+  } __value;
+} _mbstate_t;
+
+
+
+
+typedef void *_iconv_t;
+
+
+
+#define _CLOCK_T_ unsigned long
+
+
+typedef unsigned long __clock_t;
+
+
+
+
+#define _TIME_T_ __int_least64_t
+
+typedef __int_least64_t __time_t;
+
+
+#define _CLOCKID_T_ unsigned long
+
+
+typedef unsigned long __clockid_t;
+
+
+typedef long __daddr_t;
+
+
+#define _TIMER_T_ unsigned long
+typedef unsigned long __timer_t;
+
+
+typedef __uint8_t __sa_family_t;
+
+
+
+typedef __uint32_t __socklen_t;
+
+
+typedef int __nl_item;
+typedef unsigned short __nlink_t;
+typedef long __suseconds_t;
+typedef unsigned long __useconds_t;
+
+
+
+
+
+
+
+typedef __builtin_va_list __va_list;
+# 16 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 2 3
+
+#define _NULL 0
+
+
+
+#define __Long long
+typedef unsigned long __ULong;
+# 34 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/lock.h" 1 3
+
+#define __SYS_LOCK_H__ 
+# 33 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/lock.h" 3
+struct __lock;
+typedef struct __lock * _LOCK_T;
+#define _LOCK_RECURSIVE_T _LOCK_T
+
+#define __LOCK_INIT(class,lock) extern struct __lock __lock_ ## lock; class _LOCK_T lock = &__lock_ ## lock
+
+#define __LOCK_INIT_RECURSIVE(class,lock) __LOCK_INIT(class,lock)
+
+extern void __retarget_lock_init(_LOCK_T *lock);
+#define __lock_init(lock) __retarget_lock_init(&lock)
+extern void __retarget_lock_init_recursive(_LOCK_T *lock);
+#define __lock_init_recursive(lock) __retarget_lock_init_recursive(&lock)
+extern void __retarget_lock_close(_LOCK_T lock);
+#define __lock_close(lock) __retarget_lock_close(lock)
+extern void __retarget_lock_close_recursive(_LOCK_T lock);
+#define __lock_close_recursive(lock) __retarget_lock_close_recursive(lock)
+extern void __retarget_lock_acquire(_LOCK_T lock);
+#define __lock_acquire(lock) __retarget_lock_acquire(lock)
+extern void __retarget_lock_acquire_recursive(_LOCK_T lock);
+#define __lock_acquire_recursive(lock) __retarget_lock_acquire_recursive(lock)
+extern int __retarget_lock_try_acquire(_LOCK_T lock);
+#define __lock_try_acquire(lock) __retarget_lock_try_acquire(lock)
+extern int __retarget_lock_try_acquire_recursive(_LOCK_T lock);
+#define __lock_try_acquire_recursive(lock) __retarget_lock_try_acquire_recursive(lock)
+
+extern void __retarget_lock_release(_LOCK_T lock);
+#define __lock_release(lock) __retarget_lock_release(lock)
+extern void __retarget_lock_release_recursive(_LOCK_T lock);
+#define __lock_release_recursive(lock) __retarget_lock_release_recursive(lock)
+# 35 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 2 3
+typedef _LOCK_T _flock_t;
+
+
+
+
+
+
+
+struct _reent;
+
+struct __locale_t;
+
+
+
+
+
+
+struct _Bigint
+{
+  struct _Bigint *_next;
+  int _k, _maxwds, _sign, _wds;
+  __ULong _x[1];
+};
+
+
+struct __tm
+{
+  int __tm_sec;
+  int __tm_min;
+  int __tm_hour;
+  int __tm_mday;
+  int __tm_mon;
+  int __tm_year;
+  int __tm_wday;
+  int __tm_yday;
+  int __tm_isdst;
+};
+
+
+
+
+
+#define _ATEXIT_SIZE 32
+
+struct _on_exit_args {
+ void * _fnargs[32];
+ void * _dso_handle[32];
+
+ __ULong _fntypes;
+
+
+ __ULong _is_cxa;
+};
+
+
+struct _atexit {
+ struct _atexit *_next;
+ int _ind;
+ void (*_fns[32])(void);
+        struct _on_exit_args * _on_exit_args_ptr;
+};
+#define _ATEXIT_INIT {_NULL, 0, {_NULL}, _NULL}
+# 115 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+struct __sbuf {
+ unsigned char *_base;
+ int _size;
+};
+# 145 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+#define _REENT_SMALL_CHECK_INIT(ptr) 
+
+struct __sFILE {
+  unsigned char *_p;
+  int _r;
+  int _w;
+  short _flags;
+  short _file;
+  struct __sbuf _bf;
+  int _lbfsize;
+
+
+  struct _reent *_data;
+
+
+
+  void * _cookie;
+
+  int (*_read) (struct _reent *, void *,
+        char *, int);
+  int (*_write) (struct _reent *, void *,
+         const char *,
+         int);
+  _fpos_t (*_seek) (struct _reent *, void *, _fpos_t, int);
+  int (*_close) (struct _reent *, void *);
+
+
+  struct __sbuf _ub;
+  unsigned char *_up;
+  int _ur;
+
+
+  unsigned char _ubuf[3];
+  unsigned char _nbuf[1];
+
+
+  struct __sbuf _lb;
+
+
+  int _blksize;
+  _off_t _offset;
+
+
+
+
+
+
+  _flock_t _lock;
+
+  _mbstate_t _mbstate;
+  int _flags2;
+};
+# 253 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+typedef struct __sFILE __FILE;
+
+
+
+extern __FILE __sf[3];
+
+struct _glue
+{
+  struct _glue *_next;
+  int _niobs;
+  __FILE *_iobs;
+};
+
+extern struct _glue __sglue;
+# 282 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+#define _RAND48_SEED_0 (0x330e)
+#define _RAND48_SEED_1 (0xabcd)
+#define _RAND48_SEED_2 (0x1234)
+#define _RAND48_MULT_0 (0xe66d)
+#define _RAND48_MULT_1 (0xdeec)
+#define _RAND48_MULT_2 (0x0005)
+#define _RAND48_ADD (0x000b)
+struct _rand48 {
+  unsigned short _seed[3];
+  unsigned short _mult[3];
+  unsigned short _add;
+
+
+  __extension__ unsigned long long _rand_next;
+
+};
+
+
+#define _REENT_EMERGENCY_SIZE 25
+#define _REENT_ASCTIME_SIZE 26
+#define _REENT_SIGNAL_SIZE 24
+# 313 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+#define _REENT_INIT_RESERVED_0 
+#define _REENT_INIT_RESERVED_1 
+#define _REENT_INIT_RESERVED_2 
+#define _REENT_INIT_RESERVED_6_7 
+#define _REENT_INIT_RESERVED_8 
+# 331 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+struct _mprec
+{
+
+  struct _Bigint *_result;
+  int _result_k;
+  struct _Bigint *_p5s;
+  struct _Bigint **_freelist;
+};
+
+
+struct _misc_reent
+{
+
+  char *_strtok_last;
+  _mbstate_t _mblen_state;
+  _mbstate_t _wctomb_state;
+  _mbstate_t _mbtowc_state;
+  char _l64a_buf[8];
+  int _getdate_err;
+  _mbstate_t _mbrlen_state;
+  _mbstate_t _mbrtowc_state;
+  _mbstate_t _mbsrtowcs_state;
+  _mbstate_t _wcrtomb_state;
+  _mbstate_t _wcsrtombs_state;
+};
+
+
+
+struct _reent
+{
+
+
+  int _errno;
+
+
+
+
+  __FILE *_stdin, *_stdout, *_stderr;
+
+  int _inc;
+
+  char *_emergency;
+
+
+
+
+
+  struct __locale_t *_locale;
+
+  struct _mprec *_mp;
+
+  void (*__cleanup) (struct _reent *);
+
+  int _gamma_signgam;
+
+
+  int _cvtlen;
+  char *_cvtbuf;
+
+  struct _rand48 *_r48;
+  struct __tm *_localtime_buf;
+  char *_asctime_buf;
+
+
+  void (** _sig_func)(int);
+
+
+
+
+
+
+
+  __FILE *__sf;
+  struct _misc_reent *_misc;
+  char *_signal_buf;
+};
+
+#define _REENT_INIT(var) { 0, &__sf[0], &__sf[1], &__sf[2], 0, _NULL, _REENT_INIT_RESERVED_0 _REENT_INIT_RESERVED_1 _NULL, _NULL, _NULL, 0, 0, _NULL, _NULL, _NULL, _NULL, _NULL, _REENT_INIT_RESERVED_6_7 _REENT_INIT_RESERVED_8 _NULL, _NULL, _NULL }
+# 434 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+#define _REENT_INIT_PTR_ZEROED(var) { (var)->_stdin = &__sf[0]; (var)->_stdout = &__sf[1]; (var)->_stderr = &__sf[2]; }
+
+
+
+
+
+
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/assert.h" 1 3
+# 11 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/assert.h" 3
+#undef assert
+
+
+
+
+#define assert(__e) ((__e) ? (void)0 : __assert_func (__FILE__, __LINE__, __ASSERT_FUNC, #__e))
+# 26 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/assert.h" 3
+#define __ASSERT_FUNC __func__
+# 39 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/assert.h" 3
+void __assert (const char *, int, const char *)
+     __attribute__ ((__noreturn__));
+void __assert_func (const char *, int, const char *, const char *)
+     __attribute__ ((__noreturn__));
+
+
+#define static_assert _Static_assert
+# 443 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 2 3
+#define __reent_assert(x) ((x) ? (void)0 : __assert_func(__FILE__, __LINE__, (char *)0, "REENT malloc succeeded"))
+# 453 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+#define _REENT_CHECK(var,what,type,size,init) do { struct _reent *_r = (var); if (_r->what == NULL) { _r->what = (type)malloc(size); __reent_assert(_r->what); init; } } while (0)
+# 462 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+#define _REENT_CHECK_TM(var) _REENT_CHECK(var, _localtime_buf, struct __tm *, sizeof *((var)->_localtime_buf), )
+
+
+
+#define _REENT_CHECK_ASCTIME_BUF(var) _REENT_CHECK(var, _asctime_buf, char *, _REENT_ASCTIME_SIZE, memset((var)->_asctime_buf, 0, _REENT_ASCTIME_SIZE))
+
+
+
+
+#define _REENT_INIT_RAND48(var) do { struct _reent *_r = (var); _r->_r48->_seed[0] = _RAND48_SEED_0; _r->_r48->_seed[1] = _RAND48_SEED_1; _r->_r48->_seed[2] = _RAND48_SEED_2; _r->_r48->_mult[0] = _RAND48_MULT_0; _r->_r48->_mult[1] = _RAND48_MULT_1; _r->_r48->_mult[2] = _RAND48_MULT_2; _r->_r48->_add = _RAND48_ADD; _r->_r48->_rand_next = 1; } while (0)
+# 482 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+#define _REENT_CHECK_RAND48(var) _REENT_CHECK(var, _r48, struct _rand48 *, sizeof *((var)->_r48), _REENT_INIT_RAND48((var)))
+
+
+#define _REENT_INIT_MP(var) do { struct _reent *_r = (var); _r->_mp->_result_k = 0; _r->_mp->_result = _r->_mp->_p5s = _NULL; _r->_mp->_freelist = _NULL; } while (0)
+
+
+
+
+
+#define _REENT_CHECK_MP(var) _REENT_CHECK(var, _mp, struct _mprec *, sizeof *((var)->_mp), _REENT_INIT_MP(var))
+
+
+#define _REENT_CHECK_EMERGENCY(var) _REENT_CHECK(var, _emergency, char *, _REENT_EMERGENCY_SIZE, )
+
+
+#define _REENT_INIT_MISC(var) do { struct _reent *_r = (var); _r->_misc->_strtok_last = _NULL; _r->_misc->_mblen_state.__count = 0; _r->_misc->_mblen_state.__value.__wch = 0; _r->_misc->_wctomb_state.__count = 0; _r->_misc->_wctomb_state.__value.__wch = 0; _r->_misc->_mbtowc_state.__count = 0; _r->_misc->_mbtowc_state.__value.__wch = 0; _r->_misc->_mbrlen_state.__count = 0; _r->_misc->_mbrlen_state.__value.__wch = 0; _r->_misc->_mbrtowc_state.__count = 0; _r->_misc->_mbrtowc_state.__value.__wch = 0; _r->_misc->_mbsrtowcs_state.__count = 0; _r->_misc->_mbsrtowcs_state.__value.__wch = 0; _r->_misc->_wcrtomb_state.__count = 0; _r->_misc->_wcrtomb_state.__value.__wch = 0; _r->_misc->_wcsrtombs_state.__count = 0; _r->_misc->_wcsrtombs_state.__value.__wch = 0; _r->_misc->_l64a_buf[0] = '\0'; _r->_misc->_getdate_err = 0; } while (0)
+# 519 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+#define _REENT_CHECK_MISC(var) _REENT_CHECK(var, _misc, struct _misc_reent *, sizeof *((var)->_misc), _REENT_INIT_MISC(var))
+
+
+#define _REENT_CHECK_SIGNAL_BUF(var) _REENT_CHECK(var, _signal_buf, char *, _REENT_SIGNAL_SIZE, )
+
+
+#define _REENT_SIGNGAM(ptr) ((ptr)->_gamma_signgam)
+#define _REENT_RAND_NEXT(ptr) ((ptr)->_r48->_rand_next)
+#define _REENT_RAND48_SEED(ptr) ((ptr)->_r48->_seed)
+#define _REENT_RAND48_MULT(ptr) ((ptr)->_r48->_mult)
+#define _REENT_RAND48_ADD(ptr) ((ptr)->_r48->_add)
+#define _REENT_MP_RESULT(ptr) ((ptr)->_mp->_result)
+#define _REENT_MP_RESULT_K(ptr) ((ptr)->_mp->_result_k)
+#define _REENT_MP_P5S(ptr) ((ptr)->_mp->_p5s)
+#define _REENT_MP_FREELIST(ptr) ((ptr)->_mp->_freelist)
+#define _REENT_ASCTIME_BUF(ptr) ((ptr)->_asctime_buf)
+#define _REENT_TM(ptr) ((ptr)->_localtime_buf)
+#define _REENT_STRTOK_LAST(ptr) ((ptr)->_misc->_strtok_last)
+#define _REENT_MBLEN_STATE(ptr) ((ptr)->_misc->_mblen_state)
+#define _REENT_MBTOWC_STATE(ptr) ((ptr)->_misc->_mbtowc_state)
+#define _REENT_WCTOMB_STATE(ptr) ((ptr)->_misc->_wctomb_state)
+#define _REENT_MBRLEN_STATE(ptr) ((ptr)->_misc->_mbrlen_state)
+#define _REENT_MBRTOWC_STATE(ptr) ((ptr)->_misc->_mbrtowc_state)
+#define _REENT_MBSRTOWCS_STATE(ptr) ((ptr)->_misc->_mbsrtowcs_state)
+#define _REENT_WCRTOMB_STATE(ptr) ((ptr)->_misc->_wcrtomb_state)
+#define _REENT_WCSRTOMBS_STATE(ptr) ((ptr)->_misc->_wcsrtombs_state)
+#define _REENT_L64A_BUF(ptr) ((ptr)->_misc->_l64a_buf)
+#define _REENT_GETDATE_ERR_P(ptr) (&((ptr)->_misc->_getdate_err))
+#define _REENT_SIGNAL_BUF(ptr) ((ptr)->_signal_buf)
+# 723 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+#define _REENT_CLEANUP(_ptr) ((_ptr)->__cleanup)
+#define _REENT_CVTBUF(_ptr) ((_ptr)->_cvtbuf)
+#define _REENT_CVTLEN(_ptr) ((_ptr)->_cvtlen)
+#define _REENT_EMERGENCY(_ptr) ((_ptr)->_emergency)
+#define _REENT_ERRNO(_ptr) ((_ptr)->_errno)
+#define _REENT_INC(_ptr) ((_ptr)->_inc)
+#define _REENT_LOCALE(_ptr) ((_ptr)->_locale)
+#define _REENT_SIG_FUNC(_ptr) ((_ptr)->_sig_func)
+#define _REENT_STDIN(_ptr) ((_ptr)->_stdin)
+#define _REENT_STDOUT(_ptr) ((_ptr)->_stdout)
+#define _REENT_STDERR(_ptr) ((_ptr)->_stderr)
+
+#define _REENT_INIT_PTR(var) { memset((var), 0, sizeof(*(var))); _REENT_INIT_PTR_ZEROED(var); }
+# 746 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+#define __ATTRIBUTE_IMPURE_PTR__ 
+
+
+extern struct _reent *_impure_ptr ;
+
+
+#define __ATTRIBUTE_IMPURE_DATA__ 
+
+
+extern struct _reent _impure_data ;
+# 765 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+#define _REENT _impure_ptr
+
+
+#define _REENT_IS_NULL(_ptr) ((_ptr) == NULL)
+
+#define _GLOBAL_REENT (&_impure_data)
+# 865 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h" 3
+#define _Kmax (sizeof (size_t) << 3)
+
+extern struct _atexit *__atexit;
+extern struct _atexit __atexit0;
+
+extern void (*__stdio_exit_handler) (void);
+
+void _reclaim_reent (struct _reent *);
+
+extern int _fwalk_sglue (struct _reent *, int (*)(struct _reent *, __FILE *),
+    struct _glue *);
+# 12 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 1 3
+# 43 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define _SYS_CDEFS_H_ 
+
+
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 1 3 4
+# 48 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 2 3
+
+#define __PMT(args) args
+#define __DOTS , ...
+#define __THROW 
+
+
+#define __ASMNAME(cname) __XSTRING (__USER_LABEL_PREFIX__) cname
+
+
+#define __ptr_t void *
+#define __long_double_t long double
+
+#define __attribute_malloc__ 
+#define __attribute_pure__ 
+#define __attribute_format_strfmon__(a,b) 
+#define __flexarr [0]
+
+
+#define __bounded 
+#define __unbounded 
+#define __ptrvalue 
+# 78 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __has_extension __has_feature
+
+
+#define __has_feature(x) 0
+# 94 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __BEGIN_DECLS 
+#define __END_DECLS 
+# 107 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __GNUCLIKE_ASM 3
+#define __GNUCLIKE_MATH_BUILTIN_CONSTANTS 
+
+
+
+#define __GNUCLIKE___TYPEOF 1
+#define __GNUCLIKE___SECTION 1
+
+#define __GNUCLIKE_CTOR_SECTION_HANDLING 1
+
+#define __GNUCLIKE_BUILTIN_CONSTANT_P 1
+
+
+#define __GNUCLIKE_BUILTIN_VARARGS 1
+#define __GNUCLIKE_BUILTIN_STDARG 1
+#define __GNUCLIKE_BUILTIN_VAALIST 1
+
+
+#define __GNUC_VA_LIST_COMPATIBILITY 1
+
+
+
+
+#define __compiler_membar() __asm __volatile(" " : : : "memory")
+
+#define __GNUCLIKE_BUILTIN_NEXT_ARG 1
+#define __GNUCLIKE_MATH_BUILTIN_RELOPS 
+
+#define __GNUCLIKE_BUILTIN_MEMCPY 1
+
+
+#define __CC_SUPPORTS_INLINE 1
+#define __CC_SUPPORTS___INLINE 1
+#define __CC_SUPPORTS___INLINE__ 1
+
+#define __CC_SUPPORTS___FUNC__ 1
+#define __CC_SUPPORTS_WARNING 1
+
+#define __CC_SUPPORTS_VARADIC_XXX 1
+
+#define __CC_SUPPORTS_DYNAMIC_ARRAY_INIT 1
+# 164 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __P(protos) protos
+#define __CONCAT1(x,y) x ## y
+#define __CONCAT(x,y) __CONCAT1(x,y)
+#define __STRING(x) #x
+#define __XSTRING(x) __STRING(x)
+
+#define __const const
+#define __signed signed
+#define __volatile volatile
+# 217 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __weak_symbol __attribute__((__weak__))
+# 230 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __dead2 __attribute__((__noreturn__))
+#define __pure2 __attribute__((__const__))
+#define __unused __attribute__((__unused__))
+#define __used __attribute__((__used__))
+#define __packed __attribute__((__packed__))
+#define __aligned(x) __attribute__((__aligned__(x)))
+#define __section(x) __attribute__((__section__(x)))
+
+
+#define __alloc_size(x) __attribute__((__alloc_size__(x)))
+#define __alloc_size2(n,x) __attribute__((__alloc_size__(n, x)))
+
+
+
+
+
+#define __alloc_align(x) __attribute__((__alloc_align__(x)))
+# 335 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __generic(expr,t,yes,no) _Generic(expr, t: yes, default: no)
+# 353 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __min_size(x) static (x)
+
+
+
+
+
+#define __malloc_like __attribute__((__malloc__))
+#define __pure __attribute__((__pure__))
+
+
+
+
+
+
+#define __always_inline __inline__ __attribute__((__always_inline__))
+
+
+
+
+
+#define __noinline __attribute__ ((__noinline__))
+
+
+
+
+
+#define __nonnull(x) __attribute__((__nonnull__ x))
+#define __nonnull_all __attribute__((__nonnull__))
+
+
+
+
+
+
+#define __fastcall __attribute__((__fastcall__))
+#define __result_use_check __attribute__((__warn_unused_result__))
+
+
+
+
+
+
+#define __returns_twice __attribute__((__returns_twice__))
+
+
+
+
+
+#define __unreachable() __builtin_unreachable()
+# 421 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __restrict restrict
+# 454 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __predict_true(exp) __builtin_expect((exp), 1)
+#define __predict_false(exp) __builtin_expect((exp), 0)
+
+
+
+
+
+
+#define __null_sentinel __attribute__((__sentinel__))
+#define __exported __attribute__((__visibility__("default")))
+
+
+#define __hidden __attribute__((__visibility__("hidden")))
+# 476 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __offsetof(type,field) offsetof(type, field)
+#define __rangeof(type,start,end) (__offsetof(type, end) - __offsetof(type, start))
+# 487 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __containerof(x,s,m) ({ const volatile __typeof(((s *)0)->m) *__x = (x); __DEQUALIFY(s *, (const volatile char *)__x - __offsetof(s, m));})
+# 509 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __printflike(fmtarg,firstvararg) __attribute__((__format__ (__printf__, fmtarg, firstvararg)))
+
+#define __scanflike(fmtarg,firstvararg) __attribute__((__format__ (__scanf__, fmtarg, firstvararg)))
+
+#define __format_arg(fmtarg) __attribute__((__format_arg__ (fmtarg)))
+#define __strfmonlike(fmtarg,firstvararg) __attribute__((__format__ (__strfmon__, fmtarg, firstvararg)))
+
+#define __strftimelike(fmtarg,firstvararg) __attribute__((__format__ (__strftime__, fmtarg, firstvararg)))
+# 526 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __printf0like(fmtarg,firstvararg) 
+
+
+
+#define __strong_reference(sym,aliassym) extern __typeof (sym) aliassym __attribute__ ((__alias__ (#sym)))
+
+
+
+#define __weak_reference(sym,alias) __asm__(".weak " #alias); __asm__(".equ " #alias ", " #sym)
+
+
+#define __warn_references(sym,msg) __asm__(".section .gnu.warning." #sym); __asm__(".asciz \"" msg "\""); __asm__(".previous")
+
+
+
+#define __sym_compat(sym,impl,verid) __asm__(".symver " #impl ", " #sym "@" #verid)
+
+#define __sym_default(sym,impl,verid) __asm__(".symver " #impl ", " #sym "@@" #verid)
+# 578 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __FBSDID(s) struct __hack
+
+
+
+#define __RCSID(s) struct __hack
+
+
+
+#define __RCSID_SOURCE(s) struct __hack
+
+
+
+#define __SCCSID(s) struct __hack
+
+
+
+#define __COPYRIGHT(s) struct __hack
+
+
+
+#define __DECONST(type,var) ((type)(__uintptr_t)(const void *)(var))
+
+
+
+#define __DEVOLATILE(type,var) ((type)(__uintptr_t)(volatile void *)(var))
+
+
+
+#define __DEQUALIFY(type,var) ((type)(__uintptr_t)(const volatile void *)(var))
+
+
+
+
+
+
+#define _Nonnull 
+#define _Nullable 
+#define _Null_unspecified 
+#define __NULLABILITY_PRAGMA_PUSH 
+#define __NULLABILITY_PRAGMA_POP 
+# 638 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __arg_type_tag(arg_kind,arg_idx,type_tag_idx) 
+#define __datatype_type_tag(kind,type) 
+# 657 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __lock_annotate(x) 
+
+
+
+
+
+#define __lockable __lock_annotate(lockable)
+
+
+#define __locks_exclusive(...) __lock_annotate(exclusive_lock_function(__VA_ARGS__))
+
+#define __locks_shared(...) __lock_annotate(shared_lock_function(__VA_ARGS__))
+
+
+
+#define __trylocks_exclusive(...) __lock_annotate(exclusive_trylock_function(__VA_ARGS__))
+
+#define __trylocks_shared(...) __lock_annotate(shared_trylock_function(__VA_ARGS__))
+
+
+
+#define __unlocks(...) __lock_annotate(unlock_function(__VA_ARGS__))
+
+
+#define __asserts_exclusive(...) __lock_annotate(assert_exclusive_lock(__VA_ARGS__))
+
+#define __asserts_shared(...) __lock_annotate(assert_shared_lock(__VA_ARGS__))
+
+
+
+#define __requires_exclusive(...) __lock_annotate(exclusive_locks_required(__VA_ARGS__))
+
+#define __requires_shared(...) __lock_annotate(shared_locks_required(__VA_ARGS__))
+
+#define __requires_unlocked(...) __lock_annotate(locks_excluded(__VA_ARGS__))
+
+
+
+#define __no_lock_analysis __lock_annotate(no_thread_safety_analysis)
+# 712 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h" 3
+#define __nosanitizeaddress 
+#define __nosanitizememory 
+#define __nosanitizethread 
+
+
+
+#define __guarded_by(x) __lock_annotate(guarded_by(x))
+#define __pt_guarded_by(x) __lock_annotate(pt_guarded_by(x))
+
+
+
+
+#define __builtin_is_aligned(x,align) (((__uintptr_t)x & ((align) - 1)) == 0)
+
+
+
+#define __builtin_align_up(x,align) ((__typeof__(x))(((__uintptr_t)(x)+((align)-1))&(~((align)-1))))
+
+
+
+#define __builtin_align_down(x,align) ((__typeof__(x))((x)&(~((align)-1))))
+
+
+
+#define __align_up(x,y) __builtin_align_up(x, y)
+#define __align_down(x,y) __builtin_align_down(x, y)
+#define __is_aligned(x,y) __builtin_is_aligned(x, y)
+# 13 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
+
+
+#define __need_size_t 
+#define __need_NULL 
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 1 3 4
+# 155 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+#undef __need_ptrdiff_t
+# 231 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+#undef __need_size_t
+# 340 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+#undef __need_wchar_t
+# 390 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stddef.h" 3 4
+#undef NULL
+
+
+
+
+#define NULL ((void *)0)
+
+
+
+
+
+#undef __need_NULL
+
+
+
+
+#define offsetof(TYPE,MEMBER) __builtin_offsetof (TYPE, MEMBER)
+# 18 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
+
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_locale.h" 1 3
+
+
+
+#define _SYS__LOCALE_H 
+
+
+
+
+struct __locale_t;
+typedef struct __locale_t *locale_t;
+# 21 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
+
+
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/strings.h" 1 3
+# 30 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/strings.h" 3
+#define _STRINGS_H_ 
+# 44 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/strings.h" 3
+
+
+int bcmp(const void *, const void *, size_t) __attribute__((__pure__));
+void bcopy(const void *, void *, size_t);
+void bzero(void *, size_t);
+
+
+void explicit_bzero(void *, size_t);
+
+
+int ffs(int) __attribute__((__const__));
+
+
+int ffsl(long) __attribute__((__const__));
+int ffsll(long long) __attribute__((__const__));
+int fls(int) __attribute__((__const__));
+int flsl(long) __attribute__((__const__));
+int flsll(long long) __attribute__((__const__));
+
+
+char *index(const char *, int) __attribute__((__pure__));
+char *rindex(const char *, int) __attribute__((__pure__));
+
+int strcasecmp(const char *, const char *) __attribute__((__pure__));
+int strncasecmp(const char *, const char *, size_t) __attribute__((__pure__));
+
+
+int strcasecmp_l (const char *, const char *, locale_t);
+int strncasecmp_l (const char *, const char *, size_t, locale_t);
+
+
+# 25 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
+
+
+
+
+void * memchr (const void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void * memcpy (void *restrict, const void *restrict, size_t);
+void * memmove (void *, const void *, size_t);
+void * memset (void *, int, size_t);
+char *strcat (char *restrict, const char *restrict);
+char *strchr (const char *, int);
+int strcmp (const char *, const char *);
+int strcoll (const char *, const char *);
+char *strcpy (char *restrict, const char *restrict);
+size_t strcspn (const char *, const char *);
+char *strerror (int);
+size_t strlen (const char *);
+char *strncat (char *restrict, const char *restrict, size_t);
+int strncmp (const char *, const char *, size_t);
+char *strncpy (char *restrict, const char *restrict, size_t);
+char *strpbrk (const char *, const char *);
+char *strrchr (const char *, int);
+size_t strspn (const char *, const char *);
+char *strstr (const char *, const char *);
+
+char *strtok (char *restrict, const char *restrict);
+
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+
+int strcoll_l (const char *, const char *, locale_t);
+char *strerror_l (int, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+
+
+int timingsafe_bcmp (const void *, const void *, size_t);
+int timingsafe_memcmp (const void *, const void *, size_t);
+
+
+void * memccpy (void *restrict, const void *restrict, int, size_t);
+# 76 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 3
+char *stpcpy (char *restrict, const char *restrict);
+char *stpncpy (char *restrict, const char *restrict, size_t);
+
+
+
+
+
+
+char *strdup (const char *) __attribute__((__malloc__)) __attribute__((__warn_unused_result__));
+
+char *_strdup_r (struct _reent *, const char *);
+
+char *strndup (const char *, size_t) __attribute__((__malloc__)) __attribute__((__warn_unused_result__));
+
+char *_strndup_r (struct _reent *, const char *, size_t);
+# 100 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 3
+int strerror_r (int, char *, size_t)
+
+             __asm__ ("" "__xpg_strerror_r")
+
+  ;
+
+
+
+
+
+
+
+char * _strerror_r (struct _reent *, int, int, int *);
+
+
+size_t strlcat (char *, const char *, size_t);
+size_t strlcpy (char *, const char *, size_t);
+
+
+size_t strnlen (const char *, size_t);
+
+
+char *strsep (char **, const char *);
+
+
+char *strnstr(const char *, const char *, size_t) __attribute__((__pure__));
+
+
+
+char *strlwr (char *);
+char *strupr (char *);
+
+
+
+char *strsignal (int __signo);
+# 177 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 3
+#define strcmpi strcasecmp
+
+
+#define stricmp strcasecmp
+
+
+#define strncmpi strncasecmp
+
+
+#define strnicmp strncasecmp
+
+
+# 1 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/string.h" 1 3
+# 190 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h" 2 3
+
+
+# 67 "../Core/Inc/z_displ_ILI9XXX.h" 2
+
+
+# 68 "../Core/Inc/z_displ_ILI9XXX.h"
+typedef enum {
+ Displ_Orientat_0,
+ Displ_Orientat_90,
+ Displ_Orientat_180,
+ Displ_Orientat_270
+} Displ_Orientat_e;
+
+
+#define SPI_COMMAND GPIO_PIN_RESET
+#define SPI_DATA GPIO_PIN_SET
+
+
+
+#define SIZEBUF (1<<BUFLEVEL)
+
+
+
+
+
+#define RED 0xF800
+#define GREEN 0x07E0
+#define BLUE 0x001F
+#define YELLOW 0xFFE0
+#define MAGENTA 0xF81F
+#define ORANGE 0xFD00
+#define CYAN 0x07FF
+#define D_RED 0xC000
+#define D_GREEN 0x0600
+#define D_BLUE 0x0018
+#define D_YELLOW 0xC600
+#define D_MAGENTA 0xC018
+#define D_ORANGE 0xC300
+#define D_CYAN 0x0618
+#define DD_RED 0x8000
+#define DD_GREEN 0x0400
+#define DD_BLUE 0x0010
+#define DD_YELLOW 0x8400
+#define DD_MAGENTA 0x8020
+#define DD_ORANGE 0x8200
+#define DD_CYAN 0x0410
+#define WHITE 0xFFFF
+#define D_WHITE 0xC618
+#define DD_WHITE 0x8410
+#define DDD_WHITE 0x4208
+#define DDDD_WHITE 0x2104
+#define BLACK 0x0000
+#define color565(r,g,b) ((((r) & 0xF8) << 8) | (((g) & 0xFC) << 3) | (((b) & 0xF8) >> 3))
+
+
+
+
+
+#define ILI9XXX_SLEEP_OUT 0x11
+#define ILI9XXX_DISPLAY_ON 0x29
+#define ILI9XXX_PIXEL_FORMAT 0x3A
+#define ILI9XXX_RGB_INTERFACE 0xB0
+#define ILI9XXX_MEMWR 0x2C
+#define ILI9XXX_COLUMN_ADDR 0x2A
+#define ILI9XXX_PAGE_ADDR 0x2B
+#define ILI9XXX_MADCTL 0x36
+#define ILI9XXX_MADCTL_0DEG 0X88
+#define ILI9XXX_MADCTL_90DEG 0xE8
+#define ILI9XXX_MADCTL_180DEG 0x48
+#define ILI9XXX_MADCTL_270DEG 0x28
+
+#define ILI9XXX_INIT_SHORT_DELAY 5
+#define ILI9XXX_INIT_LONG_DELAY 150
+
+#define ILI9XXX_POWER0 0xC0
+#define ILI9XXX_POWER1 0xC1
+#define ILI9488_POWER2 0xC2
+#define ILI9341_POWERA 0xCB
+#define ILI9341_POWERB 0xCF
+
+
+
+
+#define SET_DISPL_SPI_BAUDRATE DISPL_SPI->CR1 &= (uint16_t) ~SPI_CR1_BR_Msk; DISPL_SPI->CR1 |= DISPL_PRESCALER
+
+
+#define SET_TOUCH_SPI_BAUDRATE TOUCH_SPI->CR1 &= (uint16_t) ~SPI_CR1_BR_Msk; TOUCH_SPI->CR1 |= TOUCH_PRESCALER
+
+
+
+
+#define _swap_int16_t(a,b) { int16_t t = a; a = b; b = t; }
+# 176 "../Core/Inc/z_displ_ILI9XXX.h"
+void Displ_FillArea(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color);
+void Displ_Orientation(Displ_Orientat_e orientation);
+void Displ_Init(Displ_Orientat_e orientation);
+
+void HAL_SPI_ErrorCallback(SPI_HandleTypeDef *hspi);
+void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi);
+
+uint32_t Displ_BackLight(uint8_t cmd);
+
+
+
+int touchgfxDisplayDriverTransmitActive();
+void touchgfxDisplayDriverTransmitBlock(const uint8_t* pixels, uint16_t x, uint16_t y, uint16_t w, uint16_t h);
+extern void DisplayDriver_TransferCompleteCallback();
+extern void touchgfxSignalVSync(void);
+# 35 "../Core/Inc/main.h" 2
+# 53 "../Core/Inc/main.h"
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 
@@ -32001,28 +33459,28 @@ void Error_Handler(void);
 
 
 
-#define touch_int_Pin GPIO_PIN_4
-#define touch_int_GPIO_Port GPIOA
-#define displ_sck_Pin GPIO_PIN_5
-#define displ_sck_GPIO_Port GPIOA
-#define touch_mosi_Pin GPIO_PIN_6
-#define touch_mosi_GPIO_Port GPIOA
-#define displ_mosi_Pin GPIO_PIN_7
-#define displ_mosi_GPIO_Port GPIOA
+#define TOUCH_INT_Pin GPIO_PIN_4
+#define TOUCH_INT_GPIO_Port GPIOA
+#define DISPL_SCK_Pin GPIO_PIN_5
+#define DISPL_SCK_GPIO_Port GPIOA
+#define TOUCH_MISO_Pin GPIO_PIN_6
+#define TOUCH_MISO_GPIO_Port GPIOA
+#define DISPL_MOSI_Pin GPIO_PIN_7
+#define DISPL_MOSI_GPIO_Port GPIOA
 #define usart_emg_rx_Pin GPIO_PIN_5
 #define usart_emg_rx_GPIO_Port GPIOC
 #define temp_scl_Pin GPIO_PIN_10
 #define temp_scl_GPIO_Port GPIOB
-#define displ_cs_Pin GPIO_PIN_12
-#define displ_cs_GPIO_Port GPIOB
-#define touch_cs_Pin GPIO_PIN_13
-#define touch_cs_GPIO_Port GPIOB
-#define displ_dc_Pin GPIO_PIN_14
-#define displ_dc_GPIO_Port GPIOB
-#define displ_rst_Pin GPIO_PIN_15
-#define displ_rst_GPIO_Port GPIOB
-#define displ_led_Pin GPIO_PIN_7
-#define displ_led_GPIO_Port GPIOC
+#define DISPL_CS_Pin GPIO_PIN_12
+#define DISPL_CS_GPIO_Port GPIOB
+#define TOUCH_CS_Pin GPIO_PIN_13
+#define TOUCH_CS_GPIO_Port GPIOB
+#define DISPL_DC_Pin GPIO_PIN_14
+#define DISPL_DC_GPIO_Port GPIOB
+#define DISPL_RST_Pin GPIO_PIN_15
+#define DISPL_RST_GPIO_Port GPIOB
+#define DISPL_LED_Pin GPIO_PIN_7
+#define DISPL_LED_GPIO_Port GPIOC
 #define oxi_sda_Pin GPIO_PIN_9
 #define oxi_sda_GPIO_Port GPIOC
 #define oxi_scl_Pin GPIO_PIN_8
@@ -32033,65 +33491,77 @@ void Error_Handler(void);
 #define usart_emg_tx_GPIO_Port GPIOC
 #define temp_sda_Pin GPIO_PIN_12
 #define temp_sda_GPIO_Port GPIOC
-# 16 "../Core/Src/z_displ_ILI9XXX.c" 2
+# 2 "../Core/Src/z_displ_ILI9XXX.c" 2
 
-extern SPI_HandleTypeDef DISPL_SPI_PORT;
-
-
+extern SPI_HandleTypeDef hspi2;
 
 
-extern TIM_HandleTypeDef TGFX_T;
+extern TIM_HandleTypeDef htim2;
+
+extern TIM_HandleTypeDef htim3;
 
 extern volatile uint8_t Touch_PenDown;
-extern volatile uint8_t Displ_Orientat_e current_orientation;
 volatile uint8_t Displ_SpiAvailable=1;
 int16_t _width;
 int16_t _height;
-# 41 "../Core/Src/z_displ_ILI9XXX.c"
-static uint8_t dispBuffer1[SIZEBUF];
-static uint8_t dispBuffer2[SIZEBUF];
+int16_t current_orientation;
+
+
+
+
+static uint8_t dispBuffer2[2];
+
+
+
+static uint8_t dispBuffer1[2];
+
+
+
 
 static uint8_t *dispBuffer=dispBuffer1;
-# 53 "../Core/Src/z_displ_ILI9XXX.c"
-void Displ_Select(void) {
- if (TOUCH_SPI==DISPL_SPI){
-  if (HAL_GPIO_ReadPin(DISPL_CS_GPIO_Port, DISPL_CS_Pin)) {
-   HAL_GPIO_WritePin(TOUCH_CS_GPIO_Port, TOUCH_CS_Pin, GPIO_PIN_SET);
-   SET_DISPL_SPI_BAUDRATE;
-   HAL_GPIO_WritePin(DISPL_CS_GPIO_Port, DISPL_CS_Pin, GPIO_PIN_RESET);
-  }
- }
-}
-# 74 "../Core/Src/z_displ_ILI9XXX.c"
+
+
+
+
 void Displ_Transmit(GPIO_PinState DC_Status, uint8_t* data, uint16_t dataSize, uint8_t isTouchGFXBuffer ){
 
  while (!Displ_SpiAvailable) {};
 
- Displ_Select();
  HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0400UL)), ((uint16_t)0x4000), DC_Status);
 
  if (isTouchGFXBuffer){
-# 91 "../Core/Src/z_displ_ILI9XXX.c"
-  uint8_t *buf8Pos=dispBuffer1;
 
-  uint16_t *limit=(uint16_t*)(data+dataSize);
-  for (uint16_t *data16=(uint16_t*)data; (data16<limit) & ((buf8Pos-dispBuffer1)<(SIZEBUF-3)); data16++) {
 
-   *(buf8Pos++)=((*data16 & 0xF800)>>8);
-   *(buf8Pos++)=((*data16 & 0x07E0)>>3);
-   *(buf8Pos++)=((*data16 & 0x001F)<<3);
+  uint32_t *limit=(uint32_t*)(data+dataSize);
+  for (uint32_t *data32=(uint32_t*)data; data32<limit; data32++) {
+   *data32=__REV16(*data32);
+  }
+# 63 "../Core/Src/z_displ_ILI9XXX.c"
+ }
+
+
+
+
+
+
+
+  if (dataSize<20) {
+
+   Displ_SpiAvailable=0;
+   HAL_SPI_Transmit(&hspi2 , data, dataSize, 0xFFFFFFFFU);
+   Displ_SpiAvailable=1;
+
+   if (isTouchGFXBuffer){
+    DisplayDriver_TransferCompleteCallback();
+   }
+
+
+  } else {
+   Displ_SpiAvailable=0;
+   HAL_SPI_Transmit_DMA(&hspi2 , data, dataSize);
   }
 
-  data=dispBuffer1;
-  dataSize=(buf8Pos-dispBuffer1);
 
-
- }
-# 115 "../Core/Src/z_displ_ILI9XXX.c"
-   Displ_SpiAvailable=0;
-   HAL_SPI_Transmit(&DISPL_SPI_PORT , data, dataSize, 0xFFFFFFFFU);
-   Displ_SpiAvailable=1;
-# 130 "../Core/Src/z_displ_ILI9XXX.c"
  }
 
 
@@ -32101,95 +33571,94 @@ void Displ_Transmit(GPIO_PinState DC_Status, uint8_t* data, uint16_t dataSize, u
 
 
 void Displ_WriteCommand(uint8_t cmd){
- Displ_Transmit(SPI_COMMAND, &cmd, sizeof(cmd),0);
+ Displ_Transmit(GPIO_PIN_RESET, &cmd, sizeof(cmd),0);
 }
-# 151 "../Core/Src/z_displ_ILI9XXX.c"
+# 109 "../Core/Src/z_displ_ILI9XXX.c"
 void Displ_WriteData(uint8_t* buff, size_t buff_size, uint8_t isTouchGFXBuffer){
  if (buff_size==0) return;
- Displ_Transmit(SPI_DATA, buff, buff_size, isTouchGFXBuffer);
+ Displ_Transmit(GPIO_PIN_SET, buff, buff_size, isTouchGFXBuffer);
 }
-# 163 "../Core/Src/z_displ_ILI9XXX.c"
+# 121 "../Core/Src/z_displ_ILI9XXX.c"
 void ILI9XXX_Init(){
  Displ_Select();
 
- HAL_GPIO_WritePin(DISPL_RST_GPIO_Port, DISPL_RST_Pin, GPIO_PIN_RESET);
+ HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0400UL)), ((uint16_t)0x8000), GPIO_PIN_RESET);
  HAL_Delay(1);
- HAL_GPIO_WritePin(DISPL_RST_GPIO_Port, DISPL_RST_Pin, GPIO_PIN_SET);
+ HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0400UL)), ((uint16_t)0x8000), GPIO_PIN_SET);
  HAL_Delay(150);
-# 222 "../Core/Src/z_displ_ILI9XXX.c"
- Displ_WriteCommand(ILI9XXX_PIXEL_FORMAT);
+# 180 "../Core/Src/z_displ_ILI9XXX.c"
+ Displ_WriteCommand(0x3A);
 
 
 
 
+ Displ_WriteData((uint8_t *)"\x55",1,0);
 
-
- Displ_WriteCommand(ILI9XXX_RGB_INTERFACE);
+ Displ_WriteCommand(0xB0);
  Displ_WriteData((uint8_t *)"\x80",1,0);
 
- Displ_WriteCommand(ILI9XXX_RGB_INTERFACE);
+ Displ_WriteCommand(0xB0);
  Displ_WriteData((uint8_t *)"\x80",1,0);
 
- Displ_WriteCommand(ILI9XXX_SLEEP_OUT);
+ Displ_WriteCommand(0x11);
  HAL_Delay(120);
 
- Displ_WriteCommand(ILI9XXX_DISPLAY_ON);
+ Displ_WriteCommand(0x29);
  HAL_Delay(5);
 
 }
-# 254 "../Core/Src/z_displ_ILI9XXX.c"
+# 212 "../Core/Src/z_displ_ILI9XXX.c"
 void Displ_SetAddressWindow(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2) {
  static uint8_t data[4];
 
  ((uint32_t *)data)[0]=(((x2 & 0xFF)<<24) | ((x2 & 0xFF00)<<8) | ((x1 & 0xFF)<<8) | ((x1 & 0xFF00)>>8) );
- Displ_WriteCommand(ILI9XXX_COLUMN_ADDR);
+ Displ_WriteCommand(0x2A);
  Displ_WriteData(data, 4,0);
 
  ((uint32_t *)data)[0]=(((y2 & 0xFF)<<24) | ((y2 & 0xFF00)<<8) | ((y1 & 0xFF)<<8) | ((y1 & 0xFF00)>>8) );
- Displ_WriteCommand(ILI9XXX_PAGE_ADDR);
+ Displ_WriteCommand(0x2B);
  Displ_WriteData(data, 4,0);
- Displ_WriteCommand(ILI9XXX_MEMWR);
+ Displ_WriteCommand(0x2C);
 }
-# 274 "../Core/Src/z_displ_ILI9XXX.c"
+# 232 "../Core/Src/z_displ_ILI9XXX.c"
 void Displ_Init(Displ_Orientat_e orientation){
- if (TOUCH_SPI==DISPL_SPI){
-  HAL_GPIO_WritePin(DISPL_CS_GPIO_Port, DISPL_CS_Pin, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(TOUCH_CS_GPIO_Port, TOUCH_CS_Pin, GPIO_PIN_SET);
+ if (((uint16_t)0x2000)==((SPI_TypeDef *) (0x40000000UL + 0x3800UL))){
+  HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0400UL)), ((uint16_t)0x1000), GPIO_PIN_SET);
+  HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0400UL)), ((uint16_t)0x2000), GPIO_PIN_SET);
  } else {
-  HAL_GPIO_WritePin(DISPL_CS_GPIO_Port, DISPL_CS_Pin, GPIO_PIN_RESET);
-  SET_DISPL_SPI_BAUDRATE;
-  HAL_GPIO_WritePin(TOUCH_CS_GPIO_Port, TOUCH_CS_Pin, GPIO_PIN_RESET);
-  SET_TOUCH_SPI_BAUDRATE;
+  HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0400UL)), ((uint16_t)0x1000), GPIO_PIN_RESET);
+  ((SPI_TypeDef *) (0x40000000UL + 0x3800UL))->CR1 &= (uint16_t) ~(0x7UL << (3U)); ((SPI_TypeDef *) (0x40000000UL + 0x3800UL))->CR1 |= ((0x1UL << (3U)));
+  HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0400UL)), ((uint16_t)0x2000), GPIO_PIN_RESET);
  }
  ILI9XXX_Init();
  Displ_Orientation(orientation);
 }
-# 298 "../Core/Src/z_displ_ILI9XXX.c"
+# 255 "../Core/Src/z_displ_ILI9XXX.c"
 void Displ_Orientation(Displ_Orientat_e orientation){
  static uint8_t data[1];
  switch(orientation) {
   case Displ_Orientat_0:
-   data[0]=ILI9XXX_MADCTL_0DEG;
-   _height = DISPL_HEIGHT;
-   _width = DISPL_WIDTH;
+   data[0]=0X88;
+   _height = 320;
+   _width = 240;
    break;
   case Displ_Orientat_90:
-   data[0]=ILI9XXX_MADCTL_90DEG;
-   _height = DISPL_WIDTH;
-   _width = DISPL_HEIGHT;
+   data[0]=0xE8;
+   _height = 240;
+   _width = 320;
    break;
   case Displ_Orientat_180:
-   data[0]=ILI9XXX_MADCTL_180DEG;
-   _height = DISPL_HEIGHT;
-   _width = DISPL_WIDTH;
+   data[0]=0x48;
+   _height = 320;
+   _width = 240;
    break;
   case Displ_Orientat_270:
-   data[0]=ILI9XXX_MADCTL_270DEG;
-   _height = DISPL_WIDTH;
-   _width = DISPL_HEIGHT;
+   data[0]=0x28;
+   _height = 240;
+   _width = 320;
    break;
  }
- Displ_WriteCommand(ILI9XXX_MADCTL);
+ Displ_WriteCommand(0x36);
  Displ_WriteData(data,1,0);
  current_orientation = orientation;
 }
@@ -32198,7 +33667,7 @@ void Displ_Orientation(Displ_Orientat_e orientation){
 
 
 void HAL_SPI_ErrorCallback(SPI_HandleTypeDef *hspi){
- if (hspi->Instance==DISPL_SPI) {
+ if (hspi->Instance==((SPI_TypeDef *) (0x40000000UL + 0x3800UL))) {
   Displ_SpiAvailable=1;
  }
 }
@@ -32209,16 +33678,16 @@ void HAL_SPI_ErrorCallback(SPI_HandleTypeDef *hspi){
 
 
 void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi) {
- if (hspi->Instance==DISPL_SPI) {
+ if (hspi->Instance==((SPI_TypeDef *) (0x40000000UL + 0x3800UL))) {
   Displ_SpiAvailable=1;
 
 
-
+  DisplayDriver_TransferCompleteCallback();
 
 
  }
 }
-# 361 "../Core/Src/z_displ_ILI9XXX.c"
+# 318 "../Core/Src/z_displ_ILI9XXX.c"
 void Displ_FillArea(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color) {
 
 
@@ -32240,451 +33709,95 @@ void Displ_FillArea(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t col
  if (y1 > _height) {
   y1=_height;
  }
-# 422 "../Core/Src/z_displ_ILI9XXX.c"
+
+
+
+
+
+ uint32_t data32;
+
+ data32=(color>>8) | (color<<8) | (color<<24);
+ area=((y1-y+1)*(x1-x+1));
+ uint32_t *buf32Pos=(uint32_t *)dispBuffer;
+ if (area<((1<<13)>>1))
+  times=(area>>1)+1;
+ else
+  times=((1<<13)>>2);
+ for (k = 0; k < times; k++)
+  *(buf32Pos++)=data32;
+# 379 "../Core/Src/z_displ_ILI9XXX.c"
  Displ_SetAddressWindow(x, y, x1, y1);
-# 440 "../Core/Src/z_displ_ILI9XXX.c"
- dispBuffer = (dispBuffer==dispBuffer1 ? dispBuffer2 : dispBuffer1);
 
-}
-# 451 "../Core/Src/z_displ_ILI9XXX.c"
-void ILI9488_DrawImage(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint8_t *data, uint32_t size){
- Displ_SetAddressWindow(x, y, w+x-1, h+y-1);
- Displ_WriteData(data,size,0);
-}
-# 464 "../Core/Src/z_displ_ILI9XXX.c"
-void Displ_Pixel(uint16_t x, uint16_t y, uint16_t color) {
-    if((x >= _width) || (y >= _height))
-        return;
-    Displ_FillArea(x, y, 1, 1, color);
 
-}
-
-
-
-
-void Displ_drawCircle(int16_t x0, int16_t y0, int16_t r, uint16_t color) {
-    int16_t f = 1 - r;
-    int16_t ddF_x = 1;
-    int16_t ddF_y = -2 * r;
-    int16_t x = 0;
-    int16_t y = r;
-
-
-    Displ_Pixel(x0 , y0+r, color);
-    Displ_Pixel(x0 , y0-r, color);
-    Displ_Pixel(x0+r, y0 , color);
-    Displ_Pixel(x0-r, y0 , color);
-
-    while (x<y) {
-        if (f >= 0) {
-            y--;
-            ddF_y += 2;
-            f += ddF_y;
-        }
-        x++;
-        ddF_x += 2;
-        f += ddF_x;
-
-        Displ_Pixel(x0 + x, y0 + y, color);
-        Displ_Pixel(x0 - x, y0 + y, color);
-        Displ_Pixel(x0 + x, y0 - y, color);
-        Displ_Pixel(x0 - x, y0 - y, color);
-        Displ_Pixel(x0 + y, y0 + x, color);
-        Displ_Pixel(x0 - y, y0 + x, color);
-        Displ_Pixel(x0 + y, y0 - x, color);
-        Displ_Pixel(x0 - y, y0 - x, color);
-    }
-}
-# 516 "../Core/Src/z_displ_ILI9XXX.c"
-void Displ_CLS(uint16_t bgcolor){
- Displ_FillArea(0, 0, _width, _height, bgcolor);
-}
-# 535 "../Core/Src/z_displ_ILI9XXX.c"
-void drawCircleHelper( int16_t x0, int16_t y0, int16_t r, uint8_t cornername, uint16_t color)
-{
-    int16_t f = 1 - r;
-    int16_t ddF_x = 1;
-    int16_t ddF_y = -2 * r;
-    int16_t x = 0;
-    int16_t y = r;
-
-    while (x<y) {
-        if (f >= 0) {
-            y--;
-            ddF_y += 2;
-            f += ddF_y;
-        }
-        x++;
-        ddF_x += 2;
-        f += ddF_x;
-        if (cornername & 0x4) {
-            Displ_Pixel(x0 + x, y0 + y, color);
-            Displ_Pixel(x0 + y, y0 + x, color);
-        }
-        if (cornername & 0x2) {
-         Displ_Pixel(x0 + x, y0 - y, color);
-         Displ_Pixel(x0 + y, y0 - x, color);
-        }
-        if (cornername & 0x8) {
-         Displ_Pixel(x0 - y, y0 + x, color);
-         Displ_Pixel(x0 - x, y0 + y, color);
-        }
-        if (cornername & 0x1) {
-         Displ_Pixel(x0 - y, y0 - x, color);
-         Displ_Pixel(x0 - x, y0 - y, color);
-        }
-    }
-}
-# 579 "../Core/Src/z_displ_ILI9XXX.c"
-void fillCircleHelper(int16_t x0, int16_t y0, int16_t r, uint8_t cornername, int16_t delta, uint16_t color)
-{
- int16_t f = 1 - r;
-  int16_t ddF_x = 1;
-  int16_t ddF_y = -2 * r;
-  int16_t x = 0;
-  int16_t y = r;
-
-  while (x<y) {
-    if (f >= 0) {
-      y--;
-      ddF_y += 2;
-      f += ddF_y;
-    }
-    x++;
-    ddF_x += 2;
-    f += ddF_x;
-
-    if (cornername & 0x1) {
-      Displ_Line(x0+x, y0-y, x0+x, y0+y+1+delta, color);
-      Displ_Line(x0+y, y0-x,x0+y, y0+x+1+delta, color);
-    }
-    if (cornername & 0x2) {
-      Displ_Line(x0-x, y0-y, x0-x, y0+y+1+delta, color);
-      Displ_Line(x0-y, y0-x, x0-y, y0+x+1+delta, color);
-    }
-  }
-}
-
-
-
-
-
-
-void Displ_fillCircle(int16_t x0, int16_t y0, int16_t r, uint16_t color) {
-    Displ_Line(x0, y0-r, x0, y0+r, color);
-    fillCircleHelper(x0, y0, r, 3, 0, color);
-}
-# 626 "../Core/Src/z_displ_ILI9XXX.c"
-void Displ_Line(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t color)
-{
- int16_t l,x,steep,ystep,err,dx, dy;
-
-    if (x0==x1){
-     if (y1>y0){
-      Displ_FillArea(x0, y0, 1, y1-y0+1, color);
-     }
-     else {
-      Displ_FillArea(x0, y1, 1, y0-y1+1, color);
-     }
-     return;
-    }
-    if (y0==y1){
-     if (x1>x0)
-      Displ_FillArea(x0, y0, x1-x0+1, 1, color);
-     else
-      Displ_FillArea(x1, y1, x0-x1+1, 1, color);
-     return;
-    }
-
-    steep = (y1>y0 ? y1-y0 : y0-y1) > (x1>x0 ? x1-x0 : x0-x1);
-
-    if (steep) {
-        _swap_int16_t(x0, y0);
-        _swap_int16_t(x1, y1);
-    }
-
-    if (x0 > x1) {
-        _swap_int16_t(x0, x1);
-        _swap_int16_t(y0, y1);
-    }
-
-    dx = x1 - x0;
-    err = dx >> 1;
-    if (y0 < y1) {
-        dy = y1-y0;
-        ystep = 1 ;
-    } else {
-        dy = y0-y1;
-        ystep = -1 ;
-    }
-
-    l=00;
-    for (x=x0; x<=x1; x++) {
-     l++;
-        err -= dy;
-        if (err < 0) {
-         if (steep) {
-          Displ_FillArea(y0, x0, 1, l, color);
-            } else {
-             Displ_FillArea(x0, y0, l, 1, color);
-            }
-            y0 += ystep;
-            l=0;
-            x0=x+1;
-            err += dx;
-        }
-    }
-    if (l!=0){
-     if (steep) {
-      Displ_FillArea(y0, x0, 1, l-1, color);
-     } else {
-      Displ_FillArea(x0, y0, l-1,1, color);
-     }
-    }
-}
-# 710 "../Core/Src/z_displ_ILI9XXX.c"
-void Displ_Border(int16_t x, int16_t y, int16_t w, int16_t h, int16_t t, uint16_t color){
- Displ_FillArea(x, y, w, t, color);
- Displ_FillArea(x, y+h-t, w, t, color);
- Displ_FillArea(x, y, t, h, color);
- Displ_FillArea(x+w-t, y, t, h, color);
-}
-
-
-
-
-
-void Displ_drawTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color)
-{
-    Displ_Line(x0, y0, x1, y1, color);
-    Displ_Line(x1, y1, x2, y2, color);
-    Displ_Line(x2, y2, x0, y0, color);
-}
-
-
-
-
-
-
-
-void Displ_fillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color)
-{
-
-    int16_t a, b, y, last;
-
-
-    if (y0 > y1) {
-        _swap_int16_t(y0, y1); _swap_int16_t(x0, x1);
-    }
-    if (y1 > y2) {
-        _swap_int16_t(y2, y1); _swap_int16_t(x2, x1);
-    }
-    if (y0 > y1) {
-        _swap_int16_t(y0, y1); _swap_int16_t(x0, x1);
-    }
-
-    if(y0 == y2) {
-        a = b = x0;
-        if(x1 < a) a = x1;
-        else if(x1 > b) b = x1;
-        if(x2 < a) a = x2;
-        else if(x2 > b) b = x2;
-
-        Displ_Line(a, y0, b, y0, color);
-        return;
-    }
-
-    int16_t
-    dx01 = x1 - x0,
-    dy01 = y1 - y0,
-    dx02 = x2 - x0,
-    dy02 = y2 - y0,
-    dx12 = x2 - x1,
-    dy12 = y2 - y1;
-    int32_t
-    sa = 0,
-    sb = 0;
-
-
-
-
-
-
-
-    if(y1 == y2) last = y1;
-    else last = y1-1;
-
-    for(y=y0; y<=last; y++) {
-        a = x0 + sa / dy01;
-        b = x0 + sb / dy02;
-        sa += dx01;
-        sb += dx02;
-
-
-
-
-        if(a > b) _swap_int16_t(a,b);
-
-        Displ_Line(a, y, b, y, color);
-    }
-
-
-
-    sa = (int32_t)dx12 * (y - y1);
-    sb = (int32_t)dx02 * (y - y0);
-    for(; y<=y2; y++) {
-        a = x1 + sa / dy12;
-        b = x0 + sb / dy02;
-        sa += dx12;
-        sb += dx02;
-
-
-
-
-        if(a > b) _swap_int16_t(a,b);
-
-        Displ_Line(a, y, b, y, color);
-    }
-}
-# 828 "../Core/Src/z_displ_ILI9XXX.c"
-void Displ_WChar(uint16_t x, uint16_t y, char ch, sFONT font, uint8_t size, uint16_t color, uint16_t bgcolor) {
-    uint32_t i, b, bytes, j, bufSize, mask;
-
-    const uint8_t *pos;
- uint8_t wsize=font.Width;
-
- if (size==2)
-  wsize<<= 1;
- bufSize=0;
- bytes=font.Height * font.Size ;
- pos=font.table+(ch - 32) * bytes ;
- switch (font.Size) {
-  case 3:
-   mask=0x800000;
-   break;
-  case 2:
-   mask=0x8000;
-   break;
-  default:
-   mask=0x80;
+ times=(area>>(13 -1));
+ for (k=0;k<times;k++) {
+  Displ_WriteData(dispBuffer,(1<<13),0);
  }
-# 936 "../Core/Src/z_displ_ILI9XXX.c"
- Displ_SetAddressWindow(x, y, x+wsize-1, y+font.Height-1);
- Displ_WriteData(dispBuffer,bufSize,0);
+ Displ_WriteData(dispBuffer,(area<<1)-(times<<13),0);
+# 397 "../Core/Src/z_displ_ILI9XXX.c"
  dispBuffer = (dispBuffer==dispBuffer1 ? dispBuffer2 : dispBuffer1);
 
 }
-# 951 "../Core/Src/z_displ_ILI9XXX.c"
-void Displ_drawRoundRect(int16_t x, int16_t y, int16_t w, int16_t h, int16_t r, uint16_t color)
-{
-    int16_t max_radius = ((w < h) ? w : h) / 2;
-    if(r > max_radius) r = max_radius;
-    Displ_Line(x+r, y, x+w-r-1, y, color);
-    Displ_Line(x+r, y+h-1, x-1+w-r, y+h-1, color);
-    Displ_Line(x, y+r, x, y-1+h-r, color);
-    Displ_Line(x+w-1, y+r, x+w-1, y-1+h-r, color);
-    drawCircleHelper(x+r , y+r , r, 1, color);
-    drawCircleHelper(x+w-r-1, y+r , r, 2, color);
-    drawCircleHelper(x+w-r-1, y+h-r-1, r, 4, color);
-    drawCircleHelper(x+r , y+h-r-1, r, 8, color);
-}
-
-
-
-
-
-void Displ_fillRoundRect(int16_t x, int16_t y, int16_t w, int16_t h, int16_t r, uint16_t color)
-{
-    int16_t max_radius = ((w < h) ? w : h) / 2;
-    if(r > max_radius) r = max_radius;
-    Displ_FillArea(x+r, y, w-2*r, h, color);
-    fillCircleHelper(x+w-r-1, y+r, r, 1, h-2*r-1, color);
-    fillCircleHelper(x+r , y+r, r, 2, h-2*r-1, color);
-}
-# 993 "../Core/Src/z_displ_ILI9XXX.c"
-void Displ_WString(uint16_t x, uint16_t y, const char* str, sFONT font, uint8_t size, uint16_t color, uint16_t bgcolor) {
- uint16_t delta=font.Width;
- if (size>1)
-  delta<<=1;
-
-    while(*str) {
-# 1014 "../Core/Src/z_displ_ILI9XXX.c"
-        Displ_WChar(x, y, *str, font, size, color, bgcolor);
-        x += delta;
-        str++;
-    }
-}
-# 1034 "../Core/Src/z_displ_ILI9XXX.c"
-void Displ_CString(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, const char* str, sFONT font, uint8_t size, uint16_t color, uint16_t bgcolor) {
- uint16_t x,y;
- uint16_t wsize=font.Width;
- static uint8_t cambia=0;
- if (size>1)
-  wsize<<=1;
- if ((strlen(str)*wsize)>(x1-x0+1))
-  x=x0;
- else
-  x=(x1+x0+1-strlen(str)*wsize) >> 1;
- if (font.Height>(y1-y0+1))
-  y=y0;
- else
-  y=(y1+y0+1-font.Height) >> 1;
-
- if (x>x0){
-  Displ_FillArea(x0,y0,x-x0,y1-y0+1,bgcolor);
- } else
-  x=x0;
- if (x1>(strlen(str)*wsize+x0))
-  Displ_FillArea(x1-x+x0-1,y0,x-x0+1,y1-y0+1,bgcolor);
-
- if (y>y0){
-  Displ_FillArea(x0,y0,x1-x0+1,y-y0,bgcolor);
- } else
-  y=y0;
- if (y1>=(font.Height+y0))
-  Displ_FillArea(x0,y1-y+y0,x1-x0+1,y-y0+1,bgcolor);
-
- cambia = !cambia;
-
- Displ_WString(x, y, str, font, size, color, bgcolor);
-
-}
-# 1089 "../Core/Src/z_displ_ILI9XXX.c"
+# 1046 "../Core/Src/z_displ_ILI9XXX.c"
 uint32_t Displ_BackLight(uint8_t cmd) {
 
 
-
+ static uint16_t memCCR1=0;
 
 
  switch (cmd) {
  case 'Q':
   __asm volatile ("nop");
   break;
-
+# 1065 "../Core/Src/z_displ_ILI9XXX.c"
  case 'F':
  case '1':
-  HAL_GPIO_WritePin(DISPL_LED_GPIO_Port, DISPL_LED_Pin, GPIO_PIN_SET);
+  ((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->CCR1=((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->ARR;
   break;
  case '0':
-  HAL_GPIO_WritePin(DISPL_LED_GPIO_Port, DISPL_LED_Pin, GPIO_PIN_RESET);
+  ((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->CCR1=0;
   break;
-# 1140 "../Core/Src/z_displ_ILI9XXX.c"
+ case 'W':
+  ((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->CCR1=memCCR1;
+  break;
+ case 'S':
+  memCCR1=((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->CCR1;
+  if (((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->CCR1>=(50))
+   ((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->CCR1=(50);
+  break;
+ case '+':
+  if (((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->ARR>((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->CCR1)
+   ++((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->CCR1;
+  else
+   ((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->CCR1=((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->ARR;
+  break;
+ case '-':
+  if (((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->CCR1>0)
+   --((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->CCR1;
+  else
+   ((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->CCR1=0;
+  break;
+ case 'I':
+    HAL_TIM_PWM_Start(&htim2, 0x00000000U);
+  ((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->CCR1=100;
+  break;
+
  default:
   break;
  }
 
- return HAL_GPIO_ReadPin(DISPL_LED_GPIO_Port, DISPL_LED_Pin);
 
 
+ return (((TIM_TypeDef *) (0x40000000UL + 0x0000UL))->CCR1);
 
 }
-# 1158 "../Core/Src/z_displ_ILI9XXX.c"
+# 1115 "../Core/Src/z_displ_ILI9XXX.c"
 int touchgfxDisplayDriverTransmitActive(){
 
 
  return (!Displ_SpiAvailable);
 }
-# 1172 "../Core/Src/z_displ_ILI9XXX.c"
+# 1129 "../Core/Src/z_displ_ILI9XXX.c"
 void touchgfxDisplayDriverTransmitBlock(const uint8_t* pixels, uint16_t x, uint16_t y, uint16_t w, uint16_t h){
 
   Displ_SetAddressWindow(x, y, x+w-1, y+h-1);
