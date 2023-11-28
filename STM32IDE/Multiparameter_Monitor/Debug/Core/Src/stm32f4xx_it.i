@@ -1,5 +1,5 @@
 # 0 "../Core/Src/stm32f4xx_it.c"
-# 1 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Debug//"
+# 1 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB-Projeto_Funcional/STM32IDE/Multiparameter_Monitor/Debug//"
 # 0 "<built-in>"
 #define __STDC__ 1
 # 0 "<built-in>"
@@ -32001,8 +32001,6 @@ void Error_Handler(void);
 
 
 
-#define emg_adc_Pin GPIO_PIN_1
-#define emg_adc_GPIO_Port GPIOA
 #define touch_int_Pin GPIO_PIN_4
 #define touch_int_GPIO_Port GPIOA
 #define displ_sck_Pin GPIO_PIN_5
@@ -32029,6 +32027,8 @@ void Error_Handler(void);
 #define oxi_sda_GPIO_Port GPIOC
 #define oxi_scl_Pin GPIO_PIN_8
 #define oxi_scl_GPIO_Port GPIOA
+#define led_adc_Pin GPIO_PIN_9
+#define led_adc_GPIO_Port GPIOA
 #define usart_emg_tx_Pin GPIO_PIN_10
 #define usart_emg_tx_GPIO_Port GPIOC
 #define temp_sda_Pin GPIO_PIN_12
@@ -32049,13 +32049,15 @@ void PendSV_Handler(void);
 void SysTick_Handler(void);
 void TIM1_UP_TIM10_IRQHandler(void);
 void SPI1_IRQHandler(void);
+void DMA2_Stream0_IRQHandler(void);
 void DMA2_Stream3_IRQHandler(void);
 # 23 "../Core/Src/stm32f4xx_it.c" 2
 # 58 "../Core/Src/stm32f4xx_it.c"
+extern DMA_HandleTypeDef hdma_adc1;
 extern DMA_HandleTypeDef hdma_spi1_tx;
 extern SPI_HandleTypeDef hspi1;
 extern TIM_HandleTypeDef htim1;
-# 72 "../Core/Src/stm32f4xx_it.c"
+# 73 "../Core/Src/stm32f4xx_it.c"
 void NMI_Handler(void)
 {
 
@@ -32180,7 +32182,7 @@ void SysTick_Handler(void)
 
 
 }
-# 207 "../Core/Src/stm32f4xx_it.c"
+# 208 "../Core/Src/stm32f4xx_it.c"
 void TIM1_UP_TIM10_IRQHandler(void)
 {
 
@@ -32201,6 +32203,20 @@ void SPI1_IRQHandler(void)
 
 
   HAL_SPI_IRQHandler(&hspi1);
+
+
+
+}
+
+
+
+
+void DMA2_Stream0_IRQHandler(void)
+{
+
+
+
+  HAL_DMA_IRQHandler(&hdma_adc1);
 
 
 

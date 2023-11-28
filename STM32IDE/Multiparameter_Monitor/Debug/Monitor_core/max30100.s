@@ -63803,7 +63803,7 @@ max30100_read_temp:
 	.uleb128 0xc0
 	.4byte	.LASF19480
 	.byte	0
-	.section	.debug_macro,"G",%progbits,wm4.main.h.62.a85e2d52e2395116dc93ea9e2579f1cd,comdat
+	.section	.debug_macro,"G",%progbits,wm4.main.h.62.3e67cde229696b9fa79d68a4eb54743b,comdat
 .Ldebug_macro51:
 	.2byte	0x5
 	.byte	0
@@ -65635,7 +65635,7 @@ max30100_read_temp:
 	.ascii	"FMC_BCR1_CPSIZE_0 (0x1UL << FMC_BCR1_CPSIZE_Pos)\000"
 .LASF14248:
 	.ascii	"USB_OTG_DIEPINT_BERR_Pos (12U)\000"
-.LASF19501:
+.LASF19499:
 	.ascii	"displ_rst_Pin GPIO_PIN_15\000"
 .LASF11407:
 	.ascii	"SAI_xCR1_DS_Msk (0x7UL << SAI_xCR1_DS_Pos)\000"
@@ -66032,8 +66032,6 @@ max30100_read_temp:
 	.ascii	"DWT_LSUCNT_LSUCNT_Msk (0xFFUL )\000"
 .LASF3982:
 	.ascii	"CAN_F10R1_FB7_Msk (0x1UL << CAN_F10R1_FB7_Pos)\000"
-.LASF10731:
-	.ascii	"RCC_DCKCFGR_PLLSAIDIVQ_Pos (8U)\000"
 .LASF17365:
 	.ascii	"__HAL_RCC_I2C1_CLK_SLEEP_DISABLE() (RCC->APB1LPENR "
 	.ascii	"&= ~(RCC_APB1LPENR_I2C1LPEN))\000"
@@ -67541,7 +67539,7 @@ max30100_read_temp:
 .LASF16552:
 	.ascii	"__HAL_LTDC_RELOAD_CONFIG __HAL_LTDC_RELOAD_IMMEDIAT"
 	.ascii	"E_CONFIG\000"
-.LASF19502:
+.LASF19500:
 	.ascii	"displ_rst_GPIO_Port GPIOB\000"
 .LASF13433:
 	.ascii	"USB_OTG_GUSBCFG_PHYSEL USB_OTG_GUSBCFG_PHYSEL_Msk\000"
@@ -69851,8 +69849,6 @@ max30100_read_temp:
 .LASF18138:
 	.ascii	"LL_ADC_AWD_CHANNEL_6_REG ((LL_ADC_CHANNEL_6 & ADC_C"
 	.ascii	"HANNEL_ID_MASK) | ADC_CR1_AWDEN | ADC_CR1_AWDSGL)\000"
-.LASF19482:
-	.ascii	"pwm_tim2_ch1_GPIO_Port GPIOA\000"
 .LASF8530:
 	.ascii	"GPIO_IDR_ID13 GPIO_IDR_ID13_Msk\000"
 .LASF1512:
@@ -72690,7 +72686,7 @@ max30100_read_temp:
 	.ascii	"CAN_F8R1_FB19_Msk (0x1UL << CAN_F8R1_FB19_Pos)\000"
 .LASF15219:
 	.ascii	"__HAL_ADC_CLEAR_ERRORCODE ADC_CLEAR_ERRORCODE\000"
-.LASF19495:
+.LASF19493:
 	.ascii	"displ_cs_Pin GPIO_PIN_12\000"
 .LASF5531:
 	.ascii	"CAN_F12R2_FB11 CAN_F12R2_FB11_Msk\000"
@@ -72811,8 +72807,8 @@ max30100_read_temp:
 .LASF16396:
 	.ascii	"RCC_DFSDM2AUDIOCLKSOURCE_I2SAPB1 RCC_DFSDM2AUDIOCLK"
 	.ascii	"SOURCE_I2S1\000"
-.LASF20109:
-	.ascii	"hi2c\000"
+.LASF10731:
+	.ascii	"RCC_DCKCFGR_PLLSAIDIVQ_Pos (8U)\000"
 .LASF3938:
 	.ascii	"CAN_F9R1_FB24 CAN_F9R1_FB24_Msk\000"
 .LASF1068:
@@ -74567,7 +74563,7 @@ max30100_read_temp:
 	.ascii	"GPIO_BSRR_BR_15 GPIO_BSRR_BR15\000"
 .LASF8345:
 	.ascii	"GPIO_OSPEEDER_OSPEEDR10_1 GPIO_OSPEEDR_OSPEED10_1\000"
-.LASF19485:
+.LASF19483:
 	.ascii	"displ_sck_Pin GPIO_PIN_5\000"
 .LASF8420:
 	.ascii	"GPIO_PUPDR_PUPD11_1 (0x2UL << GPIO_PUPDR_PUPD11_Pos"
@@ -74931,7 +74927,7 @@ max30100_read_temp:
 .LASF18955:
 	.ascii	"TIM_ICPOLARITY_FALLING TIM_INPUTCHANNELPOLARITY_FAL"
 	.ascii	"LING\000"
-.LASF19489:
+.LASF19487:
 	.ascii	"displ_mosi_Pin GPIO_PIN_7\000"
 .LASF11654:
 	.ascii	"SPDIFRX_IMR_OVRIE_Pos (3U)\000"
@@ -76858,7 +76854,7 @@ max30100_read_temp:
 	.ascii	"_Pos)\000"
 .LASF2688:
 	.ascii	"CAN_FM1R_FBM11_Pos (11U)\000"
-.LASF19492:
+.LASF19490:
 	.ascii	"usart_emg_rx_GPIO_Port GPIOC\000"
 .LASF12329:
 	.ascii	"SYSCFG_EXTICR2_EXTI7_PJ 0x9000U\000"
@@ -77795,7 +77791,7 @@ max30100_read_temp:
 	.ascii	"SAI_xCR2_TRIS SAI_xCR2_TRIS_Msk\000"
 .LASF10642:
 	.ascii	"RCC_SSCGR_INCSTEP_Pos (13U)\000"
-.LASF19493:
+.LASF19491:
 	.ascii	"temp_scl_Pin GPIO_PIN_10\000"
 .LASF3394:
 	.ascii	"CAN_F4R1_FB3_Msk (0x1UL << CAN_F4R1_FB3_Pos)\000"
@@ -78229,8 +78225,6 @@ max30100_read_temp:
 	.ascii	"cursive(&lock)\000"
 .LASF176:
 	.ascii	"__DBL_HAS_DENORM__ 1\000"
-.LASF19481:
-	.ascii	"pwm_tim2_ch1_Pin GPIO_PIN_0\000"
 .LASF9407:
 	.ascii	"FMPI2C_ISR_TIMEOUT_Pos (12U)\000"
 .LASF2206:
@@ -78673,7 +78667,7 @@ max30100_read_temp:
 	.ascii	"_Pos)\000"
 .LASF14775:
 	.ascii	"__HAL_HRTIM_GetCounter __HAL_HRTIM_GETCOUNTER\000"
-.LASF19486:
+.LASF19484:
 	.ascii	"displ_sck_GPIO_Port GPIOA\000"
 .LASF1868:
 	.ascii	"ADC_JOFR3_JOFFSET3_Pos (0U)\000"
@@ -79302,7 +79296,7 @@ max30100_read_temp:
 	.ascii	"TIM_FLAG_CC2OF TIM_SR_CC2OF\000"
 .LASF4857:
 	.ascii	"CAN_F5R2_FB11_Pos (11U)\000"
-.LASF19491:
+.LASF19489:
 	.ascii	"usart_emg_rx_Pin GPIO_PIN_5\000"
 .LASF10896:
 	.ascii	"RTC_CR_COSEL_Pos (19U)\000"
@@ -79845,7 +79839,7 @@ max30100_read_temp:
 	.ascii	"RTC_DR_MU_2 (0x4UL << RTC_DR_MU_Pos)\000"
 .LASF11455:
 	.ascii	"SAI_xCR2_TRIS_Msk (0x1UL << SAI_xCR2_TRIS_Pos)\000"
-.LASF19483:
+.LASF19481:
 	.ascii	"touch_int_Pin GPIO_PIN_4\000"
 .LASF14394:
 	.ascii	"USB_OTG_DOEPINT_STPKTRX_Msk (0x1UL << USB_OTG_DOEPI"
@@ -84152,7 +84146,7 @@ max30100_read_temp:
 .LASF10492:
 	.ascii	"RCC_APB1LPENR_SPI3LPEN_Msk (0x1UL << RCC_APB1LPENR_"
 	.ascii	"SPI3LPEN_Pos)\000"
-.LASF19490:
+.LASF19488:
 	.ascii	"displ_mosi_GPIO_Port GPIOA\000"
 .LASF3004:
 	.ascii	"CAN_F0R1_FB1_Msk (0x1UL << CAN_F0R1_FB1_Pos)\000"
@@ -92482,8 +92476,6 @@ max30100_read_temp:
 	.ascii	"ADC_CR2_JEXTEN_Msk (0x3UL << ADC_CR2_JEXTEN_Pos)\000"
 .LASF398:
 	.ascii	"__ARM_FEATURE_CMSE\000"
-.LASF17673:
-	.ascii	"DMA_PRIORITY_LOW 0x00000000U\000"
 .LASF6206:
 	.ascii	"DMA_SxNDT_14 (0x4000UL << DMA_SxNDT_Pos)\000"
 .LASF6041:
@@ -92986,7 +92978,7 @@ max30100_read_temp:
 	.ascii	"CAN_TDL2R_DATA1_Pos (8U)\000"
 .LASF13696:
 	.ascii	"USB_OTG_GINTMSK_RXFLVLM_Pos (4U)\000"
-.LASF19500:
+.LASF19498:
 	.ascii	"displ_dc_GPIO_Port GPIOB\000"
 .LASF5795:
 	.ascii	"CEC_IER_TXBRIE_Msk (0x1UL << CEC_IER_TXBRIE_Pos)\000"
@@ -93844,8 +93836,8 @@ max30100_read_temp:
 	.ascii	"USART_CR2_LBDL USART_CR2_LBDL_Msk\000"
 .LASF676:
 	.ascii	"UINT8_MAX (__UINT8_MAX__)\000"
-.LASF6345:
-	.ascii	"DMA_LIFCR_CTCIF3_Pos (27U)\000"
+.LASF17673:
+	.ascii	"DMA_PRIORITY_LOW 0x00000000U\000"
 .LASF10462:
 	.ascii	"RCC_APB1LPENR_TIM3LPEN_Msk (0x1UL << RCC_APB1LPENR_"
 	.ascii	"TIM3LPEN_Pos)\000"
@@ -94241,6 +94233,8 @@ max30100_read_temp:
 	.ascii	"USB_OTG_DOEPINT_AHBERR USB_OTG_DOEPINT_AHBERR_Msk\000"
 .LASF7808:
 	.ascii	"FMC_SDCR1_MWID_1 (0x2UL << FMC_SDCR1_MWID_Pos)\000"
+.LASF19502:
+	.ascii	"displ_led_GPIO_Port GPIOC\000"
 .LASF16444:
 	.ascii	"__HAL_SD_SDMMC_CLEAR_IT __HAL_SD_SDIO_CLEAR_IT\000"
 .LASF3151:
@@ -94623,7 +94617,7 @@ max30100_read_temp:
 	.ascii	"SPDIFRX_DIR_THI SPDIFRX_DIR_THI_Msk\000"
 .LASF528:
 	.ascii	"MAC_ADDR3 0U\000"
-.LASF19499:
+.LASF19497:
 	.ascii	"displ_dc_Pin GPIO_PIN_14\000"
 .LASF9036:
 	.ascii	"I2C_CR1_PE_Pos (0U)\000"
@@ -95991,9 +95985,8 @@ max30100_read_temp:
 .LASF14294:
 	.ascii	"USB_OTG_DIEPTSIZ_MULCNT_Msk (0x3UL << USB_OTG_DIEPT"
 	.ascii	"SIZ_MULCNT_Pos)\000"
-.LASF8215:
-	.ascii	"GPIO_OTYPER_OT15_Msk (0x1UL << GPIO_OTYPER_OT15_Pos"
-	.ascii	")\000"
+.LASF20109:
+	.ascii	"hi2c\000"
 .LASF486:
 	.ascii	"USE_HAL_ADC_REGISTER_CALLBACKS 0U\000"
 .LASF9010:
@@ -96966,7 +96959,7 @@ max30100_read_temp:
 	.ascii	"_DMA_1 | ADC_CCR_DMA_0)\000"
 .LASF6692:
 	.ascii	"EXTI_RTSR_TR10_Msk (0x1UL << EXTI_RTSR_TR10_Pos)\000"
-.LASF19496:
+.LASF19494:
 	.ascii	"displ_cs_GPIO_Port GPIOB\000"
 .LASF191:
 	.ascii	"__LDBL_EPSILON__ 2.2204460492503131e-16L\000"
@@ -96992,6 +96985,10 @@ max30100_read_temp:
 	.ascii	"TPI_DEVTYPE_SubType_Pos 4U\000"
 .LASF1184:
 	.ascii	"MPU_CTRL_PRIVDEFENA_Pos 2U\000"
+.LASF20112:
+	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
+	.ascii	"stre/SEMB1/PRJ-SEMB-Projeto_Funcional/STM32IDE/Mult"
+	.ascii	"iparameter_Monitor/Debug\000"
 .LASF3087:
 	.ascii	"CAN_F0R1_FB29_Pos (29U)\000"
 .LASF18864:
@@ -97781,7 +97778,7 @@ max30100_read_temp:
 	.ascii	"RCC_BDCR_LSEON_Msk (0x1UL << RCC_BDCR_LSEON_Pos)\000"
 .LASF6951:
 	.ascii	"FLASH_ACR_LATENCY_11WS 0x0000000BU\000"
-.LASF19494:
+.LASF19492:
 	.ascii	"temp_scl_GPIO_Port GPIOB\000"
 .LASF18126:
 	.ascii	"LL_ADC_AWD_CHANNEL_2_REG ((LL_ADC_CHANNEL_2 & ADC_C"
@@ -98867,10 +98864,8 @@ max30100_read_temp:
 	.ascii	"CAN_F4R2_FB24 CAN_F4R2_FB24_Msk\000"
 .LASF14359:
 	.ascii	"USB_OTG_DOEPCTL_EPDIS USB_OTG_DOEPCTL_EPDIS_Msk\000"
-.LASF20112:
-	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
-	.ascii	"stre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor"
-	.ascii	"/Debug\000"
+.LASF6345:
+	.ascii	"DMA_LIFCR_CTCIF3_Pos (27U)\000"
 .LASF11836:
 	.ascii	"SDIO_DTIMER_DATATIME SDIO_DTIMER_DATATIME_Msk\000"
 .LASF9331:
@@ -99250,7 +99245,7 @@ max30100_read_temp:
 	.ascii	"CAN_TXSTATUS_PENDING ((uint8_t)0x02U)\000"
 .LASF1206:
 	.ascii	"MPU_RASR_S_Pos 18U\000"
-.LASF19498:
+.LASF19496:
 	.ascii	"touch_cs_GPIO_Port GPIOB\000"
 .LASF13435:
 	.ascii	"USB_OTG_GUSBCFG_SRPCAP_Msk (0x1UL << USB_OTG_GUSBCF"
@@ -101277,7 +101272,7 @@ max30100_read_temp:
 	.ascii	" == ADC_ALL_CHANNELS) || ((CHANNEL_TYPE) == ADC_REG"
 	.ascii	"ULAR_CHANNELS) || ((CHANNEL_TYPE) == ADC_INJECTED_C"
 	.ascii	"HANNELS))\000"
-.LASF19484:
+.LASF19482:
 	.ascii	"touch_int_GPIO_Port GPIOA\000"
 .LASF13359:
 	.ascii	"USB_OTG_DCTL_GONSTS_Msk (0x1UL << USB_OTG_DCTL_GONS"
@@ -102145,7 +102140,7 @@ max30100_read_temp:
 	.ascii	"XFSIZ_PTXSA_Pos)\000"
 .LASF20063:
 	.ascii	"temp_frac\000"
-.LASF19497:
+.LASF19495:
 	.ascii	"touch_cs_Pin GPIO_PIN_13\000"
 .LASF5505:
 	.ascii	"CAN_F12R2_FB3_Pos (3U)\000"
@@ -104471,6 +104466,9 @@ max30100_read_temp:
 	.ascii	"USB_OTG_FS_MAX_PACKET_SIZE 64U\000"
 .LASF780:
 	.ascii	"__IM volatile const\000"
+.LASF8215:
+	.ascii	"GPIO_OTYPER_OT15_Msk (0x1UL << GPIO_OTYPER_OT15_Pos"
+	.ascii	")\000"
 .LASF12731:
 	.ascii	"TIM_CCMR2_OC3M_1 (0x2UL << TIM_CCMR2_OC3M_Pos)\000"
 .LASF9250:
@@ -104651,6 +104649,8 @@ max30100_read_temp:
 	.ascii	"TIM_CCMR2_OC4CE_Msk (0x1UL << TIM_CCMR2_OC4CE_Pos)\000"
 .LASF7851:
 	.ascii	"FMC_SDCR2_CAS_Pos (7U)\000"
+.LASF19501:
+	.ascii	"displ_led_Pin GPIO_PIN_7\000"
 .LASF15560:
 	.ascii	"__FIREWALL_CLK_DISABLE __HAL_RCC_FIREWALL_CLK_DISAB"
 	.ascii	"LE\000"
@@ -107019,7 +107019,7 @@ max30100_read_temp:
 	.ascii	"ock\000"
 .LASF5729:
 	.ascii	"CEC_RXDR_RXD CEC_RXDR_RXD_Msk\000"
-.LASF19488:
+.LASF19486:
 	.ascii	"touch_mosi_GPIO_Port GPIOA\000"
 .LASF14979:
 	.ascii	"__DIVFRAQ_SAMPLING16 UART_DIVFRAQ_SAMPLING16\000"
@@ -110993,7 +110993,7 @@ max30100_read_temp:
 	.ascii	"FMC_SDTR1_TRAS_Pos (8U)\000"
 .LASF7532:
 	.ascii	"FMC_BWTR1_ACCMOD_0 (0x1UL << FMC_BWTR1_ACCMOD_Pos)\000"
-.LASF19487:
+.LASF19485:
 	.ascii	"touch_mosi_Pin GPIO_PIN_6\000"
 .LASF17244:
 	.ascii	"__HAL_RCC_USART2_CLK_DISABLE() (RCC->APB1ENR &= ~(R"

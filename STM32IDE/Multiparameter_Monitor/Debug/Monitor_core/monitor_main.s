@@ -1552,6 +1552,8 @@ init:
 	.ascii	"__ULACCUM_EPSILON__ 0x1P-32ULK\000"
 .LASF197:
 	.ascii	"__FLT32_MANT_DIG__ 24\000"
+.LASF341:
+	.ascii	"__USQ_IBIT__ 0\000"
 .LASF119:
 	.ascii	"__UINT8_C(c) c\000"
 .LASF429:
@@ -1901,10 +1903,10 @@ init:
 	.ascii	"__ULFRACT_MIN__ 0.0ULR\000"
 .LASF147:
 	.ascii	"__FLT_MANT_DIG__ 24\000"
-.LASF285:
-	.ascii	"__ULLFRACT_EPSILON__ 0x1P-64ULLR\000"
-.LASF341:
-	.ascii	"__USQ_IBIT__ 0\000"
+.LASF409:
+	.ascii	"__ARM_ARCH\000"
+.LASF220:
+	.ascii	"__FLT64_DECIMAL_DIG__ 17\000"
 .LASF369:
 	.ascii	"__GCC_HAVE_SYNC_COMPARE_AND_SWAP_4 1\000"
 .LASF199:
@@ -2025,8 +2027,6 @@ init:
 	.ascii	"__ELF__ 1\000"
 .LASF406:
 	.ascii	"__ARM_ARCH_PROFILE\000"
-.LASF409:
-	.ascii	"__ARM_ARCH\000"
 .LASF110:
 	.ascii	"__INT16_C(c) c\000"
 .LASF382:
@@ -2041,10 +2041,6 @@ init:
 	.ascii	"__USFRACT_EPSILON__ 0x1P-8UHR\000"
 .LASF11:
 	.ascii	"__ATOMIC_ACQUIRE 2\000"
-.LASF456:
-	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
-	.ascii	"stre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor"
-	.ascii	"/Debug\000"
 .LASF441:
 	.ascii	"__ARM_FEATURE_COPROC 15\000"
 .LASF0:
@@ -2207,6 +2203,10 @@ init:
 	.ascii	"__WINT_MAX__ 0xffffffffU\000"
 .LASF187:
 	.ascii	"__LDBL_DECIMAL_DIG__ 17\000"
+.LASF456:
+	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
+	.ascii	"stre/SEMB1/PRJ-SEMB-Projeto_Funcional/STM32IDE/Mult"
+	.ascii	"iparameter_Monitor/Debug\000"
 .LASF334:
 	.ascii	"__TQ_FBIT__ 127\000"
 .LASF338:
@@ -2431,8 +2431,8 @@ init:
 	.ascii	"__LLFRACT_MIN__ (-0.5LLR-0.5LLR)\000"
 .LASF428:
 	.ascii	"__ARM_FEATURE_FMA 1\000"
-.LASF220:
-	.ascii	"__FLT64_DECIMAL_DIG__ 17\000"
+.LASF285:
+	.ascii	"__ULLFRACT_EPSILON__ 0x1P-64ULLR\000"
 .LASF193:
 	.ascii	"__LDBL_HAS_DENORM__ 1\000"
 .LASF120:

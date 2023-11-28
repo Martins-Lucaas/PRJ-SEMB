@@ -6937,10 +6937,8 @@ _execve:
 	.ascii	"__GNUCLIKE___SECTION 1\000"
 .LASF458:
 	.ascii	"_NEWLIB_VERSION \"4.2.0\"\000"
-.LASF1433:
-	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
-	.ascii	"stre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor"
-	.ascii	"/Debug\000"
+.LASF1122:
+	.ascii	"_IOFBF 0\000"
 .LASF186:
 	.ascii	"__DECIMAL_DIG__ 17\000"
 .LASF710:
@@ -7267,8 +7265,10 @@ _execve:
 	.ascii	"_ELIDABLE_INLINE static __inline__\000"
 .LASF1114:
 	.ascii	"__SSTR 0x0200\000"
-.LASF835:
-	.ascii	"_UINT16_T_DECLARED \000"
+.LASF1433:
+	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
+	.ascii	"stre/SEMB1/PRJ-SEMB-Projeto_Funcional/STM32IDE/Mult"
+	.ascii	"iparameter_Monitor/Debug\000"
 .LASF911:
 	.ascii	"_KEY_T_DECLARED \000"
 .LASF863:
@@ -8414,8 +8414,8 @@ _execve:
 	.ascii	"_LITTLE_ENDIAN 1234\000"
 .LASF685:
 	.ascii	"_Nonnull \000"
-.LASF1122:
-	.ascii	"_IOFBF 0\000"
+.LASF1310:
+	.ascii	"SIGLOST 29\000"
 .LASF800:
 	.ascii	"_REENT_WCRTOMB_STATE(ptr) ((ptr)->_misc->_wcrtomb_s"
 	.ascii	"tate)\000"
@@ -8496,8 +8496,6 @@ _execve:
 	.ascii	"_PTRDIFF_T \000"
 .LASF1244:
 	.ascii	"WINT_MAX (__WINT_MAX__)\000"
-.LASF1310:
-	.ascii	"SIGLOST 29\000"
 .LASF1268:
 	.ascii	"SS_ONSTACK 0x1\000"
 .LASF137:
@@ -8845,6 +8843,8 @@ _execve:
 	.ascii	"SI_ASYNCIO 4\000"
 .LASF1287:
 	.ascii	"SIGFPE 8\000"
+.LASF1340:
+	.ascii	"timerisset(tvp) ((tvp)->tv_sec || (tvp)->tv_usec)\000"
 .LASF270:
 	.ascii	"__LFRACT_EPSILON__ 0x1P-31LR\000"
 .LASF512:
@@ -9285,8 +9285,8 @@ _execve:
 	.ascii	",lock)\000"
 .LASF316:
 	.ascii	"__LLACCUM_FBIT__ 31\000"
-.LASF1340:
-	.ascii	"timerisset(tvp) ((tvp)->tv_sec || (tvp)->tv_usec)\000"
+.LASF835:
+	.ascii	"_UINT16_T_DECLARED \000"
 .LASF1206:
 	.ascii	"UINT16_MAX (__UINT16_MAX__)\000"
 .LASF1007:

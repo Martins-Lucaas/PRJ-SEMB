@@ -1,5 +1,5 @@
 # 0 "../Monitor_core/eletromio_adc.c"
-# 1 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Debug//"
+# 1 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB-Projeto_Funcional/STM32IDE/Multiparameter_Monitor/Debug//"
 # 0 "<built-in>"
 #define __STDC__ 1
 # 0 "<built-in>"
@@ -33883,8 +33883,6 @@ void Error_Handler(void);
 
 
 
-#define pwm_tim2_ch1_Pin GPIO_PIN_0
-#define pwm_tim2_ch1_GPIO_Port GPIOA
 #define touch_int_Pin GPIO_PIN_4
 #define touch_int_GPIO_Port GPIOA
 #define displ_sck_Pin GPIO_PIN_5
@@ -33905,6 +33903,8 @@ void Error_Handler(void);
 #define displ_dc_GPIO_Port GPIOB
 #define displ_rst_Pin GPIO_PIN_15
 #define displ_rst_GPIO_Port GPIOB
+#define displ_led_Pin GPIO_PIN_7
+#define displ_led_GPIO_Port GPIOC
 #define oxi_sda_Pin GPIO_PIN_9
 #define oxi_sda_GPIO_Port GPIOC
 #define oxi_scl_Pin GPIO_PIN_8
@@ -33919,11 +33919,7 @@ void Error_Handler(void);
 
 extern TIM_HandleTypeDef hadc1;
 extern UART_HandleTypeDef huart3;
-extern TIM_HandleTypeDef htim2;
 #define ADC_Buffer 4096
-
-HAL_TIM_PWM_Start(&htim2, 0x00000000U);
-
 
 void emg_system(void)
 {
@@ -33931,8 +33927,6 @@ void emg_system(void)
  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_buf, 4096);
 
 }
-
-
 void HAL_ADC_MetadeCompletoCallBack(ADC_HandleTypeDef* hadc){
  HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0000UL)), ((uint16_t)0x0200)|((uint16_t)0x0200), GPIO_PIN_SET);
 

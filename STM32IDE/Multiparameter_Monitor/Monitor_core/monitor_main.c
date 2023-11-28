@@ -4,35 +4,12 @@
  *  Created on: Oct 30, 2023
  *      Author: lucas
  */
-#include "myheaders.h"
+
 //void setup();
 
 //void loop();
 void init(void)
 {
-	// Inicialização do display
-	    ILI9341_Init();
-	    ILI9341_SetRotation(1);
-
-	    // Leitura dos dados dos sensores
-	    //uint32_t temperatura = MLX90614_ReadTemp();
-	    //uint32_t oximetria = max30100_read_fifo();
-	    //double emg = void emg_system();
-
-        // Exibição dos dados no display
-        //char buffer[50];
-
-        // Desenha temperatura
-        sprintf("Temperatura: 10C");
-        ILI9341_DrawText(10, 10, buffer, ILI9341_COLOR_WHITE, ILI9341_COLOR_BLACK);
-
-        // Desenha oximetria
-        //sprintf(buffer, "Oximetria: %d%%", oximetria);
-        //ILI9341_DrawText(10, 30, buffer, ILI9341_COLOR_WHITE, ILI9341_COLOR_BLACK);
-
-        // Desenha EMG
-        //sprintf(buffer, "EMG: %d", emg);
-        //ILI9341_DrawText(10, 50, buffer, ILI9341_COLOR_WHITE, ILI9341_COLOR_BLACK);
 
 }
 

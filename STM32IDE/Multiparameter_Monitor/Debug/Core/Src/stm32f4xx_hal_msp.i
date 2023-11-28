@@ -1,5 +1,5 @@
 # 0 "../Core/Src/stm32f4xx_hal_msp.c"
-# 1 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Debug//"
+# 1 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB-Projeto_Funcional/STM32IDE/Multiparameter_Monitor/Debug//"
 # 0 "<built-in>"
 #define __STDC__ 1
 # 0 "<built-in>"
@@ -32001,8 +32001,6 @@ void Error_Handler(void);
 
 
 
-#define emg_adc_Pin GPIO_PIN_1
-#define emg_adc_GPIO_Port GPIOA
 #define touch_int_Pin GPIO_PIN_4
 #define touch_int_GPIO_Port GPIOA
 #define displ_sck_Pin GPIO_PIN_5
@@ -32029,6 +32027,8 @@ void Error_Handler(void);
 #define oxi_sda_GPIO_Port GPIOC
 #define oxi_scl_Pin GPIO_PIN_8
 #define oxi_scl_GPIO_Port GPIOA
+#define led_adc_Pin GPIO_PIN_9
+#define led_adc_GPIO_Port GPIOA
 #define usart_emg_tx_Pin GPIO_PIN_10
 #define usart_emg_tx_GPIO_Port GPIOC
 #define temp_sda_Pin GPIO_PIN_12
@@ -32038,8 +32038,10 @@ void Error_Handler(void);
 
 
 
+extern DMA_HandleTypeDef hdma_adc1;
+
 extern DMA_HandleTypeDef hdma_spi1_tx;
-# 63 "../Core/Src/stm32f4xx_hal_msp.c"
+# 65 "../Core/Src/stm32f4xx_hal_msp.c"
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 
@@ -32088,6 +32090,25 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
 
 
 
+    hdma_adc1.Instance = ((DMA_Stream_TypeDef *) (((0x40000000UL + 0x00020000UL) + 0x6400UL) + 0x010UL));
+    hdma_adc1.Init.Channel = 0x00000000U;
+    hdma_adc1.Init.Direction = 0x00000000U;
+    hdma_adc1.Init.PeriphInc = 0x00000000U;
+    hdma_adc1.Init.MemInc = ((uint32_t)(0x1UL << (10U)));
+    hdma_adc1.Init.PeriphDataAlignment = ((uint32_t)(0x1UL << (11U)));
+    hdma_adc1.Init.MemDataAlignment = ((uint32_t)(0x1UL << (13U)));
+    hdma_adc1.Init.Mode = ((uint32_t)(0x1UL << (8U)));
+    hdma_adc1.Init.Priority = 0x00000000U;
+    hdma_adc1.Init.FIFOMode = 0x00000000U;
+    if (HAL_DMA_Init(&hdma_adc1) != HAL_OK)
+    {
+      Error_Handler();
+    }
+
+    do{ (hadc)->DMA_Handle = &(hdma_adc1); (hdma_adc1).Parent = (hadc); } while(0U);
+
+
+
 
   }
 
@@ -32114,6 +32135,8 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* hadc)
 
     HAL_GPIO_DeInit(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0000UL)), ((uint16_t)0x0002));
 
+
+    HAL_DMA_DeInit(hadc->DMA_Handle);
 
 
 

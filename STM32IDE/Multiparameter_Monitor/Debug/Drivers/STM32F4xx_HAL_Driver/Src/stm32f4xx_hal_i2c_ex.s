@@ -61272,8 +61272,6 @@ HAL_I2CEx_ConfigDigitalFilter:
 	.ascii	"DWT_LSUCNT_LSUCNT_Msk (0xFFUL )\000"
 .LASF3980:
 	.ascii	"CAN_F10R1_FB7_Msk (0x1UL << CAN_F10R1_FB7_Pos)\000"
-.LASF10729:
-	.ascii	"RCC_DCKCFGR_PLLSAIDIVQ_Pos (8U)\000"
 .LASF17363:
 	.ascii	"__HAL_RCC_I2C1_CLK_SLEEP_DISABLE() (RCC->APB1LPENR "
 	.ascii	"&= ~(RCC_APB1LPENR_I2C1LPEN))\000"
@@ -67899,8 +67897,8 @@ HAL_I2CEx_ConfigDigitalFilter:
 .LASF16394:
 	.ascii	"RCC_DFSDM2AUDIOCLKSOURCE_I2SAPB1 RCC_DFSDM2AUDIOCLK"
 	.ascii	"SOURCE_I2S1\000"
-.LASF19585:
-	.ascii	"hi2c\000"
+.LASF10729:
+	.ascii	"RCC_DCKCFGR_PLLSAIDIVQ_Pos (8U)\000"
 .LASF3936:
 	.ascii	"CAN_F9R1_FB24 CAN_F9R1_FB24_Msk\000"
 .LASF1066:
@@ -87036,8 +87034,6 @@ HAL_I2CEx_ConfigDigitalFilter:
 	.ascii	"CAN_FA1R_FACT23 CAN_FA1R_FACT23_Msk\000"
 .LASF398:
 	.ascii	"__ARM_FEATURE_CMSE\000"
-.LASF17671:
-	.ascii	"DMA_PRIORITY_LOW 0x00000000U\000"
 .LASF6204:
 	.ascii	"DMA_SxNDT_14 (0x4000UL << DMA_SxNDT_Pos)\000"
 .LASF6039:
@@ -88379,8 +88375,8 @@ HAL_I2CEx_ConfigDigitalFilter:
 	.ascii	"USART_CR2_LBDL USART_CR2_LBDL_Msk\000"
 .LASF674:
 	.ascii	"UINT8_MAX (__UINT8_MAX__)\000"
-.LASF6343:
-	.ascii	"DMA_LIFCR_CTCIF3_Pos (27U)\000"
+.LASF17671:
+	.ascii	"DMA_PRIORITY_LOW 0x00000000U\000"
 .LASF10460:
 	.ascii	"RCC_APB1LPENR_TIM3LPEN_Msk (0x1UL << RCC_APB1LPENR_"
 	.ascii	"TIM3LPEN_Pos)\000"
@@ -90461,9 +90457,8 @@ HAL_I2CEx_ConfigDigitalFilter:
 .LASF14292:
 	.ascii	"USB_OTG_DIEPTSIZ_MULCNT_Msk (0x3UL << USB_OTG_DIEPT"
 	.ascii	"SIZ_MULCNT_Pos)\000"
-.LASF8213:
-	.ascii	"GPIO_OTYPER_OT15_Msk (0x1UL << GPIO_OTYPER_OT15_Pos"
-	.ascii	")\000"
+.LASF19585:
+	.ascii	"hi2c\000"
 .LASF484:
 	.ascii	"USE_HAL_ADC_REGISTER_CALLBACKS 0U\000"
 .LASF9008:
@@ -91429,6 +91424,10 @@ HAL_I2CEx_ConfigDigitalFilter:
 	.ascii	"TPI_DEVTYPE_SubType_Pos 4U\000"
 .LASF1182:
 	.ascii	"MPU_CTRL_PRIVDEFENA_Pos 2U\000"
+.LASF19590:
+	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
+	.ascii	"stre/SEMB1/PRJ-SEMB-Projeto_Funcional/STM32IDE/Mult"
+	.ascii	"iparameter_Monitor/Debug\000"
 .LASF3085:
 	.ascii	"CAN_F0R1_FB29_Pos (29U)\000"
 .LASF18862:
@@ -93269,10 +93268,8 @@ HAL_I2CEx_ConfigDigitalFilter:
 	.ascii	"CAN_F4R2_FB24 CAN_F4R2_FB24_Msk\000"
 .LASF14357:
 	.ascii	"USB_OTG_DOEPCTL_EPDIS USB_OTG_DOEPCTL_EPDIS_Msk\000"
-.LASF19590:
-	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
-	.ascii	"stre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor"
-	.ascii	"/Debug\000"
+.LASF6343:
+	.ascii	"DMA_LIFCR_CTCIF3_Pos (27U)\000"
 .LASF11834:
 	.ascii	"SDIO_DTIMER_DATATIME SDIO_DTIMER_DATATIME_Msk\000"
 .LASF9329:
@@ -98723,6 +98720,9 @@ HAL_I2CEx_ConfigDigitalFilter:
 	.ascii	"USB_OTG_FS_MAX_PACKET_SIZE 64U\000"
 .LASF778:
 	.ascii	"__IM volatile const\000"
+.LASF8213:
+	.ascii	"GPIO_OTYPER_OT15_Msk (0x1UL << GPIO_OTYPER_OT15_Pos"
+	.ascii	")\000"
 .LASF12729:
 	.ascii	"TIM_CCMR2_OC3M_1 (0x2UL << TIM_CCMR2_OC3M_Pos)\000"
 .LASF9248:

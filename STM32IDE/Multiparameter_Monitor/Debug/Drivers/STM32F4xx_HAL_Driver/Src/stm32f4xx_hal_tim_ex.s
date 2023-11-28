@@ -96105,8 +96105,6 @@ TIM_CCxNChannelCmd:
 	.ascii	"ADC_CR2_JEXTEN_Msk (0x3UL << ADC_CR2_JEXTEN_Pos)\000"
 .LASF398:
 	.ascii	"__ARM_FEATURE_CMSE\000"
-.LASF17671:
-	.ascii	"DMA_PRIORITY_LOW 0x00000000U\000"
 .LASF6204:
 	.ascii	"DMA_SxNDT_14 (0x4000UL << DMA_SxNDT_Pos)\000"
 .LASF6039:
@@ -97443,8 +97441,8 @@ TIM_CCxNChannelCmd:
 	.ascii	"USART_CR2_LBDL USART_CR2_LBDL_Msk\000"
 .LASF674:
 	.ascii	"UINT8_MAX (__UINT8_MAX__)\000"
-.LASF6343:
-	.ascii	"DMA_LIFCR_CTCIF3_Pos (27U)\000"
+.LASF17671:
+	.ascii	"DMA_PRIORITY_LOW 0x00000000U\000"
 .LASF10460:
 	.ascii	"RCC_APB1LPENR_TIM3LPEN_Msk (0x1UL << RCC_APB1LPENR_"
 	.ascii	"TIM3LPEN_Pos)\000"
@@ -100513,6 +100511,10 @@ TIM_CCxNChannelCmd:
 	.ascii	"TPI_DEVTYPE_SubType_Pos 4U\000"
 .LASF1182:
 	.ascii	"MPU_CTRL_PRIVDEFENA_Pos 2U\000"
+.LASF19690:
+	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
+	.ascii	"stre/SEMB1/PRJ-SEMB-Projeto_Funcional/STM32IDE/Mult"
+	.ascii	"iparameter_Monitor/Debug\000"
 .LASF3085:
 	.ascii	"CAN_F0R1_FB29_Pos (29U)\000"
 .LASF18862:
@@ -102359,10 +102361,8 @@ TIM_CCxNChannelCmd:
 	.ascii	"CAN_F4R2_FB24 CAN_F4R2_FB24_Msk\000"
 .LASF14357:
 	.ascii	"USB_OTG_DOEPCTL_EPDIS USB_OTG_DOEPCTL_EPDIS_Msk\000"
-.LASF19690:
-	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
-	.ascii	"stre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor"
-	.ascii	"/Debug\000"
+.LASF6343:
+	.ascii	"DMA_LIFCR_CTCIF3_Pos (27U)\000"
 .LASF17566:
 	.ascii	"OUTPUT_TYPE_Pos 4U\000"
 .LASF9329:

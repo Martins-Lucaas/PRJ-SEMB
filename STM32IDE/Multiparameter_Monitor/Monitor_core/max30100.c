@@ -2,7 +2,7 @@
  * max30100.c
  *
  *  Created on: Nov 26, 2023
- *      Author: gabriel
+ *      Author: gabri
  */
 
 #include "max30100.h"
@@ -13,14 +13,15 @@ extern "C"
 {
 #endif
 
-// Função de plotagem integrada, é chamada durante uma interrupção para imprimir/plotar a amostra atual
+// Função de plotagem integrada. Chamada durante uma interrupção para imprimir/plotar a amostra atual.
+// Substitua isso em seu main.c se você não estiver usando printf() para impressão.
 void max30100_plot(uint32_t ir_sample, uint32_t red_sample)
 {
     UNUSED(ir_sample);
     UNUSED(red_sample);
 }
 
-// Função de iniciação do sensor
+// Função de iniciação do MAX30100.
 void max30100_init(max30100_t *obj, I2C_HandleTypeDef *hi2c)
 {
     obj->_ui2c = hi2c;
@@ -29,7 +30,7 @@ void max30100_init(max30100_t *obj, I2C_HandleTypeDef *hi2c)
     memset(obj->_red_samples, 0, MAX30100_SAMPLE_LEN_MAX * sizeof(uint32_t));
 }
 
-// Escreve um buffer de buflen bytes em um registro do sensor
+// Escreve um buffer de buflen bytes em um registro do MAX30100.
 void max30100_write(max30100_t *obj, uint8_t reg, uint8_t *buf, uint16_t buflen)
 {
     uint8_t *payload = (uint8_t *)malloc((buflen + 1) * sizeof(uint8_t));
@@ -40,7 +41,7 @@ void max30100_write(max30100_t *obj, uint8_t reg, uint8_t *buf, uint16_t buflen)
     free(payload);
 }
 
-// Lê buflen bytes de um registro do sensor e armazena no buffer
+// Lê buflen bytes de um registro do MAX30100 e armazena no buffer.
 void max30100_read(max30100_t *obj, uint8_t reg, uint8_t *buf, uint16_t buflen)
 {
     uint8_t reg_addr = reg;
@@ -48,14 +49,14 @@ void max30100_read(max30100_t *obj, uint8_t reg, uint8_t *buf, uint16_t buflen)
     HAL_I2C_Master_Receive(obj->_ui2c, MAX30100_I2C_ADDR << 1, buf, buflen, MAX30100_I2C_TIMEOUT);
 }
 
-// Reseta o sensor
+// Reseta o sensor.
 void max30100_reset(max30100_t *obj)
 {
     uint8_t val = 0x40;
     max30100_write(obj, MAX30100_MODE_CONFIG, &val, 1);
 }
 
-// Ativa a interrupção A_FULL
+// Ativa a interrupção A_FULL.
 void max30100_set_a_full(max30100_t *obj, uint8_t enable)
 {
     uint8_t reg = 0;
@@ -65,7 +66,7 @@ void max30100_set_a_full(max30100_t *obj, uint8_t enable)
     max30100_write(obj, MAX30100_INTERRUPT_ENABLE_1, &reg, 1);
 }
 
-// Ativa a interrupção PPG_RDY
+// Ativa a interrupção PPG_RDY.
 void max30100_set_ppg_rdy(max30100_t *obj, uint8_t enable)
 {
     uint8_t reg = 0;
@@ -75,7 +76,7 @@ void max30100_set_ppg_rdy(max30100_t *obj, uint8_t enable)
     max30100_write(obj, MAX30100_INTERRUPT_ENABLE_1, &reg, 1);
 }
 
-// Ativa a interrupção ALC_OVF
+// Ativa a interrupção ALC_OVF.
 void max30100_set_alc_ovf(max30100_t *obj, uint8_t enable)
 {
     uint8_t reg = 0;
@@ -85,33 +86,33 @@ void max30100_set_alc_ovf(max30100_t *obj, uint8_t enable)
     max30100_write(obj, MAX30100_INTERRUPT_ENABLE_1, &reg, 1);
 }
 
-// Ativa a interrupção DIE_TEMP_RDY
+// Ativa a interrupção DIE_TEMP_RDY.
 void max30100_set_die_temp_rdy(max30100_t *obj, uint8_t enable)
 {
     uint8_t reg = (enable & 0x01) << MAX30100_INTERRUPT_DIE_TEMP_RDY;
     max30100_write(obj, MAX30100_INTERRUPT_ENABLE_2, &reg, 1);
 }
 
-// Ativa a medição de temperatura
+// Ativa a medição de temperatura.
 void max30100_set_die_temp_en(max30100_t *obj, uint8_t enable)
 {
     uint8_t reg = (enable & 0x01) << MAX30100_DIE_TEMP_EN;
     max30100_write(obj, MAX30100_DIE_TEMP_CONFIG, &reg, 1);
 }
 
-/* Define a bandeira de interrupção e deve ser chamado no manipulador de interrupção externa correspondente */
+// Define a bandeira de interrupção em uma interrupção. Deve ser chamado no manipulador de interrupção externa correspondente.
 void max30100_on_interrupt(max30100_t *obj)
 {
     obj->_interrupt_flag = 1;
 }
 
-// Verifica se a bandeira de interrupção está ativa
+// Verifica se a bandeira de interrupção está ativa.
 uint8_t max30100_has_interrupt(max30100_t *obj)
 {
     return obj->_interrupt_flag;
 }
 
-// Lê os registradores de status de interrupção (0x00 e 0x01) e realiza tarefas correspondentes
+// Lê os registradores de status de interrupção (0x00 e 0x01) e realiza tarefas correspondentes.
 void max30100_interrupt_handler(max30100_t *obj)
 {
     uint8_t reg[2] = {0x00};
@@ -120,7 +121,7 @@ void max30100_interrupt_handler(max30100_t *obj)
 
     if ((reg[0] >> MAX30100_INTERRUPT_A_FULL) & 0x01)
     {
-        // FIFO quase cheia
+        // FIFO quase cheio
         max30100_read_fifo(obj);
     }
 
@@ -147,7 +148,7 @@ void max30100_interrupt_handler(max30100_t *obj)
     obj->_interrupt_flag = 0;
 }
 
-// Desliga o sensor
+// Desliga o sensor.
 void max30100_shutdown(max30100_t *obj, uint8_t shdn)
 {
     uint8_t config;
@@ -156,7 +157,7 @@ void max30100_shutdown(max30100_t *obj, uint8_t shdn)
     max30100_write(obj, MAX30100_MODE_CONFIG, &config, 1);
 }
 
-// Define o modo de medição
+// Define o modo de medição.
 void max30100_set_mode(max30100_t *obj, max30100_mode_t mode)
 {
     uint8_t config;
@@ -166,7 +167,7 @@ void max30100_set_mode(max30100_t *obj, max30100_mode_t mode)
     max30100_clear_fifo(obj);
 }
 
-// Define a taxa de amostragem
+// Define a taxa de amostragem.
 void max30100_set_sampling_rate(max30100_t *obj, max30100_sr_t sr)
 {
     uint8_t config;
@@ -175,7 +176,7 @@ void max30100_set_sampling_rate(max30100_t *obj, max30100_sr_t sr)
     max30100_write(obj, MAX30100_SPO2_CONFIG, &config, 1);
 }
 
-// Define a largura de pulso do LED
+// Define a largura de pulso do LED.
 void max30100_set_led_pulse_width(max30100_t *obj, max30100_led_pw_t pw)
 {
     uint8_t config;
@@ -184,7 +185,7 @@ void max30100_set_led_pulse_width(max30100_t *obj, max30100_led_pw_t pw)
     max30100_write(obj, MAX30100_SPO2_CONFIG, &config, 1);
 }
 
-// Define a resolução do ADC
+// Define a resolução do ADC.
 void max30100_set_adc_resolution(max30100_t *obj, max30100_adc_t adc)
 {
     uint8_t config;
@@ -193,21 +194,21 @@ void max30100_set_adc_resolution(max30100_t *obj, max30100_adc_t adc)
     max30100_write(obj, MAX30100_SPO2_CONFIG, &config, 1);
 }
 
-// Define a corrente do LED 1
+// Define a corrente do LED 1.
 void max30100_set_led_current_1(max30100_t *obj, float ma)
 {
     uint8_t pa = ma / 0.2;
     max30100_write(obj, MAX30100_LED_IR_PA1, &pa, 1);
 }
 
-// Define a corrente do LED 2
+// Define a corrente do LED 2.
 void max30100_set_led_current_2(max30100_t *obj, float ma)
 {
     uint8_t pa = ma / 0.2;
     max30100_write(obj, MAX30100_LED_RED_PA2, &pa, 1);
 }
 
-// Define o modo de slot no modo multi-LED
+// Define o modo de slot no modo multi-LED.
 void max30100_set_multi_led_slot_1_2(max30100_t *obj, max30100_multi_led_ctrl_t slot1, max30100_multi_led_ctrl_t slot2)
 {
     uint8_t val = 0;
@@ -215,7 +216,7 @@ void max30100_set_multi_led_slot_1_2(max30100_t *obj, max30100_multi_led_ctrl_t 
     max30100_write(obj, MAX30100_MULTI_LED_CTRL_1, &val, 1);
 }
 
-// Define o modo de slot no modo multi-LED
+// Define o modo de slot no modo multi-LED.
 void max30100_set_multi_led_slot_3_4(max30100_t *obj, max30100_multi_led_ctrl_t slot3, max30100_multi_led_ctrl_t slot4)
 {
     uint8_t val = 0;
@@ -223,7 +224,7 @@ void max30100_set_multi_led_slot_3_4(max30100_t *obj, max30100_multi_led_ctrl_t 
     max30100_write(obj, MAX30100_MULTI_LED_CTRL_2, &val, 1);
 }
 
-// Define a configuração da FIFO
+// Define a configuração da FIFO.
 void max30100_set_fifo_config(max30100_t *obj, max30100_smp_ave_t smp_ave, uint8_t roll_over_en, uint8_t fifo_a_full)
 {
     uint8_t config = 0x00;
@@ -233,7 +234,7 @@ void max30100_set_fifo_config(max30100_t *obj, max30100_smp_ave_t smp_ave, uint8
     max30100_write(obj, MAX30100_FIFO_CONFIG, &config, 1);
 }
 
-// Limpa todos os ponteiros da FIFO no sensor
+// Limpa todos os ponteiros da FIFO no sensor.
 void max30100_clear_fifo(max30100_t *obj)
 {
     uint8_t val = 0x00;
@@ -242,7 +243,7 @@ void max30100_clear_fifo(max30100_t *obj)
     max30100_write(obj, MAX30100_OVF_COUNTER, &val, 3);
 }
 
-// Lê o conteúdo da FIFO e armazena no buffer no objeto max30100_t
+// Lê o conteúdo da FIFO e armazena no buffer no objeto max30100_t.
 void max30100_read_fifo(max30100_t *obj)
 {
     // Primeira transação: Obter o FIFO_WR_PTR
@@ -271,7 +272,7 @@ void max30100_read_fifo(max30100_t *obj)
     }
 }
 
-// Lê a temperatura do dado
+// Lê a temperatura do dado.
 void max30100_read_temp(max30100_t *obj, int8_t *temp_int, uint8_t *temp_frac)
 {
     max30100_read(obj, MAX30100_DIE_TINT, (uint8_t *)temp_int, 1);

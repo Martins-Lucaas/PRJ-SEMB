@@ -1,5 +1,5 @@
 # 0 "../Core/Src/main.c"
-# 1 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Debug//"
+# 1 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB-Projeto_Funcional/STM32IDE/Multiparameter_Monitor/Debug//"
 # 0 "<built-in>"
 #define __STDC__ 1
 # 0 "<built-in>"
@@ -32001,8 +32001,6 @@ void Error_Handler(void);
 
 
 
-#define emg_adc_Pin GPIO_PIN_1
-#define emg_adc_GPIO_Port GPIOA
 #define touch_int_Pin GPIO_PIN_4
 #define touch_int_GPIO_Port GPIOA
 #define displ_sck_Pin GPIO_PIN_5
@@ -32029,6 +32027,8 @@ void Error_Handler(void);
 #define oxi_sda_GPIO_Port GPIOC
 #define oxi_scl_Pin GPIO_PIN_8
 #define oxi_scl_GPIO_Port GPIOA
+#define led_adc_Pin GPIO_PIN_9
+#define led_adc_GPIO_Port GPIOA
 #define usart_emg_tx_Pin GPIO_PIN_10
 #define usart_emg_tx_GPIO_Port GPIOC
 #define temp_sda_Pin GPIO_PIN_12
@@ -32036,6 +32036,7 @@ void Error_Handler(void);
 # 21 "../Core/Src/main.c" 2
 # 42 "../Core/Src/main.c"
 ADC_HandleTypeDef hadc1;
+DMA_HandleTypeDef hdma_adc1;
 
 CRC_HandleTypeDef hcrc;
 
@@ -32067,7 +32068,7 @@ static void MX_SPI1_Init(void);
 static void MX_CRC_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_USART3_UART_Init(void);
-# 87 "../Core/Src/main.c"
+# 88 "../Core/Src/main.c"
 int main(void)
 {
 
@@ -32109,7 +32110,6 @@ int main(void)
 
   while (1)
   {
-
 
 
 
@@ -32187,13 +32187,13 @@ static void MX_ADC1_Init(void)
   hadc1.Init.ClockPrescaler = 0x00000000U;
   hadc1.Init.Resolution = 0x00000000U;
   hadc1.Init.ScanConvMode = DISABLE;
-  hadc1.Init.ContinuousConvMode = DISABLE;
+  hadc1.Init.ContinuousConvMode = ENABLE;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConvEdge = 0x00000000U;
   hadc1.Init.ExternalTrigConv = ((uint32_t)(0xFUL << (24U)) + 1U);
   hadc1.Init.DataAlign = 0x00000000U;
   hadc1.Init.NbrOfConversion = 1;
-  hadc1.Init.DMAContinuousRequests = DISABLE;
+  hadc1.Init.DMAContinuousRequests = ENABLE;
   hadc1.Init.EOCSelection = 0x00000001U;
   if (HAL_ADC_Init(&hadc1) != HAL_OK)
   {
@@ -32204,7 +32204,7 @@ static void MX_ADC1_Init(void)
 
   sConfig.Channel = ((uint32_t)(0x01UL << (0U)));
   sConfig.Rank = 1;
-  sConfig.SamplingTime = ((uint32_t)(0x1UL << (0U)));
+  sConfig.SamplingTime = 0x00000000U;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -32432,6 +32432,9 @@ static void MX_DMA_Init(void)
 
 
 
+  HAL_NVIC_SetPriority(DMA2_Stream0_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA2_Stream0_IRQn);
+
   HAL_NVIC_SetPriority(DMA2_Stream3_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA2_Stream3_IRQn);
 
@@ -32461,7 +32464,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0400UL)), ((uint16_t)0x8000), GPIO_PIN_RESET);
 
 
-  HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0000UL)), ((uint16_t)0x0400), GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0000UL)), ((uint16_t)0x0200)|((uint16_t)0x0400), GPIO_PIN_RESET);
 
 
   GPIO_InitStruct.Pin = ((uint16_t)0x0010);
@@ -32484,7 +32487,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0400UL)), &GPIO_InitStruct);
 
 
-  GPIO_InitStruct.Pin = ((uint16_t)0x0400);
+  GPIO_InitStruct.Pin = ((uint16_t)0x0200)|((uint16_t)0x0400);
   GPIO_InitStruct.Mode = ((0x1UL << 0U) | (0x0UL << 4U));
   GPIO_InitStruct.Pull = 0x00000000U;
   GPIO_InitStruct.Speed = 0x00000000U;
@@ -32493,7 +32496,7 @@ static void MX_GPIO_Init(void)
 
 
 }
-# 568 "../Core/Src/main.c"
+# 571 "../Core/Src/main.c"
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 
