@@ -3717,3 +3717,277 @@ java.lang.Exception: Resource '/STM32IDE' does not exist.
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-11-27 23:43:41.567
 !MESSAGE Indexed 'Multiparameter_Monitor' (69 sources, 234 headers) in 5,52 sec: 20.381 declarations; 104.822 references; 71 unresolved inclusions; 66 syntax errors; 2.202 unresolved names (1,7%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-28 00:00:16.171
+!MESSAGE Indexed 'Multiparameter_Monitor' (69 sources, 234 headers) in 3.31 sec: 20,381 declarations; 104,822 references; 71 unresolved inclusions; 66 syntax errors; 2,202 unresolved names (1.7%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-28 00:00:19.969
+!MESSAGE Indexed 'Multiparameter_Monitor' (69 sources, 234 headers) in 3.07 sec: 20,381 declarations; 104,822 references; 71 unresolved inclusions; 66 syntax errors; 2,202 unresolved names (1.7%)
+
+!ENTRY org.eclipse.jface 4 2 2023-11-28 00:00:55.231
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.settings.model.extension.CResourceData.getPath()" because "data" is null
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescription.getPath(CFolderDescription.java:41)
+	at org.eclipse.cdt.internal.core.settings.model.MultiResourceDescription.getPath(MultiResourceDescription.java:62)
+	at org.eclipse.cdt.managedbuilder.ui.properties.ToolSettingsPrefStore.get(ToolSettingsPrefStore.java:431)
+	at org.eclipse.cdt.managedbuilder.ui.properties.ToolSettingsPrefStore.setSelection(ToolSettingsPrefStore.java:67)
+	at org.eclipse.cdt.managedbuilder.ui.properties.ToolSettingsTab.handleOptionSelection(ToolSettingsTab.java:489)
+	at org.eclipse.cdt.managedbuilder.ui.properties.ToolSettingsTab$2.selectionChanged(ToolSettingsTab.java:170)
+	at org.eclipse.jface.viewers.Viewer$1.run(Viewer.java:151)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:148)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2128)
+	at org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1176)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1205)
+	at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:263)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:421)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3642)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:155)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3642)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.jface 4 2 2023-11-28 00:00:57.132
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.settings.model.extension.CResourceData.getPath()" because "data" is null
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescription.getPath(CFolderDescription.java:41)
+	at org.eclipse.cdt.internal.core.settings.model.MultiResourceDescription.getPath(MultiResourceDescription.java:62)
+	at org.eclipse.cdt.managedbuilder.ui.properties.ToolSettingsPrefStore.get(ToolSettingsPrefStore.java:431)
+	at org.eclipse.cdt.managedbuilder.ui.properties.ToolSettingsPrefStore.setSelection(ToolSettingsPrefStore.java:67)
+	at org.eclipse.cdt.managedbuilder.ui.properties.ToolSettingsTab.handleOptionSelection(ToolSettingsTab.java:489)
+	at org.eclipse.cdt.managedbuilder.ui.properties.ToolSettingsTab$2.selectionChanged(ToolSettingsTab.java:170)
+	at org.eclipse.jface.viewers.Viewer$1.run(Viewer.java:151)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:148)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2128)
+	at org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1176)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1205)
+	at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:263)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:421)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3642)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:155)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3642)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-28 00:01:29.042
+!MESSAGE Indexed 'Multiparameter_Monitor' (69 sources, 234 headers) in 2.86 sec: 20,381 declarations; 104,822 references; 71 unresolved inclusions; 66 syntax errors; 2,202 unresolved names (1.7%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-28 00:01:42.571
+!MESSAGE Indexed 'Multiparameter_Monitor' (69 sources, 234 headers) in 2.88 sec: 20,381 declarations; 104,822 references; 71 unresolved inclusions; 66 syntax errors; 2,202 unresolved names (1.7%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-28 00:01:57.854
+!MESSAGE Indexed 'Multiparameter_Monitor' (69 sources, 234 headers) in 2.89 sec: 20,381 declarations; 104,822 references; 71 unresolved inclusions; 66 syntax errors; 2,202 unresolved names (1.7%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-28 00:02:09.776
+!MESSAGE Indexed 'Multiparameter_Monitor' (69 sources, 234 headers) in 2.94 sec: 20,381 declarations; 104,822 references; 71 unresolved inclusions; 66 syntax errors; 2,202 unresolved names (1.7%)
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2023-11-28 00:04:30.292
+!MESSAGE Failed to check relative, returning possibly relative path: C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\Release/"/$\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\TouchGFX" literal was "/$\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\TouchGFX"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2023-11-28 00:04:30.293
+!MESSAGE Failed to check relative, returning possibly relative path: C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\Release/"/$\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\TouchGFX" literal was "/$\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\TouchGFX"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2023-11-28 00:04:30.293
+!MESSAGE Failed to check relative, returning possibly relative path: C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\Release/"/$\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\TouchGFX" literal was "/$\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\TouchGFX"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2023-11-28 00:04:30.294
+!MESSAGE Failed to check relative, returning possibly relative path: C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\Debug/"/$\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\TouchGFX" literal was "/$\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\TouchGFX"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2023-11-28 00:04:30.295
+!MESSAGE Failed to check relative, returning possibly relative path: C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\Debug/"/$\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\TouchGFX" literal was "/$\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\TouchGFX"
+
+!ENTRY org.eclipse.cdt.core 4 0 2023-11-28 00:04:33.193
+!MESSAGE Error: The point argument was not provided. Returning the global index scope.
+!STACK 0
+java.lang.Exception: The point argument was not provided. Returning the global index scope.
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.SemanticUtil.mapToAST(SemanticUtil.java:563)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.CPPSemantics.getContainingNamespaceScope(CPPSemantics.java:943)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.CPPSemantics.getAssociatedScopes(CPPSemantics.java:886)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.CPPSemantics.getAssociatedScopes(CPPSemantics.java:835)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.CPPSemantics.doArgumentDependentLookup(CPPSemantics.java:707)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.EvalFunctionSet.resolveFunction(EvalFunctionSet.java:327)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.EvalFunctionCall.resolveFunctionBinding(EvalFunctionCall.java:381)
+	at org.eclipse.cdt.codan.internal.checkers.NoDiscardChecker$FunctionCallVisitor.checkEvaluation(NoDiscardChecker.java:151)
+	at org.eclipse.cdt.codan.internal.checkers.NoDiscardChecker$FunctionCallVisitor.getNodiscardFunction(NoDiscardChecker.java:112)
+	at org.eclipse.cdt.codan.internal.checkers.NoDiscardChecker$FunctionCallVisitor.visit(NoDiscardChecker.java:66)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionCallExpression.accept(CPPASTFunctionCallExpression.java:208)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTExpressionStatement.accept(CPPASTExpressionStatement.java:80)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTCompoundStatement.accept(CPPASTCompoundStatement.java:103)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionDefinition.accept(CPPASTFunctionDefinition.java:225)
+	at org.eclipse.cdt.codan.internal.checkers.NoDiscardChecker.processFunction(NoDiscardChecker.java:52)
+	at org.eclipse.cdt.codan.core.cxx.model.AbstractAstFunctionChecker$1.visit(AbstractAstFunctionChecker.java:36)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionDefinition.accept(CPPASTFunctionDefinition.java:191)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTCompositeTypeSpecifier.accept(CPPASTCompositeTypeSpecifier.java:201)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTSimpleDeclaration.accept(CPPASTSimpleDeclaration.java:112)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTTemplateDeclaration.accept(CPPASTTemplateDeclaration.java:131)
+	at org.eclipse.cdt.internal.core.dom.parser.ASTTranslationUnit.accept(ASTTranslationUnit.java:289)
+	at org.eclipse.cdt.codan.core.cxx.model.AbstractAstFunctionChecker.processAst(AbstractAstFunctionChecker.java:28)
+	at org.eclipse.cdt.codan.core.cxx.model.AbstractIndexAstChecker.processFile(AbstractIndexAstChecker.java:87)
+	at org.eclipse.cdt.codan.core.cxx.model.AbstractIndexAstChecker.processResource(AbstractIndexAstChecker.java:63)
+	at org.eclipse.cdt.codan.core.model.AbstractChecker.processResource(AbstractChecker.java:245)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:97)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:62)
+	at org.eclipse.cdt.codan.internal.core.CodanBuilder.processResource(CodanBuilder.java:108)
+	at org.eclipse.cdt.codan.internal.ui.actions.RunCodeAnalysis$1.run(RunCodeAnalysis.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2023-11-28 00:04:33.194
+!MESSAGE Error: The point argument was not provided. Returning the global index scope.
+!STACK 0
+java.lang.Exception: The point argument was not provided. Returning the global index scope.
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.SemanticUtil.mapToAST(SemanticUtil.java:563)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.CPPSemantics.lookup(CPPSemantics.java:1126)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.CPPSemantics.doArgumentDependentLookup(CPPSemantics.java:710)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.EvalFunctionSet.resolveFunction(EvalFunctionSet.java:327)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.EvalFunctionCall.resolveFunctionBinding(EvalFunctionCall.java:381)
+	at org.eclipse.cdt.codan.internal.checkers.NoDiscardChecker$FunctionCallVisitor.checkEvaluation(NoDiscardChecker.java:151)
+	at org.eclipse.cdt.codan.internal.checkers.NoDiscardChecker$FunctionCallVisitor.getNodiscardFunction(NoDiscardChecker.java:112)
+	at org.eclipse.cdt.codan.internal.checkers.NoDiscardChecker$FunctionCallVisitor.visit(NoDiscardChecker.java:66)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionCallExpression.accept(CPPASTFunctionCallExpression.java:208)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTExpressionStatement.accept(CPPASTExpressionStatement.java:80)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTCompoundStatement.accept(CPPASTCompoundStatement.java:103)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionDefinition.accept(CPPASTFunctionDefinition.java:225)
+	at org.eclipse.cdt.codan.internal.checkers.NoDiscardChecker.processFunction(NoDiscardChecker.java:52)
+	at org.eclipse.cdt.codan.core.cxx.model.AbstractAstFunctionChecker$1.visit(AbstractAstFunctionChecker.java:36)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionDefinition.accept(CPPASTFunctionDefinition.java:191)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTCompositeTypeSpecifier.accept(CPPASTCompositeTypeSpecifier.java:201)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTSimpleDeclaration.accept(CPPASTSimpleDeclaration.java:112)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTTemplateDeclaration.accept(CPPASTTemplateDeclaration.java:131)
+	at org.eclipse.cdt.internal.core.dom.parser.ASTTranslationUnit.accept(ASTTranslationUnit.java:289)
+	at org.eclipse.cdt.codan.core.cxx.model.AbstractAstFunctionChecker.processAst(AbstractAstFunctionChecker.java:28)
+	at org.eclipse.cdt.codan.core.cxx.model.AbstractIndexAstChecker.processFile(AbstractIndexAstChecker.java:87)
+	at org.eclipse.cdt.codan.core.cxx.model.AbstractIndexAstChecker.processResource(AbstractIndexAstChecker.java:63)
+	at org.eclipse.cdt.codan.core.model.AbstractChecker.processResource(AbstractChecker.java:245)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:97)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:62)
+	at org.eclipse.cdt.codan.internal.core.CodanBuilder.processResource(CodanBuilder.java:108)
+	at org.eclipse.cdt.codan.internal.ui.actions.RunCodeAnalysis$1.run(RunCodeAnalysis.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2023-11-28 00:04:33.194
+!MESSAGE Error: Global index scope has to be mapped to the global scope of a particular translation unit.
+!STACK 0
+java.lang.UnsupportedOperationException: Global index scope has to be mapped to the global scope of a particular translation unit.
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMGlobalScope.logInvalidCallError(PDOMGlobalScope.java:99)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMGlobalScope.getBindings(PDOMGlobalScope.java:74)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.CPPSemantics.getBindingsFromScope(CPPSemantics.java:1412)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.CPPSemantics.lookup(CPPSemantics.java:1129)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.CPPSemantics.doArgumentDependentLookup(CPPSemantics.java:710)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.EvalFunctionSet.resolveFunction(EvalFunctionSet.java:327)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.semantics.EvalFunctionCall.resolveFunctionBinding(EvalFunctionCall.java:381)
+	at org.eclipse.cdt.codan.internal.checkers.NoDiscardChecker$FunctionCallVisitor.checkEvaluation(NoDiscardChecker.java:151)
+	at org.eclipse.cdt.codan.internal.checkers.NoDiscardChecker$FunctionCallVisitor.getNodiscardFunction(NoDiscardChecker.java:112)
+	at org.eclipse.cdt.codan.internal.checkers.NoDiscardChecker$FunctionCallVisitor.visit(NoDiscardChecker.java:66)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionCallExpression.accept(CPPASTFunctionCallExpression.java:208)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTExpressionStatement.accept(CPPASTExpressionStatement.java:80)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTCompoundStatement.accept(CPPASTCompoundStatement.java:103)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionDefinition.accept(CPPASTFunctionDefinition.java:225)
+	at org.eclipse.cdt.codan.internal.checkers.NoDiscardChecker.processFunction(NoDiscardChecker.java:52)
+	at org.eclipse.cdt.codan.core.cxx.model.AbstractAstFunctionChecker$1.visit(AbstractAstFunctionChecker.java:36)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionDefinition.accept(CPPASTFunctionDefinition.java:191)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTCompositeTypeSpecifier.accept(CPPASTCompositeTypeSpecifier.java:201)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTSimpleDeclaration.accept(CPPASTSimpleDeclaration.java:112)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTTemplateDeclaration.accept(CPPASTTemplateDeclaration.java:131)
+	at org.eclipse.cdt.internal.core.dom.parser.ASTTranslationUnit.accept(ASTTranslationUnit.java:289)
+	at org.eclipse.cdt.codan.core.cxx.model.AbstractAstFunctionChecker.processAst(AbstractAstFunctionChecker.java:28)
+	at org.eclipse.cdt.codan.core.cxx.model.AbstractIndexAstChecker.processFile(AbstractIndexAstChecker.java:87)
+	at org.eclipse.cdt.codan.core.cxx.model.AbstractIndexAstChecker.processResource(AbstractIndexAstChecker.java:63)
+	at org.eclipse.cdt.codan.core.model.AbstractChecker.processResource(AbstractChecker.java:245)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:97)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:122)
+	at org.eclipse.cdt.codan.internal.core.CodanRunner.processResource(CodanRunner.java:62)
+	at org.eclipse.cdt.codan.internal.core.CodanBuilder.processResource(CodanBuilder.java:108)
+	at org.eclipse.cdt.codan.internal.ui.actions.RunCodeAnalysis$1.run(RunCodeAnalysis.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-28 00:05:22.140
+!MESSAGE Indexed 'Multiparameter_Monitor' (69 sources, 234 headers) in 2.9 sec: 20,381 declarations; 104,822 references; 71 unresolved inclusions; 66 syntax errors; 2,202 unresolved names (1.7%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-28 00:05:55.351
+!MESSAGE Indexed 'Multiparameter_Monitor' (69 sources, 234 headers) in 2.94 sec: 20,381 declarations; 104,822 references; 71 unresolved inclusions; 66 syntax errors; 2,202 unresolved names (1.7%)

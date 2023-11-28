@@ -18,6 +18,9 @@ void emg_system(void)
 {
 	uint16_t adc_buf[ADC_Buffer];
 	HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_buf, ADC_Buffer);
+	if (HAL_ADC_CompletoCallBack){
+		return adc_buf;
+	}
 
 }
 void HAL_ADC_MetadeCompletoCallBack(ADC_HandleTypeDef* hadc){
