@@ -31,7 +31,8 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "z_displ_ILI9XXX.h"
+#include "z_touch_XPT2046.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -59,6 +60,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define pwm_tim2_ch1_Pin GPIO_PIN_0
+#define pwm_tim2_ch1_GPIO_Port GPIOA
 #define touch_int_Pin GPIO_PIN_4
 #define touch_int_GPIO_Port GPIOA
 #define displ_sck_Pin GPIO_PIN_5
@@ -79,8 +82,6 @@ void Error_Handler(void);
 #define displ_dc_GPIO_Port GPIOB
 #define displ_rst_Pin GPIO_PIN_15
 #define displ_rst_GPIO_Port GPIOB
-#define displ_led_Pin GPIO_PIN_7
-#define displ_led_GPIO_Port GPIOC
 #define oxi_sda_Pin GPIO_PIN_9
 #define oxi_sda_GPIO_Port GPIOC
 #define oxi_scl_Pin GPIO_PIN_8

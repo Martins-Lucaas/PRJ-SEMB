@@ -1,7 +1,7 @@
-13:00:18 **** Incremental Build of configuration Release for project Multiparameter_Monitor ****
+15:48:03 **** Incremental Build of configuration Release for project Multiparameter_Monitor ****
 make -j24 all 
 arm-none-eabi-size   Multiparameter_Monitor.elf 
    text	   data	    bss	    dec	    hex	filename
-  12268	     20	   3604	  15892	   3e14	Multiparameter_Monitor.elf
+  12628	     20	   3604	  16252	   3f7c	Multiparameter_Monitor.elf
 Finished building: default.size.stdout
  

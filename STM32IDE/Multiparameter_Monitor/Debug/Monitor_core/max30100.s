@@ -63803,7 +63803,7 @@ max30100_read_temp:
 	.uleb128 0xc0
 	.4byte	.LASF19480
 	.byte	0
-	.section	.debug_macro,"G",%progbits,wm4.main.h.62.ca02950c90a1ae9086771db813117f98,comdat
+	.section	.debug_macro,"G",%progbits,wm4.main.h.62.a85e2d52e2395116dc93ea9e2579f1cd,comdat
 .Ldebug_macro51:
 	.2byte	0x5
 	.byte	0
@@ -65783,7 +65783,7 @@ max30100_read_temp:
 .LASF747:
 	.ascii	"__STATIC_FORCEINLINE __attribute__((always_inline))"
 	.ascii	" static inline\000"
-.LASF19508:
+.LASF19506:
 	.ascii	"oxi_scl_GPIO_Port GPIOA\000"
 .LASF4403:
 	.ascii	"CAN_F0R2_FB19 CAN_F0R2_FB19_Msk\000"
@@ -69851,6 +69851,8 @@ max30100_read_temp:
 .LASF18138:
 	.ascii	"LL_ADC_AWD_CHANNEL_6_REG ((LL_ADC_CHANNEL_6 & ADC_C"
 	.ascii	"HANNEL_ID_MASK) | ADC_CR1_AWDEN | ADC_CR1_AWDSGL)\000"
+.LASF19482:
+	.ascii	"pwm_tim2_ch1_GPIO_Port GPIOA\000"
 .LASF8530:
 	.ascii	"GPIO_IDR_ID13 GPIO_IDR_ID13_Msk\000"
 .LASF1512:
@@ -78227,6 +78229,8 @@ max30100_read_temp:
 	.ascii	"cursive(&lock)\000"
 .LASF176:
 	.ascii	"__DBL_HAS_DENORM__ 1\000"
+.LASF19481:
+	.ascii	"pwm_tim2_ch1_Pin GPIO_PIN_0\000"
 .LASF9407:
 	.ascii	"FMPI2C_ISR_TIMEOUT_Pos (12U)\000"
 .LASF2206:
@@ -81044,6 +81048,8 @@ max30100_read_temp:
 	.ascii	"GPIO_OSPEEDER_OSPEEDR1_0 GPIO_OSPEEDR_OSPEED1_0\000"
 .LASF16267:
 	.ascii	"RCC_IT_CSSHSE RCC_IT_CSS\000"
+.LASF19507:
+	.ascii	"led_adc_Pin GPIO_PIN_9\000"
 .LASF11318:
 	.ascii	"RTC_ALRMBSSR_MASKSS_0 (0x1UL << RTC_ALRMBSSR_MASKSS"
 	.ascii	"_Pos)\000"
@@ -90519,8 +90525,6 @@ max30100_read_temp:
 	.ascii	"CAN_F4R1_FB27_Msk (0x1UL << CAN_F4R1_FB27_Pos)\000"
 .LASF15891:
 	.ascii	"__USART5_CLK_ENABLE __HAL_RCC_UART5_CLK_ENABLE\000"
-.LASF19482:
-	.ascii	"emg_adc_GPIO_Port GPIOA\000"
 .LASF13544:
 	.ascii	"USB_OTG_HPTXSTS_PTXQSAV USB_OTG_HPTXSTS_PTXQSAV_Msk"
 	.ascii	"\000"
@@ -90885,6 +90889,8 @@ max30100_read_temp:
 	.ascii	" || ((INSTANCE) == TIM2) || ((INSTANCE) == TIM3) ||"
 	.ascii	" ((INSTANCE) == TIM4) || ((INSTANCE) == TIM5) || (("
 	.ascii	"INSTANCE) == TIM8))\000"
+.LASF19508:
+	.ascii	"led_adc_GPIO_Port GPIOA\000"
 .LASF6657:
 	.ascii	"EXTI_EMR_EM19 EXTI_EMR_MR19\000"
 .LASF9124:
@@ -94235,8 +94241,6 @@ max30100_read_temp:
 	.ascii	"USB_OTG_DOEPINT_AHBERR USB_OTG_DOEPINT_AHBERR_Msk\000"
 .LASF7808:
 	.ascii	"FMC_SDCR1_MWID_1 (0x2UL << FMC_SDCR1_MWID_Pos)\000"
-.LASF19504:
-	.ascii	"displ_led_GPIO_Port GPIOC\000"
 .LASF16444:
 	.ascii	"__HAL_SD_SDMMC_CLEAR_IT __HAL_SD_SDIO_CLEAR_IT\000"
 .LASF3151:
@@ -95770,7 +95774,7 @@ max30100_read_temp:
 	.ascii	"PWR_FLAG_WU PWR_CSR_WUF\000"
 .LASF10931:
 	.ascii	"RTC_CR_ALRAE RTC_CR_ALRAE_Msk\000"
-.LASF19506:
+.LASF19504:
 	.ascii	"oxi_sda_GPIO_Port GPIOC\000"
 .LASF8169:
 	.ascii	"GPIO_OTYPER_OT0_Pos (0U)\000"
@@ -97260,8 +97264,6 @@ max30100_read_temp:
 .LASF17310:
 	.ascii	"__HAL_RCC_WWDG_FORCE_RESET() (RCC->APB1RSTR |= (RCC"
 	.ascii	"_APB1RSTR_WWDGRST))\000"
-.LASF19481:
-	.ascii	"emg_adc_Pin GPIO_PIN_1\000"
 .LASF881:
 	.ascii	"SCB_CCR_DIV_0_TRP_Pos 4U\000"
 .LASF19089:
@@ -99149,7 +99151,7 @@ max30100_read_temp:
 	.ascii	"DWT_CTRL_POSTPRESET_Pos 1U\000"
 .LASF19918:
 	.ascii	"long long int\000"
-.LASF19505:
+.LASF19503:
 	.ascii	"oxi_sda_Pin GPIO_PIN_9\000"
 .LASF5685:
 	.ascii	"CAN_F13R2_FB31_Pos (31U)\000"
@@ -103386,7 +103388,7 @@ max30100_read_temp:
 	.ascii	"__UART8_CLK_ENABLE __HAL_RCC_UART8_CLK_ENABLE\000"
 .LASF6184:
 	.ascii	"DMA_SxCR_EN_Msk (0x1UL << DMA_SxCR_EN_Pos)\000"
-.LASF19507:
+.LASF19505:
 	.ascii	"oxi_scl_Pin GPIO_PIN_8\000"
 .LASF15922:
 	.ascii	"__TIM21_CLK_SLEEP_ENABLE __HAL_RCC_TIM21_CLK_SLEEP_"
@@ -104649,8 +104651,6 @@ max30100_read_temp:
 	.ascii	"TIM_CCMR2_OC4CE_Msk (0x1UL << TIM_CCMR2_OC4CE_Pos)\000"
 .LASF7851:
 	.ascii	"FMC_SDCR2_CAS_Pos (7U)\000"
-.LASF19503:
-	.ascii	"displ_led_Pin GPIO_PIN_7\000"
 .LASF15560:
 	.ascii	"__FIREWALL_CLK_DISABLE __HAL_RCC_FIREWALL_CLK_DISAB"
 	.ascii	"LE\000"

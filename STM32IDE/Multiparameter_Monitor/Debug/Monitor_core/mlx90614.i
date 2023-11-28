@@ -33885,12 +33885,17 @@ uint32_t HAL_GetUIDw2(void);
 # 1 "../Monitor_core/mlx90614.h" 1
 # 9 "../Monitor_core/mlx90614.h"
 #define MLX90614_H_ 
-# 19 "../Monitor_core/mlx90614.h"
+
+
+
+
 #define MLX90614_DEFAULT_SA 0x5A
+
 
 #define MLX90614_OP_RAM 0x00
 #define MLX90614_OP_EEPROM 0x20
 #define MLX90614_OP_SLEEP 0xFF
+
 
 
 #define MLX90614_RAW1 (MLX90614_OP_RAM | 0x04)
@@ -33898,6 +33903,7 @@ uint32_t HAL_GetUIDw2(void);
 #define MLX90614_TAMB (MLX90614_OP_RAM | 0x06)
 #define MLX90614_TOBJ1 (MLX90614_OP_RAM | 0x07)
 #define MLX90614_TOBJ2 (MLX90614_OP_RAM | 0x08)
+
 
 #define MLX90614_TOMAX (MLX90614_OP_EEPROM | 0x00)
 #define MLX90614_TOMIN (MLX90614_OP_EEPROM | 0x01)
@@ -33910,6 +33916,7 @@ uint32_t HAL_GetUIDw2(void);
 #define MLX90614_ID2 (MLX90614_OP_EEPROM | 0x1D)
 #define MLX90614_ID3 (MLX90614_OP_EEPROM | 0x1E)
 #define MLX90614_ID4 (MLX90614_OP_EEPROM | 0x1F)
+
 
 #define MLX90614_DBG_OFF 0
 #define MLX90614_DBG_ON 1
@@ -33926,7 +33933,10 @@ void MLX90614_SendDebugMsg(uint8_t, uint8_t, uint8_t, uint16_t, uint8_t, uint8_t
 # 14 "../Monitor_core/mlx90614.c" 2
 
 extern I2C_HandleTypeDef hi2c2;
+
 char temp_buff[128] = {};
+
+
 
 static const uint8_t crc_table[] = {
     0x00, 0x07, 0x0e, 0x09, 0x1c, 0x1b, 0x12, 0x15, 0x38, 0x3f, 0x36, 0x31,
@@ -33953,6 +33963,7 @@ static const uint8_t crc_table[] = {
     0xfa, 0xfd, 0xf4, 0xf3
 };
 
+
 uint8_t CRC8_Calc (uint8_t *p, uint8_t len) {
         uint16_t i;
         uint16_t crc = 0x0;
@@ -33965,9 +33976,12 @@ uint8_t CRC8_Calc (uint8_t *p, uint8_t len) {
         return crc & 0xFF;
 }
 
+
+
 void MLX90614_WriteReg(uint8_t devAddr, uint8_t regAddr, uint16_t data) {
 
  uint8_t i2cdata[4], temp[4];
+
 
  temp[0] = (devAddr << 1);
  temp[1] = regAddr;
@@ -33975,17 +33989,18 @@ void MLX90614_WriteReg(uint8_t devAddr, uint8_t regAddr, uint16_t data) {
  temp[2] = 0x00;
  temp[3] = 0x00;
 
-
-
  i2cdata[0] = temp[1];
  i2cdata[1] = temp[2];
  i2cdata[2] = temp[3];
  i2cdata[3] = CRC8_Calc(temp, 4);
 
+
  HAL_I2C_Master_Transmit(&hi2c2, (devAddr << 1), i2cdata, 4, 0xFFFF);
  HAL_Delay(10);
 
+
  MLX90614_SendDebugMsg(0, devAddr, i2cdata[0], (i2cdata[1] <<8 | i2cdata[2]), i2cdata[3], 0x00);
+
 
  temp[2] = data & 0xFF;
  temp[3] = data >> 8;
@@ -33995,13 +34010,19 @@ void MLX90614_WriteReg(uint8_t devAddr, uint8_t regAddr, uint16_t data) {
  i2cdata[2] = temp[3];
  i2cdata[3] = CRC8_Calc(temp, 4);
 
+
  HAL_I2C_Master_Transmit(&hi2c2, (devAddr << 1), i2cdata, 4, 0xFFFF);
  HAL_Delay(10);
+
  MLX90614_SendDebugMsg(0, devAddr, i2cdata[0], data, i2cdata[3], 0x00);
 }
+
+
+
 uint16_t MLX90614_ReadReg(uint8_t devAddr, uint8_t regAddr, uint8_t dbg_lvl) {
  uint16_t data;
  uint8_t in_buff[3], crc_buff[5], crc;
+
 
  HAL_I2C_Mem_Read(&hi2c2, (devAddr<<1), regAddr, 1, in_buff, 3, 100);
 
@@ -34013,36 +34034,50 @@ uint16_t MLX90614_ReadReg(uint8_t devAddr, uint8_t regAddr, uint8_t dbg_lvl) {
  crc_buff[4] = in_buff[1];
  crc = CRC8_Calc(crc_buff, 5);
 
+
  data = (in_buff[1] <<8 | in_buff[0]);
 
 
  if (crc != in_buff[2]) {
   data = 0x0000;
  }
+
  if(dbg_lvl == 1) MLX90614_SendDebugMsg(1, devAddr, regAddr, data, in_buff[2], crc);
+
 
 
  return data;
 }
+
+
 float MLX90614_ReadTemp(uint8_t devAddr, uint8_t regAddr) {
  float temp;
  uint16_t data;
 
  data = MLX90614_ReadReg(devAddr, regAddr, 0);
+
+
  temp = data*0.02 - 273.15;
+
 
  return temp;
 }
+
+
 void MLX90614_ScanDevices (void) {
  HAL_StatusTypeDef result;
+
+
  for (int i = 0; i<128; i++)
     {
      result = HAL_I2C_IsDeviceReady(&hi2c2, (uint16_t) (i<<1), 2, 2);
+
      if (result != HAL_OK)
      {
       sprintf(temp_buff, ".");
       CDC_Transmit_FS(temp_buff, strlen((const char *)temp_buff));
      }
+
      if (result == HAL_OK)
      {
       sprintf(temp_buff, "0x%X", i);
@@ -34051,11 +34086,15 @@ void MLX90614_ScanDevices (void) {
      }
     }
 }
+
+
 void MLX90614_SendDebugMsg(uint8_t op_type, uint8_t devAddr, uint8_t regAddr, uint16_t data, uint8_t crc_in, uint8_t crc_calc) {
+
  if(op_type == 0) {
   snprintf(temp_buff, sizeof(temp_buff), "W Dev: 0x%02X, Reg: 0x%02X, Data: 0x%04X, CRC8_calc:0x%02X\r\n", devAddr, regAddr, data, crc_calc);
   CDC_Transmit_FS(temp_buff, strlen((const char *)temp_buff));
  }
+
  else if (op_type == 1) {
   snprintf(temp_buff, sizeof(temp_buff), "R Dev: 0x%02X, Reg: 0x%02X, Data: 0x%04X, CRC8_in:0x%02X, CRC8_calc:0x%02X\r\n", devAddr, regAddr, data, crc_in, crc_calc);
   CDC_Transmit_FS(temp_buff, strlen((const char *)temp_buff));
