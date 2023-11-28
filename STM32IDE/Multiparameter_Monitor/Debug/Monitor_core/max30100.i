@@ -1,5 +1,5 @@
 # 0 "../Monitor_core/max30100.c"
-# 1 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB-Projeto_Funcional/STM32IDE/Multiparameter_Monitor/Debug//"
+# 1 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Debug//"
 # 0 "<built-in>"
 #define __STDC__ 1
 # 0 "<built-in>"
@@ -34438,9 +34438,18 @@ _putchar_unlocked(int _c)
 # 807 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h" 3
 
 # 10 "../Monitor_core/max30100.c" 2
-# 18 "../Monitor_core/max30100.c"
 
-# 18 "../Monitor_core/max30100.c"
+
+
+
+
+
+
+# 16 "../Monitor_core/max30100.c"
+I2C_HandleTypeDef *hi2c;
+
+
+
 void max30100_plot(uint32_t ir_sample, uint32_t red_sample)
 {
     (void)ir_sample;
@@ -34462,9 +34471,9 @@ void max30100_write(max30100_t *obj, uint8_t reg, uint8_t *buf, uint16_t buflen)
     uint8_t *payload = (uint8_t *)malloc((buflen + 1) * sizeof(uint8_t));
     *payload = reg;
     if (buf != 
-# 38 "../Monitor_core/max30100.c" 3 4
+# 40 "../Monitor_core/max30100.c" 3 4
               ((void *)0) 
-# 38 "../Monitor_core/max30100.c"
+# 40 "../Monitor_core/max30100.c"
                    && buflen != 0)
         memcpy(payload + 1, buf, buflen);
     HAL_I2C_Master_Transmit(obj->_ui2c, 0x57 << 1, payload, buflen + 1, 1000);

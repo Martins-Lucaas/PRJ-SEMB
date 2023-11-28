@@ -3535,8 +3535,10 @@ _sbrk:
 	.section	.debug_str,"MS",%progbits,1
 .LASF461:
 	.ascii	"_NEWLIB_VERSION \"4.2.0\"\000"
-.LASF889:
-	.ascii	"WINT_MIN (__WINT_MIN__)\000"
+.LASF925:
+	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
+	.ascii	"stre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor"
+	.ascii	"/Debug\000"
 .LASF186:
 	.ascii	"__DECIMAL_DIG__ 17\000"
 .LASF354:
@@ -3580,8 +3582,8 @@ _sbrk:
 	.ascii	"ECONNREFUSED 111\000"
 .LASF335:
 	.ascii	"__TQ_IBIT__ 0\000"
-.LASF220:
-	.ascii	"__FLT64_DECIMAL_DIG__ 17\000"
+.LASF232:
+	.ascii	"__FLT32X_MIN_EXP__ (-1021)\000"
 .LASF684:
 	.ascii	"_REENT_SIG_FUNC(_ptr) ((_ptr)->_sig_func)\000"
 .LASF630:
@@ -3731,6 +3733,8 @@ _sbrk:
 	.ascii	"__int_fast32_t_defined 1\000"
 .LASF133:
 	.ascii	"__INT_FAST64_WIDTH__ 64\000"
+.LASF220:
+	.ascii	"__FLT64_DECIMAL_DIG__ 17\000"
 .LASF892:
 	.ascii	"INT16_C(x) __INT16_C(x)\000"
 .LASF704:
@@ -3749,10 +3753,8 @@ _sbrk:
 	.ascii	"__SQ_FBIT__ 31\000"
 .LASF520:
 	.ascii	"_ELIDABLE_INLINE static __inline__\000"
-.LASF925:
-	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
-	.ascii	"stre/SEMB1/PRJ-SEMB-Projeto_Funcional/STM32IDE/Mult"
-	.ascii	"iparameter_Monitor/Debug\000"
+.LASF819:
+	.ascii	"_UINT16_T_DECLARED \000"
 .LASF338:
 	.ascii	"__UHQ_FBIT__ 16\000"
 .LASF853:
@@ -4231,6 +4233,8 @@ _sbrk:
 	.ascii	"__FLT32X_IS_IEC_60559__ 2\000"
 .LASF707:
 	.ascii	"EAGAIN 11\000"
+.LASF889:
+	.ascii	"WINT_MIN (__WINT_MIN__)\000"
 .LASF111:
 	.ascii	"__INT_LEAST16_WIDTH__ 16\000"
 .LASF834:
@@ -5048,8 +5052,6 @@ _sbrk:
 	.ascii	",lock)\000"
 .LASF316:
 	.ascii	"__LLACCUM_FBIT__ 31\000"
-.LASF819:
-	.ascii	"_UINT16_T_DECLARED \000"
 .LASF39:
 	.ascii	"__UINTMAX_TYPE__ long long unsigned int\000"
 .LASF695:
@@ -5060,8 +5062,6 @@ _sbrk:
 	.ascii	"__USQ_IBIT__ 0\000"
 .LASF6:
 	.ascii	"__GNUC_MINOR__ 3\000"
-.LASF232:
-	.ascii	"__FLT32X_MIN_EXP__ (-1021)\000"
 .LASF57:
 	.ascii	"__UINT_LEAST32_TYPE__ long unsigned int\000"
 .LASF402:

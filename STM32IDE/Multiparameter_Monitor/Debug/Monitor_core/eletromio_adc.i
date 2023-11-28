@@ -1,5 +1,5 @@
 # 0 "../Monitor_core/eletromio_adc.c"
-# 1 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB-Projeto_Funcional/STM32IDE/Multiparameter_Monitor/Debug//"
+# 1 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Debug//"
 # 0 "<built-in>"
 #define __STDC__ 1
 # 0 "<built-in>"
@@ -33919,19 +33919,28 @@ void Error_Handler(void);
 
 extern TIM_HandleTypeDef hadc1;
 extern UART_HandleTypeDef huart3;
+extern TIM_HandleTypeDef htim2;
 #define ADC_Buffer 4096
 
-void emg_system(void)
+
+void HAL_ADC_HalfCpltCallback(ADC_HandleTypeDef* hadc){
+    HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0000UL)), ((uint16_t)0x0200)|((uint16_t)0x0200), GPIO_PIN_SET);
+}
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc){
+    HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0000UL)), ((uint16_t)0x0200)|((uint16_t)0x0200), GPIO_PIN_RESET);
+}
+
+void emg_init(void)
 {
- uint16_t adc_buf[4096];
- HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_buf, 4096);
+    uint16_t adc_buf[4096];
+    HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_buf, 4096);
 
-}
-void HAL_ADC_MetadeCompletoCallBack(ADC_HandleTypeDef* hadc){
- HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0000UL)), ((uint16_t)0x0200)|((uint16_t)0x0200), GPIO_PIN_SET);
-
-}
-void HAL_ADC_CompletoCallBack(ADC_HandleTypeDef* hadc){
- HAL_GPIO_WritePin(((GPIO_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x0000UL)), ((uint16_t)0x0200)|((uint16_t)0x0200), GPIO_PIN_RESET);
+    for (int i = 0; i < 4096; i++) {
+        uint8_t data[2];
+        data[0] = (adc_buf[i] & 0xFF00) >> 8;
+        data[1] = adc_buf[i] & 0x00FF;
+        HAL_UART_Transmit(&huart3, data, 2, 0xFFFFFFFFU);
+    }
 
 }

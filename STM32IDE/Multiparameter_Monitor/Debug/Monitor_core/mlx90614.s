@@ -64021,6 +64021,8 @@ MLX90614_SendDebugMsg:
 .LASF8122:
 	.ascii	"FMC_PMEM_MEMHOLD2_0 (0x01UL << FMC_PMEM_MEMHOLD2_Po"
 	.ascii	"s)\000"
+.LASF5927:
+	.ascii	"CAN_F12R2_FB12_Msk (0x1UL << CAN_F12R2_FB12_Pos)\000"
 .LASF10271:
 	.ascii	"RCC_PLLCFGR_PLLQ_0 (0x1UL << RCC_PLLCFGR_PLLQ_Pos)\000"
 .LASF4819:
@@ -90246,6 +90248,8 @@ MLX90614_SendDebugMsg:
 	.ascii	"CAN_FA1R_FACT23 CAN_FA1R_FACT23_Msk\000"
 .LASF398:
 	.ascii	"__ARM_FEATURE_CMSE\000"
+.LASF18013:
+	.ascii	"DMA_PRIORITY_LOW 0x00000000U\000"
 .LASF19840:
 	.ascii	"MLX90614_ID3 (MLX90614_OP_EEPROM | 0x1E)\000"
 .LASF6600:
@@ -91631,8 +91635,8 @@ MLX90614_SendDebugMsg:
 	.ascii	"USART_CR2_LBDL USART_CR2_LBDL_Msk\000"
 .LASF944:
 	.ascii	"UINT8_MAX (__UINT8_MAX__)\000"
-.LASF18013:
-	.ascii	"DMA_PRIORITY_LOW 0x00000000U\000"
+.LASF6739:
+	.ascii	"DMA_LIFCR_CTCIF3_Pos (27U)\000"
 .LASF10856:
 	.ascii	"RCC_APB1LPENR_TIM3LPEN_Msk (0x1UL << RCC_APB1LPENR_"
 	.ascii	"TIM3LPEN_Pos)\000"
@@ -94772,10 +94776,6 @@ MLX90614_SendDebugMsg:
 	.ascii	"TPI_DEVTYPE_SubType_Pos 4U\000"
 .LASF1578:
 	.ascii	"MPU_CTRL_PRIVDEFENA_Pos 2U\000"
-.LASF19985:
-	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
-	.ascii	"stre/SEMB1/PRJ-SEMB-Projeto_Funcional/STM32IDE/Mult"
-	.ascii	"iparameter_Monitor/Debug\000"
 .LASF3481:
 	.ascii	"CAN_F0R1_FB29_Pos (29U)\000"
 .LASF19204:
@@ -96646,8 +96646,10 @@ MLX90614_SendDebugMsg:
 	.ascii	"CAN_F4R2_FB24 CAN_F4R2_FB24_Msk\000"
 .LASF14753:
 	.ascii	"USB_OTG_DOEPCTL_EPDIS USB_OTG_DOEPCTL_EPDIS_Msk\000"
-.LASF6739:
-	.ascii	"DMA_LIFCR_CTCIF3_Pos (27U)\000"
+.LASF19985:
+	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
+	.ascii	"stre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor"
+	.ascii	"/Debug\000"
 .LASF12230:
 	.ascii	"SDIO_DTIMER_DATATIME SDIO_DTIMER_DATATIME_Msk\000"
 .LASF9725:
@@ -103295,8 +103297,8 @@ MLX90614_SendDebugMsg:
 	.ascii	"__HAL_ADC_SQR3_RK ADC_SQR3_RK\000"
 .LASF667:
 	.ascii	"__lockable __lock_annotate(lockable)\000"
-.LASF5927:
-	.ascii	"CAN_F12R2_FB12_Msk (0x1UL << CAN_F12R2_FB12_Pos)\000"
+.LASF8967:
+	.ascii	"GPIO_ODR_OD6 GPIO_ODR_OD6_Msk\000"
 .LASF859:
 	.ascii	"P_tmpdir \"/tmp\"\000"
 .LASF2037:
@@ -105800,8 +105802,6 @@ MLX90614_SendDebugMsg:
 	.ascii	"_LITE_EXIT 1\000"
 .LASF8605:
 	.ascii	"GPIO_OTYPER_OT14_Pos (14U)\000"
-.LASF8967:
-	.ascii	"GPIO_ODR_OD6 GPIO_ODR_OD6_Msk\000"
 .LASF8879:
 	.ascii	"GPIO_PUPDR_PUPDR14_1 GPIO_PUPDR_PUPD14_1\000"
 .LASF3698:

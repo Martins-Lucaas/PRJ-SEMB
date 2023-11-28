@@ -89003,6 +89003,8 @@ FLASH_FlushCaches:
 	.ascii	"CAN_FA1R_FACT23 CAN_FA1R_FACT23_Msk\000"
 .LASF398:
 	.ascii	"__ARM_FEATURE_CMSE\000"
+.LASF17671:
+	.ascii	"DMA_PRIORITY_LOW 0x00000000U\000"
 .LASF6204:
 	.ascii	"DMA_SxNDT_14 (0x4000UL << DMA_SxNDT_Pos)\000"
 .LASF6039:
@@ -90328,8 +90330,8 @@ FLASH_FlushCaches:
 	.ascii	"USART_CR2_LBDL USART_CR2_LBDL_Msk\000"
 .LASF674:
 	.ascii	"UINT8_MAX (__UINT8_MAX__)\000"
-.LASF17671:
-	.ascii	"DMA_PRIORITY_LOW 0x00000000U\000"
+.LASF6343:
+	.ascii	"DMA_LIFCR_CTCIF3_Pos (27U)\000"
 .LASF10460:
 	.ascii	"RCC_APB1LPENR_TIM3LPEN_Msk (0x1UL << RCC_APB1LPENR_"
 	.ascii	"TIM3LPEN_Pos)\000"
@@ -93407,10 +93409,6 @@ FLASH_FlushCaches:
 	.ascii	"|= (DBGMCU_APB1_FZ_DBG_I2C2_SMBUS_TIMEOUT))\000"
 .LASF1182:
 	.ascii	"MPU_CTRL_PRIVDEFENA_Pos 2U\000"
-.LASF19574:
-	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
-	.ascii	"stre/SEMB1/PRJ-SEMB-Projeto_Funcional/STM32IDE/Mult"
-	.ascii	"iparameter_Monitor/Debug\000"
 .LASF3085:
 	.ascii	"CAN_F0R1_FB29_Pos (29U)\000"
 .LASF18862:
@@ -95255,8 +95253,10 @@ FLASH_FlushCaches:
 	.ascii	"CAN_F4R2_FB24 CAN_F4R2_FB24_Msk\000"
 .LASF14357:
 	.ascii	"USB_OTG_DOEPCTL_EPDIS USB_OTG_DOEPCTL_EPDIS_Msk\000"
-.LASF6343:
-	.ascii	"DMA_LIFCR_CTCIF3_Pos (27U)\000"
+.LASF19574:
+	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
+	.ascii	"stre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor"
+	.ascii	"/Debug\000"
 .LASF11834:
 	.ascii	"SDIO_DTIMER_DATATIME SDIO_DTIMER_DATATIME_Msk\000"
 .LASF9329:

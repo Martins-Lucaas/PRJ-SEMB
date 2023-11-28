@@ -24,9 +24,8 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc){
     HAL_GPIO_WritePin(GPIOA, led_adc_Pin|GPIO_PIN_9, GPIO_PIN_RESET);
 }
 
-void emg_system(void)
+void emg_init(void)
 {
-    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
     uint16_t adc_buf[ADC_Buffer];
     HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_buf, ADC_Buffer);
 
@@ -36,4 +35,5 @@ void emg_system(void)
         data[1] = adc_buf[i] & 0x00FF;
         HAL_UART_Transmit(&huart3, data, 2, HAL_MAX_DELAY);
     }
+
 }

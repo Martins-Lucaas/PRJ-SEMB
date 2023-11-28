@@ -16,6 +16,13 @@
 	.text
 .Ltext0:
 	.cfi_sections	.debug_frame
+	.global	hi2c
+	.section	.bss.hi2c,"aw",%nobits
+	.align	2
+	.type	hi2c, %object
+	.size	hi2c, 4
+hi2c:
+	.space	4
 	.section	.text.max30100_plot,"ax",%progbits
 	.align	1
 	.global	max30100_plot
@@ -26,7 +33,7 @@
 max30100_plot:
 .LFB238:
 	.file 1 "../Monitor_core/max30100.c"
-	.loc 1 19 1
+	.loc 1 21 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -40,7 +47,7 @@ max30100_plot:
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
 	str	r1, [r7]
-	.loc 1 22 1
+	.loc 1 24 1
 	nop
 	adds	r7, r7, #12
 	.cfi_def_cfa_offset 4
@@ -63,7 +70,7 @@ max30100_plot:
 	.type	max30100_init, %function
 max30100_init:
 .LFB239:
-	.loc 1 26 1
+	.loc 1 28 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -77,31 +84,31 @@ max30100_init:
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
 	str	r1, [r7]
-	.loc 1 27 16
+	.loc 1 29 16
 	ldr	r3, [r7, #4]
 	ldr	r2, [r7]
 	str	r2, [r3]
-	.loc 1 28 26
+	.loc 1 30 26
 	ldr	r3, [r7, #4]
 	movs	r2, #0
 	strb	r2, [r3, #260]
-	.loc 1 29 15
+	.loc 1 31 15
 	ldr	r3, [r7, #4]
 	adds	r3, r3, #4
-	.loc 1 29 5
+	.loc 1 31 5
 	movs	r2, #128
 	movs	r1, #0
 	mov	r0, r3
 	bl	memset
-	.loc 1 30 15
+	.loc 1 32 15
 	ldr	r3, [r7, #4]
 	adds	r3, r3, #132
-	.loc 1 30 5
+	.loc 1 32 5
 	movs	r2, #128
 	movs	r1, #0
 	mov	r0, r3
 	bl	memset
-	.loc 1 31 1
+	.loc 1 33 1
 	nop
 	adds	r7, r7, #8
 	.cfi_def_cfa_offset 8
@@ -121,7 +128,7 @@ max30100_init:
 	.type	max30100_write, %function
 max30100_write:
 .LFB240:
-	.loc 1 35 1
+	.loc 1 37 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 24
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -140,36 +147,36 @@ max30100_write:
 	strb	r3, [r7, #11]
 	mov	r3, r2	@ movhi
 	strh	r3, [r7, #8]	@ movhi
-	.loc 1 36 50
+	.loc 1 38 50
 	ldrh	r3, [r7, #8]
 	adds	r3, r3, #1
-	.loc 1 36 35
+	.loc 1 38 35
 	mov	r0, r3
 	bl	malloc
 	mov	r3, r0
 	str	r3, [r7, #20]
-	.loc 1 37 14
+	.loc 1 39 14
 	ldr	r3, [r7, #20]
 	ldrb	r2, [r7, #11]
 	strb	r2, [r3]
-	.loc 1 38 8
+	.loc 1 40 8
 	ldr	r3, [r7, #4]
 	cmp	r3, #0
 	beq	.L4
-	.loc 1 38 20 discriminator 1
+	.loc 1 40 20 discriminator 1
 	ldrh	r3, [r7, #8]
 	cmp	r3, #0
 	beq	.L4
-	.loc 1 39 24
+	.loc 1 41 24
 	ldr	r3, [r7, #20]
 	adds	r3, r3, #1
-	.loc 1 39 9
+	.loc 1 41 9
 	ldrh	r2, [r7, #8]
 	ldr	r1, [r7, #4]
 	mov	r0, r3
 	bl	memcpy
 .L4:
-	.loc 1 40 5
+	.loc 1 42 5
 	ldr	r3, [r7, #12]
 	ldr	r0, [r3]
 	ldrh	r3, [r7, #8]	@ movhi
@@ -180,10 +187,10 @@ max30100_write:
 	ldr	r2, [r7, #20]
 	movs	r1, #174
 	bl	HAL_I2C_Master_Transmit
-	.loc 1 41 5
+	.loc 1 43 5
 	ldr	r0, [r7, #20]
 	bl	free
-	.loc 1 42 1
+	.loc 1 44 1
 	nop
 	adds	r7, r7, #24
 	.cfi_def_cfa_offset 8
@@ -203,7 +210,7 @@ max30100_write:
 	.type	max30100_read, %function
 max30100_read:
 .LFB241:
-	.loc 1 46 1
+	.loc 1 48 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 24
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -222,10 +229,10 @@ max30100_read:
 	strb	r3, [r7, #11]
 	mov	r3, r2	@ movhi
 	strh	r3, [r7, #8]	@ movhi
-	.loc 1 47 13
+	.loc 1 49 13
 	ldrb	r3, [r7, #11]
 	strb	r3, [r7, #23]
-	.loc 1 48 5
+	.loc 1 50 5
 	ldr	r3, [r7, #12]
 	ldr	r0, [r3]
 	add	r2, r7, #23
@@ -234,7 +241,7 @@ max30100_read:
 	movs	r3, #1
 	movs	r1, #174
 	bl	HAL_I2C_Master_Transmit
-	.loc 1 49 5
+	.loc 1 51 5
 	ldr	r3, [r7, #12]
 	ldr	r0, [r3]
 	ldrh	r3, [r7, #8]
@@ -243,7 +250,7 @@ max30100_read:
 	ldr	r2, [r7, #4]
 	movs	r1, #174
 	bl	HAL_I2C_Master_Receive
-	.loc 1 50 1
+	.loc 1 52 1
 	nop
 	adds	r7, r7, #24
 	.cfi_def_cfa_offset 8
@@ -263,7 +270,7 @@ max30100_read:
 	.type	max30100_reset, %function
 max30100_reset:
 .LFB242:
-	.loc 1 54 1
+	.loc 1 56 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -276,16 +283,16 @@ max30100_reset:
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
-	.loc 1 55 13
+	.loc 1 57 13
 	movs	r3, #64
 	strb	r3, [r7, #15]
-	.loc 1 56 5
+	.loc 1 58 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #9
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 57 1
+	.loc 1 59 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -305,7 +312,7 @@ max30100_reset:
 	.type	max30100_set_a_full, %function
 max30100_set_a_full:
 .LFB243:
-	.loc 1 61 1
+	.loc 1 63 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -320,24 +327,24 @@ max30100_set_a_full:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 62 13
+	.loc 1 64 13
 	movs	r3, #0
 	strb	r3, [r7, #15]
-	.loc 1 63 5
+	.loc 1 65 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #2
 	ldr	r0, [r7, #4]
 	bl	max30100_read
-	.loc 1 64 9
+	.loc 1 66 9
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	and	r3, r3, #127
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 65 29
+	.loc 1 67 29
 	ldrb	r3, [r7, #3]	@ zero_extendqisi2
 	lsls	r3, r3, #7
-	.loc 1 65 9
+	.loc 1 67 9
 	sxtb	r2, r3
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	sxtb	r3, r3
@@ -345,13 +352,13 @@ max30100_set_a_full:
 	sxtb	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 66 5
+	.loc 1 68 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #2
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 67 1
+	.loc 1 69 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -371,7 +378,7 @@ max30100_set_a_full:
 	.type	max30100_set_ppg_rdy, %function
 max30100_set_ppg_rdy:
 .LFB244:
-	.loc 1 71 1
+	.loc 1 73 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -386,40 +393,40 @@ max30100_set_ppg_rdy:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 72 13
+	.loc 1 74 13
 	movs	r3, #0
 	strb	r3, [r7, #15]
-	.loc 1 73 5
+	.loc 1 75 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #2
 	ldr	r0, [r7, #4]
 	bl	max30100_read
-	.loc 1 74 9
+	.loc 1 76 9
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	bic	r3, r3, #64
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 75 29
+	.loc 1 77 29
 	ldrb	r3, [r7, #3]	@ zero_extendqisi2
 	lsls	r3, r3, #6
 	sxtb	r3, r3
 	and	r3, r3, #64
 	sxtb	r2, r3
-	.loc 1 75 9
+	.loc 1 77 9
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	sxtb	r3, r3
 	orrs	r3, r3, r2
 	sxtb	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 76 5
+	.loc 1 78 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #2
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 77 1
+	.loc 1 79 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -439,7 +446,7 @@ max30100_set_ppg_rdy:
 	.type	max30100_set_alc_ovf, %function
 max30100_set_alc_ovf:
 .LFB245:
-	.loc 1 81 1
+	.loc 1 83 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -454,40 +461,40 @@ max30100_set_alc_ovf:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 82 13
+	.loc 1 84 13
 	movs	r3, #0
 	strb	r3, [r7, #15]
-	.loc 1 83 5
+	.loc 1 85 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #2
 	ldr	r0, [r7, #4]
 	bl	max30100_read
-	.loc 1 84 9
+	.loc 1 86 9
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	bic	r3, r3, #32
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 85 29
+	.loc 1 87 29
 	ldrb	r3, [r7, #3]	@ zero_extendqisi2
 	lsls	r3, r3, #5
 	sxtb	r3, r3
 	and	r3, r3, #32
 	sxtb	r2, r3
-	.loc 1 85 9
+	.loc 1 87 9
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	sxtb	r3, r3
 	orrs	r3, r3, r2
 	sxtb	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 86 5
+	.loc 1 88 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #2
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 87 1
+	.loc 1 89 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -507,7 +514,7 @@ max30100_set_alc_ovf:
 	.type	max30100_set_die_temp_rdy, %function
 max30100_set_die_temp_rdy:
 .LFB246:
-	.loc 1 91 1
+	.loc 1 93 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -522,21 +529,21 @@ max30100_set_die_temp_rdy:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 92 35
+	.loc 1 94 35
 	ldrb	r3, [r7, #3]	@ zero_extendqisi2
 	lsls	r3, r3, #1
 	uxtb	r3, r3
 	and	r3, r3, #2
 	uxtb	r3, r3
-	.loc 1 92 13
+	.loc 1 94 13
 	strb	r3, [r7, #15]
-	.loc 1 93 5
+	.loc 1 95 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #3
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 94 1
+	.loc 1 96 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -556,7 +563,7 @@ max30100_set_die_temp_rdy:
 	.type	max30100_set_die_temp_en, %function
 max30100_set_die_temp_en:
 .LFB247:
-	.loc 1 98 1
+	.loc 1 100 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -571,21 +578,21 @@ max30100_set_die_temp_en:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 99 35
+	.loc 1 101 35
 	ldrb	r3, [r7, #3]	@ zero_extendqisi2
 	lsls	r3, r3, #1
 	uxtb	r3, r3
 	and	r3, r3, #2
 	uxtb	r3, r3
-	.loc 1 99 13
+	.loc 1 101 13
 	strb	r3, [r7, #15]
-	.loc 1 100 5
+	.loc 1 102 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #33
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 101 1
+	.loc 1 103 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -605,7 +612,7 @@ max30100_set_die_temp_en:
 	.type	max30100_on_interrupt, %function
 max30100_on_interrupt:
 .LFB248:
-	.loc 1 105 1
+	.loc 1 107 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -618,11 +625,11 @@ max30100_on_interrupt:
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
-	.loc 1 106 26
+	.loc 1 108 26
 	ldr	r3, [r7, #4]
 	movs	r2, #1
 	strb	r2, [r3, #260]
-	.loc 1 107 1
+	.loc 1 109 1
 	nop
 	adds	r7, r7, #12
 	.cfi_def_cfa_offset 4
@@ -645,7 +652,7 @@ max30100_on_interrupt:
 	.type	max30100_has_interrupt, %function
 max30100_has_interrupt:
 .LFB249:
-	.loc 1 111 1
+	.loc 1 113 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -658,10 +665,10 @@ max30100_has_interrupt:
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
-	.loc 1 112 15
+	.loc 1 114 15
 	ldr	r3, [r7, #4]
 	ldrb	r3, [r3, #260]	@ zero_extendqisi2
-	.loc 1 113 1
+	.loc 1 115 1
 	mov	r0, r3
 	adds	r7, r7, #12
 	.cfi_def_cfa_offset 4
@@ -684,7 +691,7 @@ max30100_has_interrupt:
 	.type	max30100_interrupt_handler, %function
 max30100_interrupt_handler:
 .LFB250:
-	.loc 1 117 1
+	.loc 1 119 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -697,39 +704,39 @@ max30100_interrupt_handler:
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
-	.loc 1 118 13
+	.loc 1 120 13
 	movs	r3, #0
 	strh	r3, [r7, #12]	@ movhi
-	.loc 1 120 5
+	.loc 1 122 5
 	add	r2, r7, #12
 	movs	r3, #2
 	movs	r1, #0
 	ldr	r0, [r7, #4]
 	bl	max30100_read
-	.loc 1 122 13
+	.loc 1 124 13
 	ldrb	r3, [r7, #12]	@ zero_extendqisi2
-	.loc 1 122 23
+	.loc 1 124 23
 	lsrs	r3, r3, #7
 	uxtb	r3, r3
 	and	r3, r3, #1
-	.loc 1 122 8
+	.loc 1 124 8
 	cmp	r3, #0
 	beq	.L16
-	.loc 1 125 9
+	.loc 1 127 9
 	ldr	r0, [r7, #4]
 	bl	max30100_read_fifo
 .L16:
-	.loc 1 138 13
+	.loc 1 140 13
 	ldrb	r3, [r7, #13]	@ zero_extendqisi2
-	.loc 1 138 23
+	.loc 1 140 23
 	lsrs	r3, r3, #1
 	uxtb	r3, r3
 	and	r3, r3, #1
-	.loc 1 138 8
+	.loc 1 140 8
 	cmp	r3, #0
 	beq	.L17
 .LBB2:
-	.loc 1 143 9
+	.loc 1 145 9
 	add	r2, r7, #10
 	add	r3, r7, #11
 	mov	r1, r3
@@ -737,11 +744,11 @@ max30100_interrupt_handler:
 	bl	max30100_read_temp
 .L17:
 .LBE2:
-	.loc 1 148 26
+	.loc 1 150 26
 	ldr	r3, [r7, #4]
 	movs	r2, #0
 	strb	r2, [r3, #260]
-	.loc 1 149 1
+	.loc 1 151 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -761,7 +768,7 @@ max30100_interrupt_handler:
 	.type	max30100_shutdown, %function
 max30100_shutdown:
 .LFB251:
-	.loc 1 153 1
+	.loc 1 155 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -776,34 +783,34 @@ max30100_shutdown:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 155 5
-	add	r2, r7, #15
-	movs	r3, #1
-	movs	r1, #9
-	ldr	r0, [r7, #4]
-	bl	max30100_read
-	.loc 1 156 22
-	ldrb	r3, [r7, #15]	@ zero_extendqisi2
-	sxtb	r3, r3
-	and	r3, r3, #127
-	sxtb	r2, r3
-	.loc 1 156 38
-	ldrb	r3, [r7, #3]	@ zero_extendqisi2
-	lsls	r3, r3, #7
-	.loc 1 156 30
-	sxtb	r3, r3
-	orrs	r3, r3, r2
-	sxtb	r3, r3
-	uxtb	r3, r3
-	.loc 1 156 12
-	strb	r3, [r7, #15]
 	.loc 1 157 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #9
 	ldr	r0, [r7, #4]
+	bl	max30100_read
+	.loc 1 158 22
+	ldrb	r3, [r7, #15]	@ zero_extendqisi2
+	sxtb	r3, r3
+	and	r3, r3, #127
+	sxtb	r2, r3
+	.loc 1 158 38
+	ldrb	r3, [r7, #3]	@ zero_extendqisi2
+	lsls	r3, r3, #7
+	.loc 1 158 30
+	sxtb	r3, r3
+	orrs	r3, r3, r2
+	sxtb	r3, r3
+	uxtb	r3, r3
+	.loc 1 158 12
+	strb	r3, [r7, #15]
+	.loc 1 159 5
+	add	r2, r7, #15
+	movs	r3, #1
+	movs	r1, #9
+	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 158 1
+	.loc 1 160 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -823,7 +830,7 @@ max30100_shutdown:
 	.type	max30100_set_mode, %function
 max30100_set_mode:
 .LFB252:
-	.loc 1 162 1
+	.loc 1 164 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -838,34 +845,34 @@ max30100_set_mode:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 164 5
-	add	r2, r7, #15
-	movs	r3, #1
-	movs	r1, #9
-	ldr	r0, [r7, #4]
-	bl	max30100_read
-	.loc 1 165 22
-	ldrb	r3, [r7, #15]	@ zero_extendqisi2
-	sxtb	r3, r3
-	bic	r3, r3, #7
-	sxtb	r2, r3
-	.loc 1 165 30
-	ldrsb	r3, [r7, #3]
-	orrs	r3, r3, r2
-	sxtb	r3, r3
-	uxtb	r3, r3
-	.loc 1 165 12
-	strb	r3, [r7, #15]
 	.loc 1 166 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #9
 	ldr	r0, [r7, #4]
+	bl	max30100_read
+	.loc 1 167 22
+	ldrb	r3, [r7, #15]	@ zero_extendqisi2
+	sxtb	r3, r3
+	bic	r3, r3, #7
+	sxtb	r2, r3
+	.loc 1 167 30
+	ldrsb	r3, [r7, #3]
+	orrs	r3, r3, r2
+	sxtb	r3, r3
+	uxtb	r3, r3
+	.loc 1 167 12
+	strb	r3, [r7, #15]
+	.loc 1 168 5
+	add	r2, r7, #15
+	movs	r3, #1
+	movs	r1, #9
+	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 167 5
+	.loc 1 169 5
 	ldr	r0, [r7, #4]
 	bl	max30100_clear_fifo
-	.loc 1 168 1
+	.loc 1 170 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -885,7 +892,7 @@ max30100_set_mode:
 	.type	max30100_set_sampling_rate, %function
 max30100_set_sampling_rate:
 .LFB253:
-	.loc 1 172 1
+	.loc 1 174 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -900,27 +907,27 @@ max30100_set_sampling_rate:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 174 5
-	add	r2, r7, #15
-	movs	r3, #1
-	movs	r1, #10
-	ldr	r0, [r7, #4]
-	bl	max30100_read
-	.loc 1 175 30
-	ldrb	r3, [r7, #15]	@ zero_extendqisi2
-	lsls	r3, r3, #2
-	uxtb	r3, r3
-	bic	r3, r3, #115
-	uxtb	r3, r3
-	.loc 1 175 12
-	strb	r3, [r7, #15]
 	.loc 1 176 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #10
 	ldr	r0, [r7, #4]
+	bl	max30100_read
+	.loc 1 177 30
+	ldrb	r3, [r7, #15]	@ zero_extendqisi2
+	lsls	r3, r3, #2
+	uxtb	r3, r3
+	bic	r3, r3, #115
+	uxtb	r3, r3
+	.loc 1 177 12
+	strb	r3, [r7, #15]
+	.loc 1 178 5
+	add	r2, r7, #15
+	movs	r3, #1
+	movs	r1, #10
+	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 177 1
+	.loc 1 179 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -940,7 +947,7 @@ max30100_set_sampling_rate:
 	.type	max30100_set_led_pulse_width, %function
 max30100_set_led_pulse_width:
 .LFB254:
-	.loc 1 181 1
+	.loc 1 183 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -955,31 +962,31 @@ max30100_set_led_pulse_width:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 183 5
-	add	r2, r7, #15
-	movs	r3, #1
-	movs	r1, #10
-	ldr	r0, [r7, #4]
-	bl	max30100_read
-	.loc 1 184 22
-	ldrb	r3, [r7, #15]	@ zero_extendqisi2
-	sxtb	r3, r3
-	and	r3, r3, #124
-	sxtb	r2, r3
-	.loc 1 184 30
-	ldrsb	r3, [r7, #3]
-	orrs	r3, r3, r2
-	sxtb	r3, r3
-	uxtb	r3, r3
-	.loc 1 184 12
-	strb	r3, [r7, #15]
 	.loc 1 185 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #10
 	ldr	r0, [r7, #4]
+	bl	max30100_read
+	.loc 1 186 22
+	ldrb	r3, [r7, #15]	@ zero_extendqisi2
+	sxtb	r3, r3
+	and	r3, r3, #124
+	sxtb	r2, r3
+	.loc 1 186 30
+	ldrsb	r3, [r7, #3]
+	orrs	r3, r3, r2
+	sxtb	r3, r3
+	uxtb	r3, r3
+	.loc 1 186 12
+	strb	r3, [r7, #15]
+	.loc 1 187 5
+	add	r2, r7, #15
+	movs	r3, #1
+	movs	r1, #10
+	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 186 1
+	.loc 1 188 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -999,7 +1006,7 @@ max30100_set_led_pulse_width:
 	.type	max30100_set_adc_resolution, %function
 max30100_set_adc_resolution:
 .LFB255:
-	.loc 1 190 1
+	.loc 1 192 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1014,34 +1021,34 @@ max30100_set_adc_resolution:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 192 5
-	add	r2, r7, #15
-	movs	r3, #1
-	movs	r1, #10
-	ldr	r0, [r7, #4]
-	bl	max30100_read
-	.loc 1 193 22
-	ldrb	r3, [r7, #15]	@ zero_extendqisi2
-	sxtb	r3, r3
-	and	r3, r3, #31
-	sxtb	r2, r3
-	.loc 1 193 37
-	ldrb	r3, [r7, #3]	@ zero_extendqisi2
-	lsls	r3, r3, #5
-	.loc 1 193 30
-	sxtb	r3, r3
-	orrs	r3, r3, r2
-	sxtb	r3, r3
-	uxtb	r3, r3
-	.loc 1 193 12
-	strb	r3, [r7, #15]
 	.loc 1 194 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #10
 	ldr	r0, [r7, #4]
+	bl	max30100_read
+	.loc 1 195 22
+	ldrb	r3, [r7, #15]	@ zero_extendqisi2
+	sxtb	r3, r3
+	and	r3, r3, #31
+	sxtb	r2, r3
+	.loc 1 195 37
+	ldrb	r3, [r7, #3]	@ zero_extendqisi2
+	lsls	r3, r3, #5
+	.loc 1 195 30
+	sxtb	r3, r3
+	orrs	r3, r3, r2
+	sxtb	r3, r3
+	uxtb	r3, r3
+	.loc 1 195 12
+	strb	r3, [r7, #15]
+	.loc 1 196 5
+	add	r2, r7, #15
+	movs	r3, #1
+	movs	r1, #10
+	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 195 1
+	.loc 1 197 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1064,7 +1071,7 @@ max30100_set_adc_resolution:
 	.type	max30100_set_led_current_1, %function
 max30100_set_led_current_1:
 .LFB256:
-	.loc 1 199 1
+	.loc 1 201 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1078,7 +1085,7 @@ max30100_set_led_current_1:
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
 	vstr.32	s0, [r7]
-	.loc 1 200 21
+	.loc 1 202 21
 	ldr	r0, [r7]	@ float
 	bl	__aeabi_f2d
 	adr	r3, .L24
@@ -1086,20 +1093,20 @@ max30100_set_led_current_1:
 	bl	__aeabi_ddiv
 	mov	r2, r0
 	mov	r3, r1
-	.loc 1 200 13
+	.loc 1 202 13
 	mov	r0, r2
 	mov	r1, r3
 	bl	__aeabi_d2uiz
 	mov	r3, r0
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 201 5
+	.loc 1 203 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #12
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 202 1
+	.loc 1 204 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1124,7 +1131,7 @@ max30100_set_led_current_1:
 	.type	max30100_set_led_current_2, %function
 max30100_set_led_current_2:
 .LFB257:
-	.loc 1 206 1
+	.loc 1 208 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1138,7 +1145,7 @@ max30100_set_led_current_2:
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
 	vstr.32	s0, [r7]
-	.loc 1 207 21
+	.loc 1 209 21
 	ldr	r0, [r7]	@ float
 	bl	__aeabi_f2d
 	adr	r3, .L27
@@ -1146,20 +1153,20 @@ max30100_set_led_current_2:
 	bl	__aeabi_ddiv
 	mov	r2, r0
 	mov	r3, r1
-	.loc 1 207 13
+	.loc 1 209 13
 	mov	r0, r2
 	mov	r1, r3
 	bl	__aeabi_d2uiz
 	mov	r3, r0
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 208 5
+	.loc 1 210 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #13
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 209 1
+	.loc 1 211 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1184,7 +1191,7 @@ max30100_set_led_current_2:
 	.type	max30100_set_multi_led_slot_1_2, %function
 max30100_set_multi_led_slot_1_2:
 .LFB258:
-	.loc 1 213 1
+	.loc 1 215 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1201,31 +1208,31 @@ max30100_set_multi_led_slot_1_2:
 	strb	r3, [r7, #3]
 	mov	r3, r2
 	strb	r3, [r7, #2]
-	.loc 1 214 13
+	.loc 1 216 13
 	movs	r3, #0
 	strb	r3, [r7, #15]
-	.loc 1 215 35
+	.loc 1 217 35
 	ldrb	r3, [r7, #2]	@ zero_extendqisi2
 	lsls	r3, r3, #4
-	.loc 1 215 26
+	.loc 1 217 26
 	sxtb	r2, r3
 	ldrsb	r3, [r7, #3]
 	orrs	r3, r3, r2
 	sxtb	r2, r3
-	.loc 1 215 9
+	.loc 1 217 9
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	sxtb	r3, r3
 	orrs	r3, r3, r2
 	sxtb	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 216 5
+	.loc 1 218 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #17
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 217 1
+	.loc 1 219 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1245,7 +1252,7 @@ max30100_set_multi_led_slot_1_2:
 	.type	max30100_set_multi_led_slot_3_4, %function
 max30100_set_multi_led_slot_3_4:
 .LFB259:
-	.loc 1 221 1
+	.loc 1 223 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1262,31 +1269,31 @@ max30100_set_multi_led_slot_3_4:
 	strb	r3, [r7, #3]
 	mov	r3, r2
 	strb	r3, [r7, #2]
-	.loc 1 222 13
+	.loc 1 224 13
 	movs	r3, #0
 	strb	r3, [r7, #15]
-	.loc 1 223 35
+	.loc 1 225 35
 	ldrb	r3, [r7, #2]	@ zero_extendqisi2
 	lsls	r3, r3, #4
-	.loc 1 223 26
+	.loc 1 225 26
 	sxtb	r2, r3
 	ldrsb	r3, [r7, #3]
 	orrs	r3, r3, r2
 	sxtb	r2, r3
-	.loc 1 223 9
+	.loc 1 225 9
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	sxtb	r3, r3
 	orrs	r3, r3, r2
 	sxtb	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 224 5
+	.loc 1 226 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #18
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 225 1
+	.loc 1 227 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1306,7 +1313,7 @@ max30100_set_multi_led_slot_3_4:
 	.type	max30100_set_fifo_config, %function
 max30100_set_fifo_config:
 .LFB260:
-	.loc 1 229 1
+	.loc 1 231 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1328,13 +1335,13 @@ max30100_set_fifo_config:
 	strb	r3, [r7, #2]
 	mov	r3, r2
 	strb	r3, [r7, #1]
-	.loc 1 230 13
+	.loc 1 232 13
 	movs	r3, #0
 	strb	r3, [r7, #15]
-	.loc 1 231 23
+	.loc 1 233 23
 	ldrb	r3, [r7, #3]	@ zero_extendqisi2
 	lsls	r3, r3, #5
-	.loc 1 231 12
+	.loc 1 233 12
 	sxtb	r2, r3
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	sxtb	r3, r3
@@ -1342,37 +1349,37 @@ max30100_set_fifo_config:
 	sxtb	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 232 38
+	.loc 1 234 38
 	ldrb	r3, [r7, #2]	@ zero_extendqisi2
 	lsls	r3, r3, #4
 	sxtb	r3, r3
 	and	r3, r3, #16
 	sxtb	r2, r3
-	.loc 1 232 12
+	.loc 1 234 12
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	sxtb	r3, r3
 	orrs	r3, r3, r2
 	sxtb	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 233 37
+	.loc 1 235 37
 	ldrsb	r3, [r7, #1]
 	and	r3, r3, #15
 	sxtb	r2, r3
-	.loc 1 233 12
+	.loc 1 235 12
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	sxtb	r3, r3
 	orrs	r3, r3, r2
 	sxtb	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 234 5
+	.loc 1 236 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #8
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 235 1
+	.loc 1 237 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1392,7 +1399,7 @@ max30100_set_fifo_config:
 	.type	max30100_clear_fifo, %function
 max30100_clear_fifo:
 .LFB261:
-	.loc 1 239 1
+	.loc 1 241 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1405,28 +1412,28 @@ max30100_clear_fifo:
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
-	.loc 1 240 13
+	.loc 1 242 13
 	movs	r3, #0
 	strb	r3, [r7, #15]
-	.loc 1 241 5
+	.loc 1 243 5
 	add	r2, r7, #15
 	movs	r3, #3
 	movs	r1, #4
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 242 5
+	.loc 1 244 5
 	add	r2, r7, #15
 	movs	r3, #3
 	movs	r1, #6
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 243 5
+	.loc 1 245 5
 	add	r2, r7, #15
 	movs	r3, #3
 	movs	r1, #5
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 244 1
+	.loc 1 246 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1446,7 +1453,7 @@ max30100_clear_fifo:
 	.type	max30100_read_fifo, %function
 max30100_read_fifo:
 .LFB262:
-	.loc 1 248 1
+	.loc 1 250 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 32
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1459,131 +1466,131 @@ max30100_read_fifo:
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
-	.loc 1 250 13
+	.loc 1 252 13
 	movs	r3, #0
 	strb	r3, [r7, #19]
-	.loc 1 250 25
+	.loc 1 252 25
 	movs	r3, #0
 	strb	r3, [r7, #18]
-	.loc 1 251 5
+	.loc 1 253 5
 	add	r2, r7, #19
 	movs	r3, #1
 	movs	r1, #4
 	ldr	r0, [r7, #4]
 	bl	max30100_read
-	.loc 1 252 5
+	.loc 1 254 5
 	add	r2, r7, #18
 	movs	r3, #1
 	movs	r1, #6
 	ldr	r0, [r7, #4]
 	bl	max30100_read
-	.loc 1 256 19
+	.loc 1 258 19
 	ldrb	r2, [r7, #19]	@ zero_extendqisi2
-	.loc 1 256 36
+	.loc 1 258 36
 	ldrb	r3, [r7, #18]	@ zero_extendqisi2
-	.loc 1 256 34
+	.loc 1 258 34
 	subs	r3, r2, r3
 	uxtb	r3, r3
-	.loc 1 256 17
+	.loc 1 258 17
 	strb	r3, [r7, #31]
-	.loc 1 257 8
+	.loc 1 259 8
 	ldrsb	r3, [r7, #31]
 	cmp	r3, #0
 	bgt	.L34
-	.loc 1 259 21
+	.loc 1 261 21
 	ldrb	r3, [r7, #31]	@ zero_extendqisi2
 	adds	r3, r3, #32
 	uxtb	r3, r3
 	strb	r3, [r7, #31]
 .L34:
 .LBB3:
-	.loc 1 263 17
+	.loc 1 265 17
 	movs	r3, #0
 	strb	r3, [r7, #30]
-	.loc 1 263 5
+	.loc 1 265 5
 	b	.L35
 .L36:
 .LBB4:
-	.loc 1 266 9 discriminator 3
+	.loc 1 268 9 discriminator 3
 	add	r2, r7, #12
 	movs	r3, #6
 	movs	r1, #7
 	ldr	r0, [r7, #4]
 	bl	max30100_read
-	.loc 1 267 48 discriminator 3
+	.loc 1 269 48 discriminator 3
 	ldrb	r3, [r7, #12]	@ zero_extendqisi2
-	.loc 1 267 52 discriminator 3
+	.loc 1 269 52 discriminator 3
 	lsls	r3, r3, #16
-	.loc 1 267 31 discriminator 3
+	.loc 1 269 31 discriminator 3
 	mov	r2, r3
-	.loc 1 267 78 discriminator 3
+	.loc 1 269 78 discriminator 3
 	ldrb	r3, [r7, #13]	@ zero_extendqisi2
-	.loc 1 267 82 discriminator 3
+	.loc 1 269 82 discriminator 3
 	lsls	r3, r3, #8
-	.loc 1 267 59 discriminator 3
+	.loc 1 269 59 discriminator 3
 	orrs	r3, r3, r2
-	.loc 1 267 107 discriminator 3
+	.loc 1 269 107 discriminator 3
 	ldrb	r2, [r7, #14]	@ zero_extendqisi2
-	.loc 1 267 88 discriminator 3
+	.loc 1 269 88 discriminator 3
 	orrs	r3, r3, r2
-	.loc 1 267 18 discriminator 3
+	.loc 1 269 18 discriminator 3
 	ubfx	r3, r3, #0, #18
 	str	r3, [r7, #24]
-	.loc 1 268 49 discriminator 3
+	.loc 1 270 49 discriminator 3
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
-	.loc 1 268 53 discriminator 3
+	.loc 1 270 53 discriminator 3
 	lsls	r3, r3, #16
-	.loc 1 268 32 discriminator 3
+	.loc 1 270 32 discriminator 3
 	mov	r2, r3
-	.loc 1 268 79 discriminator 3
+	.loc 1 270 79 discriminator 3
 	ldrb	r3, [r7, #16]	@ zero_extendqisi2
-	.loc 1 268 83 discriminator 3
+	.loc 1 270 83 discriminator 3
 	lsls	r3, r3, #8
-	.loc 1 268 60 discriminator 3
+	.loc 1 270 60 discriminator 3
 	orrs	r3, r3, r2
-	.loc 1 268 108 discriminator 3
+	.loc 1 270 108 discriminator 3
 	ldrb	r2, [r7, #17]	@ zero_extendqisi2
-	.loc 1 268 89 discriminator 3
+	.loc 1 270 89 discriminator 3
 	orrs	r3, r3, r2
-	.loc 1 268 18 discriminator 3
+	.loc 1 270 18 discriminator 3
 	ubfx	r3, r3, #0, #18
 	str	r3, [r7, #20]
-	.loc 1 269 25 discriminator 3
+	.loc 1 271 25 discriminator 3
 	ldrsb	r3, [r7, #30]
-	.loc 1 269 29 discriminator 3
+	.loc 1 271 29 discriminator 3
 	ldr	r2, [r7, #4]
 	lsls	r3, r3, #2
 	add	r3, r3, r2
 	ldr	r2, [r7, #24]
 	str	r2, [r3, #4]
-	.loc 1 270 26 discriminator 3
+	.loc 1 272 26 discriminator 3
 	ldrsb	r3, [r7, #30]
-	.loc 1 270 30 discriminator 3
+	.loc 1 272 30 discriminator 3
 	ldr	r2, [r7, #4]
 	adds	r3, r3, #32
 	lsls	r3, r3, #2
 	add	r3, r3, r2
 	ldr	r2, [r7, #20]
 	str	r2, [r3, #4]
-	.loc 1 271 9 discriminator 3
+	.loc 1 273 9 discriminator 3
 	ldr	r1, [r7, #20]
 	ldr	r0, [r7, #24]
 	bl	max30100_plot
 .LBE4:
-	.loc 1 263 42 discriminator 3
+	.loc 1 265 42 discriminator 3
 	ldrsb	r3, [r7, #30]
 	uxtb	r3, r3
 	adds	r3, r3, #1
 	uxtb	r3, r3
 	strb	r3, [r7, #30]
 .L35:
-	.loc 1 263 26 discriminator 1
+	.loc 1 265 26 discriminator 1
 	ldrsb	r2, [r7, #30]
 	ldrsb	r3, [r7, #31]
 	cmp	r2, r3
 	blt	.L36
 .LBE3:
-	.loc 1 273 1
+	.loc 1 275 1
 	nop
 	nop
 	adds	r7, r7, #32
@@ -1604,7 +1611,7 @@ max30100_read_fifo:
 	.type	max30100_read_temp, %function
 max30100_read_temp:
 .LFB263:
-	.loc 1 277 1
+	.loc 1 279 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1619,19 +1626,19 @@ max30100_read_temp:
 	str	r0, [r7, #12]
 	str	r1, [r7, #8]
 	str	r2, [r7, #4]
-	.loc 1 278 5
+	.loc 1 280 5
 	movs	r3, #1
 	ldr	r2, [r7, #8]
 	movs	r1, #31
 	ldr	r0, [r7, #12]
 	bl	max30100_read
-	.loc 1 279 5
+	.loc 1 281 5
 	movs	r3, #1
 	ldr	r2, [r7, #4]
 	movs	r1, #32
 	ldr	r0, [r7, #12]
 	bl	max30100_read
-	.loc 1 280 1
+	.loc 1 282 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1656,7 +1663,7 @@ max30100_read_temp:
 	.file 11 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdlib.h"
 	.section	.debug_info,"",%progbits
 .Ldebug_info0:
-	.4byte	0xf8d
+	.4byte	0xfa0
 	.2byte	0x5
 	.byte	0x1
 	.byte	0x4
@@ -1670,7 +1677,7 @@ max30100_read_temp:
 	.4byte	0
 	.4byte	.Ldebug_line0
 	.4byte	.Ldebug_macro0
-	.uleb128 0x9
+	.uleb128 0x8
 	.byte	0x1
 	.byte	0x6
 	.4byte	.LASF19910
@@ -1686,11 +1693,11 @@ max30100_read_temp:
 	.byte	0x2b
 	.byte	0x17
 	.4byte	0x49
-	.uleb128 0x9
+	.uleb128 0x8
 	.byte	0x1
 	.byte	0x8
 	.4byte	.LASF19911
-	.uleb128 0x9
+	.uleb128 0x8
 	.byte	0x2
 	.byte	0x5
 	.4byte	.LASF19912
@@ -1700,11 +1707,11 @@ max30100_read_temp:
 	.byte	0x39
 	.byte	0x1c
 	.4byte	0x63
-	.uleb128 0x9
+	.uleb128 0x8
 	.byte	0x2
 	.byte	0x7
 	.4byte	.LASF19914
-	.uleb128 0x9
+	.uleb128 0x8
 	.byte	0x4
 	.byte	0x5
 	.4byte	.LASF19915
@@ -1714,15 +1721,15 @@ max30100_read_temp:
 	.byte	0x4f
 	.byte	0x1b
 	.4byte	0x7d
-	.uleb128 0x9
+	.uleb128 0x8
 	.byte	0x4
 	.byte	0x7
 	.4byte	.LASF19917
-	.uleb128 0x9
+	.uleb128 0x8
 	.byte	0x8
 	.byte	0x5
 	.4byte	.LASF19918
-	.uleb128 0x9
+	.uleb128 0x8
 	.byte	0x8
 	.byte	0x7
 	.4byte	.LASF19919
@@ -1730,7 +1737,7 @@ max30100_read_temp:
 	.byte	0x4
 	.byte	0x5
 	.ascii	"int\000"
-	.uleb128 0x9
+	.uleb128 0x8
 	.byte	0x4
 	.byte	0x7
 	.4byte	.LASF19920
@@ -1866,7 +1873,7 @@ max30100_read_temp:
 	.byte	0xd1
 	.byte	0x16
 	.4byte	0x99
-	.uleb128 0x9
+	.uleb128 0x8
 	.byte	0x8
 	.byte	0x4
 	.4byte	.LASF19935
@@ -1912,7 +1919,7 @@ max30100_read_temp:
 	.byte	0x35
 	.byte	0x3
 	.4byte	0x203
-	.uleb128 0x11
+	.uleb128 0x12
 	.byte	0x30
 	.byte	0x7
 	.byte	0x30
@@ -2167,7 +2174,7 @@ max30100_read_temp:
 	.4byte	0x319
 	.uleb128 0xb
 	.4byte	0x3f9
-	.uleb128 0x11
+	.uleb128 0x12
 	.byte	0x20
 	.byte	0x8
 	.byte	0x2f
@@ -2308,7 +2315,7 @@ max30100_read_temp:
 	.4byte	0x4e6
 	.uleb128 0xf
 	.4byte	0x50a
-	.uleb128 0x11
+	.uleb128 0x12
 	.byte	0x54
 	.byte	0x8
 	.byte	0xbb
@@ -2443,7 +2450,7 @@ max30100_read_temp:
 	.byte	0xf3
 	.byte	0x3
 	.4byte	0x51b
-	.uleb128 0x9
+	.uleb128 0x8
 	.byte	0x1
 	.byte	0x8
 	.4byte	.LASF619
@@ -2644,10 +2651,10 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0xb
 	.4byte	0x60b
-	.uleb128 0x12
+	.uleb128 0x13
 	.4byte	0xc9
 	.4byte	0x7c7
-	.uleb128 0x13
+	.uleb128 0x14
 	.4byte	0x99
 	.byte	0x1f
 	.byte	0
@@ -2657,11 +2664,20 @@ max30100_read_temp:
 	.byte	0x7f
 	.byte	0x3
 	.4byte	0x76e
+	.uleb128 0x23
+	.4byte	.LASF20109
+	.byte	0x1
+	.byte	0x10
+	.byte	0x14
+	.4byte	0x7b2
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	hi2c
 	.uleb128 0x19
 	.4byte	.LASF20057
 	.2byte	0x237
 	.4byte	0x1f7
-	.4byte	0x7fc
+	.4byte	0x80e
 	.uleb128 0x6
 	.4byte	0x7b2
 	.uleb128 0x6
@@ -2673,12 +2689,12 @@ max30100_read_temp:
 	.uleb128 0x6
 	.4byte	0xc9
 	.byte	0
-	.uleb128 0x23
+	.uleb128 0x24
 	.4byte	.LASF20113
 	.byte	0xb
 	.byte	0x5e
 	.byte	0x6
-	.4byte	0x80e
+	.4byte	0x820
 	.uleb128 0x6
 	.4byte	0x3e2
 	.byte	0
@@ -2686,7 +2702,7 @@ max30100_read_temp:
 	.4byte	.LASF20058
 	.2byte	0x236
 	.4byte	0x1f7
-	.4byte	0x837
+	.4byte	0x849
 	.uleb128 0x6
 	.4byte	0x7b2
 	.uleb128 0x6
@@ -2698,13 +2714,13 @@ max30100_read_temp:
 	.uleb128 0x6
 	.4byte	0xc9
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x15
 	.4byte	.LASF20059
 	.byte	0xa
 	.byte	0x1f
 	.byte	0x8
 	.4byte	0x3e2
-	.4byte	0x857
+	.4byte	0x869
 	.uleb128 0x6
 	.4byte	0x3e2
 	.uleb128 0x6
@@ -2712,23 +2728,23 @@ max30100_read_temp:
 	.uleb128 0x6
 	.4byte	0x1c0
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x15
 	.4byte	.LASF20060
 	.byte	0xb
 	.byte	0x6c
 	.byte	0x7
 	.4byte	0x3e2
-	.4byte	0x86d
+	.4byte	0x87f
 	.uleb128 0x6
 	.4byte	0x1c0
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x15
 	.4byte	.LASF20061
 	.byte	0xa
 	.byte	0x21
 	.byte	0x8
 	.4byte	0x3e2
-	.4byte	0x88d
+	.4byte	0x89f
 	.uleb128 0x6
 	.4byte	0x3e2
 	.uleb128 0x6
@@ -2736,29 +2752,29 @@ max30100_read_temp:
 	.uleb128 0x6
 	.4byte	0x1c0
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x25
 	.4byte	.LASF20064
 	.byte	0x1
-	.2byte	0x114
+	.2byte	0x116
 	.byte	0x6
 	.4byte	.LFB263
 	.4byte	.LFE263-.LFB263
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x8cf
-	.uleb128 0x25
+	.4byte	0x8e1
+	.uleb128 0x26
 	.ascii	"obj\000"
 	.byte	0x1
-	.2byte	0x114
+	.2byte	0x116
 	.byte	0x25
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -12
 	.uleb128 0x1a
 	.4byte	.LASF20062
 	.byte	0x32
-	.4byte	0x8d4
+	.4byte	0x8e6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -16
@@ -2776,78 +2792,78 @@ max30100_read_temp:
 	.4byte	0xa0
 	.uleb128 0x5
 	.4byte	.LASF20065
-	.byte	0xf7
+	.byte	0xf9
 	.4byte	.LFB262
 	.4byte	.LFE262-.LFB262
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x975
+	.4byte	0x988
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xf7
+	.byte	0xf9
 	.byte	0x25
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -36
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	.LASF20066
-	.byte	0xfa
+	.byte	0xfc
 	.byte	0xd
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	.LASF20067
-	.byte	0xfa
+	.byte	0xfc
 	.byte	0x19
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -22
-	.uleb128 0x8
+	.uleb128 0x11
 	.4byte	.LASF20068
-	.byte	0xfe
+	.2byte	0x100
 	.byte	0xc
 	.4byte	0xa0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
-	.uleb128 0x15
+	.uleb128 0x16
 	.4byte	.LBB3
 	.4byte	.LBE3-.LBB3
-	.uleb128 0x26
+	.uleb128 0x27
 	.ascii	"i\000"
 	.byte	0x1
-	.2byte	0x107
+	.2byte	0x109
 	.byte	0x11
 	.4byte	0xa0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -10
-	.uleb128 0x15
+	.uleb128 0x16
 	.4byte	.LBB4
 	.4byte	.LBE4-.LBB4
-	.uleb128 0x16
+	.uleb128 0x11
 	.4byte	.LASF20069
-	.2byte	0x109
+	.2byte	0x10b
 	.byte	0x11
-	.4byte	0x975
+	.4byte	0x988
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -28
-	.uleb128 0x16
+	.uleb128 0x11
 	.4byte	.LASF20070
-	.2byte	0x10b
+	.2byte	0x10d
 	.byte	0x12
 	.4byte	0xc9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -16
-	.uleb128 0x16
+	.uleb128 0x11
 	.4byte	.LASF20071
-	.2byte	0x10c
+	.2byte	0x10e
 	.byte	0x12
 	.4byte	0xc9
 	.uleb128 0x2
@@ -2856,32 +2872,32 @@ max30100_read_temp:
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x12
-	.4byte	0xac
-	.4byte	0x985
 	.uleb128 0x13
+	.4byte	0xac
+	.4byte	0x998
+	.uleb128 0x14
 	.4byte	0x99
 	.byte	0x5
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20072
-	.byte	0xee
+	.byte	0xf0
 	.4byte	.LFB261
 	.4byte	.LFE261-.LFB261
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x9b5
+	.4byte	0x9c8
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xee
+	.byte	0xf0
 	.byte	0x26
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0xa
 	.ascii	"val\000"
-	.byte	0xf0
+	.byte	0xf2
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
@@ -2889,23 +2905,23 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20073
-	.byte	0xe4
+	.byte	0xe6
 	.4byte	.LFB260
 	.4byte	.LFE260-.LFB260
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xa10
+	.4byte	0xa23
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xe4
+	.byte	0xe6
 	.byte	0x2b
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
 	.4byte	.LASF20074
-	.byte	0xe4
+	.byte	0xe6
 	.byte	0x43
 	.4byte	0x684
 	.uleb128 0x2
@@ -2913,7 +2929,7 @@ max30100_read_temp:
 	.sleb128 -21
 	.uleb128 0x7
 	.4byte	.LASF20075
-	.byte	0xe4
+	.byte	0xe6
 	.byte	0x54
 	.4byte	0xac
 	.uleb128 0x2
@@ -2921,15 +2937,15 @@ max30100_read_temp:
 	.sleb128 -22
 	.uleb128 0x7
 	.4byte	.LASF20076
-	.byte	0xe4
+	.byte	0xe6
 	.byte	0x6a
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -23
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	.LASF20077
-	.byte	0xe6
+	.byte	0xe8
 	.byte	0xd
 	.4byte	0xac
 	.uleb128 0x2
@@ -2938,23 +2954,23 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20078
-	.byte	0xdc
+	.byte	0xde
 	.4byte	.LFB259
 	.4byte	.LFE259-.LFB259
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xa5c
+	.4byte	0xa6f
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xdc
+	.byte	0xde
 	.byte	0x32
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
 	.4byte	.LASF20079
-	.byte	0xdc
+	.byte	0xde
 	.byte	0x51
 	.4byte	0x762
 	.uleb128 0x2
@@ -2962,7 +2978,7 @@ max30100_read_temp:
 	.sleb128 -21
 	.uleb128 0x7
 	.4byte	.LASF20080
-	.byte	0xdc
+	.byte	0xde
 	.byte	0x72
 	.4byte	0x762
 	.uleb128 0x2
@@ -2970,7 +2986,7 @@ max30100_read_temp:
 	.sleb128 -22
 	.uleb128 0xa
 	.ascii	"val\000"
-	.byte	0xde
+	.byte	0xe0
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
@@ -2978,23 +2994,23 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20081
-	.byte	0xd4
+	.byte	0xd6
 	.4byte	.LFB258
 	.4byte	.LFE258-.LFB258
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xaa8
+	.4byte	0xabb
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xd4
+	.byte	0xd6
 	.byte	0x32
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
 	.4byte	.LASF20082
-	.byte	0xd4
+	.byte	0xd6
 	.byte	0x51
 	.4byte	0x762
 	.uleb128 0x2
@@ -3002,7 +3018,7 @@ max30100_read_temp:
 	.sleb128 -21
 	.uleb128 0x7
 	.4byte	.LASF20083
-	.byte	0xd4
+	.byte	0xd6
 	.byte	0x72
 	.4byte	0x762
 	.uleb128 0x2
@@ -3010,7 +3026,7 @@ max30100_read_temp:
 	.sleb128 -22
 	.uleb128 0xa
 	.ascii	"val\000"
-	.byte	0xd6
+	.byte	0xd8
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
@@ -3018,67 +3034,67 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20084
-	.byte	0xcd
+	.byte	0xcf
 	.4byte	.LFB257
 	.4byte	.LFE257-.LFB257
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xae4
+	.4byte	0xaf7
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xcd
+	.byte	0xcf
 	.byte	0x2d
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x3
 	.ascii	"ma\000"
-	.byte	0xcd
+	.byte	0xcf
 	.byte	0x38
-	.4byte	0xae4
+	.4byte	0xaf7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -24
 	.uleb128 0xa
 	.ascii	"pa\000"
-	.byte	0xcf
+	.byte	0xd1
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0x8
 	.byte	0x4
 	.byte	0x4
 	.4byte	.LASF20085
 	.uleb128 0x5
 	.4byte	.LASF20086
-	.byte	0xc6
+	.byte	0xc8
 	.4byte	.LFB256
 	.4byte	.LFE256-.LFB256
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xb27
+	.4byte	0xb3a
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xc6
+	.byte	0xc8
 	.byte	0x2d
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x3
 	.ascii	"ma\000"
-	.byte	0xc6
+	.byte	0xc8
 	.byte	0x38
-	.4byte	0xae4
+	.4byte	0xaf7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -24
 	.uleb128 0xa
 	.ascii	"pa\000"
-	.byte	0xc8
+	.byte	0xca
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
@@ -3086,31 +3102,31 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20087
-	.byte	0xbd
+	.byte	0xbf
 	.4byte	.LFB255
 	.4byte	.LFE255-.LFB255
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xb66
+	.4byte	0xb79
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xbd
+	.byte	0xbf
 	.byte	0x2e
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x3
 	.ascii	"adc\000"
-	.byte	0xbd
+	.byte	0xbf
 	.byte	0x42
 	.4byte	0x735
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	.LASF20077
-	.byte	0xbf
+	.byte	0xc1
 	.byte	0xd
 	.4byte	0xac
 	.uleb128 0x2
@@ -3119,31 +3135,31 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20088
-	.byte	0xb4
+	.byte	0xb6
 	.4byte	.LFB254
 	.4byte	.LFE254-.LFB254
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xba4
+	.4byte	0xbb7
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xb4
+	.byte	0xb6
 	.byte	0x2f
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x3
 	.ascii	"pw\000"
-	.byte	0xb4
+	.byte	0xb6
 	.byte	0x46
 	.4byte	0x702
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	.LASF20077
-	.byte	0xb6
+	.byte	0xb8
 	.byte	0xd
 	.4byte	0xac
 	.uleb128 0x2
@@ -3152,31 +3168,31 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20089
-	.byte	0xab
+	.byte	0xad
 	.4byte	.LFB253
 	.4byte	.LFE253-.LFB253
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xbe2
+	.4byte	0xbf5
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xab
+	.byte	0xad
 	.byte	0x2d
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x3
 	.ascii	"sr\000"
-	.byte	0xab
+	.byte	0xad
 	.byte	0x40
 	.4byte	0x6cf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	.LASF20077
-	.byte	0xad
+	.byte	0xaf
 	.byte	0xd
 	.4byte	0xac
 	.uleb128 0x2
@@ -3185,31 +3201,31 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20090
-	.byte	0xa1
+	.byte	0xa3
 	.4byte	.LFB252
 	.4byte	.LFE252-.LFB252
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xc21
+	.4byte	0xc34
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xa1
+	.byte	0xa3
 	.byte	0x24
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
 	.4byte	.LASF20091
-	.byte	0xa1
+	.byte	0xa3
 	.byte	0x39
 	.4byte	0x645
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	.LASF20077
-	.byte	0xa3
+	.byte	0xa5
 	.byte	0xd
 	.4byte	0xac
 	.uleb128 0x2
@@ -3218,31 +3234,31 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20092
-	.byte	0x98
+	.byte	0x9a
 	.4byte	.LFB251
 	.4byte	.LFE251-.LFB251
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xc60
+	.4byte	0xc73
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x98
+	.byte	0x9a
 	.byte	0x24
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
 	.4byte	.LASF20093
-	.byte	0x98
+	.byte	0x9a
 	.byte	0x31
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	.LASF20077
-	.byte	0x9a
+	.byte	0x9c
 	.byte	0xd
 	.4byte	0xac
 	.uleb128 0x2
@@ -3251,41 +3267,41 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20094
-	.byte	0x74
+	.byte	0x76
 	.4byte	.LFB250
 	.4byte	.LFE250-.LFB250
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xcb6
+	.4byte	0xcc9
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x74
+	.byte	0x76
 	.byte	0x2d
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0xa
 	.ascii	"reg\000"
-	.byte	0x76
-	.4byte	0xcb6
+	.byte	0x78
+	.4byte	0xcc9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -12
-	.uleb128 0x15
+	.uleb128 0x16
 	.4byte	.LBB2
 	.4byte	.LBE2-.LBB2
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	.LASF20062
-	.byte	0x8d
+	.byte	0x8f
 	.byte	0x10
 	.4byte	0xa0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -13
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	.LASF20063
-	.byte	0x8e
+	.byte	0x90
 	.byte	0x11
 	.4byte	0xac
 	.uleb128 0x2
@@ -3293,71 +3309,71 @@ max30100_read_temp:
 	.sleb128 -14
 	.byte	0
 	.byte	0
-	.uleb128 0x12
-	.4byte	0xac
-	.4byte	0xcc6
 	.uleb128 0x13
+	.4byte	0xac
+	.4byte	0xcd9
+	.uleb128 0x14
 	.4byte	0x99
 	.byte	0x1
 	.byte	0
-	.uleb128 0x27
+	.uleb128 0x28
 	.4byte	.LASF20114
 	.byte	0x1
-	.byte	0x6e
+	.byte	0x70
 	.byte	0x9
 	.4byte	0xac
 	.4byte	.LFB249
 	.4byte	.LFE249-.LFB249
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xcef
+	.4byte	0xd02
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x6e
+	.byte	0x70
 	.byte	0x2c
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -12
 	.byte	0
-	.uleb128 0x28
+	.uleb128 0x29
 	.4byte	.LASF20095
 	.byte	0x1
-	.byte	0x68
+	.byte	0x6a
 	.byte	0x6
 	.4byte	.LFB248
 	.4byte	.LFE248-.LFB248
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xd14
+	.4byte	0xd27
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x68
+	.byte	0x6a
 	.byte	0x28
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -12
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20096
-	.byte	0x61
+	.byte	0x63
 	.4byte	.LFB247
 	.4byte	.LFE247-.LFB247
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xd52
+	.4byte	0xd65
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x61
+	.byte	0x63
 	.byte	0x2b
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
 	.4byte	.LASF20097
-	.byte	0x61
+	.byte	0x63
 	.byte	0x38
 	.4byte	0xac
 	.uleb128 0x2
@@ -3365,7 +3381,7 @@ max30100_read_temp:
 	.sleb128 -21
 	.uleb128 0xa
 	.ascii	"reg\000"
-	.byte	0x63
+	.byte	0x65
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
@@ -3373,23 +3389,23 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20098
-	.byte	0x5a
+	.byte	0x5c
 	.4byte	.LFB246
 	.4byte	.LFE246-.LFB246
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xd90
+	.4byte	0xda3
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x5a
+	.byte	0x5c
 	.byte	0x2c
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
 	.4byte	.LASF20097
-	.byte	0x5a
+	.byte	0x5c
 	.byte	0x39
 	.4byte	0xac
 	.uleb128 0x2
@@ -3397,7 +3413,7 @@ max30100_read_temp:
 	.sleb128 -21
 	.uleb128 0xa
 	.ascii	"reg\000"
-	.byte	0x5c
+	.byte	0x5e
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
@@ -3405,23 +3421,23 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20099
-	.byte	0x50
+	.byte	0x52
 	.4byte	.LFB245
 	.4byte	.LFE245-.LFB245
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xdce
+	.4byte	0xde1
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x50
+	.byte	0x52
 	.byte	0x27
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
 	.4byte	.LASF20097
-	.byte	0x50
+	.byte	0x52
 	.byte	0x34
 	.4byte	0xac
 	.uleb128 0x2
@@ -3429,7 +3445,7 @@ max30100_read_temp:
 	.sleb128 -21
 	.uleb128 0xa
 	.ascii	"reg\000"
-	.byte	0x52
+	.byte	0x54
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
@@ -3437,23 +3453,23 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20100
-	.byte	0x46
+	.byte	0x48
 	.4byte	.LFB244
 	.4byte	.LFE244-.LFB244
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xe0c
+	.4byte	0xe1f
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x46
+	.byte	0x48
 	.byte	0x27
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
 	.4byte	.LASF20097
-	.byte	0x46
+	.byte	0x48
 	.byte	0x34
 	.4byte	0xac
 	.uleb128 0x2
@@ -3461,7 +3477,7 @@ max30100_read_temp:
 	.sleb128 -21
 	.uleb128 0xa
 	.ascii	"reg\000"
-	.byte	0x48
+	.byte	0x4a
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
@@ -3469,23 +3485,23 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20101
-	.byte	0x3c
+	.byte	0x3e
 	.4byte	.LFB243
 	.4byte	.LFE243-.LFB243
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xe4a
+	.4byte	0xe5d
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x3c
+	.byte	0x3e
 	.byte	0x26
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
 	.4byte	.LASF20097
-	.byte	0x3c
+	.byte	0x3e
 	.byte	0x33
 	.4byte	0xac
 	.uleb128 0x2
@@ -3493,7 +3509,7 @@ max30100_read_temp:
 	.sleb128 -21
 	.uleb128 0xa
 	.ascii	"reg\000"
-	.byte	0x3e
+	.byte	0x40
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
@@ -3501,23 +3517,23 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20102
-	.byte	0x35
+	.byte	0x37
 	.4byte	.LFB242
 	.4byte	.LFE242-.LFB242
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xe7a
+	.4byte	0xe8d
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x35
+	.byte	0x37
 	.byte	0x21
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0xa
 	.ascii	"val\000"
-	.byte	0x37
+	.byte	0x39
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
@@ -3525,23 +3541,23 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20103
-	.byte	0x2d
+	.byte	0x2f
 	.4byte	.LFB241
 	.4byte	.LFE241-.LFB241
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xed5
+	.4byte	0xee8
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x2d
+	.byte	0x2f
 	.byte	0x20
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x3
 	.ascii	"reg\000"
-	.byte	0x2d
+	.byte	0x2f
 	.byte	0x2d
 	.4byte	0xac
 	.uleb128 0x2
@@ -3549,7 +3565,7 @@ max30100_read_temp:
 	.sleb128 -21
 	.uleb128 0x3
 	.ascii	"buf\000"
-	.byte	0x2d
+	.byte	0x2f
 	.byte	0x3b
 	.4byte	0x606
 	.uleb128 0x2
@@ -3557,15 +3573,15 @@ max30100_read_temp:
 	.sleb128 -28
 	.uleb128 0x7
 	.4byte	.LASF20104
-	.byte	0x2d
+	.byte	0x2f
 	.byte	0x49
 	.4byte	0xb8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -24
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	.LASF20105
-	.byte	0x2f
+	.byte	0x31
 	.byte	0xd
 	.4byte	0xac
 	.uleb128 0x2
@@ -3574,23 +3590,23 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20106
-	.byte	0x22
+	.byte	0x24
 	.4byte	.LFB240
 	.4byte	.LFE240-.LFB240
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xf30
+	.4byte	0xf43
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x22
+	.byte	0x24
 	.byte	0x21
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x3
 	.ascii	"reg\000"
-	.byte	0x22
+	.byte	0x24
 	.byte	0x2e
 	.4byte	0xac
 	.uleb128 0x2
@@ -3598,7 +3614,7 @@ max30100_read_temp:
 	.sleb128 -21
 	.uleb128 0x3
 	.ascii	"buf\000"
-	.byte	0x22
+	.byte	0x24
 	.byte	0x3c
 	.4byte	0x606
 	.uleb128 0x2
@@ -3606,15 +3622,15 @@ max30100_read_temp:
 	.sleb128 -28
 	.uleb128 0x7
 	.4byte	.LASF20104
-	.byte	0x22
+	.byte	0x24
 	.byte	0x4a
 	.4byte	0xb8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -24
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	.LASF20107
-	.byte	0x24
+	.byte	0x26
 	.byte	0xe
 	.4byte	0x606
 	.uleb128 0x2
@@ -3623,33 +3639,33 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF20108
-	.byte	0x19
+	.byte	0x1b
 	.4byte	.LFB239
 	.4byte	.LFE239-.LFB239
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xf61
+	.4byte	0xf74
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x19
+	.byte	0x1b
 	.byte	0x20
-	.4byte	0x8cf
+	.4byte	0x8e1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -12
 	.uleb128 0x7
 	.4byte	.LASF20109
-	.byte	0x19
+	.byte	0x1b
 	.byte	0x38
 	.4byte	0x7b2
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -16
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.4byte	.LASF20115
 	.byte	0x1
-	.byte	0x12
+	.byte	0x14
 	.byte	0x6
 	.4byte	.LFB238
 	.4byte	.LFE238-.LFB238
@@ -3657,7 +3673,7 @@ max30100_read_temp:
 	.byte	0x9c
 	.uleb128 0x7
 	.4byte	.LASF20070
-	.byte	0x12
+	.byte	0x14
 	.byte	0x1d
 	.4byte	0xc9
 	.uleb128 0x2
@@ -3665,7 +3681,7 @@ max30100_read_temp:
 	.sleb128 -12
 	.uleb128 0x7
 	.4byte	.LASF20071
-	.byte	0x12
+	.byte	0x14
 	.byte	0x31
 	.4byte	0xc9
 	.uleb128 0x2
@@ -3789,6 +3805,17 @@ max30100_read_temp:
 	.byte	0
 	.byte	0
 	.uleb128 0x8
+	.uleb128 0x24
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3e
+	.uleb128 0xb
+	.uleb128 0x3
+	.uleb128 0xe
+	.byte	0
+	.byte	0
+	.uleb128 0x9
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -3804,17 +3831,6 @@ max30100_read_temp:
 	.uleb128 0x13
 	.uleb128 0x2
 	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x9
-	.uleb128 0x24
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3e
-	.uleb128 0xb
-	.uleb128 0x3
-	.uleb128 0xe
 	.byte	0
 	.byte	0
 	.uleb128 0xa
@@ -3939,6 +3955,24 @@ max30100_read_temp:
 	.byte	0
 	.byte	0
 	.uleb128 0x11
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0x21
+	.sleb128 1
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x12
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0xb
@@ -3954,7 +3988,7 @@ max30100_read_temp:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x1
 	.uleb128 0x49
@@ -3963,7 +3997,7 @@ max30100_read_temp:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x14
 	.uleb128 0x21
 	.byte	0
 	.uleb128 0x49
@@ -3972,7 +4006,7 @@ max30100_read_temp:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x15
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -3995,31 +4029,13 @@ max30100_read_temp:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x15
+	.uleb128 0x16
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x11
 	.uleb128 0x1
 	.uleb128 0x12
 	.uleb128 0x6
-	.byte	0
-	.byte	0
-	.uleb128 0x16
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0x21
-	.sleb128 1
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x17
@@ -4091,7 +4107,7 @@ max30100_read_temp:
 	.sleb128 1
 	.uleb128 0x3b
 	.uleb128 0x21
-	.sleb128 276
+	.sleb128 278
 	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x49
@@ -4205,6 +4221,25 @@ max30100_read_temp:
 	.byte	0
 	.byte	0
 	.uleb128 0x23
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x24
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -4225,7 +4260,7 @@ max30100_read_temp:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x25
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -4252,7 +4287,7 @@ max30100_read_temp:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x25
+	.uleb128 0x26
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -4269,7 +4304,7 @@ max30100_read_temp:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x26
+	.uleb128 0x27
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -4284,35 +4319,6 @@ max30100_read_temp:
 	.uleb128 0x13
 	.uleb128 0x2
 	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x27
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x27
-	.uleb128 0x19
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x6
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x7a
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x28
@@ -4330,6 +4336,8 @@ max30100_read_temp:
 	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0x19
+	.uleb128 0x49
+	.uleb128 0x13
 	.uleb128 0x11
 	.uleb128 0x1
 	.uleb128 0x12
@@ -4343,6 +4351,33 @@ max30100_read_temp:
 	.byte	0
 	.byte	0
 	.uleb128 0x29
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x27
+	.uleb128 0x19
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x7a
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x2a
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -66032,6 +66067,8 @@ max30100_read_temp:
 	.ascii	"DWT_LSUCNT_LSUCNT_Msk (0xFFUL )\000"
 .LASF3982:
 	.ascii	"CAN_F10R1_FB7_Msk (0x1UL << CAN_F10R1_FB7_Pos)\000"
+.LASF10731:
+	.ascii	"RCC_DCKCFGR_PLLSAIDIVQ_Pos (8U)\000"
 .LASF17365:
 	.ascii	"__HAL_RCC_I2C1_CLK_SLEEP_DISABLE() (RCC->APB1LPENR "
 	.ascii	"&= ~(RCC_APB1LPENR_I2C1LPEN))\000"
@@ -72807,8 +72844,8 @@ max30100_read_temp:
 .LASF16396:
 	.ascii	"RCC_DFSDM2AUDIOCLKSOURCE_I2SAPB1 RCC_DFSDM2AUDIOCLK"
 	.ascii	"SOURCE_I2S1\000"
-.LASF10731:
-	.ascii	"RCC_DCKCFGR_PLLSAIDIVQ_Pos (8U)\000"
+.LASF20109:
+	.ascii	"hi2c\000"
 .LASF3938:
 	.ascii	"CAN_F9R1_FB24 CAN_F9R1_FB24_Msk\000"
 .LASF1068:
@@ -92476,6 +92513,8 @@ max30100_read_temp:
 	.ascii	"ADC_CR2_JEXTEN_Msk (0x3UL << ADC_CR2_JEXTEN_Pos)\000"
 .LASF398:
 	.ascii	"__ARM_FEATURE_CMSE\000"
+.LASF17673:
+	.ascii	"DMA_PRIORITY_LOW 0x00000000U\000"
 .LASF6206:
 	.ascii	"DMA_SxNDT_14 (0x4000UL << DMA_SxNDT_Pos)\000"
 .LASF6041:
@@ -93836,8 +93875,8 @@ max30100_read_temp:
 	.ascii	"USART_CR2_LBDL USART_CR2_LBDL_Msk\000"
 .LASF676:
 	.ascii	"UINT8_MAX (__UINT8_MAX__)\000"
-.LASF17673:
-	.ascii	"DMA_PRIORITY_LOW 0x00000000U\000"
+.LASF6345:
+	.ascii	"DMA_LIFCR_CTCIF3_Pos (27U)\000"
 .LASF10462:
 	.ascii	"RCC_APB1LPENR_TIM3LPEN_Msk (0x1UL << RCC_APB1LPENR_"
 	.ascii	"TIM3LPEN_Pos)\000"
@@ -95985,8 +96024,9 @@ max30100_read_temp:
 .LASF14294:
 	.ascii	"USB_OTG_DIEPTSIZ_MULCNT_Msk (0x3UL << USB_OTG_DIEPT"
 	.ascii	"SIZ_MULCNT_Pos)\000"
-.LASF20109:
-	.ascii	"hi2c\000"
+.LASF8215:
+	.ascii	"GPIO_OTYPER_OT15_Msk (0x1UL << GPIO_OTYPER_OT15_Pos"
+	.ascii	")\000"
 .LASF486:
 	.ascii	"USE_HAL_ADC_REGISTER_CALLBACKS 0U\000"
 .LASF9010:
@@ -96985,10 +97025,6 @@ max30100_read_temp:
 	.ascii	"TPI_DEVTYPE_SubType_Pos 4U\000"
 .LASF1184:
 	.ascii	"MPU_CTRL_PRIVDEFENA_Pos 2U\000"
-.LASF20112:
-	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
-	.ascii	"stre/SEMB1/PRJ-SEMB-Projeto_Funcional/STM32IDE/Mult"
-	.ascii	"iparameter_Monitor/Debug\000"
 .LASF3087:
 	.ascii	"CAN_F0R1_FB29_Pos (29U)\000"
 .LASF18864:
@@ -98864,8 +98900,10 @@ max30100_read_temp:
 	.ascii	"CAN_F4R2_FB24 CAN_F4R2_FB24_Msk\000"
 .LASF14359:
 	.ascii	"USB_OTG_DOEPCTL_EPDIS USB_OTG_DOEPCTL_EPDIS_Msk\000"
-.LASF6345:
-	.ascii	"DMA_LIFCR_CTCIF3_Pos (27U)\000"
+.LASF20112:
+	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
+	.ascii	"stre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor"
+	.ascii	"/Debug\000"
 .LASF11836:
 	.ascii	"SDIO_DTIMER_DATATIME SDIO_DTIMER_DATATIME_Msk\000"
 .LASF9331:
@@ -104466,9 +104504,6 @@ max30100_read_temp:
 	.ascii	"USB_OTG_FS_MAX_PACKET_SIZE 64U\000"
 .LASF780:
 	.ascii	"__IM volatile const\000"
-.LASF8215:
-	.ascii	"GPIO_OTYPER_OT15_Msk (0x1UL << GPIO_OTYPER_OT15_Pos"
-	.ascii	")\000"
 .LASF12731:
 	.ascii	"TIM_CCMR2_OC3M_1 (0x2UL << TIM_CCMR2_OC3M_Pos)\000"
 .LASF9250:

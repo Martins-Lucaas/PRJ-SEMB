@@ -4077,3 +4077,46 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\lucas\OneDriv
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-11-28 02:26:05.768
 !MESSAGE Indexed 'Multiparameter_Monitor' (69 sources, 234 headers) in 5.38 sec: 20,384 declarations; 104,840 references; 71 unresolved inclusions; 66 syntax errors; 2,202 unresolved names (1.7%)
+!SESSION 2023-11-28 08:24:31.387 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-28 08:24:47.248
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-28 08:24:47.259
+!MESSAGE Log4j2 initialized with config file C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\Workspace STM\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-11-28 08:24:48.024
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.128530013.578782939" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.128530013.578782939.1522518394"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-11-28 08:24:48.026
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.1995675734.467045087" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.1995675734.467045087.562676808"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-11-28 08:24:48.026
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.1052227871.972182258" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.1052227871.972182258.352308004"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-11-28 08:24:48.027
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.990672505.1055039715" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.990672505.1055039715.1516392555"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-11-28 08:24:48.027
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.1961058108.1824233442" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.1961058108.1824233442.526977104"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-11-28 08:24:48.028
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.1040091190.1930740146" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.1040091190.1930740146.1455098841"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-11-28 08:24:48.029
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.1340275842.86385308" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.1340275842.86385308.601666864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-11-28 08:24:48.029
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.debug.option.cpuclock.1621371453.318435983" for "com.st.stm32cube.ide.mcu.debug.option.cpuclock.1621371453.318435983.867431343"
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-28 08:24:58.002
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-28 08:25:05.153
+!MESSAGE Indexed 'Multiparameter_Monitor' (69 sources, 234 headers) in 6.72 sec: 20,384 declarations; 104,840 references; 71 unresolved inclusions; 66 syntax errors; 2,202 unresolved names (1.7%)

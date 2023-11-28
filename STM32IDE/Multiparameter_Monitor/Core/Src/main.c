@@ -21,6 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
+#include "myheaders.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

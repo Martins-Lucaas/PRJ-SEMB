@@ -1,0 +1,3 @@
+../Monitor_core/eletromio_adc.c:19:6:HAL_ADC_HalfCpltCallback	16	static
+../Monitor_core/eletromio_adc.c:23:6:HAL_ADC_ConvCpltCallback	16	static
+../Monitor_core/eletromio_adc.c:27:6:emg_init	8208	static

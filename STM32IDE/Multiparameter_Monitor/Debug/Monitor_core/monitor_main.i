@@ -1,5 +1,5 @@
 # 0 "../Monitor_core/monitor_main.c"
-# 1 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB-Projeto_Funcional/STM32IDE/Multiparameter_Monitor/Debug//"
+# 1 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Debug//"
 # 0 "<built-in>"
 #define __STDC__ 1
 # 0 "<built-in>"
@@ -909,8 +909,17 @@
 # 0 "<command-line>"
 #define STM32F446xx 1
 # 1 "../Monitor_core/monitor_main.c"
-# 11 "../Monitor_core/monitor_main.c"
+# 9 "../Monitor_core/monitor_main.c"
+extern bt_sair;
+extern bt_oxy;
+extern bt_temp;
+extern bt_emg;
+
 void init(void)
 {
+
+
+
+
 
 }

@@ -8,8 +8,14 @@
 #ifndef MYHEADERS_H_
 #define MYHEADERS_H_
 
-void emg_system(void);
+#include <stdio.h>
+#include <string.h>
+#include <stdint.h>
+
+void emg_init(void);
 void init(void);
+void max30100_init(void);
+
 
 
 #endif /* MYHEADERS_H_ */
