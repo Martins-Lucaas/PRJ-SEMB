@@ -34186,6 +34186,11 @@ int main(void)
   {
 
 
+ void init(void);
+
+
+
+
   }
 
 }
@@ -34295,7 +34300,7 @@ static void MX_ADC1_Init(void)
 
 static void MX_CRC_Init(void)
 {
-# 249 "../Core/Src/main.c"
+# 254 "../Core/Src/main.c"
   hcrc.Instance = ((CRC_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x3000UL));
   if (HAL_CRC_Init(&hcrc) != HAL_OK)
   {
@@ -34314,7 +34319,7 @@ static void MX_CRC_Init(void)
 
 static void MX_I2C2_Init(void)
 {
-# 275 "../Core/Src/main.c"
+# 280 "../Core/Src/main.c"
   hi2c2.Instance = ((I2C_TypeDef *) (0x40000000UL + 0x5800UL));
   hi2c2.Init.ClockSpeed = 100000;
   hi2c2.Init.DutyCycle = 0x00000000U;
@@ -34341,7 +34346,7 @@ static void MX_I2C2_Init(void)
 
 static void MX_I2C3_Init(void)
 {
-# 309 "../Core/Src/main.c"
+# 314 "../Core/Src/main.c"
   hi2c3.Instance = ((I2C_TypeDef *) (0x40000000UL + 0x5C00UL));
   hi2c3.Init.ClockSpeed = 100000;
   hi2c3.Init.DutyCycle = 0x00000000U;
@@ -34368,7 +34373,7 @@ static void MX_I2C3_Init(void)
 
 static void MX_SPI1_Init(void)
 {
-# 344 "../Core/Src/main.c"
+# 349 "../Core/Src/main.c"
   hspi1.Instance = ((SPI_TypeDef *) ((0x40000000UL + 0x00010000UL) + 0x3000UL));
   hspi1.Init.Mode = ((0x1UL << (2U)) | (0x1UL << (8U)));
   hspi1.Init.Direction = (0x00000000U);
@@ -34447,7 +34452,7 @@ static void MX_TIM3_Init(void)
 
 static void MX_USART3_UART_Init(void)
 {
-# 430 "../Core/Src/main.c"
+# 435 "../Core/Src/main.c"
   huart3.Instance = ((USART_TypeDef *) (0x40000000UL + 0x4800UL));
   huart3.Init.BaudRate = 115200;
   huart3.Init.WordLength = 0x00000000U;
@@ -34473,7 +34478,7 @@ static void MX_USART3_UART_Init(void)
 
 static void MX_USB_OTG_FS_PCD_Init(void)
 {
-# 463 "../Core/Src/main.c"
+# 468 "../Core/Src/main.c"
   hpcd_USB_OTG_FS.Instance = ((USB_OTG_GlobalTypeDef *) 0x50000000UL);
   hpcd_USB_OTG_FS.Init.dev_endpoints = 6;
   hpcd_USB_OTG_FS.Init.speed = 2U;
@@ -34569,7 +34574,7 @@ static void MX_GPIO_Init(void)
 
 
 }
-# 571 "../Core/Src/main.c"
+# 576 "../Core/Src/main.c"
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 

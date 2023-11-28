@@ -12137,73 +12137,73 @@ LOAD C:/ST/STM32CubeIDE_1.13.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .comment       0x00000000000000c2       0x80 C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc\libtouchgfx-float-abi-hard.a(ConstFont.o)
  .comment       0x00000000000000c2       0x80 C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc\libtouchgfx-float-abi-hard.a(TextProvider.o)
 
-.debug_info     0x0000000000000000    0x24bc9
- .debug_info    0x0000000000000000     0x2270 ./Core/Src/main.o
- .debug_info    0x0000000000002270     0x2224 ./Core/Src/stm32f4xx_hal_msp.o
- .debug_info    0x0000000000004494      0xc33 ./Core/Src/stm32f4xx_hal_timebase_tim.o
- .debug_info    0x00000000000050c7      0x9fe ./Core/Src/stm32f4xx_it.o
- .debug_info    0x0000000000005ac5      0x6a3 ./Core/Src/syscalls.o
- .debug_info    0x0000000000006168      0x168 ./Core/Src/sysmem.o
- .debug_info    0x00000000000062d0      0x54a ./Core/Src/system_stm32f4xx.o
- .debug_info    0x000000000000681a      0xf52 ./Core/Src/z_displ_ILI9XXX.o
- .debug_info    0x000000000000776c       0x23 ./Core/Startup/startup_stm32f446retx.o
- .debug_info    0x000000000000778f      0x996 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_info    0x0000000000008125      0xcd4 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
- .debug_info    0x0000000000008df9      0xd9b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_info    0x0000000000009b94      0x37a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.o
- .debug_info    0x0000000000009f0e      0x8e7 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
- .debug_info    0x000000000000a7f5      0x739 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_info    0x000000000000af2e     0x23ed ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
- .debug_info    0x000000000000d31b     0x15d5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o
- .debug_info    0x000000000000e8f0      0x79e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o
- .debug_info    0x000000000000f08e      0x916 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_info    0x000000000000f9a4      0x975 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
- .debug_info    0x0000000000010319     0x15fb ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
- .debug_info    0x0000000000011914     0x2948 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
- .debug_info    0x000000000001425c     0x14ae ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
- .debug_info    0x000000000001570a     0x2fb8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
- .debug_info    0x00000000000186c2     0x1954 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o
- .debug_info    0x000000000001a016     0x21d0 ./TouchGFX/generated/fonts/src/CachedFont.o
- .debug_info    0x000000000001c1e6      0x1d5 ./TouchGFX/generated/fonts/src/Font_Asap_Regular_35_4bpp_0.o
- .debug_info    0x000000000001c3bb     0x19be ./TouchGFX/generated/fonts/src/GeneratedFont.o
- .debug_info    0x000000000001dd79      0x6d5 ./TouchGFX/generated/fonts/src/Kerning_Asap_Regular_35_4bpp.o
- .debug_info    0x000000000001e44e     0x1499 ./TouchGFX/generated/fonts/src/Table_Asap_Regular_35_4bpp.o
- .debug_info    0x000000000001f8e7     0x3ca3 ./TouchGFX/generated/texts/src/Texts.o
- .debug_info    0x000000000002358a     0x163f ./TouchGFX/generated/texts/src/TypedTextDatabase.o
+.debug_info     0x0000000000000000    0x24bd8
+ .debug_info    0x0000000000000000     0x227f ./Core/Src/main.o
+ .debug_info    0x000000000000227f     0x2224 ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_info    0x00000000000044a3      0xc33 ./Core/Src/stm32f4xx_hal_timebase_tim.o
+ .debug_info    0x00000000000050d6      0x9fe ./Core/Src/stm32f4xx_it.o
+ .debug_info    0x0000000000005ad4      0x6a3 ./Core/Src/syscalls.o
+ .debug_info    0x0000000000006177      0x168 ./Core/Src/sysmem.o
+ .debug_info    0x00000000000062df      0x54a ./Core/Src/system_stm32f4xx.o
+ .debug_info    0x0000000000006829      0xf52 ./Core/Src/z_displ_ILI9XXX.o
+ .debug_info    0x000000000000777b       0x23 ./Core/Startup/startup_stm32f446retx.o
+ .debug_info    0x000000000000779e      0x996 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_info    0x0000000000008134      0xcd4 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
+ .debug_info    0x0000000000008e08      0xd9b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_info    0x0000000000009ba3      0x37a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.o
+ .debug_info    0x0000000000009f1d      0x8e7 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+ .debug_info    0x000000000000a804      0x739 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_info    0x000000000000af3d     0x23ed ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
+ .debug_info    0x000000000000d32a     0x15d5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o
+ .debug_info    0x000000000000e8ff      0x79e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o
+ .debug_info    0x000000000000f09d      0x916 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_info    0x000000000000f9b3      0x975 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
+ .debug_info    0x0000000000010328     0x15fb ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
+ .debug_info    0x0000000000011923     0x2948 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+ .debug_info    0x000000000001426b     0x14ae ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+ .debug_info    0x0000000000015719     0x2fb8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+ .debug_info    0x00000000000186d1     0x1954 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o
+ .debug_info    0x000000000001a025     0x21d0 ./TouchGFX/generated/fonts/src/CachedFont.o
+ .debug_info    0x000000000001c1f5      0x1d5 ./TouchGFX/generated/fonts/src/Font_Asap_Regular_35_4bpp_0.o
+ .debug_info    0x000000000001c3ca     0x19be ./TouchGFX/generated/fonts/src/GeneratedFont.o
+ .debug_info    0x000000000001dd88      0x6d5 ./TouchGFX/generated/fonts/src/Kerning_Asap_Regular_35_4bpp.o
+ .debug_info    0x000000000001e45d     0x1499 ./TouchGFX/generated/fonts/src/Table_Asap_Regular_35_4bpp.o
+ .debug_info    0x000000000001f8f6     0x3ca3 ./TouchGFX/generated/texts/src/Texts.o
+ .debug_info    0x0000000000023599     0x163f ./TouchGFX/generated/texts/src/TypedTextDatabase.o
 
-.debug_abbrev   0x0000000000000000     0x5785
- .debug_abbrev  0x0000000000000000      0x358 ./Core/Src/main.o
- .debug_abbrev  0x0000000000000358      0x2db ./Core/Src/stm32f4xx_hal_msp.o
- .debug_abbrev  0x0000000000000633      0x1f5 ./Core/Src/stm32f4xx_hal_timebase_tim.o
- .debug_abbrev  0x0000000000000828      0x194 ./Core/Src/stm32f4xx_it.o
- .debug_abbrev  0x00000000000009bc      0x1b6 ./Core/Src/syscalls.o
- .debug_abbrev  0x0000000000000b72       0xbc ./Core/Src/sysmem.o
- .debug_abbrev  0x0000000000000c2e      0x11a ./Core/Src/system_stm32f4xx.o
- .debug_abbrev  0x0000000000000d48      0x351 ./Core/Src/z_displ_ILI9XXX.o
- .debug_abbrev  0x0000000000001099       0x12 ./Core/Startup/startup_stm32f446retx.o
- .debug_abbrev  0x00000000000010ab      0x214 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_abbrev  0x00000000000012bf      0x252 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
- .debug_abbrev  0x0000000000001511      0x324 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_abbrev  0x0000000000001835      0x1a8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.o
- .debug_abbrev  0x00000000000019dd      0x264 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
- .debug_abbrev  0x0000000000001c41      0x1d3 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_abbrev  0x0000000000001e14      0x2ad ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
- .debug_abbrev  0x00000000000020c1      0x2e6 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o
- .debug_abbrev  0x00000000000023a7      0x1dc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o
- .debug_abbrev  0x0000000000002583      0x2b5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_abbrev  0x0000000000002838      0x209 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
- .debug_abbrev  0x0000000000002a41      0x284 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
- .debug_abbrev  0x0000000000002cc5      0x271 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
- .debug_abbrev  0x0000000000002f36      0x27c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
- .debug_abbrev  0x00000000000031b2      0x30e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
- .debug_abbrev  0x00000000000034c0      0x2ac ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o
- .debug_abbrev  0x000000000000376c      0x5b0 ./TouchGFX/generated/fonts/src/CachedFont.o
- .debug_abbrev  0x0000000000003d1c       0xb4 ./TouchGFX/generated/fonts/src/Font_Asap_Regular_35_4bpp_0.o
- .debug_abbrev  0x0000000000003dd0      0x52a ./TouchGFX/generated/fonts/src/GeneratedFont.o
- .debug_abbrev  0x00000000000042fa      0x1cf ./TouchGFX/generated/fonts/src/Kerning_Asap_Regular_35_4bpp.o
- .debug_abbrev  0x00000000000044c9      0x4d0 ./TouchGFX/generated/fonts/src/Table_Asap_Regular_35_4bpp.o
- .debug_abbrev  0x0000000000004999      0x8c8 ./TouchGFX/generated/texts/src/Texts.o
- .debug_abbrev  0x0000000000005261      0x524 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
+.debug_abbrev   0x0000000000000000     0x578c
+ .debug_abbrev  0x0000000000000000      0x35f ./Core/Src/main.o
+ .debug_abbrev  0x000000000000035f      0x2db ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_abbrev  0x000000000000063a      0x1f5 ./Core/Src/stm32f4xx_hal_timebase_tim.o
+ .debug_abbrev  0x000000000000082f      0x194 ./Core/Src/stm32f4xx_it.o
+ .debug_abbrev  0x00000000000009c3      0x1b6 ./Core/Src/syscalls.o
+ .debug_abbrev  0x0000000000000b79       0xbc ./Core/Src/sysmem.o
+ .debug_abbrev  0x0000000000000c35      0x11a ./Core/Src/system_stm32f4xx.o
+ .debug_abbrev  0x0000000000000d4f      0x351 ./Core/Src/z_displ_ILI9XXX.o
+ .debug_abbrev  0x00000000000010a0       0x12 ./Core/Startup/startup_stm32f446retx.o
+ .debug_abbrev  0x00000000000010b2      0x214 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_abbrev  0x00000000000012c6      0x252 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
+ .debug_abbrev  0x0000000000001518      0x324 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_abbrev  0x000000000000183c      0x1a8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.o
+ .debug_abbrev  0x00000000000019e4      0x264 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+ .debug_abbrev  0x0000000000001c48      0x1d3 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_abbrev  0x0000000000001e1b      0x2ad ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
+ .debug_abbrev  0x00000000000020c8      0x2e6 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o
+ .debug_abbrev  0x00000000000023ae      0x1dc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o
+ .debug_abbrev  0x000000000000258a      0x2b5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_abbrev  0x000000000000283f      0x209 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
+ .debug_abbrev  0x0000000000002a48      0x284 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
+ .debug_abbrev  0x0000000000002ccc      0x271 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+ .debug_abbrev  0x0000000000002f3d      0x27c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+ .debug_abbrev  0x00000000000031b9      0x30e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+ .debug_abbrev  0x00000000000034c7      0x2ac ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o
+ .debug_abbrev  0x0000000000003773      0x5b0 ./TouchGFX/generated/fonts/src/CachedFont.o
+ .debug_abbrev  0x0000000000003d23       0xb4 ./TouchGFX/generated/fonts/src/Font_Asap_Regular_35_4bpp_0.o
+ .debug_abbrev  0x0000000000003dd7      0x52a ./TouchGFX/generated/fonts/src/GeneratedFont.o
+ .debug_abbrev  0x0000000000004301      0x1cf ./TouchGFX/generated/fonts/src/Kerning_Asap_Regular_35_4bpp.o
+ .debug_abbrev  0x00000000000044d0      0x4d0 ./TouchGFX/generated/fonts/src/Table_Asap_Regular_35_4bpp.o
+ .debug_abbrev  0x00000000000049a0      0x8c8 ./TouchGFX/generated/texts/src/Texts.o
+ .debug_abbrev  0x0000000000005268      0x524 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
 
 .debug_aranges  0x0000000000000000     0x1a88
  .debug_aranges
@@ -12467,104 +12467,104 @@ LOAD C:/ST/STM32CubeIDE_1.13.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x0000000000035d4d      0x2c3 ./TouchGFX/generated/texts/src/Texts.o
  .debug_macro   0x0000000000036010      0x102 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
 
-.debug_line     0x0000000000000000    0x26ebf
- .debug_line    0x0000000000000000      0xdf5 ./Core/Src/main.o
- .debug_line    0x0000000000000df5      0xe2c ./Core/Src/stm32f4xx_hal_msp.o
- .debug_line    0x0000000000001c21      0x8cb ./Core/Src/stm32f4xx_hal_timebase_tim.o
- .debug_line    0x00000000000024ec      0xac7 ./Core/Src/stm32f4xx_it.o
- .debug_line    0x0000000000002fb3      0x8a8 ./Core/Src/syscalls.o
- .debug_line    0x000000000000385b      0x577 ./Core/Src/sysmem.o
- .debug_line    0x0000000000003dd2      0x8b9 ./Core/Src/system_stm32f4xx.o
- .debug_line    0x000000000000468b      0xd62 ./Core/Src/z_displ_ILI9XXX.o
- .debug_line    0x00000000000053ed       0x7a ./Core/Startup/startup_stm32f446retx.o
- .debug_line    0x0000000000005467      0xb51 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_line    0x0000000000005fb8     0x16d5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
- .debug_line    0x000000000000768d      0xdcc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_line    0x0000000000008459      0x999 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.o
- .debug_line    0x0000000000008df2     0x10f8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
- .debug_line    0x0000000000009eea      0xca2 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_line    0x000000000000ab8c     0x4fb6 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
- .debug_line    0x000000000000fb42     0x17ba ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o
- .debug_line    0x00000000000112fc      0x945 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o
- .debug_line    0x0000000000011c41     0x1103 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_line    0x0000000000012d44     0x1a77 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
- .debug_line    0x00000000000147bb     0x23a3 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
- .debug_line    0x0000000000016b5e     0x4db5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
- .debug_line    0x000000000001b913     0x27e2 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
- .debug_line    0x000000000001e0f5     0x3633 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
- .debug_line    0x0000000000021728     0x1db1 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o
- .debug_line    0x00000000000234d9      0x95c ./TouchGFX/generated/fonts/src/CachedFont.o
- .debug_line    0x0000000000023e35      0x56b ./TouchGFX/generated/fonts/src/Font_Asap_Regular_35_4bpp_0.o
- .debug_line    0x00000000000243a0      0x897 ./TouchGFX/generated/fonts/src/GeneratedFont.o
- .debug_line    0x0000000000024c37      0x5d7 ./TouchGFX/generated/fonts/src/Kerning_Asap_Regular_35_4bpp.o
- .debug_line    0x000000000002520e      0x6e0 ./TouchGFX/generated/fonts/src/Table_Asap_Regular_35_4bpp.o
- .debug_line    0x00000000000258ee      0xe91 ./TouchGFX/generated/texts/src/Texts.o
- .debug_line    0x000000000002677f      0x740 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
+.debug_line     0x0000000000000000    0x26ebd
+ .debug_line    0x0000000000000000      0xdf3 ./Core/Src/main.o
+ .debug_line    0x0000000000000df3      0xe2c ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_line    0x0000000000001c1f      0x8cb ./Core/Src/stm32f4xx_hal_timebase_tim.o
+ .debug_line    0x00000000000024ea      0xac7 ./Core/Src/stm32f4xx_it.o
+ .debug_line    0x0000000000002fb1      0x8a8 ./Core/Src/syscalls.o
+ .debug_line    0x0000000000003859      0x577 ./Core/Src/sysmem.o
+ .debug_line    0x0000000000003dd0      0x8b9 ./Core/Src/system_stm32f4xx.o
+ .debug_line    0x0000000000004689      0xd62 ./Core/Src/z_displ_ILI9XXX.o
+ .debug_line    0x00000000000053eb       0x7a ./Core/Startup/startup_stm32f446retx.o
+ .debug_line    0x0000000000005465      0xb51 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_line    0x0000000000005fb6     0x16d5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
+ .debug_line    0x000000000000768b      0xdcc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_line    0x0000000000008457      0x999 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.o
+ .debug_line    0x0000000000008df0     0x10f8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+ .debug_line    0x0000000000009ee8      0xca2 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_line    0x000000000000ab8a     0x4fb6 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
+ .debug_line    0x000000000000fb40     0x17ba ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o
+ .debug_line    0x00000000000112fa      0x945 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o
+ .debug_line    0x0000000000011c3f     0x1103 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_line    0x0000000000012d42     0x1a77 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
+ .debug_line    0x00000000000147b9     0x23a3 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
+ .debug_line    0x0000000000016b5c     0x4db5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+ .debug_line    0x000000000001b911     0x27e2 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+ .debug_line    0x000000000001e0f3     0x3633 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+ .debug_line    0x0000000000021726     0x1db1 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o
+ .debug_line    0x00000000000234d7      0x95c ./TouchGFX/generated/fonts/src/CachedFont.o
+ .debug_line    0x0000000000023e33      0x56b ./TouchGFX/generated/fonts/src/Font_Asap_Regular_35_4bpp_0.o
+ .debug_line    0x000000000002439e      0x897 ./TouchGFX/generated/fonts/src/GeneratedFont.o
+ .debug_line    0x0000000000024c35      0x5d7 ./TouchGFX/generated/fonts/src/Kerning_Asap_Regular_35_4bpp.o
+ .debug_line    0x000000000002520c      0x6e0 ./TouchGFX/generated/fonts/src/Table_Asap_Regular_35_4bpp.o
+ .debug_line    0x00000000000258ec      0xe91 ./TouchGFX/generated/texts/src/Texts.o
+ .debug_line    0x000000000002677d      0x740 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
 
-.debug_str      0x0000000000000000    0xeef3a
- .debug_str     0x0000000000000000    0xdf25b ./Core/Src/main.o
-                                      0xdf6dc (size before relaxing)
- .debug_str     0x00000000000df25b      0x322 ./Core/Src/stm32f4xx_hal_msp.o
+.debug_str      0x0000000000000000    0xeef3f
+ .debug_str     0x0000000000000000    0xdf260 ./Core/Src/main.o
+                                      0xdf6e1 (size before relaxing)
+ .debug_str     0x00000000000df260      0x322 ./Core/Src/stm32f4xx_hal_msp.o
                                       0xdef7c (size before relaxing)
- .debug_str     0x00000000000df57d       0xf7 ./Core/Src/stm32f4xx_hal_timebase_tim.o
+ .debug_str     0x00000000000df582       0xf7 ./Core/Src/stm32f4xx_hal_timebase_tim.o
                                       0xda5ea (size before relaxing)
- .debug_str     0x00000000000df674      0x14f ./Core/Src/stm32f4xx_it.o
+ .debug_str     0x00000000000df679      0x14f ./Core/Src/stm32f4xx_it.o
                                       0xddc77 (size before relaxing)
- .debug_str     0x00000000000df7c3     0x20d8 ./Core/Src/syscalls.o
+ .debug_str     0x00000000000df7c8     0x20d8 ./Core/Src/syscalls.o
                                        0x98d8 (size before relaxing)
- .debug_str     0x00000000000e189b       0x6b ./Core/Src/sysmem.o
+ .debug_str     0x00000000000e18a0       0x6b ./Core/Src/sysmem.o
                                        0x608f (size before relaxing)
- .debug_str     0x00000000000e1906       0xdb ./Core/Src/system_stm32f4xx.o
+ .debug_str     0x00000000000e190b       0xdb ./Core/Src/system_stm32f4xx.o
                                       0xd9ac2 (size before relaxing)
- .debug_str     0x00000000000e19e1      0x2af ./Core/Src/z_displ_ILI9XXX.o
+ .debug_str     0x00000000000e19e6      0x2af ./Core/Src/z_displ_ILI9XXX.o
                                       0xddeb1 (size before relaxing)
- .debug_str     0x00000000000e1c90       0x34 ./Core/Startup/startup_stm32f446retx.o
+ .debug_str     0x00000000000e1c95       0x34 ./Core/Startup/startup_stm32f446retx.o
                                          0xa1 (size before relaxing)
- .debug_str     0x00000000000e1cc4      0x5ba ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_str     0x00000000000e1cc9      0x5ba ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
                                       0xda687 (size before relaxing)
- .debug_str     0x00000000000e227e      0x2c5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
+ .debug_str     0x00000000000e2283      0x2c5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
                                       0xda08a (size before relaxing)
- .debug_str     0x00000000000e2543      0x31d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_str     0x00000000000e2548      0x31d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
                                       0xda395 (size before relaxing)
- .debug_str     0x00000000000e2860       0x95 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.o
+ .debug_str     0x00000000000e2865       0x95 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.o
                                       0xd9acb (size before relaxing)
- .debug_str     0x00000000000e28f5      0x2c7 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+ .debug_str     0x00000000000e28fa      0x2c7 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
                                       0xd9eb7 (size before relaxing)
- .debug_str     0x00000000000e2bbc      0x11c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_str     0x00000000000e2bc1      0x11c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
                                       0xd9c3d (size before relaxing)
- .debug_str     0x00000000000e2cd8      0xa9f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
+ .debug_str     0x00000000000e2cdd      0xa9f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
                                       0xdaa6d (size before relaxing)
- .debug_str     0x00000000000e3777      0x832 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o
+ .debug_str     0x00000000000e377c      0x832 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o
                                       0xda5b7 (size before relaxing)
- .debug_str     0x00000000000e3fa9      0x12d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o
+ .debug_str     0x00000000000e3fae      0x12d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o
                                       0xd9eb8 (size before relaxing)
- .debug_str     0x00000000000e40d6      0x1c9 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_str     0x00000000000e40db      0x1c9 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
                                       0xd9efb (size before relaxing)
- .debug_str     0x00000000000e429f      0x19d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
+ .debug_str     0x00000000000e42a4      0x19d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
                                       0xd9f2e (size before relaxing)
- .debug_str     0x00000000000e443c      0x4ec ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
+ .debug_str     0x00000000000e4441      0x4ec ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
                                       0xda361 (size before relaxing)
- .debug_str     0x00000000000e4928      0xd5d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+ .debug_str     0x00000000000e492d      0xd5d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
                                       0xdae17 (size before relaxing)
- .debug_str     0x00000000000e5685      0x493 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+ .debug_str     0x00000000000e568a      0x493 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
                                       0xda633 (size before relaxing)
- .debug_str     0x00000000000e5b18      0x5e2 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+ .debug_str     0x00000000000e5b1d      0x5e2 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
                                       0xda470 (size before relaxing)
- .debug_str     0x00000000000e60fa      0x43b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o
+ .debug_str     0x00000000000e60ff      0x43b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o
                                       0xda400 (size before relaxing)
- .debug_str     0x00000000000e6535     0x3041 ./TouchGFX/generated/fonts/src/CachedFont.o
+ .debug_str     0x00000000000e653a     0x3041 ./TouchGFX/generated/fonts/src/CachedFont.o
                                        0x70d6 (size before relaxing)
- .debug_str     0x00000000000e9576       0x60 ./TouchGFX/generated/fonts/src/Font_Asap_Regular_35_4bpp_0.o
+ .debug_str     0x00000000000e957b       0x60 ./TouchGFX/generated/fonts/src/Font_Asap_Regular_35_4bpp_0.o
                                        0x4d07 (size before relaxing)
- .debug_str     0x00000000000e95d6      0x2c1 ./TouchGFX/generated/fonts/src/GeneratedFont.o
+ .debug_str     0x00000000000e95db      0x2c1 ./TouchGFX/generated/fonts/src/GeneratedFont.o
                                        0x6487 (size before relaxing)
- .debug_str     0x00000000000e9897       0x5e ./TouchGFX/generated/fonts/src/Kerning_Asap_Regular_35_4bpp.o
+ .debug_str     0x00000000000e989c       0x5e ./TouchGFX/generated/fonts/src/Kerning_Asap_Regular_35_4bpp.o
                                        0x543a (size before relaxing)
- .debug_str     0x00000000000e98f5      0x15d ./TouchGFX/generated/fonts/src/Table_Asap_Regular_35_4bpp.o
+ .debug_str     0x00000000000e98fa      0x15d ./TouchGFX/generated/fonts/src/Table_Asap_Regular_35_4bpp.o
                                        0x6362 (size before relaxing)
- .debug_str     0x00000000000e9a52     0x53a3 ./TouchGFX/generated/texts/src/Texts.o
+ .debug_str     0x00000000000e9a57     0x53a3 ./TouchGFX/generated/texts/src/Texts.o
                                        0xdb1f (size before relaxing)
- .debug_str     0x00000000000eedf5      0x145 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
+ .debug_str     0x00000000000eedfa      0x145 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
                                        0x6648 (size before relaxing)
 
 .debug_frame    0x0000000000000000     0x7bec

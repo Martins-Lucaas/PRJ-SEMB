@@ -129,7 +129,6 @@ int main(void)
   {
 	/* USER CODE BEGIN 3 */
 
-	void init(void);
 
 
     /* USER CODE END WHILE */

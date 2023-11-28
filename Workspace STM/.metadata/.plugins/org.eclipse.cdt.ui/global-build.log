@@ -1,4 +1,4 @@
-10:40:29 **** Incremental Build of configuration Debug for project Multiparameter_Monitor ****
+10:51:19 **** Incremental Build of configuration Debug for project Multiparameter_Monitor ****
 make -j24 all 
 arm-none-eabi-size   Multiparameter_Monitor.elf 
    text	   data	    bss	    dec	    hex	filename
