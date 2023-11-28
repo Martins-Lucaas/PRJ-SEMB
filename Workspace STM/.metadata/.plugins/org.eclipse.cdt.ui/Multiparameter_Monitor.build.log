@@ -1,4 +1,4 @@
-01:05:03 **** Incremental Build of configuration Debug for project Multiparameter_Monitor ****
+02:18:30 **** Incremental Build of configuration Debug for project Multiparameter_Monitor ****
 make -j24 all 
 arm-none-eabi-g++ "../TouchGFX/simulator/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"TouchGFX/simulator/main.d" -MT"TouchGFX/simulator/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "TouchGFX/simulator/main.o"
 arm-none-eabi-g++ "../TouchGFX/gui/src/model/Model.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"TouchGFX/gui/src/model/Model.d" -MT"TouchGFX/gui/src/model/Model.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "TouchGFX/gui/src/model/Model.o"
@@ -18,8 +18,9 @@ arm-none-eabi-g++ "../TouchGFX/generated/images/src/image_bg.cpp" -mcpu=cortex-m
 arm-none-eabi-g++ "../TouchGFX/generated/images/src/image_counter_box.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX" -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX/generated" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"TouchGFX/generated/images/src/image_counter_box.d" -MT"TouchGFX/generated/images/src/image_counter_box.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "TouchGFX/generated/images/src/image_counter_box.o"
 arm-none-eabi-g++ "../TouchGFX/generated/images/src/image_down_btn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX" -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX/generated" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"TouchGFX/generated/images/src/image_down_btn.d" -MT"TouchGFX/generated/images/src/image_down_btn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "TouchGFX/generated/images/src/image_down_btn.o"
 arm-none-eabi-g++ "../TouchGFX/generated/images/src/image_down_btn_disabled.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX" -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX/generated" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"TouchGFX/generated/images/src/image_down_btn_disabled.d" -MT"TouchGFX/generated/images/src/image_down_btn_disabled.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "TouchGFX/generated/images/src/image_down_btn_disabled.o"
-../TouchGFX/simulator/main.cpp:1:10: fatal error: platform/hal/simulator/sdl2/HALSDL2.hpp: No such file or directory
 arm-none-eabi-g++ "../TouchGFX/generated/images/src/image_down_btn_pressed.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX" -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX/generated" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"TouchGFX/generated/images/src/image_down_btn_pressed.d" -MT"TouchGFX/generated/images/src/image_down_btn_pressed.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "TouchGFX/generated/images/src/image_down_btn_pressed.o"
+../TouchGFX/simulator/main.cpp:1:10: fatal error: platform/hal/simulator/sdl2/HALSDL2.hpp: No such file or directory
+arm-none-eabi-g++ "../TouchGFX/generated/images/src/image_up_btn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX" -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX/generated" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"TouchGFX/generated/images/src/image_up_btn.d" -MT"TouchGFX/generated/images/src/image_up_btn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "TouchGFX/generated/images/src/image_up_btn.o"
     1 | #include <platform/hal/simulator/sdl2/HALSDL2.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
@@ -27,23 +28,23 @@ compilation terminated.
     1 | #include <gui/model/Model.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
-arm-none-eabi-g++ "../TouchGFX/generated/images/src/image_up_btn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX" -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX/generated" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"TouchGFX/generated/images/src/image_up_btn.d" -MT"TouchGFX/generated/images/src/image_up_btn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "TouchGFX/generated/images/src/image_up_btn.o"
+arm-none-eabi-g++ "../TouchGFX/generated/images/src/image_up_btn_disabled.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX" -I"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/TouchGFX/generated" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"TouchGFX/generated/images/src/image_up_btn_disabled.d" -MT"TouchGFX/generated/images/src/image_up_btn_disabled.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "TouchGFX/generated/images/src/image_up_btn_disabled.o"
 ../TouchGFX/gui/src/main_screen/MainPresenter.cpp:1:10: fatal error: gui/main_screen/MainView.hpp: No such file or directory
     1 | #include <gui/main_screen/MainView.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
 make: *** [TouchGFX/simulator/subdir.mk:19: TouchGFX/simulator/main.o] Error 1
 make: *** Waiting for unfinished jobs....
+make: *** [TouchGFX/gui/src/model/subdir.mk:19: TouchGFX/gui/src/model/Model.o] Error 1
 ../TouchGFX/gui/src/main_screen/MainView.cpp:1:10: fatal error: gui/main_screen/MainView.hpp: No such file or directory
     1 | #include <gui/main_screen/MainView.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
-make: *** [TouchGFX/gui/src/model/subdir.mk:19: TouchGFX/gui/src/model/Model.o] Error 1
-make: *** [TouchGFX/gui/src/main_screen/subdir.mk:22: TouchGFX/gui/src/main_screen/MainPresenter.o] Error 1
 ../TouchGFX/gui/src/common/FrontendApplication.cpp:1:10: fatal error: gui/common/FrontendApplication.hpp: No such file or directory
     1 | #include <gui/common/FrontendApplication.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
+make: *** [TouchGFX/gui/src/main_screen/subdir.mk:22: TouchGFX/gui/src/main_screen/MainPresenter.o] Error 1
 make: *** [TouchGFX/gui/src/main_screen/subdir.mk:22: TouchGFX/gui/src/main_screen/MainView.o] Error 1
 make: *** [TouchGFX/gui/src/common/subdir.mk:19: TouchGFX/gui/src/common/FrontendApplication.o] Error 1
 ../TouchGFX/generated/texts/src/Texts.cpp:5:10: fatal error: touchgfx/TextProvider.hpp: No such file or directory
@@ -54,11 +55,11 @@ compilation terminated.
     4 | #include <touchgfx/TypedText.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
+make: *** [TouchGFX/generated/texts/src/subdir.mk:25: TouchGFX/generated/texts/src/Texts.o] Error 1
 ../TouchGFX/generated/simulator/src/video/SoftwareMJPEGDecoder.cpp:4:10: fatal error: jinclude.h: No such file or directory
     4 | #include <jinclude.h>
       |          ^~~~~~~~~~~~
 compilation terminated.
-make: *** [TouchGFX/generated/texts/src/subdir.mk:25: TouchGFX/generated/texts/src/Texts.o] Error 1
 ../TouchGFX/generated/texts/src/LanguageGb.cpp:5:10: fatal error: touchgfx/Unicode.hpp: No such file or directory
     5 | #include <touchgfx/Unicode.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~~
@@ -67,14 +68,14 @@ make: *** [TouchGFX/generated/texts/src/subdir.mk:25: TouchGFX/generated/texts/s
 ../TouchGFX/generated/simulator/src/mainBase.cpp:4:10: fatal error: simulator/mainBase.hpp: No such file or directory
     4 | #include <simulator/mainBase.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~~~~
-compilation terminated.
 make: *** [TouchGFX/generated/simulator/src/video/subdir.mk:19: TouchGFX/generated/simulator/src/video/SoftwareMJPEGDecoder.o] Error 1
+compilation terminated.
 make: *** [TouchGFX/generated/texts/src/subdir.mk:25: TouchGFX/generated/texts/src/LanguageGb.o] Error 1
 ../TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.cpp:4:10: fatal error: touchgfx/hal/Config.hpp: No such file or directory
     4 | #include <touchgfx/hal/Config.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~
-compilation terminated.
 make: *** [TouchGFX/generated/simulator/src/subdir.mk:19: TouchGFX/generated/simulator/src/mainBase.o] Error 1
+compilation terminated.
 ../TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.cpp:4:10: fatal error: touchgfx/hal/Config.hpp: No such file or directory
     4 | #include <touchgfx/hal/Config.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,17 +85,17 @@ make: *** [TouchGFX/generated/images/src/__generated/subdir.mk:22: TouchGFX/gene
     4 | #include <images/BitmapDatabase.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
+make: *** [TouchGFX/generated/images/src/__generated/subdir.mk:22: TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.o] Error 1
 ../TouchGFX/generated/images/src/SVGDatabase.cpp:3:10: fatal error: images/SVGDatabase.hpp: No such file or directory
     3 | #include <images/SVGDatabase.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
-make: *** [TouchGFX/generated/images/src/__generated/subdir.mk:22: TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.o] Error 1
 make: *** [TouchGFX/generated/images/src/subdir.mk:46: TouchGFX/generated/images/src/BitmapDatabase.o] Error 1
+make: *** [TouchGFX/generated/images/src/subdir.mk:46: TouchGFX/generated/images/src/SVGDatabase.o] Error 1
 ../TouchGFX/generated/images/src/image_bg.cpp:4:10: fatal error: touchgfx/hal/Config.hpp: No such file or directory
     4 | #include <touchgfx/hal/Config.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
-make: *** [TouchGFX/generated/images/src/subdir.mk:46: TouchGFX/generated/images/src/SVGDatabase.o] Error 1
 ../TouchGFX/generated/images/src/image_counter_box.cpp:4:10: fatal error: touchgfx/hal/Config.hpp: No such file or directory
     4 | #include <touchgfx/hal/Config.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~
@@ -102,26 +103,31 @@ compilation terminated.
 ../TouchGFX/generated/images/src/image_down_btn.cpp:4:10: fatal error: touchgfx/hal/Config.hpp: No such file or directory
     4 | #include <touchgfx/hal/Config.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
 make: *** [TouchGFX/generated/images/src/subdir.mk:46: TouchGFX/generated/images/src/image_bg.o] Error 1
-compilation terminated.
 make: *** [TouchGFX/generated/images/src/subdir.mk:46: TouchGFX/generated/images/src/image_counter_box.o] Error 1
-make: *** [TouchGFX/generated/images/src/subdir.mk:46: TouchGFX/generated/images/src/image_down_btn.o] Error 1
-../TouchGFX/generated/images/src/image_down_btn_pressed.cpp:4:10: fatal error: touchgfx/hal/Config.hpp: No such file or directory
-    4 | #include <touchgfx/hal/Config.hpp>
-      |          ^~~~~~~~~~~~~~~~~~~~~~~~~
-compilation terminated.
 ../TouchGFX/generated/images/src/image_down_btn_disabled.cpp:4:10: fatal error: touchgfx/hal/Config.hpp: No such file or directory
     4 | #include <touchgfx/hal/Config.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
+../TouchGFX/generated/images/src/image_down_btn_pressed.cpp:4:10: fatal error: touchgfx/hal/Config.hpp: No such file or directory
+    4 | #include <touchgfx/hal/Config.hpp>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [TouchGFX/generated/images/src/subdir.mk:46: TouchGFX/generated/images/src/image_down_btn.o] Error 1
+make: *** [TouchGFX/generated/images/src/subdir.mk:46: TouchGFX/generated/images/src/image_down_btn_disabled.o] Error 1
+make: *** [TouchGFX/generated/images/src/subdir.mk:46: TouchGFX/generated/images/src/image_down_btn_pressed.o] Error 1
 ../TouchGFX/generated/images/src/image_up_btn.cpp:4:10: fatal error: touchgfx/hal/Config.hpp: No such file or directory
     4 | #include <touchgfx/hal/Config.hpp>
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
-make: *** [TouchGFX/generated/images/src/subdir.mk:46: TouchGFX/generated/images/src/image_down_btn_pressed.o] Error 1
-make: *** [TouchGFX/generated/images/src/subdir.mk:46: TouchGFX/generated/images/src/image_down_btn_disabled.o] Error 1
+../TouchGFX/generated/images/src/image_up_btn_disabled.cpp:4:10: fatal error: touchgfx/hal/Config.hpp: No such file or directory
+    4 | #include <touchgfx/hal/Config.hpp>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
 make: *** [TouchGFX/generated/images/src/subdir.mk:46: TouchGFX/generated/images/src/image_up_btn.o] Error 1
+make: *** [TouchGFX/generated/images/src/subdir.mk:46: TouchGFX/generated/images/src/image_up_btn_disabled.o] Error 1
 "make -j24 all" terminated with exit code 2. Build might be incomplete.
 
-01:05:04 Build Failed. 41 errors, 0 warnings. (took 545ms)
+02:18:31 Build Failed. 43 errors, 0 warnings. (took 547ms)
 
