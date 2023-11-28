@@ -119,6 +119,10 @@ max30100_init:
 	.cfi_endproc
 .LFE239:
 	.size	max30100_init, .-max30100_init
+	.section	.rodata
+	.align	2
+.LC0:
+	.ascii	"%d\000"
 	.section	.text.max30100_write,"ax",%progbits
 	.align	1
 	.global	max30100_write
@@ -188,9 +192,15 @@ max30100_write:
 	movs	r1, #174
 	bl	HAL_I2C_Master_Transmit
 	.loc 1 43 5
+	ldr	r1, [r7, #4]
+	ldr	r3, [r7, #20]
+	ldr	r2, .L5
+	ldr	r0, [r7, #20]
+	bl	snprintf
+	.loc 1 45 5
 	ldr	r0, [r7, #20]
 	bl	free
-	.loc 1 44 1
+	.loc 1 46 1
 	nop
 	adds	r7, r7, #24
 	.cfi_def_cfa_offset 8
@@ -198,6 +208,10 @@ max30100_write:
 	.cfi_def_cfa_register 13
 	@ sp needed
 	pop	{r7, pc}
+.L6:
+	.align	2
+.L5:
+	.word	.LC0
 	.cfi_endproc
 .LFE240:
 	.size	max30100_write, .-max30100_write
@@ -210,7 +224,7 @@ max30100_write:
 	.type	max30100_read, %function
 max30100_read:
 .LFB241:
-	.loc 1 48 1
+	.loc 1 50 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 24
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -229,10 +243,10 @@ max30100_read:
 	strb	r3, [r7, #11]
 	mov	r3, r2	@ movhi
 	strh	r3, [r7, #8]	@ movhi
-	.loc 1 49 13
+	.loc 1 51 13
 	ldrb	r3, [r7, #11]
 	strb	r3, [r7, #23]
-	.loc 1 50 5
+	.loc 1 52 5
 	ldr	r3, [r7, #12]
 	ldr	r0, [r3]
 	add	r2, r7, #23
@@ -241,7 +255,7 @@ max30100_read:
 	movs	r3, #1
 	movs	r1, #174
 	bl	HAL_I2C_Master_Transmit
-	.loc 1 51 5
+	.loc 1 53 5
 	ldr	r3, [r7, #12]
 	ldr	r0, [r3]
 	ldrh	r3, [r7, #8]
@@ -250,7 +264,7 @@ max30100_read:
 	ldr	r2, [r7, #4]
 	movs	r1, #174
 	bl	HAL_I2C_Master_Receive
-	.loc 1 52 1
+	.loc 1 54 1
 	nop
 	adds	r7, r7, #24
 	.cfi_def_cfa_offset 8
@@ -270,7 +284,7 @@ max30100_read:
 	.type	max30100_reset, %function
 max30100_reset:
 .LFB242:
-	.loc 1 56 1
+	.loc 1 58 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -283,16 +297,16 @@ max30100_reset:
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
-	.loc 1 57 13
+	.loc 1 59 13
 	movs	r3, #64
 	strb	r3, [r7, #15]
-	.loc 1 58 5
+	.loc 1 60 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #9
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 59 1
+	.loc 1 61 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -312,7 +326,7 @@ max30100_reset:
 	.type	max30100_set_a_full, %function
 max30100_set_a_full:
 .LFB243:
-	.loc 1 63 1
+	.loc 1 65 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -327,24 +341,24 @@ max30100_set_a_full:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 64 13
+	.loc 1 66 13
 	movs	r3, #0
 	strb	r3, [r7, #15]
-	.loc 1 65 5
+	.loc 1 67 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #2
 	ldr	r0, [r7, #4]
 	bl	max30100_read
-	.loc 1 66 9
+	.loc 1 68 9
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	and	r3, r3, #127
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 67 29
+	.loc 1 69 29
 	ldrb	r3, [r7, #3]	@ zero_extendqisi2
 	lsls	r3, r3, #7
-	.loc 1 67 9
+	.loc 1 69 9
 	sxtb	r2, r3
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	sxtb	r3, r3
@@ -352,13 +366,13 @@ max30100_set_a_full:
 	sxtb	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 68 5
+	.loc 1 70 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #2
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 69 1
+	.loc 1 71 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -378,7 +392,7 @@ max30100_set_a_full:
 	.type	max30100_set_ppg_rdy, %function
 max30100_set_ppg_rdy:
 .LFB244:
-	.loc 1 73 1
+	.loc 1 75 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -393,40 +407,40 @@ max30100_set_ppg_rdy:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 74 13
+	.loc 1 76 13
 	movs	r3, #0
 	strb	r3, [r7, #15]
-	.loc 1 75 5
+	.loc 1 77 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #2
 	ldr	r0, [r7, #4]
 	bl	max30100_read
-	.loc 1 76 9
+	.loc 1 78 9
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	bic	r3, r3, #64
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 77 29
+	.loc 1 79 29
 	ldrb	r3, [r7, #3]	@ zero_extendqisi2
 	lsls	r3, r3, #6
 	sxtb	r3, r3
 	and	r3, r3, #64
 	sxtb	r2, r3
-	.loc 1 77 9
+	.loc 1 79 9
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	sxtb	r3, r3
 	orrs	r3, r3, r2
 	sxtb	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 78 5
+	.loc 1 80 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #2
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 79 1
+	.loc 1 81 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -446,7 +460,7 @@ max30100_set_ppg_rdy:
 	.type	max30100_set_alc_ovf, %function
 max30100_set_alc_ovf:
 .LFB245:
-	.loc 1 83 1
+	.loc 1 85 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -461,40 +475,40 @@ max30100_set_alc_ovf:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 84 13
+	.loc 1 86 13
 	movs	r3, #0
 	strb	r3, [r7, #15]
-	.loc 1 85 5
+	.loc 1 87 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #2
 	ldr	r0, [r7, #4]
 	bl	max30100_read
-	.loc 1 86 9
+	.loc 1 88 9
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	bic	r3, r3, #32
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 87 29
+	.loc 1 89 29
 	ldrb	r3, [r7, #3]	@ zero_extendqisi2
 	lsls	r3, r3, #5
 	sxtb	r3, r3
 	and	r3, r3, #32
 	sxtb	r2, r3
-	.loc 1 87 9
+	.loc 1 89 9
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	sxtb	r3, r3
 	orrs	r3, r3, r2
 	sxtb	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 88 5
+	.loc 1 90 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #2
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 89 1
+	.loc 1 91 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -514,7 +528,7 @@ max30100_set_alc_ovf:
 	.type	max30100_set_die_temp_rdy, %function
 max30100_set_die_temp_rdy:
 .LFB246:
-	.loc 1 93 1
+	.loc 1 95 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -529,21 +543,21 @@ max30100_set_die_temp_rdy:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 94 35
+	.loc 1 96 35
 	ldrb	r3, [r7, #3]	@ zero_extendqisi2
 	lsls	r3, r3, #1
 	uxtb	r3, r3
 	and	r3, r3, #2
 	uxtb	r3, r3
-	.loc 1 94 13
+	.loc 1 96 13
 	strb	r3, [r7, #15]
-	.loc 1 95 5
+	.loc 1 97 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #3
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 96 1
+	.loc 1 98 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -563,7 +577,7 @@ max30100_set_die_temp_rdy:
 	.type	max30100_set_die_temp_en, %function
 max30100_set_die_temp_en:
 .LFB247:
-	.loc 1 100 1
+	.loc 1 102 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -578,21 +592,21 @@ max30100_set_die_temp_en:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 101 35
+	.loc 1 103 35
 	ldrb	r3, [r7, #3]	@ zero_extendqisi2
 	lsls	r3, r3, #1
 	uxtb	r3, r3
 	and	r3, r3, #2
 	uxtb	r3, r3
-	.loc 1 101 13
+	.loc 1 103 13
 	strb	r3, [r7, #15]
-	.loc 1 102 5
+	.loc 1 104 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #33
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 103 1
+	.loc 1 105 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -612,7 +626,7 @@ max30100_set_die_temp_en:
 	.type	max30100_on_interrupt, %function
 max30100_on_interrupt:
 .LFB248:
-	.loc 1 107 1
+	.loc 1 109 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -625,11 +639,11 @@ max30100_on_interrupt:
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
-	.loc 1 108 26
+	.loc 1 110 26
 	ldr	r3, [r7, #4]
 	movs	r2, #1
 	strb	r2, [r3, #260]
-	.loc 1 109 1
+	.loc 1 111 1
 	nop
 	adds	r7, r7, #12
 	.cfi_def_cfa_offset 4
@@ -652,7 +666,7 @@ max30100_on_interrupt:
 	.type	max30100_has_interrupt, %function
 max30100_has_interrupt:
 .LFB249:
-	.loc 1 113 1
+	.loc 1 115 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -665,10 +679,10 @@ max30100_has_interrupt:
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
-	.loc 1 114 15
+	.loc 1 116 15
 	ldr	r3, [r7, #4]
 	ldrb	r3, [r3, #260]	@ zero_extendqisi2
-	.loc 1 115 1
+	.loc 1 117 1
 	mov	r0, r3
 	adds	r7, r7, #12
 	.cfi_def_cfa_offset 4
@@ -691,7 +705,7 @@ max30100_has_interrupt:
 	.type	max30100_interrupt_handler, %function
 max30100_interrupt_handler:
 .LFB250:
-	.loc 1 119 1
+	.loc 1 121 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -704,51 +718,51 @@ max30100_interrupt_handler:
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
-	.loc 1 120 13
+	.loc 1 122 13
 	movs	r3, #0
 	strh	r3, [r7, #12]	@ movhi
-	.loc 1 122 5
+	.loc 1 124 5
 	add	r2, r7, #12
 	movs	r3, #2
 	movs	r1, #0
 	ldr	r0, [r7, #4]
 	bl	max30100_read
-	.loc 1 124 13
+	.loc 1 126 13
 	ldrb	r3, [r7, #12]	@ zero_extendqisi2
-	.loc 1 124 23
+	.loc 1 126 23
 	lsrs	r3, r3, #7
 	uxtb	r3, r3
 	and	r3, r3, #1
-	.loc 1 124 8
+	.loc 1 126 8
 	cmp	r3, #0
-	beq	.L16
-	.loc 1 127 9
+	beq	.L18
+	.loc 1 129 9
 	ldr	r0, [r7, #4]
 	bl	max30100_read_fifo
-.L16:
-	.loc 1 140 13
+.L18:
+	.loc 1 142 13
 	ldrb	r3, [r7, #13]	@ zero_extendqisi2
-	.loc 1 140 23
+	.loc 1 142 23
 	lsrs	r3, r3, #1
 	uxtb	r3, r3
 	and	r3, r3, #1
-	.loc 1 140 8
+	.loc 1 142 8
 	cmp	r3, #0
-	beq	.L17
+	beq	.L19
 .LBB2:
-	.loc 1 145 9
+	.loc 1 147 9
 	add	r2, r7, #10
 	add	r3, r7, #11
 	mov	r1, r3
 	ldr	r0, [r7, #4]
 	bl	max30100_read_temp
-.L17:
+.L19:
 .LBE2:
-	.loc 1 150 26
+	.loc 1 152 26
 	ldr	r3, [r7, #4]
 	movs	r2, #0
 	strb	r2, [r3, #260]
-	.loc 1 151 1
+	.loc 1 153 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -768,7 +782,7 @@ max30100_interrupt_handler:
 	.type	max30100_shutdown, %function
 max30100_shutdown:
 .LFB251:
-	.loc 1 155 1
+	.loc 1 157 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -783,34 +797,34 @@ max30100_shutdown:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 157 5
-	add	r2, r7, #15
-	movs	r3, #1
-	movs	r1, #9
-	ldr	r0, [r7, #4]
-	bl	max30100_read
-	.loc 1 158 22
-	ldrb	r3, [r7, #15]	@ zero_extendqisi2
-	sxtb	r3, r3
-	and	r3, r3, #127
-	sxtb	r2, r3
-	.loc 1 158 38
-	ldrb	r3, [r7, #3]	@ zero_extendqisi2
-	lsls	r3, r3, #7
-	.loc 1 158 30
-	sxtb	r3, r3
-	orrs	r3, r3, r2
-	sxtb	r3, r3
-	uxtb	r3, r3
-	.loc 1 158 12
-	strb	r3, [r7, #15]
 	.loc 1 159 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #9
 	ldr	r0, [r7, #4]
+	bl	max30100_read
+	.loc 1 160 22
+	ldrb	r3, [r7, #15]	@ zero_extendqisi2
+	sxtb	r3, r3
+	and	r3, r3, #127
+	sxtb	r2, r3
+	.loc 1 160 38
+	ldrb	r3, [r7, #3]	@ zero_extendqisi2
+	lsls	r3, r3, #7
+	.loc 1 160 30
+	sxtb	r3, r3
+	orrs	r3, r3, r2
+	sxtb	r3, r3
+	uxtb	r3, r3
+	.loc 1 160 12
+	strb	r3, [r7, #15]
+	.loc 1 161 5
+	add	r2, r7, #15
+	movs	r3, #1
+	movs	r1, #9
+	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 160 1
+	.loc 1 162 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -830,7 +844,7 @@ max30100_shutdown:
 	.type	max30100_set_mode, %function
 max30100_set_mode:
 .LFB252:
-	.loc 1 164 1
+	.loc 1 166 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -845,34 +859,34 @@ max30100_set_mode:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 166 5
-	add	r2, r7, #15
-	movs	r3, #1
-	movs	r1, #9
-	ldr	r0, [r7, #4]
-	bl	max30100_read
-	.loc 1 167 22
-	ldrb	r3, [r7, #15]	@ zero_extendqisi2
-	sxtb	r3, r3
-	bic	r3, r3, #7
-	sxtb	r2, r3
-	.loc 1 167 30
-	ldrsb	r3, [r7, #3]
-	orrs	r3, r3, r2
-	sxtb	r3, r3
-	uxtb	r3, r3
-	.loc 1 167 12
-	strb	r3, [r7, #15]
 	.loc 1 168 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #9
 	ldr	r0, [r7, #4]
+	bl	max30100_read
+	.loc 1 169 22
+	ldrb	r3, [r7, #15]	@ zero_extendqisi2
+	sxtb	r3, r3
+	bic	r3, r3, #7
+	sxtb	r2, r3
+	.loc 1 169 30
+	ldrsb	r3, [r7, #3]
+	orrs	r3, r3, r2
+	sxtb	r3, r3
+	uxtb	r3, r3
+	.loc 1 169 12
+	strb	r3, [r7, #15]
+	.loc 1 170 5
+	add	r2, r7, #15
+	movs	r3, #1
+	movs	r1, #9
+	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 169 5
+	.loc 1 171 5
 	ldr	r0, [r7, #4]
 	bl	max30100_clear_fifo
-	.loc 1 170 1
+	.loc 1 172 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -892,7 +906,7 @@ max30100_set_mode:
 	.type	max30100_set_sampling_rate, %function
 max30100_set_sampling_rate:
 .LFB253:
-	.loc 1 174 1
+	.loc 1 176 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -907,27 +921,27 @@ max30100_set_sampling_rate:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 176 5
-	add	r2, r7, #15
-	movs	r3, #1
-	movs	r1, #10
-	ldr	r0, [r7, #4]
-	bl	max30100_read
-	.loc 1 177 30
-	ldrb	r3, [r7, #15]	@ zero_extendqisi2
-	lsls	r3, r3, #2
-	uxtb	r3, r3
-	bic	r3, r3, #115
-	uxtb	r3, r3
-	.loc 1 177 12
-	strb	r3, [r7, #15]
 	.loc 1 178 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #10
 	ldr	r0, [r7, #4]
+	bl	max30100_read
+	.loc 1 179 30
+	ldrb	r3, [r7, #15]	@ zero_extendqisi2
+	lsls	r3, r3, #2
+	uxtb	r3, r3
+	bic	r3, r3, #115
+	uxtb	r3, r3
+	.loc 1 179 12
+	strb	r3, [r7, #15]
+	.loc 1 180 5
+	add	r2, r7, #15
+	movs	r3, #1
+	movs	r1, #10
+	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 179 1
+	.loc 1 181 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -947,7 +961,7 @@ max30100_set_sampling_rate:
 	.type	max30100_set_led_pulse_width, %function
 max30100_set_led_pulse_width:
 .LFB254:
-	.loc 1 183 1
+	.loc 1 185 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -962,31 +976,31 @@ max30100_set_led_pulse_width:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 185 5
-	add	r2, r7, #15
-	movs	r3, #1
-	movs	r1, #10
-	ldr	r0, [r7, #4]
-	bl	max30100_read
-	.loc 1 186 22
-	ldrb	r3, [r7, #15]	@ zero_extendqisi2
-	sxtb	r3, r3
-	and	r3, r3, #124
-	sxtb	r2, r3
-	.loc 1 186 30
-	ldrsb	r3, [r7, #3]
-	orrs	r3, r3, r2
-	sxtb	r3, r3
-	uxtb	r3, r3
-	.loc 1 186 12
-	strb	r3, [r7, #15]
 	.loc 1 187 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #10
 	ldr	r0, [r7, #4]
+	bl	max30100_read
+	.loc 1 188 22
+	ldrb	r3, [r7, #15]	@ zero_extendqisi2
+	sxtb	r3, r3
+	and	r3, r3, #124
+	sxtb	r2, r3
+	.loc 1 188 30
+	ldrsb	r3, [r7, #3]
+	orrs	r3, r3, r2
+	sxtb	r3, r3
+	uxtb	r3, r3
+	.loc 1 188 12
+	strb	r3, [r7, #15]
+	.loc 1 189 5
+	add	r2, r7, #15
+	movs	r3, #1
+	movs	r1, #10
+	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 188 1
+	.loc 1 190 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1006,7 +1020,7 @@ max30100_set_led_pulse_width:
 	.type	max30100_set_adc_resolution, %function
 max30100_set_adc_resolution:
 .LFB255:
-	.loc 1 192 1
+	.loc 1 194 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1021,34 +1035,34 @@ max30100_set_adc_resolution:
 	str	r0, [r7, #4]
 	mov	r3, r1
 	strb	r3, [r7, #3]
-	.loc 1 194 5
-	add	r2, r7, #15
-	movs	r3, #1
-	movs	r1, #10
-	ldr	r0, [r7, #4]
-	bl	max30100_read
-	.loc 1 195 22
-	ldrb	r3, [r7, #15]	@ zero_extendqisi2
-	sxtb	r3, r3
-	and	r3, r3, #31
-	sxtb	r2, r3
-	.loc 1 195 37
-	ldrb	r3, [r7, #3]	@ zero_extendqisi2
-	lsls	r3, r3, #5
-	.loc 1 195 30
-	sxtb	r3, r3
-	orrs	r3, r3, r2
-	sxtb	r3, r3
-	uxtb	r3, r3
-	.loc 1 195 12
-	strb	r3, [r7, #15]
 	.loc 1 196 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #10
 	ldr	r0, [r7, #4]
+	bl	max30100_read
+	.loc 1 197 22
+	ldrb	r3, [r7, #15]	@ zero_extendqisi2
+	sxtb	r3, r3
+	and	r3, r3, #31
+	sxtb	r2, r3
+	.loc 1 197 37
+	ldrb	r3, [r7, #3]	@ zero_extendqisi2
+	lsls	r3, r3, #5
+	.loc 1 197 30
+	sxtb	r3, r3
+	orrs	r3, r3, r2
+	sxtb	r3, r3
+	uxtb	r3, r3
+	.loc 1 197 12
+	strb	r3, [r7, #15]
+	.loc 1 198 5
+	add	r2, r7, #15
+	movs	r3, #1
+	movs	r1, #10
+	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 197 1
+	.loc 1 199 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1071,7 +1085,7 @@ max30100_set_adc_resolution:
 	.type	max30100_set_led_current_1, %function
 max30100_set_led_current_1:
 .LFB256:
-	.loc 1 201 1
+	.loc 1 203 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1085,28 +1099,28 @@ max30100_set_led_current_1:
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
 	vstr.32	s0, [r7]
-	.loc 1 202 21
+	.loc 1 204 21
 	ldr	r0, [r7]	@ float
 	bl	__aeabi_f2d
-	adr	r3, .L24
+	adr	r3, .L26
 	ldrd	r2, [r3]
 	bl	__aeabi_ddiv
 	mov	r2, r0
 	mov	r3, r1
-	.loc 1 202 13
+	.loc 1 204 13
 	mov	r0, r2
 	mov	r1, r3
 	bl	__aeabi_d2uiz
 	mov	r3, r0
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 203 5
+	.loc 1 205 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #12
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 204 1
+	.loc 1 206 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1114,9 +1128,9 @@ max30100_set_led_current_1:
 	.cfi_def_cfa_register 13
 	@ sp needed
 	pop	{r7, pc}
-.L25:
+.L27:
 	.align	3
-.L24:
+.L26:
 	.word	-1717986918
 	.word	1070176665
 	.cfi_endproc
@@ -1131,7 +1145,7 @@ max30100_set_led_current_1:
 	.type	max30100_set_led_current_2, %function
 max30100_set_led_current_2:
 .LFB257:
-	.loc 1 208 1
+	.loc 1 210 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1145,28 +1159,28 @@ max30100_set_led_current_2:
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
 	vstr.32	s0, [r7]
-	.loc 1 209 21
+	.loc 1 211 21
 	ldr	r0, [r7]	@ float
 	bl	__aeabi_f2d
-	adr	r3, .L27
+	adr	r3, .L29
 	ldrd	r2, [r3]
 	bl	__aeabi_ddiv
 	mov	r2, r0
 	mov	r3, r1
-	.loc 1 209 13
+	.loc 1 211 13
 	mov	r0, r2
 	mov	r1, r3
 	bl	__aeabi_d2uiz
 	mov	r3, r0
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 210 5
+	.loc 1 212 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #13
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 211 1
+	.loc 1 213 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1174,9 +1188,9 @@ max30100_set_led_current_2:
 	.cfi_def_cfa_register 13
 	@ sp needed
 	pop	{r7, pc}
-.L28:
+.L30:
 	.align	3
-.L27:
+.L29:
 	.word	-1717986918
 	.word	1070176665
 	.cfi_endproc
@@ -1191,7 +1205,7 @@ max30100_set_led_current_2:
 	.type	max30100_set_multi_led_slot_1_2, %function
 max30100_set_multi_led_slot_1_2:
 .LFB258:
-	.loc 1 215 1
+	.loc 1 217 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1208,31 +1222,31 @@ max30100_set_multi_led_slot_1_2:
 	strb	r3, [r7, #3]
 	mov	r3, r2
 	strb	r3, [r7, #2]
-	.loc 1 216 13
+	.loc 1 218 13
 	movs	r3, #0
 	strb	r3, [r7, #15]
-	.loc 1 217 35
+	.loc 1 219 35
 	ldrb	r3, [r7, #2]	@ zero_extendqisi2
 	lsls	r3, r3, #4
-	.loc 1 217 26
+	.loc 1 219 26
 	sxtb	r2, r3
 	ldrsb	r3, [r7, #3]
 	orrs	r3, r3, r2
 	sxtb	r2, r3
-	.loc 1 217 9
+	.loc 1 219 9
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	sxtb	r3, r3
 	orrs	r3, r3, r2
 	sxtb	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 218 5
+	.loc 1 220 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #17
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 219 1
+	.loc 1 221 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1252,7 +1266,7 @@ max30100_set_multi_led_slot_1_2:
 	.type	max30100_set_multi_led_slot_3_4, %function
 max30100_set_multi_led_slot_3_4:
 .LFB259:
-	.loc 1 223 1
+	.loc 1 225 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1269,31 +1283,31 @@ max30100_set_multi_led_slot_3_4:
 	strb	r3, [r7, #3]
 	mov	r3, r2
 	strb	r3, [r7, #2]
-	.loc 1 224 13
+	.loc 1 226 13
 	movs	r3, #0
 	strb	r3, [r7, #15]
-	.loc 1 225 35
+	.loc 1 227 35
 	ldrb	r3, [r7, #2]	@ zero_extendqisi2
 	lsls	r3, r3, #4
-	.loc 1 225 26
+	.loc 1 227 26
 	sxtb	r2, r3
 	ldrsb	r3, [r7, #3]
 	orrs	r3, r3, r2
 	sxtb	r2, r3
-	.loc 1 225 9
+	.loc 1 227 9
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	sxtb	r3, r3
 	orrs	r3, r3, r2
 	sxtb	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 226 5
+	.loc 1 228 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #18
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 227 1
+	.loc 1 229 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1313,7 +1327,7 @@ max30100_set_multi_led_slot_3_4:
 	.type	max30100_set_fifo_config, %function
 max30100_set_fifo_config:
 .LFB260:
-	.loc 1 231 1
+	.loc 1 233 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1335,13 +1349,13 @@ max30100_set_fifo_config:
 	strb	r3, [r7, #2]
 	mov	r3, r2
 	strb	r3, [r7, #1]
-	.loc 1 232 13
+	.loc 1 234 13
 	movs	r3, #0
 	strb	r3, [r7, #15]
-	.loc 1 233 23
+	.loc 1 235 23
 	ldrb	r3, [r7, #3]	@ zero_extendqisi2
 	lsls	r3, r3, #5
-	.loc 1 233 12
+	.loc 1 235 12
 	sxtb	r2, r3
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	sxtb	r3, r3
@@ -1349,37 +1363,37 @@ max30100_set_fifo_config:
 	sxtb	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 234 38
+	.loc 1 236 38
 	ldrb	r3, [r7, #2]	@ zero_extendqisi2
 	lsls	r3, r3, #4
 	sxtb	r3, r3
 	and	r3, r3, #16
 	sxtb	r2, r3
-	.loc 1 234 12
+	.loc 1 236 12
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	sxtb	r3, r3
 	orrs	r3, r3, r2
 	sxtb	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 235 37
+	.loc 1 237 37
 	ldrsb	r3, [r7, #1]
 	and	r3, r3, #15
 	sxtb	r2, r3
-	.loc 1 235 12
+	.loc 1 237 12
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
 	sxtb	r3, r3
 	orrs	r3, r3, r2
 	sxtb	r3, r3
 	uxtb	r3, r3
 	strb	r3, [r7, #15]
-	.loc 1 236 5
+	.loc 1 238 5
 	add	r2, r7, #15
 	movs	r3, #1
 	movs	r1, #8
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 237 1
+	.loc 1 239 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1399,7 +1413,7 @@ max30100_set_fifo_config:
 	.type	max30100_clear_fifo, %function
 max30100_clear_fifo:
 .LFB261:
-	.loc 1 241 1
+	.loc 1 243 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1412,28 +1426,28 @@ max30100_clear_fifo:
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
-	.loc 1 242 13
+	.loc 1 244 13
 	movs	r3, #0
 	strb	r3, [r7, #15]
-	.loc 1 243 5
+	.loc 1 245 5
 	add	r2, r7, #15
 	movs	r3, #3
 	movs	r1, #4
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 244 5
+	.loc 1 246 5
 	add	r2, r7, #15
 	movs	r3, #3
 	movs	r1, #6
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 245 5
+	.loc 1 247 5
 	add	r2, r7, #15
 	movs	r3, #3
 	movs	r1, #5
 	ldr	r0, [r7, #4]
 	bl	max30100_write
-	.loc 1 246 1
+	.loc 1 248 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1453,7 +1467,7 @@ max30100_clear_fifo:
 	.type	max30100_read_fifo, %function
 max30100_read_fifo:
 .LFB262:
-	.loc 1 250 1
+	.loc 1 252 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 32
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1466,131 +1480,131 @@ max30100_read_fifo:
 	add	r7, sp, #0
 	.cfi_def_cfa_register 7
 	str	r0, [r7, #4]
-	.loc 1 252 13
+	.loc 1 254 13
 	movs	r3, #0
 	strb	r3, [r7, #19]
-	.loc 1 252 25
+	.loc 1 254 25
 	movs	r3, #0
 	strb	r3, [r7, #18]
-	.loc 1 253 5
+	.loc 1 255 5
 	add	r2, r7, #19
 	movs	r3, #1
 	movs	r1, #4
 	ldr	r0, [r7, #4]
 	bl	max30100_read
-	.loc 1 254 5
+	.loc 1 256 5
 	add	r2, r7, #18
 	movs	r3, #1
 	movs	r1, #6
 	ldr	r0, [r7, #4]
 	bl	max30100_read
-	.loc 1 258 19
+	.loc 1 260 19
 	ldrb	r2, [r7, #19]	@ zero_extendqisi2
-	.loc 1 258 36
+	.loc 1 260 36
 	ldrb	r3, [r7, #18]	@ zero_extendqisi2
-	.loc 1 258 34
+	.loc 1 260 34
 	subs	r3, r2, r3
 	uxtb	r3, r3
-	.loc 1 258 17
+	.loc 1 260 17
 	strb	r3, [r7, #31]
-	.loc 1 259 8
+	.loc 1 261 8
 	ldrsb	r3, [r7, #31]
 	cmp	r3, #0
-	bgt	.L34
-	.loc 1 261 21
+	bgt	.L36
+	.loc 1 263 21
 	ldrb	r3, [r7, #31]	@ zero_extendqisi2
 	adds	r3, r3, #32
 	uxtb	r3, r3
 	strb	r3, [r7, #31]
-.L34:
+.L36:
 .LBB3:
-	.loc 1 265 17
+	.loc 1 267 17
 	movs	r3, #0
 	strb	r3, [r7, #30]
-	.loc 1 265 5
-	b	.L35
-.L36:
+	.loc 1 267 5
+	b	.L37
+.L38:
 .LBB4:
-	.loc 1 268 9 discriminator 3
+	.loc 1 270 9 discriminator 3
 	add	r2, r7, #12
 	movs	r3, #6
 	movs	r1, #7
 	ldr	r0, [r7, #4]
 	bl	max30100_read
-	.loc 1 269 48 discriminator 3
+	.loc 1 271 48 discriminator 3
 	ldrb	r3, [r7, #12]	@ zero_extendqisi2
-	.loc 1 269 52 discriminator 3
+	.loc 1 271 52 discriminator 3
 	lsls	r3, r3, #16
-	.loc 1 269 31 discriminator 3
+	.loc 1 271 31 discriminator 3
 	mov	r2, r3
-	.loc 1 269 78 discriminator 3
+	.loc 1 271 78 discriminator 3
 	ldrb	r3, [r7, #13]	@ zero_extendqisi2
-	.loc 1 269 82 discriminator 3
+	.loc 1 271 82 discriminator 3
 	lsls	r3, r3, #8
-	.loc 1 269 59 discriminator 3
+	.loc 1 271 59 discriminator 3
 	orrs	r3, r3, r2
-	.loc 1 269 107 discriminator 3
+	.loc 1 271 107 discriminator 3
 	ldrb	r2, [r7, #14]	@ zero_extendqisi2
-	.loc 1 269 88 discriminator 3
+	.loc 1 271 88 discriminator 3
 	orrs	r3, r3, r2
-	.loc 1 269 18 discriminator 3
+	.loc 1 271 18 discriminator 3
 	ubfx	r3, r3, #0, #18
 	str	r3, [r7, #24]
-	.loc 1 270 49 discriminator 3
+	.loc 1 272 49 discriminator 3
 	ldrb	r3, [r7, #15]	@ zero_extendqisi2
-	.loc 1 270 53 discriminator 3
+	.loc 1 272 53 discriminator 3
 	lsls	r3, r3, #16
-	.loc 1 270 32 discriminator 3
+	.loc 1 272 32 discriminator 3
 	mov	r2, r3
-	.loc 1 270 79 discriminator 3
+	.loc 1 272 79 discriminator 3
 	ldrb	r3, [r7, #16]	@ zero_extendqisi2
-	.loc 1 270 83 discriminator 3
+	.loc 1 272 83 discriminator 3
 	lsls	r3, r3, #8
-	.loc 1 270 60 discriminator 3
+	.loc 1 272 60 discriminator 3
 	orrs	r3, r3, r2
-	.loc 1 270 108 discriminator 3
+	.loc 1 272 108 discriminator 3
 	ldrb	r2, [r7, #17]	@ zero_extendqisi2
-	.loc 1 270 89 discriminator 3
+	.loc 1 272 89 discriminator 3
 	orrs	r3, r3, r2
-	.loc 1 270 18 discriminator 3
+	.loc 1 272 18 discriminator 3
 	ubfx	r3, r3, #0, #18
 	str	r3, [r7, #20]
-	.loc 1 271 25 discriminator 3
+	.loc 1 273 25 discriminator 3
 	ldrsb	r3, [r7, #30]
-	.loc 1 271 29 discriminator 3
+	.loc 1 273 29 discriminator 3
 	ldr	r2, [r7, #4]
 	lsls	r3, r3, #2
 	add	r3, r3, r2
 	ldr	r2, [r7, #24]
 	str	r2, [r3, #4]
-	.loc 1 272 26 discriminator 3
+	.loc 1 274 26 discriminator 3
 	ldrsb	r3, [r7, #30]
-	.loc 1 272 30 discriminator 3
+	.loc 1 274 30 discriminator 3
 	ldr	r2, [r7, #4]
 	adds	r3, r3, #32
 	lsls	r3, r3, #2
 	add	r3, r3, r2
 	ldr	r2, [r7, #20]
 	str	r2, [r3, #4]
-	.loc 1 273 9 discriminator 3
+	.loc 1 275 9 discriminator 3
 	ldr	r1, [r7, #20]
 	ldr	r0, [r7, #24]
 	bl	max30100_plot
 .LBE4:
-	.loc 1 265 42 discriminator 3
+	.loc 1 267 42 discriminator 3
 	ldrsb	r3, [r7, #30]
 	uxtb	r3, r3
 	adds	r3, r3, #1
 	uxtb	r3, r3
 	strb	r3, [r7, #30]
-.L35:
-	.loc 1 265 26 discriminator 1
+.L37:
+	.loc 1 267 26 discriminator 1
 	ldrsb	r2, [r7, #30]
 	ldrsb	r3, [r7, #31]
 	cmp	r2, r3
-	blt	.L36
+	blt	.L38
 .LBE3:
-	.loc 1 275 1
+	.loc 1 277 1
 	nop
 	nop
 	adds	r7, r7, #32
@@ -1611,7 +1625,7 @@ max30100_read_fifo:
 	.type	max30100_read_temp, %function
 max30100_read_temp:
 .LFB263:
-	.loc 1 279 1
+	.loc 1 281 1
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
 	@ frame_needed = 1, uses_anonymous_args = 0
@@ -1626,19 +1640,19 @@ max30100_read_temp:
 	str	r0, [r7, #12]
 	str	r1, [r7, #8]
 	str	r2, [r7, #4]
-	.loc 1 280 5
+	.loc 1 282 5
 	movs	r3, #1
 	ldr	r2, [r7, #8]
 	movs	r1, #31
 	ldr	r0, [r7, #12]
 	bl	max30100_read
-	.loc 1 281 5
+	.loc 1 283 5
 	movs	r3, #1
 	ldr	r2, [r7, #4]
 	movs	r1, #32
 	ldr	r0, [r7, #12]
 	bl	max30100_read
-	.loc 1 282 1
+	.loc 1 284 1
 	nop
 	adds	r7, r7, #16
 	.cfi_def_cfa_offset 8
@@ -1659,20 +1673,21 @@ max30100_read_temp:
 	.file 7 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
 	.file 8 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
 	.file 9 "../Monitor_core/max30100.h"
-	.file 10 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h"
-	.file 11 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdlib.h"
+	.file 10 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h"
+	.file 11 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h"
+	.file 12 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdlib.h"
 	.section	.debug_info,"",%progbits
 .Ldebug_info0:
-	.4byte	0xfa0
+	.4byte	0xfd5
 	.2byte	0x5
 	.byte	0x1
 	.byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.uleb128 0x1b
-	.4byte	.LASF20185
-	.byte	0x1d
 	.4byte	.LASF20186
+	.byte	0x1d
 	.4byte	.LASF20187
+	.4byte	.LASF20188
 	.4byte	.LLRL0
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -1769,7 +1784,7 @@ max30100_read_temp:
 	.4byte	0x71
 	.uleb128 0xf
 	.4byte	0xc9
-	.uleb128 0x17
+	.uleb128 0x18
 	.byte	0x18
 	.2byte	0x16a
 	.4byte	0x12a
@@ -1804,11 +1819,11 @@ max30100_read_temp:
 	.4byte	0xd5
 	.byte	0x14
 	.byte	0
-	.uleb128 0x18
+	.uleb128 0x19
 	.4byte	.LASF20003
 	.2byte	0x172
 	.4byte	0xda
-	.uleb128 0x17
+	.uleb128 0x18
 	.byte	0x28
 	.2byte	0x1ea
 	.4byte	0x1b5
@@ -1863,7 +1878,7 @@ max30100_read_temp:
 	.4byte	0xd5
 	.byte	0x24
 	.byte	0
-	.uleb128 0x18
+	.uleb128 0x19
 	.4byte	.LASF20008
 	.2byte	0x1f6
 	.4byte	0x135
@@ -2153,18 +2168,18 @@ max30100_read_temp:
 	.4byte	0xc9
 	.byte	0x5c
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0x9
 	.4byte	0x12a
 	.uleb128 0x1e
 	.byte	0x4
 	.uleb128 0x1f
 	.4byte	0x3ef
-	.uleb128 0x6
+	.uleb128 0x5
 	.4byte	0x3ef
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0x9
 	.4byte	0x319
-	.uleb128 0xb
+	.uleb128 0x9
 	.4byte	0x3e4
 	.uleb128 0x4
 	.4byte	.LASF20053
@@ -2172,7 +2187,7 @@ max30100_read_temp:
 	.byte	0xa8
 	.byte	0x2
 	.4byte	0x319
-	.uleb128 0xb
+	.uleb128 0x9
 	.4byte	0x3f9
 	.uleb128 0x12
 	.byte	0x20
@@ -2440,9 +2455,9 @@ max30100_read_temp:
 	.4byte	0xd5
 	.byte	0x50
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0x9
 	.4byte	0x1b5
-	.uleb128 0xb
+	.uleb128 0x9
 	.4byte	0xac
 	.uleb128 0x4
 	.4byte	.LASF20091
@@ -2450,18 +2465,24 @@ max30100_read_temp:
 	.byte	0xf3
 	.byte	0x3
 	.4byte	0x51b
+	.uleb128 0x9
+	.4byte	0x61c
 	.uleb128 0x8
 	.byte	0x1
 	.byte	0x8
 	.4byte	.LASF619
-	.uleb128 0xb
-	.4byte	0x623
 	.uleb128 0x20
+	.4byte	0x61c
+	.uleb128 0x9
+	.4byte	0x623
+	.uleb128 0x9
+	.4byte	0x632
+	.uleb128 0x21
 	.uleb128 0xe
 	.4byte	.LASF20095
 	.4byte	0x49
 	.byte	0x45
-	.4byte	0x645
+	.4byte	0x654
 	.uleb128 0x1
 	.4byte	.LASF20092
 	.byte	0x2
@@ -2477,12 +2498,12 @@ max30100_read_temp:
 	.byte	0x9
 	.byte	0x4a
 	.byte	0x3
-	.4byte	0x624
+	.4byte	0x633
 	.uleb128 0xe
 	.4byte	.LASF20096
 	.4byte	0x49
 	.byte	0x4c
-	.4byte	0x684
+	.4byte	0x693
 	.uleb128 0x1
 	.4byte	.LASF20097
 	.byte	0
@@ -2507,12 +2528,12 @@ max30100_read_temp:
 	.byte	0x9
 	.byte	0x54
 	.byte	0x3
-	.4byte	0x651
+	.4byte	0x660
 	.uleb128 0xe
 	.4byte	.LASF20103
 	.4byte	0x49
 	.byte	0x56
-	.4byte	0x6cf
+	.4byte	0x6de
 	.uleb128 0x1
 	.4byte	.LASF20104
 	.byte	0
@@ -2543,12 +2564,12 @@ max30100_read_temp:
 	.byte	0x9
 	.byte	0x60
 	.byte	0x3
-	.4byte	0x690
+	.4byte	0x69f
 	.uleb128 0xe
 	.4byte	.LASF20112
 	.4byte	0x49
 	.byte	0x62
-	.4byte	0x702
+	.4byte	0x711
 	.uleb128 0x1
 	.4byte	.LASF20113
 	.byte	0
@@ -2567,12 +2588,12 @@ max30100_read_temp:
 	.byte	0x9
 	.byte	0x68
 	.byte	0x3
-	.4byte	0x6db
+	.4byte	0x6ea
 	.uleb128 0xe
 	.4byte	.LASF20117
 	.4byte	0x49
 	.byte	0x6a
-	.4byte	0x735
+	.4byte	0x744
 	.uleb128 0x1
 	.4byte	.LASF20118
 	.byte	0
@@ -2591,12 +2612,12 @@ max30100_read_temp:
 	.byte	0x9
 	.byte	0x70
 	.byte	0x3
-	.4byte	0x70e
+	.4byte	0x71d
 	.uleb128 0xe
 	.4byte	.LASF20122
 	.4byte	0x49
 	.byte	0x72
-	.4byte	0x762
+	.4byte	0x771
 	.uleb128 0x1
 	.4byte	.LASF20123
 	.byte	0
@@ -2612,36 +2633,36 @@ max30100_read_temp:
 	.byte	0x9
 	.byte	0x77
 	.byte	0x3
-	.4byte	0x741
-	.uleb128 0x21
+	.4byte	0x750
+	.uleb128 0x22
 	.4byte	.LASF20127
 	.2byte	0x108
 	.byte	0x9
 	.byte	0x79
 	.byte	0x10
-	.4byte	0x7b2
+	.4byte	0x7c1
 	.uleb128 0x2
 	.4byte	.LASF20128
 	.byte	0x9
 	.byte	0x7b
 	.byte	0x18
-	.4byte	0x7b2
+	.4byte	0x7c1
 	.byte	0
 	.uleb128 0x2
 	.4byte	.LASF20129
 	.byte	0x9
 	.byte	0x7c
 	.byte	0xe
-	.4byte	0x7b7
+	.4byte	0x7c6
 	.byte	0x4
 	.uleb128 0x2
 	.4byte	.LASF20130
 	.byte	0x9
 	.byte	0x7d
 	.byte	0xe
-	.4byte	0x7b7
+	.4byte	0x7c6
 	.byte	0x84
-	.uleb128 0x22
+	.uleb128 0x23
 	.4byte	.LASF20131
 	.byte	0x9
 	.byte	0x7e
@@ -2649,11 +2670,11 @@ max30100_read_temp:
 	.4byte	0xac
 	.2byte	0x104
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0x9
 	.4byte	0x60b
 	.uleb128 0x13
 	.4byte	0xc9
-	.4byte	0x7c7
+	.4byte	0x7d6
 	.uleb128 0x14
 	.4byte	0x99
 	.byte	0x1f
@@ -2663,207 +2684,226 @@ max30100_read_temp:
 	.byte	0x9
 	.byte	0x7f
 	.byte	0x3
-	.4byte	0x76e
-	.uleb128 0x23
-	.4byte	.LASF20184
+	.4byte	0x77d
+	.uleb128 0x24
+	.4byte	.LASF20185
 	.byte	0x1
 	.byte	0x10
 	.byte	0x14
-	.4byte	0x7b2
+	.4byte	0x7c1
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	hi2c
-	.uleb128 0x19
+	.uleb128 0x15
 	.4byte	.LASF20132
+	.byte	0x8
 	.2byte	0x237
+	.byte	0x13
 	.4byte	0x1f7
-	.4byte	0x80e
-	.uleb128 0x6
-	.4byte	0x7b2
-	.uleb128 0x6
+	.4byte	0x81f
+	.uleb128 0x5
+	.4byte	0x7c1
+	.uleb128 0x5
 	.4byte	0xb8
-	.uleb128 0x6
+	.uleb128 0x5
 	.4byte	0x606
-	.uleb128 0x6
+	.uleb128 0x5
 	.4byte	0xb8
-	.uleb128 0x6
+	.uleb128 0x5
 	.4byte	0xc9
 	.byte	0
-	.uleb128 0x24
-	.4byte	.LASF20188
-	.byte	0xb
+	.uleb128 0x25
+	.4byte	.LASF20189
+	.byte	0xc
 	.byte	0x5e
 	.byte	0x6
-	.4byte	0x820
-	.uleb128 0x6
+	.4byte	0x831
+	.uleb128 0x5
 	.4byte	0x3e2
 	.byte	0
-	.uleb128 0x19
+	.uleb128 0x15
 	.4byte	.LASF20133
-	.2byte	0x236
-	.4byte	0x1f7
-	.4byte	0x849
-	.uleb128 0x6
-	.4byte	0x7b2
-	.uleb128 0x6
-	.4byte	0xb8
-	.uleb128 0x6
-	.4byte	0x606
-	.uleb128 0x6
-	.4byte	0xb8
-	.uleb128 0x6
-	.4byte	0xc9
+	.byte	0xa
+	.2byte	0x114
+	.byte	0x5
+	.4byte	0x92
+	.4byte	0x853
+	.uleb128 0x5
+	.4byte	0x617
+	.uleb128 0x5
+	.4byte	0x1c0
+	.uleb128 0x5
+	.4byte	0x628
+	.uleb128 0x26
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF20134
-	.byte	0xa
+	.byte	0x8
+	.2byte	0x236
+	.byte	0x13
+	.4byte	0x1f7
+	.4byte	0x87e
+	.uleb128 0x5
+	.4byte	0x7c1
+	.uleb128 0x5
+	.4byte	0xb8
+	.uleb128 0x5
+	.4byte	0x606
+	.uleb128 0x5
+	.4byte	0xb8
+	.uleb128 0x5
+	.4byte	0xc9
+	.byte	0
+	.uleb128 0x16
+	.4byte	.LASF20135
+	.byte	0xb
 	.byte	0x1f
 	.byte	0x8
 	.4byte	0x3e2
-	.4byte	0x869
-	.uleb128 0x6
+	.4byte	0x89e
+	.uleb128 0x5
 	.4byte	0x3e2
-	.uleb128 0x6
-	.4byte	0x61e
-	.uleb128 0x6
+	.uleb128 0x5
+	.4byte	0x62d
+	.uleb128 0x5
 	.4byte	0x1c0
 	.byte	0
-	.uleb128 0x15
-	.4byte	.LASF20135
-	.byte	0xb
+	.uleb128 0x16
+	.4byte	.LASF20136
+	.byte	0xc
 	.byte	0x6c
 	.byte	0x7
 	.4byte	0x3e2
-	.4byte	0x87f
-	.uleb128 0x6
+	.4byte	0x8b4
+	.uleb128 0x5
 	.4byte	0x1c0
 	.byte	0
-	.uleb128 0x15
-	.4byte	.LASF20136
-	.byte	0xa
+	.uleb128 0x16
+	.4byte	.LASF20137
+	.byte	0xb
 	.byte	0x21
 	.byte	0x8
 	.4byte	0x3e2
-	.4byte	0x89f
-	.uleb128 0x6
+	.4byte	0x8d4
+	.uleb128 0x5
 	.4byte	0x3e2
-	.uleb128 0x6
+	.uleb128 0x5
 	.4byte	0x92
-	.uleb128 0x6
+	.uleb128 0x5
 	.4byte	0x1c0
 	.byte	0
-	.uleb128 0x25
-	.4byte	.LASF20139
+	.uleb128 0x27
+	.4byte	.LASF20140
 	.byte	0x1
-	.2byte	0x116
+	.2byte	0x118
 	.byte	0x6
 	.4byte	.LFB263
 	.4byte	.LFE263-.LFB263
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x8e1
-	.uleb128 0x26
+	.4byte	0x916
+	.uleb128 0x28
 	.ascii	"obj\000"
 	.byte	0x1
-	.2byte	0x116
+	.2byte	0x118
 	.byte	0x25
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -12
 	.uleb128 0x1a
-	.4byte	.LASF20137
+	.4byte	.LASF20138
 	.byte	0x32
-	.4byte	0x8e6
+	.4byte	0x91b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -16
 	.uleb128 0x1a
-	.4byte	.LASF20138
+	.4byte	.LASF20139
 	.byte	0x45
 	.4byte	0x606
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.byte	0
-	.uleb128 0xb
-	.4byte	0x7c7
-	.uleb128 0xb
+	.uleb128 0x9
+	.4byte	0x7d6
+	.uleb128 0x9
 	.4byte	0xa0
-	.uleb128 0x5
-	.4byte	.LASF20140
-	.byte	0xf9
+	.uleb128 0x6
+	.4byte	.LASF20141
+	.byte	0xfb
 	.4byte	.LFB262
 	.4byte	.LFE262-.LFB262
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x988
+	.4byte	0x9bd
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xf9
+	.byte	0xfb
 	.byte	0x25
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -36
-	.uleb128 0x9
-	.4byte	.LASF20141
-	.byte	0xfc
+	.uleb128 0xa
+	.4byte	.LASF20142
+	.byte	0xfe
 	.byte	0xd
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0x9
-	.4byte	.LASF20142
-	.byte	0xfc
+	.uleb128 0xa
+	.4byte	.LASF20143
+	.byte	0xfe
 	.byte	0x19
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -22
 	.uleb128 0x11
-	.4byte	.LASF20143
-	.2byte	0x100
+	.4byte	.LASF20144
+	.2byte	0x102
 	.byte	0xc
 	.4byte	0xa0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
-	.uleb128 0x16
+	.uleb128 0x17
 	.4byte	.LBB3
 	.4byte	.LBE3-.LBB3
-	.uleb128 0x27
+	.uleb128 0x29
 	.ascii	"i\000"
 	.byte	0x1
-	.2byte	0x109
+	.2byte	0x10b
 	.byte	0x11
 	.4byte	0xa0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -10
-	.uleb128 0x16
+	.uleb128 0x17
 	.4byte	.LBB4
 	.4byte	.LBE4-.LBB4
 	.uleb128 0x11
-	.4byte	.LASF20144
-	.2byte	0x10b
+	.4byte	.LASF20145
+	.2byte	0x10d
 	.byte	0x11
-	.4byte	0x988
+	.4byte	0x9bd
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -28
 	.uleb128 0x11
-	.4byte	.LASF20145
-	.2byte	0x10d
+	.4byte	.LASF20146
+	.2byte	0x10f
 	.byte	0x12
 	.4byte	0xc9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -16
 	.uleb128 0x11
-	.4byte	.LASF20146
-	.2byte	0x10e
+	.4byte	.LASF20147
+	.2byte	0x110
 	.byte	0x12
 	.4byte	0xc9
 	.uleb128 0x2
@@ -2874,191 +2914,191 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x13
 	.4byte	0xac
-	.4byte	0x998
+	.4byte	0x9cd
 	.uleb128 0x14
 	.4byte	0x99
 	.byte	0x5
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20147
-	.byte	0xf0
+	.uleb128 0x6
+	.4byte	.LASF20148
+	.byte	0xf2
 	.4byte	.LFB261
 	.4byte	.LFE261-.LFB261
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x9c8
+	.4byte	0x9fd
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xf0
+	.byte	0xf2
 	.byte	0x26
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
-	.uleb128 0xa
+	.uleb128 0xb
 	.ascii	"val\000"
-	.byte	0xf2
+	.byte	0xf4
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20148
-	.byte	0xe6
+	.uleb128 0x6
+	.4byte	.LASF20149
+	.byte	0xe8
 	.4byte	.LFB260
 	.4byte	.LFE260-.LFB260
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xa23
+	.4byte	0xa58
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xe6
+	.byte	0xe8
 	.byte	0x2b
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
-	.4byte	.LASF20149
-	.byte	0xe6
+	.4byte	.LASF20150
+	.byte	0xe8
 	.byte	0x43
-	.4byte	0x684
+	.4byte	0x693
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
 	.uleb128 0x7
-	.4byte	.LASF20150
-	.byte	0xe6
+	.4byte	.LASF20151
+	.byte	0xe8
 	.byte	0x54
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -22
 	.uleb128 0x7
-	.4byte	.LASF20151
-	.byte	0xe6
+	.4byte	.LASF20152
+	.byte	0xe8
 	.byte	0x6a
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -23
-	.uleb128 0x9
-	.4byte	.LASF20152
-	.byte	0xe8
+	.uleb128 0xa
+	.4byte	.LASF20153
+	.byte	0xea
 	.byte	0xd
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20153
-	.byte	0xde
+	.uleb128 0x6
+	.4byte	.LASF20154
+	.byte	0xe0
 	.4byte	.LFB259
 	.4byte	.LFE259-.LFB259
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xa6f
+	.4byte	0xaa4
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xde
+	.byte	0xe0
 	.byte	0x32
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
-	.4byte	.LASF20154
-	.byte	0xde
+	.4byte	.LASF20155
+	.byte	0xe0
 	.byte	0x51
-	.4byte	0x762
+	.4byte	0x771
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
 	.uleb128 0x7
-	.4byte	.LASF20155
-	.byte	0xde
+	.4byte	.LASF20156
+	.byte	0xe0
 	.byte	0x72
-	.4byte	0x762
+	.4byte	0x771
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -22
-	.uleb128 0xa
+	.uleb128 0xb
 	.ascii	"val\000"
-	.byte	0xe0
+	.byte	0xe2
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20156
-	.byte	0xd6
+	.uleb128 0x6
+	.4byte	.LASF20157
+	.byte	0xd8
 	.4byte	.LFB258
 	.4byte	.LFE258-.LFB258
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xabb
+	.4byte	0xaf0
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xd6
+	.byte	0xd8
 	.byte	0x32
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
-	.4byte	.LASF20157
-	.byte	0xd6
+	.4byte	.LASF20158
+	.byte	0xd8
 	.byte	0x51
-	.4byte	0x762
+	.4byte	0x771
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
 	.uleb128 0x7
-	.4byte	.LASF20158
-	.byte	0xd6
+	.4byte	.LASF20159
+	.byte	0xd8
 	.byte	0x72
-	.4byte	0x762
+	.4byte	0x771
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -22
-	.uleb128 0xa
+	.uleb128 0xb
 	.ascii	"val\000"
-	.byte	0xd8
+	.byte	0xda
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20159
-	.byte	0xcf
+	.uleb128 0x6
+	.4byte	.LASF20160
+	.byte	0xd1
 	.4byte	.LFB257
 	.4byte	.LFE257-.LFB257
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xaf7
+	.4byte	0xb2c
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xcf
+	.byte	0xd1
 	.byte	0x2d
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x3
 	.ascii	"ma\000"
-	.byte	0xcf
+	.byte	0xd1
 	.byte	0x38
-	.4byte	0xaf7
+	.4byte	0xb2c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -24
-	.uleb128 0xa
+	.uleb128 0xb
 	.ascii	"pa\000"
-	.byte	0xd1
+	.byte	0xd3
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
@@ -3067,241 +3107,241 @@ max30100_read_temp:
 	.uleb128 0x8
 	.byte	0x4
 	.byte	0x4
-	.4byte	.LASF20160
-	.uleb128 0x5
 	.4byte	.LASF20161
-	.byte	0xc8
+	.uleb128 0x6
+	.4byte	.LASF20162
+	.byte	0xca
 	.4byte	.LFB256
 	.4byte	.LFE256-.LFB256
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xb3a
+	.4byte	0xb6f
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xc8
+	.byte	0xca
 	.byte	0x2d
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x3
 	.ascii	"ma\000"
-	.byte	0xc8
+	.byte	0xca
 	.byte	0x38
-	.4byte	0xaf7
+	.4byte	0xb2c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -24
-	.uleb128 0xa
+	.uleb128 0xb
 	.ascii	"pa\000"
-	.byte	0xca
+	.byte	0xcc
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20162
-	.byte	0xbf
+	.uleb128 0x6
+	.4byte	.LASF20163
+	.byte	0xc1
 	.4byte	.LFB255
 	.4byte	.LFE255-.LFB255
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xb79
+	.4byte	0xbae
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xbf
+	.byte	0xc1
 	.byte	0x2e
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x3
 	.ascii	"adc\000"
-	.byte	0xbf
+	.byte	0xc1
 	.byte	0x42
-	.4byte	0x735
+	.4byte	0x744
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0x9
-	.4byte	.LASF20152
-	.byte	0xc1
+	.uleb128 0xa
+	.4byte	.LASF20153
+	.byte	0xc3
 	.byte	0xd
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20163
-	.byte	0xb6
+	.uleb128 0x6
+	.4byte	.LASF20164
+	.byte	0xb8
 	.4byte	.LFB254
 	.4byte	.LFE254-.LFB254
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xbb7
+	.4byte	0xbec
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xb6
+	.byte	0xb8
 	.byte	0x2f
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x3
 	.ascii	"pw\000"
-	.byte	0xb6
+	.byte	0xb8
 	.byte	0x46
-	.4byte	0x702
+	.4byte	0x711
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0x9
-	.4byte	.LASF20152
-	.byte	0xb8
+	.uleb128 0xa
+	.4byte	.LASF20153
+	.byte	0xba
 	.byte	0xd
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20164
-	.byte	0xad
+	.uleb128 0x6
+	.4byte	.LASF20165
+	.byte	0xaf
 	.4byte	.LFB253
 	.4byte	.LFE253-.LFB253
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xbf5
+	.4byte	0xc2a
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xad
+	.byte	0xaf
 	.byte	0x2d
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x3
 	.ascii	"sr\000"
-	.byte	0xad
+	.byte	0xaf
 	.byte	0x40
-	.4byte	0x6cf
+	.4byte	0x6de
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0x9
-	.4byte	.LASF20152
-	.byte	0xaf
+	.uleb128 0xa
+	.4byte	.LASF20153
+	.byte	0xb1
 	.byte	0xd
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20165
-	.byte	0xa3
+	.uleb128 0x6
+	.4byte	.LASF20166
+	.byte	0xa5
 	.4byte	.LFB252
 	.4byte	.LFE252-.LFB252
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xc34
+	.4byte	0xc69
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0xa3
+	.byte	0xa5
 	.byte	0x24
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
-	.4byte	.LASF20166
-	.byte	0xa3
+	.4byte	.LASF20167
+	.byte	0xa5
 	.byte	0x39
-	.4byte	0x645
+	.4byte	0x654
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0x9
-	.4byte	.LASF20152
-	.byte	0xa5
+	.uleb128 0xa
+	.4byte	.LASF20153
+	.byte	0xa7
 	.byte	0xd
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20167
-	.byte	0x9a
+	.uleb128 0x6
+	.4byte	.LASF20168
+	.byte	0x9c
 	.4byte	.LFB251
 	.4byte	.LFE251-.LFB251
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xc73
+	.4byte	0xca8
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x9a
+	.byte	0x9c
 	.byte	0x24
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
-	.4byte	.LASF20168
-	.byte	0x9a
+	.4byte	.LASF20169
+	.byte	0x9c
 	.byte	0x31
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0x9
-	.4byte	.LASF20152
-	.byte	0x9c
+	.uleb128 0xa
+	.4byte	.LASF20153
+	.byte	0x9e
 	.byte	0xd
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20169
-	.byte	0x76
+	.uleb128 0x6
+	.4byte	.LASF20170
+	.byte	0x78
 	.4byte	.LFB250
 	.4byte	.LFE250-.LFB250
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xcc9
+	.4byte	0xcfe
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x76
+	.byte	0x78
 	.byte	0x2d
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
-	.uleb128 0xa
+	.uleb128 0xb
 	.ascii	"reg\000"
-	.byte	0x78
-	.4byte	0xcc9
+	.byte	0x7a
+	.4byte	0xcfe
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -12
-	.uleb128 0x16
+	.uleb128 0x17
 	.4byte	.LBB2
 	.4byte	.LBE2-.LBB2
-	.uleb128 0x9
-	.4byte	.LASF20137
-	.byte	0x8f
+	.uleb128 0xa
+	.4byte	.LASF20138
+	.byte	0x91
 	.byte	0x10
 	.4byte	0xa0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -13
-	.uleb128 0x9
-	.4byte	.LASF20138
-	.byte	0x90
+	.uleb128 0xa
+	.4byte	.LASF20139
+	.byte	0x92
 	.byte	0x11
 	.4byte	0xac
 	.uleb128 0x2
@@ -3311,253 +3351,253 @@ max30100_read_temp:
 	.byte	0
 	.uleb128 0x13
 	.4byte	0xac
-	.4byte	0xcd9
+	.4byte	0xd0e
 	.uleb128 0x14
 	.4byte	0x99
 	.byte	0x1
 	.byte	0
-	.uleb128 0x28
-	.4byte	.LASF20189
+	.uleb128 0x2a
+	.4byte	.LASF20190
 	.byte	0x1
-	.byte	0x70
+	.byte	0x72
 	.byte	0x9
 	.4byte	0xac
 	.4byte	.LFB249
 	.4byte	.LFE249-.LFB249
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xd02
+	.4byte	0xd37
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x70
+	.byte	0x72
 	.byte	0x2c
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -12
 	.byte	0
-	.uleb128 0x29
-	.4byte	.LASF20170
+	.uleb128 0x2b
+	.4byte	.LASF20171
 	.byte	0x1
-	.byte	0x6a
+	.byte	0x6c
 	.byte	0x6
 	.4byte	.LFB248
 	.4byte	.LFE248-.LFB248
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xd27
+	.4byte	0xd5c
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x6a
+	.byte	0x6c
 	.byte	0x28
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -12
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20171
-	.byte	0x63
+	.uleb128 0x6
+	.4byte	.LASF20172
+	.byte	0x65
 	.4byte	.LFB247
 	.4byte	.LFE247-.LFB247
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xd65
+	.4byte	0xd9a
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x63
+	.byte	0x65
 	.byte	0x2b
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
-	.4byte	.LASF20172
-	.byte	0x63
+	.4byte	.LASF20173
+	.byte	0x65
 	.byte	0x38
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0xa
+	.uleb128 0xb
 	.ascii	"reg\000"
-	.byte	0x65
+	.byte	0x67
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20173
-	.byte	0x5c
+	.uleb128 0x6
+	.4byte	.LASF20174
+	.byte	0x5e
 	.4byte	.LFB246
 	.4byte	.LFE246-.LFB246
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xda3
+	.4byte	0xdd8
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x5c
+	.byte	0x5e
 	.byte	0x2c
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
-	.4byte	.LASF20172
-	.byte	0x5c
+	.4byte	.LASF20173
+	.byte	0x5e
 	.byte	0x39
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0xa
+	.uleb128 0xb
 	.ascii	"reg\000"
-	.byte	0x5e
+	.byte	0x60
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20174
-	.byte	0x52
+	.uleb128 0x6
+	.4byte	.LASF20175
+	.byte	0x54
 	.4byte	.LFB245
 	.4byte	.LFE245-.LFB245
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xde1
+	.4byte	0xe16
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x52
+	.byte	0x54
 	.byte	0x27
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
-	.4byte	.LASF20172
-	.byte	0x52
+	.4byte	.LASF20173
+	.byte	0x54
 	.byte	0x34
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0xa
+	.uleb128 0xb
 	.ascii	"reg\000"
-	.byte	0x54
+	.byte	0x56
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20175
-	.byte	0x48
+	.uleb128 0x6
+	.4byte	.LASF20176
+	.byte	0x4a
 	.4byte	.LFB244
 	.4byte	.LFE244-.LFB244
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xe1f
+	.4byte	0xe54
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x48
+	.byte	0x4a
 	.byte	0x27
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
-	.4byte	.LASF20172
-	.byte	0x48
+	.4byte	.LASF20173
+	.byte	0x4a
 	.byte	0x34
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0xa
+	.uleb128 0xb
 	.ascii	"reg\000"
-	.byte	0x4a
+	.byte	0x4c
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20176
-	.byte	0x3e
+	.uleb128 0x6
+	.4byte	.LASF20177
+	.byte	0x40
 	.4byte	.LFB243
 	.4byte	.LFE243-.LFB243
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xe5d
+	.4byte	0xe92
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x3e
+	.byte	0x40
 	.byte	0x26
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x7
-	.4byte	.LASF20172
-	.byte	0x3e
+	.4byte	.LASF20173
+	.byte	0x40
 	.byte	0x33
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -21
-	.uleb128 0xa
+	.uleb128 0xb
 	.ascii	"reg\000"
-	.byte	0x40
+	.byte	0x42
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20177
-	.byte	0x37
+	.uleb128 0x6
+	.4byte	.LASF20178
+	.byte	0x39
 	.4byte	.LFB242
 	.4byte	.LFE242-.LFB242
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xe8d
+	.4byte	0xec2
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x37
+	.byte	0x39
 	.byte	0x21
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
-	.uleb128 0xa
+	.uleb128 0xb
 	.ascii	"val\000"
-	.byte	0x39
+	.byte	0x3b
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20178
-	.byte	0x2f
+	.uleb128 0x6
+	.4byte	.LASF20179
+	.byte	0x31
 	.4byte	.LFB241
 	.4byte	.LFE241-.LFB241
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xee8
+	.4byte	0xf1d
 	.uleb128 0x3
 	.ascii	"obj\000"
-	.byte	0x2f
+	.byte	0x31
 	.byte	0x20
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0x3
 	.ascii	"reg\000"
-	.byte	0x2f
+	.byte	0x31
 	.byte	0x2d
 	.4byte	0xac
 	.uleb128 0x2
@@ -3565,42 +3605,42 @@ max30100_read_temp:
 	.sleb128 -21
 	.uleb128 0x3
 	.ascii	"buf\000"
-	.byte	0x2f
+	.byte	0x31
 	.byte	0x3b
 	.4byte	0x606
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -28
 	.uleb128 0x7
-	.4byte	.LASF20179
-	.byte	0x2f
+	.4byte	.LASF20180
+	.byte	0x31
 	.byte	0x49
 	.4byte	0xb8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -24
-	.uleb128 0x9
-	.4byte	.LASF20180
-	.byte	0x31
+	.uleb128 0xa
+	.4byte	.LASF20181
+	.byte	0x33
 	.byte	0xd
 	.4byte	0xac
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -9
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20181
+	.uleb128 0x6
+	.4byte	.LASF20182
 	.byte	0x24
 	.4byte	.LFB240
 	.4byte	.LFE240-.LFB240
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xf43
+	.4byte	0xf78
 	.uleb128 0x3
 	.ascii	"obj\000"
 	.byte	0x24
 	.byte	0x21
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
@@ -3621,15 +3661,15 @@ max30100_read_temp:
 	.byte	0x91
 	.sleb128 -28
 	.uleb128 0x7
-	.4byte	.LASF20179
+	.4byte	.LASF20180
 	.byte	0x24
 	.byte	0x4a
 	.4byte	0xb8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -24
-	.uleb128 0x9
-	.4byte	.LASF20182
+	.uleb128 0xa
+	.4byte	.LASF20183
 	.byte	0x26
 	.byte	0xe
 	.4byte	0x606
@@ -3637,33 +3677,33 @@ max30100_read_temp:
 	.byte	0x91
 	.sleb128 -12
 	.byte	0
-	.uleb128 0x5
-	.4byte	.LASF20183
+	.uleb128 0x6
+	.4byte	.LASF20184
 	.byte	0x1b
 	.4byte	.LFB239
 	.4byte	.LFE239-.LFB239
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xf74
+	.4byte	0xfa9
 	.uleb128 0x3
 	.ascii	"obj\000"
 	.byte	0x1b
 	.byte	0x20
-	.4byte	0x8e1
+	.4byte	0x916
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -12
 	.uleb128 0x7
-	.4byte	.LASF20184
+	.4byte	.LASF20185
 	.byte	0x1b
 	.byte	0x38
-	.4byte	0x7b2
+	.4byte	0x7c1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -16
 	.byte	0
-	.uleb128 0x2a
-	.4byte	.LASF20190
+	.uleb128 0x2c
+	.4byte	.LASF20191
 	.byte	0x1
 	.byte	0x14
 	.byte	0x6
@@ -3672,7 +3712,7 @@ max30100_read_temp:
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x7
-	.4byte	.LASF20145
+	.4byte	.LASF20146
 	.byte	0x14
 	.byte	0x1d
 	.4byte	0xc9
@@ -3680,7 +3720,7 @@ max30100_read_temp:
 	.byte	0x91
 	.sleb128 -12
 	.uleb128 0x7
-	.4byte	.LASF20146
+	.4byte	.LASF20147
 	.byte	0x14
 	.byte	0x31
 	.4byte	0xc9
@@ -3751,6 +3791,13 @@ max30100_read_temp:
 	.byte	0
 	.byte	0
 	.uleb128 0x5
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x6
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -3776,13 +3823,6 @@ max30100_read_temp:
 	.uleb128 0x7c
 	.uleb128 0x19
 	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x6
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
@@ -3816,6 +3856,16 @@ max30100_read_temp:
 	.byte	0
 	.byte	0
 	.uleb128 0x9
+	.uleb128 0xf
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0x21
+	.sleb128 4
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xa
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -3833,7 +3883,7 @@ max30100_read_temp:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xb
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -3850,16 +3900,6 @@ max30100_read_temp:
 	.uleb128 0x13
 	.uleb128 0x2
 	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0xf
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0x21
-	.sleb128 4
-	.uleb128 0x49
-	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0xc
@@ -4016,7 +4056,7 @@ max30100_read_temp:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
+	.uleb128 0x5
 	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x27
@@ -4030,6 +4070,29 @@ max30100_read_temp:
 	.byte	0
 	.byte	0
 	.uleb128 0x16
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x27
+	.uleb128 0x19
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x17
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x11
@@ -4038,7 +4101,7 @@ max30100_read_temp:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0xb
@@ -4055,7 +4118,7 @@ max30100_read_temp:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x18
+	.uleb128 0x19
 	.uleb128 0x16
 	.byte	0
 	.uleb128 0x3
@@ -4072,31 +4135,6 @@ max30100_read_temp:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x19
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0x21
-	.sleb128 8
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x39
-	.uleb128 0x21
-	.sleb128 19
-	.uleb128 0x27
-	.uleb128 0x19
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3c
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
 	.uleb128 0x1a
 	.uleb128 0x5
 	.byte	0
@@ -4107,7 +4145,7 @@ max30100_read_temp:
 	.sleb128 1
 	.uleb128 0x3b
 	.uleb128 0x21
-	.sleb128 278
+	.sleb128 280
 	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x49
@@ -4184,9 +4222,16 @@ max30100_read_temp:
 	.uleb128 0x20
 	.uleb128 0x26
 	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x21
+	.uleb128 0x26
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x22
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0x3
@@ -4203,7 +4248,7 @@ max30100_read_temp:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x22
+	.uleb128 0x23
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -4220,7 +4265,7 @@ max30100_read_temp:
 	.uleb128 0x5
 	.byte	0
 	.byte	0
-	.uleb128 0x23
+	.uleb128 0x24
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -4239,7 +4284,7 @@ max30100_read_temp:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x25
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -4260,7 +4305,12 @@ max30100_read_temp:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x25
+	.uleb128 0x26
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x27
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -4287,7 +4337,7 @@ max30100_read_temp:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x26
+	.uleb128 0x28
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -4304,7 +4354,7 @@ max30100_read_temp:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x27
+	.uleb128 0x29
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -4321,7 +4371,7 @@ max30100_read_temp:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x28
+	.uleb128 0x2a
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -4350,7 +4400,7 @@ max30100_read_temp:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2b
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -4377,7 +4427,7 @@ max30100_read_temp:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x2c
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -5930,30 +5980,30 @@ max30100_read_temp:
 	.byte	0x5
 	.uleb128 0x9
 	.4byte	.LASF454
-	.file 12 "../Core/Inc/main.h"
+	.file 13 "../Core/Inc/main.h"
 	.byte	0x3
 	.uleb128 0xb
-	.uleb128 0xc
+	.uleb128 0xd
 	.byte	0x5
 	.uleb128 0x17
 	.4byte	.LASF455
-	.file 13 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+	.file 14 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
 	.byte	0x3
 	.uleb128 0x1e
-	.uleb128 0xd
+	.uleb128 0xe
 	.byte	0x5
 	.uleb128 0x16
 	.4byte	.LASF456
-	.file 14 "../Core/Inc/stm32f4xx_hal_conf.h"
+	.file 15 "../Core/Inc/stm32f4xx_hal_conf.h"
 	.byte	0x3
 	.uleb128 0x1d
-	.uleb128 0xe
+	.uleb128 0xf
 	.byte	0x7
 	.4byte	.Ldebug_macro2
-	.file 15 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
+	.file 16 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
 	.byte	0x3
 	.uleb128 0x113
-	.uleb128 0xf
+	.uleb128 0x10
 	.byte	0x5
 	.uleb128 0x14
 	.4byte	.LASF559
@@ -5963,10 +6013,10 @@ max30100_read_temp:
 	.byte	0x5
 	.uleb128 0x16
 	.4byte	.LASF560
-	.file 16 "../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
+	.file 17 "../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
 	.byte	0x3
 	.uleb128 0x1d
-	.uleb128 0x10
+	.uleb128 0x11
 	.byte	0x7
 	.4byte	.Ldebug_macro3
 	.byte	0x3
@@ -5974,21 +6024,21 @@ max30100_read_temp:
 	.uleb128 0x4
 	.byte	0x7
 	.4byte	.Ldebug_macro4
-	.file 17 "../Drivers/CMSIS/Include/core_cm4.h"
+	.file 18 "../Drivers/CMSIS/Include/core_cm4.h"
 	.byte	0x3
 	.uleb128 0xa9
-	.uleb128 0x11
+	.uleb128 0x12
 	.byte	0x5
 	.uleb128 0x20
 	.4byte	.LASF574
-	.file 18 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stdint.h"
+	.file 19 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/include/stdint.h"
 	.byte	0x3
 	.uleb128 0x22
-	.uleb128 0x12
-	.file 19 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdint.h"
+	.uleb128 0x13
+	.file 20 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdint.h"
 	.byte	0x3
 	.uleb128 0x9
-	.uleb128 0x13
+	.uleb128 0x14
 	.byte	0x5
 	.uleb128 0xa
 	.4byte	.LASF575
@@ -5998,17 +6048,17 @@ max30100_read_temp:
 	.byte	0x5
 	.uleb128 0x6
 	.4byte	.LASF576
-	.file 20 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/features.h"
+	.file 21 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/features.h"
 	.byte	0x3
 	.uleb128 0x8
-	.uleb128 0x14
+	.uleb128 0x15
 	.byte	0x5
 	.uleb128 0x16
 	.4byte	.LASF577
-	.file 21 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/_newlib_version.h"
+	.file 22 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/_newlib_version.h"
 	.byte	0x3
 	.uleb128 0x1c
-	.uleb128 0x15
+	.uleb128 0x16
 	.byte	0x7
 	.4byte	.Ldebug_macro5
 	.byte	0x4
@@ -6018,10 +6068,10 @@ max30100_read_temp:
 	.byte	0x7
 	.4byte	.Ldebug_macro7
 	.byte	0x4
-	.file 22 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_intsup.h"
+	.file 23 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_intsup.h"
 	.byte	0x3
 	.uleb128 0xd
-	.uleb128 0x16
+	.uleb128 0x17
 	.byte	0x7
 	.4byte	.Ldebug_macro8
 	.byte	0x4
@@ -6038,36 +6088,36 @@ max30100_read_temp:
 	.uleb128 0xd
 	.4byte	.LASF732
 	.byte	0x4
-	.file 23 "../Drivers/CMSIS/Include/cmsis_version.h"
+	.file 24 "../Drivers/CMSIS/Include/cmsis_version.h"
 	.byte	0x3
 	.uleb128 0x3f
-	.uleb128 0x17
+	.uleb128 0x18
 	.byte	0x7
 	.4byte	.Ldebug_macro11
 	.byte	0x4
 	.byte	0x7
 	.4byte	.Ldebug_macro12
-	.file 24 "../Drivers/CMSIS/Include/cmsis_compiler.h"
+	.file 25 "../Drivers/CMSIS/Include/cmsis_compiler.h"
 	.byte	0x3
 	.uleb128 0xa2
-	.uleb128 0x18
+	.uleb128 0x19
 	.byte	0x5
 	.uleb128 0x1a
 	.4byte	.LASF742
-	.file 25 "../Drivers/CMSIS/Include/cmsis_gcc.h"
+	.file 26 "../Drivers/CMSIS/Include/cmsis_gcc.h"
 	.byte	0x3
 	.uleb128 0x30
-	.uleb128 0x19
+	.uleb128 0x1a
 	.byte	0x7
 	.4byte	.Ldebug_macro13
 	.byte	0x4
 	.byte	0x4
 	.byte	0x7
 	.4byte	.Ldebug_macro14
-	.file 26 "../Drivers/CMSIS/Include/mpu_armv7.h"
+	.file 27 "../Drivers/CMSIS/Include/mpu_armv7.h"
 	.byte	0x3
 	.uleb128 0x7a8
-	.uleb128 0x1a
+	.uleb128 0x1b
 	.byte	0x7
 	.4byte	.Ldebug_macro15
 	.byte	0x4
@@ -6075,10 +6125,10 @@ max30100_read_temp:
 	.uleb128 0x805
 	.4byte	.LASF1413
 	.byte	0x4
-	.file 27 "../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
+	.file 28 "../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
 	.byte	0x3
 	.uleb128 0xaa
-	.uleb128 0x1b
+	.uleb128 0x1c
 	.byte	0x5
 	.uleb128 0x1f
 	.4byte	.LASF1414
@@ -6090,13 +6140,13 @@ max30100_read_temp:
 	.4byte	.Ldebug_macro17
 	.byte	0x3
 	.uleb128 0x11f
-	.uleb128 0xd
+	.uleb128 0xe
 	.byte	0x4
 	.byte	0x4
-	.file 28 "../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h"
+	.file 29 "../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h"
 	.byte	0x3
 	.uleb128 0x1e
-	.uleb128 0x1c
+	.uleb128 0x1d
 	.byte	0x7
 	.4byte	.Ldebug_macro18
 	.byte	0x4
@@ -6109,36 +6159,36 @@ max30100_read_temp:
 	.byte	0x7
 	.4byte	.Ldebug_macro20
 	.byte	0x4
-	.file 29 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h"
+	.file 30 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h"
 	.byte	0x3
 	.uleb128 0x1f
-	.uleb128 0x1d
+	.uleb128 0x1e
 	.byte	0x7
 	.4byte	.Ldebug_macro21
 	.byte	0x4
 	.byte	0x7
 	.4byte	.Ldebug_macro22
 	.byte	0x4
-	.file 30 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+	.file 31 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
 	.byte	0x3
 	.uleb128 0x117
-	.uleb128 0x1e
+	.uleb128 0x1f
 	.byte	0x7
 	.4byte	.Ldebug_macro23
-	.file 31 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h"
+	.file 32 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h"
 	.byte	0x3
 	.uleb128 0xd5
-	.uleb128 0x1f
+	.uleb128 0x20
 	.byte	0x7
 	.4byte	.Ldebug_macro24
 	.byte	0x4
 	.byte	0x7
 	.4byte	.Ldebug_macro25
 	.byte	0x4
-	.file 32 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h"
+	.file 33 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h"
 	.byte	0x3
 	.uleb128 0x11b
-	.uleb128 0x20
+	.uleb128 0x21
 	.byte	0x7
 	.4byte	.Ldebug_macro26
 	.byte	0x4
@@ -6147,10 +6197,10 @@ max30100_read_temp:
 	.uleb128 0x7
 	.byte	0x7
 	.4byte	.Ldebug_macro27
-	.file 33 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h"
+	.file 34 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h"
 	.byte	0x3
 	.uleb128 0x27f
-	.uleb128 0x21
+	.uleb128 0x22
 	.byte	0x5
 	.uleb128 0x15
 	.4byte	.LASF17732
@@ -6158,63 +6208,63 @@ max30100_read_temp:
 	.byte	0x7
 	.4byte	.Ldebug_macro28
 	.byte	0x4
-	.file 34 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
+	.file 35 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
 	.byte	0x3
 	.uleb128 0x123
-	.uleb128 0x22
+	.uleb128 0x23
 	.byte	0x7
 	.4byte	.Ldebug_macro29
 	.byte	0x4
-	.file 35 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h"
+	.file 36 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h"
 	.byte	0x3
 	.uleb128 0x127
-	.uleb128 0x23
+	.uleb128 0x24
 	.byte	0x5
 	.uleb128 0x15
 	.4byte	.LASF17828
-	.file 36 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h"
+	.file 37 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h"
 	.byte	0x3
 	.uleb128 0x1f
-	.uleb128 0x24
+	.uleb128 0x25
 	.byte	0x7
 	.4byte	.Ldebug_macro30
 	.byte	0x4
 	.byte	0x7
 	.4byte	.Ldebug_macro31
-	.file 37 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h"
+	.file 38 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h"
 	.byte	0x3
 	.uleb128 0x22a
-	.uleb128 0x25
+	.uleb128 0x26
 	.byte	0x7
 	.4byte	.Ldebug_macro32
 	.byte	0x4
 	.byte	0x7
 	.4byte	.Ldebug_macro33
 	.byte	0x4
-	.file 38 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h"
+	.file 39 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h"
 	.byte	0x3
 	.uleb128 0x133
-	.uleb128 0x26
+	.uleb128 0x27
 	.byte	0x7
 	.4byte	.Ldebug_macro34
 	.byte	0x4
-	.file 39 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h"
+	.file 40 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h"
 	.byte	0x3
 	.uleb128 0x14f
-	.uleb128 0x27
+	.uleb128 0x28
 	.byte	0x7
 	.4byte	.Ldebug_macro35
-	.file 40 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h"
+	.file 41 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h"
 	.byte	0x3
 	.uleb128 0x127
-	.uleb128 0x28
+	.uleb128 0x29
 	.byte	0x7
 	.4byte	.Ldebug_macro36
 	.byte	0x4
-	.file 41 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h"
+	.file 42 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h"
 	.byte	0x3
 	.uleb128 0x128
-	.uleb128 0x29
+	.uleb128 0x2a
 	.byte	0x5
 	.uleb128 0x14
 	.4byte	.LASF18612
@@ -6227,78 +6277,78 @@ max30100_read_temp:
 	.uleb128 0x8
 	.byte	0x7
 	.4byte	.Ldebug_macro38
-	.file 42 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h"
+	.file 43 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h"
 	.byte	0x3
 	.uleb128 0x215
-	.uleb128 0x2a
+	.uleb128 0x2b
 	.byte	0x7
 	.4byte	.Ldebug_macro39
 	.byte	0x4
 	.byte	0x7
 	.4byte	.Ldebug_macro40
 	.byte	0x4
-	.file 43 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h"
+	.file 44 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h"
 	.byte	0x3
 	.uleb128 0x17f
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.byte	0x7
 	.4byte	.Ldebug_macro41
-	.file 44 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h"
+	.file 45 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h"
 	.byte	0x3
 	.uleb128 0x110
-	.uleb128 0x2c
+	.uleb128 0x2d
 	.byte	0x7
 	.4byte	.Ldebug_macro42
 	.byte	0x4
 	.byte	0x7
 	.4byte	.Ldebug_macro43
 	.byte	0x4
-	.file 45 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h"
+	.file 46 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h"
 	.byte	0x3
 	.uleb128 0x193
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.byte	0x7
 	.4byte	.Ldebug_macro44
 	.byte	0x4
-	.file 46 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
+	.file 47 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
 	.byte	0x3
 	.uleb128 0x197
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.byte	0x7
 	.4byte	.Ldebug_macro45
-	.file 47 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h"
+	.file 48 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h"
 	.byte	0x3
 	.uleb128 0x754
-	.uleb128 0x2f
+	.uleb128 0x30
 	.byte	0x7
 	.4byte	.Ldebug_macro46
 	.byte	0x4
 	.byte	0x4
-	.file 48 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
+	.file 49 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
 	.byte	0x3
 	.uleb128 0x19b
-	.uleb128 0x30
+	.uleb128 0x31
 	.byte	0x7
 	.4byte	.Ldebug_macro47
 	.byte	0x4
-	.file 49 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h"
+	.file 50 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h"
 	.byte	0x3
 	.uleb128 0x1af
-	.uleb128 0x31
+	.uleb128 0x32
 	.byte	0x5
 	.uleb128 0x15
 	.4byte	.LASF19321
-	.file 50 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h"
+	.file 51 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h"
 	.byte	0x3
 	.uleb128 0x1c
-	.uleb128 0x32
+	.uleb128 0x33
 	.byte	0x7
 	.4byte	.Ldebug_macro48
 	.byte	0x4
-	.file 51 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h"
+	.file 52 "../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h"
 	.byte	0x3
 	.uleb128 0x91
-	.uleb128 0x33
+	.uleb128 0x34
 	.byte	0x5
 	.uleb128 0x15
 	.4byte	.LASF19405
@@ -6313,43 +6363,43 @@ max30100_read_temp:
 	.byte	0x7
 	.4byte	.Ldebug_macro50
 	.byte	0x4
-	.file 52 "../Core/Inc/z_displ_ILI9XXX.h"
+	.file 53 "../Core/Inc/z_displ_ILI9XXX.h"
 	.byte	0x3
 	.uleb128 0x22
-	.uleb128 0x34
+	.uleb128 0x35
 	.byte	0x7
 	.4byte	.Ldebug_macro51
 	.byte	0x3
 	.uleb128 0x42
-	.uleb128 0xa
+	.uleb128 0xb
 	.byte	0x5
 	.uleb128 0x8
 	.4byte	.LASF19503
-	.file 53 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/_ansi.h"
-	.byte	0x3
-	.uleb128 0xa
-	.uleb128 0x35
-	.byte	0x5
-	.uleb128 0x8
-	.4byte	.LASF19504
-	.file 54 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../arm-none-eabi/include/newlib-nano/newlib.h"
+	.file 54 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/_ansi.h"
 	.byte	0x3
 	.uleb128 0xa
 	.uleb128 0x36
+	.byte	0x5
+	.uleb128 0x8
+	.4byte	.LASF19504
+	.file 55 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../arm-none-eabi/include/newlib-nano/newlib.h"
+	.byte	0x3
+	.uleb128 0xa
+	.uleb128 0x37
 	.byte	0x7
 	.4byte	.Ldebug_macro52
 	.byte	0x4
-	.file 55 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/config.h"
+	.file 56 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/config.h"
 	.byte	0x3
 	.uleb128 0xb
-	.uleb128 0x37
+	.uleb128 0x38
 	.byte	0x5
 	.uleb128 0x2
 	.4byte	.LASF19519
-	.file 56 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/machine/ieeefp.h"
+	.file 57 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/machine/ieeefp.h"
 	.byte	0x3
 	.uleb128 0x4
-	.uleb128 0x38
+	.uleb128 0x39
 	.byte	0x7
 	.4byte	.Ldebug_macro53
 	.byte	0x4
@@ -6359,25 +6409,25 @@ max30100_read_temp:
 	.byte	0x7
 	.4byte	.Ldebug_macro55
 	.byte	0x4
-	.file 57 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h"
+	.file 58 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/reent.h"
 	.byte	0x3
 	.uleb128 0xb
-	.uleb128 0x39
+	.uleb128 0x3a
 	.byte	0x5
 	.uleb128 0xb
 	.4byte	.LASF19543
 	.byte	0x3
 	.uleb128 0xd
-	.uleb128 0x35
+	.uleb128 0x36
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0xe
 	.uleb128 0x5
 	.byte	0x4
-	.file 58 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_types.h"
+	.file 59 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_types.h"
 	.byte	0x3
 	.uleb128 0xf
-	.uleb128 0x3a
+	.uleb128 0x3b
 	.byte	0x7
 	.4byte	.Ldebug_macro56
 	.byte	0x3
@@ -6386,10 +6436,10 @@ max30100_read_temp:
 	.byte	0x7
 	.4byte	.Ldebug_macro57
 	.byte	0x4
-	.file 59 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/machine/_types.h"
+	.file 60 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/machine/_types.h"
 	.byte	0x3
 	.uleb128 0x1b
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.byte	0x5
 	.uleb128 0x6
 	.4byte	.LASF19549
@@ -6399,29 +6449,29 @@ max30100_read_temp:
 	.byte	0x4
 	.byte	0x7
 	.4byte	.Ldebug_macro59
-	.file 60 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/lock.h"
+	.file 61 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/lock.h"
 	.byte	0x3
 	.uleb128 0x22
-	.uleb128 0x3c
+	.uleb128 0x3d
 	.byte	0x7
 	.4byte	.Ldebug_macro60
 	.byte	0x4
 	.byte	0x7
 	.4byte	.Ldebug_macro61
-	.file 61 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/assert.h"
+	.file 62 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/assert.h"
 	.byte	0x3
 	.uleb128 0x1ba
-	.uleb128 0x3d
+	.uleb128 0x3e
 	.byte	0x7
 	.4byte	.Ldebug_macro62
 	.byte	0x4
 	.byte	0x7
 	.4byte	.Ldebug_macro63
 	.byte	0x4
-	.file 62 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h"
+	.file 63 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/cdefs.h"
 	.byte	0x3
 	.uleb128 0xc
-	.uleb128 0x3e
+	.uleb128 0x3f
 	.byte	0x5
 	.uleb128 0x2b
 	.4byte	.LASF19649
@@ -6440,28 +6490,28 @@ max30100_read_temp:
 	.byte	0x7
 	.4byte	.Ldebug_macro66
 	.byte	0x4
-	.file 63 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_locale.h"
+	.file 64 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/_locale.h"
 	.byte	0x3
 	.uleb128 0x14
-	.uleb128 0x3f
+	.uleb128 0x40
 	.byte	0x5
 	.uleb128 0x4
 	.4byte	.LASF19778
 	.byte	0x4
-	.file 64 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/strings.h"
+	.file 65 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/strings.h"
 	.byte	0x3
 	.uleb128 0x18
-	.uleb128 0x40
+	.uleb128 0x41
 	.byte	0x5
 	.uleb128 0x1e
 	.4byte	.LASF19779
 	.byte	0x4
 	.byte	0x7
 	.4byte	.Ldebug_macro67
-	.file 65 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/string.h"
+	.file 66 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/sys/string.h"
 	.byte	0x3
 	.uleb128 0xbd
-	.uleb128 0x41
+	.uleb128 0x42
 	.byte	0x4
 	.byte	0x4
 	.byte	0x7
@@ -6472,13 +6522,13 @@ max30100_read_temp:
 	.byte	0x4
 	.byte	0x3
 	.uleb128 0xe
-	.uleb128 0xb
+	.uleb128 0xc
 	.byte	0x5
 	.uleb128 0x8
 	.4byte	.LASF19869
 	.byte	0x3
 	.uleb128 0xa
-	.uleb128 0x38
+	.uleb128 0x39
 	.byte	0x4
 	.byte	0x7
 	.4byte	.Ldebug_macro70
@@ -6488,18 +6538,18 @@ max30100_read_temp:
 	.byte	0x7
 	.4byte	.Ldebug_macro66
 	.byte	0x4
-	.file 66 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/machine/stdlib.h"
+	.file 67 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/machine/stdlib.h"
 	.byte	0x3
 	.uleb128 0x14
-	.uleb128 0x42
+	.uleb128 0x43
 	.byte	0x5
 	.uleb128 0x2
 	.4byte	.LASF19871
 	.byte	0x4
-	.file 67 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/alloca.h"
+	.file 68 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/alloca.h"
 	.byte	0x3
 	.uleb128 0x16
-	.uleb128 0x43
+	.uleb128 0x44
 	.byte	0x7
 	.4byte	.Ldebug_macro71
 	.byte	0x4
@@ -6509,10 +6559,9 @@ max30100_read_temp:
 	.byte	0x7
 	.4byte	.Ldebug_macro73
 	.byte	0x4
-	.file 68 "C:\\ST\\STM32CubeIDE_1.13.1\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\\tools\\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h"
 	.byte	0x3
 	.uleb128 0x9
-	.uleb128 0x44
+	.uleb128 0xa
 	.byte	0x7
 	.4byte	.Ldebug_macro74
 	.byte	0x3
@@ -65852,7 +65901,7 @@ max30100_read_temp:
 	.ascii	"ETH_MMCRIR 0x00000104U\000"
 .LASF17695:
 	.ascii	"DMA_IT_FE 0x00000080U\000"
-.LASF20150:
+.LASF20151:
 	.ascii	"roll_over_en\000"
 .LASF14686:
 	.ascii	"TYPEPROGRAMDATA_FASTBYTE FLASH_TYPEPROGRAMDATA_FAST"
@@ -66616,7 +66665,7 @@ max30100_read_temp:
 	.ascii	"CAN_F13R1_FB28 CAN_F13R1_FB28_Msk\000"
 .LASF2772:
 	.ascii	"CAN_FS1R_FSC10_Pos (10U)\000"
-.LASF20166:
+.LASF20167:
 	.ascii	"mode\000"
 .LASF16056:
 	.ascii	"__HAL_RCC_OTGHS_FORCE_RESET __HAL_RCC_USB_OTG_HS_FO"
@@ -67444,7 +67493,7 @@ max30100_read_temp:
 	.ascii	"ED\000"
 .LASF14724:
 	.ascii	"FLASH_ERROR_OPERATION HAL_FLASH_ERROR_OPERATION\000"
-.LASF20140:
+.LASF20141:
 	.ascii	"max30100_read_fifo\000"
 .LASF7812:
 	.ascii	"FMC_SDCR1_CAS_Pos (7U)\000"
@@ -67555,7 +67604,7 @@ max30100_read_temp:
 	.ascii	"PLLON_BitNumber RCC_PLLON_BIT_NUMBER\000"
 .LASF7975:
 	.ascii	"FMC_SDCMR_NRFS_Msk (0xFUL << FMC_SDCMR_NRFS_Pos)\000"
-.LASF20163:
+.LASF20164:
 	.ascii	"max30100_set_led_pulse_width\000"
 .LASF13672:
 	.ascii	"USB_OTG_GINTSTS_LPMINT_Pos (27U)\000"
@@ -67571,6 +67620,8 @@ max30100_read_temp:
 	.ascii	"_BSD_SIZE_T_ \000"
 .LASF12347:
 	.ascii	"SYSCFG_EXTICR3_EXTI8_PE 0x0004U\000"
+.LASF19614:
+	.ascii	"_REENT_MP_RESULT_K(ptr) ((ptr)->_mp->_result_k)\000"
 .LASF14960:
 	.ascii	"TIM_DMABurstLength_10Transfers TIM_DMABURSTLENGTH_1"
 	.ascii	"0TRANSFERS\000"
@@ -67612,7 +67663,7 @@ max30100_read_temp:
 .LASF16710:
 	.ascii	"__HAL_RCC_BKPSRAM_CLK_DISABLE() (RCC->AHB1ENR &= ~("
 	.ascii	"RCC_AHB1ENR_BKPSRAMEN))\000"
-.LASF20156:
+.LASF20157:
 	.ascii	"max30100_set_multi_led_slot_1_2\000"
 .LASF3915:
 	.ascii	"CAN_F9R1_FB17_Pos (17U)\000"
@@ -68726,7 +68777,7 @@ max30100_read_temp:
 	.ascii	"SPI_CRCPR_CRCPOLY SPI_CRCPR_CRCPOLY_Msk\000"
 .LASF12100:
 	.ascii	"SPI_CR2_FRF_Pos (4U)\000"
-.LASF20162:
+.LASF20163:
 	.ascii	"max30100_set_adc_resolution\000"
 .LASF14444:
 	.ascii	"USB_OTG_EPNUM_3 (0x8UL << USB_OTG_EPNUM_Pos)\000"
@@ -68928,7 +68979,7 @@ max30100_read_temp:
 	.ascii	"CAN_MCR_DBF_Msk (0x1UL << CAN_MCR_DBF_Pos)\000"
 .LASF17932:
 	.ascii	"ADC_TR_HT_BITOFFSET_POS (16UL)\000"
-.LASF20178:
+.LASF20179:
 	.ascii	"max30100_read\000"
 .LASF4119:
 	.ascii	"CAN_F11R1_FB21_Pos (21U)\000"
@@ -69054,7 +69105,7 @@ max30100_read_temp:
 	.ascii	"SPDIFRX_CSR_USR SPDIFRX_CSR_USR_Msk\000"
 .LASF15854:
 	.ascii	"__UART4_CLK_DISABLE __HAL_RCC_UART4_CLK_DISABLE\000"
-.LASF20180:
+.LASF20181:
 	.ascii	"reg_addr\000"
 .LASF9927:
 	.ascii	"RCC_CFGR_PPRE1_1 (0x2UL << RCC_CFGR_PPRE1_Pos)\000"
@@ -69296,7 +69347,7 @@ max30100_read_temp:
 	.ascii	"__UINT_FAST32_TYPE__ unsigned int\000"
 .LASF14348:
 	.ascii	"USB_OTG_DOEPCTL_STALL_Pos (21U)\000"
-.LASF20139:
+.LASF20140:
 	.ascii	"max30100_read_temp\000"
 .LASF5851:
 	.ascii	"DAC_CR_DMAUDRIE1 DAC_CR_DMAUDRIE1_Msk\000"
@@ -69946,7 +69997,7 @@ max30100_read_temp:
 	.ascii	")\000"
 .LASF19360:
 	.ascii	"EP_TYPE_BULK 2U\000"
-.LASF20164:
+.LASF20165:
 	.ascii	"max30100_set_sampling_rate\000"
 .LASF6724:
 	.ascii	"EXTI_RTSR_TR21_Pos (21U)\000"
@@ -70480,7 +70531,7 @@ max30100_read_temp:
 	.ascii	"FMPI2C_PECR_PEC_Pos (0U)\000"
 .LASF5055:
 	.ascii	"CAN_F7R2_FB13_Pos (13U)\000"
-.LASF20168:
+.LASF20169:
 	.ascii	"shdn\000"
 .LASF18131:
 	.ascii	"LL_ADC_AWD_CHANNEL_3_REG_INJ ((LL_ADC_CHANNEL_3 & A"
@@ -70606,7 +70657,7 @@ max30100_read_temp:
 	.ascii	"TIM_DMABase_OR3 TIM_DMABASE_OR3\000"
 .LASF19687:
 	.ascii	"__CC_SUPPORTS_DYNAMIC_ARRAY_INIT 1\000"
-.LASF20173:
+.LASF20174:
 	.ascii	"max30100_set_die_temp_rdy\000"
 .LASF2548:
 	.ascii	"CAN_TDH2R_DATA5_Msk (0xFFUL << CAN_TDH2R_DATA5_Pos)"
@@ -70700,7 +70751,7 @@ max30100_read_temp:
 .LASF8992:
 	.ascii	"GPIO_AFRH_AFSEL15_0 (0x1UL << GPIO_AFRH_AFSEL15_Pos"
 	.ascii	")\000"
-.LASF20189:
+.LASF20190:
 	.ascii	"max30100_has_interrupt\000"
 .LASF7294:
 	.ascii	"FMC_BTR1_ADDSET_Msk (0xFUL << FMC_BTR1_ADDSET_Pos)\000"
@@ -71144,6 +71195,8 @@ max30100_read_temp:
 	.ascii	"SYSCFG_EXTICR4_EXTI13_PC 0x0020U\000"
 .LASF3512:
 	.ascii	"CAN_F5R1_FB10 CAN_F5R1_FB10_Msk\000"
+.LASF1688:
+	.ascii	"ADC_CR1_JAWDEN ADC_CR1_JAWDEN_Msk\000"
 .LASF56:
 	.ascii	"__UINT_LEAST16_TYPE__ short unsigned int\000"
 .LASF4596:
@@ -71663,7 +71716,7 @@ max30100_read_temp:
 .LASF6469:
 	.ascii	"DMA_SxM0AR_M0A_Msk (0xFFFFFFFFUL << DMA_SxM0AR_M0A_"
 	.ascii	"Pos)\000"
-.LASF20171:
+.LASF20172:
 	.ascii	"max30100_set_die_temp_en\000"
 .LASF1941:
 	.ascii	"ADC_SQR2_SQ9_3 (0x08UL << ADC_SQR2_SQ9_Pos)\000"
@@ -71747,7 +71800,7 @@ max30100_read_temp:
 	.ascii	"I2C_SR1_RXNE_Msk (0x1UL << I2C_SR1_RXNE_Pos)\000"
 .LASF10239:
 	.ascii	"RCC_AHB1ENR_CRCEN RCC_AHB1ENR_CRCEN_Msk\000"
-.LASF20188:
+.LASF20189:
 	.ascii	"free\000"
 .LASF13327:
 	.ascii	"USB_OTG_PCGCR_PHYSUSP USB_OTG_PCGCR_PHYSUSP_Msk\000"
@@ -72903,7 +72956,7 @@ max30100_read_temp:
 .LASF10306:
 	.ascii	"RCC_APB1ENR_SPDIFRXEN_Msk (0x1UL << RCC_APB1ENR_SPD"
 	.ascii	"IFRXEN_Pos)\000"
-.LASF20145:
+.LASF20146:
 	.ascii	"ir_sample\000"
 .LASF3017:
 	.ascii	"CAN_F0R1_FB5 CAN_F0R1_FB5_Msk\000"
@@ -73095,7 +73148,7 @@ max30100_read_temp:
 	.ascii	"CAN_F13R1_FB0_Msk (0x1UL << CAN_F13R1_FB0_Pos)\000"
 .LASF18911:
 	.ascii	"TIM_DMABASE_DCR 0x00000012U\000"
-.LASF20152:
+.LASF20153:
 	.ascii	"config\000"
 .LASF15140:
 	.ascii	"HAL_PWREx_DeactivateOverDrive HAL_PWREx_DisableOver"
@@ -73112,7 +73165,7 @@ max30100_read_temp:
 .LASF16396:
 	.ascii	"RCC_DFSDM2AUDIOCLKSOURCE_I2SAPB1 RCC_DFSDM2AUDIOCLK"
 	.ascii	"SOURCE_I2S1\000"
-.LASF20184:
+.LASF20185:
 	.ascii	"hi2c\000"
 .LASF3938:
 	.ascii	"CAN_F9R1_FB24 CAN_F9R1_FB24_Msk\000"
@@ -73844,7 +73897,7 @@ max30100_read_temp:
 	.ascii	"SYSCFG_PMC_ADC1DC2_Pos (16U)\000"
 .LASF12848:
 	.ascii	"TIM_CCR4_CCR4 TIM_CCR4_CCR4_Msk\000"
-.LASF20167:
+.LASF20168:
 	.ascii	"max30100_shutdown\000"
 .LASF13316:
 	.ascii	"USB_OTG_DCFG_PERSCHIVL USB_OTG_DCFG_PERSCHIVL_Msk\000"
@@ -74895,7 +74948,7 @@ max30100_read_temp:
 	.ascii	"eg = 0x00U; SET_BIT(RCC->APB2ENR, RCC_APB2ENR_ADC2E"
 	.ascii	"N); tmpreg = READ_BIT(RCC->APB2ENR, RCC_APB2ENR_ADC"
 	.ascii	"2EN); UNUSED(tmpreg); } while(0U)\000"
-.LASF20153:
+.LASF20154:
 	.ascii	"max30100_set_multi_led_slot_3_4\000"
 .LASF7720:
 	.ascii	"FMC_PMEM_MEMWAIT2_3 (0x08UL << FMC_PMEM_MEMWAIT2_Po"
@@ -75503,7 +75556,7 @@ max30100_read_temp:
 .LASF15377:
 	.ascii	"__HAL_IWDG_DISABLE_WRITE_ACCESS IWDG_DISABLE_WRITE_"
 	.ascii	"ACCESS\000"
-.LASF20175:
+.LASF20176:
 	.ascii	"max30100_set_ppg_rdy\000"
 .LASF9024:
 	.ascii	"GPIO_AFRH_AFRH5_2 GPIO_AFRH_AFSEL13_2\000"
@@ -79178,7 +79231,7 @@ max30100_read_temp:
 	.ascii	"GPIO_AFRL_AFRL2_3 GPIO_AFRL_AFSEL2_3\000"
 .LASF12671:
 	.ascii	"TIM_CCMR1_OC1CE TIM_CCMR1_OC1CE_Msk\000"
-.LASF20160:
+.LASF20161:
 	.ascii	"float\000"
 .LASF380:
 	.ascii	"__GCC_ATOMIC_POINTER_LOCK_FREE 2\000"
@@ -79214,7 +79267,7 @@ max30100_read_temp:
 	.ascii	"SPI_CR2_RXNEIE SPI_CR2_RXNEIE_Msk\000"
 .LASF12456:
 	.ascii	"TIM_CR1_OPM_Pos (3U)\000"
-.LASF20186:
+.LASF20187:
 	.ascii	"../Monitor_core/max30100.c\000"
 .LASF8044:
 	.ascii	"GPIO_MODER_MODER7_Pos (14U)\000"
@@ -79334,7 +79387,7 @@ max30100_read_temp:
 	.ascii	"FMC_BCR4_MBKEN FMC_BCR4_MBKEN_Msk\000"
 .LASF10086:
 	.ascii	"RCC_AHB3RSTR_FMCRST_Pos (0U)\000"
-.LASF20146:
+.LASF20147:
 	.ascii	"red_sample\000"
 .LASF170:
 	.ascii	"__DBL_DECIMAL_DIG__ 17\000"
@@ -79553,7 +79606,7 @@ max30100_read_temp:
 	.ascii	"SYSCFG_MEMRMP_UFB_MODE_Pos (8U)\000"
 .LASF2159:
 	.ascii	"ADC_CCR_TSVREFE_Msk (0x1UL << ADC_CCR_TSVREFE_Pos)\000"
-.LASF20149:
+.LASF20150:
 	.ascii	"smp_ave\000"
 .LASF5713:
 	.ascii	"CEC_CFGR_SFTOPT_Msk (0x1UL << CEC_CFGR_SFTOPT_Pos)\000"
@@ -81942,7 +81995,7 @@ max30100_read_temp:
 	.ascii	"USB_OTG_HCINTMSK_NYET USB_OTG_HCINTMSK_NYET_Msk\000"
 .LASF3552:
 	.ascii	"CAN_F5R1_FB24_Pos (24U)\000"
-.LASF20165:
+.LASF20166:
 	.ascii	"max30100_set_mode\000"
 .LASF17763:
 	.ascii	"MPU_ACCESS_NOT_SHAREABLE ((uint8_t)0x00)\000"
@@ -83144,7 +83197,7 @@ max30100_read_temp:
 	.ascii	"MAX30100_H_ \000"
 .LASF9766:
 	.ascii	"QUADSPI_ABR_ALTERNATE_Pos (0U)\000"
-.LASF20133:
+.LASF20134:
 	.ascii	"HAL_I2C_Master_Transmit\000"
 .LASF1137:
 	.ascii	"TPI_ITATBCTR2_ATREADY2_Pos 0U\000"
@@ -85313,9 +85366,9 @@ max30100_read_temp:
 	.ascii	"SABLED\000"
 .LASF1246:
 	.ascii	"FPU_MVFR0_FP_rounding_modes_Pos 28U\000"
-.LASF20161:
+.LASF20162:
 	.ascii	"max30100_set_led_current_1\000"
-.LASF20159:
+.LASF20160:
 	.ascii	"max30100_set_led_current_2\000"
 .LASF18484:
 	.ascii	"FLASH_FLAG_OPERR FLASH_SR_SOP\000"
@@ -85821,7 +85874,7 @@ max30100_read_temp:
 	.ascii	"ISABLE\000"
 .LASF14103:
 	.ascii	"USB_OTG_DIEPCTL_EPENA_Pos (31U)\000"
-.LASF20181:
+.LASF20182:
 	.ascii	"max30100_write\000"
 .LASF11574:
 	.ascii	"SAI_xSR_LFSDET_Msk (0x1UL << SAI_xSR_LFSDET_Pos)\000"
@@ -86137,7 +86190,7 @@ max30100_read_temp:
 	.ascii	")\000"
 .LASF20051:
 	.ascii	"StreamBaseAddress\000"
-.LASF20143:
+.LASF20144:
 	.ascii	"num_samples\000"
 .LASF18937:
 	.ascii	"TIM_CLOCKDIVISION_DIV4 TIM_CR1_CKD_1\000"
@@ -86296,14 +86349,14 @@ max30100_read_temp:
 	.ascii	"FMPI2C_ICR_ALERTCF FMPI2C_ICR_ALERTCF_Msk\000"
 .LASF6961:
 	.ascii	"FLASH_ACR_ICEN FLASH_ACR_ICEN_Msk\000"
-.LASF20157:
+.LASF20158:
 	.ascii	"slot1\000"
 .LASF9654:
 	.ascii	"QUADSPI_DCR_FSIZE_1 (0x02UL << QUADSPI_DCR_FSIZE_Po"
 	.ascii	"s)\000"
-.LASF20154:
-	.ascii	"slot3\000"
 .LASF20155:
+	.ascii	"slot3\000"
+.LASF20156:
 	.ascii	"slot4\000"
 .LASF5797:
 	.ascii	"CEC_IER_TXENDIE_Pos (9U)\000"
@@ -86748,7 +86801,7 @@ max30100_read_temp:
 .LASF14961:
 	.ascii	"TIM_DMABurstLength_11Transfers TIM_DMABURSTLENGTH_1"
 	.ascii	"1TRANSFERS\000"
-.LASF20137:
+.LASF20138:
 	.ascii	"temp_int\000"
 .LASF2920:
 	.ascii	"CAN_FA1R_FACT1_Msk (0x1UL << CAN_FA1R_FACT1_Pos)\000"
@@ -89537,7 +89590,7 @@ max30100_read_temp:
 	.ascii	"USE_HAL_CAN_REGISTER_CALLBACKS 0U\000"
 .LASF11513:
 	.ascii	"SAI_xSLOTR_FBOFF SAI_xSLOTR_FBOFF_Msk\000"
-.LASF20151:
+.LASF20152:
 	.ascii	"fifo_a_full\000"
 .LASF2492:
 	.ascii	"CAN_TDL1R_DATA2 CAN_TDL1R_DATA2_Msk\000"
@@ -90656,7 +90709,7 @@ max30100_read_temp:
 	.ascii	"__GPIOK_CLK_DISABLE __HAL_RCC_GPIOK_CLK_DISABLE\000"
 .LASF2081:
 	.ascii	"ADC_CSR_JSTRT1 ADC_CSR_JSTRT1_Msk\000"
-.LASF20135:
+.LASF20136:
 	.ascii	"malloc\000"
 .LASF12619:
 	.ascii	"TIM_SR_CC2OF_Pos (10U)\000"
@@ -90714,8 +90767,6 @@ max30100_read_temp:
 .LASF14047:
 	.ascii	"USB_OTG_DOEPEACHMSK1_BERRM_Msk (0x1UL << USB_OTG_DO"
 	.ascii	"EPEACHMSK1_BERRM_Pos)\000"
-.LASF2598:
-	.ascii	"CAN_RDH0R_DATA7_Pos (24U)\000"
 .LASF11000:
 	.ascii	"RTC_ISR_ALRAWF_Msk (0x1UL << RTC_ISR_ALRAWF_Pos)\000"
 .LASF2290:
@@ -91080,7 +91131,7 @@ max30100_read_temp:
 	.ascii	"TIM_BDTR_DTG_1 (0x02UL << TIM_BDTR_DTG_Pos)\000"
 .LASF12461:
 	.ascii	"TIM_CR1_DIR TIM_CR1_DIR_Msk\000"
-.LASF20141:
+.LASF20142:
 	.ascii	"wr_ptr\000"
 .LASF16181:
 	.ascii	"__SPI3_IS_CLK_ENABLED __HAL_RCC_SPI3_IS_CLK_ENABLED"
@@ -94950,7 +95001,7 @@ max30100_read_temp:
 	.ascii	"_APB1RSTR_TIM7RST))\000"
 .LASF1521:
 	.ascii	"USB_OTG_HS_PERIPH_BASE 0x40040000UL\000"
-.LASF20174:
+.LASF20175:
 	.ascii	"max30100_set_alc_ovf\000"
 .LASF5834:
 	.ascii	"DAC_CR_WAVE1_Pos (6U)\000"
@@ -96442,7 +96493,7 @@ max30100_read_temp:
 	.ascii	"ADC_CSR_AWD1_Pos (0U)\000"
 .LASF1039:
 	.ascii	"DWT_CTRL_NUMCOMP_Pos 28U\000"
-.LASF20183:
+.LASF20184:
 	.ascii	"max30100_init\000"
 .LASF1036:
 	.ascii	"ITM_LSR_Access_Msk (1UL << ITM_LSR_Access_Pos)\000"
@@ -97106,8 +97157,8 @@ max30100_read_temp:
 	.ascii	"RTC_ALRMAR_MNU_Msk (0xFUL << RTC_ALRMAR_MNU_Pos)\000"
 .LASF4785:
 	.ascii	"CAN_F4R2_FB19_Pos (19U)\000"
-.LASF1688:
-	.ascii	"ADC_CR1_JAWDEN ADC_CR1_JAWDEN_Msk\000"
+.LASF2598:
+	.ascii	"CAN_RDH0R_DATA7_Pos (24U)\000"
 .LASF14956:
 	.ascii	"TIM_DMABurstLength_6Transfers TIM_DMABURSTLENGTH_6T"
 	.ascii	"RANSFERS\000"
@@ -97605,7 +97656,7 @@ max30100_read_temp:
 .LASF15086:
 	.ascii	"HAL_HASHEx_SHA256_Accumulate_IT HAL_HASHEx_SHA256_A"
 	.ascii	"ccmlt_IT\000"
-.LASF20190:
+.LASF20191:
 	.ascii	"max30100_plot\000"
 .LASF15678:
 	.ascii	"__OTGFS_CLK_DISABLE __HAL_RCC_OTGFS_CLK_DISABLE\000"
@@ -99262,7 +99313,7 @@ max30100_read_temp:
 	.ascii	"CAN_F4R2_FB24 CAN_F4R2_FB24_Msk\000"
 .LASF14359:
 	.ascii	"USB_OTG_DOEPCTL_EPDIS USB_OTG_DOEPCTL_EPDIS_Msk\000"
-.LASF20187:
+.LASF20188:
 	.ascii	"C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Seme"
 	.ascii	"stre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor"
 	.ascii	"/Debug\000"
@@ -99290,7 +99341,7 @@ max30100_read_temp:
 	.ascii	"__CRC_FORCE_RESET __HAL_RCC_CRC_FORCE_RESET\000"
 .LASF16455:
 	.ascii	"__SMARTCARD_DISABLE_IT __HAL_SMARTCARD_DISABLE_IT\000"
-.LASF20148:
+.LASF20149:
 	.ascii	"max30100_set_fifo_config\000"
 .LASF12289:
 	.ascii	"SYSCFG_EXTICR2_EXTI4_PC 0x0002U\000"
@@ -100124,7 +100175,7 @@ max30100_read_temp:
 .LASF13824:
 	.ascii	"USB_OTG_GNPTXSTS_NPTQXSAV USB_OTG_GNPTXSTS_NPTQXSAV"
 	.ascii	"_Msk\000"
-.LASF20176:
+.LASF20177:
 	.ascii	"max30100_set_a_full\000"
 .LASF8012:
 	.ascii	"GPIO_MODER_MODER0_0 (0x1UL << GPIO_MODER_MODER0_Pos"
@@ -100270,8 +100321,8 @@ max30100_read_temp:
 .LASF7783:
 	.ascii	"FMC_PATT_ATTHIZ2_0 (0x01UL << FMC_PATT_ATTHIZ2_Pos)"
 	.ascii	"\000"
-.LASF19614:
-	.ascii	"_REENT_MP_RESULT_K(ptr) ((ptr)->_mp->_result_k)\000"
+.LASF20133:
+	.ascii	"snprintf\000"
 .LASF18460:
 	.ascii	"ADC_CR2_CONTINUOUS(_CONTINUOUS_MODE_) ((_CONTINUOUS"
 	.ascii	"_MODE_) << 1U)\000"
@@ -101329,7 +101380,7 @@ max30100_read_temp:
 	.ascii	"I2C_ANALOGFILTER_DISABLED I2C_ANALOGFILTER_DISABLE\000"
 .LASF12913:
 	.ascii	"TIM_OR_ITR1_RMP_Msk (0x3UL << TIM_OR_ITR1_RMP_Pos)\000"
-.LASF20172:
+.LASF20173:
 	.ascii	"enable\000"
 .LASF3290:
 	.ascii	"CAN_F3R1_FB0 CAN_F3R1_FB0_Msk\000"
@@ -101602,7 +101653,7 @@ max30100_read_temp:
 .LASF19567:
 	.ascii	"__lock_acquire_recursive(lock) __retarget_lock_acqu"
 	.ascii	"ire_recursive(lock)\000"
-.LASF20134:
+.LASF20135:
 	.ascii	"memcpy\000"
 .LASF7287:
 	.ascii	"FMC_BCR4_ASYNCWAIT_Pos (15U)\000"
@@ -102167,7 +102218,7 @@ max30100_read_temp:
 	.ascii	"CAN_F5R2_FB26_Msk (0x1UL << CAN_F5R2_FB26_Pos)\000"
 .LASF457:
 	.ascii	"__STM32F4xx_HAL_CONF_H \000"
-.LASF20177:
+.LASF20178:
 	.ascii	"max30100_reset\000"
 .LASF5167:
 	.ascii	"CAN_F8R2_FB18_Msk (0x1UL << CAN_F8R2_FB18_Pos)\000"
@@ -102544,7 +102595,7 @@ max30100_read_temp:
 .LASF14056:
 	.ascii	"USB_OTG_HPTXFSIZ_PTXSA_Msk (0xFFFFUL << USB_OTG_HPT"
 	.ascii	"XFSIZ_PTXSA_Pos)\000"
-.LASF20138:
+.LASF20139:
 	.ascii	"temp_frac\000"
 .LASF5505:
 	.ascii	"CAN_F12R2_FB3_Pos (3U)\000"
@@ -104929,7 +104980,7 @@ max30100_read_temp:
 	.ascii	"8RST_Pos)\000"
 .LASF438:
 	.ascii	"__ARM_FEATURE_IDIV 1\000"
-.LASF20142:
+.LASF20143:
 	.ascii	"rd_ptr\000"
 .LASF8103:
 	.ascii	"GPIO_MODER_MODE2_1 GPIO_MODER_MODER2_1\000"
@@ -106037,7 +106088,7 @@ max30100_read_temp:
 .LASF19760:
 	.ascii	"__asserts_exclusive(...) __lock_annotate(assert_exc"
 	.ascii	"lusive_lock(__VA_ARGS__))\000"
-.LASF20169:
+.LASF20170:
 	.ascii	"max30100_interrupt_handler\000"
 .LASF356:
 	.ascii	"__USA_FBIT__ 16\000"
@@ -107252,7 +107303,7 @@ max30100_read_temp:
 	.ascii	"SysTick_CALIB_TENMS_Msk (0xFFFFFFUL )\000"
 .LASF3358:
 	.ascii	"CAN_F3R1_FB23_Msk (0x1UL << CAN_F3R1_FB23_Pos)\000"
-.LASF20144:
+.LASF20145:
 	.ascii	"sample\000"
 .LASF9919:
 	.ascii	"RCC_CFGR_HPRE_DIV64 0x000000C0U\000"
@@ -108336,7 +108387,7 @@ max30100_read_temp:
 	.ascii	"__FLT32_MAX_10_EXP__ 38\000"
 .LASF2600:
 	.ascii	"CAN_RDH0R_DATA7 CAN_RDH0R_DATA7_Msk\000"
-.LASF20185:
+.LASF20186:
 	.ascii	"GNU C11 11.3.1 20220712 -mcpu=cortex-m4 -mfpu=fpv4-"
 	.ascii	"sp-d16 -mfloat-abi=hard -mthumb -march=armv7e-m+fp "
 	.ascii	"-g3 -O0 -std=gnu11 -ffunction-sections -fdata-secti"
@@ -108775,7 +108826,7 @@ max30100_read_temp:
 .LASF12446:
 	.ascii	"SYSCFG_CFGR_FMPI2C1_SDA SYSCFG_CFGR_FMPI2C1_SDA_Msk"
 	.ascii	"\000"
-.LASF20147:
+.LASF20148:
 	.ascii	"max30100_clear_fifo\000"
 .LASF17079:
 	.ascii	"IS_RCC_LSE_MODE(MODE) (((MODE) == RCC_LSE_LOWPOWER_"
@@ -108783,7 +108834,7 @@ max30100_read_temp:
 .LASF2914:
 	.ascii	"CAN_FA1R_FACT_Msk (0xFFFFFFFUL << CAN_FA1R_FACT_Pos"
 	.ascii	")\000"
-.LASF20182:
+.LASF20183:
 	.ascii	"payload\000"
 .LASF18702:
 	.ascii	"I2C_MEM_ADD_LSB(__ADDRESS__) ((uint8_t)((uint16_t)("
@@ -109528,7 +109579,7 @@ max30100_read_temp:
 	.ascii	"_Pos)\000"
 .LASF6681:
 	.ascii	"EXTI_RTSR_TR6 EXTI_RTSR_TR6_Msk\000"
-.LASF20136:
+.LASF20137:
 	.ascii	"memset\000"
 .LASF15997:
 	.ascii	"__USART6_CLK_ENABLE __HAL_RCC_USART6_CLK_ENABLE\000"
@@ -110480,7 +110531,7 @@ max30100_read_temp:
 	.ascii	"GPIOE ((GPIO_TypeDef *) GPIOE_BASE)\000"
 .LASF7697:
 	.ascii	"FMC_SR_IFEN_Pos (5U)\000"
-.LASF20170:
+.LASF20171:
 	.ascii	"max30100_on_interrupt\000"
 .LASF11940:
 	.ascii	"SDIO_ICR_CCRCFAILC_Pos (0U)\000"
@@ -110754,7 +110805,7 @@ max30100_read_temp:
 	.ascii	"CAN_F5R1_FB23_Pos (23U)\000"
 .LASF6336:
 	.ascii	"DMA_HISR_TEIF4_Pos (3U)\000"
-.LASF20158:
+.LASF20159:
 	.ascii	"slot2\000"
 .LASF2468:
 	.ascii	"CAN_TI1R_IDE CAN_TI1R_IDE_Msk\000"
@@ -110763,7 +110814,7 @@ max30100_read_temp:
 	.ascii	"S_OTGINT_Pos)\000"
 .LASF9122:
 	.ascii	"I2C_OAR1_ADD6_Pos (6U)\000"
-.LASF20179:
+.LASF20180:
 	.ascii	"buflen\000"
 .LASF4117:
 	.ascii	"CAN_F11R1_FB20_Msk (0x1UL << CAN_F11R1_FB20_Pos)\000"

@@ -40,6 +40,8 @@ void max30100_write(max30100_t *obj, uint8_t reg, uint8_t *buf, uint16_t buflen)
     if (buf != NULL && buflen != 0)
         memcpy(payload + 1, buf, buflen);
     HAL_I2C_Master_Transmit(obj->_ui2c, MAX30100_I2C_ADDR << 1, payload, buflen + 1, MAX30100_I2C_TIMEOUT);
+    snprintf(payload, buf, "%d", payload);
+
     free(payload);
 }
 

@@ -1,0 +1,13 @@
+../Core/Src/z_displ_ILI9XXX.c:33:6:Displ_Transmit	24	static,ignoring_inline_asm
+../Core/Src/z_displ_ILI9XXX.c:96:6:Displ_WriteCommand	16	static
+../Core/Src/z_displ_ILI9XXX.c:109:6:Displ_WriteData	0	static
+../Core/Src/z_displ_ILI9XXX.c:121:6:ILI9XXX_Init	8	static
+../Core/Src/z_displ_ILI9XXX.c:212:6:Displ_SetAddressWindow	16	static
+../Core/Src/z_displ_ILI9XXX.c:255:6:Displ_Orientation	8	static
+../Core/Src/z_displ_ILI9XXX.c:232:6:Displ_Init	8	static
+../Core/Src/z_displ_ILI9XXX.c:287:6:HAL_SPI_ErrorCallback	0	static
+../Core/Src/z_displ_ILI9XXX.c:298:6:HAL_SPI_TxCpltCallback	0	static
+../Core/Src/z_displ_ILI9XXX.c:318:6:Displ_FillArea	24	static
+../Core/Src/z_displ_ILI9XXX.c:1046:11:Displ_BackLight	8	static,ignoring_inline_asm
+../Core/Src/z_displ_ILI9XXX.c:1115:5:touchgfxDisplayDriverTransmitActive	0	static
+../Core/Src/z_displ_ILI9XXX.c:1129:6:touchgfxDisplayDriverTransmitBlock	16	static

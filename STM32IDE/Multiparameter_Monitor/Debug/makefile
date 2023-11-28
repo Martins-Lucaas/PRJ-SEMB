@@ -100,7 +100,7 @@ main-build: Multiparameter_Monitor.elf secondary-outputs
 
 # Tool invocations
 Multiparameter_Monitor.elf Multiparameter_Monitor.map: $(OBJS) $(USER_OBJS) C:\Users\lucas\OneDrive\Documentos\Faculdade\6\ Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "Multiparameter_Monitor.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\STM32F446RETX_FLASH.ld" -Wl,-Map="Multiparameter_Monitor.map" -Wl,--gc-sections -static -L"C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+	arm-none-eabi-g++ -o "Multiparameter_Monitor.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Multiparameter_Monitor.map" -Wl,--gc-sections -static -L"C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\Multiparameter_Monitor\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

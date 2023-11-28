@@ -55,11 +55,8 @@ TouchGFX/generated/gui_generated/src/common \
 TouchGFX/generated/gui_generated/src/main_screen \
 TouchGFX/generated/images/src \
 TouchGFX/generated/images/src/__generated \
-TouchGFX/generated/simulator/src \
-TouchGFX/generated/simulator/src/video \
 TouchGFX/generated/texts/src \
 TouchGFX/gui/src/common \
 TouchGFX/gui/src/main_screen \
 TouchGFX/gui/src/model \
-TouchGFX/simulator \
 

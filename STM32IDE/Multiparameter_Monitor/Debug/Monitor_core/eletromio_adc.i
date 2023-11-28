@@ -34093,6 +34093,8 @@ void emg_init(void)
         data[0] = (adc_buf[i] & 0xFF00) >> 8;
         data[1] = adc_buf[i] & 0x00FF;
         HAL_UART_Transmit(&huart3, data, 2, 0xFFFFFFFFU);
+        snprintf(adc_buf, 4096, "%d", data[0]);
     }
+
 
 }
