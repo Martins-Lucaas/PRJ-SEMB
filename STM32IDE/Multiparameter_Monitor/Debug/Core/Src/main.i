@@ -33437,9 +33437,6 @@ void Displ_FillArea(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t col
 void Displ_Orientation(Displ_Orientat_e orientation);
 void Displ_Init(Displ_Orientat_e orientation);
 
-void HAL_SPI_ErrorCallback(SPI_HandleTypeDef *hspi);
-void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi);
-
 uint32_t Displ_BackLight(uint8_t cmd);
 
 
@@ -34101,12 +34098,16 @@ _putchar_unlocked(int _c)
 # 12 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Monitor_core/myheaders.h" 2
 
 
+# 1 "../Core/Inc/z_displ_ILI9XXX.h" 1
+# 15 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Monitor_core/myheaders.h" 2
 
 
-# 15 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Monitor_core/myheaders.h"
+
+# 17 "C:/Users/lucas/OneDrive/Documentos/Faculdade/6 Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Monitor_core/myheaders.h"
 void emg_init(void);
 void init(void);
 void max30100_init(void);
+void MLX90614_ScanDevices (void);
 # 25 "../Core/Src/main.c" 2
 # 43 "../Core/Src/main.c"
 ADC_HandleTypeDef hadc1;

@@ -33447,9 +33447,6 @@ void Displ_FillArea(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t col
 void Displ_Orientation(Displ_Orientat_e orientation);
 void Displ_Init(Displ_Orientat_e orientation);
 
-void HAL_SPI_ErrorCallback(SPI_HandleTypeDef *hspi);
-void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi);
-
 uint32_t Displ_BackLight(uint8_t cmd);
 
 

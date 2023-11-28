@@ -270,7 +270,7 @@ void max30100_read_fifo(max30100_t *obj)
         uint32_t red_sample = ((uint32_t)(sample[3] << 16) | (uint32_t)(sample[4] << 8) | (uint32_t)(sample[5])) & 0x3ffff;
         obj->_ir_samples[i] = ir_sample;
         obj->_red_samples[i] = red_sample;
-        max30100_plot(ir_sample, red_sample);
+        max30100_plot(ir_sample, red_sample);//Printa na tela o resultado
     }
 }
 

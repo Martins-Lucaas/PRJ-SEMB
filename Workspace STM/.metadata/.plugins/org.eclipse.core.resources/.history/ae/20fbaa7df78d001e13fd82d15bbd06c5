@@ -1,0 +1,81 @@
+#include <gui/common/FrontendApplication.hpp>
+
+FrontendApplication::FrontendApplication(Model& m, FrontendHeap& heap)
+    : FrontendApplicationBase(m, heap)
+{
+}
+#include "stm32f4xx_hal.h"
+
+extern "C" {
+void SystemClock_Config(void);
+void Error_Handler(void);
+}
+
+// Defina os identificadores dos botões
+#define bt_sair  GUI_ID_USER + 0
+#define bt_oxy   GUI_ID_USER + 1
+#define bt_temp  GUI_ID_USER + 2
+#define bt_emg   GUI_ID_USER + 3
+
+// Protótipos de funções
+static void _cbDialog(WM_MESSAGE * pMsg);
+
+// Configuração inicial do emWin
+void GUI_Init_Custom(void) {
+  GUI_Init();
+  WM_SetCallback(WM_HBKWIN, _cbDialog);
+  GUI_SelectLayer(0);
+}
+
+// Função principal
+int main(void) {
+  HAL_Init();
+  SystemClock_Config();
+
+  // Inicialize o sistema de GUI
+  GUI_Init_Custom();
+
+  // Crie os botões
+  BUTTON_CreateEx(10, 10, 100, 40, 0, WM_CF_SHOW, 0, ID_BUTTON_SAIR);
+  BUTTON_CreateEx(10, 60, 100, 40, 0, WM_CF_SHOW, 0, ID_BUTTON_OXY);
+  BUTTON_CreateEx(10, 110, 100, 40, 0, WM_CF_SHOW, 0, ID_BUTTON_TEMP);
+  BUTTON_CreateEx(10, 160, 100, 40, 0, WM_CF_SHOW, 0, ID_BUTTON_EMG);
+
+  while (1) {
+    GUI_Exec();
+  }
+}
+
+// Callback para manipular eventos da GUI
+static void _cbDialog(WM_MESSAGE * pMsg) {
+  switch (pMsg->MsgId) {
+    case WM_PAINT:
+      GUI_SetBkColor(GUI_BLACK);
+      GUI_Clear();
+      break;
+    case WM_NOTIFY_PARENT:
+      if (pMsg->Data.v == WM_NOTIFICATION_CLICKED) {
+        // Identifique qual botão foi clicado
+        switch (WM_GetId(pMsg->hWinSrc)) {
+          case ID_BUTTON_SAIR:
+            // Lógica para o botão sair
+            break;
+          case ID_BUTTON_OXY:
+            // Lógica para o botão de oxigênio
+            break;
+          case ID_BUTTON_TEMP:
+            // Lógica para o botão de temperatura
+            break;
+          case ID_BUTTON_EMG:
+            // Lógica para o botão de emergência
+            break;
+          default:
+            break;
+        }
+      }
+      break;
+    default:
+      WM_DefaultProc(pMsg);
+      break;
+  }
+}

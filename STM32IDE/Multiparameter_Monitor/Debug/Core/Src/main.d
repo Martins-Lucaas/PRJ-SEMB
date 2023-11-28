@@ -38,7 +38,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h \
  ../Core/Inc/z_displ_ILI9XXX.h \
- C:/Users/lucas/OneDrive/Documentos/Faculdade/6\ Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Monitor_core/myheaders.h
+ C:/Users/lucas/OneDrive/Documentos/Faculdade/6\ Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Monitor_core/myheaders.h \
+ ../Core/Inc/z_displ_ILI9XXX.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -80,3 +81,4 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h:
 ../Core/Inc/z_displ_ILI9XXX.h:
 C:/Users/lucas/OneDrive/Documentos/Faculdade/6\ Semestre/SEMB1/PRJ-SEMB/STM32IDE/Multiparameter_Monitor/Monitor_core/myheaders.h:
+../Core/Inc/z_displ_ILI9XXX.h:

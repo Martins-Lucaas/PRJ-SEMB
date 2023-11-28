@@ -8705,6 +8705,10 @@ Error_Handler:
 	.byte	0x7
 	.4byte	.Ldebug_macro74
 	.byte	0x4
+	.byte	0x3
+	.uleb128 0xe
+	.uleb128 0x31
+	.byte	0x4
 	.byte	0x4
 	.byte	0x4
 	.byte	0
