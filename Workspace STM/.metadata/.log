@@ -4433,3 +4433,41 @@ localhost:2331: Connection timed out.
 java.lang.Exception: localhost:2331: Connection timed out.
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SESSION 2023-11-28 11:42:27.312 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-28 11:42:39.578
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-28 11:42:39.589
+!MESSAGE Log4j2 initialized with config file C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\Workspace STM\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-28 11:42:49.482
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-28 11:42:58.834
+!MESSAGE Indexed 'Multiparameter_Monitor' (67 sources, 579 headers) in 8.78 sec: 55,831 declarations; 150,821 references; 11 unresolved inclusions; 514 syntax errors; 754 unresolved names (0.36%)
+!SESSION 2023-11-29 13:55:46.637 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\STM32IDE\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-29 13:56:01.881
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-29 13:56:01.892
+!MESSAGE Log4j2 initialized with config file C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\SEMB1\PRJ-SEMB\Workspace STM\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-29 13:56:19.877
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-29 13:56:33.132
+!MESSAGE Indexed 'Multiparameter_Monitor' (67 sources, 579 headers) in 13 sec: 55,831 declarations; 150,821 references; 11 unresolved inclusions; 514 syntax errors; 754 unresolved names (0.36%)
